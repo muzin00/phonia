@@ -24,7 +24,7 @@ import type {
   ReviewItem,
 } from './domain/reviewDataset.ts'
 
-const DEFAULT_DATASET_URL = '/examples/review-dataset.json'
+const DEFAULT_DATASET_URL = '/review-dataset.json'
 
 type LoadState =
   | { status: 'loading' }

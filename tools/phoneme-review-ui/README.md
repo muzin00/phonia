@@ -43,10 +43,24 @@ PHONIA_REVIEW_MEDIA_ROOT=/absolute/path/to/audio pnpm dev
 PHONIA_REVIEW_OUTPUT=/absolute/path/to/review-records.jsonl pnpm dev
 ```
 
-デフォルトでは同梱したサンプルデータを読み込みます。別のデータセットはURLクエリで指定できます。
+デフォルトではPoCで生成した次のレビューデータを読み込みます。
 
 ```text
-http://localhost:5173/?dataset=/path/to/review-dataset.json
+../../poc/phoneme-alignment-evaluation/data/reviews/review-dataset.json
+```
+
+別のデータセットを既定値にする場合は、起動時に指定します。
+
+```sh
+PHONIA_REVIEW_DATASET=/absolute/path/to/review-dataset.json pnpm dev
+```
+
+この設定で配信されるのは指定したデータセット1ファイルだけです。方式名との対応表は配信されません。
+
+一時的に別の公開URLを読み込む場合は、URLクエリで指定できます。同梱サンプルを表示する例は次のとおりです。
+
+```text
+http://localhost:5173/?dataset=/examples/review-dataset.json
 ```
 
 ## 確認コマンド
@@ -57,6 +71,7 @@ pnpm test
 pnpm typecheck
 pnpm build
 pnpm validate:example
+pnpm validate:example -- ../../poc/phoneme-alignment-evaluation/data/reviews/review-dataset.json
 ```
 
 共通レビューデータの仕様は[`docs/data-format.md`](docs/data-format.md)を参照してください。
