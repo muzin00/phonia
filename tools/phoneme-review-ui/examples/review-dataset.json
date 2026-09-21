@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "mfa-vowel-pilot",
+  "datasetVersion": "1",
+  "title": "日本語母音区間 パイロット評価",
+  "protocol": {
+    "id": "japanese-vowel-boundary-review",
+    "version": "1"
+  },
+  "playback": {
+    "contextPaddingSec": 0.1,
+    "boundaryLoopSec": 0.08
+  },
+  "form": {
+    "candidateQuestions": [
+      {
+        "id": "audible",
+        "prompt": "対象の母音を聞き取れますか？",
+        "choices": [
+          { "value": "yes", "label": "はい" },
+          { "value": "no", "label": "いいえ" },
+          { "value": "uncertain", "label": "判断できない" }
+        ]
+      },
+      {
+        "id": "start_clipped",
+        "prompt": "母音の先頭が切れていると感じますか？",
+        "choices": [
+          { "value": "yes", "label": "はい" },
+          { "value": "no", "label": "いいえ" },
+          { "value": "uncertain", "label": "判断できない" }
+        ]
+      },
+      {
+        "id": "end_clipped",
+        "prompt": "母音の末尾が切れていると感じますか？",
+        "choices": [
+          { "value": "yes", "label": "はい" },
+          { "value": "no", "label": "いいえ" },
+          { "value": "uncertain", "label": "判断できない" }
+        ]
+      },
+      {
+        "id": "neighbor_contamination",
+        "prompt": "前後の別の音が入りすぎていると感じますか？",
+        "choices": [
+          { "value": "yes", "label": "はい" },
+          { "value": "no", "label": "いいえ" },
+          { "value": "uncertain", "label": "判断できない" }
+        ]
+      }
+    ],
+    "comparison": {
+      "prompt": "最も自然な区間を選んでください。",
+      "allowIndistinguishable": true,
+      "allowNone": true
+    }
+  },
+  "items": [
+    {
+      "id": "jvs001_voiceactress100_001-vowel-004",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 4,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.86,
+            "endSec": 1.95
+          }
+        },
+        {
+          "id": "B",
+          "status": "missing"
+        }
+      ]
+    }
+  ]
+}
+

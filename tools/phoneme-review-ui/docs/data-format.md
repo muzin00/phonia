@@ -1,0 +1,61 @@
+# レビューデータ形式
+
+## 方針
+
+UIはアライナー固有の出力を直接読み込まず、共通のレビューデータを読み込む。PoC側の変換処理がMFAなどの出力からこの形式を生成する。
+
+ブラウザへ渡すデータには実際の方式名を含めない。候補IDと方式名の対応表はPoC側で別に管理し、レビュー中の先入観と意図しない表示を防ぐ。
+
+時刻はすべて元音声の先頭を基準とした秒で表す。レビュー専用に切り出したWAVは入力として要求せず、context、exact、境界ループの再生範囲を元音声と設定値から決定する。
+
+## 入力データ
+
+完全な例は [`../examples/review-dataset.json`](../examples/review-dataset.json) を参照する。
+
+### データセット
+
+| フィールド | 内容 |
+| --- | --- |
+| `schemaVersion` | データ構造のバージョン。現在は`1` |
+| `datasetId` | データセットを識別する安定したID |
+| `datasetVersion` | 内容を更新したときに変えるバージョン |
+| `title` | UIに表示する名称 |
+| `protocol` | 評価手順のIDとバージョン |
+| `playback` | context余白と境界ループの長さ |
+| `form` | 候補ごとの設問と候補比較の設定 |
+| `items` | レビュー項目の配列 |
+
+### レビュー項目
+
+`utterance.audioUrl`はUIの配信元から取得できるURLとする。ローカルファイルシステム上のパスはブラウザから直接読めないため、PoC側の元音声をサーバーのURLへ対応付ける。
+
+`target.index`は発話内の0始まりの評価対象番号、`unitCount`は結合した期待音素数である。長母音や無声化候補など、表示に利用できる属性は`tags`へ入れる。
+
+`target.textRange`は任意で、発話テキスト中の対応範囲をUnicodeコードポイントの0始まり半開区間`[start, end)`で表す。確実な対応を生成できない場合は省略する。
+
+### 候補
+
+候補は匿名の`id`と`status`を持つ。
+
+- `available`: `segment.startSec`と`segment.endSec`を持つ
+- `missing`: 方式が対象区間を出力できなかったことを表し、推測区間は持たない
+
+候補の順序はPoC側で固定シードから決定する。同じデータセットバージョンでは順序を変更しない。
+
+## 回答データ
+
+回答は`ReviewRecord`としてJSONLへ追記する。同じ項目を再評価した場合も古い行は上書きせず、`revision`を増やして新しい行を追加する。
+
+各回答には次を含める。
+
+- 入力を特定する`datasetId`、`datasetVersion`、`itemId`
+- 記録日時とリビジョン
+- 候補ごとの設問回答
+- 評価時点の候補区間スナップショット
+- 比較結果またはスキップ理由
+- 評価プロトコルとUIのバージョン
+
+候補区間を回答にも保存することで、入力データが後から更新された場合でも評価時点の条件を追跡できる。
+
+TypeScript上の正式な型は[`../src/domain/reviewDataset.ts`](../src/domain/reviewDataset.ts)、入力時の検証処理は[`../src/domain/parseReviewDataset.ts`](../src/domain/parseReviewDataset.ts)に置く。
+

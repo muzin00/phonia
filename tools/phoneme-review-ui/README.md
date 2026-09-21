@@ -27,6 +27,10 @@ Viteの開発サーバーが表示するURLをブラウザで開きます。
 
 ```sh
 npm run lint
+npm test
 npm run typecheck
 npm run build
+npm run validate:example
 ```
+
+共通レビューデータの仕様は[`docs/data-format.md`](docs/data-format.md)を参照してください。

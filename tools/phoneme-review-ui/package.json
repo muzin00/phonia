@@ -10,7 +10,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
+    "test": "node --test scripts/*.test.ts",
     "typecheck": "tsc -b --pretty false",
+    "validate:example": "node scripts/validate-example.ts",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -28,4 +30,3 @@
     "vite": "^8.3.0"
   }
 }
-
