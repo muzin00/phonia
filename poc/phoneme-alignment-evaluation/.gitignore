@@ -2,3 +2,5 @@
 __pycache__/
 *.py[cod]
 data/alignments/mfa/input/
+data/segments/mfa/exact/
+data/segments/mfa/context/
