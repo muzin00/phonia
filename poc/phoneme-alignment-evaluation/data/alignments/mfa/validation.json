@@ -1,0 +1,40 @@
+{
+  "aligner": "mfa",
+  "normalization_version": "1",
+  "utterance_count": 3,
+  "vowel_run_count": 99,
+  "all_sequences_match": true,
+  "all_intervals_valid": true,
+  "utterances": [
+    {
+      "utterance_id": "jvs001_voiceactress100_001",
+      "phone_interval_count": 65,
+      "expected_vowel_run_count": 33,
+      "actual_vowel_run_count": 33,
+      "expected_units": 46,
+      "actual_units": 46,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_voiceactress100_001",
+      "phone_interval_count": 65,
+      "expected_vowel_run_count": 33,
+      "actual_vowel_run_count": 33,
+      "expected_units": 46,
+      "actual_units": 46,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_voiceactress100_001",
+      "phone_interval_count": 65,
+      "expected_vowel_run_count": 33,
+      "actual_vowel_run_count": 33,
+      "expected_units": 46,
+      "actual_units": 46,
+      "sequence_match": true,
+      "intervals_valid": true
+    }
+  ]
+}

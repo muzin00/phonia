@@ -1,0 +1,24 @@
+[project]
+name = "phoneme-alignment-evaluation"
+version = "0.1.0"
+description = "Evaluate Japanese phoneme alignment methods"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pyopenjtalk==0.4.1",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "ruff==0.16.8",
+]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B", "SIM"]
