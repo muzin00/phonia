@@ -57,4 +57,6 @@ UIはアライナー固有の出力を直接読み込まず、共通のレビュ
 
 候補区間を回答にも保存することで、入力データが後から更新された場合でも評価時点の条件を追跡できる。
 
-TypeScript上の正式な型は[`../src/domain/reviewDataset.ts`](../src/domain/reviewDataset.ts)、入力時の検証処理は[`../src/domain/parseReviewDataset.ts`](../src/domain/parseReviewDataset.ts)に置く。
+UIは`POST /api/reviews`へ回答を送り、ローカルサーバーが`revision`と`recordedAt`を付与してJSONLへ追記する。`GET /api/reviews`は指定した`datasetId`と`datasetVersion`について、項目ごとの最新リビジョンを返す。保存先は`PHONIA_REVIEW_OUTPUT`で変更できる。
+
+TypeScript上の入力型は[`../src/domain/reviewDataset.ts`](../src/domain/reviewDataset.ts)、回答型は[`../src/domain/reviewRecord.ts`](../src/domain/reviewRecord.ts)に置く。入力データと回答データは、読み込み時と保存時にそれぞれ実行時検証を行う。

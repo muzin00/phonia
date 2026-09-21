@@ -1,12 +1,23 @@
 import { useEffect, useMemo, useState } from 'react'
 
-import { EvaluationForm } from './components/EvaluationForm.tsx'
+import {
+  EvaluationForm,
+  type ReviewSaveState,
+} from './components/EvaluationForm.tsx'
 import { WaveformPanel } from './components/WaveformPanel.tsx'
 import { loadReviewDataset } from './data/loadReviewDataset.ts'
+import {
+  loadLatestReviewRecords,
+  saveReviewSubmission,
+} from './data/reviewApi.ts'
 import {
   createEmptyReviewDraft,
   type ReviewDraft,
 } from './domain/reviewDraft.ts'
+import {
+  createReviewSubmission,
+  reviewRecordToDraft,
+} from './domain/reviewPersistence.ts'
 import type {
   ReviewCandidate,
   ReviewDataset,
@@ -26,16 +37,36 @@ export default function App() {
   const [loadState, setLoadState] = useState<LoadState>({ status: 'loading' })
   const [currentIndex, setCurrentIndex] = useState(0)
   const [drafts, setDrafts] = useState<Record<string, ReviewDraft>>({})
+  const [saveStates, setSaveStates] = useState<Record<string, ReviewSaveState>>({})
 
   useEffect(() => {
     const controller = new AbortController()
 
-    void loadReviewDataset(datasetUrl, controller.signal)
-      .then((dataset) => {
-        setCurrentIndex(0)
-        setDrafts({})
-        setLoadState({ status: 'loaded', dataset })
+    void (async () => {
+      const dataset = await loadReviewDataset(datasetUrl, controller.signal)
+      const records = await loadLatestReviewRecords(
+        dataset.datasetId,
+        dataset.datasetVersion,
+        controller.signal,
+      )
+      const loadedDrafts: Record<string, ReviewDraft> = {}
+      const loadedSaveStates: Record<string, ReviewSaveState> = {}
+      records.forEach((record) => {
+        loadedDrafts[record.itemId] = reviewRecordToDraft(record)
+        loadedSaveStates[record.itemId] = {
+          status: 'saved',
+          revision: record.revision,
+          recordedAt: record.recordedAt,
+        }
       })
+
+      if (!controller.signal.aborted) {
+        setCurrentIndex(0)
+        setDrafts(loadedDrafts)
+        setSaveStates(loadedSaveStates)
+        setLoadState({ status: 'loaded', dataset })
+      }
+    })()
       .catch((error: unknown) => {
         if (error instanceof DOMException && error.name === 'AbortError') {
           return
@@ -76,12 +107,61 @@ export default function App() {
       item={item}
       currentIndex={currentIndex}
       draft={drafts[item.id] ?? createEmptyReviewDraft()}
-      onDraftChange={(draft) =>
+      saveState={saveStates[item.id] ?? { status: 'idle' }}
+      onDraftChange={(draft) => {
         setDrafts((currentDrafts) => ({
           ...currentDrafts,
           [item.id]: draft,
         }))
-      }
+        setSaveStates((currentStates) => ({
+          ...currentStates,
+          [item.id]: { status: 'dirty' },
+        }))
+      }}
+      onSave={() => {
+        const draft = drafts[item.id] ?? createEmptyReviewDraft()
+        let submission
+        try {
+          submission = createReviewSubmission(dataset, item, draft)
+        } catch (error) {
+          setSaveStates((currentStates) => ({
+            ...currentStates,
+            [item.id]: {
+              status: 'error',
+              message: errorMessage(error),
+            },
+          }))
+          return
+        }
+        setSaveStates((currentStates) => ({
+          ...currentStates,
+          [item.id]: { status: 'saving' },
+        }))
+        void saveReviewSubmission(submission)
+          .then((record) => {
+            setDrafts((currentDrafts) => ({
+              ...currentDrafts,
+              [item.id]: reviewRecordToDraft(record),
+            }))
+            setSaveStates((currentStates) => ({
+              ...currentStates,
+              [item.id]: {
+                status: 'saved',
+                revision: record.revision,
+                recordedAt: record.recordedAt,
+              },
+            }))
+          })
+          .catch((error: unknown) => {
+            setSaveStates((currentStates) => ({
+              ...currentStates,
+              [item.id]: {
+                status: 'error',
+                message: errorMessage(error),
+              },
+            }))
+          })
+      }}
       onPrevious={() => setCurrentIndex((index) => Math.max(0, index - 1))}
       onNext={() =>
         setCurrentIndex((index) => Math.min(dataset.items.length - 1, index + 1))
@@ -95,7 +175,9 @@ function ReviewScreen({
   item,
   currentIndex,
   draft,
+  saveState,
   onDraftChange,
+  onSave,
   onPrevious,
   onNext,
 }: {
@@ -103,7 +185,9 @@ function ReviewScreen({
   item: ReviewItem
   currentIndex: number
   draft: ReviewDraft
+  saveState: ReviewSaveState
   onDraftChange: (draft: ReviewDraft) => void
+  onSave: () => void
   onPrevious: () => void
   onNext: () => void
 }) {
@@ -204,8 +288,10 @@ function ReviewScreen({
           candidates={availableCandidates}
           selectedCandidateId={selectedCandidateId}
           draft={draft}
+          saveState={saveState}
           onSelectCandidate={setSelectedCandidateId}
           onChange={onDraftChange}
+          onSave={onSave}
         />
       )}
 

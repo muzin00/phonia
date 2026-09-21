@@ -31,6 +31,18 @@ PHONIA_REVIEW_MEDIA_ROOT=/absolute/path/to/audio pnpm dev
 
 配信対象は設定したディレクトリ配下の音声ファイルに限定されます。
 
+回答は既定で次のJSONLへ追記されます。
+
+```text
+../../poc/phoneme-alignment-evaluation/data/reviews/review-records.jsonl
+```
+
+別の保存先を使用する場合は、起動時に絶対パスまたはこのディレクトリからの相対パスで指定します。
+
+```sh
+PHONIA_REVIEW_OUTPUT=/absolute/path/to/review-records.jsonl pnpm dev
+```
+
 デフォルトでは同梱したサンプルデータを読み込みます。別のデータセットはURLクエリで指定できます。
 
 ```text
@@ -49,4 +61,4 @@ pnpm validate:example
 
 共通レビューデータの仕様は[`docs/data-format.md`](docs/data-format.md)を参照してください。
 
-現時点の回答はブラウザのメモリ上だけに保持されます。候補やレビュー項目を切り替えても保持されますが、ページを再読み込みすると消去されます。
+回答を保存するとJSONLへ新しいリビジョンとして追記されます。ページを再読み込みした場合は、データセットと項目ごとの最新リビジョンがフォームへ復元されます。

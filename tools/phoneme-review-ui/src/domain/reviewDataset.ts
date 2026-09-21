@@ -68,33 +68,3 @@ export type ReviewCandidate =
       id: string
       status: 'missing'
     }
-
-export type ReviewRecord = {
-  schemaVersion: 1
-  datasetId: string
-  datasetVersion: string
-  itemId: string
-  revision: number
-  recordedAt: string
-  status: 'completed' | 'skipped'
-  candidateAnswers: Array<{
-    candidateId: string
-    segment: {
-      startSec: number
-      endSec: number
-    } | null
-    answers: Record<string, string>
-  }>
-  comparison:
-    | { outcome: 'candidate'; candidateId: string }
-    | { outcome: 'indistinguishable' | 'none' }
-    | null
-  skipReason: string | null
-  reviewerKind: string
-  protocol: {
-    id: string
-    version: string
-  }
-  uiVersion: string
-}
-

@@ -12,20 +12,29 @@ import type {
 
 type AvailableCandidate = Extract<ReviewCandidate, { status: 'available' }>
 
+export type ReviewSaveState =
+  | { status: 'idle' | 'dirty' | 'saving' }
+  | { status: 'saved'; revision: number; recordedAt: string }
+  | { status: 'error'; message: string }
+
 export function EvaluationForm({
   form,
   candidates,
   selectedCandidateId,
   draft,
+  saveState,
   onSelectCandidate,
   onChange,
+  onSave,
 }: {
   form: ReviewForm
   candidates: AvailableCandidate[]
   selectedCandidateId: string
   draft: ReviewDraft
+  saveState: ReviewSaveState
   onSelectCandidate: (candidateId: string) => void
   onChange: (draft: ReviewDraft) => void
+  onSave: () => void
 }) {
   const selectedCandidate = candidates.find(
     (candidate) => candidate.id === selectedCandidateId,
@@ -159,8 +168,62 @@ export function EvaluationForm({
           )}
         </div>
       </fieldset>
+
+      <div className="save-panel">
+        <div aria-live="polite">
+          <p className="save-title">回答の保存</p>
+          <SaveStatus state={saveState} completed={progress.completed} />
+        </div>
+        <button
+          type="button"
+          className="button button-primary save-button"
+          disabled={
+            !progress.completed ||
+            saveState.status === 'saving' ||
+            saveState.status === 'saved'
+          }
+          onClick={onSave}
+        >
+          {saveState.status === 'saving'
+            ? '保存中…'
+            : saveState.status === 'dirty'
+              ? '変更を保存'
+              : '回答を保存'}
+        </button>
+      </div>
     </section>
   )
+}
+
+function SaveStatus({
+  state,
+  completed,
+}: {
+  state: ReviewSaveState
+  completed: boolean
+}) {
+  if (state.status === 'saved') {
+    return (
+      <p className="save-message save-message-success">
+        リビジョン{state.revision}として保存しました（
+        {new Date(state.recordedAt).toLocaleString('ja-JP')}）
+      </p>
+    )
+  }
+  if (state.status === 'error') {
+    return (
+      <p className="save-message save-message-error" role="alert">
+        {state.message}
+      </p>
+    )
+  }
+  if (state.status === 'saving') {
+    return <p className="save-message">JSONLへ追記しています。</p>
+  }
+  if (!completed) {
+    return <p className="save-message">すべての設問へ回答すると保存できます。</p>
+  }
+  return <p className="save-message">未保存の回答があります。</p>
 }
 
 function ComparisonChoice({
@@ -192,4 +255,3 @@ function ComparisonChoice({
     </label>
   )
 }
-
