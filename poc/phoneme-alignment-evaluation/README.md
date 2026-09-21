@@ -39,7 +39,10 @@ G2Pと読みの確認
 日本語の学習済み音響モデル、発音辞書、G2Pを利用するforced alignment方式。
 
 - 実装: Montreal Forced Aligner
+- 実装バージョン: `3.4.2`
 - 音響モデル: `japanese_mfa`
+- 音響モデルバージョン: `3.0.0`
+- 発音辞書: `japanese_mfa` `3.0.0`
 - 役割: 基準となるforced alignment方式
 - 実行環境: CPU
 - 主な出力: 音素ごとの開始時刻と終了時刻
@@ -48,6 +51,7 @@ G2Pと読みの確認
 
 - [Montreal Forced Aligner](https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner)
 - [Japanese MFA acoustic model](https://mfa-models.readthedocs.io/en/latest/acoustic/Japanese/Japanese%20MFA%20acoustic%20model%20v3_0_0.html)
+- [Apple Silicon環境構築](aligners/mfa/README.md)
 
 ### B. Julius Speech Segmentation Toolkit
 
@@ -351,7 +355,7 @@ ONNXで抽出したデータ    → 共通encoder → 認証性能
 - `auto_agree`とする境界一致度の閾値
 - 音声前処理の具体的な設定
 - 音素表記間の正式なマッピング
-- MFAおよびJuliusの固定バージョン
+- Juliusの固定バージョン
 - Wav2Vec2モデルの固定リビジョンとONNX変換方法
 - CTC forced alignmentアルゴリズムの具体的な実装
 - 共通出力スキーマと成果物の配置

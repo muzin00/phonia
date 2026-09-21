@@ -1,0 +1,11 @@
+name: phonia-mfa
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - montreal-forced-aligner=3.4.2
+  - kalpy=0.10.5
+  - kaldi=5.5.1172
+  - spacy=3.8.14
+  - sudachipy=0.6.11
+  - sudachidict-core=20260116
