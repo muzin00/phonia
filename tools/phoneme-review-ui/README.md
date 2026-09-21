@@ -4,8 +4,8 @@
 
 ## 必要な環境
 
-- Node.js 22.20.0
-- npm 10以降
+- Node.js 24.21.0
+- pnpm 12.5.1
 
 このディレクトリの `.node-version` にNode.jsのバージョンを記録しています。fnmを使用する場合は次のように準備します。
 
@@ -17,8 +17,8 @@ fnm use
 ## セットアップ
 
 ```sh
-npm ci
-npm run dev
+pnpm install --frozen-lockfile
+pnpm dev
 ```
 
 Viteの開発サーバーが表示するURLをブラウザで開きます。
@@ -32,11 +32,11 @@ http://localhost:5173/?dataset=/path/to/review-dataset.json
 ## 確認コマンド
 
 ```sh
-npm run lint
-npm test
-npm run typecheck
-npm run build
-npm run validate:example
+pnpm lint
+pnpm test
+pnpm typecheck
+pnpm build
+pnpm validate:example
 ```
 
 共通レビューデータの仕様は[`docs/data-format.md`](docs/data-format.md)を参照してください。
