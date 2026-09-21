@@ -10,7 +10,7 @@ UIはアライナー固有の出力を直接読み込まず、共通のレビュ
 
 ## 入力データ
 
-完全な例は [`../examples/review-dataset.json`](../examples/review-dataset.json) を参照する。
+完全な例は [`../public/examples/review-dataset.json`](../public/examples/review-dataset.json) を参照する。このファイルは開発サーバーから`/examples/review-dataset.json`として配信される。
 
 ### データセット
 
@@ -58,4 +58,3 @@ UIはアライナー固有の出力を直接読み込まず、共通のレビュ
 候補区間を回答にも保存することで、入力データが後から更新された場合でも評価時点の条件を追跡できる。
 
 TypeScript上の正式な型は[`../src/domain/reviewDataset.ts`](../src/domain/reviewDataset.ts)、入力時の検証処理は[`../src/domain/parseReviewDataset.ts`](../src/domain/parseReviewDataset.ts)に置く。
-

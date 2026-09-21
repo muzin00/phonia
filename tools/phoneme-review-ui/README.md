@@ -23,6 +23,12 @@ npm run dev
 
 Viteの開発サーバーが表示するURLをブラウザで開きます。
 
+デフォルトでは同梱したサンプルデータを読み込みます。別のデータセットはURLクエリで指定できます。
+
+```text
+http://localhost:5173/?dataset=/path/to/review-dataset.json
+```
+
 ## 確認コマンド
 
 ```sh

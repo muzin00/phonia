@@ -7,7 +7,10 @@ import {
   parseReviewDataset,
 } from '../src/domain/parseReviewDataset.ts'
 
-const exampleUrl = new URL('../examples/review-dataset.json', import.meta.url)
+const exampleUrl = new URL(
+  '../public/examples/review-dataset.json',
+  import.meta.url,
+)
 const example = JSON.parse(await readFile(exampleUrl, 'utf8')) as unknown
 
 test('accepts the documented example dataset', () => {
@@ -52,4 +55,3 @@ test('rejects duplicate candidate IDs within an item', () => {
     },
   )
 })
-
