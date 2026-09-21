@@ -1,7 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 
+import { EvaluationForm } from './components/EvaluationForm.tsx'
 import { WaveformPanel } from './components/WaveformPanel.tsx'
 import { loadReviewDataset } from './data/loadReviewDataset.ts'
+import {
+  createEmptyReviewDraft,
+  type ReviewDraft,
+} from './domain/reviewDraft.ts'
 import type {
   ReviewCandidate,
   ReviewDataset,
@@ -20,6 +25,7 @@ export default function App() {
   const [reloadCount, setReloadCount] = useState(0)
   const [loadState, setLoadState] = useState<LoadState>({ status: 'loading' })
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [drafts, setDrafts] = useState<Record<string, ReviewDraft>>({})
 
   useEffect(() => {
     const controller = new AbortController()
@@ -27,6 +33,7 @@ export default function App() {
     void loadReviewDataset(datasetUrl, controller.signal)
       .then((dataset) => {
         setCurrentIndex(0)
+        setDrafts({})
         setLoadState({ status: 'loaded', dataset })
       })
       .catch((error: unknown) => {
@@ -68,6 +75,13 @@ export default function App() {
       dataset={dataset}
       item={item}
       currentIndex={currentIndex}
+      draft={drafts[item.id] ?? createEmptyReviewDraft()}
+      onDraftChange={(draft) =>
+        setDrafts((currentDrafts) => ({
+          ...currentDrafts,
+          [item.id]: draft,
+        }))
+      }
       onPrevious={() => setCurrentIndex((index) => Math.max(0, index - 1))}
       onNext={() =>
         setCurrentIndex((index) => Math.min(dataset.items.length - 1, index + 1))
@@ -80,12 +94,16 @@ function ReviewScreen({
   dataset,
   item,
   currentIndex,
+  draft,
+  onDraftChange,
   onPrevious,
   onNext,
 }: {
   dataset: ReviewDataset
   item: ReviewItem
   currentIndex: number
+  draft: ReviewDraft
+  onDraftChange: (draft: ReviewDraft) => void
   onPrevious: () => void
   onNext: () => void
 }) {
@@ -179,6 +197,17 @@ function ReviewScreen({
           ))}
         </div>
       </section>
+
+      {selectedCandidateId !== undefined && (
+        <EvaluationForm
+          form={dataset.form}
+          candidates={availableCandidates}
+          selectedCandidateId={selectedCandidateId}
+          draft={draft}
+          onSelectCandidate={setSelectedCandidateId}
+          onChange={onDraftChange}
+        />
+      )}
 
       <footer className="review-navigation">
         <button

@@ -100,7 +100,8 @@ h2 {
 }
 
 .context-card,
-.candidate-section {
+.candidate-section,
+.evaluation-section {
   border: 1px solid #cfe3eb;
   border-radius: 18px;
   background: #fff;
@@ -177,6 +178,175 @@ dd {
 .candidate-section {
   margin-top: 20px;
   padding: 28px;
+}
+
+.evaluation-section {
+  margin-top: 20px;
+  padding: 28px;
+}
+
+.answer-progress {
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #fff0dc;
+  color: #8a5517;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.answer-progress-complete {
+  background: #daf2e6;
+  color: #176643;
+}
+
+.candidate-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 22px;
+}
+
+.candidate-tab {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  border: 1px solid #c7dde6;
+  border-radius: 9px;
+  background: #fff;
+  color: #274553;
+  cursor: pointer;
+  font-weight: 750;
+}
+
+.candidate-tab span {
+  color: #718792;
+  font-size: 0.7rem;
+}
+
+.candidate-tab[aria-pressed="true"] {
+  border-color: #3999bc;
+  background: #e3f5fb;
+  color: #0e698b;
+}
+
+.candidate-questions {
+  margin-top: 22px;
+  border: 1px solid #d1e3ea;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.question-group-heading {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 18px;
+  background: #f3f9fc;
+}
+
+.question-group-heading h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.question-group-heading p {
+  margin-top: 3px;
+  color: #6b808a;
+  font-size: 0.74rem;
+}
+
+.question-fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 19px 18px;
+  border: 0;
+  border-top: 1px solid #dfebf0;
+}
+
+.question-fieldset legend {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 0;
+  color: #263d48;
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.question-fieldset legend span {
+  display: inline-grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e3f2f8;
+  color: #116d90;
+  font-size: 0.7rem;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 13px;
+}
+
+.choice,
+.comparison-choice {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #d2e2e9;
+  border-radius: 9px;
+  background: #fff;
+  color: #405965;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.choice {
+  justify-content: center;
+  padding: 10px 12px;
+}
+
+.choice:has(input:checked),
+.comparison-choice:has(input:checked) {
+  border-color: #3195ba;
+  background: #e4f5fb;
+  color: #0e6484;
+  box-shadow: 0 0 0 2px rgb(49 149 186 / 10%);
+}
+
+.choice input,
+.comparison-choice input {
+  margin: 0;
+  accent-color: #167da3;
+}
+
+.comparison-fieldset {
+  margin-top: 22px;
+  border: 1px solid #d1e3ea;
+  border-radius: 13px;
+}
+
+.comparison-fieldset legend {
+  width: auto;
+  padding: 0 7px;
+  font-size: 1rem;
+}
+
+.comparison-choices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 9px;
+  margin-top: 3px;
+}
+
+.comparison-choice {
+  padding: 12px 13px;
 }
 
 .supporting-text,
@@ -426,7 +596,8 @@ dd {
   }
 
   .context-card,
-  .candidate-section {
+  .candidate-section,
+  .evaluation-section {
     padding: 20px;
   }
 
@@ -440,6 +611,10 @@ dd {
 
   .playback-controls .button {
     width: 100%;
+  }
+
+  .choice-grid {
+    grid-template-columns: 1fr;
   }
 
   .review-navigation p {
