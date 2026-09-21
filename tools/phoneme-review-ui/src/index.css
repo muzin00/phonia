@@ -1,0 +1,54 @@
+:root {
+  color: #172033;
+  background: #f4f6fa;
+  font-family:
+    Inter, "Hiragino Sans", "Yu Gothic", system-ui, -apple-system, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+main {
+  width: min(100%, 720px);
+  padding: 48px;
+  border: 1px solid #dce2ec;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 12px 36px rgb(23 32 51 / 8%);
+}
+
+h1 {
+  margin: 8px 0 16px;
+  font-size: clamp(2rem, 7vw, 3.5rem);
+  line-height: 1.1;
+}
+
+p {
+  margin: 0;
+  color: #56627a;
+}
+
+.eyebrow {
+  color: #3157d5;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
