@@ -1,0 +1,2521 @@
+{
+  "schemaVersion": 1,
+  "datasetId": "jvs-vowel-alignment-review",
+  "datasetVersion": "1",
+  "title": "日本語母音区間レビュー",
+  "protocol": {
+    "id": "japanese-vowel-boundary-review",
+    "version": "1"
+  },
+  "playback": {
+    "contextPaddingSec": 0.1,
+    "boundaryLoopSec": 0.08
+  },
+  "form": {
+    "candidateQuestions": [
+      {
+        "id": "audible",
+        "prompt": "対象の母音を聞き取れますか？",
+        "choices": [
+          {
+            "value": "yes",
+            "label": "はい"
+          },
+          {
+            "value": "no",
+            "label": "いいえ"
+          },
+          {
+            "value": "uncertain",
+            "label": "判断できない"
+          }
+        ]
+      },
+      {
+        "id": "start_clipped",
+        "prompt": "母音の先頭が切れていると感じますか？",
+        "choices": [
+          {
+            "value": "yes",
+            "label": "はい"
+          },
+          {
+            "value": "no",
+            "label": "いいえ"
+          },
+          {
+            "value": "uncertain",
+            "label": "判断できない"
+          }
+        ]
+      },
+      {
+        "id": "end_clipped",
+        "prompt": "母音の末尾が切れていると感じますか？",
+        "choices": [
+          {
+            "value": "yes",
+            "label": "はい"
+          },
+          {
+            "value": "no",
+            "label": "いいえ"
+          },
+          {
+            "value": "uncertain",
+            "label": "判断できない"
+          }
+        ]
+      },
+      {
+        "id": "neighbor_contamination",
+        "prompt": "前後の別の音が入りすぎていると感じますか？",
+        "choices": [
+          {
+            "value": "yes",
+            "label": "はい"
+          },
+          {
+            "value": "no",
+            "label": "いいえ"
+          },
+          {
+            "value": "uncertain",
+            "label": "判断できない"
+          }
+        ]
+      }
+    ],
+    "comparison": {
+      "prompt": "最も自然な区間を選んでください。",
+      "allowIndistinguishable": true,
+      "allowNone": true
+    }
+  },
+  "items": [
+    {
+      "id": "jvs001_voiceactress100_001-vowel-000",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 0,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.5799999833106995,
+            "endSec": 0.6899999976158142
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-001",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 1,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.7400000095367432,
+            "endSec": 0.9700000286102295
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-002",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 2,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.4800000190734863,
+            "endSec": 1.690000057220459
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-003",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 3,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.75,
+            "endSec": 1.809999942779541
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-004",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 4,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.8600000143051147,
+            "endSec": 1.9500000476837158
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-005",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 5,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.0199999809265137,
+            "endSec": 2.1500000953674316
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-006",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 6,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.2300000190734863,
+            "endSec": 2.430000066757202
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-007",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 7,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.9200000762939453,
+            "endSec": 3.0399999618530273
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-008",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 8,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.0899999141693115,
+            "endSec": 3.190000057220459
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-009",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 9,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.190000057220459,
+            "endSec": 3.2799999713897705
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-010",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 10,
+        "unitCount": 4,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.4100000858306885,
+            "endSec": 3.680000066757202
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-011",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 11,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.740000009536743,
+            "endSec": 3.8399999141693115
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-012",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 12,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.9100000858306885,
+            "endSec": 3.9800000190734863
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-013",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 13,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.03000020980835,
+            "endSec": 4.090000152587891
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-014",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "e",
+        "index": 14,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.130000114440918,
+            "endSec": 4.190000057220459
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-015",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 15,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.239999771118164,
+            "endSec": 4.409999847412109
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-016",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 16,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.920000076293945,
+            "endSec": 5.03000020980835
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-017",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 17,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.130000114440918,
+            "endSec": 5.260000228881836
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-018",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 18,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.320000171661377,
+            "endSec": 5.409999847412109
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-019",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 19,
+        "unitCount": 4,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.550000190734863,
+            "endSec": 5.860000133514404
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-020",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 20,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.909999847412109,
+            "endSec": 6.050000190734863
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-021",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 21,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.230000019073486,
+            "endSec": 6.349999904632568
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-022",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 22,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.349999904632568,
+            "endSec": 6.579999923706055
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-023",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 23,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.639999866485596,
+            "endSec": 6.71999979019165
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-024",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 24,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.849999904632568,
+            "endSec": 6.909999847412109
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-025",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 25,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.909999847412109,
+            "endSec": 7.010000228881836
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-026",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 26,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.090000152587891,
+            "endSec": 7.130000114440918
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-027",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "e",
+        "index": 27,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.170000076293945,
+            "endSec": 7.239999771118164
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-028",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 28,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.289999961853027,
+            "endSec": 7.340000152587891
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-029",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 29,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.409999847412109,
+            "endSec": 7.46999979019165
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-030",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 30,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.510000228881836,
+            "endSec": 7.570000171661377
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-031",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 31,
+        "unitCount": 3,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.630000114440918,
+            "endSec": 8.039999961853027
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_voiceactress100_001-vowel-032",
+      "utterance": {
+        "id": "jvs001_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs001_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 32,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 8.039999961853027,
+            "endSec": 8.180000305175781
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-000",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 0,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.5699999928474426,
+            "endSec": 0.6499999761581421
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-001",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 1,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.7300000190734863,
+            "endSec": 0.949999988079071
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-002",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 2,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.1799999475479126,
+            "endSec": 1.3799999952316284
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-003",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 3,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.4500000476837158,
+            "endSec": 1.5099999904632568
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-004",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 4,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.559999942779541,
+            "endSec": 1.649999976158142
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-005",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 5,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.75,
+            "endSec": 1.8799999952316284
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-006",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 6,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.9600000381469727,
+            "endSec": 2.140000104904175
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-007",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 7,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.430000066757202,
+            "endSec": 2.5199999809265137
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-008",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 8,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.569999933242798,
+            "endSec": 2.6600000858306885
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-009",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 9,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.6600000858306885,
+            "endSec": 2.75
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-010",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 10,
+        "unitCount": 4,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.890000104904175,
+            "endSec": 3.130000114440918
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-011",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 11,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.200000047683716,
+            "endSec": 3.25
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-012",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 12,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.299999952316284,
+            "endSec": 3.3399999141693115
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-013",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 13,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.4100000858306885,
+            "endSec": 3.4700000286102295
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-014",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "e",
+        "index": 14,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.509999990463257,
+            "endSec": 3.5899999141693115
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-015",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 15,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6500000953674316,
+            "endSec": 3.8299999237060547
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-016",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 16,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.130000114440918,
+            "endSec": 4.190000057220459
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-017",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 17,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.269999980926514,
+            "endSec": 4.409999847412109
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-018",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 18,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.46999979019165,
+            "endSec": 4.559999942779541
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-019",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 19,
+        "unitCount": 4,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.699999809265137,
+            "endSec": 5.050000190734863
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-020",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 20,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.110000133514404,
+            "endSec": 5.170000076293945
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-021",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 21,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.309999942779541,
+            "endSec": 5.460000038146973
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-022",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 22,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.460000038146973,
+            "endSec": 5.610000133514404
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-023",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 23,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.670000076293945,
+            "endSec": 5.710000038146973
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-024",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 24,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.820000171661377,
+            "endSec": 5.880000114440918
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-025",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 25,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.880000114440918,
+            "endSec": 5.940000057220459
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-026",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 26,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.019999980926514,
+            "endSec": 6.090000152587891
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-027",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "e",
+        "index": 27,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.139999866485596,
+            "endSec": 6.199999809265137
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-028",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 28,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.239999771118164,
+            "endSec": 6.28000020980835
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-029",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 29,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.329999923706055,
+            "endSec": 6.389999866485596
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-030",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 30,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.440000057220459,
+            "endSec": 6.489999771118164
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-031",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 31,
+        "unitCount": 3,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.570000171661377,
+            "endSec": 6.889999866485596
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_voiceactress100_001-vowel-032",
+      "utterance": {
+        "id": "jvs002_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs002_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 32,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.889999866485596,
+            "endSec": 7.059999942779541
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-000",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 0,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.550000011920929,
+            "endSec": 0.6299999952316284
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-001",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 1,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.7099999785423279,
+            "endSec": 0.9100000262260437
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-002",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 2,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.659999966621399,
+            "endSec": 1.850000023841858
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-003",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 3,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.899999976158142,
+            "endSec": 1.9600000381469727
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-004",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 4,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.009999990463257,
+            "endSec": 2.0899999141693115
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-005",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 5,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.1600000858306885,
+            "endSec": 2.299999952316284
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-006",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 6,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.359999895095825,
+            "endSec": 2.5899999141693115
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-007",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 7,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.3399999141693115,
+            "endSec": 3.430000066757202
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-008",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 8,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.4800000190734863,
+            "endSec": 3.569999933242798
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-009",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 9,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.569999933242798,
+            "endSec": 3.680000066757202
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-010",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 10,
+        "unitCount": 4,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.799999952316284,
+            "endSec": 4.079999923706055
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-011",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 11,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.159999847412109,
+            "endSec": 4.230000019073486
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-012",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 12,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.28000020980835,
+            "endSec": 4.320000171661377
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-013",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 13,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.369999885559082,
+            "endSec": 4.440000057220459
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-014",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "e",
+        "index": 14,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.480000019073486,
+            "endSec": 4.550000190734863
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-015",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 15,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.599999904632568,
+            "endSec": 4.800000190734863
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-016",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 16,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.349999904632568,
+            "endSec": 5.429999828338623
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-017",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 17,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.5,
+            "endSec": 5.670000076293945
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-018",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 18,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.730000019073486,
+            "endSec": 5.809999942779541
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-019",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 19,
+        "unitCount": 4,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.940000057220459,
+            "endSec": 6.269999980926514
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-020",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 20,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.329999923706055,
+            "endSec": 6.440000057220459
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-021",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 21,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.590000152587891,
+            "endSec": 6.710000038146973
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-022",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 22,
+        "unitCount": 2,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.710000038146973,
+            "endSec": 6.909999847412109
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-023",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 23,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.96999979019165,
+            "endSec": 7.059999942779541
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-024",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 24,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.150000095367432,
+            "endSec": 7.210000038146973
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-025",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 25,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.210000038146973,
+            "endSec": 7.300000190734863
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-026",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "a",
+        "index": 26,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.380000114440918,
+            "endSec": 7.440000057220459
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-027",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "e",
+        "index": 27,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.480000019073486,
+            "endSec": 7.53000020980835
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-028",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "u",
+        "index": 28,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.579999923706055,
+            "endSec": 7.639999866485596
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-029",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 29,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.710000038146973,
+            "endSec": 7.760000228881836
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-030",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 30,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.820000171661377,
+            "endSec": 7.889999866485596
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-031",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "o",
+        "index": 31,
+        "unitCount": 3,
+        "tags": [
+          "long"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.949999809265137,
+            "endSec": 8.289999961853027
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs003_voiceactress100_001-vowel-032",
+      "utterance": {
+        "id": "jvs003_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/jvs003_VOICEACTRESS100_001.wav"
+      },
+      "target": {
+        "label": "i",
+        "index": 32,
+        "unitCount": 1,
+        "tags": []
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 8.289999961853027,
+            "endSec": 8.4399995803833
+          }
+        }
+      ]
+    }
+  ]
+}
