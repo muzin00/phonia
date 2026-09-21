@@ -185,6 +185,84 @@ dd {
   font-size: 0.78rem;
 }
 
+.waveform-panel {
+  margin-top: 22px;
+  padding: 18px;
+  border: 1px solid #c9e0ea;
+  border-radius: 13px;
+  background: #f7fcfe;
+}
+
+.waveform-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.waveform-label {
+  color: #126d8f;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.waveform-help,
+.audio-duration {
+  color: #667e89;
+  font-size: 0.76rem;
+}
+
+.waveform-help {
+  margin-top: 4px;
+}
+
+.audio-duration {
+  white-space: nowrap;
+}
+
+.waveform-canvas-wrap {
+  position: relative;
+  min-height: 148px;
+  overflow: hidden;
+  border: 1px solid #d4e7ee;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.waveform-canvas {
+  min-height: 148px;
+}
+
+.waveform-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgb(247 252 254 / 88%);
+  color: #4f7483;
+  font-size: 0.84rem;
+  text-align: center;
+}
+
+.waveform-overlay-error {
+  color: #96392f;
+}
+
+.playback-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 14px;
+}
+
+.playback-controls .button {
+  min-width: auto;
+}
+
 .candidate-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -197,6 +275,11 @@ dd {
   padding: 18px;
   border: 1px solid #cfe1e9;
   border-radius: 12px;
+}
+
+.candidate-card-selected {
+  border-color: #52afd0;
+  box-shadow: 0 0 0 2px rgb(82 175 208 / 14%);
 }
 
 .candidate-card-missing {
@@ -214,6 +297,15 @@ dd {
   color: #fff;
   font-size: 1.1rem;
   font-weight: 800;
+}
+
+.candidate-id-button {
+  border: 0;
+  cursor: pointer;
+}
+
+.candidate-id-button:hover {
+  background: #0d769b;
 }
 
 .status {
@@ -340,6 +432,14 @@ dd {
 
   .target-details {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .waveform-heading {
+    flex-direction: column;
+  }
+
+  .playback-controls .button {
+    width: 100%;
   }
 
   .review-navigation p {

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
+import { WaveformPanel } from './components/WaveformPanel.tsx'
 import { loadReviewDataset } from './data/loadReviewDataset.ts'
 import type {
   ReviewCandidate,
@@ -63,6 +64,7 @@ export default function App() {
 
   return (
     <ReviewScreen
+      key={item.id}
       dataset={dataset}
       item={item}
       currentIndex={currentIndex}
@@ -87,9 +89,18 @@ function ReviewScreen({
   onPrevious: () => void
   onNext: () => void
 }) {
-  const availableCount = item.candidates.filter(
-    (candidate) => candidate.status === 'available',
-  ).length
+  const availableCandidates = item.candidates.filter(
+    (candidate): candidate is Extract<
+      ReviewCandidate,
+      { status: 'available' }
+    > => candidate.status === 'available',
+  )
+  const [selectedCandidateId, setSelectedCandidateId] = useState(
+    availableCandidates[0]?.id,
+  )
+  const selectedCandidate = availableCandidates.find(
+    (candidate) => candidate.id === selectedCandidateId,
+  )
 
   return (
     <main className="app-shell">
@@ -129,7 +140,7 @@ function ReviewScreen({
           <div>
             <dt>利用可能候補</dt>
             <dd>
-              {availableCount} / {item.candidates.length}
+              {availableCandidates.length} / {item.candidates.length}
             </dd>
           </div>
         </dl>
@@ -150,9 +161,21 @@ function ReviewScreen({
           </div>
           <p className="supporting-text">モデル名は匿名化されています</p>
         </div>
+        {selectedCandidate !== undefined && (
+          <WaveformPanel
+            audioUrl={item.utterance.audioUrl}
+            candidate={selectedCandidate}
+            contextPaddingSec={dataset.playback.contextPaddingSec}
+          />
+        )}
         <div className="candidate-grid">
           {item.candidates.map((candidate) => (
-            <CandidateCard key={candidate.id} candidate={candidate} />
+            <CandidateCard
+              key={candidate.id}
+              candidate={candidate}
+              selected={candidate.id === selectedCandidateId}
+              onSelect={() => setSelectedCandidateId(candidate.id)}
+            />
           ))}
         </div>
       </section>
@@ -182,16 +205,40 @@ function ReviewScreen({
   )
 }
 
-function CandidateCard({ candidate }: { candidate: ReviewCandidate }) {
+function CandidateCard({
+  candidate,
+  selected,
+  onSelect,
+}: {
+  candidate: ReviewCandidate
+  selected: boolean
+  onSelect: () => void
+}) {
   return (
     <article
-      className={`candidate-card candidate-card-${candidate.status}`}
+      className={`candidate-card candidate-card-${candidate.status}${selected ? ' candidate-card-selected' : ''}`}
       aria-label={`候補${candidate.id}`}
     >
       <div className="candidate-title">
-        <span className="candidate-id">{candidate.id}</span>
+        {candidate.status === 'available' ? (
+          <button
+            type="button"
+            className="candidate-id candidate-id-button"
+            aria-label={`候補${candidate.id}を波形に表示`}
+            aria-pressed={selected}
+            onClick={onSelect}
+          >
+            {candidate.id}
+          </button>
+        ) : (
+          <span className="candidate-id">{candidate.id}</span>
+        )}
         <span className={`status status-${candidate.status}`}>
-          {candidate.status === 'available' ? '利用可能' : '区間なし'}
+          {selected
+            ? '選択中'
+            : candidate.status === 'available'
+              ? '利用可能'
+              : '区間なし'}
         </span>
       </div>
       {candidate.status === 'available' ? (

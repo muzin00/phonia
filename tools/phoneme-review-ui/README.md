@@ -23,6 +23,14 @@ pnpm dev
 
 Viteの開発サーバーが表示するURLをブラウザで開きます。
 
+開発サーバーは、既定ではPoCの`poc/phoneme-alignment-evaluation/data/samples/`を`/media/`として配信します。別の音声ディレクトリを使用する場合は、起動時に指定します。
+
+```sh
+PHONIA_REVIEW_MEDIA_ROOT=/absolute/path/to/audio pnpm dev
+```
+
+配信対象は設定したディレクトリ配下の音声ファイルに限定されます。
+
 デフォルトでは同梱したサンプルデータを読み込みます。別のデータセットはURLクエリで指定できます。
 
 ```text
