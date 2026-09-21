@@ -253,9 +253,13 @@ is_long: true
   "source_file": "...",
   "transcript": "...",
   "aligner": "mfa",
+  "aligner_version": "3.4.2",
   "model_id": "japanese_mfa",
-  "model_version": "...",
-  "raw_phoneme": "a",
+  "model_version": "3.0.0",
+  "raw_phonemes": ["a"],
+  "raw_intervals": [
+    {"phoneme": "a", "start_sec": 0.42, "end_sec": 0.56}
+  ],
   "normalized_phoneme": "a",
   "start_sec": 0.42,
   "end_sec": 0.56,
