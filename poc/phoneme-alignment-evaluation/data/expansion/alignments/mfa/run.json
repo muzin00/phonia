@@ -1,0 +1,25 @@
+{
+  "aligner": "mfa",
+  "environment": "phonia-mfa",
+  "platform": "osx-arm64",
+  "acoustic_model": "japanese_mfa",
+  "acoustic_model_version": "3.0.0",
+  "dictionary": "japanese_mfa",
+  "dictionary_version": "3.0.0",
+  "packages": {
+    "kaldi": "5.5.1172",
+    "kalpy": "0.10.5",
+    "montreal-forced-aligner": "3.4.2",
+    "python": "3.12.14",
+    "spacy": "3.8.14",
+    "sudachidict-core": "20260116",
+    "sudachipy": "0.6.11"
+  },
+  "manifest": "data/expansion/manifest.jsonl",
+  "manifest_sha256": "16ecc34d4b900109bd50edf354e123818f5ecb7c1f72c55dace0d58a18cec2bb",
+  "utterance_count": 40,
+  "duration_sec": 88.693,
+  "num_jobs": 3,
+  "use_multiprocessing": false,
+  "output_format": "json"
+}

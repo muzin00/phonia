@@ -1,0 +1,422 @@
+{
+  "aligner": "julius",
+  "aligner_version": "4.6",
+  "aligner_commit": "3b7174d0d4091f5e6ebb917769822032d079996f",
+  "architecture": "arm64",
+  "model_id": "segmentation-kit-monophone",
+  "model_version": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad",
+  "model_sha256": "58952ccfe60f283c7efb1c22f9e012c7d297429700b7eeb4b60f7651a6e65940",
+  "julius_executable_sha256": "7842659a7fe02b1d89d7cd85b4b01189a385b56c10a7b0a5e1fccaa8401110b8",
+  "manifest": "data/expansion/manifest.jsonl",
+  "manifest_sha256": "16ecc34d4b900109bd50edf354e123818f5ecb7c1f72c55dace0d58a18cec2bb",
+  "expected_phonemes": "data/expansion/expected.jsonl",
+  "expected_phonemes_sha256": "2eafe6fb3f465a5147a8f2fb6197cebba0b39b5ef581c72f36ee5b71db119389",
+  "utterance_count": 40,
+  "duration_sec": 1.008,
+  "input_sample_rate_hz": 16000,
+  "input_channels": 1,
+  "input_sample_width_bytes": 2,
+  "output_format": "json+log",
+  "utterances": [
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_001",
+      "duration_sec": 0.035,
+      "phone_interval_count": 80,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 206905,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 137937,
+      "derived_sha256": "ea7d45705bee05bb8648269e8f06eb398b900447fe8644b0307e85de747e05f4"
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_002",
+      "duration_sec": 0.038,
+      "phone_interval_count": 93,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 218416,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 145611,
+      "derived_sha256": "7f2ed5a6995fd0c0508b12792d345e1bf6485db72001c91d7a708226e036a519"
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_003",
+      "duration_sec": 0.026,
+      "phone_interval_count": 71,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 153137,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 102091,
+      "derived_sha256": "08e5709edab1af82957e0d036202c68cda296a7f2bd0fd74dee592d50f63b747"
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_004",
+      "duration_sec": 0.025,
+      "phone_interval_count": 66,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 156565,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 104377,
+      "derived_sha256": "f56d48b69c8e0f956f25769519eb23476c585fb6a99863cd1fa046f5b4e28b1c"
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_005",
+      "duration_sec": 0.054,
+      "phone_interval_count": 123,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 307373,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 204915,
+      "derived_sha256": "6f2e39892f299aaee7fc1d06433d562d63094383ecfc5b57a78398a6e0fe9940"
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_006",
+      "duration_sec": 0.02,
+      "phone_interval_count": 51,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 113522,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 75681,
+      "derived_sha256": "7655fd5c690283b86c01e8b5330e18eba703f08c738ec4222396c04b05bdf745"
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_007",
+      "duration_sec": 0.039,
+      "phone_interval_count": 95,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 220083,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 146722,
+      "derived_sha256": "5792c3a2761708665d401e7a4e1d6e297204d4a5bfade973e64c4bbac4504b75"
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_008",
+      "duration_sec": 0.035,
+      "phone_interval_count": 84,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 199434,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 132956,
+      "derived_sha256": "039ab69256708a1869aa5b68153a014f9d1ca707a836abcc87388524190420c7"
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_009",
+      "duration_sec": 0.026,
+      "phone_interval_count": 71,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 165532,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 110355,
+      "derived_sha256": "6eaaa5bbd8150a59ad347e6a0b0ed3e026df024487ffe43967646fd13d58ead4"
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_010",
+      "duration_sec": 0.02,
+      "phone_interval_count": 51,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 128361,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 85574,
+      "derived_sha256": "34c132b5e247ee32258cce37910f2d9b77a9dac82b6222434fabb1a4360ed715"
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0114",
+      "duration_sec": 0.017,
+      "phone_interval_count": 41,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 101887,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 67925,
+      "derived_sha256": "afae16d01a4226b1b8bb9d6b78fea9ff88d97e24593f73ec7937522529f62151"
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0338",
+      "duration_sec": 0.015,
+      "phone_interval_count": 39,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 88628,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 59085,
+      "derived_sha256": "d74d1b0d6ec4fdaf6f0b7b4e4feaff56146abbc76020c49acd4e571eccbcb8a5"
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0533",
+      "duration_sec": 0.013,
+      "phone_interval_count": 35,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 78173,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 52115,
+      "derived_sha256": "ea1c325ced44c7213b10108a1d80c13f279cac6f760a4b7bda3c30fed21e8a68"
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0724",
+      "duration_sec": 0.02,
+      "phone_interval_count": 58,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 120521,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 80347,
+      "derived_sha256": "b8f3c26a2cdfca9bb590eb08d0579c9bfc5e2c71bd56c4662a25e7ed3c07b04a"
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0844",
+      "duration_sec": 0.014,
+      "phone_interval_count": 39,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 80656,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 53771,
+      "derived_sha256": "d6f2f8c51e892ab8d1c365cbc9a62826f95448579471760955b1befa912a9bf0"
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0963",
+      "duration_sec": 0.017,
+      "phone_interval_count": 48,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 107213,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 71475,
+      "derived_sha256": "31c1a93493f1f39d5020a3b5eb24fce438006d1e256976ad912c0f17161d0c37"
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_1145",
+      "duration_sec": 0.025,
+      "phone_interval_count": 74,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 155406,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 103604,
+      "derived_sha256": "58cb745b7095d669cd8f8f5367c6e1fc7ddbc6e2620e3110b48c59511e3f6d27"
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_1146",
+      "duration_sec": 0.015,
+      "phone_interval_count": 42,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 91671,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 61114,
+      "derived_sha256": "ec58e6f8e3fb2bbae62f8ce3e068329ca616e389284f63e186934bf4ba9268df"
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_1260",
+      "duration_sec": 0.015,
+      "phone_interval_count": 42,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 95144,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 63429,
+      "derived_sha256": "e3d80a020d6dde0df74803453f80c50150e9ef8d516378682cf916638d9269be"
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_1445",
+      "duration_sec": 0.017,
+      "phone_interval_count": 45,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 101994,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 67996,
+      "derived_sha256": "3ddefbd9b99b111a8c53d9ea769301a0e64ffa32b234b7db969b3107056b1bfd"
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_0384",
+      "duration_sec": 0.021,
+      "phone_interval_count": 54,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 120594,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 80396,
+      "derived_sha256": "28b345de2baf75615683a573b6d476f692136a2f12794b816dff7decc27a60bd"
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_0440",
+      "duration_sec": 0.037,
+      "phone_interval_count": 87,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 231590,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 154393,
+      "derived_sha256": "6568fca747fd8943a6bf105ab5fdbcd922c5ce4de219e39348f61c22496358ee"
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_0615",
+      "duration_sec": 0.016,
+      "phone_interval_count": 36,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 99521,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 66347,
+      "derived_sha256": "daaaf7f90a7b00ab71d7710add9034f793a9f0897e01223990d8dee17cce74cf"
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_0651",
+      "duration_sec": 0.028,
+      "phone_interval_count": 80,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 175541,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 117027,
+      "derived_sha256": "931ef58da54b388fe982d36b67d8452eb5bbee5290e12ca42539ffaa8691ee2d"
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_0946",
+      "duration_sec": 0.018,
+      "phone_interval_count": 41,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 107767,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 71845,
+      "derived_sha256": "71d4fbbaf1f6a7ebe8bfdcc78d2faa1c9d206b1d43761736bd2ef1e2a1eef8d3"
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_1118",
+      "duration_sec": 0.018,
+      "phone_interval_count": 47,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 114592,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 76395,
+      "derived_sha256": "19f33f9117a0f5cd6fc9e73c040e511a00b2bb69d6208a013974eb76cc99a592"
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_1177",
+      "duration_sec": 0.019,
+      "phone_interval_count": 44,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 112570,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 75047,
+      "derived_sha256": "92d7eb251e0ff9b517f54ab8a56caf6a41ad58610c3eab583ae9df75b9fdce92"
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_1190",
+      "duration_sec": 0.018,
+      "phone_interval_count": 48,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 103181,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 68787,
+      "derived_sha256": "50e7d18d1a69900594d9394fed0acaebcf27052fd62c16c6d162d5550ec7b25b"
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_1207",
+      "duration_sec": 0.019,
+      "phone_interval_count": 45,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 113000,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 75333,
+      "derived_sha256": "3c8a2cffe3f4038b7210b2096826d0bc7537d8aa084a9e728a0e0c422cad0cfe"
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_1238",
+      "duration_sec": 0.016,
+      "phone_interval_count": 36,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 94229,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 62819,
+      "derived_sha256": "934a4b419a5bf3030ebd0c8381b45631832fcd9f2e5f69b3df06ce63e2c9f488"
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_0074",
+      "duration_sec": 0.02,
+      "phone_interval_count": 46,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 123871,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 82581,
+      "derived_sha256": "bb74bbfd9d8a3a3d21a6d9bf159f20bad2bcb3a846d1d18aa052fe5633372dd7"
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_0602",
+      "duration_sec": 0.022,
+      "phone_interval_count": 46,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 108801,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 72534,
+      "derived_sha256": "294bd00f6d87abc83fbde6f0816860b8b7d559a056de11e4e19791b7a82386e3"
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_0856",
+      "duration_sec": 0.021,
+      "phone_interval_count": 52,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 108724,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 72483,
+      "derived_sha256": "293cef700ef19788c716710daabaac69934504b555b160ec2cecf2b2c3c8f4fc"
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_0911",
+      "duration_sec": 0.025,
+      "phone_interval_count": 67,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 141841,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 94561,
+      "derived_sha256": "606de8b79c2fb96cc3c0f1bbc49100bdfbb71d9070758d11eb8e3c57373c1c16"
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1090",
+      "duration_sec": 0.023,
+      "phone_interval_count": 58,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 139729,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 93153,
+      "derived_sha256": "19b22d2d858ea35b9a9ff797c12b65c5733d81a63ef08636027a495fcbc134f8"
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1105",
+      "duration_sec": 0.021,
+      "phone_interval_count": 51,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 134394,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 89596,
+      "derived_sha256": "0fa31c3d0a621ca84a1e9c5abcb0e521d228e22ddb20bb243c76554185eb05a2"
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1170",
+      "duration_sec": 0.018,
+      "phone_interval_count": 46,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 97488,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 64992,
+      "derived_sha256": "bc002bc9fc1695718856649217a590023a872fd32d27b325b9000baf84a87e92"
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1228",
+      "duration_sec": 0.015,
+      "phone_interval_count": 34,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 99866,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 66577,
+      "derived_sha256": "9b073c825919a2e89ea1f50d0a05b0ca44c416610f378987d5b9ed105a222d01"
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1265",
+      "duration_sec": 0.023,
+      "phone_interval_count": 57,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 131766,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 87844,
+      "derived_sha256": "8f760202981675211220f67168605c7de2020cafedf7de7885086d90b9c5ebbb"
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1438",
+      "duration_sec": 0.022,
+      "phone_interval_count": 55,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 127239,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 84826,
+      "derived_sha256": "e1efe4102040cec55ec9d39e7e448528efabea61c23616f459f2e68e628cbc8d"
+    }
+  ]
+}

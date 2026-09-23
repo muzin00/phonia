@@ -49,6 +49,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--validation-output", type=Path, default=DEFAULT_VALIDATION_OUTPUT
     )
+    parser.add_argument(
+        "--allow-sequence-mismatch",
+        action="store_true",
+        help="Record G2P sequence mismatches instead of stopping the batch.",
+    )
     return parser.parse_args()
 
 
@@ -188,7 +193,15 @@ def main() -> None:
         except (KeyError, TypeError) as error:
             raise ValueError(f"{raw_path}: phones tier is missing") from error
         intervals = extract_vowel_intervals(record, phone_entries)
-        validate_expected(record["utterance_id"], intervals, expected)
+        sequence_match = True
+        mismatch_reason = None
+        try:
+            validate_expected(record["utterance_id"], intervals, expected)
+        except ValueError as error:
+            if not args.allow_sequence_mismatch:
+                raise
+            sequence_match = False
+            mismatch_reason = str(error)
         all_intervals.extend(intervals)
         validation_records.append(
             {
@@ -202,13 +215,15 @@ def main() -> None:
                 "actual_units": sum(
                     interval["expected_units"] for interval in intervals
                 ),
-                "sequence_match": True,
+                "sequence_match": sequence_match,
+                "mismatch_reason": mismatch_reason,
                 "intervals_valid": True,
             }
         )
         print(
             f"{record['utterance_id']}: "
-            f"{len(intervals)} atomic vowel intervals matched"
+            f"{len(intervals)} atomic vowel intervals; "
+            f"sequence_match={sequence_match}"
         )
 
     write_jsonl(args.output, all_intervals)
@@ -217,7 +232,9 @@ def main() -> None:
         "normalization_version": NORMALIZATION_VERSION,
         "utterance_count": len(validation_records),
         "vowel_interval_count": len(all_intervals),
-        "all_sequences_match": True,
+        "all_sequences_match": all(
+            record["sequence_match"] for record in validation_records
+        ),
         "all_intervals_valid": True,
         "utterances": validation_records,
     }

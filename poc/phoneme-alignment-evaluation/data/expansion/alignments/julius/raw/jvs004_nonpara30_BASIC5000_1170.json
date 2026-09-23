@@ -1,0 +1,382 @@
+{
+  "utterance_id": "jvs004_nonpara30_basic5000_1170",
+  "source_file": "poc/phoneme-alignment-evaluation/data/expansion/samples/jvs004_nonpara30_BASIC5000_1170.wav",
+  "derived_audio_file": "data/expansion/alignments/julius/input/jvs004_nonpara30_BASIC5000_1170.wav",
+  "aligner": "julius",
+  "aligner_version": "4.6",
+  "model_id": "segmentation-kit-monophone",
+  "model_version": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad",
+  "frame_shift_sec": 0.01,
+  "window_sec": 0.025,
+  "alignment_offset_sec": 0.0125,
+  "intervals": [
+    {
+      "begin_frame": 0,
+      "end_frame": 43,
+      "score": -20.932562,
+      "phoneme": "silB",
+      "start_sec": 0.0,
+      "end_sec": 0.4525
+    },
+    {
+      "begin_frame": 44,
+      "end_frame": 49,
+      "score": -26.343384,
+      "phoneme": "k",
+      "start_sec": 0.4525,
+      "end_sec": 0.5125
+    },
+    {
+      "begin_frame": 50,
+      "end_frame": 64,
+      "score": -24.608089,
+      "phoneme": "e",
+      "start_sec": 0.5125,
+      "end_sec": 0.6625
+    },
+    {
+      "begin_frame": 65,
+      "end_frame": 69,
+      "score": -28.26333,
+      "phoneme": "N",
+      "start_sec": 0.6625,
+      "end_sec": 0.7125
+    },
+    {
+      "begin_frame": 70,
+      "end_frame": 76,
+      "score": -25.798794,
+      "phoneme": "p",
+      "start_sec": 0.7125,
+      "end_sec": 0.7825
+    },
+    {
+      "begin_frame": 77,
+      "end_frame": 79,
+      "score": -34.31889,
+      "phoneme": "a",
+      "start_sec": 0.7825,
+      "end_sec": 0.8125
+    },
+    {
+      "begin_frame": 80,
+      "end_frame": 85,
+      "score": -32.059185,
+      "phoneme": "t",
+      "start_sec": 0.8125,
+      "end_sec": 0.8725
+    },
+    {
+      "begin_frame": 86,
+      "end_frame": 88,
+      "score": -32.820312,
+      "phoneme": "o",
+      "start_sec": 0.8725,
+      "end_sec": 0.9025
+    },
+    {
+      "begin_frame": 89,
+      "end_frame": 91,
+      "score": -32.726074,
+      "phoneme": "r",
+      "start_sec": 0.9025,
+      "end_sec": 0.9325
+    },
+    {
+      "begin_frame": 92,
+      "end_frame": 94,
+      "score": -32.537029,
+      "phoneme": "a",
+      "start_sec": 0.9325,
+      "end_sec": 0.9625
+    },
+    {
+      "begin_frame": 95,
+      "end_frame": 98,
+      "score": -29.019226,
+      "phoneme": "g",
+      "start_sec": 0.9625,
+      "end_sec": 1.0025
+    },
+    {
+      "begin_frame": 99,
+      "end_frame": 103,
+      "score": -28.009228,
+      "phoneme": "a",
+      "start_sec": 1.0025,
+      "end_sec": 1.0525
+    },
+    {
+      "begin_frame": 104,
+      "end_frame": 111,
+      "score": -26.591248,
+      "phoneme": "z",
+      "start_sec": 1.0525,
+      "end_sec": 1.1325
+    },
+    {
+      "begin_frame": 112,
+      "end_frame": 118,
+      "score": -25.675955,
+      "phoneme": "e",
+      "start_sec": 1.1325,
+      "end_sec": 1.2025
+    },
+    {
+      "begin_frame": 119,
+      "end_frame": 125,
+      "score": -26.839634,
+      "phoneme": "ts",
+      "start_sec": 1.2025,
+      "end_sec": 1.2725
+    },
+    {
+      "begin_frame": 126,
+      "end_frame": 128,
+      "score": -29.766275,
+      "phoneme": "u",
+      "start_sec": 1.2725,
+      "end_sec": 1.3025
+    },
+    {
+      "begin_frame": 129,
+      "end_frame": 132,
+      "score": -28.802551,
+      "phoneme": "m",
+      "start_sec": 1.3025,
+      "end_sec": 1.3425
+    },
+    {
+      "begin_frame": 133,
+      "end_frame": 139,
+      "score": -26.346226,
+      "phoneme": "e",
+      "start_sec": 1.3425,
+      "end_sec": 1.4125
+    },
+    {
+      "begin_frame": 140,
+      "end_frame": 148,
+      "score": -26.302544,
+      "phoneme": "ts",
+      "start_sec": 1.4125,
+      "end_sec": 1.5025
+    },
+    {
+      "begin_frame": 149,
+      "end_frame": 151,
+      "score": -25.566488,
+      "phoneme": "u",
+      "start_sec": 1.5025,
+      "end_sec": 1.5325
+    },
+    {
+      "begin_frame": 152,
+      "end_frame": 159,
+      "score": -23.716461,
+      "phoneme": "sh",
+      "start_sec": 1.5325,
+      "end_sec": 1.6125
+    },
+    {
+      "begin_frame": 160,
+      "end_frame": 162,
+      "score": -28.302734,
+      "phoneme": "i",
+      "start_sec": 1.6125,
+      "end_sec": 1.6425
+    },
+    {
+      "begin_frame": 163,
+      "end_frame": 167,
+      "score": -25.88203,
+      "phoneme": "t",
+      "start_sec": 1.6425,
+      "end_sec": 1.6925
+    },
+    {
+      "begin_frame": 168,
+      "end_frame": 171,
+      "score": -24.852295,
+      "phoneme": "a",
+      "start_sec": 1.6925,
+      "end_sec": 1.7325
+    },
+    {
+      "begin_frame": 172,
+      "end_frame": 178,
+      "score": -26.212332,
+      "phoneme": "n",
+      "start_sec": 1.7325,
+      "end_sec": 1.8025
+    },
+    {
+      "begin_frame": 179,
+      "end_frame": 183,
+      "score": -27.838964,
+      "phoneme": "o",
+      "start_sec": 1.8025,
+      "end_sec": 1.8525
+    },
+    {
+      "begin_frame": 184,
+      "end_frame": 190,
+      "score": -24.831472,
+      "phoneme": "w",
+      "start_sec": 1.8525,
+      "end_sec": 1.9225
+    },
+    {
+      "begin_frame": 191,
+      "end_frame": 202,
+      "score": -23.582642,
+      "phoneme": "a",
+      "start_sec": 1.9225,
+      "end_sec": 2.0425
+    },
+    {
+      "begin_frame": 203,
+      "end_frame": 238,
+      "score": -21.783216,
+      "phoneme": "sp",
+      "start_sec": 2.0425,
+      "end_sec": 2.4025
+    },
+    {
+      "begin_frame": 239,
+      "end_frame": 248,
+      "score": -25.819483,
+      "phoneme": "hy",
+      "start_sec": 2.4025,
+      "end_sec": 2.5025
+    },
+    {
+      "begin_frame": 249,
+      "end_frame": 253,
+      "score": -27.578516,
+      "phoneme": "o",
+      "start_sec": 2.5025,
+      "end_sec": 2.5525
+    },
+    {
+      "begin_frame": 254,
+      "end_frame": 265,
+      "score": -27.007895,
+      "phoneme": "o",
+      "start_sec": 2.5525,
+      "end_sec": 2.6725
+    },
+    {
+      "begin_frame": 266,
+      "end_frame": 269,
+      "score": -27.999634,
+      "phoneme": "g",
+      "start_sec": 2.6725,
+      "end_sec": 2.7125
+    },
+    {
+      "begin_frame": 270,
+      "end_frame": 275,
+      "score": -25.824707,
+      "phoneme": "a",
+      "start_sec": 2.7125,
+      "end_sec": 2.7725
+    },
+    {
+      "begin_frame": 276,
+      "end_frame": 286,
+      "score": -26.913397,
+      "phoneme": "j",
+      "start_sec": 2.7725,
+      "end_sec": 2.8825
+    },
+    {
+      "begin_frame": 287,
+      "end_frame": 289,
+      "score": -31.208984,
+      "phoneme": "i",
+      "start_sec": 2.8825,
+      "end_sec": 2.9125
+    },
+    {
+      "begin_frame": 290,
+      "end_frame": 293,
+      "score": -27.358276,
+      "phoneme": "d",
+      "start_sec": 2.9125,
+      "end_sec": 2.9525
+    },
+    {
+      "begin_frame": 294,
+      "end_frame": 303,
+      "score": -24.066309,
+      "phoneme": "a",
+      "start_sec": 2.9525,
+      "end_sec": 3.0525
+    },
+    {
+      "begin_frame": 304,
+      "end_frame": 307,
+      "score": -28.038452,
+      "phoneme": "i",
+      "start_sec": 3.0525,
+      "end_sec": 3.0925
+    },
+    {
+      "begin_frame": 308,
+      "end_frame": 310,
+      "score": -26.317383,
+      "phoneme": "d",
+      "start_sec": 3.0925,
+      "end_sec": 3.1225
+    },
+    {
+      "begin_frame": 311,
+      "end_frame": 317,
+      "score": -24.668457,
+      "phoneme": "e",
+      "start_sec": 3.1225,
+      "end_sec": 3.1925
+    },
+    {
+      "begin_frame": 318,
+      "end_frame": 328,
+      "score": -25.628862,
+      "phoneme": "a",
+      "start_sec": 3.1925,
+      "end_sec": 3.3025
+    },
+    {
+      "begin_frame": 329,
+      "end_frame": 338,
+      "score": -23.003418,
+      "phoneme": "q",
+      "start_sec": 3.3025,
+      "end_sec": 3.4025
+    },
+    {
+      "begin_frame": 339,
+      "end_frame": 345,
+      "score": -27.065012,
+      "phoneme": "t",
+      "start_sec": 3.4025,
+      "end_sec": 3.4725
+    },
+    {
+      "begin_frame": 346,
+      "end_frame": 357,
+      "score": -25.36792,
+      "phoneme": "a",
+      "start_sec": 3.4725,
+      "end_sec": 3.5925
+    },
+    {
+      "begin_frame": 358,
+      "end_frame": 403,
+      "score": -22.50552,
+      "phoneme": "silE",
+      "start_sec": 3.5925,
+      "end_sec": 4.0525
+    }
+  ]
+}

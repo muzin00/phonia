@@ -98,7 +98,18 @@ def expected_phonemes_by_utterance(path: Path) -> dict[str, list[str]]:
 
 
 def to_julius_phonemes(phonemes: list[str]) -> list[str]:
-    return ["sp" if phone == "pau" else phone for phone in phonemes]
+    converted = []
+    for phone in phonemes:
+        if phone == "pau":
+            converted.append("sp")
+        elif phone == "cl":
+            converted.append("q")
+        elif phone in {"A", "I", "U", "E", "O"}:
+            # The bundled monophone model has no separate devoiced-vowel states.
+            converted.append(phone.lower())
+        else:
+            converted.append(phone)
+    return converted
 
 
 def resample_wave(source_path: Path, destination_path: Path) -> dict[str, Any]:
@@ -315,6 +326,11 @@ def align_record(
 
 def main() -> None:
     args = parse_args()
+    args.manifest = args.manifest.resolve()
+    args.expected = args.expected.resolve()
+    args.input_directory = args.input_directory.resolve()
+    args.raw_directory = args.raw_directory.resolve()
+    args.run_metadata = args.run_metadata.resolve()
     executable = args.julius_executable.expanduser().resolve()
     segmentation_kit = args.segmentation_kit.expanduser().resolve()
     model = segmentation_kit / "models" / "hmmdefs_monof_mix16_gid.binhmm"

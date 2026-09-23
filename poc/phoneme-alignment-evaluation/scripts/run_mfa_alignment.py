@@ -143,6 +143,11 @@ def conda_platform(conda: Path) -> str:
 
 def main() -> None:
     args = parse_args()
+    args.manifest = args.manifest.resolve()
+    args.audio_directory = args.audio_directory.resolve()
+    args.corpus_directory = args.corpus_directory.resolve()
+    args.output_directory = args.output_directory.resolve()
+    args.run_metadata = args.run_metadata.resolve()
     records = read_jsonl(args.manifest)
     stems = prepare_corpus(records, args.corpus_directory)
     conda = find_conda(args.conda_executable)

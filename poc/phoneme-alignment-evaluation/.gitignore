@@ -10,3 +10,10 @@ data/segments/julius/exact/
 data/segments/julius/context/
 data/segments/wav2vec2/exact/
 data/segments/wav2vec2/context/
+data/expansion/samples/*.wav
+data/expansion/samples/*.lab
+data/expansion/segments/*/exact/
+data/expansion/segments/*/context/
+data/expansion/alignments/julius/input/
+data/expansion/alignments/julius/raw/*.log
+data/expansion/alignments/mfa/input/

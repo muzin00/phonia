@@ -43,26 +43,45 @@ BLANK_ID = 0
 
 # pyopenjtalk/Julius phone labels to the model's eSpeak IPA token vocabulary.
 PHONE_TO_MODEL_TOKEN = {
+    "A": "a",
+    "E": "e",
+    "I": "i",
+    "N": "ɴ",
+    "O": "o",
+    "U": "ɯ",
     "a": "a",
     "b": "b",
+    "by": "bʲ",
     "ch": "tɕ",
+    "cl": "q",
     "d": "d",
     "e": "e",
+    "f": "ɸ",
     "g": "ɡ",
+    "gy": "ɡʲ",
     "h": "h",
+    "hy": "ç",
     "i": "i",
     "j": "dʑ",
     "k": "k",
+    "ky": "kʲ",
     "m": "m",
     "my": "mʲ",
     "n": "n",
+    "ny": "ɲ",
     "o": "o",
+    "p": "p",
+    "py": "pʲ",
     "r": "ɾ",
+    "ry": "rʲ",
     "s": "s",
     "sh": "ɕ",
     "t": "t",
+    "ts": "ts",
     "u": "ɯ",
+    "w": "w",
     "y": "j",
+    "z": "z",
 }
 
 
@@ -365,6 +384,10 @@ def validate_intervals(
 
 def main() -> None:
     args = parse_args()
+    args.manifest = args.manifest.resolve()
+    args.expected = args.expected.resolve()
+    args.output_directory = args.output_directory.resolve()
+    args.run_metadata = args.run_metadata.resolve()
     manifest = read_jsonl(args.manifest)
     expected = expected_phonemes_by_utterance(args.expected)
     onnx_model = args.onnx_model.expanduser().resolve()

@@ -14,14 +14,23 @@ from scripts.run_wav2vec2_alignment import (
 
 class PhoneMappingTest(unittest.TestCase):
     def test_maps_japanese_phones_and_omits_pause(self) -> None:
-        vocabulary = {"m": 1, "a": 2, "tɕ": 3, "ɯ": 4}
+        vocabulary = {
+            "m": 1,
+            "a": 2,
+            "tɕ": 3,
+            "ɯ": 4,
+            "ɲ": 5,
+            "q": 6,
+            "ɴ": 7,
+            "i": 8,
+        }
         tokens, token_ids, source_indices = map_phonemes_to_tokens(
-            ["m", "a", "pau", "ch", "u"], vocabulary
+            ["m", "a", "pau", "ch", "u", "ny", "cl", "N", "I"], vocabulary
         )
 
-        self.assertEqual(tokens, ["m", "a", "tɕ", "ɯ"])
-        self.assertEqual(token_ids, [1, 2, 3, 4])
-        self.assertEqual(source_indices, [0, 1, 3, 4])
+        self.assertEqual(tokens, ["m", "a", "tɕ", "ɯ", "ɲ", "q", "ɴ", "i"])
+        self.assertEqual(token_ids, [1, 2, 3, 4, 5, 6, 7, 8])
+        self.assertEqual(source_indices, [0, 1, 3, 4, 5, 6, 7, 8])
 
 
 class CtcForcedAlignmentTest(unittest.TestCase):

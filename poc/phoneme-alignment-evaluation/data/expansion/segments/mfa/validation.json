@@ -1,0 +1,12 @@
+{
+  "aligner": "mfa",
+  "segment_count": 998,
+  "source_audio_count": 40,
+  "context_padding_sec": 0.1,
+  "minimum_duration_sec": 0.03,
+  "near_silent_dbfs": -50.0,
+  "flag_counts": {
+    "near_silent_exact": 2
+  },
+  "unflagged_segment_count": 996
+}

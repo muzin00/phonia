@@ -1,0 +1,13 @@
+{
+  "aligner": "wav2vec2-ctc-onnx",
+  "segment_count": 1164,
+  "source_audio_count": 40,
+  "context_padding_sec": 0.1,
+  "minimum_duration_sec": 0.03,
+  "near_silent_dbfs": -50.0,
+  "flag_counts": {
+    "near_silent_exact": 8,
+    "short_exact": 3
+  },
+  "unflagged_segment_count": 1153
+}
