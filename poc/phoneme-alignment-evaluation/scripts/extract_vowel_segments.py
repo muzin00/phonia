@@ -47,7 +47,7 @@ class WaveSource:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Extract MFA vowel intervals as exact and context WAV files."
+        description="Extract normalized vowel intervals as exact and context WAV files."
     )
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--output-directory", type=Path, default=DEFAULT_OUTPUT_DIR)
@@ -278,6 +278,10 @@ def main() -> None:
         raise ValueError("context padding must be non-negative")
     records = read_jsonl(args.input)
     validate_vowel_indices(records)
+    aligners = {str(record["aligner"]) for record in records}
+    if len(aligners) != 1:
+        raise ValueError(f"Expected one aligner, found: {sorted(aligners)}")
+    aligner = aligners.pop()
     wave_cache: dict[Path, WaveSource] = {}
     extracted: list[dict[str, Any]] = []
 
@@ -301,7 +305,7 @@ def main() -> None:
         flag for record in extracted for flag in record["quality_flags"]
     )
     validation = {
-        "aligner": "mfa",
+        "aligner": aligner,
         "segment_count": len(extracted),
         "source_audio_count": len(wave_cache),
         "context_padding_sec": args.context_padding_sec,

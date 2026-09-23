@@ -74,7 +74,10 @@ G2Pと読みの確認
 Juliusの音素単位forced alignmentを利用する日本語向け方式。
 
 - 実装: Julius Speech Segmentation Toolkit
+- 実装バージョン: `4.6`
+- 実装コミット: `3b7174d0d4091f5e6ebb917769822032d079996f`
 - 初期設定: 付属monophoneモデル
+- segmentation-kitコミット: `e0e8bbaf98e27d19dfc6fe8312be607ad03592ad`
 - 役割: 日本語向けの軽量な比較方式
 - 実行環境: CPU
 - 主な出力: 音素ごとの開始時刻、終了時刻、音響尤度
@@ -85,6 +88,11 @@ triphoneモデルは、標準のmonophoneモデルで必要な品質を得られ
 
 - [Julius](https://github.com/julius-speech/julius)
 - [Speech Segmentation Toolkit](https://github.com/julius-speech/segmentation-kit)
+- [Apple Silicon環境構築](aligners/julius/README.md)
+
+パイロット3発話では、各発話80音素区間（文頭・文末無音を含む）を生成し、入力音素列との一致を確認した。各発話46母音区間、合計138区間を抽出し、期待母音列との不一致、時間範囲の異常、30 ms未満の区間、無音・低レベル区間は検出されなかった。3発話のアライメント処理時間はApple Silicon CPU上で合計約0.11秒だった。
+
+MFAの合計108母音区間に対してJuliusが138区間となるのは、主にMFAが一つの長母音phoneとして出力する箇所を、Juliusには共通期待列どおり連続する個別母音として与えているためである。区間数を抽出成功率として直接比較せず、期待母音単位へ展開した列と原子区間の表現を区別する。
 
 ### C. Wav2Vec2 phoneme CTC ONNX
 
@@ -387,7 +395,6 @@ ONNXで抽出したデータ    → 共通encoder → 認証性能
 - `auto_agree`とする境界一致度の閾値
 - 音声前処理の具体的な設定
 - 音素表記間の正式なマッピング
-- Juliusの固定バージョン
 - Wav2Vec2モデルの固定リビジョンとONNX変換方法
 - CTC forced alignmentアルゴリズムの具体的な実装
 - 共通出力スキーマと成果物の配置

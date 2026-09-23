@@ -1,0 +1,52 @@
+{
+  "aligner": "julius",
+  "aligner_version": "4.6",
+  "aligner_commit": "3b7174d0d4091f5e6ebb917769822032d079996f",
+  "architecture": "arm64",
+  "model_id": "segmentation-kit-monophone",
+  "model_version": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad",
+  "model_sha256": "58952ccfe60f283c7efb1c22f9e012c7d297429700b7eeb4b60f7651a6e65940",
+  "julius_executable_sha256": "7842659a7fe02b1d89d7cd85b4b01189a385b56c10a7b0a5e1fccaa8401110b8",
+  "manifest": "data/samples/manifest.jsonl",
+  "manifest_sha256": "112a5afe87ca260d7a6da5cad31700eb837d160b100eacfa47836d57599be092",
+  "expected_phonemes": "data/phonemes/expected.jsonl",
+  "expected_phonemes_sha256": "477ec41ca3658a198ed2a7513bb773850d6859fc5cdafef598666f3845e8acfa",
+  "utterance_count": 3,
+  "duration_sec": 0.111,
+  "input_sample_rate_hz": 16000,
+  "input_channels": 1,
+  "input_sample_width_bytes": 2,
+  "output_format": "json+log",
+  "utterances": [
+    {
+      "utterance_id": "jvs001_voiceactress100_001",
+      "duration_sec": 0.034,
+      "phone_interval_count": 80,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 206905,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 137937,
+      "derived_sha256": "ea7d45705bee05bb8648269e8f06eb398b900447fe8644b0307e85de747e05f4"
+    },
+    {
+      "utterance_id": "jvs002_voiceactress100_001",
+      "duration_sec": 0.03,
+      "phone_interval_count": 80,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 180224,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 120149,
+      "derived_sha256": "fdcffc4527942c8a8321f1f59281977f4e1fedfd20b217d708a68c665eb2a8f4"
+    },
+    {
+      "utterance_id": "jvs003_voiceactress100_001",
+      "duration_sec": 0.035,
+      "phone_interval_count": 80,
+      "source_sample_rate_hz": 24000,
+      "source_frame_count": 213842,
+      "derived_sample_rate_hz": 16000,
+      "derived_frame_count": 142561,
+      "derived_sha256": "d288f2bfb223055b005aa2a6cf78bbc3619530a22eafa540f4951c8554f1dc53"
+    }
+  ]
+}

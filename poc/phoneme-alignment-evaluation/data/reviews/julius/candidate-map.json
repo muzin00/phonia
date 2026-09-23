@@ -1,0 +1,1939 @@
+{
+  "schemaVersion": 2,
+  "datasetId": "jvs-vowel-alignment-review-julius",
+  "datasetVersion": "1",
+  "items": [
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-000",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-001",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-002",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-003",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-004",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-005",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-006",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-007",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-008",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-009",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-010",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-011",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-012",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-013",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-014",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-015",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-016",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-017",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-018",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-019",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-020",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-021",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-022",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-023",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-024",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-025",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-026",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-027",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-028",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-029",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-030",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-031",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-032",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-033",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-034",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-035",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-036",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-037",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-038",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-039",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-040",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-041",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-042",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-043",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-044",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-julius-vowel-045",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-000",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-001",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-002",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-003",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-004",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-005",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-006",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-007",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-008",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-009",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-010",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-011",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-012",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-013",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-014",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-015",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-016",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-017",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-018",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-019",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-020",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-021",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-022",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-023",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-024",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-025",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-026",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-027",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-028",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-029",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-030",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-031",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-032",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-033",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-034",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-035",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-036",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-037",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-038",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-039",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-040",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-041",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-042",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-043",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-044",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-julius-vowel-045",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-000",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-001",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-002",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-003",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-004",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-005",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-006",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-007",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-008",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-009",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-010",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-011",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-012",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-013",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-014",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-015",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-016",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-017",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-018",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-019",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-020",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-021",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-022",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-023",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-024",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-025",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-026",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-027",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-028",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-029",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-030",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-031",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-032",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-033",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-034",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-035",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-036",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-037",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-038",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-039",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-040",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-041",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-042",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-043",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-044",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-julius-vowel-045",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "julius",
+          "status": "available",
+          "aligner": "julius",
+          "alignerVersion": "4.6",
+          "modelId": "segmentation-kit-monophone",
+          "modelVersion": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad"
+        }
+      ]
+    }
+  ]
+}
