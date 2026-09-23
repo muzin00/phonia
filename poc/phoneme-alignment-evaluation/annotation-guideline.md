@@ -18,6 +18,17 @@ MFA、Julius、Wav2Vec2 phoneme CTCが出力する日本語5母音の区間を�
 - 自動検査で不一致や異常を検出した区間を優先して人手確認する。
 - 判断できない場合に無理な合否を求めず、`uncertain`として保存する。
 
+### 2.1 母音区間の判定定義
+
+母音区間は、対象母音の音響的な実現を含み、別の母音の核を含まない連続した波形区間とする。音声学的に純粋な母音定常部だけを要求しない。
+
+- 前後の子音との遷移や共調音が聞こえても、対象母音を利用できれば許容できる。
+- 子音らしい成分が聞こえることと、別の母音を含むことを分けて判定する。
+- 対象母音が利用できないほど切れている場合は不適切とする。
+- 異なる母音の核を明確に含む場合は不適切とする。
+- 同じ母音が直接連続する`vowel_run`は一つの対象母音区間として扱える。
+- 先行子音全体を意図的に含めるモーラ区間とは区別する。
+
 ## 3. 入力
 
 評価には次の情報を使用する。
@@ -107,9 +118,12 @@ end_delta(A, B)   = abs(A.end_sec - B.end_sec)
 確認者は各候補について次の選択式設問へ回答する。
 
 1. 対象の母音を聞き取れるか: `yes` / `no` / `uncertain`
-2. 母音の先頭が切れていると感じるか: `yes` / `no` / `uncertain`
-3. 母音の末尾が切れていると感じるか: `yes` / `no` / `uncertain`
-4. 前後の別の音が過剰に含まれると感じるか: `yes` / `no` / `uncertain`
+2. 母音の先頭の切れは利用上問題になるか: `none` / `tolerable` / `problematic` / `uncertain`
+3. 母音の末尾の切れは利用上問題になるか: `none` / `tolerable` / `problematic` / `uncertain`
+4. 別の母音の核を含むと感じるか: `yes` / `no` / `uncertain`
+5. 子音などの非母音成分はどの程度含まれるか: `none` / `tolerable` / `problematic` / `uncertain`
+
+`tolerable`は、切れや非母音成分を知覚できるが、対象母音を後続処理へ利用できる状態を表す。例えば、`の`の`/o/`区間で`/n/`からの遷移が少し聞こえても、`/o/`を十分に聞き取れ、別の母音を含まなければ`non_vowel_contamination: tolerable`とする。
 
 最後に、次から一つを選ぶ。
 
@@ -119,7 +133,7 @@ end_delta(A, B)   = abs(A.end_sec - B.end_sec)
 - 聴感上の差を判断できない
 - どの候補も不適切
 
-確認者には音響用語の判断を求めず、「聞き取れる」「切れている」「余計な音が入っている」という聴感上の判断だけを求める。
+候補が一つだけの場合は候補間比較を求めず、その区間を`accepted`、`rejected`、`uncertain`から選ぶ。確認者には音響用語の判断を求めず、「聞き取れる」「利用できる」「別の母音が入っている」という聴感上の判断だけを求める。
 
 ## 7. 人手確認の対象
 
@@ -138,10 +152,12 @@ end_delta(A, B)   = abs(A.end_sec - B.end_sec)
 
 方式ごとの候補を次の状態へ分類する。
 
-- `accepted`: 対象母音を聞き取れ、切れや過剰な混入がない
-- `rejected`: 対象母音を聞き取れない、切れている、または別音の混入が大きい
+- `accepted`: 対象母音を聞き取れ、利用不能な切れがなく、別の母音の核を含まず、非母音成分が利用上問題にならない
+- `rejected`: 対象母音を聞き取れない、利用不能な切れがある、別の母音の核を含む、または非母音成分が利用上問題になる
 - `uncertain`: 非専門家の聴感では判断できない
 - `not_reviewed`: 自動判定のみで人手確認していない
+
+`non_vowel_contamination: tolerable`は`accepted`にできる。子音との遷移が聞こえることだけを理由に`rejected`へ分類しない。
 
 方式選定では次を比較する。
 
@@ -149,7 +165,9 @@ end_delta(A, B)   = abs(A.end_sec - B.end_sec)
 - 構造検査の成功率
 - 方式間の境界一致度
 - 人手確認した区間の`accepted`率
-- 先頭切れ、末尾切れ、別音混入の発生率
+- 利用上問題になる先頭切れ、末尾切れの発生率
+- 別の母音核を含む割合
+- 許容可能または問題になる非母音成分の発生率
 - 音素別、長母音、無声化候補別の失敗傾向
 - 処理時間、安定性、再実行の容易さ
 
@@ -170,16 +188,19 @@ end_delta(A, B)   = abs(A.end_sec - B.end_sec)
   "end_sec": 0.56,
   "auto_status": "review_required",
   "audible": "yes",
-  "start_clipped": "no",
-  "end_clipped": "no",
-  "neighbor_contamination": "no",
+  "start_clipping": "none",
+  "end_clipping": "none",
+  "other_vowel": "no",
+  "non_vowel_contamination": "tolerable",
   "preference": "B",
   "review_status": "accepted",
-  "guideline_version": "1"
+  "guideline_version": "2"
 }
 ```
 
 画面上の候補IDと方式名の対応はレビュー中には隠すが、保存結果には含める。
+
+ガイドラインv1の`start_clipped`、`end_clipped`、`neighbor_contamination`を使った回答は履歴として保持する。v2の回答を収集するときは、評価プロトコルとデータセットのバージョンを更新し、異なる設問で得た結果を同じ集計へ暗黙に混在させない。
 
 ## 10. 品質確認
 
