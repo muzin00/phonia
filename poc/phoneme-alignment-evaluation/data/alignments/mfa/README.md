@@ -22,7 +22,7 @@ uv run --project poc/phoneme-alignment-evaluation \
 
 - `input/`: manifestから生成するMFA用テキスト。Git管理しない
 - `raw/`: MFAが出力したモデル固有の単語・音素境界JSON
-- `normalized.jsonl`: 共通表記へ変換し、同一母音の連続区間を結合した結果
+- `normalized.jsonl`: MFAが出力した母音phone区間を結合せず共通表記へ変換した結果
 - `run.json`: 実行環境、モデル、処理時間などの記録
 - `validation.json`: 期待母音列との一致と時間区間の機械検査結果
 

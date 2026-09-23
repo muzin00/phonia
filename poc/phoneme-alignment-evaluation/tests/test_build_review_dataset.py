@@ -16,7 +16,7 @@ def make_record(
     end_sec: float = 1.2,
 ) -> dict[str, object]:
     return {
-        "vowel_run_id": item_id,
+        "vowel_interval_id": item_id,
         "utterance_id": "sample",
         "transcript": "サンプル",
         "source_file": "data/samples/sample.wav",

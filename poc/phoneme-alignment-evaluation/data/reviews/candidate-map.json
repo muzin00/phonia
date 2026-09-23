@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "datasetId": "jvs-vowel-alignment-review",
-  "datasetVersion": "1",
+  "datasetVersion": "2",
   "seed": "phonia-review-v1",
   "items": [
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-000",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-000",
       "candidates": [
         {
           "candidateId": "A",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-001",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-001",
       "candidates": [
         {
           "candidateId": "A",
@@ -33,7 +33,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-002",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-002",
       "candidates": [
         {
           "candidateId": "A",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-003",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-003",
       "candidates": [
         {
           "candidateId": "A",
@@ -61,7 +61,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-004",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-004",
       "candidates": [
         {
           "candidateId": "A",
@@ -75,7 +75,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-005",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-005",
       "candidates": [
         {
           "candidateId": "A",
@@ -89,7 +89,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-006",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-006",
       "candidates": [
         {
           "candidateId": "A",
@@ -103,7 +103,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-007",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-007",
       "candidates": [
         {
           "candidateId": "A",
@@ -117,7 +117,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-008",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-008",
       "candidates": [
         {
           "candidateId": "A",
@@ -131,7 +131,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-009",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-009",
       "candidates": [
         {
           "candidateId": "A",
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-010",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-010",
       "candidates": [
         {
           "candidateId": "A",
@@ -159,7 +159,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-011",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-011",
       "candidates": [
         {
           "candidateId": "A",
@@ -173,7 +173,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-012",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-012",
       "candidates": [
         {
           "candidateId": "A",
@@ -187,7 +187,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-013",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-013",
       "candidates": [
         {
           "candidateId": "A",
@@ -201,7 +201,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-014",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-014",
       "candidates": [
         {
           "candidateId": "A",
@@ -215,7 +215,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-015",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-015",
       "candidates": [
         {
           "candidateId": "A",
@@ -229,7 +229,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-016",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-016",
       "candidates": [
         {
           "candidateId": "A",
@@ -243,7 +243,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-017",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-017",
       "candidates": [
         {
           "candidateId": "A",
@@ -257,7 +257,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-018",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-018",
       "candidates": [
         {
           "candidateId": "A",
@@ -271,7 +271,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-019",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-019",
       "candidates": [
         {
           "candidateId": "A",
@@ -285,7 +285,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-020",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-020",
       "candidates": [
         {
           "candidateId": "A",
@@ -299,7 +299,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-021",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-021",
       "candidates": [
         {
           "candidateId": "A",
@@ -313,7 +313,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-022",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-022",
       "candidates": [
         {
           "candidateId": "A",
@@ -327,7 +327,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-023",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-023",
       "candidates": [
         {
           "candidateId": "A",
@@ -341,7 +341,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-024",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-024",
       "candidates": [
         {
           "candidateId": "A",
@@ -355,7 +355,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-025",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-025",
       "candidates": [
         {
           "candidateId": "A",
@@ -369,7 +369,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-026",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-026",
       "candidates": [
         {
           "candidateId": "A",
@@ -383,7 +383,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-027",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-027",
       "candidates": [
         {
           "candidateId": "A",
@@ -397,7 +397,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-028",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-028",
       "candidates": [
         {
           "candidateId": "A",
@@ -411,7 +411,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-029",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-029",
       "candidates": [
         {
           "candidateId": "A",
@@ -425,7 +425,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-030",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-030",
       "candidates": [
         {
           "candidateId": "A",
@@ -439,7 +439,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-031",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-031",
       "candidates": [
         {
           "candidateId": "A",
@@ -453,7 +453,7 @@
       ]
     },
     {
-      "itemId": "jvs001_voiceactress100_001-vowel-032",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-032",
       "candidates": [
         {
           "candidateId": "A",
@@ -467,7 +467,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-000",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-033",
       "candidates": [
         {
           "candidateId": "A",
@@ -481,7 +481,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-001",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-034",
       "candidates": [
         {
           "candidateId": "A",
@@ -495,7 +495,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-002",
+      "itemId": "jvs001_voiceactress100_001-mfa-vowel-035",
       "candidates": [
         {
           "candidateId": "A",
@@ -509,7 +509,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-003",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-000",
       "candidates": [
         {
           "candidateId": "A",
@@ -523,7 +523,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-004",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-001",
       "candidates": [
         {
           "candidateId": "A",
@@ -537,7 +537,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-005",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-002",
       "candidates": [
         {
           "candidateId": "A",
@@ -551,7 +551,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-006",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-003",
       "candidates": [
         {
           "candidateId": "A",
@@ -565,7 +565,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-007",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-004",
       "candidates": [
         {
           "candidateId": "A",
@@ -579,7 +579,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-008",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-005",
       "candidates": [
         {
           "candidateId": "A",
@@ -593,7 +593,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-009",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-006",
       "candidates": [
         {
           "candidateId": "A",
@@ -607,7 +607,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-010",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-007",
       "candidates": [
         {
           "candidateId": "A",
@@ -621,7 +621,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-011",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-008",
       "candidates": [
         {
           "candidateId": "A",
@@ -635,7 +635,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-012",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-009",
       "candidates": [
         {
           "candidateId": "A",
@@ -649,7 +649,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-013",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-010",
       "candidates": [
         {
           "candidateId": "A",
@@ -663,7 +663,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-014",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-011",
       "candidates": [
         {
           "candidateId": "A",
@@ -677,7 +677,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-015",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-012",
       "candidates": [
         {
           "candidateId": "A",
@@ -691,7 +691,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-016",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-013",
       "candidates": [
         {
           "candidateId": "A",
@@ -705,7 +705,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-017",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-014",
       "candidates": [
         {
           "candidateId": "A",
@@ -719,7 +719,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-018",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-015",
       "candidates": [
         {
           "candidateId": "A",
@@ -733,7 +733,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-019",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-016",
       "candidates": [
         {
           "candidateId": "A",
@@ -747,7 +747,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-020",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-017",
       "candidates": [
         {
           "candidateId": "A",
@@ -761,7 +761,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-021",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-018",
       "candidates": [
         {
           "candidateId": "A",
@@ -775,7 +775,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-022",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-019",
       "candidates": [
         {
           "candidateId": "A",
@@ -789,7 +789,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-023",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-020",
       "candidates": [
         {
           "candidateId": "A",
@@ -803,7 +803,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-024",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-021",
       "candidates": [
         {
           "candidateId": "A",
@@ -817,7 +817,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-025",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-022",
       "candidates": [
         {
           "candidateId": "A",
@@ -831,7 +831,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-026",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-023",
       "candidates": [
         {
           "candidateId": "A",
@@ -845,7 +845,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-027",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-024",
       "candidates": [
         {
           "candidateId": "A",
@@ -859,7 +859,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-028",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-025",
       "candidates": [
         {
           "candidateId": "A",
@@ -873,7 +873,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-029",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-026",
       "candidates": [
         {
           "candidateId": "A",
@@ -887,7 +887,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-030",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-027",
       "candidates": [
         {
           "candidateId": "A",
@@ -901,7 +901,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-031",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-028",
       "candidates": [
         {
           "candidateId": "A",
@@ -915,7 +915,7 @@
       ]
     },
     {
-      "itemId": "jvs002_voiceactress100_001-vowel-032",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-029",
       "candidates": [
         {
           "candidateId": "A",
@@ -929,7 +929,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-000",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-030",
       "candidates": [
         {
           "candidateId": "A",
@@ -943,7 +943,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-001",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-031",
       "candidates": [
         {
           "candidateId": "A",
@@ -957,7 +957,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-002",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-032",
       "candidates": [
         {
           "candidateId": "A",
@@ -971,7 +971,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-003",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-033",
       "candidates": [
         {
           "candidateId": "A",
@@ -985,7 +985,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-004",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-034",
       "candidates": [
         {
           "candidateId": "A",
@@ -999,7 +999,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-005",
+      "itemId": "jvs002_voiceactress100_001-mfa-vowel-035",
       "candidates": [
         {
           "candidateId": "A",
@@ -1013,7 +1013,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-006",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-000",
       "candidates": [
         {
           "candidateId": "A",
@@ -1027,7 +1027,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-007",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-001",
       "candidates": [
         {
           "candidateId": "A",
@@ -1041,7 +1041,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-008",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-002",
       "candidates": [
         {
           "candidateId": "A",
@@ -1055,7 +1055,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-009",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-003",
       "candidates": [
         {
           "candidateId": "A",
@@ -1069,7 +1069,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-010",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-004",
       "candidates": [
         {
           "candidateId": "A",
@@ -1083,7 +1083,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-011",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-005",
       "candidates": [
         {
           "candidateId": "A",
@@ -1097,7 +1097,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-012",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-006",
       "candidates": [
         {
           "candidateId": "A",
@@ -1111,7 +1111,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-013",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-007",
       "candidates": [
         {
           "candidateId": "A",
@@ -1125,7 +1125,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-014",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-008",
       "candidates": [
         {
           "candidateId": "A",
@@ -1139,7 +1139,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-015",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-009",
       "candidates": [
         {
           "candidateId": "A",
@@ -1153,7 +1153,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-016",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-010",
       "candidates": [
         {
           "candidateId": "A",
@@ -1167,7 +1167,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-017",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-011",
       "candidates": [
         {
           "candidateId": "A",
@@ -1181,7 +1181,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-018",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-012",
       "candidates": [
         {
           "candidateId": "A",
@@ -1195,7 +1195,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-019",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-013",
       "candidates": [
         {
           "candidateId": "A",
@@ -1209,7 +1209,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-020",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-014",
       "candidates": [
         {
           "candidateId": "A",
@@ -1223,7 +1223,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-021",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-015",
       "candidates": [
         {
           "candidateId": "A",
@@ -1237,7 +1237,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-022",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-016",
       "candidates": [
         {
           "candidateId": "A",
@@ -1251,7 +1251,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-023",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-017",
       "candidates": [
         {
           "candidateId": "A",
@@ -1265,7 +1265,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-024",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-018",
       "candidates": [
         {
           "candidateId": "A",
@@ -1279,7 +1279,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-025",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-019",
       "candidates": [
         {
           "candidateId": "A",
@@ -1293,7 +1293,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-026",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-020",
       "candidates": [
         {
           "candidateId": "A",
@@ -1307,7 +1307,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-027",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-021",
       "candidates": [
         {
           "candidateId": "A",
@@ -1321,7 +1321,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-028",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-022",
       "candidates": [
         {
           "candidateId": "A",
@@ -1335,7 +1335,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-029",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-023",
       "candidates": [
         {
           "candidateId": "A",
@@ -1349,7 +1349,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-030",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-024",
       "candidates": [
         {
           "candidateId": "A",
@@ -1363,7 +1363,7 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-031",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-025",
       "candidates": [
         {
           "candidateId": "A",
@@ -1377,7 +1377,133 @@
       ]
     },
     {
-      "itemId": "jvs003_voiceactress100_001-vowel-032",
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-026",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "mfa",
+          "status": "available",
+          "aligner": "mfa",
+          "alignerVersion": "3.4.2",
+          "modelId": "japanese_mfa",
+          "modelVersion": "3.0.0"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-027",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "mfa",
+          "status": "available",
+          "aligner": "mfa",
+          "alignerVersion": "3.4.2",
+          "modelId": "japanese_mfa",
+          "modelVersion": "3.0.0"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-028",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "mfa",
+          "status": "available",
+          "aligner": "mfa",
+          "alignerVersion": "3.4.2",
+          "modelId": "japanese_mfa",
+          "modelVersion": "3.0.0"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-029",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "mfa",
+          "status": "available",
+          "aligner": "mfa",
+          "alignerVersion": "3.4.2",
+          "modelId": "japanese_mfa",
+          "modelVersion": "3.0.0"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-030",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "mfa",
+          "status": "available",
+          "aligner": "mfa",
+          "alignerVersion": "3.4.2",
+          "modelId": "japanese_mfa",
+          "modelVersion": "3.0.0"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-031",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "mfa",
+          "status": "available",
+          "aligner": "mfa",
+          "alignerVersion": "3.4.2",
+          "modelId": "japanese_mfa",
+          "modelVersion": "3.0.0"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-032",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "mfa",
+          "status": "available",
+          "aligner": "mfa",
+          "alignerVersion": "3.4.2",
+          "modelId": "japanese_mfa",
+          "modelVersion": "3.0.0"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-033",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "mfa",
+          "status": "available",
+          "aligner": "mfa",
+          "alignerVersion": "3.4.2",
+          "modelId": "japanese_mfa",
+          "modelVersion": "3.0.0"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-034",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "mfa",
+          "status": "available",
+          "aligner": "mfa",
+          "alignerVersion": "3.4.2",
+          "modelId": "japanese_mfa",
+          "modelVersion": "3.0.0"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-mfa-vowel-035",
       "candidates": [
         {
           "candidateId": "A",

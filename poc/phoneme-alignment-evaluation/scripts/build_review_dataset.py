@@ -15,7 +15,7 @@ DEFAULT_DATASET_OUTPUT = PROJECT_DIR / "data" / "reviews" / "review-dataset.json
 DEFAULT_MAPPING_OUTPUT = PROJECT_DIR / "data" / "reviews" / "candidate-map.json"
 DEFAULT_SEED = "phonia-review-v1"
 DATASET_ID = "jvs-vowel-alignment-review"
-DATASET_VERSION = "1"
+DATASET_VERSION = "2"
 PROTOCOL_ID = "japanese-vowel-boundary-review"
 PROTOCOL_VERSION = "1"
 
@@ -102,9 +102,9 @@ def parse_candidate_specs(specs: list[str]) -> dict[str, Path]:
 def index_records(records: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     indexed: dict[str, dict[str, Any]] = {}
     for record in records:
-        item_id = str(record["vowel_run_id"])
+        item_id = str(record["vowel_interval_id"])
         if item_id in indexed:
-            raise ValueError(f"Duplicate vowel_run_id: {item_id}")
+            raise ValueError(f"Duplicate vowel_interval_id: {item_id}")
         indexed[item_id] = record
     return indexed
 
