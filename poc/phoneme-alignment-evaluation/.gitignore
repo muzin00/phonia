@@ -4,3 +4,7 @@ __pycache__/
 data/alignments/mfa/input/
 data/segments/mfa/exact/
 data/segments/mfa/context/
+data/alignments/julius/input/
+data/alignments/julius/raw/*.log
+data/segments/julius/exact/
+data/segments/julius/context/
