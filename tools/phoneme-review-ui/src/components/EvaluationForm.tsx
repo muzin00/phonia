@@ -1,40 +1,29 @@
 import {
   answerCandidateQuestion,
-  answerComparison,
+  answerReviewStatus,
   getReviewProgress,
-  type ComparisonAnswer,
   type ReviewDraft,
 } from '../domain/reviewDraft.ts'
 import type {
   ReviewCandidate,
   ReviewForm,
+  ReviewStatus,
 } from '../domain/reviewDataset.ts'
 
 type AvailableCandidate = Extract<ReviewCandidate, { status: 'available' }>
-
-export type ReviewSaveState =
-  | { status: 'idle' | 'dirty' | 'saving' }
-  | { status: 'saved'; revision: number; recordedAt: string }
-  | { status: 'error'; message: string }
 
 export function EvaluationForm({
   form,
   candidates,
   selectedCandidateId,
   draft,
-  saveState,
-  onSelectCandidate,
   onChange,
-  onSave,
 }: {
   form: ReviewForm
   candidates: AvailableCandidate[]
   selectedCandidateId: string
   draft: ReviewDraft
-  saveState: ReviewSaveState
-  onSelectCandidate: (candidateId: string) => void
   onChange: (draft: ReviewDraft) => void
-  onSave: () => void
 }) {
   const selectedCandidate = candidates.find(
     (candidate) => candidate.id === selectedCandidateId,
@@ -62,36 +51,11 @@ export function EvaluationForm({
         </p>
       </div>
 
-      {candidates.length > 1 && (
-        <div className="candidate-tabs" aria-label="評価する候補">
-          {candidates.map((candidate) => {
-            const answerCount = form.candidateQuestions.filter(
-              (question) =>
-                draft.candidateAnswers[candidate.id]?.[question.id] !== undefined,
-            ).length
-            return (
-              <button
-                key={candidate.id}
-                type="button"
-                className="candidate-tab"
-                aria-pressed={candidate.id === selectedCandidateId}
-                onClick={() => onSelectCandidate(candidate.id)}
-              >
-                候補{candidate.id}
-                <span>
-                  {answerCount}/{form.candidateQuestions.length}
-                </span>
-              </button>
-            )
-          })}
-        </div>
-      )}
-
       <div className="candidate-questions">
         <div className="question-group-heading">
           <span className="candidate-id">{selectedCandidate.id}</span>
           <div>
-            <h3>候補{selectedCandidate.id}の評価</h3>
+            <h3>母音区間の評価</h3>
             <p>波形と音声を確認して回答してください。</p>
           </div>
         </div>
@@ -135,119 +99,52 @@ export function EvaluationForm({
         ))}
       </div>
 
-      <fieldset className="question-fieldset comparison-fieldset">
-        <legend>{form.comparison.prompt}</legend>
-        <div className="comparison-choices">
-          {candidates.map((candidate) => (
-            <ComparisonChoice
-              key={candidate.id}
-              label={`候補${candidate.id}が最も自然`}
-              value={{ outcome: 'candidate', candidateId: candidate.id }}
-              checked={
-                draft.comparison?.outcome === 'candidate' &&
-                draft.comparison.candidateId === candidate.id
+      <fieldset className="question-fieldset review-status-fieldset">
+        <legend>{form.reviewStatus.prompt}</legend>
+        <div className="review-status-choices">
+          {form.reviewStatus.choices.map((choice) => (
+            <ReviewStatusChoice
+              key={choice.value}
+              label={choice.label}
+              value={choice.value}
+              checked={draft.reviewStatus === choice.value}
+              onChange={(answer) =>
+                onChange(answerReviewStatus(draft, answer))
               }
-              onChange={(answer) => onChange(answerComparison(draft, answer))}
             />
           ))}
-          {form.comparison.allowIndistinguishable && candidates.length > 1 && (
-            <ComparisonChoice
-              label="聴感上の差を判断できない"
-              value={{ outcome: 'indistinguishable' }}
-              checked={draft.comparison?.outcome === 'indistinguishable'}
-              onChange={(answer) => onChange(answerComparison(draft, answer))}
-            />
-          )}
-          {form.comparison.allowNone && (
-            <ComparisonChoice
-              label="どの候補も不適切"
-              value={{ outcome: 'none' }}
-              checked={draft.comparison?.outcome === 'none'}
-              onChange={(answer) => onChange(answerComparison(draft, answer))}
-            />
-          )}
         </div>
       </fieldset>
 
-      <div className="save-panel">
-        <div aria-live="polite">
-          <p className="save-title">回答の保存</p>
-          <SaveStatus state={saveState} completed={progress.completed} />
-        </div>
-        <button
-          type="button"
-          className="button button-primary save-button"
-          disabled={
-            !progress.completed ||
-            saveState.status === 'saving' ||
-            saveState.status === 'saved'
-          }
-          onClick={onSave}
-        >
-          {saveState.status === 'saving'
-            ? '保存中…'
-            : saveState.status === 'dirty'
-              ? '変更を保存'
-              : '回答を保存'}
-        </button>
+      <div className="local-save-panel" aria-live="polite">
+        <p className="save-title">ブラウザへ自動保存</p>
+        <p className="save-message">
+          {progress.completed
+            ? '回答済みです。次の区間へ自動的に進みます。'
+            : '選択内容はこのブラウザに自動保存されています。'}
+        </p>
       </div>
     </section>
   )
 }
 
-function SaveStatus({
-  state,
-  completed,
-}: {
-  state: ReviewSaveState
-  completed: boolean
-}) {
-  if (state.status === 'saved') {
-    return (
-      <p className="save-message save-message-success">
-        リビジョン{state.revision}として保存しました（
-        {new Date(state.recordedAt).toLocaleString('ja-JP')}）
-      </p>
-    )
-  }
-  if (state.status === 'error') {
-    return (
-      <p className="save-message save-message-error" role="alert">
-        {state.message}
-      </p>
-    )
-  }
-  if (state.status === 'saving') {
-    return <p className="save-message">JSONLへ追記しています。</p>
-  }
-  if (!completed) {
-    return <p className="save-message">すべての設問へ回答すると保存できます。</p>
-  }
-  return <p className="save-message">未保存の回答があります。</p>
-}
-
-function ComparisonChoice({
+function ReviewStatusChoice({
   label,
   value,
   checked,
   onChange,
 }: {
   label: string
-  value: ComparisonAnswer
+  value: ReviewStatus
   checked: boolean
-  onChange: (answer: ComparisonAnswer) => void
+  onChange: (answer: ReviewStatus) => void
 }) {
-  const valueKey =
-    value.outcome === 'candidate'
-      ? `candidate-${value.candidateId}`
-      : value.outcome
-
   return (
-    <label className="comparison-choice">
+    <label className="review-status-choice">
       <input
         type="radio"
-        name="comparison"
-        value={valueKey}
+        name="review-status"
+        value={value}
         checked={checked}
         onChange={() => onChange(value)}
       />

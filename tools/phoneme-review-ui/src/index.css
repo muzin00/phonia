@@ -51,6 +51,49 @@ button:focus-visible {
   margin-bottom: 32px;
 }
 
+.header-controls {
+  display: flex;
+  align-items: end;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 16px;
+}
+
+.audio-file-selector {
+  display: grid;
+  gap: 5px;
+  color: #526e7a;
+  font-size: 0.72rem;
+  font-weight: 750;
+}
+
+.audio-file-selector select {
+  max-width: 330px;
+  padding: 9px 34px 9px 11px;
+  border: 1px solid #bed6e0;
+  border-radius: 9px;
+  background: #fff;
+  color: #244653;
+  font: inherit;
+  font-size: 0.8rem;
+}
+
+.file-export-control {
+  display: grid;
+  gap: 5px;
+  color: #607782;
+  font-size: 0.68rem;
+}
+
+.file-export-control .button {
+  white-space: nowrap;
+}
+
+.file-export-error {
+  max-width: 240px;
+  color: #9b382f;
+}
+
 h1,
 h2,
 p,
@@ -288,13 +331,13 @@ dd {
 
 .choice-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 8px;
   margin-top: 13px;
 }
 
 .choice,
-.comparison-choice {
+.review-status-choice {
   display: flex;
   align-items: center;
   gap: 9px;
@@ -313,7 +356,7 @@ dd {
 }
 
 .choice:has(input:checked),
-.comparison-choice:has(input:checked) {
+.review-status-choice:has(input:checked) {
   border-color: #3195ba;
   background: #e4f5fb;
   color: #0e6484;
@@ -321,39 +364,35 @@ dd {
 }
 
 .choice input,
-.comparison-choice input {
+.review-status-choice input {
   margin: 0;
   accent-color: #167da3;
 }
 
-.comparison-fieldset {
+.review-status-fieldset {
   margin-top: 22px;
   border: 1px solid #d1e3ea;
   border-radius: 13px;
 }
 
-.comparison-fieldset legend {
+.review-status-fieldset legend {
   width: auto;
   padding: 0 7px;
   font-size: 1rem;
 }
 
-.comparison-choices {
+.review-status-choices {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   gap: 9px;
   margin-top: 3px;
 }
 
-.comparison-choice {
+.review-status-choice {
   padding: 12px 13px;
 }
 
-.save-panel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+.local-save-panel {
   margin-top: 22px;
   padding: 17px 18px;
   border: 1px solid #cce1ea;
@@ -371,18 +410,6 @@ dd {
   margin-top: 4px;
   color: #687f89;
   font-size: 0.74rem;
-}
-
-.save-message-success {
-  color: #18704a;
-}
-
-.save-message-error {
-  color: #9b382f;
-}
-
-.save-button {
-  flex: 0 0 auto;
 }
 
 .supporting-text,
@@ -627,6 +654,17 @@ dd {
     flex-direction: column;
   }
 
+  .header-controls {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .audio-file-selector select {
+    width: 100%;
+    max-width: none;
+  }
+
   .progress {
     min-width: auto;
   }
@@ -653,12 +691,7 @@ dd {
     grid-template-columns: 1fr;
   }
 
-  .save-panel {
-    align-items: stretch;
-    flex-direction: column;
-  }
-
-  .save-button {
+  .file-export-control .button {
     width: 100%;
   }
 

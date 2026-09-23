@@ -1,15 +1,14 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "datasetId": "jvs-vowel-alignment-review",
-  "datasetVersion": "2",
+  "datasetVersion": "3",
   "title": "日本語母音区間レビュー",
   "protocol": {
     "id": "japanese-vowel-boundary-review",
-    "version": "1"
+    "version": "2"
   },
   "playback": {
-    "contextPaddingSec": 0.1,
-    "boundaryLoopSec": 0.08
+    "contextPaddingSec": 0.1
   },
   "form": {
     "candidateQuestions": [
@@ -32,8 +31,52 @@
         ]
       },
       {
-        "id": "start_clipped",
-        "prompt": "母音の先頭が切れていると感じますか？",
+        "id": "start_clipping",
+        "prompt": "母音の先頭の切れは利用上問題になりますか？",
+        "choices": [
+          {
+            "value": "none",
+            "label": "切れていない"
+          },
+          {
+            "value": "tolerable",
+            "label": "聞こえるが許容できる"
+          },
+          {
+            "value": "problematic",
+            "label": "利用上問題がある"
+          },
+          {
+            "value": "uncertain",
+            "label": "判断できない"
+          }
+        ]
+      },
+      {
+        "id": "end_clipping",
+        "prompt": "母音の末尾の切れは利用上問題になりますか？",
+        "choices": [
+          {
+            "value": "none",
+            "label": "切れていない"
+          },
+          {
+            "value": "tolerable",
+            "label": "聞こえるが許容できる"
+          },
+          {
+            "value": "problematic",
+            "label": "利用上問題がある"
+          },
+          {
+            "value": "uncertain",
+            "label": "判断できない"
+          }
+        ]
+      },
+      {
+        "id": "other_vowel",
+        "prompt": "別の母音の核を含むと感じますか？",
         "choices": [
           {
             "value": "yes",
@@ -50,34 +93,20 @@
         ]
       },
       {
-        "id": "end_clipped",
-        "prompt": "母音の末尾が切れていると感じますか？",
+        "id": "non_vowel_contamination",
+        "prompt": "子音などの非母音成分はどの程度含まれますか？",
         "choices": [
           {
-            "value": "yes",
-            "label": "はい"
+            "value": "none",
+            "label": "含まれない"
           },
           {
-            "value": "no",
-            "label": "いいえ"
+            "value": "tolerable",
+            "label": "聞こえるが許容できる"
           },
           {
-            "value": "uncertain",
-            "label": "判断できない"
-          }
-        ]
-      },
-      {
-        "id": "neighbor_contamination",
-        "prompt": "前後の別の音が入りすぎていると感じますか？",
-        "choices": [
-          {
-            "value": "yes",
-            "label": "はい"
-          },
-          {
-            "value": "no",
-            "label": "いいえ"
+            "value": "problematic",
+            "label": "利用上問題がある"
           },
           {
             "value": "uncertain",
@@ -86,10 +115,22 @@
         ]
       }
     ],
-    "comparison": {
-      "prompt": "最も自然な区間を選んでください。",
-      "allowIndistinguishable": true,
-      "allowNone": true
+    "reviewStatus": {
+      "prompt": "この母音区間の総合判定を選んでください。",
+      "choices": [
+        {
+          "value": "accepted",
+          "label": "利用できる"
+        },
+        {
+          "value": "rejected",
+          "label": "利用できない"
+        },
+        {
+          "value": "uncertain",
+          "label": "判断できない"
+        }
+      ]
     }
   },
   "items": [

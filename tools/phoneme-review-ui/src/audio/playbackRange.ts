@@ -32,4 +32,3 @@ function clampRange(
     endSec: Math.max(0, Math.min(endSec, durationSec)),
   }
 }
-

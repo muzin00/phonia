@@ -5,7 +5,7 @@ import test from 'node:test'
 import { parseReviewDataset } from '../src/domain/parseReviewDataset.ts'
 import {
   answerCandidateQuestion,
-  answerComparison,
+  answerReviewStatus,
   createEmptyReviewDraft,
 } from '../src/domain/reviewDraft.ts'
 import {
@@ -27,13 +27,13 @@ test('accepts a completed review submission and record', () => {
   assert.deepEqual(parseReviewRecord(reviewRecordFixture()), reviewRecordFixture())
 })
 
-test('rejects a completed submission without a comparison answer', () => {
-  const invalid = { ...reviewSubmissionFixture(), comparison: null }
+test('rejects a completed submission without a review status', () => {
+  const invalid = { ...reviewSubmissionFixture(), reviewStatus: null }
   assert.throws(
     () => parseReviewSubmission(invalid),
     (error: unknown) => {
       assert.ok(error instanceof InvalidReviewRecordError)
-      assert.match(error.message, /comparison/)
+      assert.match(error.message, /reviewStatus/)
       return true
     },
   )
@@ -57,7 +57,7 @@ test('converts a completed draft to a submission and restores it', async () => {
       question.choices[0]!.value,
     )
   })
-  draft = answerComparison(draft, { outcome: 'candidate', candidateId: 'A' })
+  draft = answerReviewStatus(draft, 'accepted')
 
   const submission = createReviewSubmission(dataset, item, draft)
   const restored = reviewRecordToDraft({
@@ -72,4 +72,3 @@ test('converts a completed draft to a submission and restores it', async () => {
     endSec: 1.95,
   })
 })
-

@@ -5,7 +5,7 @@ import type {
 
 export function reviewSubmissionFixture(): ReviewSubmission {
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     datasetId: 'dataset-1',
     datasetVersion: '1',
     itemId: 'item-1',
@@ -17,11 +17,11 @@ export function reviewSubmissionFixture(): ReviewSubmission {
         answers: { audible: 'yes' },
       },
     ],
-    comparison: { outcome: 'candidate', candidateId: 'A' },
+    reviewStatus: 'accepted',
     skipReason: null,
     reviewerKind: 'non_expert',
-    protocol: { id: 'protocol-1', version: '1' },
-    uiVersion: '1',
+    protocol: { id: 'protocol-1', version: '2' },
+    uiVersion: '2',
   }
 }
 
@@ -32,4 +32,3 @@ export function reviewRecordFixture(revision = 1): ReviewRecord {
     recordedAt: `2026-09-22T00:00:0${revision}.000Z`,
   }
 }
-

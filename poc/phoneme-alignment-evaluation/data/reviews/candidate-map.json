@@ -1,8 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "datasetId": "jvs-vowel-alignment-review",
-  "datasetVersion": "2",
-  "seed": "phonia-review-v1",
+  "datasetVersion": "3",
   "items": [
     {
       "itemId": "jvs001_voiceactress100_001-mfa-vowel-000",

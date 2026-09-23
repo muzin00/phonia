@@ -31,7 +31,7 @@ PHONIA_REVIEW_MEDIA_ROOT=/absolute/path/to/audio pnpm dev
 
 配信対象は設定したディレクトリ配下の音声ファイルに限定されます。
 
-回答は既定で次のJSONLへ追記されます。
+回答と現在位置は操作のたびにブラウザの`localStorage`へ自動保存されます。画面上部の「JSONLへ保存」を押すと、回答が完了しており、前回のファイル保存後に追加または変更された項目だけが、既定で次のJSONLへ追記されます。
 
 ```text
 ../../poc/phoneme-alignment-evaluation/data/reviews/review-records.jsonl
@@ -76,4 +76,6 @@ pnpm validate:example -- ../../poc/phoneme-alignment-evaluation/data/reviews/rev
 
 共通レビューデータの仕様は[`docs/data-format.md`](docs/data-format.md)を参照してください。
 
-回答を保存するとJSONLへ新しいリビジョンとして追記されます。ページを再読み込みした場合は、データセットと項目ごとの最新リビジョンがフォームへ復元されます。
+各区間の回答が完了すると次のレビュー区間へ自動的に進みます。最終区間ではそのまま留まります。ページを再読み込みした場合は、JSONLの最新リビジョンを基準に、同じデータセットについてブラウザへ自動保存した回答と現在位置を復元します。
+
+画面上部の「音声ファイル」から元音声を選ぶと、そのファイルに含まれる最初のレビュー区間へ移動できます。選択肢にはファイルごとの区間数も表示されます。
