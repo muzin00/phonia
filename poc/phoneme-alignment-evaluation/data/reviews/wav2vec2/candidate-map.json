@@ -1,0 +1,1939 @@
+{
+  "schemaVersion": 2,
+  "datasetId": "jvs-vowel-alignment-review-wav2vec2",
+  "datasetVersion": "1",
+  "items": [
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-000",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-001",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-002",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-003",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-004",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-005",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-006",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-007",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-008",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-009",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-010",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-011",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-012",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-013",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-014",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-015",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-016",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-017",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-018",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-019",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-020",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-021",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-022",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-023",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-024",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-025",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-026",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-027",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-028",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-029",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-030",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-031",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-032",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-033",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-034",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-035",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-036",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-037",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-038",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-039",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-040",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-041",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-042",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-043",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-044",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs001_voiceactress100_001-wav2vec2-vowel-045",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-000",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-001",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-002",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-003",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-004",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-005",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-006",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-007",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-008",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-009",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-010",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-011",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-012",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-013",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-014",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-015",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-016",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-017",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-018",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-019",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-020",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-021",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-022",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-023",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-024",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-025",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-026",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-027",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-028",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-029",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-030",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-031",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-032",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-033",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-034",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-035",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-036",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-037",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-038",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-039",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-040",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-041",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-042",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-043",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-044",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs002_voiceactress100_001-wav2vec2-vowel-045",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-000",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-001",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-002",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-003",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-004",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-005",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-006",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-007",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-008",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-009",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-010",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-011",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-012",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-013",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-014",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-015",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-016",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-017",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-018",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-019",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-020",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-021",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-022",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-023",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-024",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-025",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-026",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-027",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-028",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-029",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-030",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-031",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-032",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-033",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-034",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-035",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-036",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-037",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-038",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-039",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-040",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-041",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-042",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-043",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-044",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    },
+    {
+      "itemId": "jvs003_voiceactress100_001-wav2vec2-vowel-045",
+      "candidates": [
+        {
+          "candidateId": "A",
+          "method": "wav2vec2",
+          "status": "available",
+          "aligner": "wav2vec2-ctc-onnx",
+          "alignerVersion": "1.30.0",
+          "modelId": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+          "modelVersion": "2c733782da5604684829819a5eb744c193fe9398"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "model_id": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+  "model_version": "2c733782da5604684829819a5eb744c193fe9398",
+  "onnx_sha256": "fdfecb377f173a45d92502d698558521bb0107c118ef151d6896a2f76987c65a",
+  "audio": "data/samples/jvs001_VOICEACTRESS100_001.wav",
+  "logit_shape": [
+    1,
+    430,
+    392
+  ],
+  "max_absolute_logit_difference": 0.000934600830078125,
+  "mean_absolute_logit_difference": 4.9413443775847554e-05,
+  "argmax_agreement_rate": 1.0,
+  "pytorch_duration_sec": 0.469129,
+  "onnx_duration_sec": 0.490228
+}

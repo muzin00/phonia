@@ -8,3 +8,5 @@ data/alignments/julius/input/
 data/alignments/julius/raw/*.log
 data/segments/julius/exact/
 data/segments/julius/context/
+data/segments/wav2vec2/exact/
+data/segments/wav2vec2/context/
