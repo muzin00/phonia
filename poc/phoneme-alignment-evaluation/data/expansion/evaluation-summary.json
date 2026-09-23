@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "utterance_count": 40,
+    "speaker_count": 4,
+    "speaker_utterance_counts": {
+      "jvs001": 10,
+      "jvs002": 10,
+      "jvs003": 10,
+      "jvs004": 10
+    },
+    "audio_duration_sec": 224.038541,
+    "expected_vowel_unit_count": 1164,
+    "expected_vowel_counts": {
+      "a": 309,
+      "i": 218,
+      "u": 203,
+      "e": 138,
+      "o": 296
+    }
+  },
+  "methods": {
+    "mfa": {
+      "utterance_count": 40,
+      "vowel_interval_count": 998,
+      "vowel_counts": {
+        "a": 297,
+        "i": 180,
+        "u": 155,
+        "e": 121,
+        "o": 245
+      },
+      "duration_sec": 88.693,
+      "mean_duration_ms_per_utterance": 2217.325,
+      "quality_flag_counts": {
+        "near_silent_exact": 2
+      },
+      "quality_flagged_count": 2,
+      "expected_sequence_match_count": 12,
+      "expected_sequence_match_rate": 0.3
+    },
+    "julius": {
+      "utterance_count": 40,
+      "vowel_interval_count": 1164,
+      "vowel_counts": {
+        "a": 309,
+        "i": 218,
+        "u": 203,
+        "e": 138,
+        "o": 296
+      },
+      "duration_sec": 1.008,
+      "mean_duration_ms_per_utterance": 25.2,
+      "quality_flag_counts": {
+        "near_silent_exact": 22
+      },
+      "quality_flagged_count": 22
+    },
+    "wav2vec2": {
+      "utterance_count": 40,
+      "vowel_interval_count": 1164,
+      "vowel_counts": {
+        "a": 309,
+        "i": 218,
+        "u": 203,
+        "e": 138,
+        "o": 296
+      },
+      "duration_sec": 11.96,
+      "mean_duration_ms_per_utterance": 299.0,
+      "quality_flag_counts": {
+        "near_silent_exact": 8,
+        "short_exact": 3
+      },
+      "quality_flagged_count": 11,
+      "greedy_token_error_rate": 0.412232
+    }
+  },
+  "comparisons": {
+    "mfa_vs_julius_sequence_matched_utterances": {
+      "utterance_count": 12,
+      "pair_count": 286,
+      "vowels": {
+        "a": {
+          "pair_count": 84,
+          "start_delta_ms_median": 7.499994,
+          "end_delta_ms_median": 7.500076,
+          "iou_mean": 0.778929,
+          "iou_median": 0.818182,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 0
+        },
+        "i": {
+          "pair_count": 44,
+          "start_delta_ms_median": 12.499989,
+          "end_delta_ms_median": 12.5,
+          "iou_mean": 0.719167,
+          "iou_median": 0.742914,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 0
+        },
+        "u": {
+          "pair_count": 44,
+          "start_delta_ms_median": 12.499881,
+          "end_delta_ms_median": 12.499979,
+          "iou_mean": 0.628119,
+          "iou_median": 0.655172,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 0
+        },
+        "e": {
+          "pair_count": 28,
+          "start_delta_ms_median": 4.999981,
+          "end_delta_ms_median": 9.999981,
+          "iou_mean": 0.787699,
+          "iou_median": 0.818182,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 0
+        },
+        "o": {
+          "pair_count": 86,
+          "start_delta_ms_median": 7.500045,
+          "end_delta_ms_median": 12.499909,
+          "iou_mean": 0.722248,
+          "iou_median": 0.750001,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 6
+        }
+      }
+    },
+    "wav2vec2_vs_julius": {
+      "pair_count": 1164,
+      "vowels": {
+        "a": {
+          "pair_count": 309,
+          "start_delta_ms_median": 12.5,
+          "end_delta_ms_median": 22.5,
+          "iou_mean": 0.579323,
+          "iou_median": 0.621622,
+          "no_overlap_count": 14,
+          "boundary_over_100ms_count": 35
+        },
+        "i": {
+          "pair_count": 218,
+          "start_delta_ms_median": 17.5,
+          "end_delta_ms_median": 12.5,
+          "iou_mean": 0.548057,
+          "iou_median": 0.575758,
+          "no_overlap_count": 3,
+          "boundary_over_100ms_count": 8
+        },
+        "u": {
+          "pair_count": 203,
+          "start_delta_ms_median": 17.5,
+          "end_delta_ms_median": 17.5,
+          "iou_mean": 0.457025,
+          "iou_median": 0.473684,
+          "no_overlap_count": 11,
+          "boundary_over_100ms_count": 11
+        },
+        "e": {
+          "pair_count": 138,
+          "start_delta_ms_median": 7.5,
+          "end_delta_ms_median": 12.5,
+          "iou_mean": 0.642421,
+          "iou_median": 0.69697,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 7
+        },
+        "o": {
+          "pair_count": 296,
+          "start_delta_ms_median": 12.5,
+          "end_delta_ms_median": 22.5,
+          "iou_mean": 0.573676,
+          "iou_median": 0.621622,
+          "no_overlap_count": 12,
+          "boundary_over_100ms_count": 25
+        }
+      }
+    }
+  }
+}

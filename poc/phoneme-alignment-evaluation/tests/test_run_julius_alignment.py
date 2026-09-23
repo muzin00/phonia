@@ -17,10 +17,10 @@ from scripts.run_julius_alignment import (
 
 
 class PhonemeConversionTest(unittest.TestCase):
-    def test_maps_only_pause_label(self) -> None:
+    def test_maps_pause_and_devoiced_vowels_to_model_labels(self) -> None:
         self.assertEqual(
-            to_julius_phonemes(["m", "a", "pau", "o", "o"]),
-            ["m", "a", "sp", "o", "o"],
+            to_julius_phonemes(["m", "a", "pau", "cl", "I", "U", "o"]),
+            ["m", "a", "sp", "q", "i", "u", "o"],
         )
 
 

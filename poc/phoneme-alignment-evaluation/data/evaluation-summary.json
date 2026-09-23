@@ -1,0 +1,637 @@
+{
+  "schema_version": 1,
+  "vowels": [
+    "a",
+    "i",
+    "u",
+    "e",
+    "o"
+  ],
+  "methods": {
+    "mfa": {
+      "interval_count": 108,
+      "expected_unit_count": 138,
+      "reviewed_count": 108,
+      "vowels": {
+        "a": {
+          "interval_count": 21,
+          "expected_unit_count": 21,
+          "duration_ms": {
+            "mean": 95.238093,
+            "median": 79.999983,
+            "min": 39.999962,
+            "max": 230.000019
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 21,
+            "status_counts": {
+              "accepted": 15,
+              "rejected": 6
+            },
+            "accepted_rate": 0.714286,
+            "question_counts": {
+              "audible": {
+                "yes": 21
+              },
+              "end_clipping": {
+                "none": 21
+              },
+              "non_vowel_contamination": {
+                "none": 4,
+                "tolerable": 17
+              },
+              "other_vowel": {
+                "no": 15,
+                "yes": 6
+              },
+              "start_clipping": {
+                "none": 21
+              }
+            }
+          }
+        },
+        "i": {
+          "interval_count": 18,
+          "expected_unit_count": 18,
+          "duration_ms": {
+            "mean": 111.111144,
+            "median": 90.000153,
+            "min": 39.999962,
+            "max": 230.000019
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 18,
+            "status_counts": {
+              "accepted": 12,
+              "rejected": 6
+            },
+            "accepted_rate": 0.666667,
+            "question_counts": {
+              "audible": {
+                "no": 5,
+                "yes": 13
+              },
+              "end_clipping": {
+                "none": 13,
+                "uncertain": 5
+              },
+              "non_vowel_contamination": {
+                "none": 8,
+                "tolerable": 7,
+                "uncertain": 3
+              },
+              "other_vowel": {
+                "no": 16,
+                "uncertain": 2
+              },
+              "start_clipping": {
+                "none": 13,
+                "uncertain": 5
+              }
+            }
+          }
+        },
+        "u": {
+          "interval_count": 12,
+          "expected_unit_count": 15,
+          "duration_ms": {
+            "mean": 111.666719,
+            "median": 115.00001,
+            "min": 40.000439,
+            "max": 200.000286
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 12,
+            "status_counts": {
+              "accepted": 11,
+              "rejected": 1
+            },
+            "accepted_rate": 0.916667,
+            "question_counts": {
+              "audible": {
+                "yes": 12
+              },
+              "end_clipping": {
+                "none": 11,
+                "uncertain": 1
+              },
+              "non_vowel_contamination": {
+                "none": 3,
+                "tolerable": 8,
+                "uncertain": 1
+              },
+              "other_vowel": {
+                "no": 11,
+                "uncertain": 1
+              },
+              "start_clipping": {
+                "none": 11,
+                "uncertain": 1
+              }
+            }
+          }
+        },
+        "e": {
+          "interval_count": 6,
+          "expected_unit_count": 6,
+          "duration_ms": {
+            "mean": 64.999978,
+            "median": 64.999819,
+            "min": 50.000191,
+            "max": 79.999924
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 6,
+            "status_counts": {
+              "accepted": 5,
+              "rejected": 1
+            },
+            "accepted_rate": 0.833333,
+            "question_counts": {
+              "audible": {
+                "uncertain": 1,
+                "yes": 5
+              },
+              "end_clipping": {
+                "none": 5,
+                "uncertain": 1
+              },
+              "non_vowel_contamination": {
+                "none": 3,
+                "tolerable": 2,
+                "uncertain": 1
+              },
+              "other_vowel": {
+                "no": 5,
+                "uncertain": 1
+              },
+              "start_clipping": {
+                "none": 5,
+                "uncertain": 1
+              }
+            }
+          }
+        },
+        "o": {
+          "interval_count": 51,
+          "expected_unit_count": 78,
+          "duration_ms": {
+            "mean": 126.66666,
+            "median": 90.000153,
+            "min": 39.999962,
+            "max": 329.999924
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 51,
+            "status_counts": {
+              "accepted": 36,
+              "rejected": 15
+            },
+            "accepted_rate": 0.705882,
+            "question_counts": {
+              "audible": {
+                "no": 1,
+                "uncertain": 3,
+                "yes": 47
+              },
+              "end_clipping": {
+                "none": 47,
+                "uncertain": 4
+              },
+              "non_vowel_contamination": {
+                "none": 18,
+                "tolerable": 28,
+                "uncertain": 5
+              },
+              "other_vowel": {
+                "no": 36,
+                "uncertain": 5,
+                "yes": 10
+              },
+              "start_clipping": {
+                "none": 47,
+                "uncertain": 4
+              }
+            }
+          }
+        }
+      }
+    },
+    "julius": {
+      "interval_count": 138,
+      "expected_unit_count": 138,
+      "reviewed_count": 138,
+      "vowels": {
+        "a": {
+          "interval_count": 21,
+          "expected_unit_count": 21,
+          "duration_ms": {
+            "mean": 94.285714,
+            "median": 80.0,
+            "min": 30.0,
+            "max": 210.0
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 21,
+            "status_counts": {
+              "accepted": 13,
+              "rejected": 7,
+              "uncertain": 1
+            },
+            "accepted_rate": 0.619048,
+            "question_counts": {
+              "audible": {
+                "uncertain": 2,
+                "yes": 19
+              },
+              "end_clipping": {
+                "none": 19,
+                "uncertain": 2
+              },
+              "non_vowel_contamination": {
+                "none": 5,
+                "tolerable": 14,
+                "uncertain": 2
+              },
+              "other_vowel": {
+                "no": 13,
+                "uncertain": 2,
+                "yes": 6
+              },
+              "start_clipping": {
+                "none": 19,
+                "uncertain": 2
+              }
+            }
+          }
+        },
+        "i": {
+          "interval_count": 18,
+          "expected_unit_count": 18,
+          "duration_ms": {
+            "mean": 91.666667,
+            "median": 70.0,
+            "min": 30.0,
+            "max": 210.0
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 18,
+            "status_counts": {
+              "accepted": 13,
+              "rejected": 5
+            },
+            "accepted_rate": 0.722222,
+            "question_counts": {
+              "audible": {
+                "no": 1,
+                "uncertain": 4,
+                "yes": 13
+              },
+              "end_clipping": {
+                "none": 13,
+                "uncertain": 5
+              },
+              "non_vowel_contamination": {
+                "none": 9,
+                "tolerable": 4,
+                "uncertain": 5
+              },
+              "other_vowel": {
+                "no": 13,
+                "uncertain": 5
+              },
+              "start_clipping": {
+                "none": 13,
+                "uncertain": 5
+              }
+            }
+          }
+        },
+        "u": {
+          "interval_count": 15,
+          "expected_unit_count": 15,
+          "duration_ms": {
+            "mean": 76.666667,
+            "median": 60.0,
+            "min": 30.0,
+            "max": 190.0
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 15,
+            "status_counts": {
+              "accepted": 13,
+              "rejected": 2
+            },
+            "accepted_rate": 0.866667,
+            "question_counts": {
+              "audible": {
+                "no": 1,
+                "uncertain": 1,
+                "yes": 13
+              },
+              "end_clipping": {
+                "none": 13,
+                "uncertain": 2
+              },
+              "non_vowel_contamination": {
+                "none": 9,
+                "tolerable": 4,
+                "uncertain": 2
+              },
+              "other_vowel": {
+                "no": 13,
+                "uncertain": 2
+              },
+              "start_clipping": {
+                "none": 13,
+                "uncertain": 2
+              }
+            }
+          }
+        },
+        "e": {
+          "interval_count": 6,
+          "expected_unit_count": 6,
+          "duration_ms": {
+            "mean": 63.333333,
+            "median": 60.0,
+            "min": 50.0,
+            "max": 80.0
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 6,
+            "status_counts": {
+              "accepted": 6
+            },
+            "accepted_rate": 1.0,
+            "question_counts": {
+              "audible": {
+                "yes": 6
+              },
+              "end_clipping": {
+                "none": 6
+              },
+              "non_vowel_contamination": {
+                "none": 3,
+                "tolerable": 3
+              },
+              "other_vowel": {
+                "no": 6
+              },
+              "start_clipping": {
+                "none": 6
+              }
+            }
+          }
+        },
+        "o": {
+          "interval_count": 78,
+          "expected_unit_count": 78,
+          "duration_ms": {
+            "mean": 79.871795,
+            "median": 70.0,
+            "min": 30.0,
+            "max": 200.0
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 78,
+            "status_counts": {
+              "accepted": 58,
+              "rejected": 20
+            },
+            "accepted_rate": 0.74359,
+            "question_counts": {
+              "audible": {
+                "no": 6,
+                "uncertain": 1,
+                "yes": 71
+              },
+              "end_clipping": {
+                "none": 71,
+                "uncertain": 7
+              },
+              "non_vowel_contamination": {
+                "none": 42,
+                "tolerable": 29,
+                "uncertain": 7
+              },
+              "other_vowel": {
+                "no": 58,
+                "uncertain": 7,
+                "yes": 13
+              },
+              "start_clipping": {
+                "none": 71,
+                "uncertain": 7
+              }
+            }
+          }
+        }
+      }
+    },
+    "wav2vec2": {
+      "interval_count": 138,
+      "expected_unit_count": 138,
+      "reviewed_count": 0,
+      "vowels": {
+        "a": {
+          "interval_count": 21,
+          "expected_unit_count": 21,
+          "duration_ms": {
+            "mean": 65.238095,
+            "median": 70.0,
+            "min": 40.0,
+            "max": 90.0
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 0,
+            "status_counts": {},
+            "accepted_rate": null,
+            "question_counts": {}
+          }
+        },
+        "i": {
+          "interval_count": 18,
+          "expected_unit_count": 18,
+          "duration_ms": {
+            "mean": 75.0,
+            "median": 85.0,
+            "min": 30.0,
+            "max": 110.0
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 0,
+            "status_counts": {},
+            "accepted_rate": null,
+            "question_counts": {}
+          }
+        },
+        "u": {
+          "interval_count": 15,
+          "expected_unit_count": 15,
+          "duration_ms": {
+            "mean": 74.0,
+            "median": 70.0,
+            "min": 30.0,
+            "max": 150.0
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 0,
+            "status_counts": {},
+            "accepted_rate": null,
+            "question_counts": {}
+          }
+        },
+        "e": {
+          "interval_count": 6,
+          "expected_unit_count": 6,
+          "duration_ms": {
+            "mean": 53.333333,
+            "median": 50.0,
+            "min": 50.0,
+            "max": 60.0
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 0,
+            "status_counts": {},
+            "accepted_rate": null,
+            "question_counts": {}
+          }
+        },
+        "o": {
+          "interval_count": 78,
+          "expected_unit_count": 78,
+          "duration_ms": {
+            "mean": 82.435897,
+            "median": 80.0,
+            "min": 40.0,
+            "max": 140.0
+          },
+          "quality_flagged_count": 0,
+          "review": {
+            "reviewed_count": 0,
+            "status_counts": {},
+            "accepted_rate": null,
+            "question_counts": {}
+          }
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "mfa_vs_julius": {
+      "pair_count": 108,
+      "vowels": {
+        "a": {
+          "pair_count": 21,
+          "start_delta_ms_median": 7.500086,
+          "end_delta_ms_median": 7.500057,
+          "iou_mean": 0.795244,
+          "iou_median": 0.828572,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 0
+        },
+        "i": {
+          "pair_count": 18,
+          "start_delta_ms_median": 12.499914,
+          "end_delta_ms_median": 10.000014,
+          "iou_mean": 0.737032,
+          "iou_median": 0.753752,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 0
+        },
+        "u": {
+          "pair_count": 12,
+          "start_delta_ms_median": 12.500162,
+          "end_delta_ms_median": 17.499838,
+          "iou_mean": 0.680484,
+          "iou_median": 0.708333,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 0
+        },
+        "e": {
+          "pair_count": 6,
+          "start_delta_ms_median": 7.499971,
+          "end_delta_ms_median": 7.500124,
+          "iou_mean": 0.768244,
+          "iou_median": 0.817458,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 0
+        },
+        "o": {
+          "pair_count": 51,
+          "start_delta_ms_median": 12.49979,
+          "end_delta_ms_median": 7.500095,
+          "iou_mean": 0.692452,
+          "iou_median": 0.714286,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 8
+        }
+      }
+    },
+    "wav2vec2_vs_julius": {
+      "pair_count": 138,
+      "vowels": {
+        "a": {
+          "pair_count": 21,
+          "start_delta_ms_median": 12.5,
+          "end_delta_ms_median": 12.5,
+          "iou_mean": 0.609299,
+          "iou_median": 0.655172,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 3
+        },
+        "i": {
+          "pair_count": 18,
+          "start_delta_ms_median": 12.5,
+          "end_delta_ms_median": 17.5,
+          "iou_mean": 0.469055,
+          "iou_median": 0.505556,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 5
+        },
+        "u": {
+          "pair_count": 15,
+          "start_delta_ms_median": 22.5,
+          "end_delta_ms_median": 22.5,
+          "iou_mean": 0.390001,
+          "iou_median": 0.405405,
+          "no_overlap_count": 1,
+          "boundary_over_100ms_count": 5
+        },
+        "e": {
+          "pair_count": 6,
+          "start_delta_ms_median": 7.5,
+          "end_delta_ms_median": 10.0,
+          "iou_mean": 0.735519,
+          "iou_median": 0.71805,
+          "no_overlap_count": 0,
+          "boundary_over_100ms_count": 0
+        },
+        "o": {
+          "pair_count": 78,
+          "start_delta_ms_median": 22.5,
+          "end_delta_ms_median": 22.5,
+          "iou_mean": 0.468748,
+          "iou_median": 0.528571,
+          "no_overlap_count": 11,
+          "boundary_over_100ms_count": 10
+        }
+      }
+    }
+  }
+}

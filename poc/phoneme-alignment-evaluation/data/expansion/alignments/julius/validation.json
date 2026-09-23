@@ -1,0 +1,410 @@
+{
+  "aligner": "julius",
+  "normalization_version": "2",
+  "utterance_count": 40,
+  "vowel_interval_count": 1164,
+  "all_sequences_match": true,
+  "all_intervals_valid": true,
+  "utterances": [
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_001",
+      "phone_interval_count": 80,
+      "expected_vowel_phone_count": 46,
+      "actual_vowel_interval_count": 46,
+      "expected_units": 46,
+      "actual_units": 46,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_002",
+      "phone_interval_count": 93,
+      "expected_vowel_phone_count": 49,
+      "actual_vowel_interval_count": 49,
+      "expected_units": 49,
+      "actual_units": 49,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_003",
+      "phone_interval_count": 71,
+      "expected_vowel_phone_count": 35,
+      "actual_vowel_interval_count": 35,
+      "expected_units": 35,
+      "actual_units": 35,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_004",
+      "phone_interval_count": 66,
+      "expected_vowel_phone_count": 36,
+      "actual_vowel_interval_count": 36,
+      "expected_units": 36,
+      "actual_units": 36,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_005",
+      "phone_interval_count": 123,
+      "expected_vowel_phone_count": 64,
+      "actual_vowel_interval_count": 64,
+      "expected_units": 64,
+      "actual_units": 64,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_006",
+      "phone_interval_count": 51,
+      "expected_vowel_phone_count": 24,
+      "actual_vowel_interval_count": 24,
+      "expected_units": 24,
+      "actual_units": 24,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_007",
+      "phone_interval_count": 95,
+      "expected_vowel_phone_count": 49,
+      "actual_vowel_interval_count": 49,
+      "expected_units": 49,
+      "actual_units": 49,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_008",
+      "phone_interval_count": 84,
+      "expected_vowel_phone_count": 44,
+      "actual_vowel_interval_count": 44,
+      "expected_units": 44,
+      "actual_units": 44,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_009",
+      "phone_interval_count": 71,
+      "expected_vowel_phone_count": 37,
+      "actual_vowel_interval_count": 37,
+      "expected_units": 37,
+      "actual_units": 37,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs001_parallel100_voiceactress100_010",
+      "phone_interval_count": 51,
+      "expected_vowel_phone_count": 26,
+      "actual_vowel_interval_count": 26,
+      "expected_units": 26,
+      "actual_units": 26,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0114",
+      "phone_interval_count": 41,
+      "expected_vowel_phone_count": 20,
+      "actual_vowel_interval_count": 20,
+      "expected_units": 20,
+      "actual_units": 20,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0338",
+      "phone_interval_count": 39,
+      "expected_vowel_phone_count": 19,
+      "actual_vowel_interval_count": 19,
+      "expected_units": 19,
+      "actual_units": 19,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0533",
+      "phone_interval_count": 35,
+      "expected_vowel_phone_count": 17,
+      "actual_vowel_interval_count": 17,
+      "expected_units": 17,
+      "actual_units": 17,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0724",
+      "phone_interval_count": 58,
+      "expected_vowel_phone_count": 29,
+      "actual_vowel_interval_count": 29,
+      "expected_units": 29,
+      "actual_units": 29,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0844",
+      "phone_interval_count": 39,
+      "expected_vowel_phone_count": 18,
+      "actual_vowel_interval_count": 18,
+      "expected_units": 18,
+      "actual_units": 18,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_0963",
+      "phone_interval_count": 48,
+      "expected_vowel_phone_count": 24,
+      "actual_vowel_interval_count": 24,
+      "expected_units": 24,
+      "actual_units": 24,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_1145",
+      "phone_interval_count": 74,
+      "expected_vowel_phone_count": 37,
+      "actual_vowel_interval_count": 37,
+      "expected_units": 37,
+      "actual_units": 37,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_1146",
+      "phone_interval_count": 42,
+      "expected_vowel_phone_count": 22,
+      "actual_vowel_interval_count": 22,
+      "expected_units": 22,
+      "actual_units": 22,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_1260",
+      "phone_interval_count": 42,
+      "expected_vowel_phone_count": 21,
+      "actual_vowel_interval_count": 21,
+      "expected_units": 21,
+      "actual_units": 21,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_nonpara30_basic5000_1445",
+      "phone_interval_count": 45,
+      "expected_vowel_phone_count": 23,
+      "actual_vowel_interval_count": 23,
+      "expected_units": 23,
+      "actual_units": 23,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_0384",
+      "phone_interval_count": 54,
+      "expected_vowel_phone_count": 29,
+      "actual_vowel_interval_count": 29,
+      "expected_units": 29,
+      "actual_units": 29,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_0440",
+      "phone_interval_count": 87,
+      "expected_vowel_phone_count": 46,
+      "actual_vowel_interval_count": 46,
+      "expected_units": 46,
+      "actual_units": 46,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_0615",
+      "phone_interval_count": 36,
+      "expected_vowel_phone_count": 17,
+      "actual_vowel_interval_count": 17,
+      "expected_units": 17,
+      "actual_units": 17,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_0651",
+      "phone_interval_count": 80,
+      "expected_vowel_phone_count": 42,
+      "actual_vowel_interval_count": 42,
+      "expected_units": 42,
+      "actual_units": 42,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_0946",
+      "phone_interval_count": 41,
+      "expected_vowel_phone_count": 21,
+      "actual_vowel_interval_count": 21,
+      "expected_units": 21,
+      "actual_units": 21,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_1118",
+      "phone_interval_count": 47,
+      "expected_vowel_phone_count": 27,
+      "actual_vowel_interval_count": 27,
+      "expected_units": 27,
+      "actual_units": 27,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_1177",
+      "phone_interval_count": 44,
+      "expected_vowel_phone_count": 22,
+      "actual_vowel_interval_count": 22,
+      "expected_units": 22,
+      "actual_units": 22,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_1190",
+      "phone_interval_count": 48,
+      "expected_vowel_phone_count": 24,
+      "actual_vowel_interval_count": 24,
+      "expected_units": 24,
+      "actual_units": 24,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_1207",
+      "phone_interval_count": 45,
+      "expected_vowel_phone_count": 23,
+      "actual_vowel_interval_count": 23,
+      "expected_units": 23,
+      "actual_units": 23,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_nonpara30_basic5000_1238",
+      "phone_interval_count": 36,
+      "expected_vowel_phone_count": 17,
+      "actual_vowel_interval_count": 17,
+      "expected_units": 17,
+      "actual_units": 17,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_0074",
+      "phone_interval_count": 46,
+      "expected_vowel_phone_count": 23,
+      "actual_vowel_interval_count": 23,
+      "expected_units": 23,
+      "actual_units": 23,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_0602",
+      "phone_interval_count": 46,
+      "expected_vowel_phone_count": 24,
+      "actual_vowel_interval_count": 24,
+      "expected_units": 24,
+      "actual_units": 24,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_0856",
+      "phone_interval_count": 52,
+      "expected_vowel_phone_count": 26,
+      "actual_vowel_interval_count": 26,
+      "expected_units": 26,
+      "actual_units": 26,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_0911",
+      "phone_interval_count": 67,
+      "expected_vowel_phone_count": 33,
+      "actual_vowel_interval_count": 33,
+      "expected_units": 33,
+      "actual_units": 33,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1090",
+      "phone_interval_count": 58,
+      "expected_vowel_phone_count": 27,
+      "actual_vowel_interval_count": 27,
+      "expected_units": 27,
+      "actual_units": 27,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1105",
+      "phone_interval_count": 51,
+      "expected_vowel_phone_count": 26,
+      "actual_vowel_interval_count": 26,
+      "expected_units": 26,
+      "actual_units": 26,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1170",
+      "phone_interval_count": 46,
+      "expected_vowel_phone_count": 22,
+      "actual_vowel_interval_count": 22,
+      "expected_units": 22,
+      "actual_units": 22,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1228",
+      "phone_interval_count": 34,
+      "expected_vowel_phone_count": 18,
+      "actual_vowel_interval_count": 18,
+      "expected_units": 18,
+      "actual_units": 18,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1265",
+      "phone_interval_count": 57,
+      "expected_vowel_phone_count": 29,
+      "actual_vowel_interval_count": 29,
+      "expected_units": 29,
+      "actual_units": 29,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs004_nonpara30_basic5000_1438",
+      "phone_interval_count": 55,
+      "expected_vowel_phone_count": 28,
+      "actual_vowel_interval_count": 28,
+      "expected_units": 28,
+      "actual_units": 28,
+      "sequence_match": true,
+      "intervals_valid": true
+    }
+  ]
+}

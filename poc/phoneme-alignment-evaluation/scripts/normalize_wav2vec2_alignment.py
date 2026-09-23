@@ -23,6 +23,7 @@ MODEL_ID = "facebook/wav2vec2-xlsr-53-espeak-cv-ft"
 MODEL_VERSION = "2c733782da5604684829819a5eb744c193fe9398"
 NORMALIZATION_VERSION = "2"
 VOWELS = {"a", "i", "u", "e", "o"}
+DEVOICED_VOWELS = {"A", "I", "U", "E", "O"}
 
 
 def parse_args() -> argparse.Namespace:
@@ -63,7 +64,13 @@ def extract_vowel_intervals(
                 f"Invalid Wav2Vec2 interval at index {phone_index}: {entry}"
             )
         previous_end = end_sec
-        if raw_phone not in VOWELS:
+        if raw_phone in VOWELS:
+            normalized = raw_phone
+            is_devoiced = False
+        elif raw_phone in DEVOICED_VOWELS:
+            normalized = raw_phone.lower()
+            is_devoiced = True
+        else:
             continue
         vowel_index = len(intervals)
         score = entry.get("mean_log_probability")
@@ -82,7 +89,7 @@ def extract_vowel_intervals(
                 "score_kind": "ctc_token_mean_log_probability",
                 "raw_phonemes": [raw_phone],
                 "raw_intervals": [entry],
-                "normalized_phoneme": raw_phone,
+                "normalized_phoneme": normalized,
                 "start_sec": start_sec,
                 "end_sec": end_sec,
                 "source_phoneme_start": phone_index,
@@ -95,8 +102,8 @@ def extract_vowel_intervals(
                 ),
                 "duration_sec": round(end_sec - start_sec, 9),
                 "is_long": False,
-                "is_devoiced": False,
-                "contains_devoiced": False,
+                "is_devoiced": is_devoiced,
+                "contains_devoiced": is_devoiced,
             }
         )
     return intervals
