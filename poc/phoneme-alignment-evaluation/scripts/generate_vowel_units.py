@@ -11,7 +11,7 @@ from typing import Any
 PROJECT_DIR = Path(__file__).resolve().parents[1]
 DEFAULT_INPUT = PROJECT_DIR / "data" / "phonemes" / "expected.jsonl"
 DEFAULT_OUTPUT = PROJECT_DIR / "data" / "phonemes" / "expected-vowels.jsonl"
-NORMALIZATION_VERSION = "1"
+NORMALIZATION_VERSION = "2"
 VOWELS = frozenset("aiueo")
 DEVOICED_VOWELS = frozenset("AIUEO")
 LONG_MARKS = (":", "ː")
@@ -57,60 +57,38 @@ def classify_vowel(phone: str) -> tuple[str, int, bool] | None:
 
 
 def extract_vowel_units(record: dict[str, Any]) -> list[dict[str, Any]]:
-    """Extract vowels and merge only directly adjacent identical vowels."""
+    """Extract one expected unit for each vowel phone emitted by G2P."""
     utterance_id = record["utterance_id"]
     units: list[dict[str, Any]] = []
-    current: dict[str, Any] | None = None
-
-    def finish_current() -> None:
-        nonlocal current
-        if current is None:
-            return
-        current["vowel_index"] = len(units)
-        current["vowel_unit_id"] = f"{utterance_id}-vowel-{len(units):03d}"
-        current["is_long"] = current["expected_units"] > 1
-        current["is_devoiced"] = all(current.pop("_devoiced_flags"))
-        current["contains_devoiced"] = current.pop("_contains_devoiced")
-        units.append(current)
-        current = None
 
     for index, raw_phone in enumerate(record["raw_phonemes"]):
         classified = classify_vowel(raw_phone)
         if classified is None:
-            finish_current()
             continue
 
         normalized, expected_units, is_devoiced = classified
-        can_merge = (
-            current is not None
-            and current["normalized_phoneme"] == normalized
-            and current["source_phoneme_end"] == index
-        )
-        if not can_merge:
-            finish_current()
-            current = {
+        vowel_index = len(units)
+        units.append(
+            {
                 "utterance_id": utterance_id,
                 "speaker_id": record.get("speaker_id"),
                 "text": record.get("text"),
                 "reading_kana": record.get("reading_kana"),
                 "normalized_phoneme": normalized,
-                "raw_phonemes": [],
+                "raw_phonemes": [raw_phone],
                 "source_phoneme_start": index,
-                "source_phoneme_end": index,
-                "expected_units": 0,
+                "source_phoneme_end": index + 1,
+                "expected_units": expected_units,
                 "phoneme_review_status": record.get("review_status", "pending"),
                 "normalization_version": NORMALIZATION_VERSION,
-                "_devoiced_flags": [],
-                "_contains_devoiced": False,
+                "vowel_index": vowel_index,
+                "vowel_unit_id": f"{utterance_id}-vowel-{vowel_index:03d}",
+                "is_long": expected_units > 1,
+                "is_devoiced": is_devoiced,
+                "contains_devoiced": is_devoiced,
             }
+        )
 
-        current["raw_phonemes"].append(raw_phone)
-        current["source_phoneme_end"] = index + 1
-        current["expected_units"] += expected_units
-        current["_devoiced_flags"].append(is_devoiced)
-        current["_contains_devoiced"] |= is_devoiced
-
-    finish_current()
     return units
 
 

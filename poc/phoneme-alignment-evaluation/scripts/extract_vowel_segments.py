@@ -74,7 +74,7 @@ def read_jsonl(path: Path) -> list[dict[str, Any]]:
             record = json.loads(line)
             for field in (
                 "utterance_id",
-                "vowel_run_id",
+                "vowel_interval_id",
                 "vowel_index",
                 "normalized_phoneme",
                 "source_file",
@@ -187,9 +187,11 @@ def extract_record(
     requested_start = float(record["start_sec"])
     requested_end = float(record["end_sec"])
     if requested_start < 0 or requested_end <= requested_start:
-        raise ValueError(f"{record['vowel_run_id']}: invalid time interval")
+        raise ValueError(f"{record['vowel_interval_id']}: invalid time interval")
     if requested_end > source.duration_sec + (1 / source.sample_rate_hz):
-        raise ValueError(f"{record['vowel_run_id']}: interval exceeds source audio")
+        raise ValueError(
+            f"{record['vowel_interval_id']}: interval exceeds source audio"
+        )
 
     exact_start_frame = seconds_to_frame(
         requested_start, source.sample_rate_hz, source.frame_count
@@ -210,7 +212,7 @@ def extract_record(
     exact_frames = slice_frames(source, exact_start_frame, exact_end_frame)
     context_frames = slice_frames(source, context_start_frame, context_end_frame)
 
-    filename = f"{record['vowel_run_id']}_{record['normalized_phoneme']}.wav"
+    filename = f"{record['vowel_interval_id']}_{record['normalized_phoneme']}.wav"
     exact_path = output_directory / "exact" / filename
     context_path = output_directory / "context" / filename
     write_wave(exact_path, source, exact_frames)
@@ -234,7 +236,7 @@ def extract_record(
 
     return {
         "utterance_id": record["utterance_id"],
-        "vowel_run_id": record["vowel_run_id"],
+        "vowel_interval_id": record["vowel_interval_id"],
         "vowel_index": record["vowel_index"],
         "normalized_phoneme": record["normalized_phoneme"],
         "source_file": record["source_file"],

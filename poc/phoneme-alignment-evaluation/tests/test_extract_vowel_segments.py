@@ -38,7 +38,7 @@ def make_wave_source(duration_sec: float = 1.0) -> WaveSource:
 def make_record(start_sec: float = 0.2, end_sec: float = 0.4) -> dict[str, object]:
     return {
         "utterance_id": "sample_001",
-        "vowel_run_id": "sample_001-vowel-000",
+        "vowel_interval_id": "sample_001-mfa-vowel-000",
         "vowel_index": 0,
         "normalized_phoneme": "a",
         "source_file": "sample.wav",
@@ -82,8 +82,12 @@ class ExtractRecordTest(unittest.TestCase):
                 make_record(), source, output_directory, 0.1, 0.03, -50.0
             )
 
-            exact_path = output_directory / "exact" / "sample_001-vowel-000_a.wav"
-            context_path = output_directory / "context" / "sample_001-vowel-000_a.wav"
+            exact_path = (
+                output_directory / "exact" / "sample_001-mfa-vowel-000_a.wav"
+            )
+            context_path = (
+                output_directory / "context" / "sample_001-mfa-vowel-000_a.wav"
+            )
             self.assertTrue(exact_path.is_file())
             self.assertTrue(context_path.is_file())
             self.assertEqual(result["exact_frame_count"], 200)

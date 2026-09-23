@@ -1,4 +1,4 @@
-import type { ComparisonAnswer } from './reviewDraft.ts'
+import type { ReviewStatus } from './reviewDataset.ts'
 
 export type CandidateAnswerRecord = {
   candidateId: string
@@ -10,13 +10,13 @@ export type CandidateAnswerRecord = {
 }
 
 export type ReviewSubmission = {
-  schemaVersion: 1
+  schemaVersion: 2
   datasetId: string
   datasetVersion: string
   itemId: string
   status: 'completed' | 'skipped'
   candidateAnswers: CandidateAnswerRecord[]
-  comparison: ComparisonAnswer | null
+  reviewStatus: ReviewStatus | null
   skipReason: string | null
   reviewerKind: string
   protocol: {
@@ -55,7 +55,7 @@ export function parseReviewRecord(value: unknown): ReviewRecord {
 
 function validateSubmission(value: unknown, path: string): JsonObject {
   const submission = objectAt(value, path)
-  equalAt(submission.schemaVersion, 1, `${path}.schemaVersion`)
+  equalAt(submission.schemaVersion, 2, `${path}.schemaVersion`)
   nonEmptyStringAt(submission.datasetId, `${path}.datasetId`)
   nonEmptyStringAt(submission.datasetVersion, `${path}.datasetVersion`)
   nonEmptyStringAt(submission.itemId, `${path}.itemId`)
@@ -103,7 +103,7 @@ function validateSubmission(value: unknown, path: string): JsonObject {
     })
   })
 
-  validateComparison(submission.comparison, `${path}.comparison`)
+  validateReviewStatus(submission.reviewStatus, `${path}.reviewStatus`)
   nullableStringAt(submission.skipReason, `${path}.skipReason`)
   nonEmptyStringAt(submission.reviewerKind, `${path}.reviewerKind`)
 
@@ -116,8 +116,8 @@ function validateSubmission(value: unknown, path: string): JsonObject {
     if (candidateAnswers.length === 0) {
       fail(`${path}.candidateAnswers`, 'must not be empty for a completed review')
     }
-    if (submission.comparison === null) {
-      fail(`${path}.comparison`, 'must not be null for a completed review')
+    if (submission.reviewStatus === null) {
+      fail(`${path}.reviewStatus`, 'must not be null for a completed review')
     }
     if (submission.skipReason !== null) {
       fail(`${path}.skipReason`, 'must be null for a completed review')
@@ -132,17 +132,12 @@ function validateSubmission(value: unknown, path: string): JsonObject {
   return submission
 }
 
-function validateComparison(value: unknown, path: string) {
+function validateReviewStatus(value: unknown, path: string) {
   if (value === null) {
     return
   }
-  const comparison = objectAt(value, path)
-  if (comparison.outcome === 'candidate') {
-    nonEmptyStringAt(comparison.candidateId, `${path}.candidateId`)
-    return
-  }
-  if (comparison.outcome !== 'indistinguishable' && comparison.outcome !== 'none') {
-    fail(`${path}.outcome`, 'has an unsupported value')
+  if (value !== 'accepted' && value !== 'rejected' && value !== 'uncertain') {
+    fail(path, 'has an unsupported value')
   }
 }
 
@@ -208,4 +203,3 @@ function equalAt<T>(value: unknown, expected: T, path: string): asserts value is
 function fail(path: string, message: string): never {
   throw new InvalidReviewRecordError(path, message)
 }
-

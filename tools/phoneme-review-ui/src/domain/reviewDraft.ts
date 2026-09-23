@@ -1,12 +1,12 @@
-import type { ReviewCandidate, ReviewForm } from './reviewDataset.ts'
-
-export type ComparisonAnswer =
-  | { outcome: 'candidate'; candidateId: string }
-  | { outcome: 'indistinguishable' | 'none' }
+import type {
+  ReviewCandidate,
+  ReviewForm,
+  ReviewStatus,
+} from './reviewDataset.ts'
 
 export type ReviewDraft = {
   candidateAnswers: Record<string, Record<string, string>>
-  comparison: ComparisonAnswer | null
+  reviewStatus: ReviewStatus | null
 }
 
 export type ReviewProgress = {
@@ -19,7 +19,7 @@ export type ReviewProgress = {
 export function createEmptyReviewDraft(): ReviewDraft {
   return {
     candidateAnswers: {},
-    comparison: null,
+    reviewStatus: null,
   }
 }
 
@@ -41,11 +41,11 @@ export function answerCandidateQuestion(
   }
 }
 
-export function answerComparison(
+export function answerReviewStatus(
   draft: ReviewDraft,
-  comparison: ComparisonAnswer,
+  reviewStatus: ReviewStatus,
 ): ReviewDraft {
-  return { ...draft, comparison }
+  return { ...draft, reviewStatus }
 }
 
 export function getReviewProgress(
@@ -65,7 +65,7 @@ export function getReviewProgress(
     0,
   )
   const total = availableCandidates.length * form.candidateQuestions.length + 1
-  const answered = candidateAnswerCount + (draft.comparison === null ? 0 : 1)
+  const answered = candidateAnswerCount + (draft.reviewStatus === null ? 0 : 1)
 
   return {
     answered,
@@ -74,4 +74,3 @@ export function getReviewProgress(
     completed: answered === total,
   }
 }
-

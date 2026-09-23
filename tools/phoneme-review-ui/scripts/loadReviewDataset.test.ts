@@ -43,7 +43,7 @@ test('rejects JSON that does not satisfy the data contract', async () => {
     loadReviewDataset(
       '/invalid.json',
       undefined,
-      async () => Response.json({ schemaVersion: 1 }),
+      async () => Response.json({ schemaVersion: 2 }),
     ),
     (error: unknown) => {
       assert.ok(error instanceof ReviewDatasetLoadError)
@@ -52,4 +52,3 @@ test('rejects JSON that does not satisfy the data contract', async () => {
     },
   )
 })
-

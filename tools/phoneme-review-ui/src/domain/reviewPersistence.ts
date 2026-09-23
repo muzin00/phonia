@@ -6,7 +6,7 @@ import {
 import type { ReviewDataset, ReviewItem } from './reviewDataset.ts'
 import type { ReviewRecord, ReviewSubmission } from './reviewRecord.ts'
 
-export const UI_VERSION = '1'
+export const UI_VERSION = '2'
 
 export function createReviewSubmission(
   dataset: ReviewDataset,
@@ -14,12 +14,12 @@ export function createReviewSubmission(
   draft: ReviewDraft,
 ): ReviewSubmission {
   const progress = getReviewProgress(dataset.form, item.candidates, draft)
-  if (!progress.completed || draft.comparison === null) {
+  if (!progress.completed || draft.reviewStatus === null) {
     throw new Error('すべての設問へ回答してから保存してください。')
   }
 
   return {
-    schemaVersion: 1,
+    schemaVersion: 2,
     datasetId: dataset.datasetId,
     datasetVersion: dataset.datasetVersion,
     itemId: item.id,
@@ -31,7 +31,7 @@ export function createReviewSubmission(
         segment: { ...candidate.segment },
         answers: { ...draft.candidateAnswers[candidate.id] },
       })),
-    comparison: draft.comparison,
+    reviewStatus: draft.reviewStatus,
     skipReason: null,
     reviewerKind: 'non_expert',
     protocol: { ...dataset.protocol },
@@ -44,7 +44,6 @@ export function reviewRecordToDraft(record: ReviewRecord): ReviewDraft {
   record.candidateAnswers.forEach((candidate) => {
     draft.candidateAnswers[candidate.candidateId] = { ...candidate.answers }
   })
-  draft.comparison = record.comparison
+  draft.reviewStatus = record.reviewStatus
   return draft
 }
-

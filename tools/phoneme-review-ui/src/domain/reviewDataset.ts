@@ -1,4 +1,6 @@
-export const REVIEW_DATASET_SCHEMA_VERSION = 1 as const
+export const REVIEW_DATASET_SCHEMA_VERSION = 2 as const
+
+export type ReviewStatus = 'accepted' | 'rejected' | 'uncertain'
 
 export type ReviewDataset = {
   schemaVersion: typeof REVIEW_DATASET_SCHEMA_VERSION
@@ -11,7 +13,6 @@ export type ReviewDataset = {
   }
   playback: {
     contextPaddingSec: number
-    boundaryLoopSec: number
   }
   form: ReviewForm
   items: ReviewItem[]
@@ -19,10 +20,12 @@ export type ReviewDataset = {
 
 export type ReviewForm = {
   candidateQuestions: CandidateQuestion[]
-  comparison: {
+  reviewStatus: {
     prompt: string
-    allowIndistinguishable: boolean
-    allowNone: boolean
+    choices: Array<{
+      value: ReviewStatus
+      label: string
+    }>
   }
 }
 

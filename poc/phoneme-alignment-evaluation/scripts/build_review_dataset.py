@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 from pathlib import Path
 from typing import Any
@@ -13,11 +12,10 @@ PROJECT_DIR = Path(__file__).resolve().parents[1]
 DEFAULT_MFA_INPUT = PROJECT_DIR / "data" / "alignments" / "mfa" / "normalized.jsonl"
 DEFAULT_DATASET_OUTPUT = PROJECT_DIR / "data" / "reviews" / "review-dataset.json"
 DEFAULT_MAPPING_OUTPUT = PROJECT_DIR / "data" / "reviews" / "candidate-map.json"
-DEFAULT_SEED = "phonia-review-v1"
 DATASET_ID = "jvs-vowel-alignment-review"
-DATASET_VERSION = "1"
+DATASET_VERSION = "3"
 PROTOCOL_ID = "japanese-vowel-boundary-review"
-PROTOCOL_VERSION = "1"
+PROTOCOL_VERSION = "2"
 
 CANDIDATE_QUESTIONS = [
     {
@@ -30,8 +28,28 @@ CANDIDATE_QUESTIONS = [
         ],
     },
     {
-        "id": "start_clipped",
-        "prompt": "母音の先頭が切れていると感じますか？",
+        "id": "start_clipping",
+        "prompt": "母音の先頭の切れは利用上問題になりますか？",
+        "choices": [
+            {"value": "none", "label": "切れていない"},
+            {"value": "tolerable", "label": "聞こえるが許容できる"},
+            {"value": "problematic", "label": "利用上問題がある"},
+            {"value": "uncertain", "label": "判断できない"},
+        ],
+    },
+    {
+        "id": "end_clipping",
+        "prompt": "母音の末尾の切れは利用上問題になりますか？",
+        "choices": [
+            {"value": "none", "label": "切れていない"},
+            {"value": "tolerable", "label": "聞こえるが許容できる"},
+            {"value": "problematic", "label": "利用上問題がある"},
+            {"value": "uncertain", "label": "判断できない"},
+        ],
+    },
+    {
+        "id": "other_vowel",
+        "prompt": "別の母音の核を含むと感じますか？",
         "choices": [
             {"value": "yes", "label": "はい"},
             {"value": "no", "label": "いいえ"},
@@ -39,24 +57,25 @@ CANDIDATE_QUESTIONS = [
         ],
     },
     {
-        "id": "end_clipped",
-        "prompt": "母音の末尾が切れていると感じますか？",
+        "id": "non_vowel_contamination",
+        "prompt": "子音などの非母音成分はどの程度含まれますか？",
         "choices": [
-            {"value": "yes", "label": "はい"},
-            {"value": "no", "label": "いいえ"},
-            {"value": "uncertain", "label": "判断できない"},
-        ],
-    },
-    {
-        "id": "neighbor_contamination",
-        "prompt": "前後の別の音が入りすぎていると感じますか？",
-        "choices": [
-            {"value": "yes", "label": "はい"},
-            {"value": "no", "label": "いいえ"},
+            {"value": "none", "label": "含まれない"},
+            {"value": "tolerable", "label": "聞こえるが許容できる"},
+            {"value": "problematic", "label": "利用上問題がある"},
             {"value": "uncertain", "label": "判断できない"},
         ],
     },
 ]
+
+REVIEW_STATUS = {
+    "prompt": "この母音区間の総合判定を選んでください。",
+    "choices": [
+        {"value": "accepted", "label": "利用できる"},
+        {"value": "rejected", "label": "利用できない"},
+        {"value": "uncertain", "label": "判断できない"},
+    ],
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -70,7 +89,6 @@ def parse_args() -> argparse.Namespace:
         metavar="METHOD=PATH",
         help="Normalized JSONL for one method. May be passed multiple times.",
     )
-    parser.add_argument("--seed", default=DEFAULT_SEED)
     parser.add_argument("--dataset-id", default=DATASET_ID)
     parser.add_argument("--dataset-version", default=DATASET_VERSION)
     parser.add_argument("--output", type=Path, default=DEFAULT_DATASET_OUTPUT)
@@ -102,20 +120,11 @@ def parse_candidate_specs(specs: list[str]) -> dict[str, Path]:
 def index_records(records: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     indexed: dict[str, dict[str, Any]] = {}
     for record in records:
-        item_id = str(record["vowel_run_id"])
+        item_id = str(record["vowel_interval_id"])
         if item_id in indexed:
-            raise ValueError(f"Duplicate vowel_run_id: {item_id}")
+            raise ValueError(f"Duplicate vowel_interval_id: {item_id}")
         indexed[item_id] = record
     return indexed
-
-
-def candidate_order(methods: list[str], seed: str, item_id: str) -> list[str]:
-    return sorted(
-        methods,
-        key=lambda method: hashlib.sha256(
-            f"{seed}:{item_id}:{method}".encode()
-        ).hexdigest(),
-    )
 
 
 def target_tags(record: dict[str, Any]) -> list[str]:
@@ -152,14 +161,11 @@ def validate_matching_target(
 def build_review_artifacts(
     candidate_records: dict[str, list[dict[str, Any]]],
     *,
-    seed: str = DEFAULT_SEED,
     dataset_id: str = DATASET_ID,
     dataset_version: str = DATASET_VERSION,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
-    if not candidate_records:
-        raise ValueError("At least one candidate method is required")
-    if len(candidate_records) > 26:
-        raise ValueError("At most 26 candidate methods are supported")
+    if len(candidate_records) != 1:
+        raise ValueError("Exactly one candidate method is required for protocol v2")
 
     indexed = {
         method: index_records(records) for method, records in candidate_records.items()
@@ -182,8 +188,8 @@ def build_review_artifacts(
 
         candidates: list[dict[str, Any]] = []
         mapping_candidates: list[dict[str, Any]] = []
-        for index, method in enumerate(candidate_order(methods, seed, item_id)):
-            candidate_id = chr(ord("A") + index)
+        for method in methods:
+            candidate_id = "A"
             record = indexed[method].get(item_id)
             if record is None:
                 candidates.append({"id": candidate_id, "status": "missing"})
@@ -238,27 +244,22 @@ def build_review_artifacts(
         mappings.append({"itemId": item_id, "candidates": mapping_candidates})
 
     dataset = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "datasetId": dataset_id,
         "datasetVersion": dataset_version,
         "title": "日本語母音区間レビュー",
         "protocol": {"id": PROTOCOL_ID, "version": PROTOCOL_VERSION},
-        "playback": {"contextPaddingSec": 0.1, "boundaryLoopSec": 0.08},
+        "playback": {"contextPaddingSec": 0.1},
         "form": {
             "candidateQuestions": CANDIDATE_QUESTIONS,
-            "comparison": {
-                "prompt": "最も自然な区間を選んでください。",
-                "allowIndistinguishable": True,
-                "allowNone": True,
-            },
+            "reviewStatus": REVIEW_STATUS,
         },
         "items": items,
     }
     mapping = {
-        "schemaVersion": 1,
+        "schemaVersion": 2,
         "datasetId": dataset_id,
         "datasetVersion": dataset_version,
-        "seed": seed,
         "items": mappings,
     }
     return dataset, mapping
@@ -288,7 +289,6 @@ def main() -> None:
     }
     dataset, mapping = build_review_artifacts(
         candidate_records,
-        seed=args.seed,
         dataset_id=args.dataset_id,
         dataset_version=args.dataset_version,
     )

@@ -26,24 +26,27 @@ class ClassifyVowelTest(unittest.TestCase):
 
 
 class ExtractVowelUnitsTest(unittest.TestCase):
-    def test_merges_directly_adjacent_identical_vowels(self) -> None:
+    def test_keeps_directly_adjacent_identical_vowels_separate(self) -> None:
         units = extract_vowel_units(make_record(["my", "o", "o", "o", "o", "t", "o"]))
 
-        self.assertEqual(len(units), 2)
-        self.assertEqual(units[0]["normalized_phoneme"], "o")
-        self.assertEqual(units[0]["raw_phonemes"], ["o", "o", "o", "o"])
-        self.assertEqual(units[0]["source_phoneme_start"], 1)
-        self.assertEqual(units[0]["source_phoneme_end"], 5)
-        self.assertEqual(units[0]["expected_units"], 4)
-        self.assertTrue(units[0]["is_long"])
-        self.assertEqual(units[1]["expected_units"], 1)
-        self.assertFalse(units[1]["is_long"])
+        self.assertEqual(len(units), 5)
+        self.assertEqual([unit["raw_phonemes"] for unit in units], [["o"]] * 5)
+        self.assertEqual(
+            [unit["source_phoneme_start"] for unit in units], [1, 2, 3, 4, 6]
+        )
+        self.assertEqual(
+            [unit["source_phoneme_end"] for unit in units], [2, 3, 4, 5, 7]
+        )
+        self.assertEqual([unit["expected_units"] for unit in units], [1] * 5)
+        self.assertFalse(any(unit["is_long"] for unit in units))
 
     def test_keeps_different_adjacent_vowels_separate(self) -> None:
         units = extract_vowel_units(make_record(["o", "o", "i"]))
 
-        self.assertEqual([unit["normalized_phoneme"] for unit in units], ["o", "i"])
-        self.assertEqual([unit["expected_units"] for unit in units], [2, 1])
+        self.assertEqual(
+            [unit["normalized_phoneme"] for unit in units], ["o", "o", "i"]
+        )
+        self.assertEqual([unit["expected_units"] for unit in units], [1, 1, 1])
 
     def test_consonant_separates_identical_vowels(self) -> None:
         units = extract_vowel_units(make_record(["o", "n", "o"]))

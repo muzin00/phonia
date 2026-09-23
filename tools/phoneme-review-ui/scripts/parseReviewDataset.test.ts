@@ -44,13 +44,39 @@ test('rejects duplicate candidate IDs within an item', () => {
       candidates: Array<{ id: string }>
     }>
   }
-  invalid.items[0]!.candidates[1]!.id = 'A'
+  invalid.items[0]!.candidates.push({ id: 'A' })
 
   assert.throws(
     () => parseReviewDataset(invalid),
     (error: unknown) => {
       assert.ok(error instanceof InvalidReviewDatasetError)
       assert.match(error.message, /duplicate value "A"/)
+      return true
+    },
+  )
+})
+
+test('rejects multiple available candidates in the single-candidate protocol', () => {
+  const invalid = structuredClone(example) as {
+    items: Array<{
+      candidates: Array<{
+        id: string
+        status: string
+        segment?: { startSec: number; endSec: number }
+      }>
+    }>
+  }
+  invalid.items[0]!.candidates.push({
+    id: 'B',
+    status: 'available',
+    segment: { startSec: 1.8, endSec: 1.96 },
+  })
+
+  assert.throws(
+    () => parseReviewDataset(invalid),
+    (error: unknown) => {
+      assert.ok(error instanceof InvalidReviewDatasetError)
+      assert.match(error.message, /exactly one available candidate/)
       return true
     },
   )

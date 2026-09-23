@@ -3,7 +3,7 @@ import test from 'node:test'
 
 import {
   answerCandidateQuestion,
-  answerComparison,
+  answerReviewStatus,
   createEmptyReviewDraft,
   getReviewProgress,
 } from '../src/domain/reviewDraft.ts'
@@ -28,10 +28,13 @@ const form: ReviewForm = {
       ],
     },
   ],
-  comparison: {
-    prompt: '最も自然な候補は？',
-    allowIndistinguishable: true,
-    allowNone: true,
+  reviewStatus: {
+    prompt: '総合判定は？',
+    choices: [
+      { value: 'accepted', label: '利用できる' },
+      { value: 'rejected', label: '利用できない' },
+      { value: 'uncertain', label: '判断できない' },
+    ],
   },
 }
 
@@ -44,7 +47,7 @@ const candidates: ReviewCandidate[] = [
   { id: 'B', status: 'missing' },
 ]
 
-test('counts only questions for available candidates plus comparison', () => {
+test('counts only questions for the available candidate plus review status', () => {
   assert.deepEqual(getReviewProgress(form, candidates, createEmptyReviewDraft()), {
     answered: 0,
     total: 3,
@@ -72,7 +75,7 @@ test('marks the draft complete when all required answers exist', () => {
   let draft = createEmptyReviewDraft()
   draft = answerCandidateQuestion(draft, 'A', 'audible', 'yes')
   draft = answerCandidateQuestion(draft, 'A', 'clipped', 'no')
-  draft = answerComparison(draft, { outcome: 'candidate', candidateId: 'A' })
+  draft = answerReviewStatus(draft, 'accepted')
 
   assert.deepEqual(getReviewProgress(form, candidates, draft), {
     answered: 3,
@@ -81,4 +84,3 @@ test('marks the draft complete when all required answers exist', () => {
     completed: true,
   })
 })
-

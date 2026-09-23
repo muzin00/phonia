@@ -55,7 +55,6 @@ function validateProtocol(value: unknown, path: string) {
 function validatePlayback(value: unknown, path: string) {
   const playback = objectAt(value, path)
   nonNegativeNumberAt(playback.contextPaddingSec, `${path}.contextPaddingSec`)
-  positiveNumberAt(playback.boundaryLoopSec, `${path}.boundaryLoopSec`)
 }
 
 function validateForm(value: unknown, path: string) {
@@ -97,13 +96,33 @@ function validateForm(value: unknown, path: string) {
     })
   })
 
-  const comparison = objectAt(form.comparison, `${path}.comparison`)
-  nonEmptyStringAt(comparison.prompt, `${path}.comparison.prompt`)
-  booleanAt(
-    comparison.allowIndistinguishable,
-    `${path}.comparison.allowIndistinguishable`,
+  const reviewStatus = objectAt(form.reviewStatus, `${path}.reviewStatus`)
+  nonEmptyStringAt(reviewStatus.prompt, `${path}.reviewStatus.prompt`)
+  const statusChoices = arrayAt(
+    reviewStatus.choices,
+    `${path}.reviewStatus.choices`,
   )
-  booleanAt(comparison.allowNone, `${path}.comparison.allowNone`)
+  const expectedStatuses = new Set(['accepted', 'rejected', 'uncertain'])
+  const actualStatuses = new Set<string>()
+  statusChoices.forEach((choice, choiceIndex) => {
+    const choicePath = `${path}.reviewStatus.choices[${choiceIndex}]`
+    const choiceObject = objectAt(choice, choicePath)
+    const value = nonEmptyStringAt(choiceObject.value, `${choicePath}.value`)
+    if (!expectedStatuses.has(value)) {
+      fail(`${choicePath}.value`, 'has an unsupported value')
+    }
+    uniqueAt(actualStatuses, value, `${choicePath}.value`)
+    nonEmptyStringAt(choiceObject.label, `${choicePath}.label`)
+  })
+  if (
+    actualStatuses.size !== expectedStatuses.size ||
+    [...expectedStatuses].some((status) => !actualStatuses.has(status))
+  ) {
+    fail(
+      `${path}.reviewStatus.choices`,
+      'must contain accepted, rejected, and uncertain exactly once',
+    )
+  }
 }
 
 function validateUtterance(value: unknown, path: string) {
@@ -177,8 +196,8 @@ function validateCandidates(value: unknown, path: string) {
     }
   })
 
-  if (availableCount === 0) {
-    fail(path, 'must contain at least one available candidate')
+  if (availableCount !== 1) {
+    fail(path, 'must contain exactly one available candidate')
   }
 }
 
@@ -199,13 +218,6 @@ function arrayAt(value: unknown, path: string): unknown[] {
 function nonEmptyStringAt(value: unknown, path: string): string {
   if (typeof value !== 'string' || value.trim().length === 0) {
     fail(path, 'must be a non-empty string')
-  }
-  return value
-}
-
-function booleanAt(value: unknown, path: string): boolean {
-  if (typeof value !== 'boolean') {
-    fail(path, 'must be a boolean')
   }
   return value
 }
@@ -257,4 +269,3 @@ function uniqueAt(values: Set<string>, value: string, path: string) {
 function fail(path: string, message: string): never {
   throw new InvalidReviewDatasetError(path, message)
 }
-
