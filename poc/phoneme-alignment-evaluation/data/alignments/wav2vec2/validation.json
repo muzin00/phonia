@@ -1,0 +1,40 @@
+{
+  "aligner": "wav2vec2-ctc-onnx",
+  "normalization_version": "2",
+  "utterance_count": 3,
+  "vowel_interval_count": 138,
+  "all_sequences_match": true,
+  "all_intervals_valid": true,
+  "utterances": [
+    {
+      "utterance_id": "jvs001_voiceactress100_001",
+      "phone_interval_count": 78,
+      "expected_vowel_phone_count": 46,
+      "actual_vowel_interval_count": 46,
+      "expected_units": 46,
+      "actual_units": 46,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs002_voiceactress100_001",
+      "phone_interval_count": 78,
+      "expected_vowel_phone_count": 46,
+      "actual_vowel_interval_count": 46,
+      "expected_units": 46,
+      "actual_units": 46,
+      "sequence_match": true,
+      "intervals_valid": true
+    },
+    {
+      "utterance_id": "jvs003_voiceactress100_001",
+      "phone_interval_count": 78,
+      "expected_vowel_phone_count": 46,
+      "actual_vowel_interval_count": 46,
+      "expected_units": 46,
+      "actual_units": 46,
+      "sequence_match": true,
+      "intervals_valid": true
+    }
+  ]
+}
