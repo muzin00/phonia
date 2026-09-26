@@ -23,6 +23,7 @@ Phase 2では、Phase 1で採用したJuliusのアライメント結果を、音
 - [JVSデータ調査](data-investigation.md)
 - [学習データの品質項目](data-quality.md)
 - [段階的な検証戦略](validation-strategy.md)
+- [JVSデータセット設計](dataset-design.md)
 
 データセットのスキーマ、分割規則、配置、再生成手順は、設計を決定した時点で
 それぞれ独立した文書として追加する。

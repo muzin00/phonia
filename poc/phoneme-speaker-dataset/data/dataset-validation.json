@@ -1,0 +1,81 @@
+{
+  "schema_version": 1,
+  "design_version": "1.0.0",
+  "status": "pass",
+  "corpus": "JVS",
+  "corpus_version": "jvs_ver1",
+  "utterance_count": 12997,
+  "speaker_count": 100,
+  "duration_hours": 26.218832,
+  "splits": {
+    "train": {
+      "speaker_count": 70,
+      "utterance_count": 9098,
+      "duration_hours": 18.521046,
+      "subset_utterance_counts": {
+        "nonpara30": 2100,
+        "parallel100": 6998
+      }
+    },
+    "validation": {
+      "speaker_count": 15,
+      "utterance_count": 1950,
+      "duration_hours": 3.856998,
+      "subset_utterance_counts": {
+        "nonpara30": 450,
+        "parallel100": 1500
+      }
+    },
+    "test": {
+      "speaker_count": 15,
+      "utterance_count": 1949,
+      "duration_hours": 3.840788,
+      "subset_utterance_counts": {
+        "nonpara30": 450,
+        "parallel100": 1499
+      }
+    }
+  },
+  "evaluation_role_counts": {
+    "test/cross_text_verification": 450,
+    "test/enrollment": 749,
+    "test/verification": 750,
+    "train/training": 9098,
+    "validation/cross_text_verification": 450,
+    "validation/enrollment": 750,
+    "validation/verification": 750
+  },
+  "learning_curve_cohorts": {
+    "10": {
+      "speaker_count": 10,
+      "utterance_count": 1300
+    },
+    "25": {
+      "speaker_count": 25,
+      "utterance_count": 3248
+    },
+    "50": {
+      "speaker_count": 50,
+      "utterance_count": 6498
+    },
+    "70": {
+      "speaker_count": 70,
+      "utterance_count": 9098
+    }
+  },
+  "missing_parallel_wav": [
+    "jvs030/VOICEACTRESS100_045",
+    "jvs074/VOICEACTRESS100_094",
+    "jvs089/VOICEACTRESS100_019"
+  ],
+  "error_count": 0,
+  "errors": [],
+  "warning_count": 1,
+  "warnings": [
+    "parallel100 has the three known missing WAV files: jvs030/VOICEACTRESS100_045, jvs074/VOICEACTRESS100_094, jvs089/VOICEACTRESS100_019"
+  ],
+  "config": "poc/phoneme-speaker-dataset/config/dataset-split.json",
+  "config_sha256": "50a4c98be1c46867677e4081db2a03f18fb349ce8c930fb9e37484e5299fe66b",
+  "manifest": "poc/phoneme-speaker-dataset/data/utterance-manifest.jsonl",
+  "manifest_sha256": "71d24d1d49d92162b96d4bf8094484f8fd787e4ec0519fc76a58c5a41672db05"
+}
