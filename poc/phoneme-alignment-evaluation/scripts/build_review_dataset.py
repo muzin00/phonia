@@ -13,63 +13,30 @@ DEFAULT_MFA_INPUT = PROJECT_DIR / "data" / "alignments" / "mfa" / "normalized.js
 DEFAULT_DATASET_OUTPUT = PROJECT_DIR / "data" / "reviews" / "review-dataset.json"
 DEFAULT_MAPPING_OUTPUT = PROJECT_DIR / "data" / "reviews" / "candidate-map.json"
 DATASET_ID = "jvs-vowel-alignment-review"
-DATASET_VERSION = "3"
+DATASET_VERSION = "5"
 PROTOCOL_ID = "japanese-vowel-boundary-review"
-PROTOCOL_VERSION = "2"
+PROTOCOL_VERSION = "5"
 
 CANDIDATE_QUESTIONS = [
     {
-        "id": "audible",
-        "prompt": "対象の母音を聞き取れますか？",
+        "id": "perceived_content",
+        "prompt": "対象区間で聞こえる音に最も近いものを選んでください。",
         "choices": [
-            {"value": "yes", "label": "はい"},
-            {"value": "no", "label": "いいえ"},
-            {"value": "uncertain", "label": "判断できない"},
-        ],
-    },
-    {
-        "id": "start_clipping",
-        "prompt": "母音の先頭の切れは利用上問題になりますか？",
-        "choices": [
-            {"value": "none", "label": "切れていない"},
-            {"value": "tolerable", "label": "聞こえるが許容できる"},
-            {"value": "problematic", "label": "利用上問題がある"},
-            {"value": "uncertain", "label": "判断できない"},
-        ],
-    },
-    {
-        "id": "end_clipping",
-        "prompt": "母音の末尾の切れは利用上問題になりますか？",
-        "choices": [
-            {"value": "none", "label": "切れていない"},
-            {"value": "tolerable", "label": "聞こえるが許容できる"},
-            {"value": "problematic", "label": "利用上問題がある"},
-            {"value": "uncertain", "label": "判断できない"},
-        ],
-    },
-    {
-        "id": "other_vowel",
-        "prompt": "別の母音の核を含むと感じますか？",
-        "choices": [
-            {"value": "yes", "label": "はい"},
-            {"value": "no", "label": "いいえ"},
-            {"value": "uncertain", "label": "判断できない"},
-        ],
-    },
-    {
-        "id": "non_vowel_contamination",
-        "prompt": "子音などの非母音成分はどの程度含まれますか？",
-        "choices": [
-            {"value": "none", "label": "含まれない"},
-            {"value": "tolerable", "label": "聞こえるが許容できる"},
-            {"value": "problematic", "label": "利用上問題がある"},
+            {"value": "target_vowel", "label": "表示された母音が聞こえる"},
+            {
+                "value": "target_vowel_with_non_vowel",
+                "label": "表示された母音と子音・破裂音が聞こえる",
+            },
+            {"value": "other_vowel", "label": "別の母音が聞こえる"},
+            {"value": "non_vowel_only", "label": "子音・破裂音だけが聞こえる"},
+            {"value": "near_silence", "label": "ほぼ音が聞こえない"},
             {"value": "uncertain", "label": "判断できない"},
         ],
     },
 ]
 
 REVIEW_STATUS = {
-    "prompt": "この母音区間の総合判定を選んでください。",
+    "prompt": "この区間を、表示された母音の学習データとして利用できますか？",
     "choices": [
         {"value": "accepted", "label": "利用できる"},
         {"value": "rejected", "label": "利用できない"},
@@ -165,7 +132,7 @@ def build_review_artifacts(
     dataset_version: str = DATASET_VERSION,
 ) -> tuple[dict[str, Any], dict[str, Any]]:
     if len(candidate_records) != 1:
-        raise ValueError("Exactly one candidate method is required for protocol v2")
+        raise ValueError("Exactly one candidate method is required for protocol v5")
 
     indexed = {
         method: index_records(records) for method, records in candidate_records.items()

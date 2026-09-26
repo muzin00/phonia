@@ -331,7 +331,7 @@ dd {
 
 .choice-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: 1fr;
   gap: 8px;
   margin-top: 13px;
 }
@@ -351,7 +351,7 @@ dd {
 }
 
 .choice {
-  justify-content: center;
+  justify-content: flex-start;
   padding: 10px 12px;
 }
 
@@ -576,7 +576,7 @@ dd {
 }
 
 .review-navigation {
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .button {
