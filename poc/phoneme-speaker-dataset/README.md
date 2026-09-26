@@ -26,6 +26,7 @@ Phase 2では、Phase 1で採用したJuliusのアライメント結果を、音
 - [JVSデータセット設計](dataset-design.md)
 - [母音区間データセットのスキーマと配置](dataset-schema.md)
 - [母音区間データセットの生成・品質確認結果](dataset-results.md)
+- [Phase 2母音区間の層化レビュー結果](review-results.md)
 
 ## 4. 母音区間生成
 
@@ -47,3 +48,36 @@ Julius処理は成功済みの発話別JSONを検証して再利用するため�
 母音区間manifestは元WAVとframe範囲を参照し、区間WAVを大量に複製しない。
 全量処理の件数、区間長、品質フラグ、失敗理由は
 [`data/vowel-dataset-validation.json`](data/vowel-dataset-validation.json)へ記録する。
+
+## 5. 層化レビュー用データ
+
+Issue #17のレビュー対象は、固定seedで5母音、データ分割、品質グループ、区間長を
+層化し、音素変換を含む発話を追加して500区間抽出する。
+
+```shell
+python poc/phoneme-speaker-dataset/scripts/sample_review_segments.py
+
+uv run --project poc/phoneme-alignment-evaluation \
+  python poc/phoneme-alignment-evaluation/scripts/build_review_dataset.py \
+  --candidate julius=poc/phoneme-speaker-dataset/data/reviews/stratified/sample.jsonl \
+  --dataset-id jvs-phase-2-stratified-vowel-review \
+  --dataset-version 1 \
+  --output poc/phoneme-speaker-dataset/data/reviews/stratified/review-dataset.json \
+  --mapping-output poc/phoneme-speaker-dataset/data/reviews/stratified/candidate-map.json
+```
+
+レビューUIはJVSコーパスをメディアルートとして起動する。
+
+```shell
+cd tools/phoneme-review-ui
+PHONIA_REVIEW_MEDIA_ROOT=../../poc/phoneme-speaker-dataset/data/source/jvs_ver1 \
+PHONIA_REVIEW_DATASET=../../poc/phoneme-speaker-dataset/data/reviews/stratified/review-dataset.json \
+PHONIA_REVIEW_OUTPUT=../../poc/phoneme-speaker-dataset/data/reviews/stratified/review-records.jsonl \
+pnpm dev
+```
+
+保存した回答の条件別集計は次のコマンドで再生成する。
+
+```shell
+python poc/phoneme-speaker-dataset/scripts/summarize_review_results.py
+```

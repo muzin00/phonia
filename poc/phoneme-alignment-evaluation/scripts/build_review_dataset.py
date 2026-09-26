@@ -197,7 +197,9 @@ def build_review_artifacts(
                 "utterance": {
                     "id": reference["utterance_id"],
                     "text": reference["transcript"],
-                    "audioUrl": f"/media/{Path(reference['source_file']).name}",
+                    "audioUrl": reference.get(
+                        "audio_url", f"/media/{Path(reference['source_file']).name}"
+                    ),
                 },
                 "target": {
                     "label": reference["normalized_phoneme"],

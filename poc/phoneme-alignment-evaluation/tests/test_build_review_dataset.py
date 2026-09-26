@@ -79,6 +79,17 @@ class BuildReviewArtifactsTest(unittest.TestCase):
                 {"mfa": [make_record("mfa")], "julius": [make_record("julius")]}
             )
 
+    def test_uses_explicit_nested_media_url(self) -> None:
+        record = make_record("julius")
+        record["audio_url"] = "/media/jvs001/parallel100/sample.wav"
+
+        dataset, _ = build_review_artifacts({"julius": [record]})
+
+        self.assertEqual(
+            dataset["items"][0]["utterance"]["audioUrl"],
+            "/media/jvs001/parallel100/sample.wav",
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

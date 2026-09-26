@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "dataset_id": "jvs-phase-2-stratified-vowel-review",
+  "dataset_version": "1",
+  "coverage": {
+    "sampled": 500,
+    "reviewed": 300,
+    "pending": 200,
+    "reviewed_speakers": 45,
+    "sampled_speakers": 93,
+    "reviewed_strata": 82,
+    "sampled_strata": 88,
+    "unreviewed_strata": [
+      "e/train/near_silent/long",
+      "i/train/near_silent/long",
+      "o/validation/near_silent/long",
+      "o/validation/near_silent/middle",
+      "u/train/near_silent/short",
+      "u/validation/near_silent/long"
+    ]
+  },
+  "overall": {
+    "accepted": 146,
+    "rejected": 154,
+    "acceptance_rate": 0.486667,
+    "perceived_content": {
+      "near_silence": 21,
+      "non_vowel_only": 93,
+      "other_vowel": 35,
+      "target_vowel": 68,
+      "target_vowel_with_non_vowel": 78,
+      "uncertain": 5
+    }
+  },
+  "by_quality_group": {
+    "near_silent": {
+      "reviewed": 124,
+      "accepted": 17,
+      "rejected": 107,
+      "acceptance_rate": 0.137097,
+      "perceived_content": {
+        "near_silence": 21,
+        "non_vowel_only": 85,
+        "target_vowel_with_non_vowel": 17,
+        "uncertain": 1
+      }
+    },
+    "normal": {
+      "reviewed": 176,
+      "accepted": 129,
+      "rejected": 47,
+      "acceptance_rate": 0.732955,
+      "perceived_content": {
+        "non_vowel_only": 8,
+        "other_vowel": 35,
+        "target_vowel": 68,
+        "target_vowel_with_non_vowel": 61,
+        "uncertain": 4
+      }
+    }
+  },
+  "by_duration_bin": {
+    "long": {
+      "reviewed": 91,
+      "accepted": 60,
+      "rejected": 31,
+      "acceptance_rate": 0.659341,
+      "perceived_content": {
+        "near_silence": 1,
+        "non_vowel_only": 20,
+        "other_vowel": 9,
+        "target_vowel": 15,
+        "target_vowel_with_non_vowel": 45,
+        "uncertain": 1
+      }
+    },
+    "middle": {
+      "reviewed": 115,
+      "accepted": 57,
+      "rejected": 58,
+      "acceptance_rate": 0.495652,
+      "perceived_content": {
+        "near_silence": 2,
+        "non_vowel_only": 37,
+        "other_vowel": 16,
+        "target_vowel": 28,
+        "target_vowel_with_non_vowel": 29,
+        "uncertain": 3
+      }
+    },
+    "short": {
+      "reviewed": 94,
+      "accepted": 29,
+      "rejected": 65,
+      "acceptance_rate": 0.308511,
+      "perceived_content": {
+        "near_silence": 18,
+        "non_vowel_only": 36,
+        "other_vowel": 10,
+        "target_vowel": 25,
+        "target_vowel_with_non_vowel": 4,
+        "uncertain": 1
+      }
+    }
+  },
+  "by_vowel": {
+    "a": {
+      "reviewed": 73,
+      "accepted": 36,
+      "rejected": 37,
+      "acceptance_rate": 0.493151,
+      "perceived_content": {
+        "near_silence": 4,
+        "non_vowel_only": 26,
+        "other_vowel": 7,
+        "target_vowel": 19,
+        "target_vowel_with_non_vowel": 17
+      }
+    },
+    "e": {
+      "reviewed": 53,
+      "accepted": 32,
+      "rejected": 21,
+      "acceptance_rate": 0.603774,
+      "perceived_content": {
+        "near_silence": 6,
+        "non_vowel_only": 11,
+        "other_vowel": 2,
+        "target_vowel": 16,
+        "target_vowel_with_non_vowel": 16,
+        "uncertain": 2
+      }
+    },
+    "i": {
+      "reviewed": 53,
+      "accepted": 21,
+      "rejected": 32,
+      "acceptance_rate": 0.396226,
+      "perceived_content": {
+        "non_vowel_only": 26,
+        "other_vowel": 6,
+        "target_vowel": 6,
+        "target_vowel_with_non_vowel": 15
+      }
+    },
+    "o": {
+      "reviewed": 64,
+      "accepted": 30,
+      "rejected": 34,
+      "acceptance_rate": 0.46875,
+      "perceived_content": {
+        "near_silence": 10,
+        "non_vowel_only": 10,
+        "other_vowel": 13,
+        "target_vowel": 9,
+        "target_vowel_with_non_vowel": 21,
+        "uncertain": 1
+      }
+    },
+    "u": {
+      "reviewed": 57,
+      "accepted": 27,
+      "rejected": 30,
+      "acceptance_rate": 0.473684,
+      "perceived_content": {
+        "near_silence": 1,
+        "non_vowel_only": 20,
+        "other_vowel": 7,
+        "target_vowel": 18,
+        "target_vowel_with_non_vowel": 9,
+        "uncertain": 2
+      }
+    }
+  },
+  "by_split": {
+    "test": {
+      "reviewed": 129,
+      "accepted": 61,
+      "rejected": 68,
+      "acceptance_rate": 0.472868,
+      "perceived_content": {
+        "near_silence": 11,
+        "non_vowel_only": 41,
+        "other_vowel": 14,
+        "target_vowel": 25,
+        "target_vowel_with_non_vowel": 36,
+        "uncertain": 2
+      }
+    },
+    "train": {
+      "reviewed": 101,
+      "accepted": 51,
+      "rejected": 50,
+      "acceptance_rate": 0.50495,
+      "perceived_content": {
+        "near_silence": 9,
+        "non_vowel_only": 25,
+        "other_vowel": 15,
+        "target_vowel": 26,
+        "target_vowel_with_non_vowel": 25,
+        "uncertain": 1
+      }
+    },
+    "validation": {
+      "reviewed": 70,
+      "accepted": 34,
+      "rejected": 36,
+      "acceptance_rate": 0.485714,
+      "perceived_content": {
+        "near_silence": 1,
+        "non_vowel_only": 27,
+        "other_vowel": 6,
+        "target_vowel": 17,
+        "target_vowel_with_non_vowel": 17,
+        "uncertain": 2
+      }
+    }
+  },
+  "by_phone_mapping": {
+    "none": {
+      "reviewed": 258,
+      "accepted": 117,
+      "rejected": 141,
+      "acceptance_rate": 0.453488,
+      "perceived_content": {
+        "near_silence": 21,
+        "non_vowel_only": 89,
+        "other_vowel": 26,
+        "target_vowel": 54,
+        "target_vowel_with_non_vowel": 63,
+        "uncertain": 5
+      }
+    },
+    "ty_to_ch": {
+      "reviewed": 6,
+      "accepted": 6,
+      "rejected": 0,
+      "acceptance_rate": 1.0,
+      "perceived_content": {
+        "target_vowel_with_non_vowel": 6
+      }
+    },
+    "v_to_b": {
+      "reviewed": 36,
+      "accepted": 23,
+      "rejected": 13,
+      "acceptance_rate": 0.638889,
+      "perceived_content": {
+        "non_vowel_only": 4,
+        "other_vowel": 9,
+        "target_vowel": 14,
+        "target_vowel_with_non_vowel": 9
+      }
+    }
+  }
+}
