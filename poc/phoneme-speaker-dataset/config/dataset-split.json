@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "design_version": "1.0.0",
+  "corpus": "JVS",
+  "corpus_version": "jvs_ver1",
+  "randomization": {
+    "method": "python_random_shuffle",
+    "seed": 20260926
+  },
+  "included_subsets": [
+    "parallel100",
+    "nonpara30"
+  ],
+  "speaker_splits": {
+    "train": [
+      "jvs054", "jvs049", "jvs023", "jvs039", "jvs041", "jvs097", "jvs034",
+      "jvs083", "jvs001", "jvs038", "jvs088", "jvs074", "jvs086", "jvs009",
+      "jvs043", "jvs085", "jvs008", "jvs087", "jvs019", "jvs089", "jvs071",
+      "jvs056", "jvs072", "jvs092", "jvs037", "jvs035", "jvs061", "jvs052",
+      "jvs028", "jvs022", "jvs014", "jvs020", "jvs018", "jvs091", "jvs096",
+      "jvs004", "jvs047", "jvs098", "jvs094", "jvs063", "jvs013", "jvs060",
+      "jvs011", "jvs095", "jvs080", "jvs100", "jvs057", "jvs084", "jvs066",
+      "jvs027", "jvs078", "jvs050", "jvs062", "jvs069", "jvs073", "jvs093",
+      "jvs036", "jvs012", "jvs099", "jvs051", "jvs067", "jvs090", "jvs059",
+      "jvs082", "jvs046", "jvs055", "jvs002", "jvs044", "jvs031", "jvs033"
+    ],
+    "validation": [
+      "jvs007", "jvs016", "jvs021", "jvs025", "jvs026", "jvs040", "jvs042",
+      "jvs045", "jvs053", "jvs058", "jvs068", "jvs070", "jvs075", "jvs077",
+      "jvs079"
+    ],
+    "test": [
+      "jvs003", "jvs005", "jvs006", "jvs010", "jvs015", "jvs017", "jvs024",
+      "jvs029", "jvs030", "jvs032", "jvs048", "jvs064", "jvs065", "jvs076",
+      "jvs081"
+    ]
+  },
+  "learning_curve_sizes": [10, 25, 50, 70],
+  "evaluation_roles": {
+    "parallel100": {
+      "enrollment": {
+        "utterance_number_start": 1,
+        "utterance_number_end": 50
+      },
+      "verification": {
+        "utterance_number_start": 51,
+        "utterance_number_end": 100
+      }
+    },
+    "nonpara30": "cross_text_verification"
+  },
+  "minimum_evaluation_utterances_per_speaker": {
+    "enrollment": 49,
+    "verification": 50,
+    "cross_text_verification": 30
+  }
+}
