@@ -82,8 +82,26 @@ def duration_distribution(records: list[dict[str, Any]]) -> dict[str, float]:
 
 
 def latest_reviews(records: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    if not records:
+        return {}
+
+    active_record = records[-1]
+    active_batch = (
+        active_record.get("datasetId"),
+        active_record.get("datasetVersion"),
+        active_record.get("protocol", {}).get("id"),
+        active_record.get("protocol", {}).get("version"),
+    )
     latest: dict[str, dict[str, Any]] = {}
     for record in records:
+        batch = (
+            record.get("datasetId"),
+            record.get("datasetVersion"),
+            record.get("protocol", {}).get("id"),
+            record.get("protocol", {}).get("version"),
+        )
+        if batch != active_batch:
+            continue
         item_id = str(record["itemId"])
         if item_id not in latest or int(record["revision"]) >= int(
             latest[item_id]["revision"]

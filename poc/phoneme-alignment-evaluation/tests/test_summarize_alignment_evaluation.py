@@ -3,6 +3,7 @@ from __future__ import annotations
 import unittest
 
 from scripts.summarize_alignment_evaluation import (
+    latest_reviews,
     pair_atomic_records,
     pair_mfa_with_julius,
     review_summary,
@@ -18,8 +19,7 @@ class ReviewSummaryTest(unittest.TestCase):
                     {
                         "candidateId": "A",
                         "answers": {
-                            "audible": "yes",
-                            "non_vowel_contamination": "none",
+                            "perceived_content": "target_vowel",
                         },
                     }
                 ],
@@ -30,8 +30,7 @@ class ReviewSummaryTest(unittest.TestCase):
                     {
                         "candidateId": "A",
                         "answers": {
-                            "audible": "no",
-                            "non_vowel_contamination": "tolerable",
+                            "perceived_content": "other_vowel",
                         },
                     }
                 ],
@@ -43,7 +42,30 @@ class ReviewSummaryTest(unittest.TestCase):
         self.assertEqual(result["reviewed_count"], 2)
         self.assertEqual(result["accepted_rate"], 0.5)
         self.assertEqual(result["status_counts"], {"accepted": 1, "rejected": 1})
-        self.assertEqual(result["question_counts"]["audible"], {"no": 1, "yes": 1})
+        self.assertEqual(
+            result["question_counts"]["perceived_content"],
+            {"other_vowel": 1, "target_vowel": 1},
+        )
+
+    def test_latest_reviews_does_not_mix_protocol_batches(self) -> None:
+        records = [
+            {
+                "datasetId": "review",
+                "datasetVersion": "3",
+                "protocol": {"id": "vowel-review", "version": "2"},
+                "itemId": "item-1",
+                "revision": 4,
+            },
+            {
+                "datasetId": "review",
+                "datasetVersion": "5",
+                "protocol": {"id": "vowel-review", "version": "5"},
+                "itemId": "item-2",
+                "revision": 1,
+            },
+        ]
+
+        self.assertEqual(latest_reviews(records), {"item-2": records[1]})
 
 
 class PairingTest(unittest.TestCase):

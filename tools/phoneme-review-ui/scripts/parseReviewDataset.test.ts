@@ -17,6 +17,23 @@ test('accepts the documented example dataset', () => {
   const dataset = parseReviewDataset(example)
 
   assert.equal(dataset.datasetId, 'mfa-vowel-pilot')
+  assert.equal(dataset.datasetVersion, '5')
+  assert.equal(dataset.protocol.version, '5')
+  assert.deepEqual(
+    dataset.form.candidateQuestions.map((question) => question.id),
+    ['perceived_content'],
+  )
+  assert.deepEqual(
+    dataset.form.candidateQuestions[0]?.choices.map((choice) => choice.value),
+    [
+      'target_vowel',
+      'target_vowel_with_non_vowel',
+      'other_vowel',
+      'non_vowel_only',
+      'near_silence',
+      'uncertain',
+    ],
+  )
   assert.equal(dataset.items.length, 1)
 })
 
