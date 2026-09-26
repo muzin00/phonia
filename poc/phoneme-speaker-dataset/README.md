@@ -81,3 +81,21 @@ pnpm dev
 ```shell
 python poc/phoneme-speaker-dataset/scripts/summarize_review_results.py
 ```
+
+## 6. Phase 3入力manifest
+
+層化レビューで系統的な利用困難が確認された`near_silent`を、固定した機械規則で
+全区間から一律に除外する。元のPhase 2 manifestは変更せず、Phase 3用の派生manifestを
+生成する。
+
+```shell
+python poc/phoneme-speaker-dataset/scripts/build_phase3_manifest.py
+```
+
+- 正本設定: `config/phase3-input.json`
+- Phase 3入力: `data/generated/phase3-vowel-segments.jsonl`
+- 検証結果: `data/phase3-vowel-dataset-validation.json`
+
+生成処理は元音声のメタデータとframe範囲、話者分割、学習曲線cohort、母音・評価用途の
+カバレッジを検査する。Phase 3の学習処理は元の`vowel-segments.jsonl`ではなく、
+`phase3-vowel-segments.jsonl`を入力の正本として使用する。
