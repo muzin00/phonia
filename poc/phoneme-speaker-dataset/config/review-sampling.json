@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "dataset_id": "jvs-phase-2-stratified-vowel-review",
+  "dataset_version": "1",
+  "seed": 20260926,
+  "target_count": 500,
+  "base_per_stratum": 5,
+  "phone_mapping_target_count": 50,
+  "duration_bins_sec": {
+    "short_max": 0.04,
+    "middle_max": 0.09
+  },
+  "dimensions": {
+    "vowels": ["a", "i", "u", "e", "o"],
+    "splits": ["train", "validation", "test"],
+    "quality_groups": ["normal", "near_silent"],
+    "duration_bins": ["short", "middle", "long"]
+  }
+}
