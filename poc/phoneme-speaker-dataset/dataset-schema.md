@@ -25,11 +25,13 @@ data/generated/
 │   ├── raw/<speaker_id>/<utterance_id>.json
 │   └── failures/<speaker_id>/<utterance_id>.log
 ├── vowel-segments.jsonl
+├── phase3-vowel-segments.jsonl
 └── failures.jsonl
 ```
 
 全量manifestから再生成できるコンパクトな集計結果は
-`data/vowel-dataset-validation.json`としてGit管理する。
+`data/vowel-dataset-validation.json`と`data/phase3-vowel-dataset-validation.json`として
+Git管理する。
 
 ファイル名には元WAVのstemではなく`utterance_id`を使用する。JVSの`parallel100`では
 異なる話者が同じ元WAV名を持つため、stemだけを使用してはならない。
@@ -79,9 +81,9 @@ pyopenjtalkの`v`と`ty`は固定したJulius単音素モデルに存在しな�
 - 波形: 元WAVのパスとSHA-256、読み出すframe範囲、形式、RMS
 - 分析属性: 短区間、無音、低レベルなどの`quality_flags`
 
-品質フラグは分析用であり、採否、重み付け、サンプリングには使用しない。時刻不正、
-音声範囲外、読み出し不能、期待音素列との不一致など、学習入力を構成できない場合だけを
-失敗として`failures.jsonl`へ記録する。
+`vowel-segments.jsonl`の品質フラグは分析用であり、この正本manifestからレコードを
+削除しない。時刻不正、音声範囲外、読み出し不能、期待音素列との不一致など、学習入力を
+構成できない場合は失敗として`failures.jsonl`へ記録する。
 
 初期版は`storage_mode = source_slice`とし、区間ごとのWAVを複製しない。全量生成で約47万区間となるため、
 個別ファイルにするとファイル数が過大になるため、Phase 3は`source_file`を開き、
@@ -89,7 +91,19 @@ pyopenjtalkの`v`と`ty`は固定したJulius単音素モデルに存在しな�
 各区間が実際に学習入力を構成できることを検査する。将来shard形式へ変換する場合も、この
 manifestを正本とする。
 
-## 6. バージョン管理
+## 6. Phase 3入力manifest
+
+`phase3-vowel-segments.jsonl`は`vowel-segments.jsonl`から再生成する派生manifestである。
+正本設定は`config/phase3-input.json`とし、Phase 2の層化レビューで系統的な利用困難が
+確認された`near_silent`を一律に除外する。他の品質フラグや個別レビュー回答による
+選別、境界変更、重み付けは行わず、採用レコードの内容と順序を保持する。
+
+生成時には入力と出力のSHA-256、除外規則と件数、母音・分割・話者・評価用途・学習曲線
+cohortの分布を`data/phase3-vowel-dataset-validation.json`へ記録する。全ての元WAVを開き、
+音声形式と各レコードのframe範囲が一致することも検査する。Phase 3の学習、登録、照合は
+この派生manifestを入力の正本として使用する。
+
+## 7. バージョン管理
 
 Gitでは設定、生成プログラム、テスト、スキーマ文書、集計結果を管理する。JVS音声、
 Juliusの中間入力、発話別アライメント、大規模manifestは管理しない。

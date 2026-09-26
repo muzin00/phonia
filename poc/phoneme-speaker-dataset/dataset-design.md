@@ -71,6 +71,9 @@ JVSには収録日やセッションIDがないため、この分離をクロス
 - `data/utterance-manifest.jsonl`: 対象発話と用途を対応付けるmanifest
 - `data/dataset-validation.json`: 件数、時間、重複、最低規模の検査結果
 - `scripts/build_dataset_manifest.py`: 上記データ成果物の再生成プログラム
+- `config/phase3-input.json`: Phase 3入力へ適用する一律の採用規則
+- `data/generated/phase3-vowel-segments.jsonl`: Phase 3の学習・登録・照合入力
+- `data/phase3-vowel-dataset-validation.json`: 除外前後の件数と入力検証結果
 
 manifestは元音声を複製せず、Git管理外の`data/source/`にあるファイルをリポジトリ相対パスで
 参照する。JVS音声自体は再配布しない。

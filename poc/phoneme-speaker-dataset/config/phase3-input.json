@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "policy_version": "1.0.0",
+  "source_schema_version": 1,
+  "exclude_quality_flags": ["near_silent"],
+  "expected_counts": {
+    "input": 473764,
+    "excluded": 11522,
+    "eligible": 462242
+  },
+  "coverage": {
+    "required_vowels": ["a", "i", "u", "e", "o"],
+    "required_evaluation_roles_by_split": {
+      "train": ["training"],
+      "validation": ["enrollment", "verification", "cross_text_verification"],
+      "test": ["enrollment", "verification", "cross_text_verification"]
+    }
+  }
+}
