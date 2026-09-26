@@ -331,28 +331,6 @@ function ReviewScreen({
         </div>
       </header>
 
-      <nav className="review-navigation" aria-label="レビュー項目の移動">
-        <button
-          type="button"
-          className="button button-secondary"
-          disabled={currentIndex === 0}
-          onClick={onPrevious}
-        >
-          前へ
-        </button>
-        <p>
-          データセット {dataset.datasetId}@{dataset.datasetVersion}
-        </p>
-        <button
-          type="button"
-          className="button button-primary"
-          disabled={currentIndex === dataset.items.length - 1}
-          onClick={onNext}
-        >
-          次へ
-        </button>
-      </nav>
-
       <section className="context-card" aria-labelledby="utterance-heading">
         <div className="section-heading">
           <div>
@@ -428,6 +406,27 @@ function ReviewScreen({
         />
       )}
 
+      <footer className="review-navigation">
+        <button
+          type="button"
+          className="button button-secondary"
+          disabled={currentIndex === 0}
+          onClick={onPrevious}
+        >
+          前へ
+        </button>
+        <p>
+          データセット {dataset.datasetId}@{dataset.datasetVersion}
+        </p>
+        <button
+          type="button"
+          className="button button-primary"
+          disabled={currentIndex === dataset.items.length - 1}
+          onClick={onNext}
+        >
+          次へ
+        </button>
+      </footer>
     </main>
   )
 }

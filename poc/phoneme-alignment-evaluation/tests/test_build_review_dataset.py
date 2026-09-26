@@ -46,30 +46,23 @@ class BuildReviewArtifactsTest(unittest.TestCase):
             {"mfa"},
         )
         self.assertEqual(dataset["schemaVersion"], 2)
-        self.assertEqual(dataset["protocol"]["version"], "5")
+        self.assertEqual(dataset["protocol"]["version"], "2")
         self.assertEqual(
             [question["id"] for question in dataset["form"]["candidateQuestions"]],
-            ["perceived_content"],
-        )
-        self.assertEqual(
-            [choice["value"] for choice in dataset["form"]["reviewStatus"]["choices"]],
-            ["accepted", "rejected", "uncertain"],
-        )
-        perceived_content = dataset["form"]["candidateQuestions"][0]
-        self.assertEqual(
-            [choice["value"] for choice in perceived_content["choices"]],
             [
-                "target_vowel",
-                "target_vowel_with_non_vowel",
+                "audible",
+                "start_clipping",
+                "end_clipping",
                 "other_vowel",
-                "non_vowel_only",
-                "near_silence",
-                "uncertain",
+                "non_vowel_contamination",
             ],
         )
         self.assertEqual(
-            dataset["form"]["reviewStatus"]["prompt"],
-            "この区間を、表示された母音の学習データとして利用できますか？",
+            [
+                choice["value"]
+                for choice in dataset["form"]["reviewStatus"]["choices"]
+            ],
+            ["accepted", "rejected", "uncertain"],
         )
 
     def test_rejects_multiple_candidate_methods(self) -> None:
