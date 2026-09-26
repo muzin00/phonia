@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "design_version": "1.0.0",
+  "vowels": ["a", "i", "u", "e", "o"],
+  "alignment": {
+    "aligner": "julius",
+    "aligner_version": "4.6",
+    "aligner_commit": "3b7174d0d4091f5e6ebb917769822032d079996f",
+    "model_id": "segmentation-kit-monophone",
+    "model_version": "e0e8bbaf98e27d19dfc6fe8312be607ad03592ad",
+    "model_sha256": "58952ccfe60f283c7efb1c22f9e012c7d297429700b7eeb4b60f7651a6e65940",
+    "phone_mapping_version": 1,
+    "unsupported_phone_mapping": {
+      "v": "b",
+      "ty": "ch"
+    },
+    "input_sample_rate_hz": 16000,
+    "frame_shift_sec": 0.01,
+    "window_sec": 0.025,
+    "alignment_offset_sec": 0.0125
+  },
+  "segment": {
+    "storage_mode": "source_slice",
+    "minimum_duration_sec": 0.03,
+    "near_silent_dbfs": -50.0,
+    "audio_format": "source-sample-rate-mono-16-bit-pcm"
+  }
+}

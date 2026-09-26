@@ -1,0 +1,1148 @@
+{
+  "schema_version": 1,
+  "design_version": "1.0.0",
+  "status": "completed_with_failures",
+  "storage_mode": "source_slice",
+  "config": "poc/phoneme-speaker-dataset/config/vowel-dataset.json",
+  "config_sha256": "af8e0e63415863915c8797d14df3f0c27cefd55f473d9f2a4cb3f4afc62d9f84",
+  "expected_phonemes": "poc/phoneme-speaker-dataset/data/generated/expected-phonemes.jsonl",
+  "expected_phonemes_sha256": "0763f70c2470c6eb347fa2fdde68631e2e73f4894b79bd651f215c279ba012d7",
+  "alignment_manifest": "poc/phoneme-speaker-dataset/data/generated/alignments/manifest.jsonl",
+  "alignment_manifest_sha256": "af363451a13ff6e92511cf67729595ad40576b0c188a81fdaaf94b62826da114",
+  "vowel_manifest": "poc/phoneme-speaker-dataset/data/generated/vowel-segments.jsonl",
+  "vowel_manifest_sha256": "156c89beee7c94f28cf8b4c62669089f36ca8ae187cd9ca67727515dcbf8a53d",
+  "input_utterance_count": 12997,
+  "successful_utterance_count": 12992,
+  "failed_utterance_count": 5,
+  "minimum_duration_sec": 0.03,
+  "near_silent_dbfs": -50.0,
+  "source_checksums_verified": true,
+  "segments": {
+    "count": 473764,
+    "total_sec": 34802.93,
+    "min_sec": 0.03,
+    "p25_sec": 0.04,
+    "median_sec": 0.07,
+    "p75_sec": 0.09,
+    "max_sec": 1.51
+  },
+  "by_vowel": {
+    "a": {
+      "count": 111783,
+      "total_sec": 9128.97,
+      "min_sec": 0.03,
+      "p25_sec": 0.06,
+      "median_sec": 0.08,
+      "p75_sec": 0.1,
+      "max_sec": 0.56
+    },
+    "e": {
+      "count": 64791,
+      "total_sec": 5383.13,
+      "min_sec": 0.03,
+      "p25_sec": 0.06,
+      "median_sec": 0.08,
+      "p75_sec": 0.1,
+      "max_sec": 0.31
+    },
+    "i": {
+      "count": 87254,
+      "total_sec": 6019.29,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.66
+    },
+    "o": {
+      "count": 118087,
+      "total_sec": 9097.49,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 1.04
+    },
+    "u": {
+      "count": 91849,
+      "total_sec": 5174.05,
+      "min_sec": 0.03,
+      "p25_sec": 0.03,
+      "median_sec": 0.05,
+      "p75_sec": 0.07,
+      "max_sec": 1.51
+    }
+  },
+  "by_split": {
+    "test": {
+      "count": 71059,
+      "total_sec": 5262.59,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.76
+    },
+    "train": {
+      "count": 331744,
+      "total_sec": 24357.9,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 1.51
+    },
+    "validation": {
+      "count": 70961,
+      "total_sec": 5182.44,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 1.35
+    }
+  },
+  "by_speaker": {
+    "jvs001": {
+      "count": 4691,
+      "total_sec": 368.95,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.46
+    },
+    "jvs002": {
+      "count": 4714,
+      "total_sec": 339.6,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.27
+    },
+    "jvs003": {
+      "count": 4750,
+      "total_sec": 400.64,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.08,
+      "p75_sec": 0.1,
+      "max_sec": 0.3
+    },
+    "jvs004": {
+      "count": 4734,
+      "total_sec": 369.06,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.37
+    },
+    "jvs005": {
+      "count": 4687,
+      "total_sec": 327.62,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.29
+    },
+    "jvs006": {
+      "count": 4730,
+      "total_sec": 338.41,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.56
+    },
+    "jvs007": {
+      "count": 4745,
+      "total_sec": 323.27,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.31
+    },
+    "jvs008": {
+      "count": 4837,
+      "total_sec": 390.88,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.08,
+      "p75_sec": 0.1,
+      "max_sec": 0.4
+    },
+    "jvs009": {
+      "count": 4743,
+      "total_sec": 363.51,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.35
+    },
+    "jvs010": {
+      "count": 4693,
+      "total_sec": 362.91,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.33
+    },
+    "jvs011": {
+      "count": 4720,
+      "total_sec": 311.93,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.28
+    },
+    "jvs012": {
+      "count": 4753,
+      "total_sec": 316.36,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.33
+    },
+    "jvs013": {
+      "count": 4693,
+      "total_sec": 321.45,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.27
+    },
+    "jvs014": {
+      "count": 4766,
+      "total_sec": 384.32,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.34
+    },
+    "jvs015": {
+      "count": 4725,
+      "total_sec": 347.62,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.34
+    },
+    "jvs016": {
+      "count": 4745,
+      "total_sec": 374.75,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.32
+    },
+    "jvs017": {
+      "count": 4752,
+      "total_sec": 400.92,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.08,
+      "p75_sec": 0.11,
+      "max_sec": 0.6
+    },
+    "jvs018": {
+      "count": 4905,
+      "total_sec": 418.11,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.08,
+      "p75_sec": 0.11,
+      "max_sec": 1.04
+    },
+    "jvs019": {
+      "count": 4741,
+      "total_sec": 312.39,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.25
+    },
+    "jvs020": {
+      "count": 4806,
+      "total_sec": 292.28,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.05,
+      "p75_sec": 0.07,
+      "max_sec": 0.23
+    },
+    "jvs021": {
+      "count": 4658,
+      "total_sec": 322.08,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.28
+    },
+    "jvs022": {
+      "count": 4792,
+      "total_sec": 347.66,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.36
+    },
+    "jvs023": {
+      "count": 4792,
+      "total_sec": 306.39,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.26
+    },
+    "jvs024": {
+      "count": 4738,
+      "total_sec": 336.46,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.52
+    },
+    "jvs025": {
+      "count": 4732,
+      "total_sec": 410.78,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.08,
+      "p75_sec": 0.11,
+      "max_sec": 0.42
+    },
+    "jvs026": {
+      "count": 4725,
+      "total_sec": 339.33,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.35
+    },
+    "jvs027": {
+      "count": 4748,
+      "total_sec": 384.91,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.08,
+      "p75_sec": 0.1,
+      "max_sec": 0.41
+    },
+    "jvs028": {
+      "count": 4804,
+      "total_sec": 414.13,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.08,
+      "p75_sec": 0.11,
+      "max_sec": 0.37
+    },
+    "jvs029": {
+      "count": 4705,
+      "total_sec": 350.74,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.38
+    },
+    "jvs030": {
+      "count": 4713,
+      "total_sec": 366.32,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.37
+    },
+    "jvs031": {
+      "count": 4635,
+      "total_sec": 308.09,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.54
+    },
+    "jvs032": {
+      "count": 4713,
+      "total_sec": 305.71,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.27
+    },
+    "jvs033": {
+      "count": 4736,
+      "total_sec": 302.15,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.21
+    },
+    "jvs034": {
+      "count": 4771,
+      "total_sec": 323.46,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.27
+    },
+    "jvs035": {
+      "count": 4687,
+      "total_sec": 386.3,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.08,
+      "p75_sec": 0.11,
+      "max_sec": 0.37
+    },
+    "jvs036": {
+      "count": 4791,
+      "total_sec": 378.22,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.66
+    },
+    "jvs037": {
+      "count": 4739,
+      "total_sec": 338.52,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.31
+    },
+    "jvs038": {
+      "count": 4720,
+      "total_sec": 325.42,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.68
+    },
+    "jvs039": {
+      "count": 4749,
+      "total_sec": 330.0,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.25
+    },
+    "jvs040": {
+      "count": 4707,
+      "total_sec": 406.18,
+      "min_sec": 0.03,
+      "p25_sec": 0.06,
+      "median_sec": 0.08,
+      "p75_sec": 0.11,
+      "max_sec": 0.31
+    },
+    "jvs041": {
+      "count": 4670,
+      "total_sec": 370.7,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.29
+    },
+    "jvs042": {
+      "count": 4688,
+      "total_sec": 340.78,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.37
+    },
+    "jvs043": {
+      "count": 4715,
+      "total_sec": 304.11,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.25
+    },
+    "jvs044": {
+      "count": 4651,
+      "total_sec": 273.13,
+      "min_sec": 0.03,
+      "p25_sec": 0.03,
+      "median_sec": 0.05,
+      "p75_sec": 0.07,
+      "max_sec": 0.23
+    },
+    "jvs045": {
+      "count": 4730,
+      "total_sec": 298.58,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.27
+    },
+    "jvs046": {
+      "count": 4758,
+      "total_sec": 329.4,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.27
+    },
+    "jvs047": {
+      "count": 4684,
+      "total_sec": 375.94,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.39
+    },
+    "jvs048": {
+      "count": 4719,
+      "total_sec": 335.61,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.76
+    },
+    "jvs049": {
+      "count": 4670,
+      "total_sec": 339.18,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.33
+    },
+    "jvs050": {
+      "count": 4796,
+      "total_sec": 360.27,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.29
+    },
+    "jvs051": {
+      "count": 4663,
+      "total_sec": 328.45,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.3
+    },
+    "jvs052": {
+      "count": 4756,
+      "total_sec": 339.17,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.28
+    },
+    "jvs053": {
+      "count": 4751,
+      "total_sec": 333.88,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 1.02
+    },
+    "jvs054": {
+      "count": 4770,
+      "total_sec": 341.41,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.31
+    },
+    "jvs055": {
+      "count": 4799,
+      "total_sec": 352.78,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.79
+    },
+    "jvs056": {
+      "count": 4755,
+      "total_sec": 310.86,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.27
+    },
+    "jvs057": {
+      "count": 4762,
+      "total_sec": 356.92,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.58
+    },
+    "jvs058": {
+      "count": 4734,
+      "total_sec": 381.66,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 1.35
+    },
+    "jvs059": {
+      "count": 4825,
+      "total_sec": 366.9,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 1.04
+    },
+    "jvs060": {
+      "count": 4813,
+      "total_sec": 364.38,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 1.51
+    },
+    "jvs061": {
+      "count": 4801,
+      "total_sec": 339.88,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.24
+    },
+    "jvs062": {
+      "count": 4739,
+      "total_sec": 387.75,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.29
+    },
+    "jvs063": {
+      "count": 4736,
+      "total_sec": 339.65,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.32
+    },
+    "jvs064": {
+      "count": 4801,
+      "total_sec": 373.08,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.26
+    },
+    "jvs065": {
+      "count": 4818,
+      "total_sec": 377.93,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.28
+    },
+    "jvs066": {
+      "count": 4693,
+      "total_sec": 364.82,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.25
+    },
+    "jvs067": {
+      "count": 4701,
+      "total_sec": 312.3,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.25
+    },
+    "jvs068": {
+      "count": 4751,
+      "total_sec": 328.37,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.26
+    },
+    "jvs069": {
+      "count": 4750,
+      "total_sec": 401.05,
+      "min_sec": 0.03,
+      "p25_sec": 0.06,
+      "median_sec": 0.08,
+      "p75_sec": 0.11,
+      "max_sec": 0.37
+    },
+    "jvs070": {
+      "count": 4845,
+      "total_sec": 313.71,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.29
+    },
+    "jvs071": {
+      "count": 4714,
+      "total_sec": 350.9,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.35
+    },
+    "jvs072": {
+      "count": 4779,
+      "total_sec": 410.05,
+      "min_sec": 0.03,
+      "p25_sec": 0.06,
+      "median_sec": 0.08,
+      "p75_sec": 0.11,
+      "max_sec": 0.48
+    },
+    "jvs073": {
+      "count": 4854,
+      "total_sec": 354.3,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.39
+    },
+    "jvs074": {
+      "count": 4627,
+      "total_sec": 306.9,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.4
+    },
+    "jvs075": {
+      "count": 4705,
+      "total_sec": 352.94,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.39
+    },
+    "jvs076": {
+      "count": 4781,
+      "total_sec": 301.93,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.22
+    },
+    "jvs077": {
+      "count": 4734,
+      "total_sec": 347.16,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.26
+    },
+    "jvs078": {
+      "count": 4743,
+      "total_sec": 370.5,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.34
+    },
+    "jvs079": {
+      "count": 4711,
+      "total_sec": 308.97,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.33
+    },
+    "jvs080": {
+      "count": 4701,
+      "total_sec": 336.13,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.37
+    },
+    "jvs081": {
+      "count": 4734,
+      "total_sec": 336.69,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.26
+    },
+    "jvs082": {
+      "count": 4613,
+      "total_sec": 338.39,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 1.41
+    },
+    "jvs083": {
+      "count": 4732,
+      "total_sec": 326.04,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.26
+    },
+    "jvs084": {
+      "count": 4703,
+      "total_sec": 314.94,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.24
+    },
+    "jvs085": {
+      "count": 4666,
+      "total_sec": 359.88,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.31
+    },
+    "jvs086": {
+      "count": 4649,
+      "total_sec": 325.5,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.29
+    },
+    "jvs087": {
+      "count": 4684,
+      "total_sec": 343.51,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.34
+    },
+    "jvs088": {
+      "count": 4686,
+      "total_sec": 304.76,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.08,
+      "max_sec": 0.25
+    },
+    "jvs089": {
+      "count": 4719,
+      "total_sec": 350.78,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.41
+    },
+    "jvs090": {
+      "count": 4777,
+      "total_sec": 421.48,
+      "min_sec": 0.03,
+      "p25_sec": 0.06,
+      "median_sec": 0.08,
+      "p75_sec": 0.11,
+      "max_sec": 0.37
+    },
+    "jvs091": {
+      "count": 4692,
+      "total_sec": 415.49,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.08,
+      "p75_sec": 0.11,
+      "max_sec": 0.39
+    },
+    "jvs092": {
+      "count": 4831,
+      "total_sec": 349.45,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.3
+    },
+    "jvs093": {
+      "count": 4816,
+      "total_sec": 376.24,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.27
+    },
+    "jvs094": {
+      "count": 4739,
+      "total_sec": 352.14,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.32
+    },
+    "jvs095": {
+      "count": 4784,
+      "total_sec": 367.01,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.35
+    },
+    "jvs096": {
+      "count": 4808,
+      "total_sec": 331.64,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.43
+    },
+    "jvs097": {
+      "count": 4744,
+      "total_sec": 343.82,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 0.31
+    },
+    "jvs098": {
+      "count": 4733,
+      "total_sec": 345.96,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.6
+    },
+    "jvs099": {
+      "count": 4713,
+      "total_sec": 275.89,
+      "min_sec": 0.03,
+      "p25_sec": 0.03,
+      "median_sec": 0.05,
+      "p75_sec": 0.07,
+      "max_sec": 0.28
+    },
+    "jvs100": {
+      "count": 4663,
+      "total_sec": 393.06,
+      "min_sec": 0.03,
+      "p25_sec": 0.05,
+      "median_sec": 0.07,
+      "p75_sec": 0.1,
+      "max_sec": 0.34
+    }
+  },
+  "by_session": {
+    "unknown": {
+      "count": 473764,
+      "total_sec": 34802.93,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 1.51
+    }
+  },
+  "by_evaluation_role": {
+    "cross_text_verification": {
+      "count": 23629,
+      "total_sec": 1649.17,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.06,
+      "p75_sec": 0.09,
+      "max_sec": 1.02
+    },
+    "enrollment": {
+      "count": 55871,
+      "total_sec": 4148.09,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 1.35
+    },
+    "training": {
+      "count": 331744,
+      "total_sec": 24357.9,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 1.51
+    },
+    "verification": {
+      "count": 62520,
+      "total_sec": 4647.77,
+      "min_sec": 0.03,
+      "p25_sec": 0.04,
+      "median_sec": 0.07,
+      "p75_sec": 0.09,
+      "max_sec": 0.76
+    }
+  },
+  "by_split_vowel_count": {
+    "test/a": 16757,
+    "test/e": 9734,
+    "test/i": 13059,
+    "test/o": 17736,
+    "test/u": 13773,
+    "train/a": 78256,
+    "train/e": 45366,
+    "train/i": 61151,
+    "train/o": 82677,
+    "train/u": 64294,
+    "validation/a": 16770,
+    "validation/e": 9691,
+    "validation/i": 13044,
+    "validation/o": 17674,
+    "validation/u": 13782
+  },
+  "quality_flag_counts": {
+    "near_silent": 11522
+  },
+  "failure_reason_counts": {
+    "Julius search failed: no alignment candidate": 5
+  },
+  "failed_utterances": [
+    {
+      "schema_version": 1,
+      "design_version": "1.0.0",
+      "utterance_id": "jvs009_nonpara30_basic5000_2571",
+      "speaker_id": "jvs009",
+      "source_file": "poc/phoneme-speaker-dataset/data/source/jvs_ver1/jvs009/nonpara30/wav24kHz16bit/BASIC5000_2571.wav",
+      "split": "train",
+      "evaluation_role": "training",
+      "stage": "julius_alignment",
+      "error_type": "RuntimeError",
+      "reason": "Julius search failed: no alignment candidate",
+      "log_file": "poc/phoneme-speaker-dataset/data/generated/alignments/failures/jvs009/jvs009_nonpara30_basic5000_2571.log"
+    },
+    {
+      "schema_version": 1,
+      "design_version": "1.0.0",
+      "utterance_id": "jvs009_nonpara30_travel1000_0787",
+      "speaker_id": "jvs009",
+      "source_file": "poc/phoneme-speaker-dataset/data/source/jvs_ver1/jvs009/nonpara30/wav24kHz16bit/TRAVEL1000_0787.wav",
+      "split": "train",
+      "evaluation_role": "training",
+      "stage": "julius_alignment",
+      "error_type": "RuntimeError",
+      "reason": "Julius search failed: no alignment candidate",
+      "log_file": "poc/phoneme-speaker-dataset/data/generated/alignments/failures/jvs009/jvs009_nonpara30_travel1000_0787.log"
+    },
+    {
+      "schema_version": 1,
+      "design_version": "1.0.0",
+      "utterance_id": "jvs009_parallel100_voiceactress100_095",
+      "speaker_id": "jvs009",
+      "source_file": "poc/phoneme-speaker-dataset/data/source/jvs_ver1/jvs009/parallel100/wav24kHz16bit/VOICEACTRESS100_095.wav",
+      "split": "train",
+      "evaluation_role": "training",
+      "stage": "julius_alignment",
+      "error_type": "RuntimeError",
+      "reason": "Julius search failed: no alignment candidate",
+      "log_file": "poc/phoneme-speaker-dataset/data/generated/alignments/failures/jvs009/jvs009_parallel100_voiceactress100_095.log"
+    },
+    {
+      "schema_version": 1,
+      "design_version": "1.0.0",
+      "utterance_id": "jvs047_parallel100_voiceactress100_085",
+      "speaker_id": "jvs047",
+      "source_file": "poc/phoneme-speaker-dataset/data/source/jvs_ver1/jvs047/parallel100/wav24kHz16bit/VOICEACTRESS100_085.wav",
+      "split": "train",
+      "evaluation_role": "training",
+      "stage": "julius_alignment",
+      "error_type": "RuntimeError",
+      "reason": "Julius search failed: no alignment candidate",
+      "log_file": "poc/phoneme-speaker-dataset/data/generated/alignments/failures/jvs047/jvs047_parallel100_voiceactress100_085.log"
+    },
+    {
+      "schema_version": 1,
+      "design_version": "1.0.0",
+      "utterance_id": "jvs058_parallel100_voiceactress100_022",
+      "speaker_id": "jvs058",
+      "source_file": "poc/phoneme-speaker-dataset/data/source/jvs_ver1/jvs058/parallel100/wav24kHz16bit/VOICEACTRESS100_022.wav",
+      "split": "validation",
+      "evaluation_role": "enrollment",
+      "stage": "julius_alignment",
+      "error_type": "RuntimeError",
+      "reason": "Julius search failed: no alignment candidate",
+      "log_file": "poc/phoneme-speaker-dataset/data/generated/alignments/failures/jvs058/jvs058_parallel100_voiceactress100_022.log"
+    }
+  ],
+  "failures": "poc/phoneme-speaker-dataset/data/generated/failures.jsonl",
+  "failures_sha256": "01e3826a1291d4e17947a2de01ec2def3b16741ab9dc9c5b5c21b95ae29d6b04"
+}
