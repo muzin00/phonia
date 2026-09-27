@@ -38,8 +38,8 @@ validationとtestの用途を設計済みである。判断が難しい項目は
 優劣を保証する設計ではない。既存全発話方式との比較はPhase 7、実環境は外部評価段階で扱う。
 
 Dataset / DataLoader、特徴統計、固定enrollment / trial生成を`phase3_data/`に実装した。
-資源上限・実行環境は学習結果を見る前に登録し、学習実装のテストを通してから比較を開始する。
-学習結果はまだない。
+6種のencoder、AAM-Softmaxと母音内SupCon、optimizer境界checkpoint、固定validation照合を
+`phase3_train/`に実装した。候補比較・test最終評価はこの実装とは別段階で行う。
 
 ## 4. ドキュメント
 
@@ -94,3 +94,36 @@ uv run --project poc/phoneme-speaker-encoder \
 それらのSHA-256を含む`data.json`を生成する。test用は設定を凍結した最終評価段階で
 `--split test`として生成する。統計の読み込みには`load_feature_statistics`を使い、
 manifest・cohort・前処理のchecksumと統計自身の内容checksumを検証する。
+
+## 7. 学習とvalidation評価
+
+`scripts/run_phase3.py`は`statistics_mlp`、`tdnn`、`framewise_cnn`、
+`waveform_cnn_k80`、`waveform_cnn_k240`、`waveform_cnn_k240_context27`を扱う。
+通常の学習は5母音×20件を1 logical updateとして勾配を蓄積し、指定間隔で固定validationを
+全件評価する。`--supcon off`、`--rms off`も選択できる。log-Melでは対応するcohort/RMSの
+特徴統計が必須で、生波形では`--statistics`は指定しない。
+
+```sh
+uv run --project poc/phoneme-speaker-encoder \
+  python poc/phoneme-speaker-encoder/scripts/run_phase3.py train \
+  --encoder tdnn --cohort 10 --rms on \
+  --statistics artifacts/phoneme-speaker-encoder/cohort-10-rms-on/feature-statistics.json \
+  --maximum-updates 2000 --warmup-updates 100 --validation-interval 250 \
+  --output artifacts/phoneme-speaker-encoder/sanity-tdnn-seed20260926
+```
+
+`--resume`は同じoutputの`checkpoints/last.pt`から再開し、入力・設定・コードのchecksumを
+検証する。固定32区間の過学習確認には`train`の代わりに`overfit`を使う。`train`の出力には
+`run.json`、`training/history.jsonl`、`training/summary.json`、`checkpoints/{last,best}.pt`、
+各評価updateの`validation/update-*/{scores,metrics,selections}`が含まれる。
+検証を個別に再実行する場合は次の通り。
+
+```sh
+uv run --project poc/phoneme-speaker-encoder \
+  python poc/phoneme-speaker-encoder/scripts/run_phase3.py evaluate \
+  --run-dir artifacts/phoneme-speaker-encoder/sanity-tdnn-seed20260926
+```
+
+小規模の動作確認では`train --skip-validation --target-update 1 --evaluate
+--max-eval-queries-per-vowel 1`を指定できる。この場合の`partial: true`の指標や閾値は
+性能比較・閾値採用に使用しない。test splitの評価は採用設定の凍結前には行わない。
