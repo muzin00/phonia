@@ -59,6 +59,9 @@ class Segment:
     start_frame: int
     end_frame: int
     source_sha256: str | None = None
+    is_devoiced: bool | None = None
+    is_long: bool | None = None
+    quality_flags: tuple[str, ...] = ()
 
     @property
     def length(self) -> int:
@@ -83,6 +86,9 @@ def iter_segments(manifest: Path) -> Iterator[Segment]:
                     start_frame=row["start_frame"],
                     end_frame=row["end_frame"],
                     source_sha256=row.get("source_sha256"),
+                    is_devoiced=row.get("is_devoiced"),
+                    is_long=row.get("is_long"),
+                    quality_flags=tuple(row.get("quality_flags") or ()),
                 )
             except (KeyError, TypeError) as exc:
                 raise ValueError(f"invalid manifest line {line_number}: {exc}") from exc
@@ -103,6 +109,9 @@ def iter_segments(manifest: Path) -> Iterator[Segment]:
                 or segment.start_frame < 0
                 or segment.length < 720
                 or any(c not in COHORTS for c in segment.cohorts)
+                or segment.is_devoiced not in (True, False, None)
+                or segment.is_long not in (True, False, None)
+                or any(not isinstance(flag, str) for flag in segment.quality_flags)
                 or (segment.split == "train" and 70 not in segment.cohorts)
                 or (segment.split != "train" and segment.cohorts)
             ):

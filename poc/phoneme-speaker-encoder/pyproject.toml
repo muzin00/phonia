@@ -1,7 +1,7 @@
 [project]
 name = "phoneme-speaker-encoder"
 version = "0.1.0"
-description = "Deterministic Phase 3 speaker encoder data inputs"
+description = "Deterministic Phase 3 speaker encoder training and validation"
 readme = "README.md"
 requires-python = ">=3.12,<3.13"
 dependencies = [
