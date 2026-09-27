@@ -3,9 +3,8 @@
 import itertools
 import json
 import math
-from pathlib import Path
 import unittest
-
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
 CONFIG = Path(__file__).resolve().parents[1] / "config"
@@ -50,24 +49,32 @@ class DesignConfigTests(unittest.TestCase):
         configurations = []
         for family in self.search["families"]:
             axes = family["axes"]
-            tuples = list(itertools.product(
-                axes["encoder"], axes["rms_normalization"], axes["loss"]
-            ))
+            tuples = list(
+                itertools.product(
+                    axes["encoder"], axes["rms_normalization"], axes["loss"]
+                )
+            )
             self.assertEqual(len(tuples), family["combination_count"])
             configurations.extend((family["input"], *item) for item in tuples)
         main_count = len(configurations)
         self.assertEqual(main_count, self.search["main_combination_count"])
         for item in self.search["limited_comparisons"]:
             control = (
-                item["input"], item["control_encoder"],
-                item["rms_normalization"], item["loss"],
+                item["input"],
+                item["control_encoder"],
+                item["rms_normalization"],
+                item["loss"],
             )
             self.assertIn(control, configurations)
             self.assertTrue(item["selection_eligible"])
-            configurations.append((
-                item["input"], item["encoder"],
-                item["rms_normalization"], item["loss"],
-            ))
+            configurations.append(
+                (
+                    item["input"],
+                    item["encoder"],
+                    item["rms_normalization"],
+                    item["loss"],
+                )
+            )
         self.assertEqual(len(set(configurations)), len(configurations))
         self.assertEqual(len(configurations), self.search["total_combination_count"])
         available = {
@@ -83,7 +90,8 @@ class DesignConfigTests(unittest.TestCase):
             "overfit_checks_by_encoder_implementation": len(encoders),
             "sanity_runs_10_speakers": len(configurations),
             "main_full_runs_70_speakers": main_count * seeds,
-            "limited_full_runs_70_speakers": len(self.search["limited_comparisons"]) * seeds,
+            "limited_full_runs_70_speakers": len(self.search["limited_comparisons"])
+            * seeds,
             "learning_curve_additional_runs": len(additional) * seeds,
         }
         expected["total_planned_runs"] = sum(expected.values())
@@ -97,7 +105,9 @@ class DesignConfigTests(unittest.TestCase):
             else:
                 blocks = candidate["blocks"]
                 params = sum(convolution_parameters(b) for b in blocks)
-                params += projection_parameters(2 * blocks[-1]["output_channels"], 256, 128)
+                params += projection_parameters(
+                    2 * blocks[-1]["output_channels"], 256, 128
+                )
                 receptive_field = 1 + sum(
                     (b["kernel_size"] - 1) * b["dilation"] for b in blocks
                 )
@@ -105,7 +115,10 @@ class DesignConfigTests(unittest.TestCase):
                 self.assertEqual(receptive_field, expected_field)
             self.assertEqual(params, candidate["expected_parameter_count"])
         models = {m["id"]: m for m in self.mel["candidates"]}
-        ratio = models["framewise_cnn"]["expected_parameter_count"] / models["tdnn"]["expected_parameter_count"]
+        ratio = (
+            models["framewise_cnn"]["expected_parameter_count"]
+            / models["tdnn"]["expected_parameter_count"]
+        )
         self.assertLess(abs(ratio - 1), 0.002)
 
     def test_waveform_parameters_lengths_and_context(self):
@@ -118,28 +131,47 @@ class DesignConfigTests(unittest.TestCase):
             self.assertEqual(params, candidate["expected_parameter_count"])
             receptive_field, jump = 1, 1
             for block in blocks:
-                receptive_field += (block["kernel_size"] - 1) * block.get("dilation", 1) * jump
+                receptive_field += (
+                    (block["kernel_size"] - 1) * block.get("dilation", 1) * jump
+                )
                 jump *= block["stride"]
             self.assertEqual(receptive_field, candidate["receptive_field_samples"])
-            for size, key in ((720, "minimum_input_output_frames"), (6000, "maximum_input_output_frames")):
+            for size, key in (
+                (720, "minimum_input_output_frames"),
+                (6000, "maximum_input_output_frames"),
+            ):
                 for block in blocks:
                     size = (
-                        size + 2 * block["padding"]
-                        - block.get("dilation", 1) * (block["kernel_size"] - 1) - 1
+                        size
+                        + 2 * block["padding"]
+                        - block.get("dilation", 1) * (block["kernel_size"] - 1)
+                        - 1
                     ) // block["stride"] + 1
                     self.assertGreater(size, 1)
                 self.assertEqual(size, candidate[key])
 
     def test_logical_batch_and_overfit_exception(self):
         batch = self.protocol["logical_batch"]
-        self.assertEqual(batch["microbatch_size"], batch["speakers"] * batch["segments_per_speaker_vowel"])
+        self.assertEqual(
+            batch["microbatch_size"],
+            batch["speakers"] * batch["segments_per_speaker_vowel"],
+        )
         self.assertEqual(batch["size"], batch["microbatch_size"] * len(batch["vowels"]))
-        self.assertTrue(math.isclose(batch["microbatch_loss_weight"] * len(batch["vowels"]), 1))
+        self.assertTrue(
+            math.isclose(batch["microbatch_loss_weight"] * len(batch["vowels"]), 1)
+        )
         self.assertEqual(batch["optimizer_steps_per_logical_batch"], 1)
         self.assertEqual(batch["size"], self.baseline["sampler"]["batch_size"])
         smoke = self.protocol["overfit"]
-        self.assertEqual(smoke["batch_size"], smoke["speakers"] * len(smoke["vowels"]) * smoke["segments_per_speaker_vowel"])
-        self.assertEqual(smoke["batch_size"], smoke["microbatch_size"] * len(smoke["vowels"]))
+        self.assertEqual(
+            smoke["batch_size"],
+            smoke["speakers"]
+            * len(smoke["vowels"])
+            * smoke["segments_per_speaker_vowel"],
+        )
+        self.assertEqual(
+            smoke["batch_size"], smoke["microbatch_size"] * len(smoke["vowels"])
+        )
         self.assertEqual(smoke["microbatch_loss_weight"] * len(smoke["vowels"]), 1)
         self.assertEqual(smoke["batch_size"], 32)
 
@@ -159,18 +191,36 @@ class DesignConfigTests(unittest.TestCase):
 
     def test_shared_reference_values(self):
         tdnn = next(m for m in self.mel["candidates"] if m["id"] == "tdnn")
-        for key in ("blocks", "normalization", "normalization_epsilon", "dropout", "projection_hidden_dimension"):
+        for key in (
+            "blocks",
+            "normalization",
+            "normalization_epsilon",
+            "dropout",
+            "projection_hidden_dimension",
+        ):
             self.assertEqual(self.baseline["model"][key], tdnn[key])
         supcon = self.baseline["loss"]["supervised_contrastive_within_vowel"]
         for key in ("weight", "temperature"):
             self.assertEqual(supcon[key], self.protocol["supcon"][key])
         numeric = self.protocol["numeric"]
         for model in (self.mel, self.wave["common_model"], self.baseline["model"]):
-            self.assertEqual(model["output_normalization_epsilon"], numeric["l2_normalization_epsilon"])
-            self.assertEqual(model["pooling_population_variance_floor"], numeric["pooling_population_variance_floor"])
+            self.assertEqual(
+                model["output_normalization_epsilon"],
+                numeric["l2_normalization_epsilon"],
+            )
+            self.assertEqual(
+                model["pooling_population_variance_floor"],
+                numeric["pooling_population_variance_floor"],
+            )
         normalization = self.baseline["input"]["feature_normalization"]
-        self.assertEqual(normalization["standard_deviation_floor"], numeric["feature_standard_deviation_floor"])
-        self.assertEqual(self.baseline["evaluation"]["threshold_scope"], self.protocol["metrics"]["primary_threshold_scope"])
+        self.assertEqual(
+            normalization["standard_deviation_floor"],
+            numeric["feature_standard_deviation_floor"],
+        )
+        self.assertEqual(
+            self.baseline["evaluation"]["threshold_scope"],
+            self.protocol["metrics"]["primary_threshold_scope"],
+        )
 
 
 if __name__ == "__main__":

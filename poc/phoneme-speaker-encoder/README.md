@@ -37,8 +37,9 @@ validationとtestの用途を設計済みである。判断が難しい項目は
 3 seedすべてを凍結してtestを一度評価する。固定した128次元等の最適性や、入力方式全般の
 優劣を保証する設計ではない。既存全発話方式との比較はPhase 7、実環境は外部評価段階で扱う。
 
-次はDataset / DataLoaderと特徴統計を実装する。資源上限・実行環境は学習結果を見る前に
-登録し、設計の検証と学習実装のテストを通してから比較を開始する。学習結果はまだない。
+Dataset / DataLoader、特徴統計、固定enrollment / trial生成を`phase3_data/`に実装した。
+資源上限・実行環境は学習結果を見る前に登録し、学習実装のテストを通してから比較を開始する。
+学習結果はまだない。
 
 ## 4. ドキュメント
 
@@ -56,9 +57,40 @@ validationとtestの用途を設計済みである。判断が難しい項目は
 
 ## 5. 設計設定の整合性検証
 
-リポジトリrootで次を実行する。標準ライブラリだけでJSON参照、候補・run数、parameter数、
-受容野・出力長、batch構成、seedと共有設定の整合性を検査する。学習実装や実データでの検証ではない。
+Phase 3データ入力のテストと実行にはPython 3.12、NumPy、PyTorchが必要である。
+依存関係は`pyproject.toml`に記録した。`uv sync --project poc/phoneme-speaker-encoder`
+で環境を作成できる。
 
 ```sh
-python3 -m unittest discover -s poc/phoneme-speaker-encoder/tests -v
+uv run --project poc/phoneme-speaker-encoder \
+  python -m unittest discover -s poc/phoneme-speaker-encoder/tests -v
 ```
+
+## 6. データ入力と成果物
+
+`phase3_data.input.SegmentDataset`はmanifestの`source_file`と`start_frame:end_frame`から
+元WAVを読み、`InputPipeline`でcrop、DC除去、任意のRMS正規化、log-Melを適用する。
+生波形には`kind="waveform"`を使う。`collate_segments`は右paddingと有効長maskを返す。
+学習時は`BalancedSampler`、`phase3_data.sampling.VowelMicrobatchSampler`を
+DataLoaderの`batch_sampler`へ渡し、Datasetを`mode="random"`とrun seedで作る。
+再開時は、prefetchで先読みしたsampler位置を使わず、実際に完了したupdate数を
+`state_at(completed_updates)`へ渡して保存する。読み込み時は`load_state_dict`で検証する。
+
+以下のCLIは成果物をGit管理外の`artifacts/`へ出力する。統計はcohortとRMS条件ごとに
+8回実行する。標準出力に件数とファイルSHA-256を表示し、`data.json`にmanifest、cohort、
+前処理、特徴統計、計算コードのchecksumを保存する。実データ全件の統計生成には時間がかかる。
+
+```sh
+uv run --project poc/phoneme-speaker-encoder \
+  python poc/phoneme-speaker-encoder/scripts/build_data_artifacts.py statistics \
+  --cohort 10 --rms on \
+  --output artifacts/phoneme-speaker-encoder/cohort-10-rms-on/feature-statistics.json
+uv run --project poc/phoneme-speaker-encoder \
+  python poc/phoneme-speaker-encoder/scripts/build_data_artifacts.py selections \
+  --split validation --output artifacts/phoneme-speaker-encoder/fixed-validation
+```
+
+`selections`は`selections/enrollment-segments.jsonl`と`selections/trials.jsonl`、
+それらのSHA-256を含む`data.json`を生成する。test用は設定を凍結した最終評価段階で
+`--split test`として生成する。統計の読み込みには`load_feature_statistics`を使い、
+manifest・cohort・前処理のchecksumと統計自身の内容checksumを検証する。
