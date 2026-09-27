@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "design_version": "2.0.0",
+  "input_channels": 64,
+  "embedding_dimension": 128,
+  "output_normalization": "l2",
+  "output_normalization_epsilon": 1e-12,
+  "pooling_population_variance_floor": 1e-5,
+  "candidates": [
+    {
+      "id": "statistics_mlp",
+      "pooling": "masked_mean_std",
+      "pooled_dimension": 128,
+      "projection": {
+        "hidden_dimension": 256,
+        "activation": "gelu",
+        "dropout": 0.1
+      },
+      "expected_parameter_count": 65920
+    },
+    {
+      "id": "tdnn",
+      "convolution_bias": false,
+      "blocks": [
+        {"input_channels": 64, "output_channels": 128, "kernel_size": 3, "dilation": 1, "padding": 1},
+        {"input_channels": 128, "output_channels": 192, "kernel_size": 3, "dilation": 2, "padding": 2},
+        {"input_channels": 192, "output_channels": 256, "kernel_size": 3, "dilation": 3, "padding": 3}
+      ],
+      "normalization": "channel_layer_norm",
+      "normalization_epsilon": 0.00001,
+      "normalization_affine": true,
+      "activation": "gelu",
+      "dropout": 0.1,
+      "pooling": "masked_mean_std",
+      "projection_hidden_dimension": 256,
+      "expected_parameter_count": 411136
+    },
+    {
+      "id": "framewise_cnn",
+      "comparison_scope": "limited",
+      "convolution_bias": false,
+      "blocks": [
+        {"input_channels": 64, "output_channels": 256, "kernel_size": 1, "dilation": 1, "padding": 0},
+        {"input_channels": 256, "output_channels": 448, "kernel_size": 1, "dilation": 1, "padding": 0},
+        {"input_channels": 448, "output_channels": 256, "kernel_size": 1, "dilation": 1, "padding": 0}
+      ],
+      "normalization": "channel_layer_norm",
+      "normalization_epsilon": 0.00001,
+      "normalization_affine": true,
+      "activation": "gelu",
+      "dropout": 0.1,
+      "pooling": "masked_mean_std",
+      "projection_hidden_dimension": 256,
+      "expected_parameter_count": 411904
+    }
+  ]
+}

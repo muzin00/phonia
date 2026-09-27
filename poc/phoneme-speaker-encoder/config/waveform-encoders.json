@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "design_version": "2.0.0",
+  "input": {
+    "sample_rate_hz": 24000,
+    "minimum_samples": 720,
+    "maximum_samples": 6000,
+    "remove_dc": true,
+    "peak_clipping_after_normalization": false,
+    "batch_tensor": "float32[B,1,N]",
+    "mask_tensor": "bool[B,N]",
+    "padding": "right_zero"
+  },
+  "common_model": {
+    "type": "waveform_cnn",
+    "convolution_bias": false,
+    "blocks_after_first": [
+      {"input_channels": 64, "output_channels": 128, "kernel_size": 8, "stride": 4, "padding": 0},
+      {"input_channels": 128, "output_channels": 192, "kernel_size": 5, "stride": 2, "padding": 0},
+      {"input_channels": 192, "output_channels": 256, "kernel_size": 3, "stride": 2, "padding": 0}
+    ],
+    "normalization": "channel_layer_norm",
+    "normalization_epsilon": 0.00001,
+    "normalization_affine": true,
+    "activation": "gelu",
+    "dropout": 0.1,
+    "pooling": "masked_mean_std",
+    "projection_hidden_dimension": 256,
+    "embedding_dimension": 128,
+    "output_normalization": "l2",
+    "output_normalization_epsilon": 1e-12,
+    "pooling_population_variance_floor": 1e-5
+  },
+  "candidates": [
+    {
+      "id": "waveform_cnn_k80",
+      "first_block": {"input_channels": 1, "output_channels": 64, "kernel_size": 80, "stride": 4, "padding": 0},
+      "receptive_field_samples": 236,
+      "minimum_input_output_frames": 8,
+      "maximum_input_output_frames": 91,
+      "expected_parameter_count": 506496
+    },
+    {
+      "id": "waveform_cnn_k240",
+      "first_block": {"input_channels": 1, "output_channels": 64, "kernel_size": 240, "stride": 4, "padding": 0},
+      "receptive_field_samples": 396,
+      "minimum_input_output_frames": 6,
+      "maximum_input_output_frames": 88,
+      "expected_parameter_count": 516736
+    },
+    {
+      "id": "waveform_cnn_k240_context27",
+      "comparison_scope": "limited",
+      "first_block": {"input_channels": 1, "output_channels": 64, "kernel_size": 240, "stride": 4, "padding": 0},
+      "context_blocks": [
+        {"input_channels": 256, "output_channels": 256, "kernel_size": 27, "stride": 1, "dilation": 1, "padding": 13, "groups": 256}
+      ],
+      "receptive_field_samples": 2060,
+      "minimum_input_output_frames": 6,
+      "maximum_input_output_frames": 88,
+      "expected_parameter_count": 524160
+    }
+  ]
+}

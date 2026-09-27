@@ -38,13 +38,16 @@ JVSの通常発話を、音素別話者表現の学習、検証、テストへ�
 [`config/dataset-split.json`](config/dataset-split.json)とし、train、validation、test間の
 話者重複を禁止する。
 
-testの結果を見てモデルや閾値を選択しない。変更が必要な場合はvalidationで判断し、
-testは再評価にだけ使用する。
+testの結果を見てモデルや閾値を選択しない。変更が必要な場合はvalidationで判断する。
+test結果を受けて設計を変更した後の最終評価には、別の未使用評価データを用意する。
 
 ## 4. 学習曲線
 
 train話者の固定順序から、先頭10、25、50、70話者を使用する。各集合は一つ前の集合を
 完全に含む入れ子構造とする。話者数以外の学習条件を固定し、未知話者性能の変化を比較する。
+Phase 3では70話者で選択した構成だけを各cohort・3 seedで本学習し、70話者runを再利用する。
+10話者の短い成立性確認runは学習曲線に流用しない。特徴統計は各cohort内だけで再計算する。
+詳細と予算は[候補比較計画](../phoneme-speaker-encoder/comparison-plan.md)を参照する。
 
 train話者については`parallel100`と`nonpara30`の利用可能な全発話を学習候補とする。
 各manifestレコードの`learning_curve_cohorts`に、その話者が含まれる集合を記録する。

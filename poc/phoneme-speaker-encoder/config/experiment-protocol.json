@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "design_version": "2.0.0",
+  "manifest_fields": {
+    "segment_id": "vowel_interval_id",
+    "vowel": "normalized_phoneme",
+    "speaker_id": "speaker_id",
+    "is_devoiced": "is_devoiced",
+    "is_long": "is_long",
+    "quality_flags": "quality_flags"
+  },
+  "numeric": {
+    "metric_dtype": "float64",
+    "l2_normalization_epsilon": 1e-12,
+    "pooling_population_variance_floor": 1e-5,
+    "feature_standard_deviation_floor": 1e-5
+  },
+  "logical_batch": {
+    "speakers": 10,
+    "vowels": ["a", "i", "u", "e", "o"],
+    "segments_per_speaker_vowel": 2,
+    "size": 100,
+    "microbatch_mode": "one_complete_vowel_group",
+    "microbatch_size": 20,
+    "microbatch_loss_weight": 0.2,
+    "bucketing": false,
+    "within_vowel_order": ["speaker_id", "segment_id"],
+    "optimizer_steps_per_logical_batch": 1,
+    "precision": "float32"
+  },
+  "supcon": {
+    "weight": 0.5,
+    "temperature": 0.07,
+    "denominator": "all_same_vowel_except_anchor",
+    "positive_reduction": "mean_log_probability",
+    "anchor_reduction": "mean",
+    "extra_temperature_scaling": false
+  },
+  "enrollment": {
+    "seed": 20260930,
+    "ranking": "sha256_seed_split_speaker_vowel_source_then_segment",
+    "source_diversity": "round_robin_sources",
+    "counts": [1, 5, 10],
+    "nested_prefixes": true
+  },
+  "metrics": {
+    "acceptance_rule": "score_gte_threshold",
+    "eer": "linear_interpolation_at_far_minus_frr_zero",
+    "primary_threshold_scope": "per_vowel_per_seed_per_enrollment_count",
+    "calibration_role": "verification",
+    "target_far": [0.01, 0.001],
+    "threshold_rule": "minimum_candidate_with_empirical_far_lte_target",
+    "threshold_candidates": "negative_infinity_and_float64_nextafter_each_unique_score_toward_positive_infinity",
+    "pooled_threshold": "report_only",
+    "bootstrap": {
+      "seed": 20260929,
+      "replicates": 10000,
+      "rng": "PCG64",
+      "speaker_order": "speaker_id_lexicographic",
+      "interval": "percentile_95",
+      "unit": "speaker",
+      "genuine_weight": "speaker_multiplicity",
+      "impostor_weight": "query_multiplicity_times_claimed_multiplicity",
+      "pair_candidates_and_seeds": true,
+      "resample_seeds": false
+    }
+  },
+  "overfit": {
+    "seed": 20260926,
+    "speakers": 4,
+    "vowels": ["a", "i", "u", "e"],
+    "segments_per_speaker_vowel": 2,
+    "batch_size": 32,
+    "microbatch_size": 8,
+    "microbatch_loss_weight": 0.25,
+    "maximum_updates": 500,
+    "minimum_train_accuracy": 0.95,
+    "loss": "aam_softmax_plus_supcon_within_vowel",
+    "dropout": 0.0,
+    "crop": "center",
+    "rms_normalization": true,
+    "optimizer": "adamw",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0,
+    "schedule": "constant",
+    "early_stopping": false
+  },
+  "resume": {
+    "checkpoint_boundary": "after_optimizer_step_and_zero_grad",
+    "required_states": ["python_rng", "numpy_rng", "framework_cpu_rng", "framework_device_rng", "sampler_state", "early_stopping_state", "best_checkpoint_state", "scaler_state_if_used"],
+    "crop_rng": "sha256_run_seed_logical_update_segment_id",
+    "prefetch": "discard_and_rebuild_from_next_logical_update"
+  },
+  "benchmark": {
+    "seed": 20260930,
+    "source": "fixed_validation_query_ids_first_1000_sha256_ranked",
+    "batch_size": 1,
+    "warmup_passes": 1,
+    "timed_passes": 5,
+    "includes": ["input_preprocessing", "encoder"],
+    "excludes": ["disk_io", "profile_construction"],
+    "synchronize_device": true
+  }
+}
