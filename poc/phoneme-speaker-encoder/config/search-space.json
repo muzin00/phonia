@@ -1,8 +1,11 @@
 {
-  "schema_version": 1,
-  "status": "planned",
+  "schema_version": 2,
+  "design_version": "2.0.0",
+  "status": "specified",
   "selection_metric": "mean_validation_macro_eer_across_seeds",
+  "config_id_template": "{input}__{encoder}__rms-{on|off}__{loss}",
   "seeds": [20260926, 20260927, 20260928],
+  "sanity_seed": 20260926,
   "fixed": {
     "log_mel_window_ms": 25,
     "log_mel_hop_ms": 5,
@@ -22,24 +25,82 @@
         "encoder": ["statistics_mlp", "tdnn"],
         "loss": ["aam_softmax", "aam_softmax_plus_supcon_within_vowel"]
       },
+      "encoder_config": "poc/phoneme-speaker-encoder/config/log-mel-encoders.json",
+      "encoder_config_status": "specified",
       "combination_count": 8
     },
     {
       "input": "waveform",
       "axes": {
         "rms_normalization": [true, false],
-        "encoder": ["waveform_1d"],
+        "encoder": ["waveform_cnn_k80", "waveform_cnn_k240"],
         "loss": ["aam_softmax", "aam_softmax_plus_supcon_within_vowel"]
       },
-      "encoder_config_status": "pending",
-      "combination_count": 4
+      "encoder_config": "poc/phoneme-speaker-encoder/config/waveform-encoders.json",
+      "encoder_config_status": "specified",
+      "combination_count": 8
     }
   ],
-  "total_combination_count": 12,
+  "main_combination_count": 16,
+  "limited_comparisons": [
+    {
+      "id": "framewise_capacity_control",
+      "input": "log_mel",
+      "encoder": "framewise_cnn",
+      "rms_normalization": true,
+      "loss": "aam_softmax",
+      "control_encoder": "tdnn",
+      "selection_eligible": true
+    },
+    {
+      "id": "waveform_long_context",
+      "input": "waveform",
+      "encoder": "waveform_cnn_k240_context27",
+      "rms_normalization": true,
+      "loss": "aam_softmax",
+      "control_encoder": "waveform_cnn_k240",
+      "selection_eligible": true
+    }
+  ],
+  "total_combination_count": 18,
+  "selection": {
+    "role": "verification",
+    "enrollment_count": 10,
+    "required_seed_count": 3,
+    "practical_eer_tolerance": 0.001,
+    "tolerance_rule": "mean_eer_lte_global_min_plus_tolerance",
+    "tie_break_order": ["eer_seed_population_std", "mean_cross_text_macro_eer", "mean_short_macro_eer", "encoder_parameter_count", "median_inference_time", "maximum_peak_memory", "config_id"],
+    "bootstrap_for_reporting_only": true,
+    "checkpoint_rule": "minimum_macro_eer_then_earliest_update",
+    "test_seeds": [20260926, 20260927, 20260928],
+    "single_distribution_seed": 20260926,
+    "ensemble": false
+  },
+  "learning_curve": {
+    "configuration": "selected_70_speaker_configuration",
+    "cohorts": [10, 25, 50, 70],
+    "additional_cohorts": [10, 25, 50],
+    "reuse_70_speaker_runs": true,
+    "optimization_protocol": "full",
+    "feature_statistics_scope": "each_cohort",
+    "used_for_reselection": false
+  },
+  "diagnostics": {
+    "training_runs": 0,
+    "quality_strata": ["is_devoiced", "quality_flags", "is_long"],
+    "boundary_translation_ms": [-10, -5, 5, 10],
+    "input_gain_db": [-6, 6],
+    "sensitivity_configurations": "selected_configuration_all_seeds",
+    "split": "validation",
+    "used_for_reselection": false
+  },
+  "protocol_config": "poc/phoneme-speaker-encoder/config/experiment-protocol.json",
   "runs": {
-    "overfit_checks_by_encoder_implementation": 3,
-    "sanity_runs_10_speakers": 12,
-    "full_runs_70_speakers": 36,
-    "total_planned_runs": 51
+    "overfit_checks_by_encoder_implementation": 6,
+    "sanity_runs_10_speakers": 18,
+    "main_full_runs_70_speakers": 48,
+    "limited_full_runs_70_speakers": 6,
+    "learning_curve_additional_runs": 9,
+    "total_planned_runs": 87
   }
 }
