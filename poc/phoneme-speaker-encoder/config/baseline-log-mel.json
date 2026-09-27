@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "experiment_name": "baseline-log-mel-tdnn",
+  "role": "reference_candidate",
+  "data": {
+    "manifest": "poc/phoneme-speaker-dataset/data/generated/phase3-vowel-segments.jsonl",
+    "manifest_sha256": "fd65f144087f684e317bb50d944866c937ebc58fe91645bef57ac35656684613",
+    "train_split": "train",
+    "train_role": "training",
+    "validation_split": "validation",
+    "test_split": "test",
+    "vowels": ["a", "i", "u", "e", "o"]
+  },
+  "input": {
+    "sample_rate_hz": 24000,
+    "channels": 1,
+    "dtype": "float32",
+    "remove_dc": true,
+    "rms_normalization": {
+      "enabled": true,
+      "target_dbfs": -26.0,
+      "minimum_amplitude": 0.00001,
+      "minimum_gain_db": -12.0,
+      "maximum_gain_db": 12.0
+    },
+    "minimum_samples": 720,
+    "maximum_samples": 6000,
+    "train_crop": "random",
+    "evaluation_crop": "center",
+    "log_mel": {
+      "window_samples": 600,
+      "hop_samples": 120,
+      "fft_size": 600,
+      "window": "hann_periodic",
+      "center": false,
+      "power": 2.0,
+      "mel_bins": 64,
+      "minimum_frequency_hz": 50.0,
+      "maximum_frequency_hz": 12000.0,
+      "mel_scale": "slaney",
+      "mel_normalization": "slaney",
+      "log_floor": 1e-10
+    },
+    "feature_normalization": {
+      "scope": "train_frames",
+      "axis": "mel_bin",
+      "method": "mean_std"
+    },
+    "batch_tensor": "float32[B,64,T]",
+    "mask_tensor": "bool[B,T]",
+    "padding": "right_zero"
+  },
+  "model": {
+    "type": "tdnn",
+    "embedding_dimension": 128,
+    "blocks": [
+      {"input_channels": 64, "output_channels": 128, "kernel_size": 3, "dilation": 1},
+      {"input_channels": 128, "output_channels": 192, "kernel_size": 3, "dilation": 2},
+      {"input_channels": 192, "output_channels": 256, "kernel_size": 3, "dilation": 3}
+    ],
+    "normalization": "channel_layer_norm",
+    "activation": "gelu",
+    "dropout": 0.1,
+    "pooling": "masked_mean_std",
+    "projection_hidden_dimension": 256,
+    "output_normalization": "l2"
+  },
+  "sampler": {
+    "speakers_per_batch": 10,
+    "include_all_vowels": true,
+    "segments_per_speaker_vowel": 2,
+    "batch_size": 100,
+    "speaker_sampling": "seeded_balanced_cycle",
+    "segment_sampling": "uniform_without_replacement_within_batch"
+  },
+  "loss": {
+    "aam_softmax": {"weight": 1.0, "scale": 30.0, "angular_margin": 0.2},
+    "supervised_contrastive_within_vowel": {"weight": 0.5, "temperature": 0.07}
+  },
+  "optimization": {
+    "optimizer": "adamw",
+    "learning_rate": 0.0003,
+    "weight_decay": 0.0001,
+    "gradient_clip_global_norm": 5.0,
+    "schedule": "linear_warmup_cosine",
+    "minimum_learning_rate": 0.00001,
+    "sanity": {"cohort_size": 10, "maximum_updates": 2000, "warmup_updates": 100, "validation_interval": 250},
+    "full": {"cohort_size": 70, "maximum_updates": 30000, "warmup_updates": 1000, "validation_interval": 1000},
+    "early_stopping": {"patience_evaluations": 8, "minimum_macro_eer_improvement": 0.001}
+  },
+  "evaluation": {
+    "enrollment_segments_per_speaker_vowel": 10,
+    "auxiliary_enrollment_counts": [1, 5, 10],
+    "score": "cosine",
+    "checkpoint_metric": "validation_macro_eer",
+    "target_far": 0.01,
+    "auxiliary_target_far": 0.001
+  },
+  "seeds": [20260926, 20260927, 20260928],
+  "artifacts_root": "artifacts/phoneme-speaker-encoder"
+}
