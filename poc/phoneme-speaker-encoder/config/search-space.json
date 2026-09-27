@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "status": "planned",
+  "selection_metric": "mean_validation_macro_eer_across_seeds",
+  "seeds": [20260926, 20260927, 20260928],
+  "fixed": {
+    "log_mel_window_ms": 25,
+    "log_mel_hop_ms": 5,
+    "log_mel_bins": 64,
+    "maximum_input_ms": 250,
+    "embedding_dimension": 128,
+    "vowel_conditioning": "none",
+    "speakers_per_batch": 10,
+    "segments_per_speaker_vowel": 2,
+    "optimizer": "adamw"
+  },
+  "families": [
+    {
+      "input": "log_mel",
+      "axes": {
+        "rms_normalization": [true, false],
+        "encoder": ["statistics_mlp", "tdnn"],
+        "loss": ["aam_softmax", "aam_softmax_plus_supcon_within_vowel"]
+      },
+      "combination_count": 8
+    },
+    {
+      "input": "waveform",
+      "axes": {
+        "rms_normalization": [true, false],
+        "encoder": ["waveform_1d"],
+        "loss": ["aam_softmax", "aam_softmax_plus_supcon_within_vowel"]
+      },
+      "encoder_config_status": "pending",
+      "combination_count": 4
+    }
+  ],
+  "total_combination_count": 12,
+  "runs": {
+    "overfit_checks_by_encoder_implementation": 3,
+    "sanity_runs_10_speakers": 12,
+    "full_runs_70_speakers": 36,
+    "total_planned_runs": 51
+  }
+}

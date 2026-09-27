@@ -26,12 +26,17 @@ Phase 3では、母音の短い波形区間から固定長の話者embeddingを�
 入力方式は事前に一つへ固定せず、可変長log-Mel、生波形などの候補を実際に学習し、
 未知話者のvalidation照合性能から選択する。
 
-入力データ、話者分割、validationとtestの用途は確定済みである。encoder構造、損失関数、
-batch sampling、入力特徴の詳細値は未決定である。
+入力データ、候補となる入力特徴、可変長処理、encoder、損失関数、batch sampling、成果物形式、
+validationとtestの用途を設計済みである。判断が難しい項目は互換性のある候補を組み合わせ、
+未知話者のvalidation照合性能から採用する。次は探索空間を設定として列挙し、Dataset /
+DataLoaderと特徴統計を実装する。
 
 ## 4. ドキュメント
 
 - [入力設計](input-design.md)
 - [学習・評価設計](training-evaluation-design.md)
+- [候補比較計画](comparison-plan.md)
+- [参照log-Mel設定](config/baseline-log-mel.json)
+- [探索空間](config/search-space.json)
 - [研究全体の設計](../../docs/research-design.md)
 - [Phase 2音素別話者データセット](../phoneme-speaker-dataset/README.md)
