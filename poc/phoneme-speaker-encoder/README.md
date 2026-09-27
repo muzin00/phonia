@@ -127,3 +127,23 @@ uv run --project poc/phoneme-speaker-encoder \
 小規模の動作確認では`train --skip-validation --target-update 1 --evaluate
 --max-eval-queries-per-vowel 1`を指定できる。この場合の`partial: true`の指標や閾値は
 性能比較・閾値採用に使用しない。test splitの評価は採用設定の凍結前には行わない。
+
+## 8. 10話者・18設定の成立性確認
+
+`config/search-space.json`の本比較16設定・限定比較2設定を
+`scripts/run_sanity_matrix.py`で展開する。`config/execution-budget.json`は実行前に
+固定したCPU・float32・0 worker・時間/メモリ/容量上限で、探索途中の性能を見て変更しない。
+
+```sh
+uv run --project poc/phoneme-speaker-encoder \
+  python poc/phoneme-speaker-encoder/scripts/run_sanity_matrix.py plan
+uv run --project poc/phoneme-speaker-encoder \
+  python poc/phoneme-speaker-encoder/scripts/run_sanity_matrix.py run
+```
+
+実行は逐次で、`artifacts/phoneme-speaker-encoder/comparisons/phase3-sanity-v2-10spk-seed20260926/`
+に固定matrix、予算、各runの設定・環境・データchecksum・学習履歴・checkpoint・固定validation
+trialの複製・score/指標・再評価照合結果・資源使用量を保存する。最初のrunは250 updateでcheckpointを作成し、
+そこから再開する。`report`コマンドは既存runの状態を再集計し、未着手・失敗も一覧に残す。
+中断後に`run`を再実行すると完了済みrunは飛ばし、実行途中のcheckpointから再開する。
+この10話者EERは成立性診断であり、構成の採否や順位決定に使わない。testは使用しない。

@@ -229,6 +229,8 @@ class Trainer:
                 dtype=torch.long,
             )
             embeddings = self.model(values, mask)
+            if not torch.isfinite(embeddings).all():
+                raise ValueError("nonfinite training embedding")
             aam = self.head(embeddings, labels)
             loss = aam + (
                 0.5 * within_vowel_supcon(embeddings, speakers, vowels=vowels)

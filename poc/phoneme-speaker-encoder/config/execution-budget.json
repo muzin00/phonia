@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "design_version": "2.0.0",
+  "comparison_id": "phase3-sanity-v2-10spk-seed20260926",
+  "environment": {
+    "machine": "Mac mini (Mac16,10)",
+    "processor": "Apple M4, 10 CPU cores (4 performance, 6 efficiency)",
+    "memory_bytes": 25769803776,
+    "os": "macOS 26.6.2",
+    "architecture": "arm64",
+    "device": "cpu",
+    "precision": "float32",
+    "data_loader_workers": 0,
+    "evaluation_batch_size": 32,
+    "peak_memory_measurement": "2-second sampled resident set size of the training or evaluation process"
+  },
+  "protocol": {
+    "cohort": 10,
+    "seed": 20260926,
+    "maximum_updates": 2000,
+    "warmup_updates": 100,
+    "validation_interval": 250,
+    "early_stopping_patience": 8,
+    "early_stopping_minimum_eer_improvement": 0.001,
+    "validation_split": "validation",
+    "test_split_allowed": false
+  },
+  "limits": {
+    "maximum_run_wall_seconds": 3600,
+    "maximum_process_rss_bytes": 8589934592,
+    "maximum_run_artifact_bytes": 12884901888,
+    "minimum_free_disk_bytes": 429496729600,
+    "poll_interval_seconds": 2
+  },
+  "pilot": {
+    "encoder": "waveform_cnn_k240_context27",
+    "updates": 25,
+    "workers_0_train_seconds": 8.996,
+    "workers_2_train_seconds": 10.393,
+    "workers_0_process_maximum_rss_bytes": 619249664,
+    "full_validation_seconds": 82.13,
+    "full_validation_process_maximum_rss_bytes": 1396555776,
+    "note": "Exploratory pilot; not a formal matrix result."
+  }
+}
