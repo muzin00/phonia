@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "design_version": "2.0.0",
+  "comparison_id": "phase3-full-v2-70spk-3seed-20260927-r2",
+  "environment": {
+    "machine": "Mac mini (Mac16,10)",
+    "processor": "Apple M4, 10 CPU cores (4 performance, 6 efficiency)",
+    "memory_bytes": 25769803776,
+    "device": "cpu",
+    "precision": "float32",
+    "data_loader_workers": 0,
+    "evaluation_batch_size": 32,
+    "maximum_parallel_runs": 4,
+    "artifact_retention": "best_full_intermediate_compact"
+  },
+  "protocol": {
+    "cohort": 70,
+    "seeds": [20260926, 20260927, 20260928],
+    "maximum_updates": 30000,
+    "warmup_updates": 1000,
+    "validation_interval": 1000,
+    "early_stopping_patience": 8,
+    "early_stopping_minimum_eer_improvement": 0.001,
+    "validation_split": "validation",
+    "test_split_allowed": false
+  },
+  "limits": {
+    "maximum_run_wall_seconds": 57600,
+    "maximum_process_rss_bytes": 6442450944,
+    "maximum_run_artifact_bytes": 6442450944,
+    "minimum_free_disk_bytes": 429496729600,
+    "poll_interval_seconds": 2
+  },
+  "pilot_basis": {
+    "report": "poc/phoneme-speaker-encoder/phase3-70spk-pilot-results.md",
+    "maximum_observed_1000_update_and_validation_seconds": 670.8,
+    "maximum_observed_four_parallel_cpu_core_equivalents": 9,
+    "note": "Pilot EER is not used to exclude or order candidates."
+  }
+}

@@ -47,6 +47,7 @@ Dataset / DataLoader、特徴統計、固定enrollment / trial生成を`phase3_d
 - [生波形encoder設計](waveform-encoder-design.md)
 - [学習・評価設計](training-evaluation-design.md)
 - [候補比較計画](comparison-plan.md)
+- [70話者・30分上限pilot結果](phase3-70spk-pilot-results.md)
 - [参照log-Mel設定](config/baseline-log-mel.json)
 - [log-Mel encoder設定](config/log-mel-encoders.json)
 - [探索空間](config/search-space.json)
@@ -147,3 +148,24 @@ trialの複製・score/指標・再評価照合結果・資源使用量を保存
 そこから再開する。`report`コマンドは既存runの状態を再集計し、未着手・失敗も一覧に残す。
 中断後に`run`を再実行すると完了済みrunは飛ばし、実行途中のcheckpointから再開する。
 この10話者EERは成立性診断であり、構成の採否や順位決定に使わない。testは使用しない。
+
+## 9. 70話者・3 seedの本比較
+
+`config/full-execution-budget.json`でCPU 4並列、1 run最大16時間、空き容量下限400 GiBを
+事前固定する。`scripts/run_full_matrix.py`は18設定×3 seedの54 runを凍結し、実測時間だけを
+実行順に用いる。10話者・短時間pilotのEERによる候補除外は行わない。
+
+```sh
+poc/phoneme-speaker-encoder/.venv/bin/python \
+  poc/phoneme-speaker-encoder/scripts/run_full_matrix.py plan
+poc/phoneme-speaker-encoder/.venv/bin/python \
+  poc/phoneme-speaker-encoder/scripts/run_full_matrix.py run
+poc/phoneme-speaker-encoder/.venv/bin/python \
+  poc/phoneme-speaker-encoder/scripts/run_full_matrix.py report
+```
+
+各runの採用checkpointに対応するscore・曲線は完全保存し、採用されなかった途中評価の
+score・曲線だけをchecksum付きの小さい指標へ整理する。これにより保存容量を抑えつつ、
+各評価時点のmacro EERと最終採用根拠を残す。選択checkpointの再評価一致も検証する。
+`run`は既存の完了runを飛ばし、中断したrunはoptimizer境界checkpointから再開する。
+test splitは使用しない。

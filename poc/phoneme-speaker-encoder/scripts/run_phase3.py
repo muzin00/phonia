@@ -4,8 +4,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import re
 import subprocess
 import sys
+import tempfile
 import time
 from dataclasses import asdict
 from pathlib import Path
@@ -38,6 +41,80 @@ ENCODERS = (
     "waveform_cnn_k240",
     "waveform_cnn_k240_context27",
 )
+VALIDATION_DIRECTORY = re.compile(r"update-(\d{6})$")
+
+
+def _without_curves(value):
+    if isinstance(value, dict):
+        return {
+            key: _without_curves(item)
+            for key, item in value.items()
+            if key != "roc_det_curve"
+        }
+    if isinstance(value, list):
+        return [_without_curves(item) for item in value]
+    return value
+
+
+def _compact_validation_outputs(run_dir: Path, keep_update: int | None) -> None:
+    """Retain full scores/curves only for the selected checkpoint."""
+    validation_root = run_dir / "validation"
+    if not validation_root.exists():
+        return
+    for directory in validation_root.iterdir():
+        match = VALIDATION_DIRECTORY.fullmatch(directory.name)
+        if not match or int(match.group(1)) == keep_update:
+            continue
+        metrics_path = directory / "metrics/validation.json"
+        score_path = directory / "scores/validation.jsonl"
+        if not metrics_path.is_file() or not score_path.is_file():
+            continue
+        metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+        if metrics.get("split") != "validation" or metrics.get("partial"):
+            raise ValueError("only complete validation can be compacted")
+        if metrics.get("score_sha256") != sha256_file(score_path):
+            raise ValueError("validation score checksum differs before compaction")
+        compact = _without_curves(metrics)
+        compact["artifact_retention"] = (
+            "score_and_curves_removed_after_checkpoint_selection"
+        )
+        descriptor, temporary = tempfile.mkstemp(
+            dir=metrics_path.parent, prefix=".validation.compact.", suffix=".json"
+        )
+        os.close(descriptor)
+        try:
+            write_json(Path(temporary), compact)
+            os.replace(temporary, metrics_path)
+        finally:
+            if os.path.exists(temporary):
+                os.unlink(temporary)
+        score_path.unlink()
+
+
+def _trim_history_to_checkpoint(path: Path, completed_updates: int) -> None:
+    """Discard updates written after the last durable optimizer checkpoint."""
+    if not path.exists():
+        if completed_updates:
+            raise FileNotFoundError(path)
+        return
+    lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
+    if len(lines) < completed_updates:
+        raise ValueError("training history is shorter than checkpoint")
+    for expected, line in enumerate(lines[:completed_updates], 1):
+        if json.loads(line)["update"] != expected:
+            raise ValueError("training history differs from checkpoint sequence")
+    if len(lines) == completed_updates:
+        return
+    descriptor, temporary = tempfile.mkstemp(
+        dir=path.parent, prefix=".history.trimmed.", suffix=".jsonl"
+    )
+    os.close(descriptor)
+    try:
+        Path(temporary).write_text("".join(lines[:completed_updates]), encoding="utf-8")
+        os.replace(temporary, path)
+    finally:
+        if os.path.exists(temporary):
+            os.unlink(temporary)
 
 
 def _code_sha256() -> str:
@@ -172,6 +249,9 @@ def _train(args: argparse.Namespace) -> None:
         "git_commit": subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
         ).strip(),
+        "artifact_retention": (
+            "best_full_intermediate_compact" if args.compact_validation else "all_full"
+        ),
     }
     if (
         settings_path.exists()
@@ -182,6 +262,9 @@ def _train(args: argparse.Namespace) -> None:
     trainer, pipeline, fixed = _trainer(settings, args.manifest, args.statistics)
     if args.resume:
         trainer.load_checkpoint(output / "checkpoints/last.pt")
+        _trim_history_to_checkpoint(output / "training/history.jsonl", trainer.update)
+    if args.compact_validation:
+        _compact_validation_outputs(output, trainer.best["update"])
     start = time.monotonic()
     history_path = output / "training/history.jsonl"
     history_path.parent.mkdir(parents=True, exist_ok=True)
@@ -215,6 +298,8 @@ def _train(args: argparse.Namespace) -> None:
         else:
 
             def validate(active):
+                if args.compact_validation:
+                    _compact_validation_outputs(output, active.best["update"])
                 metric = evaluate_validation(
                     active.model,
                     pipeline,
@@ -241,12 +326,15 @@ def _train(args: argparse.Namespace) -> None:
                 on_update=record,
             )
             trainer.save_checkpoint(output / "checkpoints/last.pt")
+            if args.compact_validation:
+                _compact_validation_outputs(output, trainer.best["update"])
     summary = {
         "completed_updates": trainer.update,
         "elapsed_seconds": time.monotonic() - start,
         "best": trainer.best,
         "parameter_count": sum(p.numel() for p in trainer.model.parameters()),
         "checkpoint_sha256": sha256_file(output / "checkpoints/last.pt"),
+        "early_stopped": trainer.early_stopping["patience"] >= 8,
     }
     if settings.overfit:
         summary["reached_95pct_train_accuracy"] = (
@@ -343,6 +431,7 @@ def main() -> None:
         command.add_argument("--skip-validation", action="store_true")
         command.add_argument("--eval-batch-size", type=int, default=32)
         command.add_argument("--max-eval-queries-per-vowel", type=int)
+        command.add_argument("--compact-validation", action="store_true")
     evaluate = commands.add_parser("evaluate")
     evaluate.add_argument("--run-dir", type=Path, required=True)
     evaluate.add_argument("--batch-size", type=int, default=32)
