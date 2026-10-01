@@ -47,6 +47,8 @@ Dataset / DataLoader、特徴統計、固定enrollment / trial生成を`phase3_d
 - [生波形encoder設計](waveform-encoder-design.md)
 - [学習・評価設計](training-evaluation-design.md)
 - [候補比較計画](comparison-plan.md)
+- [70話者・30分上限pilot結果](phase3-70spk-pilot-results.md)
+- [70話者・3 seed比較結果と採用構成](phase3-70spk-comparison-results.md)
 - [参照log-Mel設定](config/baseline-log-mel.json)
 - [log-Mel encoder設定](config/log-mel-encoders.json)
 - [探索空間](config/search-space.json)
@@ -147,3 +149,61 @@ trialの複製・score/指標・再評価照合結果・資源使用量を保存
 そこから再開する。`report`コマンドは既存runの状態を再集計し、未着手・失敗も一覧に残す。
 中断後に`run`を再実行すると完了済みrunは飛ばし、実行途中のcheckpointから再開する。
 この10話者EERは成立性診断であり、構成の採否や順位決定に使わない。testは使用しない。
+
+## 9. 70話者・3 seedの本比較
+
+`config/full-execution-budget.json`でCPU 4並列、1 run最大16時間、空き容量下限400 GiBを
+事前固定する。`scripts/run_full_matrix.py`は18設定×3 seedの54 runを凍結し、実測時間だけを
+実行順に用いる。10話者・短時間pilotのEERによる候補除外は行わない。
+
+```sh
+poc/phoneme-speaker-encoder/.venv/bin/python \
+  poc/phoneme-speaker-encoder/scripts/run_full_matrix.py plan
+poc/phoneme-speaker-encoder/.venv/bin/python \
+  poc/phoneme-speaker-encoder/scripts/run_full_matrix.py run
+poc/phoneme-speaker-encoder/.venv/bin/python \
+  poc/phoneme-speaker-encoder/scripts/run_full_matrix.py report
+```
+
+各runの採用checkpointに対応するscore・曲線は完全保存し、採用されなかった途中評価の
+score・曲線だけをchecksum付きの小さい指標へ整理する。これにより保存容量を抑えつつ、
+各評価時点のmacro EERと最終採用根拠を残す。選択checkpointの再評価一致も検証する。
+`run`は既存の完了runを飛ばし、中断したrunはoptimizer境界checkpointから再開する。
+test splitは使用しない。
+
+### ブラウザで比較結果を見る
+
+全54 runの完了後、選択checkpointのvalidation指標から18設定の順位表を生成する。
+3 seed平均macro EERの順位、seed間標準偏差、母音別・cross-text・区間長別評価、
+学習時間と観測RSSを表示する。共通の推論benchmark等が未完了の間は正式採用を未確定と表示する。
+
+```sh
+poc/phoneme-speaker-encoder/.venv/bin/python \
+  poc/phoneme-speaker-encoder/scripts/build_comparison_report.py
+python3 -m http.server 8765 --bind 127.0.0.1 \
+  --directory artifacts/phoneme-speaker-encoder/comparisons/phase3-full-v2-70spk-3seed-20260927-r2/browser-report
+```
+
+`http://127.0.0.1:8765/`を開く。設定検索・指標別の並び替え・行選択での詳細表示・CSV保存に対応する。
+生成先の`index.html`はデータを埋め込んだ単独HTMLとして直接開くこともできる。
+`ranking.json`に集計値と実行計画・結果のSHA-256を保存する。生成物はGit管理外の成果物に置く。
+
+### 保存済みcheckpointの追加評価と採用記録
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 \
+  poc/phoneme-speaker-encoder/.venv/bin/python \
+  poc/phoneme-speaker-encoder/scripts/evaluate_comparison.py run
+poc/phoneme-speaker-encoder/.venv/bin/python \
+  poc/phoneme-speaker-encoder/scripts/build_comparison_report.py
+```
+
+validation主trialの対応付き話者bootstrapを10,000回実行し、54 checkpointを
+共通1,000 query・batch=1で専用CPUプロセスごとにbenchmarkする。既存の完了キャッシュは
+checksumを検証して再利用する。`selection-evaluation/`に抽出話者ID、seed別replicate、
+benchmark、順位・採用記録と3 seedのcheckpoint/閾値bundleを保存する。
+ブラウザページに差の95%区間・推論時間・計測RSS・採用記録を追加し、`browser-report/results.md`も生成する。
+
+CPU benchmark API・スレッド数は元の実行予算に未記載だったため、今回の追加計測前に
+`selection-evaluation/evaluation-budget.json`で補完した。結果確認後の補完であること、
+RSSは5 ms間隔のサンプリング最大値であることを結果文書に記載している。testは使用しない。

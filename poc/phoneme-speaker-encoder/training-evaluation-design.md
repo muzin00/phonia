@@ -358,6 +358,13 @@ testの結果を理由に入力方式や閾値を変更した場合、その結�
 
 設定、checkpoint、スコア、集計結果を同じ実験IDで追跡できる構成にする。
 
+70話者・3 seed本比較ではCPU機の保存容量上限のため、学習途中の各validationから
+macro EER・母音別等の集計値と元scoreのSHA-256を保持し、採用されなかった時点の
+score JSONLとROC/DET曲線配列は削除する。各runで採用したcheckpointのscore JSONL、
+全指標・曲線、閾値は完全保存し、同じcheckpointの再評価でscore・指標の一致を検証する。
+削除した途中scoreは、その時点のcheckpointも保持していない場合は復元できない。
+採用規則は変えず、testデータも参照しない。
+
 成果物はGit管理外の`artifacts/phoneme-speaker-encoder/<experiment_id>/`へ次の構成で保存する。
 文書や集計値をリポジトリへ追加する場合も、元のexperiment IDとchecksumを記載する。
 
