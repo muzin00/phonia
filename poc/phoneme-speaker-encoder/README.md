@@ -169,3 +169,20 @@ score・曲線だけをchecksum付きの小さい指標へ整理する。これ�
 各評価時点のmacro EERと最終採用根拠を残す。選択checkpointの再評価一致も検証する。
 `run`は既存の完了runを飛ばし、中断したrunはoptimizer境界checkpointから再開する。
 test splitは使用しない。
+
+### ブラウザで比較結果を見る
+
+全54 runの完了後、選択checkpointのvalidation指標から18設定の順位表を生成する。
+3 seed平均macro EERの順位、seed間標準偏差、母音別・cross-text・区間長別評価、
+学習時間と観測RSSを表示する。共通の推論benchmark等が未完了の間は正式採用を未確定と表示する。
+
+```sh
+poc/phoneme-speaker-encoder/.venv/bin/python \
+  poc/phoneme-speaker-encoder/scripts/build_comparison_report.py
+python3 -m http.server 8765 --bind 127.0.0.1 \
+  --directory artifacts/phoneme-speaker-encoder/comparisons/phase3-full-v2-70spk-3seed-20260927-r2/browser-report
+```
+
+`http://127.0.0.1:8765/`を開く。設定検索・指標別の並び替え・行選択での詳細表示・CSV保存に対応する。
+生成先の`index.html`はデータを埋め込んだ単独HTMLとして直接開くこともできる。
+`ranking.json`に集計値と実行計画・結果のSHA-256を保存する。生成物はGit管理外の成果物に置く。
