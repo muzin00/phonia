@@ -144,5 +144,7 @@ poc/phoneme-speaker-encoder/.venv/bin/python \
 
 ## 次の工程
 
-採用設定だけの10/25/50話者×3 seedの入れ子学習曲線、validationの境界・gain感度診断は別作業。
-その後に設定・3 checkpoint・seed別閾値・評価手順を凍結してtestを一度評価する。今回の選定bundleは、その最終test工程を実行した記録ではない。
+採用設定だけの10/25/50話者×3 seedの入れ子学習曲線、validationの境界・gain感度診断は
+[Issue #35の結果](phase3-learning-curve-diagnostics-results.md)に記録した。
+設定・3 checkpoint・seed別閾値・評価手順を固定した
+[最終test評価](phase3-final-test-results.md)を一度実施した。今回の選定bundle自体は、その最終test工程の結果ではない。
