@@ -28,12 +28,15 @@ Phoniaは、音素単位の話者特徴を利用した音声本人認証の可�
 
 ## 現在の状態
 
-最初の検証対象を日本語の5母音 `/a/ /i/ /u/ /e/ /o/` とし、JVS 100話者からPhase 3へ渡す母音区間データセットを構築済みです。現在は、母音区間から固定長の話者embeddingを生成する共通encoderの学習・評価方法を設計しています。
+最初の検証対象は日本語の5母音 `/a/ /i/ /u/ /e/ /o/` です。Phase 1ではJuliusを母音区間の抽出方式に採用し、Phase 2ではJVS 100話者からPhase 3用の母音区間462,242件を構築しました。
 
-モデル学習、ユーザー登録、本人照合、性能評価はまだ実装されていません。
+Phase 3では共通encoderの学習と固定validation trialでの登録・照合評価を実装し、18設定×3 seedの54 runを完了しました。事前に決めた規則でlog-Mel・統計pooling + MLP・RMS正規化なし・AAM-Softmax + 母音内SupConを採用し、validationの5母音平均EERは3 seed平均で9.436%でした。
+
+次は採用構成の学習話者数別の評価と境界ずれ・音量変化への感度診断を行い、設定と評価手順を凍結して未使用のtestデータで最終評価します。ユーザーごとのプロファイル作成、複数母音のスコア統合、既存方式との比較は後続のPoC工程です。このvalidation結果だけで実用性能や既存方式への優位性は判断できません。
 
 ## ドキュメント
 
 - [PoC概要](poc/README.md)
 - [研究設計](docs/research-design.md)
-- [Phase 3: 音素別話者encoderの学習・評価設計](poc/phoneme-speaker-encoder/README.md)
+- [Phase 3: 音素別話者encoderの学習・評価](poc/phoneme-speaker-encoder/README.md)
+- [Phase 3: 70話者・3 seed比較結果](poc/phoneme-speaker-encoder/phase3-70spk-comparison-results.md)
