@@ -22,24 +22,26 @@ Phase 3では、母音の短い波形区間から固定長の話者embeddingを�
 
 ## 3. 現在の状態
 
-[Issue #21](https://github.com/muzin00/phonia/issues/21)で学習・評価仕様を設計した。
-入力方式は事前に一つへ固定せず、可変長log-Mel、生波形などの候補を実際に学習し、
-未知話者のvalidation照合性能から選択する。
+[Issue #21](https://github.com/muzin00/phonia/issues/21)で学習・評価仕様を設計し、
+可変長log-Melと生波形を含む18設定を未知話者のvalidation照合性能で比較した。
 
 入力データ、候補となる入力特徴、可変長処理、encoder、損失関数、batch sampling、成果物形式、
 validationとtestの用途を設計済みである。判断が難しい項目は互換性のある候補を組み合わせ、
-未知話者のvalidation照合性能から採用する。設計version 2.0.0では、本比較はlog-Mel 8通り・
+未知話者のvalidation照合性能で比較した。設計version 2.0.0では、本比較はlog-Mel 8通り・
 生波形8通りの計16通りを維持し、規模を揃えた時間混合なしモデルと長文脈生波形モデルを
-各1設定の限定比較として追加する。全18設定が採用対象である。
+各1設定の限定比較として追加した。全18設定を採用対象とした。
 
-過学習確認6、成立性確認18、70話者比較54、採用構成の学習曲線追加9の計87学習runを計画する。
-品質層・境界ずれ・音量への診断は再学習せず行う。採用規則を事前固定し、選択した構成の
+過学習確認6、成立性確認18、70話者比較54を完了した。18設定×3 seedの54 runに失敗・未実行はなく、
+採用構成は`log_mel__statistics_mlp__rms-off__aam_softmax_plus_supcon_within_vowel`に決定した。
+validationの主条件における5母音平均EERは3 seed平均で9.436%だった。
+採用構成の学習曲線追加9 runと、品質層・境界ずれ・音量への診断は残る。診断は再学習せず行う。
+採用規則を事前固定し、選択した構成の
 3 seedすべてを凍結してtestを一度評価する。固定した128次元等の最適性や、入力方式全般の
 優劣を保証する設計ではない。既存全発話方式との比較はPhase 7、実環境は外部評価段階で扱う。
 
 Dataset / DataLoader、特徴統計、固定enrollment / trial生成を`phase3_data/`に実装した。
 6種のencoder、AAM-Softmaxと母音内SupCon、optimizer境界checkpoint、固定validation照合を
-`phase3_train/`に実装した。候補比較・test最終評価はこの実装とは別段階で行う。
+`phase3_train/`に実装した。候補比較は完了し、test最終評価は未実施である。
 
 ## 4. ドキュメント
 
@@ -173,9 +175,9 @@ test splitは使用しない。
 
 ### ブラウザで比較結果を見る
 
-全54 runの完了後、選択checkpointのvalidation指標から18設定の順位表を生成する。
+完了した全54 runの選択checkpointのvalidation指標から18設定の順位表を生成できる。
 3 seed平均macro EERの順位、seed間標準偏差、母音別・cross-text・区間長別評価、
-学習時間と観測RSSを表示する。共通の推論benchmark等が未完了の間は正式採用を未確定と表示する。
+学習時間と観測RSSを表示する。共通の推論benchmarkも完了し、採用構成を記録済みである。
 
 ```sh
 poc/phoneme-speaker-encoder/.venv/bin/python \
