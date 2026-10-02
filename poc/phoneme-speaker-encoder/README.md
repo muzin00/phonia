@@ -34,7 +34,8 @@ validationとtestの用途を設計済みである。判断が難しい項目は
 過学習確認6、成立性確認18、70話者比較54を完了した。18設定×3 seedの54 runに失敗・未実行はなく、
 採用構成は`log_mel__statistics_mlp__rms-off__aam_softmax_plus_supcon_within_vowel`に決定した。
 validationの主条件における5母音平均EERは3 seed平均で9.436%だった。
-採用構成の学習曲線追加9 runと、品質層・境界ずれ・音量への診断は残る。診断は再学習せず行う。
+採用構成の学習曲線追加9 runと、品質層・境界ずれ・音量へのvalidation診断も完了した。
+結果と制約は[Phase 3学習曲線・感度診断](phase3-learning-curve-diagnostics-results.md)に記録した。
 採用規則を事前固定し、選択した構成の
 3 seedすべてを凍結してtestを一度評価する。固定した128次元等の最適性や、入力方式全般の
 優劣を保証する設計ではない。既存全発話方式との比較はPhase 7、実環境は外部評価段階で扱う。
@@ -51,6 +52,7 @@ Dataset / DataLoader、特徴統計、固定enrollment / trial生成を`phase3_d
 - [候補比較計画](comparison-plan.md)
 - [70話者・30分上限pilot結果](phase3-70spk-pilot-results.md)
 - [70話者・3 seed比較結果と採用構成](phase3-70spk-comparison-results.md)
+- [採用構成の学習曲線・validation感度診断結果](phase3-learning-curve-diagnostics-results.md)
 - [参照log-Mel設定](config/baseline-log-mel.json)
 - [log-Mel encoder設定](config/log-mel-encoders.json)
 - [探索空間](config/search-space.json)
