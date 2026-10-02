@@ -85,5 +85,6 @@ poc/phoneme-speaker-encoder/.venv/bin/python poc/phoneme-speaker-encoder/scripts
 `artifacts/phoneme-speaker-encoder/comparisons/phase3-full-v2-70spk-3seed-20260927-r2/selection-evaluation/selected-bundle/<seed>/`
 にある3 checkpoint、run設定、train特徴統計、seed別の母音閾値である。
 checksumは[70話者比較結果](phase3-70spk-comparison-results.md)に記録済み。
-最終testではこの採用構成・3 seed・登録10区間の評価手順を固定して一度だけ評価する。
-今回の診断を根拠に構成や閾値を変更しない。
+この採用構成・3 seed・登録10区間の評価手順を固定した
+[最終test評価](phase3-final-test-results.md)を一度実施した。
+今回の診断を根拠に構成や閾値は変更していない。
