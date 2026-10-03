@@ -49,8 +49,8 @@ FAR目標の達成はtestや実環境で保証されない。特に低FARでの�
 
 testの固定登録区間は750件、verificationとcross-textを含む照合queryは41,831件。
 各seedで42,581 embeddingを計算し、固定trial **1,882,395件**を採点した。
-3 seedの採点・集計ステージ実測時間は18.66 / 17.78 / 17.92秒。
-これはモデル・データ読込と選択ファイル生成を含まない。
+3 seedのembedding計算・音声データ読込・採点・集計の実測時間は
+18.66 / 17.78 / 17.92秒。モデル初期化・checkpoint読込と選択ファイル生成は含まない。
 
 成果物ルート（Git管理外）:
 `artifacts/phoneme-speaker-encoder/final-test-phase3-selected-v2/`。
