@@ -32,7 +32,9 @@ Phoniaは、音素単位の話者特徴を利用した音声本人認証の可�
 
 Phase 3では共通encoderの学習と固定validation trialでの登録・照合評価を実装し、18設定×3 seedの54 runを完了しました。事前に決めた規則でlog-Mel・統計pooling + MLP・RMS正規化なし・AAM-Softmax + 母音内SupConを採用し、validationの5母音平均EERは3 seed平均で9.436%でした。
 
-次は採用構成の学習話者数別の評価と境界ずれ・音量変化への感度診断を行い、設定と評価手順を凍結して未使用のtestデータで最終評価します。ユーザーごとのプロファイル作成、複数母音のスコア統合、既存方式との比較は後続のPoC工程です。このvalidation結果だけで実用性能や既存方式への優位性は判断できません。
+採用構成の学習話者数別の評価と境界ずれ・音量変化への感度診断、設定と評価手順を凍結した最終test評価まで完了しました。testの5母音平均EERは3 seed平均で10.028%でした。
+
+Phase 4では固定encoderからユーザー別の母音プロファイルを作成し、保存・読込する処理を実装しました。次は複数母音の照合とスコア統合、認証性能の評価、既存方式との比較です。現在の結果だけで実用性能や既存方式への優位性は判断できません。
 
 ## ドキュメント
 
@@ -40,3 +42,5 @@ Phase 3では共通encoderの学習と固定validation trialでの登録・照�
 - [研究設計](docs/research-design.md)
 - [Phase 3: 音素別話者encoderの学習・評価](poc/phoneme-speaker-encoder/README.md)
 - [Phase 3: 70話者・3 seed比較結果](poc/phoneme-speaker-encoder/phase3-70spk-comparison-results.md)
+- [Phase 3: 最終test評価結果](poc/phoneme-speaker-encoder/phase3-final-test-results.md)
+- [Phase 4: ユーザー登録設計と実行方法](poc/phoneme-user-registration/README.md)
