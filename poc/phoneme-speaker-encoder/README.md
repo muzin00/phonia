@@ -47,6 +47,10 @@ Dataset / DataLoader、特徴統計、固定enrollment / trial生成を`phase3_d
 6種のencoder、AAM-Softmaxと母音内SupCon、optimizer境界checkpoint、固定validation照合を
 `phase3_train/`に実装した。候補比較とtest最終評価は完了した。
 
+Phase 4の固定encoderによる登録・保存・読込は`../phoneme-user-registration/`に実装した。
+初期仕様は全5母音・各10区間以上。入力条件、プロファイル形式、Phase 5の利用境界と
+実行方法は[ユーザー登録設計](../phoneme-user-registration/README.md)を参照する。
+
 ## 4. ドキュメント
 
 - [入力設計](input-design.md)
@@ -57,6 +61,7 @@ Dataset / DataLoader、特徴統計、固定enrollment / trial生成を`phase3_d
 - [70話者・3 seed比較結果と採用構成](phase3-70spk-comparison-results.md)
 - [採用構成の学習曲線・validation感度診断結果](phase3-learning-curve-diagnostics-results.md)
 - [Phase 3最終test評価結果](phase3-final-test-results.md)
+- [Phase 4ユーザー登録設計と実行方法](../phoneme-user-registration/README.md)
 - [参照log-Mel設定](config/baseline-log-mel.json)
 - [log-Mel encoder設定](config/log-mel-encoders.json)
 - [探索空間](config/search-space.json)

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "policy_version": "1.0.0",
+  "required_vowels": ["a", "i", "u", "e", "o"],
+  "minimum_segments_per_vowel": 10,
+  "near_silent_dbfs": -50.0,
+  "aggregation": "l2_normalized_mean_of_unit_embeddings_float64",
+  "selected_encoder": "statistics_mlp",
+  "selected_seed": 20260926,
+  "bundle_sha256": {
+    "best.pt": "6351a0491071bf197780434af5ffbe42e5ec51c5ed347409d403d2e0c34180b2",
+    "feature-statistics.json": "1d1f2b50326b396c702a46dd3b6495efb74f6dbdbfc5cc3209e73efdc87e241d",
+    "run.json": "e8b94b554cc21898dc2c744a28cfed907860358a4407c1446770bb11ebfe418e"
+  }
+}
