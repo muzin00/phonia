@@ -36,7 +36,7 @@ Phase 3では共通encoderの学習と固定validation trialでの登録・照�
 
 Phase 4では固定encoderからユーザー別の母音プロファイルを作成し、保存・読込する処理を実装しました。Phase 5では同じ母音のcosine similarityを母音内で平均し、5母音を等重みで統合する照合処理を実装しました。保存済みプロファイルと別のvalidation音声で、スコア出力・再現性・モデルとプロファイルの不変を確認しています。
 
-Phase 6では、発話単位の照合、validationでの閾値決定、testへの固定適用、入力不足を含む指標の評価設計を作成しました。次は評価処理の実装と認証性能の測定を行い、Phase 7で既存方式と比較します。少数例の動作確認だけで実用性能や既存方式への優位性は判断できません。
+Phase 6では、1発話を1入力とする照合をvalidation/test各15話者で評価しました。登録各母音10区間の主条件では、validationでFAR 1%を目標に決めた閾値を固定してtestへ適用し、他人受入率0.729%、本人拒否率2.585%、入力不足を含む本人拒否率4.533%、統合scoreのEER 1.526%でした。JVSの統制収録内での結果であり、別日・別端末での性能は未確認です。次はPhase 7で同じ条件を使い、既存方式と比較します。
 
 ## ドキュメント
 
@@ -49,3 +49,5 @@ Phase 6では、発話単位の照合、validationでの閾値決定、testへ�
 - [Phase 5: 本人照合の設計と実行方法](poc/phoneme-verification/README.md)
 - [Phase 5: 実データの動作確認結果](poc/phoneme-verification/smoke-results.md)
 - [Phase 6: 本人照合の認証性能評価設計](poc/phoneme-verification-evaluation/README.md)
+- [Phase 6: JVS発話単位の認証性能評価結果](poc/phoneme-verification-evaluation/evaluation-results.md)
+- [Phase 6: 評価結果のブラウザ用HTML](poc/phoneme-verification-evaluation/evaluation-results.html)

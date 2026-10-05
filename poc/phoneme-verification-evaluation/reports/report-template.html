@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Phase 6 評価結果 | Phonia</title>
+  <style>
+    :root{--bg:#f5f7fb;--paper:#fff;--ink:#172b48;--muted:#52647e;--line:#dce3ef;--blue:#285bdc;--soft-blue:#edf2ff;--orange:#b95121;--gray:#8e9cb0}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;font-size:15px;line-height:1.8}
+    a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button,select{font:inherit;color:inherit}button{cursor:pointer}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #83a4ff;outline-offset:4px}
+    header{background:#ffffffed;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:3;backdrop-filter:blur(10px)}.nav{max-width:1220px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:16px 30px}.brand{font-weight:750;font-size:22px;letter-spacing:-.6px;display:flex;align-items:center;gap:10px}.brand svg{color:var(--blue)}.brand small{font-size:11px;letter-spacing:2px;font-weight:600;color:var(--muted);margin-left:10px}.nav-links{display:flex;gap:24px;font-size:13px}.nav-links a{color:var(--muted)}
+    main{max-width:1220px;margin:auto;padding:48px 30px 72px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;color:var(--blue);margin:0 0 10px}.hero h1{font-size:clamp(28px,4vw,42px);line-height:1.4;letter-spacing:-1px;margin:0 0 12px}.hero .lead{margin:0;max-width:850px;color:var(--muted);font-size:16px}.pills{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 30px}.pill{padding:5px 12px;border:1px solid var(--line);background:var(--paper);border-radius:30px;font-size:12px}.pill.blue{background:var(--soft-blue);border-color:#d5dfff;color:var(--blue)}
+    .metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.metric{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 20px}.metric .label{font-size:13px;color:var(--muted);margin:0}.metric .value{font-size:34px;letter-spacing:-1.2px;font-weight:750;line-height:1.5;margin:8px 0}.metric .detail{font-size:12px;color:var(--muted)}.metric .ci{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}.metric.focus{border-color:#a5bcff;background:#f7f9ff}.metric.focus .value{color:var(--blue)}
+    .panel{background:var(--paper);border:1px solid var(--line);border-radius:16px;margin-top:24px;padding:28px}.panel h2{font-size:21px;line-height:1.6;letter-spacing:-.5px;margin:0}.section-heading{display:flex;align-items:start;justify-content:space-between;gap:20px;margin-bottom:18px}.section-heading p{color:var(--muted);font-size:13px;margin:5px 0 0}.overline{font-size:11px;letter-spacing:1.4px;color:var(--muted);font-weight:700;margin-bottom:5px}.note{color:var(--muted);font-size:12px;margin:12px 0 0}.outcome-bar{display:flex;height:17px;border-radius:6px;overflow:hidden;background:var(--bg);margin:24px 0 15px}.outcome-bar .accepted{background:var(--blue)}.outcome-bar .rejected{background:#df8b58}.outcome-bar .missing{background:var(--gray)}.outcomes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;font-size:13px}.outcomes strong{font-size:23px;display:block;margin-top:4px}.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;background:var(--blue)}.dot.orange{background:#df8b58}.dot.gray{background:var(--gray)}
+    .chart-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px}.tabs{display:flex;padding:4px;background:var(--bg);border:1px solid var(--line);border-radius:10px;gap:4px}.tabs button{background:none;border:0;border-radius:7px;padding:6px 14px;font-size:13px}.tabs button[aria-selected="true"]{background:var(--paper);color:var(--blue);box-shadow:0 1px 4px #10244616;font-weight:650}.control{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted)}select{font-size:13px;border:1px solid var(--line);padding:8px 30px 8px 10px;border-radius:8px;background:var(--paper);min-height:39px}.chart-layout{display:grid;grid-template-columns:minmax(0,3.3fr) minmax(200px,1fr);align-items:start;gap:28px}.chart-layout img{display:block;width:100%;height:auto;border:1px solid #edf0f5;border-radius:8px}.chart-help{padding:16px 18px;background:var(--bg);border-radius:10px;font-size:13px}.chart-help h3{font-size:14px;margin:0 0 8px}.chart-help p{margin:0;color:var(--muted)}.chart-help .chart-scope{font-size:11px;border-top:1px solid var(--line);margin-top:16px;padding-top:12px}
+    .filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;padding:18px;background:var(--bg);border-radius:10px;margin:18px 0}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:9px}table{border-collapse:collapse;width:100%;text-align:left;font-size:13px;white-space:nowrap}th{font-size:11px;color:var(--muted);font-weight:600;background:#f8faff;line-height:1.5}th,td{padding:14px 13px;border-bottom:1px solid var(--line)}th:not(:first-child),td:not(:first-child){text-align:right}tbody tr:last-child td{border-bottom:0}tbody tr.primary{background:#f5f8ff}.table-sub{display:block;font-size:10px;color:var(--muted);line-height:1.6;margin-top:3px}.row-tag{display:block;color:var(--blue);font-size:10px;line-height:1.3}.thresholds{margin-top:10px;font-family:ui-monospace,monospace;font-size:11px;color:var(--muted);overflow-wrap:anywhere}.explanation{font-size:12px;color:var(--muted);margin-top:15px}.comparison-status{font-size:12px;color:var(--muted);margin-bottom:10px}
+    .scope-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.scope-item{padding:18px 20px;border:1px solid var(--line);border-radius:10px}.scope-item h3{font-size:14px;margin:0 0 9px}.scope-item p{font-size:13px;color:var(--muted);margin:0}.terms{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}.terms p{font-size:12px;color:var(--muted);margin:0}.terms strong{color:var(--ink)}details{margin-top:24px;border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--muted)}summary{cursor:pointer;color:var(--ink);font-weight:600}.provenance{margin-top:12px}.provenance code{display:block;font-size:10px;overflow-wrap:anywhere;margin:6px 0 12px}footer{color:var(--muted);font-size:11px;margin-top:28px;display:flex;justify-content:space-between;gap:20px}.fixed-condition{font-size:12px;color:var(--muted);margin-top:14px}
+    @media(max-width:960px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.chart-layout{grid-template-columns:1fr}.chart-help{display:grid;grid-template-columns:1fr 2fr;gap:10px}.chart-help .chart-scope{grid-column:1/-1;margin-top:0}.filters{grid-template-columns:repeat(2,minmax(0,1fr))}.nav-links{gap:15px}}
+    @media(max-width:600px){main{padding:30px 16px 45px}.nav{padding:12px 16px}.brand small{display:none}.nav-links{font-size:11px;gap:12px}.nav-links a:last-child{display:none}.panel{padding:20px 16px}.metrics{gap:10px}.metric{padding:16px 13px}.metric .value{font-size:29px}.metric .label{font-size:12px}.metric .ci{font-size:10px}.outcomes{gap:8px;font-size:11px}.outcomes strong{font-size:20px}.scope-grid,.terms{grid-template-columns:1fr}.chart-help{display:block}.chart-help .chart-scope{margin-top:12px}.tabs button{padding:6px 10px;font-size:12px}.filters{padding:13px;gap:10px}.section-heading{display:block}.hero .lead{font-size:14px}footer{display:block}.panel h2{font-size:19px}}
+    @media print{body{background:#fff;font-size:11px}header{position:static}.nav-links,.chart-controls,.filters{display:none}main{padding:20px 0}.panel,.metric{break-inside:avoid}.metrics{grid-template-columns:repeat(4,1fr)}.chart-layout{grid-template-columns:3fr 1fr}.panel{padding:20px}footer{display:block}.metric .value{font-size:26px}}
+  </style>
+</head>
+<body>
+  <header><div class="nav">
+    <a class="brand" href="#summary" aria-label="Phonia 評価結果の先頭へ"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M3 10v6m5-10v14m5-18v22m5-18v14m5-10v6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>phonia<small>RESEARCH</small></a>
+    <nav class="nav-links" aria-label="レポート内の移動"><a href="#summary">主条件</a><a href="#charts">グラフ</a><a href="#comparison">条件比較</a><a href="#scope">評価の範囲</a></nav>
+  </div></header>
+  <main>
+    <section id="summary" class="hero">
+      <p class="eyebrow">PHASE 06 · VERIFICATION EVALUATION</p>
+      <h1>本人の声と、別人の声を<br>どれくらい区別できたか。</h1>
+      <p class="lead">5母音を使った本人照合の評価結果。検証用データで決めた判定閾値を固定し、学習に使っていない話者の別発話で測定しました。</p>
+      <div class="pills"><span class="pill blue">主条件 · test / 主要照合</span><span class="pill">15話者</span><span class="pill">登録10区間 / 母音</span><span class="pill">1発話を1入力</span><span class="pill">JVS・統制収録</span></div>
+      <div class="metrics">
+        <article class="metric"><p class="label">他人を受け入れた割合</p><div class="value">{{FAR}}</div><div class="detail">スコアあり · {{FAR_COUNT}}試行</div><div class="ci">95%区間 {{FAR_CI}}</div></article>
+        <article class="metric"><p class="label">本人を拒否した割合</p><div class="value">{{FRR}}</div><div class="detail">スコアあり · {{FRR_COUNT}}発話</div><div class="ci">95%区間 {{FRR_CI}}</div></article>
+        <article class="metric focus"><p class="label">母音不足も含む本人拒否率</p><div class="value">{{ALL_FRR}}</div><div class="detail">全入力 · {{ALL_FRR_COUNT}}発話</div><div class="ci">95%区間 {{ALL_FRR_CI}}</div></article>
+        <article class="metric"><p class="label">スコアの分離性能 · EER</p><div class="value">{{EER}}</div><div class="detail">スコアあり · 閾値非依存の指標</div><div class="ci">95%区間 {{EER_CI}}</div></article>
+      </div>
+      <p class="fixed-condition">上の4指標は主条件の固定結果です。判定閾値 {{THRESHOLD}} ／ validationでの他人受入率目標 1%。95%区間は15話者を単位とした10,000回のbootstrap。</p>
+    </section>
+
+    <section class="panel" aria-labelledby="outcome-title">
+      <div class="section-heading"><div><div class="overline">INPUT COVERAGE</div><h2 id="outcome-title">本人750発話の内訳</h2><p>スコア取得率は98%。母音が足りず照合できなかった発話も、拒否として数えています。</p></div></div>
+      <div class="outcome-bar" aria-hidden="true"><div class="accepted" style="width:{{ACCEPTED_WIDTH}}%"></div><div class="rejected" style="width:{{REJECTED_WIDTH}}%"></div><div class="missing" style="width:{{NO_SCORE_WIDTH}}%"></div></div>
+      <div class="outcomes"><div><span class="dot"></span>本人として受入れ<strong>{{ACCEPTED}}発話</strong></div><div><span class="dot orange"></span>スコアで拒否<strong>{{REJECTED}}発話</strong></div><div><span class="dot gray"></span>母音不足で拒否<strong>{{NO_SCORE}}発話</strong></div></div>
+    </section>
+
+    <section class="panel" id="charts" aria-labelledby="charts-title">
+      <div class="section-heading"><div><div class="overline">VISUAL RESULTS</div><h2 id="charts-title">結果をグラフで見る</h2><p>保存したtest結果の図です。主条件と、発話内容が異なる補助条件を切り替えられます。</p></div></div>
+      <div class="chart-controls"><div class="tabs" role="tablist" aria-label="グラフの種類"><button type="button" role="tab" aria-selected="true" data-chart="scores">スコア分布</button><button type="button" role="tab" aria-selected="false" data-chart="det">DET曲線</button><button type="button" role="tab" aria-selected="false" data-chart="roc">ROC曲線</button></div><label class="control">発話条件<select id="chart-role"><option value="verification">主要照合 · test</option><option value="cross_text_verification">異文条件 · test</option></select></label></div>
+      <div class="chart-layout"><img id="chart-image" src="{{PRIMARY_IMAGE}}" alt="主条件の本人・別人のスコア分布"><aside class="chart-help" aria-live="polite"><h3 id="chart-help-title">右ほど、登録した声に近い</h3><p id="chart-help-text">青は本人、オレンジは別人です。破線が固定した判定閾値で、右側のスコアを受け入れ、左側を拒否します。分布が重なる部分に誤判定が生じます。</p><p class="chart-scope" id="chart-scope">登録10区間 / 母音。スコアを取得できた本人735発話・別人10,290試行を表示しています。</p></aside></div>
+    </section>
+
+    <section class="panel" id="comparison" aria-labelledby="comparison-title">
+      <div class="section-heading"><div><div class="overline">CONDITION COMPARISON</div><h2 id="comparison-title">登録区間数と条件を比べる</h2><p>1・5・10区間は同じ固定区間列の先頭を使用。照合入力の発話集合は全登録数で共通です。</p></div></div>
+      <div class="filters">
+        <label class="control">対象データ<select id="split"><option value="test">評価用 · test</option><option value="validation">検証用 · validation</option></select></label>
+        <label class="control">発話条件<select id="role"><option value="verification">主要照合</option><option value="cross_text_verification">発話内容が異なる条件</option></select></label>
+        <label class="control">スコア<select id="kind"><option value="fused">5母音の統合スコア</option><option value="a">母音 /a/</option><option value="i">母音 /i/</option><option value="u">母音 /u/</option><option value="e">母音 /e/</option><option value="o">母音 /o/</option></select></label>
+        <label class="control">固定した動作点<select id="point"><option value="far_1pct">validation FAR目標 1%</option><option value="far_0_1pct">validation FAR目標 0.1%</option><option value="eer_operating">validation EER動作点</option></select></label>
+      </div>
+      <div class="comparison-status" id="comparison-status" aria-live="polite"></div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">登録区間 / 母音</th><th scope="col">スコア取得率</th><th scope="col">EER</th><th scope="col">他人受入率<br>スコアあり</th><th scope="col">本人拒否率<br>スコアあり</th><th scope="col">本人拒否率<br>母音不足も含む</th></tr></thead><tbody id="comparison-rows"></tbody></table></div>
+      <p class="thresholds" id="thresholds"></p>
+      <p class="explanation">閾値はすべてvalidationの主要照合から決定済みです。ここで切り替えているのは保存済みの評価結果で、閾値の再調整は行いません。目標FARはvalidationでの較正条件であり、testで同じFARを保証するものではありません。</p>
+      <p class="note" id="comparison-ci-note">testの95%区間は話者単位のbootstrap。学習・閾値較正・収録条件の不確かさをすべて含む区間ではありません。</p>
+    </section>
+
+    <section class="panel" id="scope" aria-labelledby="scope-title">
+      <div class="section-heading"><div><div class="overline">METHOD & SCOPE</div><h2 id="scope-title">この評価で確認した範囲</h2></div></div>
+      <div class="scope-grid"><article class="scope-item"><h3>別の話者・別の発話で測定</h3><p>学習70話者、検証15話者、評価15話者を分離。登録音声と照合音声の元WAVも分け、固定encoderと5母音の等重み統合で評価しました。</p></article><article class="scope-item"><h3>母音不足は利用上の課題として残る</h3><p>異文条件では{{CROSS_SCORED}} / {{CROSS_ALL}}発話でスコアを取得。登録10区間の本人拒否率はスコアありで{{CROSS_FRR}}、母音不足も含めると{{CROSS_ALL_FRR}}でした。</p></article><article class="scope-item"><h3>JVSの統制収録内での結果</h3><p>収録日・個別セッション・端末IDは不明です。別日、別端末、雑音環境での性能は今回確認していません。</p></article><article class="scope-item"><h3>既存方式との比較は次の工程</h3><p>Phase 3で同じtest話者の結果は既に観測済みです。今回は固定方式の後続評価。新しいcorpusでの独立検証と、Phase 7のベースライン比較は別工程です。</p></article></div>
+      <div class="terms"><p><strong>FAR：</strong>別人の試行を本人として受け入れた割合。</p><p><strong>FRR：</strong>本人の入力を拒否した割合。全入力では母音不足も拒否に含めます。</p><p><strong>EER：</strong>スコア上の他人受入率と本人拒否率が等しくなる点の誤り率。小さいほど分離しやすい指標です。</p><p><strong>95%区間：</strong>今回の15話者のばらつきを再標本化して算出した範囲。閾値は固定したままです。</p></div>
+      <details><summary>実行記録と検証結果</summary><div class="provenance"><p>81件のテスト・Ruffチェックが通過。63件でcacheなし・入力順逆転との結果一致を確認。保存したPhase 5結果101,430件のchecksumと対応関係、両split各108動作条件の再集計も一致しています。</p><p>実行ID</p><code id="run-id"></code><p>凍結した評価計画のSHA-256</p><code id="plan-hash"></code><p>実行成果物manifestのSHA-256</p><code id="execution-hash"></code><p>Python 3.12.13 / NumPy 2.5.3 / torch 2.14.1 / CPU・float32・batch=1。モデル・特徴統計・プロファイルの不変を確認しました。</p></div></details>
+    </section>
+    <footer><span>Phonia · Phase 6 evaluation · 2026-10-05</span><span>保存済み評価結果から作成 · HTML内に数値と画像を埋め込み</span></footer>
+    <noscript><p>条件切替にはJavaScriptを有効にしてください。主条件の数値とスコア分布はこのまま確認できます。</p></noscript>
+  </main>
+  <script type="application/json" id="report-data">{{DATA}}</script>
+  <script>
+    "use strict";
+    const data = JSON.parse(document.getElementById("report-data").textContent);
+    const percent = value => (value * 100).toFixed(3) + "%";
+    const interval = value => value ? "95%区間 " + value.map(percent).join("〜") : "";
+    const number = value => value.toLocaleString("ja-JP");
+    const roleName = {verification:"主要照合",cross_text_verification:"異文条件"};
+    const select = id => document.getElementById(id).value;
+    function cell(main, sub="", ci="") {
+      const td = document.createElement("td");
+      td.textContent = main;
+      for (const text of [sub, ci]) if (text) {const span=document.createElement("span");span.className="table-sub";span.textContent=text;td.append(span);}
+      return td;
+    }
+    function renderComparison() {
+      const split=select("split"), role=select("role"), kind=select("kind"), point=select("point");
+      const tbody=document.getElementById("comparison-rows");
+      tbody.replaceChildren();
+      const thresholds=[];
+      for(const count of [1,5,10]) {
+        const item=data.metrics[split][`${role}/n${count}/${kind}`];
+        const p=item.operating_points[point];
+        const ci=item.bootstrap_95pct?.operating_points[point];
+        const tr=document.createElement("tr");
+        if(count===10) tr.className="primary";
+        const first=cell(count+"区間");
+        if(count===10){const tag=document.createElement("span");tag.className="row-tag";tag.textContent="主登録数";first.append(tag);}
+        tr.append(first,
+          cell(percent(item.score_coverage),`${number(item.scored_queries)} / ${number(item.all_queries)}発話`),
+          cell(percent(item.pooled_eer),interval(item.bootstrap_95pct?.pooled_eer)),
+          cell(percent(p.far),`${number(p.false_accepts)} / ${number(p.impostor)}試行`,interval(ci?.far)),
+          cell(percent(p.frr),`${number(p.false_rejects)} / ${number(p.genuine)}発話`,interval(ci?.frr)),
+          cell(percent(p.all_input_frr),`${number(p.false_rejects+p.no_score_genuine)} / ${number(p.all_genuine)}発話`,interval(ci?.all_input_frr)));
+        tbody.append(tr);
+        thresholds.push(count+"区間: "+p.threshold);
+      }
+      document.getElementById("thresholds").textContent="固定閾値 ／ "+thresholds.join("　|　");
+      document.getElementById("comparison-status").textContent=(split==="test"?"評価用 test":"検証用 validation")+" · "+roleName[role]+" · "+document.getElementById("kind").selectedOptions[0].textContent;
+      document.getElementById("comparison-ci-note").textContent=split==="test"?"testの95%区間は話者単位のbootstrap。学習・閾値較正・収録条件の不確かさをすべて含む区間ではありません。":"validationは閾値の較正元です。話者bootstrapによる95%区間はtest結果に対して算出しました。";
+    }
+    let chart="scores";
+    function renderChart() {
+      const role=select("chart-role");
+      const descriptions={scores:["右ほど、登録した声に近い","青は本人、オレンジは別人です。破線が固定した判定閾値で、右側のスコアを受け入れ、左側を拒否します。分布が重なる部分に誤判定が生じます。"],det:["左下ほど、両方の誤りが少ない","横軸は他人受入率、縦軸は本人拒否率です。青・オレンジ・緑の線は、登録区間数1・5・10の結果を示します。曲線はスコアあり試行から算出しています。"],roc:["左上ほど、本人を受け入れやすい","横軸は他人受入率、縦軸は本人受入率です。青・オレンジ・緑の線で、登録区間数1・5・10を比較できます。曲線はスコアあり試行から算出しています。"]};
+      const image=document.getElementById("chart-image");
+      image.src=data.images[role][chart];
+      image.alt="test "+roleName[role]+"の"+({scores:"スコア分布",det:"DET曲線",roc:"ROC曲線"})[chart];
+      document.getElementById("chart-help-title").textContent=descriptions[chart][0];
+      document.getElementById("chart-help-text").textContent=descriptions[chart][1];
+      const item=data.metrics.test[`${role}/n10/fused`],p=item.operating_points.far_1pct;
+      document.getElementById("chart-scope").textContent=chart==="scores"?`登録10区間 / 母音。スコアを取得できた本人${number(p.genuine)}発話・別人${number(p.impostor)}試行を表示しています。`:`test / ${roleName[role]} / 5母音の統合スコア。EERと固定閾値での結果は、下の条件比較で確認できます。`;
+      document.querySelectorAll("[data-chart]").forEach(button=>button.setAttribute("aria-selected",String(button.dataset.chart===chart)));
+    }
+    for(const id of ["split","role","kind","point"]) document.getElementById(id).addEventListener("change",renderComparison);
+    document.getElementById("chart-role").addEventListener("change",renderChart);
+    document.querySelectorAll("[data-chart]").forEach(button=>button.addEventListener("click",()=>{chart=button.dataset.chart;renderChart();}));
+    document.getElementById("run-id").textContent=data.run_id;
+    document.getElementById("plan-hash").textContent=data.plan_sha256;
+    document.getElementById("execution-hash").textContent=data.execution_sha256;
+    renderComparison();
+    renderChart();
+  </script>
+</body>
+</html>
