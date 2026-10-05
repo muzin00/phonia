@@ -5,6 +5,7 @@
 [Issue #38](https://github.com/muzin00/phonia/issues/38)の登録・保存・読込を実装した。
 学習済みモデルへ登録用の母音音声を入力し、ユーザーごとの母音別代表ベクトルを保存する。
 Phase 5は保存済みプロファイルを読み込み、別の音声の同じ母音の特徴と比較できる。
+照合処理と初期のスコア統合は[Phase 5](../phoneme-verification/README.md)に実装した。
 登録時に学習、optimizerの構築、trainデータの読込、特徴統計の再計算は行わない。
 
 Phase 4のコード、設定、テスト、Python依存関係は、この`poc/phoneme-user-registration/`

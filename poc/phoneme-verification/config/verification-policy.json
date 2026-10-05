@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "policy_version": "1.0.0",
+  "required_vowels": ["a", "i", "u", "e", "o"],
+  "minimum_segments_per_vowel": 1,
+  "near_silent_dbfs": -50.0,
+  "segment_score": "cosine_similarity",
+  "within_vowel_aggregation": "arithmetic_mean_of_segment_cosines_float64",
+  "fusion": "equal_mean_of_five_vowels",
+  "source_separation": "different_wav_paths_and_sha256_from_enrollment"
+}
