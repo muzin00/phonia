@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "protocol_version": "1.0.0",
+  "status": "designed_not_evaluated",
+  "issue": "https://github.com/muzin00/phonia/issues/42",
+  "reused_implementation_commit": "0ab8cbbff93421c57b724721b0b34fcb2d7f7cfb",
+  "inputs": {
+    "speaker_split": {
+      "path": "poc/phoneme-speaker-dataset/config/dataset-split.json",
+      "sha256": "50a4c98be1c46867677e4081db2a03f18fb349ce8c930fb9e37484e5299fe66b"
+    },
+    "quality_policy": {
+      "path": "poc/phoneme-speaker-dataset/config/phase3-input.json",
+      "sha256": "a83e2a07c732d5da1fcf578fd64a814529bab69638dcb1a570de1b63867ae1c6"
+    },
+    "utterance_manifest": {
+      "path": "poc/phoneme-speaker-dataset/data/utterance-manifest.jsonl",
+      "sha256": "71d24d1d49d92162b96d4bf8094484f8fd787e4ec0519fc76a58c5a41672db05"
+    },
+    "segment_manifest": {
+      "path": "poc/phoneme-speaker-dataset/data/generated/phase3-vowel-segments.jsonl",
+      "sha256": "fd65f144087f684e317bb50d944866c937ebc58fe91645bef57ac35656684613"
+    },
+    "dataset_validation": {
+      "path": "poc/phoneme-speaker-dataset/data/dataset-validation.json",
+      "sha256": "89fcef35e370d08ed47e27ddf846c10049ad33b5ba3c071cb6422d712cf5706f"
+    },
+    "segment_validation": {
+      "path": "poc/phoneme-speaker-dataset/data/phase3-vowel-dataset-validation.json",
+      "sha256": "5029d1b1c885613b5de4f2d7a45d326fd2b03382e876a87503bc6eaecdfcb220"
+    },
+    "registration_policy": {
+      "path": "poc/phoneme-user-registration/config/registration-policy.json",
+      "sha256": "4c801864295cdc2bc94dae0b166c9e287027f1e86fae59a1f81f482fd6085a67"
+    },
+    "verification_policy": {
+      "path": "poc/phoneme-verification/config/verification-policy.json",
+      "sha256": "ecfad568cd779415d22a2267f20c500f597251e03a28a7e0e6eafeba2139611d"
+    }
+  },
+  "model": {
+    "encoder": "statistics_mlp",
+    "seed": 20260926,
+    "training_speakers": 70,
+    "bundle": "artifacts/phoneme-speaker-encoder/comparisons/phase3-full-v2-70spk-3seed-20260927-r2/selection-evaluation/selected-bundle/20260926",
+    "bundle_sha256": {
+      "best.pt": "6351a0491071bf197780434af5ffbe42e5ec51c5ed347409d403d2e0c34180b2",
+      "feature-statistics.json": "1d1f2b50326b396c702a46dd3b6495efb74f6dbdbfc5cc3209e73efdc87e241d",
+      "run.json": "e8b94b554cc21898dc2c744a28cfed907860358a4407c1446770bb11ebfe418e"
+    },
+    "update_parameters": false,
+    "update_feature_statistics": false,
+    "inference": {
+      "device": "cpu",
+      "dtype": "float32",
+      "batch_size": 1
+    },
+    "python": "3.12",
+    "numpy": "2.5.3",
+    "torch": "2.14.1"
+  },
+  "reused_files": [
+    {
+      "path": "poc/phoneme-user-registration/registration/__init__.py",
+      "sha256": "f6392706d012719e1a6ce790d63977c5667374f26a6b9a3e14e4ed32c308c33b"
+    },
+    {
+      "path": "poc/phoneme-user-registration/registration/encoder.py",
+      "sha256": "7936bd4c23274548fa15fb1a6eb91156206855c3f1360f2b7b7fcd76abe48401"
+    },
+    {
+      "path": "poc/phoneme-user-registration/registration/profiles.py",
+      "sha256": "877fc72cd14305798ee82a7dd020cd29ffb6ff6e1a35f593d1b3959b9bcbd4c0"
+    },
+    {
+      "path": "poc/phoneme-verification/verification/__init__.py",
+      "sha256": "15a22af0a827a233103edea053b4d3c07d0b77e9ab00081252fe96e61777f65b"
+    },
+    {
+      "path": "poc/phoneme-verification/verification/inputs.py",
+      "sha256": "b6175465b79503e9f73b79a41010cd888dcfba06331e36c19f8354ada1181c19"
+    },
+    {
+      "path": "poc/phoneme-verification/verification/policy.py",
+      "sha256": "bc5159b75281f2badef59943aaa4e256804fed7660d5889acd7aa39b995cd977"
+    },
+    {
+      "path": "poc/phoneme-verification/verification/scoring.py",
+      "sha256": "b1a59c8297a306879603ac8e81f4cfc7f5c19eef0518b43bbd36bba07642cf05"
+    },
+    {
+      "path": "poc/phoneme-speaker-encoder/phase3_data/manifest.py",
+      "sha256": "b529fa0e40d90774350cc76dcb8508e2f1c83cc3edb177c3a629ab83895f654e"
+    },
+    {
+      "path": "poc/phoneme-speaker-encoder/phase3_data/input.py",
+      "sha256": "5565af608e256d13476ace5a3ee8d40bc4f9de907227fad36b2dc0bbb20c3851"
+    },
+    {
+      "path": "poc/phoneme-speaker-encoder/phase3_data/artifacts.py",
+      "sha256": "bb0ce88fe84fc0b0d613ed99507b097b13538107d33e2cb5f4e5223e0a385988"
+    },
+    {
+      "path": "poc/phoneme-speaker-encoder/phase3_train/models.py",
+      "sha256": "78f113e3855d23dec77237ff1c9846fca47e171ad7867ab806cca2b091deb737"
+    },
+    {
+      "path": "poc/phoneme-speaker-encoder/phase3_train/metrics.py",
+      "sha256": "5ca9ecfc4431134ec44a2807b840e4fad0ed36523b0f9bb86133be2b42b66a25"
+    },
+    {
+      "path": "poc/phoneme-speaker-encoder/scripts/weighted_bootstrap.py",
+      "sha256": "121f4822a7d7e670aa5fb1e8a78be9971774267716427c52bce9c8c3aab5a69f"
+    },
+    {
+      "path": "poc/phoneme-speaker-encoder/config/baseline-log-mel.json",
+      "sha256": "9a11a672cb2ffaac3fd7008723dfb2ca9d5b8cac46522f65b231c7d5a312c606"
+    },
+    {
+      "path": "poc/phoneme-speaker-encoder/config/log-mel-encoders.json",
+      "sha256": "980e341773d3ddd35f24b27270820e0e45e4de8ee62b7e531d3413d8c3f08a2b"
+    },
+    {
+      "path": "poc/phoneme-speaker-encoder/config/waveform-encoders.json",
+      "sha256": "71040f0a658a1b22fdab6033d0cfdd64c7dc6942c2af47ec352be1762ebc33b2"
+    }
+  ],
+  "splits": {
+    "calibration": "validation",
+    "evaluation": "test",
+    "calibration_role": "verification",
+    "roles": [
+      "verification",
+      "cross_text_verification"
+    ],
+    "expected_speakers_per_split": 15,
+    "sessions": "unknown_do_not_claim_cross_session",
+    "prior_test_exposure": "phase3_test_already_observed_followup_evaluation_not_new_independent_corpus"
+  },
+  "enrollment": {
+    "primary_count_per_vowel": 10,
+    "counts_per_vowel": [
+      1,
+      5,
+      10
+    ],
+    "seed": 20260930,
+    "selector": "phase3_data.artifacts.make_enrollment_count_10",
+    "nested_rank_prefixes": true,
+    "aggregation": "l2_normalized_mean_of_unit_embeddings_float64",
+    "explicit_minimum_override_for_auxiliary_counts": true,
+    "incomplete_enrollment": "stop_split_evaluation"
+  },
+  "queries": {
+    "unit": "one_source_wav_utterance",
+    "segment_selection": "all_eligible_segments_in_utterance",
+    "required_vowels": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o"
+    ],
+    "minimum_segments_per_vowel": 1,
+    "sort": "segment_id",
+    "combine_utterances": false,
+    "missing_vowels": "no_score_do_not_accept",
+    "missing_extraction": "no_score_do_not_accept",
+    "invalid_input": "stop_evaluation",
+    "zero_scored_queries_for_any_speaker_role": "not_evaluable_do_not_remove_speaker"
+  },
+  "trials": {
+    "claims": "all_speakers_in_same_split",
+    "genuine_per_query": 1,
+    "impostor_per_query": 14,
+    "label": "query_speaker_id_equals_claimed_speaker_id",
+    "query_id": "canonical_json_sha256_of_split_role_utterance_id",
+    "trial_id": "canonical_json_sha256_of_protocol_version_query_id_claimed_speaker_id_enrollment_count",
+    "no_score_trials": "retain_for_all_input_denominators"
+  },
+  "scores": {
+    "implementation": "phoneme-verification/verification/scoring.py:verify",
+    "kinds": [
+      "fused",
+      "a",
+      "i",
+      "u",
+      "e",
+      "o"
+    ],
+    "within_vowel": "arithmetic_mean_of_segment_cosines_float64",
+    "fusion": "equal_mean_of_five_vowels",
+    "acceptance_rule": "score_gte_threshold",
+    "quality_weights": false
+  },
+  "thresholds": {
+    "source": "validation_verification_scored_trials_only",
+    "scope": "per_enrollment_count_per_score_kind",
+    "far_targets": [
+      0.01,
+      0.001
+    ],
+    "eer_operating": true,
+    "far_rule": "phase3_train.metrics.far_target_threshold",
+    "eer_operating_rule": "phase3_train.metrics.eer_operating_threshold",
+    "apply_without_recalibration_to": [
+      "test_verification",
+      "validation_cross_text_verification",
+      "test_cross_text_verification"
+    ],
+    "use_phase3_saved_thresholds": false
+  },
+  "metrics": {
+    "primary": "conditional_frr_at_validation_far_1pct_threshold",
+    "primary_condition": {
+      "split": "test",
+      "role": "verification",
+      "enrollment_count": 10,
+      "score_kind": "fused"
+    },
+    "mandatory_companions": [
+      "observed_far",
+      "genuine_count",
+      "impostor_count",
+      "false_accept_count",
+      "false_reject_count",
+      "query_score_coverage",
+      "all_input_frr"
+    ],
+    "separation": [
+      "pooled_eer",
+      "roc",
+      "det"
+    ],
+    "eer_rule": "tie_aware_linear_interpolation_at_far_minus_frr_zero",
+    "scored_trial_weights": "one_per_trial",
+    "no_score_in_eer": false,
+    "no_score_in_all_input_denominators": true,
+    "conditionals": [
+      "by_role",
+      "by_enrollment_count",
+      "by_vowel",
+      "by_speaker"
+    ],
+    "primary_accuracy": false,
+    "product_pass_fail_target": null
+  },
+  "bootstrap": {
+    "unit": "speaker",
+    "replicates": 10000,
+    "seed": 20260929,
+    "rng": "PCG64",
+    "speaker_order": "lexicographic",
+    "minimum_distinct_speakers": 2,
+    "genuine_weight": "query_speaker_multiplicity",
+    "impostor_weight": "query_multiplicity_times_claimed_multiplicity",
+    "share_draws_across_conditions": true,
+    "recalibrate_thresholds": false,
+    "interval": "percentile_95",
+    "percentile_method": "linear",
+    "metrics": [
+      "pooled_eer",
+      "fixed_threshold_far",
+      "fixed_threshold_frr",
+      "all_input_far",
+      "all_input_frr"
+    ]
+  },
+  "freeze": {
+    "design_document_is_final_execution_plan": false,
+    "required_before_test_inference": [
+      "phase6_code_sha256",
+      "protocol_sha256",
+      "input_sha256",
+      "validation_profiles_sha256",
+      "validation_scores_sha256",
+      "validation_thresholds_sha256",
+      "test_enrollment_inputs_sha256",
+      "test_query_and_trial_sha256",
+      "runtime_versions"
+    ],
+    "test_profiles_generated_after_plan_freeze": true,
+    "test_output_hashes_recorded_in": "execution_manifest_without_mutating_frozen_plan",
+    "retune_after_test": false
+  }
+}
