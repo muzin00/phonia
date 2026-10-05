@@ -34,7 +34,9 @@ Phase 3では共通encoderの学習と固定validation trialでの登録・照�
 
 採用構成の学習話者数別の評価と境界ずれ・音量変化への感度診断、設定と評価手順を凍結した最終test評価まで完了しました。testの5母音平均EERは3 seed平均で10.028%でした。
 
-Phase 4では固定encoderからユーザー別の母音プロファイルを作成し、保存・読込する処理を実装しました。次は複数母音の照合とスコア統合、認証性能の評価、既存方式との比較です。現在の結果だけで実用性能や既存方式への優位性は判断できません。
+Phase 4では固定encoderからユーザー別の母音プロファイルを作成し、保存・読込する処理を実装しました。Phase 5では同じ母音のcosine similarityを母音内で平均し、5母音を等重みで統合する照合処理を実装しました。保存済みプロファイルと別のvalidation音声で、スコア出力・再現性・モデルとプロファイルの不変を確認しています。
+
+次はPhase 5の初期設計を確認し、認証性能の評価と既存方式との比較へ進みます。少数例の動作確認だけで実用性能や既存方式への優位性は判断できません。
 
 ## ドキュメント
 
@@ -44,3 +46,5 @@ Phase 4では固定encoderからユーザー別の母音プロファイルを作
 - [Phase 3: 70話者・3 seed比較結果](poc/phoneme-speaker-encoder/phase3-70spk-comparison-results.md)
 - [Phase 3: 最終test評価結果](poc/phoneme-speaker-encoder/phase3-final-test-results.md)
 - [Phase 4: ユーザー登録設計と実行方法](poc/phoneme-user-registration/README.md)
+- [Phase 5: 本人照合の設計と実行方法](poc/phoneme-verification/README.md)
+- [Phase 5: 実データの動作確認結果](poc/phoneme-verification/smoke-results.md)
