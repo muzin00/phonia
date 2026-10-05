@@ -36,7 +36,7 @@ Phase 3では共通encoderの学習と固定validation trialでの登録・照�
 
 Phase 4では固定encoderからユーザー別の母音プロファイルを作成し、保存・読込する処理を実装しました。Phase 5では同じ母音のcosine similarityを母音内で平均し、5母音を等重みで統合する照合処理を実装しました。保存済みプロファイルと別のvalidation音声で、スコア出力・再現性・モデルとプロファイルの不変を確認しています。
 
-次はPhase 5の初期設計を確認し、認証性能の評価と既存方式との比較へ進みます。少数例の動作確認だけで実用性能や既存方式への優位性は判断できません。
+Phase 6では、発話単位の照合、validationでの閾値決定、testへの固定適用、入力不足を含む指標の評価設計を作成しました。次は評価処理の実装と認証性能の測定を行い、Phase 7で既存方式と比較します。少数例の動作確認だけで実用性能や既存方式への優位性は判断できません。
 
 ## ドキュメント
 
@@ -48,3 +48,4 @@ Phase 4では固定encoderからユーザー別の母音プロファイルを作
 - [Phase 4: ユーザー登録設計と実行方法](poc/phoneme-user-registration/README.md)
 - [Phase 5: 本人照合の設計と実行方法](poc/phoneme-verification/README.md)
 - [Phase 5: 実データの動作確認結果](poc/phoneme-verification/smoke-results.md)
+- [Phase 6: 本人照合の認証性能評価設計](poc/phoneme-verification-evaluation/README.md)
