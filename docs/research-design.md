@@ -205,6 +205,14 @@ test speakers
 
 既存方式と提案方式で、利用できる音声量や評価試行の条件が不均衡にならないようにする。
 
+Phase 7で上記3方式の比較を完了した。発話全体にはSpeechBrain ECAPA-TDNN（VoxCeleb事前学習）を採用した。
+共通の登録元WAV・queryを与え、queryの取得波形をfull/最大1/2/3/5秒で比較した。内部で使う音声量は別途記録し、
+モデル規模・学習データ・集約方式の差を含む方式比較として解釈する。
+主条件のtest全入力FRRは境界内/文脈付き母音とも4.533%、ECAPA 0.000%。ECAPA−境界内の95% paired CIは
+[−8.933, −2.000] percentage pointsだった。文脈拡張の主条件差は0で、そのCIは[−0.400, 0.400]だった。
+全条件・CI・入力量とJVS/既参照testの限界は[Phase 7比較結果](../poc/phoneme-baseline-comparison/evaluation-results.md)を参照する。
+別日・別端末の条件と新しい独立holdoutでの検証は引き続き後続研究の対象とする。
+
 ## 12. 既知のリスク
 
 - 単音素が短く、十分な話者情報を含まない可能性
@@ -247,4 +255,3 @@ test speakers
 - ユーザープロファイルの保存形式
 - 音素別スコアの統合方法
 - 評価試行と認証閾値の決定方法
-- 既存speaker embeddingベースラインの選定

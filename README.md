@@ -36,7 +36,9 @@ Phase 3では共通encoderの学習と固定validation trialでの登録・照�
 
 Phase 4では固定encoderからユーザー別の母音プロファイルを作成し、保存・読込する処理を実装しました。Phase 5では同じ母音のcosine similarityを母音内で平均し、5母音を等重みで統合する照合処理を実装しました。保存済みプロファイルと別のvalidation音声で、スコア出力・再現性・モデルとプロファイルの不変を確認しています。
 
-Phase 6では、1発話を1入力とする照合をvalidation/test各15話者で評価しました。登録各母音10区間の主条件では、validationでFAR 1%を目標に決めた閾値を固定してtestへ適用し、他人受入率0.729%、本人拒否率2.585%、入力不足を含む本人拒否率4.533%、統合scoreのEER 1.526%でした。JVSの統制収録内での結果であり、別日・別端末での性能は未確認です。次はPhase 7で同じ条件を使い、既存方式と比較します。
+Phase 6では、1発話を1入力とする照合をvalidation/test各15話者で評価しました。登録各母音10区間の主条件では、validationでFAR 1%を目標に決めた閾値を固定してtestへ適用し、他人受入率0.729%、本人拒否率2.585%、入力不足を含む本人拒否率4.533%、統合scoreのEER 1.526%でした。JVSの統制収録内での結果であり、別日・別端末での性能は未確認です。Phase 7の比較も完了しました。
+
+Phase 7では、境界内母音・前後20 msの文脈付き母音・発話全体ECAPAを、同じ登録元WAVと照合発話で比較しました。実行条件とvalidation閾値を凍結し、testの全条件、話者信頼区間、方式差、長さ別の性能と入力不足率を評価しました。主条件の全入力本人拒否率はECAPA 0.000%、母音2方式は4.533%でした。ECAPAが優位でしたが、モデル規模・事前学習・内部の利用音声量も異なるため、音素分割だけの効果は切り分けられません。
 
 ## ドキュメント
 
@@ -51,3 +53,6 @@ Phase 6では、1発話を1入力とする照合をvalidation/test各15話者で
 - [Phase 6: 本人照合の認証性能評価設計](poc/phoneme-verification-evaluation/README.md)
 - [Phase 6: JVS発話単位の認証性能評価結果](poc/phoneme-verification-evaluation/evaluation-results.md)
 - [Phase 6: 評価結果のブラウザ用HTML](poc/phoneme-verification-evaluation/evaluation-results.html)
+
+- [Phase 7: ベースライン比較結果・信頼区間・限界](poc/phoneme-baseline-comparison/evaluation-results.md)
+- [Phase 7: 全条件表と図表のHTML](poc/phoneme-baseline-comparison/evaluation-results.html)
