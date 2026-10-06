@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "protocol_version": "1.0.0",
+  "status": "designed_not_execution_frozen",
+  "issue": "https://github.com/muzin00/phonia/issues/45",
+  "claim_scope": "fixed_system_comparison_not_isolated_phoneme_segmentation_causality",
+  "phase6_reference": {
+    "run": "artifacts/phoneme-verification-evaluation/jvs-utterance-20261005-v1",
+    "execution_sha256": "90c32fe1b9b607b07667cb18f1734f84e5b7ebc3f7b3271d4949d5a268bb05cc",
+    "plan_sha256": "ce3fc570eda931dcf8aa8943a1be4ba199729a282b2fbf599f89d5fd74969b33",
+    "reuse_exact_scores_profiles_and_native_thresholds_if_all_hashes_match": true,
+    "test_exposure": "phase3_and_phase6_test_already_observed_not_new_independent_validation"
+  },
+  "metadata_readiness_inputs": {
+    "speaker_split": {
+      "path": "poc/phoneme-speaker-dataset/config/dataset-split.json",
+      "sha256": "50a4c98be1c46867677e4081db2a03f18fb349ce8c930fb9e37484e5299fe66b"
+    },
+    "utterance_manifest": {
+      "path": "poc/phoneme-speaker-dataset/data/utterance-manifest.jsonl",
+      "sha256": "71d24d1d49d92162b96d4bf8094484f8fd787e4ec0519fc76a58c5a41672db05"
+    },
+    "enrollment": {
+      "path": "artifacts/phoneme-verification-evaluation/jvs-utterance-20261005-v1/inputs/validation/enrollment.jsonl",
+      "sha256": "b94913740d491adecdcb214e34712c63f312936052fe021af0b206a4f1dbb445"
+    },
+    "queries": {
+      "path": "artifacts/phoneme-verification-evaluation/jvs-utterance-20261005-v1/inputs/validation/queries.jsonl",
+      "sha256": "68f67b0dd156e001a28397ad1e7b57ed96d5b186e88a165ed99b830c0efbd9c9"
+    }
+  },
+  "models": {
+    "vowel": {
+      "checkpoint": "phase6_reference_selected_statistics_mlp_seed_20260926",
+      "parameters_embedding_only": 65920,
+      "embedding_dimension": 128,
+      "training_speakers": 70,
+      "runtime_project": "poc/phoneme-verification-evaluation",
+      "torch": "2.14.1",
+      "update_weights_or_feature_statistics": false,
+      "bundle": "artifacts/phoneme-speaker-encoder/comparisons/phase3-full-v2-70spk-3seed-20260927-r2/selection-evaluation/selected-bundle/20260926",
+      "bundle_sha256": {
+        "best.pt": "6351a0491071bf197780434af5ffbe42e5ec51c5ed347409d403d2e0c34180b2",
+        "feature-statistics.json": "1d1f2b50326b396c702a46dd3b6495efb74f6dbdbfc5cc3209e73efdc87e241d",
+        "run.json": "e8b94b554cc21898dc2c744a28cfed907860358a4407c1446770bb11ebfe418e"
+      }
+    },
+    "ecapa": {
+      "model": "speechbrain/spkrec-ecapa-voxceleb",
+      "revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+      "parameters_embedding_only": 20767552,
+      "embedding_dimension": 192,
+      "runtime_project": "poc/phoneme-baseline-comparison",
+      "torch": "2.11.0",
+      "torchaudio": "2.11.0",
+      "preprocessing_and_weight_checksums": "config/embedding-smoke.json",
+      "normalize_embedding_statistics": false,
+      "update_weights_or_feature_statistics": false
+    }
+  },
+  "methods": [
+    {
+      "id": "vowel_exact",
+      "family": "source_matched",
+      "input": "phase6_original_anchors_then_center_crop",
+      "model": "vowel"
+    },
+    {
+      "id": "vowel_context20",
+      "family": "source_matched",
+      "input": "same_anchors_expand_20ms_each_side_then_center_crop",
+      "model": "vowel"
+    },
+    {
+      "id": "ecapa_whole",
+      "family": "source_matched",
+      "input": "whole_source_utterance",
+      "model": "ecapa"
+    },
+    {
+      "id": "ecapa_time_exact",
+      "family": "duration_control",
+      "input": "source_center_window_matching_exact_unique_frames_per_source",
+      "model": "ecapa",
+      "paired_with": "vowel_exact"
+    },
+    {
+      "id": "ecapa_time_context20",
+      "family": "duration_control",
+      "input": "source_center_window_matching_context_unique_frames_per_source",
+      "model": "ecapa",
+      "paired_with": "vowel_context20"
+    }
+  ],
+  "context": {
+    "margin_ms_per_side": 20,
+    "margin_frames_per_side": 480,
+    "source_sample_rate": 24000,
+    "boundary_clip": true,
+    "maximum_frames_after_expansion": 6000,
+    "crop": "floor((expanded_length-6000)/2)_if_longer",
+    "anchor_eligibility": "unchanged_phase6_core_only",
+    "retrain": false,
+    "interpretation": "frozen_encoder_context_input_diagnostic_not_optimized_context_training"
+  },
+  "enrollment": {
+    "counts_per_vowel": [
+      1,
+      5,
+      10
+    ],
+    "primary_count": 10,
+    "selection": "phase6_seed_20260930_rank_prefixes",
+    "ecapa_sources": "unique_source_wavs_of_selected_anchors_at_each_count",
+    "ecapa_source_order": "source_file_lexicographic",
+    "ecapa_aggregation": "float64_equal_mean_of_l2_normalized_source_embeddings_then_l2_normalize",
+    "vowel_aggregation": "phase6_equal_mean_of_l2_normalized_embeddings_per_vowel_then_l2_normalize",
+    "missing_profile": "stop_split_no_speaker_removal"
+  },
+  "audio_matching": {
+    "primary": "same_acquired_enrollment_source_wavs_same_query_wav_not_equal_used_duration",
+    "controlled_budget": "unique_union_of_effective_24khz_intervals_per_source_after_crop",
+    "controlled_window": "start=floor((source_frames-budget_frames)/2),end=start+budget_frames",
+    "zero_budget": "no_score",
+    "waveform_padding_repetition_concatenation": false,
+    "vad_or_silence_trimming": false,
+    "log_unique_and_processed_frames_separately": true,
+    "resampling": "embedding_smoke_settings_crop_at_24khz_then_resample_to_16khz",
+    "post_resampling_rounding": "record_ceil(budget_frames*16000/24000)_and_actual_duration"
+  },
+  "queries_and_trials": {
+    "splits": [
+      "validation",
+      "test"
+    ],
+    "roles": [
+      "verification",
+      "cross_text_verification"
+    ],
+    "query": "one_original_utterance_no_cross_utterance_combination",
+    "expected_speakers_per_split": 15,
+    "genuine_per_query": 1,
+    "impostor_per_query": 14,
+    "reuse_phase6_query_and_trial_ids_labels": true,
+    "condition_score_id": "canonical_json_sha256([protocol_version,method_id,phase6_trial_id])",
+    "vowel_missing_any_of_five": "no_score_do_not_accept",
+    "ecapa_whole": "independent_of_vowel_presence",
+    "invalid_audio_nonfinite_embedding_or_unexpected_exception": "stop_run",
+    "diagnostic_common_support": "predeclared_intersection_of_input_eligible_queries_across_all_five_methods"
+  },
+  "thresholds": {
+    "source": "validation_verification_scored_trials_only",
+    "scope": "method_id_enrollment_count_support_policy",
+    "target_fars": [
+      0.01,
+      0.001
+    ],
+    "eer_operating_threshold": true,
+    "implementation": "phase3_train.metrics_far_target_threshold_and_eer_operating_threshold",
+    "acceptance": "score_gte_threshold",
+    "apply_to": [
+      "test_verification",
+      "validation_cross_text_verification",
+      "test_cross_text_verification"
+    ],
+    "common_support_diagnostic": "recalibrate_on_validation_common_verification_then_fix_for_common_test_and_cross_text",
+    "retune_after_test": false
+  },
+  "metrics": {
+    "primary": "all_input_frr_at_validation_conditional_far_1pct_threshold",
+    "primary_condition": {
+      "split": "test",
+      "role": "verification",
+      "enrollment_count": 10,
+      "family": "source_matched",
+      "support": "all_queries"
+    },
+    "mandatory": [
+      "conditional_frr",
+      "observed_conditional_far",
+      "all_input_far",
+      "all_input_frr",
+      "query_coverage",
+      "counts",
+      "eer",
+      "roc",
+      "det"
+    ],
+    "no_score_in_eer_roc_det": false,
+    "duration_controls_and_common_support": "secondary_report_all_conditions_not_used_for_selection",
+    "query_duration_bins_seconds": [
+      0,
+      3,
+      5,
+      10,
+      null
+    ],
+    "actual_input_duration_bins_seconds": [
+      0,
+      0.5,
+      1,
+      2,
+      5,
+      null
+    ],
+    "empty_or_unscored_stratum": "report_not_evaluable_never_omit",
+    "zero_scored_queries_per_speaker_role": "condition_not_evaluable_no_speaker_removal",
+    "duration_bin_edges": "left_closed_right_open_last_null_is_infinity_no_stratum_recalibration",
+    "paired_duration_strata": "use_reference_vowel_query_unique_duration_for_both_members"
+  },
+  "bootstrap": {
+    "unit": "speaker",
+    "replicates": 10000,
+    "seed": 20260929,
+    "rng": "PCG64",
+    "shared_draws_across_all_methods_and_conditions": true,
+    "genuine_weight": "query_speaker_multiplicity",
+    "impostor_weight": "query_times_claimed_speaker_multiplicity",
+    "threshold_recalibration": false,
+    "interval": "95pct_percentile_numpy_linear",
+    "paired_differences": "each_method_minus_vowel_exact_all_input_frr_and_declared_duration_control_pairs",
+    "redraw": "fewer_than_two_distinct_speakers"
+  },
+  "execution": {
+    "stages": [
+      "prepare",
+      "validation_pilot",
+      "validation",
+      "freeze",
+      "test",
+      "report"
+    ],
+    "pilot": "first_3_validation_speakers_and_extreme_duration_metadata_selected_inputs_all_five_methods_no_test",
+    "freeze_required": [
+      "design_and_protocol",
+      "implementation_and_tests",
+      "runtime_locks",
+      "model_and_statistics",
+      "all_source_checksums",
+      "derived_intervals_and_budgets",
+      "validation_profiles_scores_thresholds",
+      "test_enrollment_query_trial_metadata",
+      "baseline_reuse_artifact_checksums",
+      "resource_plan"
+    ],
+    "design_is_execution_freeze": false,
+    "overwrite_artifacts": false,
+    "failed_run": "retain_failure_and_use_new_run_id_for_changed_code_or_conditions",
+    "inference": {
+      "device": "cpu",
+      "dtype": "float32",
+      "batch_size": 1,
+      "intraop_threads": 1,
+      "interop_threads": 1,
+      "deterministic_algorithms": true
+    },
+    "context_core_quality": "validate_original_phase6_anchor_only_no_expanded_rms_filter",
+    "parity_tolerance_absolute": 1e-12
+  }
+}

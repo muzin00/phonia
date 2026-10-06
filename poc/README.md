@@ -96,7 +96,23 @@ JVSでは別発話での性能を測り、別日・別端末での性能は追�
 
 ### Phase 7: ベースライン比較
 
-同一のデータと評価条件を使用し、既存の話者認証方式と比較する。
+設計・実装・validation pilot・全validation・実行凍結・test・全条件レポートを完了した。
+SpeechBrain ECAPA-TDNN、境界内母音、前後各20 msの文脈付き母音を、同じ登録元WAV・照合発話で比較した。
+登録1/5/10、fullと最大1/2/3/5秒、通常文/別テキスト、native/commonの全360条件を報告した。
+validation/testで計1,620,000 score slotsを生成し、validation通常文から決めた270閾値をtestへ固定適用した。
+10,000回の話者bootstrap CI、792個のpaired差、元発話長と実利用時間の層、60図のPNG/PDFを保存した。
+
+主条件のtest全入力FRRは、境界内母音4.533%、文脈付き母音4.533%、ECAPA 0.000%。
+ECAPA−境界内の差は−4.533 points、95% CI [−8.933, −2.000]だった。
+ECAPAが優位だったが、学習・モデル規模・内部利用音声量も異なり、音素分割の因果効果は評価していない。
+別日/別端末での性能と独立した新holdoutは後続研究の対象となる。
+
+[比較設計](phoneme-baseline-comparison/comparison-design.md)、[再現手順](phoneme-baseline-comparison/README.md)、
+[結果と限界](phoneme-baseline-comparison/evaluation-results.md)、[全条件HTML](phoneme-baseline-comparison/evaluation-results.html)を参照する。
+[モデル選定](phoneme-baseline-comparison/model-selection.md)、[pilot](phoneme-baseline-comparison/validation-pilot-results.md)、
+[全validation](phoneme-baseline-comparison/validation-results.md)も保持する。
+30 msのECAPA登録入力が失敗した[短入力診断](phoneme-baseline-comparison/short-input-results.md)を踏まえ、
+元WAVごとの内部利用時間合わせを撤回し、共通取得波形の長さ上限を比較する設計へ改訂した。
 
 ## 6. 基本方針
 

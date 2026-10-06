@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "purpose": "validation_pipeline_correctness_not_performance_or_threshold_selection",
+  "protocol_sha256": "5169ea422bf53ca11d52b47591befabaed8def7ee2d238de3ef9a0b61167c4ba",
+  "selection": {
+    "split": "validation",
+    "first_speakers": 3,
+    "first_utterance_per_speaker_and_role": true,
+    "additional_per_role": ["shortest", "longest", "first_complete_at_1s"],
+    "ordering": "utterance_id_lexicographic_duration_ties_use_utterance_id",
+    "claimed_speakers": "all_speakers_of_selected_queries"
+  },
+  "repeats_per_unique_embedding": 3,
+  "phase6_trials_sha256": "9773ef4b002d8403a85f76ce85a1ef5cc4f67e7263effbd60289489f416a7dbc",
+  "phase6_validation_scores_sha256": "2c8d19da928ba958ffe68275f9dff46f72dce3343a86b081b9ec72b54be70bf7",
+  "phase6_parity_absolute_tolerance": 1e-12,
+  "calibrate_thresholds": false,
+  "read_test_audio_or_scores": false
+}

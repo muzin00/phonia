@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "purpose": "frozen_test_and_full_phase7_report",
+  "split": "test",
+  "protocol_sha256": "5169ea422bf53ca11d52b47591befabaed8def7ee2d238de3ef9a0b61167c4ba",
+  "validation_run": "artifacts/phoneme-baseline-comparison/validation-20261007-v2",
+  "validation_artifacts_sha256": {
+    "validation-thresholds.json": "03999b8b744e5fc2d05778b04f0e6ea3dd55971ab4a9e1acbd0cd6b055f75b89",
+    "validation-report.json": "a1434a33b43e282f662aa309821c83d28c0ce250eb54f6974a3f6d9b82d77426",
+    "validation-metrics.json": "f81cbd7176e5acc58f60c0b8ce28d16af9ec47fca592546447316895386828f1",
+    "validation-checks.json": "66312ff2d6e7f366ca2f3e76a4726bf180844ea003ee14003c80a3c9718bfdd8"
+  },
+  "repeats_per_unique_embedding": 3,
+  "audio_cache_maximum_sources": 16,
+  "phase6_parity_absolute_tolerance": 1e-12,
+  "supports": [
+    "native",
+    "common"
+  ],
+  "threshold_recalibration": false,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260929,
+  "overwrite_artifacts": false
+}

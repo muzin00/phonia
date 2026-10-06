@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "phase6_exact_full_condition_parity": 6,
+  "phase6_exact_full_ci_interval_parity": 78,
+  "shared_speaker_draws_bitwise_equal": true,
+  "source_test_report_sha256": "a096b0319d8d3ca2afcba545cdc74bc743c3c3573abc9f9a5e94a8ed87138cf4",
+  "published_files_sha256": {
+    "evaluation-results.md": "848bfbc7d64f0d7ee0ad816e0b5ff13be9d61e5b73c0689772b0e8591b7f06e2",
+    "evaluation-results.html": "e418688f8a40be5f3b8582c8c3aae0c2d0873ee1c21d0d9f969329a11832b533",
+    "all-conditions.csv": "53ab91772fbadb85cebc19188eef842cd6a7bbafbd0e88c0a05235b30a72c6b1",
+    "duration-strata.csv": "4452a86f3fa11b99a94b50b0b2f162570a2111b029a5081dc578e8f4ca0da6dc",
+    "paired-differences.csv": "a157ea03a1df372982719ec479997249745f2b558e9bf612a9f936281e45824d",
+    "figures/roc-det-test-native-n10-verification.png": "f85681eff3775c0f3ee5250e9df6325637a0c4bb2de88d6f33a508954cc018b4",
+    "figures/roc-det-test-native-n10-verification.pdf": "8657f694cbc6829dcc737c21622101d4bf60afd5760379c539ad3b188fda9a3e",
+    "figures/duration-test-native-n10-verification.png": "4a0091b4075d25ff26ce1d7bb2e67362a7fb8ceb3acc3ff6ad77ec7f8ca1891a",
+    "figures/duration-test-native-n10-verification.pdf": "559edacf6af35121fd7af3f8af855fcb031f5841a87bc52215329b81583889ed",
+    "figures/fixed-source-duration-test-native-n10-verification.png": "de31b011fe65b524865d10c0e40b1e6b33d5d3074f28c93510742874812b1f6d",
+    "figures/fixed-source-duration-test-native-n10-verification.pdf": "411ce54891396d5a0e95275c01aa3e21b57fa36f6a6673741a91bb1a391e2218",
+    "figures/roc-det-test-native-n10-cross_text_verification.png": "2a65e87108bcd7c6217f901433accf886be686f52e4dbbd5713c28510e137280",
+    "figures/roc-det-test-native-n10-cross_text_verification.pdf": "f785df8f5eef6cfffc058d24e6fbb39be1807d739283435f1cace2dd6b89fa5d",
+    "figures/duration-test-native-n10-cross_text_verification.png": "e75144084892ce4d2878b15ac217f54eb97d1d2f6d9863a78ab20ea6d33c8c37",
+    "figures/duration-test-native-n10-cross_text_verification.pdf": "81f3cafea28a775884fa79321d7114ce94d0a14a0ee34a237d8ca687d7bc6b59",
+    "figures/fixed-source-duration-test-native-n10-cross_text_verification.png": "48fa7b075a47649d43d5b2c13017f76382e09366d43bf8bc31af19c9232b0ef0",
+    "figures/fixed-source-duration-test-native-n10-cross_text_verification.pdf": "218ec7516ce3f0be2f5aafcd24a8b318941a122949d25e7d93f4a651ad042689"
+  },
+  "presentation_revision_manifest_sha256": "62512d3e4b5dd4ca9d83051c2234be2ceffd71121ad815590f80097ecbd35ca5",
+  "presentation_renderer_sha256": "1e40d99df7c1094db7022e595c9e2aafacdaafda4442687c541d5659624da2ff",
+  "table_html": {
+    "status": "passed",
+    "source": "published_fixed_result_CSVs",
+    "condition_rows": 1080,
+    "paired_rows": 792,
+    "duration_rows": 9720,
+    "builder_sha256": "0ce5e0166aa1859e263b541c74d6fe59fad4d8c9b13d3609bcc9e6eb34378d3f",
+    "template_sha256": "9ea86c4c57e24df12b16013f25d6928852ed8bea90222b95d5a3a92d941891ff",
+    "verification_script_sha256": "a64d1bdb9d4291c1c66d5d8be832acfb35ec61cc9ebab00d29406ce777f09768",
+    "embedded_data_and_local_links_checked": true,
+    "javascript_render_filter_sort_detail_pagination_export_checks": "passed",
+    "browser_visual_check": "not_performed_file_URL_blocked_by_browser_security_policy"
+  }
+}

@@ -1,0 +1,22 @@
+[project]
+name = "phoneme-baseline-comparison"
+version = "0.1.0"
+description = "Phase 7 speaker embedding baseline feasibility checks"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy==2.5.3",
+    "torch==2.11.0",
+    "torchaudio==2.11.0",
+    "speechbrain==1.1.1",
+    "huggingface-hub==2.1.1",
+]
+
+[dependency-groups]
+dev = ["ruff==0.16.10"]
+
+[tool.uv]
+package = false
+
+[tool.ruff.lint]
+ignore = ["E402"]
