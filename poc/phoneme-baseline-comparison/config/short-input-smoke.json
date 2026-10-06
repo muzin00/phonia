@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "purpose": "validation_ecapa_short_input_feasibility_not_authentication_evaluation",
+  "protocol": "archive/v1/config/comparison-protocol.json",
+  "protocol_sha256": "15f506a6e4d5d1b357fbcfcce47208b51e3740fcb6fe8e468af6ee3450ab4a78",
+  "embedding_config": "config/embedding-smoke.json",
+  "selection": "shortest_and_longest_per_enrollment_count_or_query_role_and_duration_method",
+  "diagnostic_lengths_ms": [
+    30,
+    40,
+    50,
+    60,
+    70,
+    100
+  ],
+  "repeats": 3,
+  "warmup": "first_longest_actual_input",
+  "error_policy": "record_each_encode_runtime_error_and_continue_diagnostic_only_never_convert_to_no_score",
+  "update_model_or_padding": false,
+  "embedding_config_sha256": "bfdd3ae4b6c18261199e79047196669cb2424148cd237982f782a8c5678f7b3f"
+}

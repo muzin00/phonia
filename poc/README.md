@@ -98,6 +98,16 @@ JVSでは別発話での性能を測り、別日・別端末での性能は追�
 
 同一のデータと評価条件を使用し、既存の話者認証方式と比較する。
 
+発話全体方式の[モデル選定](phoneme-baseline-comparison/model-selection.md)では、
+SpeechBrain ECAPA-TDNNを採用する方針を定めた。
+validationの5話者・11発話で[embedding抽出の動作確認](phoneme-baseline-comparison/smoke-results.md)を完了し、
+反復と別プロセス間での完全一致を確認した。
+[比較設計2.0.0](phoneme-baseline-comparison/comparison-design.md)では、境界内母音・文脈付き母音・発話全体の主比較と、
+照合波形を最大1・2・3・5秒へ制限する補助比較を定義した。登録profileを固定し、全入力FRRを主指標とする。
+[共通区間と母音充足の入力確認](phoneme-baseline-comparison/query-window-readiness.md)は完了し、認証性能の比較測定は未実施。
+ECAPAの[短入力確認](phoneme-baseline-comparison/short-input-results.md)では30 ms登録入力がpaddingエラー、70 msは成功となった。
+元WAVごとの利用時間合わせ2条件を撤回し、旧設計と失敗runを保存した。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。

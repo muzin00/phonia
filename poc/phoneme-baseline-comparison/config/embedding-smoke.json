@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "purpose": "validation_embedding_feasibility_not_authentication_evaluation",
+  "model": {
+    "id": "speechbrain/spkrec-ecapa-voxceleb",
+    "revision": "0f99f2d0ebe89ac095bcc5903c4dd8f72b367286",
+    "files": [
+      "README.md",
+      "hyperparams.yaml",
+      "embedding_model.ckpt",
+      "mean_var_norm_emb.ckpt",
+      "classifier.ckpt",
+      "label_encoder.txt"
+    ],
+    "file_sha256": {
+      "README.md": "00f58c3cbd7a7510de9374080da0e82a4c4e8f4df567f7338fe6efe108be705a",
+      "hyperparams.yaml": "6f78854fa04ba59e761437b76a2575d3aba5e5016de3e9b69f0c9a5077fb1a41",
+      "embedding_model.ckpt": "0575cb64845e6b9a10db9bcb74d5ac32b326b8dc90352671d345e2ee3d0126a2",
+      "mean_var_norm_emb.ckpt": "cd70225b05b37be64fc5a95e24395d804231d43f74b2e1e5a513db7b69b34c33",
+      "classifier.ckpt": "fd9e3634fe68bd0a427c95e354c0c677374f62b3f434e45b78599950d860d535",
+      "label_encoder.txt": "e13c3a167bb4112685670ee896d20e2b565af16b3a4ceeaa8689fa4d22adb8b9"
+    },
+    "dimension": 192,
+    "normalize_embedding_statistics": false
+  },
+  "inputs": {
+    "speaker_split": {
+      "path": "poc/phoneme-speaker-dataset/config/dataset-split.json",
+      "sha256": "50a4c98be1c46867677e4081db2a03f18fb349ce8c930fb9e37484e5299fe66b"
+    },
+    "utterance_manifest": {
+      "path": "poc/phoneme-speaker-dataset/data/utterance-manifest.jsonl",
+      "sha256": "71d24d1d49d92162b96d4bf8094484f8fd787e4ec0519fc76a58c5a41672db05"
+    }
+  },
+  "selection": {
+    "split": "validation",
+    "speaker_count": 3,
+    "speaker_order": "lexicographic",
+    "roles": ["enrollment", "verification", "cross_text_verification"],
+    "utterance_order": "utterance_id",
+    "additional_shortest_per_query_role": 1
+  },
+  "audio": {
+    "source_sample_rate": 24000,
+    "target_sample_rate": 16000,
+    "channels": 1,
+    "sample_width_bytes": 2,
+    "pcm_scaling_divisor": 32768.0,
+    "vad": false,
+    "crop": false,
+    "rms_normalization": false,
+    "resampling_method": "sinc_interp_hann",
+    "lowpass_filter_width": 6,
+    "rolloff": 0.99
+  },
+  "inference": {
+    "device": "cpu",
+    "dtype": "float32",
+    "batch_size": 1,
+    "torch_threads": 1,
+    "torch_interop_threads": 1,
+    "deterministic_algorithms": true,
+    "repeats": 3,
+    "warmup_calls": 1
+  }
+}
