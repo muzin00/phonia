@@ -1,0 +1,12 @@
+{
+  "condition_rows": 36,
+  "paired_rows": 72,
+  "files": {
+    "evaluation-results.html": "528d4a444f5dc145a460a1a5110da7e59c4cb7a1703db12936dd937d365a53f7",
+    "evaluation-results.md": "fd6e2a02ed09768105a9ebb30290638062394d5a54343c544dfa1b6d2eefc98d",
+    "all-conditions.csv": "5f90404e783cec394970cc7f5d547d5a792873fa14f773414f70a35084aeda3e",
+    "paired-differences.csv": "7b424141a4ccbb3d77b1b794df7247237f993c2b22b0d4388a0e1fd1c0fc38e2",
+    "enrollment-scaling.pdf": "6ffdc4a1fb12757e9d6e47357a160b63eb70f35df91e7e583e7767e46d1f7799",
+    "enrollment-scaling.png": "24576d9c21fb271c6e76561f8bc33260d211d99e05008cdbfbd8e554a27046ea"
+  }
+}

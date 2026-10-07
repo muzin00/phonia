@@ -40,6 +40,8 @@ Phase 6では、1発話を1入力とする照合をvalidation/test各15話者で
 
 Phase 7では、境界内母音・前後20 msの文脈付き母音・発話全体ECAPAを、同じ登録元WAVと照合発話で比較しました。実行条件とvalidation閾値を凍結し、testの全条件、話者信頼区間、方式差、長さ別の性能と入力不足率を評価しました。主条件の全入力本人拒否率はECAPA 0.000%、母音2方式は4.533%でした。ECAPAが優位でしたが、モデル規模・事前学習・内部の利用音声量も異なるため、音素分割だけの効果は切り分けられません。
 
+Phase 8の最初の検証として、固定した境界内母音encoderで各母音の登録10・20・30区間を実測しました。目標FAR 1%では10→30で本人拒否率は変わらず、FAR/EERの観測値は低下しました。目標FAR 0.1%では本人拒否率が下がる一方、実測FARは少し上がりました。既に観測したJVS testを使う探索的な追加検証であり、Phase 8の残りの改善と独立holdout評価は未実施です。
+
 ## ドキュメント
 
 - [PoC概要](poc/README.md)
@@ -56,3 +58,5 @@ Phase 7では、境界内母音・前後20 msの文脈付き母音・発話全�
 
 - [Phase 7: ベースライン比較結果・信頼区間・限界](poc/phoneme-baseline-comparison/evaluation-results.md)
 - [Phase 7: 全条件表と図表のHTML](poc/phoneme-baseline-comparison/evaluation-results.html)
+- [Phase 8: 登録10・20・30区間の実測と解釈](poc/phoneme-enrollment-scaling/interpretation.md)
+- [Phase 8: 登録区間数のHTML比較表](poc/phoneme-enrollment-scaling/evaluation-results.html)
