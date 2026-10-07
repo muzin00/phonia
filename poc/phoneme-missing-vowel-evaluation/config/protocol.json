@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "protocol_version": "phase8-missing-vowels-v1",
+  "issue": "https://github.com/muzin00/phonia/issues/47",
+  "claim_scope": "exploratory_on_previously_observed_JVS_test",
+  "enrollment_count_per_vowel": 10,
+  "methods": {"strict5": 5, "available4": 4, "available3": 3},
+  "fusion": "mean_segment_cosine_within_vowel_then_equal_mean_over_present_vowels",
+  "query_window": "full",
+  "calibration": "one_pooled_validation_verification_threshold_per_method_and_operating_point",
+  "operating_points": ["far_1pct", "far_0_1pct", "eer_operating"],
+  "no_score": "reject_and_keep_in_all_input_denominators",
+  "retrain_encoder": false,
+  "change_registration": false,
+  "repeats_per_unique_embedding": 3,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260929,
+  "test_threshold_recalibration": false,
+  "missing_mask_specific_thresholds": false,
+  "synthetic_deletion": false,
+  "prior_run": "artifacts/phoneme-enrollment-scaling/enrollment-20261008-v1",
+  "prior_report_sha256": "d22357cc7a1981258fd36a934241d21e0bbba0596a48d242f13b7cbafdebbb8b"
+}

@@ -122,10 +122,21 @@ validation/test計108,000 trial、10,000回の共有話者bootstrap、72個のpa
 
 目標FAR 1%では10→30で全入力FRRは通常文4.533%、別テキスト14.667%のまま、FAR/EERの観測値は低下した。
 目標FAR 0.1%では全入力FRRは通常文14.533→12.400%、別テキスト28.444→24.222%へ下がったが、実測FARは少し上がった。
-これは既に観測済みのJVS testを使う探索的な追加検証。欠損母音の統合、学習データ増加、子音追加と独立holdout評価は未実施。
+これは既に観測済みのJVS testを使う探索的な追加検証。
 
 [固定条件・再現手順](phoneme-enrollment-scaling/README.md)、[測定結果](phoneme-enrollment-scaling/evaluation-results.md)、
 [結果の解釈](phoneme-enrollment-scaling/interpretation.md)、[HTML比較表](phoneme-enrollment-scaling/evaluation-results.html)を参照する。
+
+2番目の検証として、登録各母音10区間を固定し、照合の5母音必須・4母音以上・3母音以上を実測した。
+4母音以上では主条件の全入力FRRが通常文4.533→2.533%、別テキスト14.667→3.333%へ低下した。
+母音不足の本人発話を通常文15件・別テキスト51件救済し、他人受入は通常文75→77件、別テキスト46→49件へ増えた。
+3母音以上では別テキスト全入力FRRが2.444%まで下がったが、3母音のtest入力は5発話しかない。
+生score、10,000回話者bootstrap、本人救済・既存判定の変化と欠損パターン別の内訳を保存した。
+
+[母音不足対応の固定条件・再現手順](phoneme-missing-vowel-evaluation/README.md)、
+[測定表](phoneme-missing-vowel-evaluation/evaluation-results.md)、[結果の解釈](phoneme-missing-vowel-evaluation/interpretation.md)、
+[HTML比較表](phoneme-missing-vowel-evaluation/evaluation-results.html)を参照する。
+この検証も観測済みJVS testの探索的な追加検証。学習データ増加・子音追加・独立holdout評価は未実施。
 
 ## 6. 基本方針
 
