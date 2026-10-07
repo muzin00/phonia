@@ -114,6 +114,19 @@ ECAPAが優位だったが、学習・モデル規模・内部利用音声量も
 30 msのECAPA登録入力が失敗した[短入力診断](phoneme-baseline-comparison/short-input-results.md)を踏まえ、
 元WAVごとの内部利用時間合わせを撤回し、共通取得波形の長さ上限を比較する設計へ改訂した。
 
+### Phase 8: 音素方式の改善
+
+最初の検証として、境界内母音の登録区間数を各母音10・20・30へ増やす実測を完了した。
+固定encoder・同一の発話全区間で照合し、登録数ごとのvalidation閾値をtestへ固定適用した。
+validation/test計108,000 trial、10,000回の共有話者bootstrap、72個のpaired差を保存した。
+
+目標FAR 1%では10→30で全入力FRRは通常文4.533%、別テキスト14.667%のまま、FAR/EERの観測値は低下した。
+目標FAR 0.1%では全入力FRRは通常文14.533→12.400%、別テキスト28.444→24.222%へ下がったが、実測FARは少し上がった。
+これは既に観測済みのJVS testを使う探索的な追加検証。欠損母音の統合、学習データ増加、子音追加と独立holdout評価は未実施。
+
+[固定条件・再現手順](phoneme-enrollment-scaling/README.md)、[測定結果](phoneme-enrollment-scaling/evaluation-results.md)、
+[結果の解釈](phoneme-enrollment-scaling/interpretation.md)、[HTML比較表](phoneme-enrollment-scaling/evaluation-results.html)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。
