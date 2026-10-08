@@ -150,6 +150,18 @@ Phase 8の学習データ追加では、JVSの70/15/15分割を保持し、Commo
 話者ラベル数・音素区間数・収録環境が同時に増え、観測済みJVS testを使う探索的な比較。独立holdoutは未評価。
 [固定条件と学習結果](../poc/phoneme-training-data-expansion/README.md)、[発話単位評価](../poc/phoneme-training-data-expansion/evaluation-results.md)を参照する。
 
+同じ更新予算で140ラベルに増やすとJVS各話者のbatch選択回数が半減するため、
+続く切り分けでは追加データモデルの採用15,000 updateから30,000 updateまで学習を延長した。
+optimizer・scheduler・sampler・RNGを復元し、データ・特徴統計・encoder・損失・batchを固定した。
+early stoppingを無効にし、採用30,000 updateを追加学習前に固定した。新規条件は1つ、seedは1つ。
+JVS各話者の選択回数は2,142～2,143回となり、現行JVSモデルの採用時点と各話者最大1回差以内だった。
+同じ登録・照合条件のvalidation目標FAR 1%では、全入力FARは通常文2.629→2.657%、別テキスト1.905→2.000%。
+全入力FRRは通常文3.067→2.933%、別テキスト13.556→13.556%で、本人救済は通常文1件のみだった。
+今回の固定scheduleでは学習機会を揃えたことによるFAR改善を確認できなかった。
+途中のvalidationを記録しても採用updateは変更せず、testで閾値を調整していない。
+既存2モデルとのcheckpoint採用規則の違い、学習率が減衰する延長であること、探索的な観測済みtestであることを解釈に含める。
+[切り分けの固定条件](../poc/phoneme-training-exposure-ablation/README.md)、[結果と残る仮説](../poc/phoneme-training-exposure-ablation/interpretation.md)を参照する。
+
 ## 7. 話者表現モデル
 
 共通encoderは多数話者のデータで事前学習し、音素区間から固定長の連続表現を生成する。
