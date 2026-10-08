@@ -1,0 +1,57 @@
+{
+  "additional_data": {
+    "aligned_clips": 8280,
+    "by_vowel": {
+      "a": 54979,
+      "e": 28465,
+      "i": 41284,
+      "o": 47428,
+      "u": 26290
+    },
+    "eligible_segments": 198446,
+    "eligible_vowel_hours": 3.7208361111111112,
+    "excluded_segments": 9623,
+    "selected_clips": 8283,
+    "source_hours": 11.509113333333332,
+    "speakers": 70
+  },
+  "claim_scope": "exploratory_joint_increase_in_pseudonymous_speaker_labels_segments_and_recording_diversity; not_pure_data_volume_scaling",
+  "conditions": [
+    {
+      "completed_updates": 18000,
+      "condition": "jvs70",
+      "encoder_parameters": 65920,
+      "selected_update": 15000,
+      "test_evaluated_in_this_study": false,
+      "training_head_parameters": 8960,
+      "training_segments": 323913,
+      "training_speaker_labels": 70,
+      "validation_macro_eer": 0.09195799523821852
+    },
+    {
+      "completed_updates": 18000,
+      "condition": "jvs70_cv70",
+      "encoder_parameters": 65920,
+      "selected_update": 15000,
+      "test_evaluated_in_this_study": false,
+      "training_head_parameters": 17920,
+      "training_segments": 522359,
+      "training_speaker_labels": 140,
+      "validation_macro_eer": 0.09274044137359984
+    }
+  ],
+  "cross_corpus_person_identity_overlap": "unknown; no_reidentification_attempted",
+  "expanded_process_max_rss_bytes": 1952792576,
+  "expanded_training_elapsed_this_invocation_seconds": 2052.870503208018,
+  "export_reload_bitwise_equal_validation_segments": 8,
+  "new_training_runs": 1,
+  "preparation_failure_count": 3,
+  "seed": 20260926,
+  "source_repository": "masuidrive/cv-corpus-17.0-ja-client_id-grouped",
+  "source_revision": "54e34c20140d041958ef0cbc1f75930eba3f55d8",
+  "status": "completed",
+  "test_evaluated": false,
+  "training_freeze_sha256": "bc11c8651ce395eb0beb9a79cc29f059c2dd4b6abb143eb84e533ea59b719714",
+  "training_summary_sha256": "4b41f0edd1836f608ccbb6a644e897304d8398c3d344256c32e63d7f86b0cb74",
+  "validation_eer_difference_percentage_points": 0.07824461353813233
+}

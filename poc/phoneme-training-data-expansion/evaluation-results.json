@@ -1,0 +1,1193 @@
+{
+  "status": "completed",
+  "conditions": {
+    "jvs70/cross_text_verification": {
+      "queries": 450,
+      "scored_queries": 392,
+      "query_coverage": 0.8711111111111111,
+      "by_speaker": {
+        "jvs003": {
+          "all": 30,
+          "scored": 27
+        },
+        "jvs005": {
+          "all": 30,
+          "scored": 29
+        },
+        "jvs006": {
+          "all": 30,
+          "scored": 27
+        },
+        "jvs010": {
+          "all": 30,
+          "scored": 26
+        },
+        "jvs015": {
+          "all": 30,
+          "scored": 25
+        },
+        "jvs017": {
+          "all": 30,
+          "scored": 25
+        },
+        "jvs024": {
+          "all": 30,
+          "scored": 27
+        },
+        "jvs029": {
+          "all": 30,
+          "scored": 27
+        },
+        "jvs030": {
+          "all": 30,
+          "scored": 29
+        },
+        "jvs032": {
+          "all": 30,
+          "scored": 25
+        },
+        "jvs048": {
+          "all": 30,
+          "scored": 23
+        },
+        "jvs064": {
+          "all": 30,
+          "scored": 26
+        },
+        "jvs065": {
+          "all": 30,
+          "scored": 25
+        },
+        "jvs076": {
+          "all": 30,
+          "scored": 24
+        },
+        "jvs081": {
+          "all": 30,
+          "scored": 27
+        }
+      },
+      "zero_scored_speakers": [],
+      "conditional_status": "evaluable",
+      "conditional_reason": null,
+      "pooled_eer": 0.012572886297376093,
+      "operating_points": {
+        "far_1pct": {
+          "genuine": 392,
+          "impostor": 5488,
+          "false_accepts": 46,
+          "false_rejects": 8,
+          "far": 0.008381924198250729,
+          "frr": 0.02040816326530612,
+          "threshold": 0.4782227879111038,
+          "no_score_genuine": 58,
+          "no_score_impostor": 812,
+          "all_genuine": 450,
+          "all_impostor": 6300,
+          "all_input_far": 0.007301587301587302,
+          "all_input_frr": 0.14666666666666667
+        },
+        "far_0_1pct": {
+          "genuine": 392,
+          "impostor": 5488,
+          "false_accepts": 3,
+          "false_rejects": 70,
+          "far": 0.0005466472303206997,
+          "frr": 0.17857142857142858,
+          "threshold": 0.5413681840933452,
+          "no_score_genuine": 58,
+          "no_score_impostor": 812,
+          "all_genuine": 450,
+          "all_impostor": 6300,
+          "all_input_far": 0.0004761904761904762,
+          "all_input_frr": 0.28444444444444444
+        },
+        "eer_operating": {
+          "genuine": 392,
+          "impostor": 5488,
+          "false_accepts": 21,
+          "false_rejects": 23,
+          "far": 0.003826530612244898,
+          "frr": 0.058673469387755105,
+          "threshold": 0.502508332899292,
+          "no_score_genuine": 58,
+          "no_score_impostor": 812,
+          "all_genuine": 450,
+          "all_impostor": 6300,
+          "all_input_far": 0.0033333333333333335,
+          "all_input_frr": 0.18
+        }
+      },
+      "far_resolution": 0.00018221574344023323,
+      "ci95": {
+        "query_coverage": {
+          "lower": 0.8444444444444444,
+          "upper": 0.9,
+          "valid_replicates": 10000,
+          "undefined_replicates": 0
+        },
+        "operating_points": {
+          "far_1pct": {
+            "all_input_far": {
+              "lower": 0.0,
+              "upper": 0.020875420875420877,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.11555555555555555,
+              "upper": 0.17777777777777778,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0,
+              "upper": 0.024267932275181606,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.002564102564102564,
+              "upper": 0.0479828346758726,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          },
+          "far_0_1pct": {
+            "all_input_far": {
+              "lower": 0.0,
+              "upper": 0.0020408163265306124,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.18888888888888888,
+              "upper": 0.4,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0,
+              "upper": 0.0023510971786833857,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.06735751295336788,
+              "upper": 0.3148614609571788,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          },
+          "eer_operating": {
+            "all_input_far": {
+              "lower": 0.0,
+              "upper": 0.014285714285714285,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.13333333333333333,
+              "upper": 0.24222222222222223,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0,
+              "upper": 0.016477158840426376,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.010178117048346057,
+              "upper": 0.12977347080400511,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          }
+        },
+        "pooled_eer": {
+          "lower": 0.0008126612755411541,
+          "upper": 0.022523369233895536,
+          "valid_replicates": 10000,
+          "undefined_replicates": 0
+        },
+        "conditional_status": "evaluable"
+      }
+    },
+    "jvs70/verification": {
+      "queries": 750,
+      "scored_queries": 735,
+      "query_coverage": 0.98,
+      "by_speaker": {
+        "jvs003": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs005": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs006": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs010": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs015": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs017": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs024": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs029": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs030": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs032": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs048": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs064": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs065": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs076": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs081": {
+          "all": 50,
+          "scored": 49
+        }
+      },
+      "zero_scored_speakers": [],
+      "conditional_status": "evaluable",
+      "conditional_reason": null,
+      "pooled_eer": 0.015257531584062196,
+      "operating_points": {
+        "far_1pct": {
+          "genuine": 735,
+          "impostor": 10290,
+          "false_accepts": 75,
+          "false_rejects": 19,
+          "far": 0.007288629737609329,
+          "frr": 0.02585034013605442,
+          "threshold": 0.4782227879111038,
+          "no_score_genuine": 15,
+          "no_score_impostor": 210,
+          "all_genuine": 750,
+          "all_impostor": 10500,
+          "all_input_far": 0.007142857142857143,
+          "all_input_frr": 0.04533333333333334
+        },
+        "far_0_1pct": {
+          "genuine": 735,
+          "impostor": 10290,
+          "false_accepts": 10,
+          "false_rejects": 94,
+          "far": 0.0009718172983479105,
+          "frr": 0.12789115646258503,
+          "threshold": 0.5413681840933452,
+          "no_score_genuine": 15,
+          "no_score_impostor": 210,
+          "all_genuine": 750,
+          "all_impostor": 10500,
+          "all_input_far": 0.0009523809523809524,
+          "all_input_frr": 0.14533333333333334
+        },
+        "eer_operating": {
+          "genuine": 735,
+          "impostor": 10290,
+          "false_accepts": 34,
+          "false_rejects": 33,
+          "far": 0.003304178814382896,
+          "frr": 0.044897959183673466,
+          "threshold": 0.502508332899292,
+          "no_score_genuine": 15,
+          "no_score_impostor": 210,
+          "all_genuine": 750,
+          "all_impostor": 10500,
+          "all_input_far": 0.0032380952380952383,
+          "all_input_frr": 0.064
+        }
+      },
+      "far_resolution": 9.718172983479106e-05,
+      "ci95": {
+        "query_coverage": {
+          "lower": 0.98,
+          "upper": 0.98,
+          "valid_replicates": 10000,
+          "undefined_replicates": 0
+        },
+        "operating_points": {
+          "far_1pct": {
+            "all_input_far": {
+              "lower": 0.00010204081632653062,
+              "upper": 0.02193978528911563,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.02,
+              "upper": 0.08933333333333333,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.00010412328196584757,
+              "upper": 0.022387536009301663,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.0,
+              "upper": 0.0707482993197279,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          },
+          "far_0_1pct": {
+            "all_input_far": {
+              "lower": 0.0,
+              "upper": 0.006,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.06266666666666666,
+              "upper": 0.24666666666666667,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0,
+              "upper": 0.006122448979591836,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.04353741496598639,
+              "upper": 0.23129251700680273,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          },
+          "eer_operating": {
+            "all_input_far": {
+              "lower": 0.0,
+              "upper": 0.014000543478260862,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.02,
+              "upper": 0.13066666666666665,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0,
+              "upper": 0.014286268855368225,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.0,
+              "upper": 0.11292517006802721,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          }
+        },
+        "pooled_eer": {
+          "lower": 0.0013605442176870747,
+          "upper": 0.02717510795940288,
+          "valid_replicates": 10000,
+          "undefined_replicates": 0
+        },
+        "conditional_status": "evaluable"
+      }
+    },
+    "jvs70_cv70/cross_text_verification": {
+      "queries": 450,
+      "scored_queries": 392,
+      "query_coverage": 0.8711111111111111,
+      "by_speaker": {
+        "jvs003": {
+          "all": 30,
+          "scored": 27
+        },
+        "jvs005": {
+          "all": 30,
+          "scored": 29
+        },
+        "jvs006": {
+          "all": 30,
+          "scored": 27
+        },
+        "jvs010": {
+          "all": 30,
+          "scored": 26
+        },
+        "jvs015": {
+          "all": 30,
+          "scored": 25
+        },
+        "jvs017": {
+          "all": 30,
+          "scored": 25
+        },
+        "jvs024": {
+          "all": 30,
+          "scored": 27
+        },
+        "jvs029": {
+          "all": 30,
+          "scored": 27
+        },
+        "jvs030": {
+          "all": 30,
+          "scored": 29
+        },
+        "jvs032": {
+          "all": 30,
+          "scored": 25
+        },
+        "jvs048": {
+          "all": 30,
+          "scored": 23
+        },
+        "jvs064": {
+          "all": 30,
+          "scored": 26
+        },
+        "jvs065": {
+          "all": 30,
+          "scored": 25
+        },
+        "jvs076": {
+          "all": 30,
+          "scored": 24
+        },
+        "jvs081": {
+          "all": 30,
+          "scored": 27
+        }
+      },
+      "zero_scored_speakers": [],
+      "conditional_status": "evaluable",
+      "conditional_reason": null,
+      "pooled_eer": 0.013301749271137026,
+      "operating_points": {
+        "far_1pct": {
+          "genuine": 392,
+          "impostor": 5488,
+          "false_accepts": 120,
+          "false_rejects": 3,
+          "far": 0.021865889212827987,
+          "frr": 0.007653061224489796,
+          "threshold": 0.511890377051543,
+          "no_score_genuine": 58,
+          "no_score_impostor": 812,
+          "all_genuine": 450,
+          "all_impostor": 6300,
+          "all_input_far": 0.01904761904761905,
+          "all_input_frr": 0.13555555555555557
+        },
+        "far_0_1pct": {
+          "genuine": 392,
+          "impostor": 5488,
+          "false_accepts": 20,
+          "false_rejects": 25,
+          "far": 0.0036443148688046646,
+          "frr": 0.06377551020408163,
+          "threshold": 0.5620713876977838,
+          "no_score_genuine": 58,
+          "no_score_impostor": 812,
+          "all_genuine": 450,
+          "all_impostor": 6300,
+          "all_input_far": 0.0031746031746031746,
+          "all_input_frr": 0.18444444444444444
+        },
+        "eer_operating": {
+          "genuine": 392,
+          "impostor": 5488,
+          "false_accepts": 84,
+          "false_rejects": 3,
+          "far": 0.015306122448979591,
+          "frr": 0.007653061224489796,
+          "threshold": 0.5266617288469663,
+          "no_score_genuine": 58,
+          "no_score_impostor": 812,
+          "all_genuine": 450,
+          "all_impostor": 6300,
+          "all_input_far": 0.013333333333333334,
+          "all_input_frr": 0.13555555555555557
+        }
+      },
+      "far_resolution": 0.00018221574344023323,
+      "ci95": {
+        "query_coverage": {
+          "lower": 0.8444444444444444,
+          "upper": 0.9,
+          "valid_replicates": 10000,
+          "undefined_replicates": 0
+        },
+        "operating_points": {
+          "far_1pct": {
+            "all_input_far": {
+              "lower": 0.0013745704467353953,
+              "upper": 0.05204134231011991,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.10444444444444445,
+              "upper": 0.16666666666666666,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0015929433167095805,
+              "upper": 0.059383775007769424,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.0,
+              "upper": 0.020460358056265986,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          },
+          "far_0_1pct": {
+            "all_input_far": {
+              "lower": 0.0,
+              "upper": 0.011111111111111112,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.13111111111111112,
+              "upper": 0.24444444444444444,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0,
+              "upper": 0.01259061426936284,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.017676767676767676,
+              "upper": 0.12467532467532468,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          },
+          "eer_operating": {
+            "all_input_far": {
+              "lower": 0.0006872852233676976,
+              "upper": 0.03850104166666665,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.10444444444444445,
+              "upper": 0.16666666666666666,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0007945573588889761,
+              "upper": 0.04387792109309123,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.0,
+              "upper": 0.020460358056265986,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          }
+        },
+        "pooled_eer": {
+          "lower": 0.0020397512361417357,
+          "upper": 0.02544529262086514,
+          "valid_replicates": 10000,
+          "undefined_replicates": 0
+        },
+        "conditional_status": "evaluable"
+      }
+    },
+    "jvs70_cv70/verification": {
+      "queries": 750,
+      "scored_queries": 735,
+      "query_coverage": 0.98,
+      "by_speaker": {
+        "jvs003": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs005": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs006": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs010": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs015": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs017": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs024": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs029": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs030": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs032": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs048": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs064": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs065": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs076": {
+          "all": 50,
+          "scored": 49
+        },
+        "jvs081": {
+          "all": 50,
+          "scored": 49
+        }
+      },
+      "zero_scored_speakers": [],
+      "conditional_status": "evaluable",
+      "conditional_reason": null,
+      "pooled_eer": 0.017687074829931974,
+      "operating_points": {
+        "far_1pct": {
+          "genuine": 735,
+          "impostor": 10290,
+          "false_accepts": 276,
+          "false_rejects": 8,
+          "far": 0.026822157434402333,
+          "frr": 0.010884353741496598,
+          "threshold": 0.511890377051543,
+          "no_score_genuine": 15,
+          "no_score_impostor": 210,
+          "all_genuine": 750,
+          "all_impostor": 10500,
+          "all_input_far": 0.026285714285714287,
+          "all_input_frr": 0.030666666666666665
+        },
+        "far_0_1pct": {
+          "genuine": 735,
+          "impostor": 10290,
+          "false_accepts": 50,
+          "false_rejects": 35,
+          "far": 0.004859086491739553,
+          "frr": 0.047619047619047616,
+          "threshold": 0.5620713876977838,
+          "no_score_genuine": 15,
+          "no_score_impostor": 210,
+          "all_genuine": 750,
+          "all_impostor": 10500,
+          "all_input_far": 0.004761904761904762,
+          "all_input_frr": 0.06666666666666667
+        },
+        "eer_operating": {
+          "genuine": 735,
+          "impostor": 10290,
+          "false_accepts": 178,
+          "false_rejects": 13,
+          "far": 0.017298347910592808,
+          "frr": 0.017687074829931974,
+          "threshold": 0.5266617288469663,
+          "no_score_genuine": 15,
+          "no_score_impostor": 210,
+          "all_genuine": 750,
+          "all_impostor": 10500,
+          "all_input_far": 0.01695238095238095,
+          "all_input_frr": 0.037333333333333336
+        }
+      },
+      "far_resolution": 9.718172983479106e-05,
+      "ci95": {
+        "query_coverage": {
+          "lower": 0.98,
+          "upper": 0.98,
+          "valid_replicates": 10000,
+          "undefined_replicates": 0
+        },
+        "operating_points": {
+          "far_1pct": {
+            "all_input_far": {
+              "lower": 0.0017516921795272318,
+              "upper": 0.07148551980198019,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.021333333333333333,
+              "upper": 0.04533333333333334,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0017874409995175837,
+              "upper": 0.07294440796120427,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.0013605442176870747,
+              "upper": 0.02585034013605442,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          },
+          "far_0_1pct": {
+            "all_input_far": {
+              "lower": 0.0,
+              "upper": 0.017755102040816328,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.029333333333333333,
+              "upper": 0.11466666666666667,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0,
+              "upper": 0.018117451062057477,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.009523809523809525,
+              "upper": 0.09659863945578231,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          },
+          "eer_operating": {
+            "all_input_far": {
+              "lower": 0.00030604514533085967,
+              "upper": 0.04919350419084459,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "all_input_frr": {
+              "lower": 0.021333333333333333,
+              "upper": 0.06,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "far": {
+              "lower": 0.0003122909646233262,
+              "upper": 0.05019745325596387,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            },
+            "frr": {
+              "lower": 0.0013605442176870747,
+              "upper": 0.04081632653061224,
+              "valid_replicates": 10000,
+              "undefined_replicates": 0
+            }
+          }
+        },
+        "pooled_eer": {
+          "lower": 0.0027210884353741495,
+          "upper": 0.031552225876675055,
+          "valid_replicates": 10000,
+          "undefined_replicates": 0
+        },
+        "conditional_status": "evaluable"
+      }
+    }
+  },
+  "paired_differences": {
+    "verification/far_1pct/far": {
+      "difference_percentage_points": 1.9533527696793003,
+      "ci95_percentage_points": {
+        "lower": -0.20408163265306123,
+        "upper": 6.027796085823345,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/far_1pct/frr": {
+      "difference_percentage_points": -1.4965986394557822,
+      "ci95_percentage_points": {
+        "lower": -6.258503401360545,
+        "upper": 1.4965986394557824,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/far_1pct/all_input_far": {
+      "difference_percentage_points": 1.9142857142857146,
+      "ci95_percentage_points": {
+        "lower": -0.2,
+        "upper": 5.907240164106879,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/far_1pct/all_input_frr": {
+      "difference_percentage_points": -1.4666666666666672,
+      "ci95_percentage_points": {
+        "lower": -6.133333333333334,
+        "upper": 1.4666666666666668,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/far_0_1pct/far": {
+      "difference_percentage_points": 0.38872691933916426,
+      "ci95_percentage_points": {
+        "lower": -0.28571428571428575,
+        "upper": 1.7220209604460326,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/far_0_1pct/frr": {
+      "difference_percentage_points": -8.027210884353742,
+      "ci95_percentage_points": {
+        "lower": -14.829931972789115,
+        "upper": -2.721088435374149,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/far_0_1pct/all_input_far": {
+      "difference_percentage_points": 0.380952380952381,
+      "ci95_percentage_points": {
+        "lower": -0.28,
+        "upper": 1.6875805412371123,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/far_0_1pct/all_input_frr": {
+      "difference_percentage_points": -7.866666666666668,
+      "ci95_percentage_points": {
+        "lower": -14.533333333333331,
+        "upper": -2.6666666666666665,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/eer_operating/far": {
+      "difference_percentage_points": 1.3994169096209912,
+      "ci95_percentage_points": {
+        "lower": -0.1855760857218583,
+        "upper": 4.597102226324517,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/eer_operating/frr": {
+      "difference_percentage_points": -2.721088435374149,
+      "ci95_percentage_points": {
+        "lower": -8.16326530612245,
+        "upper": 0.40816326530612246,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/eer_operating/all_input_far": {
+      "difference_percentage_points": 1.3714285714285714,
+      "ci95_percentage_points": {
+        "lower": -0.18186456400742113,
+        "upper": 4.5051601817980265,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/eer_operating/all_input_frr": {
+      "difference_percentage_points": -2.6666666666666665,
+      "ci95_percentage_points": {
+        "lower": -8.0,
+        "upper": 0.40000000000000036,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/pooled_eer": {
+      "difference_percentage_points": 0.24295432458697785,
+      "ci95_percentage_points": {
+        "lower": -0.9878095252407718,
+        "upper": 2.0205463435374127,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "verification/query_coverage": {
+      "difference_percentage_points": 0.0,
+      "ci95_percentage_points": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/far_1pct/far": {
+      "difference_percentage_points": 1.348396501457726,
+      "ci95_percentage_points": {
+        "lower": -0.4201975734113871,
+        "upper": 4.492570009134474,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/far_1pct/frr": {
+      "difference_percentage_points": -1.2755102040816324,
+      "ci95_percentage_points": {
+        "lower": -4.060913705583756,
+        "upper": 0.5221932114882507,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/far_1pct/all_input_far": {
+      "difference_percentage_points": 1.1746031746031746,
+      "ci95_percentage_points": {
+        "lower": -0.3645833333333333,
+        "upper": 3.9227405635300348,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/far_1pct/all_input_frr": {
+      "difference_percentage_points": -1.1111111111111098,
+      "ci95_percentage_points": {
+        "lower": -3.5555555555555562,
+        "upper": 0.44444444444444453,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/far_0_1pct/far": {
+      "difference_percentage_points": 0.30976676384839646,
+      "ci95_percentage_points": {
+        "lower": -0.1527315080983971,
+        "upper": 1.1637462224893675,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/far_0_1pct/frr": {
+      "difference_percentage_points": -11.479591836734695,
+      "ci95_percentage_points": {
+        "lower": -20.403151184907212,
+        "upper": -4.03022670025189,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/far_0_1pct/all_input_far": {
+      "difference_percentage_points": 0.2698412698412698,
+      "ci95_percentage_points": {
+        "lower": -0.132013201320132,
+        "upper": 1.0204081632653061,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/far_0_1pct/all_input_frr": {
+      "difference_percentage_points": -10.0,
+      "ci95_percentage_points": {
+        "lower": -18.0,
+        "upper": -3.5555555555555536,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/eer_operating/far": {
+      "difference_percentage_points": 1.1479591836734693,
+      "ci95_percentage_points": {
+        "lower": -0.16722339480551043,
+        "upper": 3.9652848305672994,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/eer_operating/frr": {
+      "difference_percentage_points": -5.1020408163265305,
+      "ci95_percentage_points": {
+        "lower": -12.376237623762377,
+        "upper": -0.2505798077282766,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/eer_operating/all_input_far": {
+      "difference_percentage_points": 1.0,
+      "ci95_percentage_points": {
+        "lower": -0.14709522422830515,
+        "upper": 3.4548930921052627,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/eer_operating/all_input_frr": {
+      "difference_percentage_points": -4.444444444444443,
+      "ci95_percentage_points": {
+        "lower": -10.888888888888888,
+        "upper": -0.22222222222222088,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/pooled_eer": {
+      "difference_percentage_points": 0.07288629737609333,
+      "ci95_percentage_points": {
+        "lower": -0.973075657838297,
+        "upper": 1.2953367875647668,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    },
+    "cross_text_verification/query_coverage": {
+      "difference_percentage_points": 0.0,
+      "ci95_percentage_points": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "valid_replicates": 10000,
+        "undefined_replicates": 0
+      },
+      "comparison": "expanded_minus_baseline; same queries and shared speaker draws; model-specific fixed validation thresholds"
+    }
+  },
+  "protocol": {
+    "schema_version": 1,
+    "protocol_version": "phase8-training-data-evaluation-v1",
+    "issue": "https://github.com/muzin00/phonia/issues/47",
+    "conditions": [
+      "jvs70",
+      "jvs70_cv70"
+    ],
+    "claim_scope": "exploratory_on_previously_observed_JVS_test_with_unknown_cross_corpus_person_overlap",
+    "training_run": "artifacts/phoneme-training-data-expansion/training-data-20261008-v1",
+    "training_summary_sha256": "4b41f0edd1836f608ccbb6a644e897304d8398c3d344256c32e63d7f86b0cb74",
+    "prior_run": "artifacts/phoneme-enrollment-scaling/enrollment-20261008-v1",
+    "prior_report_sha256": "d22357cc7a1981258fd36a934241d21e0bbba0596a48d242f13b7cbafdebbb8b",
+    "enrollment_count_per_vowel": 10,
+    "required_vowels": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o"
+    ],
+    "query_window": "full",
+    "roles": [
+      "verification",
+      "cross_text_verification"
+    ],
+    "fusion": "mean_segment_cosine_within_vowel_then_equal_mean_over_five_vowels",
+    "calibration": "pooled_validation_verification_per_model",
+    "operating_points": [
+      "far_1pct",
+      "far_0_1pct",
+      "eer_operating"
+    ],
+    "acceptance": "score_gte_threshold",
+    "no_score": "reject_and_keep_in_all_input_denominators",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260929,
+    "repeats_per_unique_embedding": 3,
+    "reuse_baseline_scores": true,
+    "test_threshold_recalibration": false,
+    "retrain_encoder": false,
+    "update_feature_statistics": false,
+    "independent_holdout": false
+  },
+  "design_freeze_sha256": "37500902b9c689738b9d8a081349e38203519a78cdd02fb5120796b6e5b12aec",
+  "evaluation_freeze_sha256": "6e9c524b6e9626e3513351fb4cf80aa5a873c09e7dd9a670fc955fc4993800af",
+  "test_metrics_sha256": "0ec6c4605ff8c5a5cdbfa11570437a7b1706ce03f941e2b5c95525cc0bec1969",
+  "test_threshold_recalibrated": false,
+  "independent_holdout": false,
+  "cross_corpus_person_overlap": "unknown"
+}

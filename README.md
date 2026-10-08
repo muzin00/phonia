@@ -42,7 +42,9 @@ Phase 7では、境界内母音・前後20 msの文脈付き母音・発話全�
 
 Phase 8の最初の検証として、固定した境界内母音encoderで各母音の登録10・20・30区間を実測しました。目標FAR 1%では10→30で本人拒否率は変わらず、FAR/EERの観測値は低下しました。目標FAR 0.1%では本人拒否率が下がる一方、実測FARは少し上がりました。既に観測したJVS testを使う探索的な追加検証であり、Phase 8の残りの改善と独立holdout評価は未実施です。
 
-Phase 8の2番目の検証では、登録各母音10区間を固定し、照合の5母音必須・4母音以上・3母音以上を比較しました。4母音以上では主条件の全入力本人拒否率が通常文4.533→2.533%、別テキスト14.667→3.333%へ下がりました。全入力他人受入率は通常文0.714→0.733%、別テキスト0.730→0.778%へ上がり、FARの維持は証明していません。観測済みJVS testでの探索的な結果で、学習データ増加・子音追加・独立holdout評価は未実施です。
+Phase 8の2番目の検証では、登録各母音10区間を固定し、照合の5母音必須・4母音以上・3母音以上を比較しました。4母音以上では主条件の全入力本人拒否率が通常文4.533→2.533%、別テキスト14.667→3.333%へ下がりました。全入力他人受入率は通常文0.714→0.733%、別テキスト0.730→0.778%へ上がり、FARの維持は証明していません。観測済みJVS testでの探索的な結果です。
+
+Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の追加70話者ラベルを含む2条件・1 seedに絞り、追加学習1 runと発話単位評価を完了しました。学習区間は323,913→522,359件、encoderは65,920 parametersで固定しました。18,000 updateで早期終了し、15,000 updateのcheckpointを採用しました。母音単一区間のvalidation macro EERは9.196→9.274%でした。登録各母音10区間・5母音必須の発話単位評価では、validation目標FAR 1%で全入力FRRが通常文4.533→3.067%、別テキスト14.667→13.556%へ下がる一方、全入力FARは0.714→2.629%、0.730→1.905%へ上がりました。今回の探索的な評価では総合的な精度改善を確認できませんでした。子音追加・独立holdoutは未評価です。
 
 ## ドキュメント
 
@@ -64,3 +66,7 @@ Phase 8の2番目の検証では、登録各母音10区間を固定し、照合�
 - [Phase 8: 登録区間数のHTML比較表](poc/phoneme-enrollment-scaling/evaluation-results.html)
 - [Phase 8: 照合時の母音不足への対応と実測の解釈](poc/phoneme-missing-vowel-evaluation/interpretation.md)
 - [Phase 8: 母音不足対応のHTML比較表](poc/phoneme-missing-vowel-evaluation/evaluation-results.html)
+- [Phase 8: 学習データ追加の固定条件と再現手順](poc/phoneme-training-data-expansion/README.md)
+- [Phase 8: 学習データ追加の学習結果HTML](poc/phoneme-training-data-expansion/training-results.html)
+- [Phase 8: 学習データ追加の発話単位評価HTML](poc/phoneme-training-data-expansion/evaluation-results.html)
+- [Phase 8: 学習データ追加の評価結果の解釈](poc/phoneme-training-data-expansion/evaluation-interpretation.md)

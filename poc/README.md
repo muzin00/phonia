@@ -136,7 +136,23 @@ validation/test計108,000 trial、10,000回の共有話者bootstrap、72個のpa
 [母音不足対応の固定条件・再現手順](phoneme-missing-vowel-evaluation/README.md)、
 [測定表](phoneme-missing-vowel-evaluation/evaluation-results.md)、[結果の解釈](phoneme-missing-vowel-evaluation/interpretation.md)、
 [HTML比較表](phoneme-missing-vowel-evaluation/evaluation-results.html)を参照する。
-この検証も観測済みJVS testの探索的な追加検証。学習データ増加・子音追加・独立holdout評価は未実施。
+この検証も観測済みJVS testの探索的な追加検証。
+
+学習データ増加は、現行JVS 70話者と、JVS＋Common Voice日本語70話者ラベルの2条件・1 seedに絞った。
+固定した65,920 parametersのencoderを初期化から追加条件で1 run学習し、18,000 updateで早期終了した。
+学習区間は323,913→522,359件。15,000 updateのcheckpointを採用し、推論用重みの再読込も検証した。
+母音単一区間のvalidation macro EERは9.196→9.274%で、今回のvalidationでは改善を確認できなかった。
+
+追加データで話者ラベル数・区間数・収録環境が同時に変わる。匿名client_idとJVS評価話者の実在人物の重複は確認できない。
+testは学習・checkpoint選択に使用せず、固定した2モデルの発話単位評価まで完了した。
+登録各母音10区間・5母音必須、validation目標FAR 1%の閾値で全入力FRRは通常文4.533→3.067%、別テキスト14.667→13.556%へ下がった。
+全入力FARは0.714→2.629%、0.730→1.905%へ上がり、FARを維持した精度改善は確認できなかった。
+主条件の対応付き差の95% CIはいずれも0を含む。観測済みJVS testの探索的な結果で、母音不足対応との組み合わせ・子音追加・独立holdoutは未評価。
+
+[学習データ追加の固定条件・再現手順](phoneme-training-data-expansion/README.md)、
+[学習結果](phoneme-training-data-expansion/training-results.md)、[HTML比較表](phoneme-training-data-expansion/training-results.html)を参照する。
+[発話単位の評価表](phoneme-training-data-expansion/evaluation-results.md)、
+[発話単位HTML](phoneme-training-data-expansion/evaluation-results.html)、[評価の解釈](phoneme-training-data-expansion/evaluation-interpretation.md)を参照する。
 
 ## 6. 基本方針
 
