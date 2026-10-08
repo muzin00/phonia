@@ -46,6 +46,8 @@ Phase 8の2番目の検証では、登録各母音10区間を固定し、照合�
 
 Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の追加70話者ラベルを含む2条件・1 seedに絞り、追加学習1 runと発話単位評価を完了しました。学習区間は323,913→522,359件、encoderは65,920 parametersで固定しました。18,000 updateで早期終了し、15,000 updateのcheckpointを採用しました。母音単一区間のvalidation macro EERは9.196→9.274%でした。登録各母音10区間・5母音必須の発話単位評価では、validation目標FAR 1%で全入力FRRが通常文4.533→3.067%、別テキスト14.667→13.556%へ下がる一方、全入力FARは0.714→2.629%、0.730→1.905%へ上がりました。今回の探索的な評価では総合的な精度改善を確認できませんでした。子音追加・独立holdoutは未評価です。
 
+続く切り分けでは、同じ追加データモデルを30,000 updateまで延長し、JVS各話者のbatch選択回数を現行モデルの2,142〜2,143回に揃えました。新規条件は1つ・1 seed。全入力FARは通常文2.629→2.657%、別テキスト1.905→2.000%で、学習延長によるFAR改善は確認できませんでした。全入力FRRは通常文で1件分の3.067→2.933%、別テキスト13.556→13.556%でした。固定した学習率scheduleでの探索的な結果であり、最適な学習予算・収録条件・モデル容量は未切り分けです。
+
 ## ドキュメント
 
 - [PoC概要](poc/README.md)
@@ -70,3 +72,5 @@ Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の�
 - [Phase 8: 学習データ追加の学習結果HTML](poc/phoneme-training-data-expansion/training-results.html)
 - [Phase 8: 学習データ追加の発話単位評価HTML](poc/phoneme-training-data-expansion/evaluation-results.html)
 - [Phase 8: 学習データ追加の評価結果の解釈](poc/phoneme-training-data-expansion/evaluation-interpretation.md)
+- [Phase 8: 学習回数を揃えた切り分けのHTML比較表](poc/phoneme-training-exposure-ablation/evaluation-results.html)
+- [Phase 8: 学習回数の切り分けと残る仮説](poc/phoneme-training-exposure-ablation/interpretation.md)

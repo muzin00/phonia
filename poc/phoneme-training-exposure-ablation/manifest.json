@@ -1,0 +1,12 @@
+{
+  "files": {
+    "all-conditions.csv": "f85824b19d95fcdff951ac110bf536a2c96009222d8ed16eb05aba165170e5d6",
+    "diagnostics.json": "f2b265627afe828b808155317fb2236d41fb26d087536718182706ef427fd140",
+    "evaluation-results.html": "82bd78032172e7517501669c974598d844941ee23b2dcc6ef9705431bd18eec3",
+    "evaluation-results.json": "919a64b0666533e1a14243135fe020d74c54f960a6ff4b01ef3e281cefcd025b",
+    "evaluation-results.md": "efbef74516e6d2d4ec1b7419e4a7e9bddf80ca779488e0f0d207714689d80f50",
+    "paired-differences.csv": "5a6c8fe001b7b34ab7e29cdec843c7765ef2ba5cebfdd21c2e3c75a52ce9f3d0"
+  },
+  "status": "completed",
+  "study_report_sha256": "2e22d1ba6c23cb69b6c2d8bff51cc8b4050c7604bafbf20ab740fb6ce4348f12"
+}

@@ -154,6 +154,15 @@ testは学習・checkpoint選択に使用せず、固定した2モデルの発�
 [発話単位の評価表](phoneme-training-data-expansion/evaluation-results.md)、
 [発話単位HTML](phoneme-training-data-expansion/evaluation-results.html)、[評価の解釈](phoneme-training-data-expansion/evaluation-interpretation.md)を参照する。
 
+学習機会の減少を切り分けるため、追加データモデルを15,000→30,000 updateまで同じ状態から延長した。
+JVS各話者のbatch選択回数は現行モデルと同じ2,142～2,143回、各話者の差は最大1回だった。
+データ・特徴統計・encoder・損失・batch・学習率scheduleを固定し、新規条件は1つ・1 seedに限定した。
+validation目標FAR 1%で全入力FARは通常文2.629→2.657%、別テキスト1.905→2.000%となり、改善は確認できなかった。
+全入力FRRは通常文3.067→2.933%、別テキスト13.556→13.556%。通常文で本人1件を救済した。
+学習機会半減だけが原因という仮説は弱まったが、最適な学習予算・学習率やコーパス・モデル容量の影響は未検証。
+[固定条件と再現手順](phoneme-training-exposure-ablation/README.md)、[HTML比較表](phoneme-training-exposure-ablation/evaluation-results.html)、
+[切り分けの解釈](phoneme-training-exposure-ablation/interpretation.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。
