@@ -1,0 +1,3 @@
+condition,training_speaker_labels,training_segments,encoder_parameters,training_head_parameters,completed_updates,selected_update,validation_macro_eer,test_evaluated_in_this_study
+jvs70,70,323913,65920,8960,18000,15000,0.09195799523821852,False
+jvs70_cv70,140,522359,65920,17920,18000,15000,0.09274044137359984,False

@@ -1,0 +1,11 @@
+{
+  "status": "completed",
+  "files": {
+    "evaluation-conditions.csv": "02d20bb262756e4f6480c0fbe622236f6c3e8dd7a1e34fd32787e464cf555d25",
+    "evaluation-paired-differences.csv": "8700c8f2846c7f09357f93e5968c049dfd4a6427c3e170a36a7e3dc79e3b4329",
+    "evaluation-results.html": "439eecb8a9e4611f9973d1a664ee389d93d6c1abada8c92e53c1a78ec56ad825",
+    "evaluation-results.json": "1c57831db96fffb92bb39266a5bad288dd1d058a311df2da7750bf2e39593685",
+    "evaluation-results.md": "b2e4feb94db0fc9dd0437b84915166c9067338b8a17eff9e8bcf34bf1b968567"
+  },
+  "study_report_sha256": "481311ba8d5bc9ce24079b1cf95bb43c9e85ddca52c03d10f77e90490cadf57b"
+}
