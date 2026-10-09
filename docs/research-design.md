@@ -162,6 +162,22 @@ JVS各話者の選択回数は2,142～2,143回となり、現行JVSモデルの�
 既存2モデルとのcheckpoint採用規則の違い、学習率が減衰する延長であること、探索的な観測済みtestであることを解釈に含める。
 [切り分けの固定条件](../poc/phoneme-training-exposure-ablation/README.md)、[結果と残る仮説](../poc/phoneme-training-exposure-ablation/interpretation.md)を参照する。
 
+別コーパスSRC4VCを使う追加学習では、原録音の発話だけを対象にし、歌唱と音声復元版を除外した。
+100話者を固定seedのhashで並べ、70話者をtrain、15話者ずつを今後のvalidation/testに予約した。
+JVSの70/15/15分割を保持し、SRC4VCの予約30話者は区間抽出・特徴統計・学習・validationに使用していない。
+新規条件はJVS70＋SRC4VC70の1つ、seedは20260926の1つ、encoderは65,920 parametersで固定した。
+3,500発話から追加91,358母音区間を得て、JVSを含む合計415,271区間で初期化から30,000 updateを学習した。
+同じ採用30,000 updateのCommon Voice版とのJVS validation macro EER比較は9.228→8.887%だった。
+両条件の初期encoder・optimizer設定・最大更新数・scheduleは同じで、JVS各話者の学習機会も現行JVSモデルと最大1回差以内だった。
+ただし、追加データ量・話し方・収録条件・特徴統計も変わるため、人口属性の偏りだけを切り分ける実験ではない。
+後続の発話単位test評価では、CV版との全入力FAR比較は通常文2.657→1.714%、別テキスト2.000→1.413%だった。
+全入力FRRは通常文2.933→2.400%、別テキスト13.556→13.778%。主比較の差の95% CIはいずれも0を含む。
+現行JVSモデルよりFARは高く、極端な性能向上や総合的な優位性を確認した結果とは扱わない。
+1 seed・観測済みJVS testの探索的な結果で、SRC4VC予約話者と新しい独立holdoutは未評価。
+[発話単位評価と解釈](../poc/phoneme-src4vc-evaluation/interpretation.md)を参照する。
+実在人物のコーパス間重複は未確認である。
+[SRC4VCの固定条件](../poc/phoneme-src4vc-training/README.md)、[学習比較表](../poc/phoneme-src4vc-training/training-results.html)を参照する。
+
 ## 7. 話者表現モデル
 
 共通encoderは多数話者のデータで事前学習し、音素区間から固定長の連続表現を生成する。

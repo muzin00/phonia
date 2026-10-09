@@ -1,0 +1,158 @@
+{
+  "status": "completed",
+  "protocol_version": "phase8-src4vc-v1",
+  "seed": 20260926,
+  "training_conditions": [
+    {
+      "condition": "JVS70 現行モデル（参考）",
+      "speakers": 70,
+      "updates": 15000,
+      "selection": "既存のvalidation best",
+      "validation_macro_eer_pct": 9.19579952382185
+    },
+    {
+      "condition": "JVS70 + Common Voice70",
+      "speakers": 140,
+      "updates": 30000,
+      "selection": "事前固定30,000",
+      "validation_macro_eer_pct": 9.227881256462386
+    },
+    {
+      "condition": "JVS70 + SRC4VC70",
+      "speakers": 140,
+      "updates": 30000,
+      "selection": "事前固定30,000",
+      "validation_macro_eer_pct": 8.887416936276095
+    }
+  ],
+  "src4vc_minus_cv_validation_eer_percentage_points": -0.3404643201862907,
+  "preparation": {
+    "status": "completed",
+    "speakers": 70,
+    "selected_clips": 3500,
+    "aligned_clips": 3499,
+    "eligible_segments": 91358,
+    "excluded_segments": 13787,
+    "failures": [
+      {
+        "schema_version": 1,
+        "design_version": "1.0.0",
+        "utterance_id": "src4vc016__jvnvhappiness_029",
+        "speaker_id": "ext_src4vc016",
+        "source_file": "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/audio/ext_src4vc016/src4vc016__jvnvhappiness_029.wav",
+        "split": "train",
+        "evaluation_role": "training",
+        "stage": "julius_alignment",
+        "error_type": "RuntimeError",
+        "reason": "Julius search failed: no alignment candidate",
+        "log_file": "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/alignments/failures/ext_src4vc016/src4vc016__jvnvhappiness_029.log"
+      }
+    ],
+    "by_vowel": {
+      "o": 22016,
+      "a": 26355,
+      "u": 11556,
+      "e": 11561,
+      "i": 19870
+    },
+    "subset_clips": {
+      "CALLS": 350,
+      "JVNV": 2100,
+      "RECITATION": 700,
+      "STUDIES": 350
+    },
+    "source_hours": 7.252058784722222,
+    "eligible_vowel_hours": 1.963936111111111,
+    "g2p_version": "0.4.1",
+    "source_split": "train",
+    "reserved_audio_read": false,
+    "selection_without_evaluation_metrics": true,
+    "train_gender_labels": {
+      "女性": 43,
+      "男性": 27
+    },
+    "train_age_years": {
+      "count": 70,
+      "min": 21.0,
+      "max": 68.0,
+      "mean": 39.214285714285715
+    },
+    "train_device_labels": {
+      "Android Xperia 10V": 1,
+      "iPhone SE": 5,
+      "Android OPPO A54 5G": 2,
+      "iPhone 7": 2,
+      "iPhone 12": 2,
+      "iPhone SE 2": 1,
+      "iPhone 12 Pro": 1,
+      "iPhone SE 2 ": 6,
+      "Android OPPO Reno3 A": 1,
+      "Android OPPO Reno7 A": 3,
+      "Android Google Pixel 6a": 1,
+      "iPhone 13": 8,
+      "iPhone 11": 5,
+      "Android GRATINA KYV48": 2,
+      "iPhone 13 Pro": 1,
+      "iPhone SE 3": 1,
+      "iPhone XS": 1,
+      "Android Galaxy S10+ SC-04L": 1,
+      "Android Google Pixel 6": 1,
+      "Android OPPO Reno5 A": 2,
+      "iPhone 15 Pro": 1,
+      "iPhone 14 Pro": 2,
+      "Android AQUOS wish SHG06": 1,
+      "iPhone 8": 4,
+      "Android SONY Xperia 10 IV (XQ-CC44)": 1,
+      "Android Xperia 5 II": 1,
+      "Android Galaxy S9+ SC-03K": 1,
+      "Android A001KC": 1,
+      "iPhone 11 Pro": 2,
+      "Android Xperia XZ1": 1,
+      "iPhone 13 Pro Max": 1,
+      "iPhone SE2": 1,
+      "Android Galaxy S9": 1,
+      "Android AQUOS sense3 lite": 1,
+      "Android OPPO A5": 1,
+      "iPhone 13 mini": 1,
+      "Android OPPO A73": 1,
+      "Android Pixel 6a": 1
+    },
+    "outputs_sha256": {
+      "additional-segments.jsonl": "0b01ed62527b97b5f5e5572b0bbbd8ee767f4d2e4ed640daa86bdbbc91415106",
+      "additional-utterances.jsonl": "0cdfa835cc659385627aa6603e5141b5d2a876d3f2dd64bbab2c24a8fb62718f",
+      "selection.json": "9eb871c8d7c81cc3b585571fff16ec8aa3c54c143edea114f3f906c43011929d",
+      "speaker-splits.json": "37baf2489f734d06a53776e5431a2413972d4117f5372d19837e4abfd16125b9",
+      "source/manifest.json": "5e4e3a6aab6aabc9b811c07a842bf9d2c3eedde526c5fa259aa6eda1a0878fc3"
+    }
+  },
+  "exposure": {
+    "jvs_label_batch_count_max": 2143,
+    "jvs_label_batch_count_min": 2142,
+    "jvs_label_batch_count_total": 150001,
+    "maximum_jvs_difference_from_baseline": 1,
+    "src4vc_label_batch_count_total": 149999
+  },
+  "encoder_parameters": 65920,
+  "embedding_dimension": 128,
+  "initial_encoder_sha256": "841de783fccf41cf60b338768796f4432360a90847f3c007e480a71f15fb465b",
+  "export_reload_bitwise_equal_validation_segments": 8,
+  "test_used": false,
+  "findings": [
+    "同じJVS validation 15話者・各母音10区間登録で測る、母音別EERの平均。小さいほど良い。",
+    "SRC4VC版とCommon Voice版の差は -0.340 percentage points。1 seedでの観測値で、統計的な優位性は未検証。",
+    "発話全体を集約したtest FAR/FRRは今回は測定していない。過去の発話単位評価との数値の直接比較はできない。",
+    "SRC4VC予約30話者は区間抽出・特徴統計・学習・validationに使っていない。JVSのtrain/validation/test分割も保持した。",
+    "追加データの量、話し方、収録条件、特徴統計が同時に変わるため、年齢・性別の偏りだけを切り分ける実験ではない。",
+    "追加コーパスとJVSの実在人物の重複は未確認。異なる話者ラベルだけでは同一人物でないことを保証できない。"
+  ],
+  "artifact_directory": "artifacts/phoneme-src4vc-training/src4vc-20261009-v1",
+  "source_url": "https://y-saito.sakura.ne.jp/sython/Corpus/SRC4VC/index.html",
+  "evidence_sha256": {
+    "poc/phoneme-src4vc-training/config/protocol.json": "702058924a0994ce8658e6eacbc1bedd40ef10464e819b191baa9c578045c866",
+    "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/training-freeze.json": "3d6c63f8b8be67d973970a520be9d1055e2b4c63e72217d097625949a2be8911",
+    "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/expanded/training/summary.json": "4902c706b5ea39e7e374162d9e3ec766099d4d7e0a335950ce4a9b143bf7b2e6",
+    "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/preparation-report.json": "4e0867aa0a1b826619b9f7297a4bdf5b8cc597c2eab78022efde1ebc59de7273",
+    "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/expanded/run.json": "44834466cc8d4aa2bb8f468fc67228131328c020dcc2e6e23bb206913cc36cfc",
+    "artifacts/phoneme-training-exposure-ablation/exposure-20261008-v1/expanded/training/summary.json": "83ff408230789ff7f6c2b982c467d4100dab616d3437d25712b09929bd3628d9"
+  }
+}

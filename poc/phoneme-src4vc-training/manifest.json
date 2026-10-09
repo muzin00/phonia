@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "inputs": {
+    "poc/phoneme-src4vc-training/config/protocol.json": "702058924a0994ce8658e6eacbc1bedd40ef10464e819b191baa9c578045c866",
+    "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/training-freeze.json": "3d6c63f8b8be67d973970a520be9d1055e2b4c63e72217d097625949a2be8911",
+    "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/expanded/training/summary.json": "4902c706b5ea39e7e374162d9e3ec766099d4d7e0a335950ce4a9b143bf7b2e6",
+    "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/preparation-report.json": "4e0867aa0a1b826619b9f7297a4bdf5b8cc597c2eab78022efde1ebc59de7273",
+    "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/expanded/run.json": "44834466cc8d4aa2bb8f468fc67228131328c020dcc2e6e23bb206913cc36cfc",
+    "artifacts/phoneme-training-exposure-ablation/exposure-20261008-v1/expanded/training/summary.json": "83ff408230789ff7f6c2b982c467d4100dab616d3437d25712b09929bd3628d9"
+  },
+  "outputs": {
+    "training-results.json": "4bc6ec1000d8225c464e13b0cefe659fdfb4118c1149b80883514e92de09c401",
+    "training-results.md": "53a120e033f647a77b0946baaf6e25cc5025406721c5b19980c0a3b2a45ac739",
+    "training-results.html": "231726092f2706b433855b425a5399f294bcccd72988f1c395bf311a8a8cc539",
+    "training-comparison.csv": "76a2396796dcfed7a64d3b6ecb4055e7145f69b149b1f252f593b32e3792a7c8"
+  }
+}

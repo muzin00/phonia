@@ -48,6 +48,8 @@ Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の�
 
 続く切り分けでは、同じ追加データモデルを30,000 updateまで延長し、JVS各話者のbatch選択回数を現行モデルの2,142〜2,143回に揃えました。新規条件は1つ・1 seed。全入力FARは通常文2.629→2.657%、別テキスト1.905→2.000%で、学習延長によるFAR改善は確認できませんでした。全入力FRRは通常文で1件分の3.067→2.933%、別テキスト13.556→13.556%でした。固定した学習率scheduleでの探索的な結果であり、最適な学習予算・収録条件・モデル容量は未切り分けです。
 
+別コーパスSRC4VCの原録音から追加70話者を選び、JVS70＋SRC4VC70の1条件・1 seedで30,000 updateの学習を完了しました。JVSを含む学習可能な母音は415,271区間です。同じ30,000 updateのCommon Voice版とのvalidation macro EER比較は9.228→8.887%でした。データ量・話し方・収録条件・特徴統計も変わる探索的な比較で、属性の偏りだけを原因とする結果ではありません。後続の発話単位評価まで完了し、CV版との全入力FAR比較は通常文2.657→1.714%、別テキスト2.000→1.413%でした。全入力FRRは通常文2.933→2.400%、別テキスト13.556→13.778%。主比較の差の95% CIはいずれも0を含み、明確な優位性は確認できませんでした。
+
 ## ドキュメント
 
 - [PoC概要](poc/README.md)
@@ -74,3 +76,7 @@ Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の�
 - [Phase 8: 学習データ追加の評価結果の解釈](poc/phoneme-training-data-expansion/evaluation-interpretation.md)
 - [Phase 8: 学習回数を揃えた切り分けのHTML比較表](poc/phoneme-training-exposure-ablation/evaluation-results.html)
 - [Phase 8: 学習回数の切り分けと残る仮説](poc/phoneme-training-exposure-ablation/interpretation.md)
+- [Phase 8: SRC4VCでの学習条件と再現手順](poc/phoneme-src4vc-training/README.md)
+- [Phase 8: SRC4VCの学習結果HTML比較表](poc/phoneme-src4vc-training/training-results.html)
+- [Phase 8: SRC4VCの発話単位評価HTML](poc/phoneme-src4vc-evaluation/evaluation-results.html)
+- [Phase 8: SRC4VC評価の解釈](poc/phoneme-src4vc-evaluation/interpretation.md)

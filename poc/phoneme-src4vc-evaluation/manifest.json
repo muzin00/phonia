@@ -1,0 +1,12 @@
+{
+  "status": "completed",
+  "files": {
+    "all-conditions.csv": "a5d8485d5464d46c541c781d843df1b00a36456e44bd69694a1af081b6d96999",
+    "diagnostics.json": "a70814ef18f47f6660ed8a4d1a94e2987e38fe69124834bfe343e0bc568640a0",
+    "evaluation-results.html": "e13517cb5e7b918967afd0e10cf43c743f559958e108b52ee3ac59c949b68a26",
+    "evaluation-results.json": "dbb35f9d5f80c5cb566843a8b89249da572a67d1cba9f94c8e3515f93d72fce0",
+    "evaluation-results.md": "fadd93bce56ff0247ff2ad08a3c8b1fed1e54224bcce224845ad614864aa8477",
+    "paired-differences.csv": "942fbe78c03c4e8b0b760c135e884a5a7ab05d5cadfedbfb55ecaac4a2acd2ab"
+  },
+  "study_report_sha256": "992929d97d7b2edcfe3a83408d3eaefbbbd4f68676cfdc1797fb4f848180a5bf"
+}

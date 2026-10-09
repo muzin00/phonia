@@ -1,0 +1,4 @@
+condition,speakers,updates,selection,validation_macro_eer_pct
+JVS70 現行モデル（参考）,70,15000,既存のvalidation best,9.19579952382185
+JVS70 + Common Voice70,140,30000,"事前固定30,000",9.227881256462386
+JVS70 + SRC4VC70,140,30000,"事前固定30,000",8.887416936276095

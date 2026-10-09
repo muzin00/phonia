@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "protocol_version": "phase8-src4vc-evaluation-v1",
+  "issue": "https://github.com/muzin00/phonia/issues/47",
+  "conditions": [
+    "jvs70_u15000",
+    "cv70_u30000",
+    "src70_u30000"
+  ],
+  "claim_scope": "one_seed_exploratory_corpus_change_on_previously_observed_JVS_test; not_independent_holdout; not_pure_demographic_bias_ablation",
+  "training_run": "artifacts/phoneme-src4vc-training/src4vc-20261009-v1",
+  "training_summary_sha256": "4902c706b5ea39e7e374162d9e3ec766099d4d7e0a335950ce4a9b143bf7b2e6",
+  "enrollment_count_per_vowel": 10,
+  "required_vowels": [
+    "a",
+    "i",
+    "u",
+    "e",
+    "o"
+  ],
+  "query_window": "full",
+  "roles": [
+    "verification",
+    "cross_text_verification"
+  ],
+  "fusion": "mean_segment_cosine_within_vowel_then_equal_mean_over_five_vowels",
+  "calibration": "pooled_validation_verification_per_model",
+  "operating_points": [
+    "far_1pct",
+    "far_0_1pct",
+    "eer_operating"
+  ],
+  "acceptance": "score_gte_threshold",
+  "no_score": "reject_and_keep_in_all_input_denominators",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260929,
+  "repeats_per_unique_embedding": 3,
+  "reuse_baseline_scores": true,
+  "test_threshold_recalibration": false,
+  "retrain_encoder": false,
+  "update_feature_statistics": false,
+  "independent_holdout": false,
+  "source_evaluation_run": "artifacts/phoneme-training-exposure-ablation/evaluation-20261008-v1",
+  "source_evaluation_report_sha256": "2e22d1ba6c23cb69b6c2d8bff51cc8b4050c7604bafbf20ab740fb6ce4348f12",
+  "primary_comparison": "src70_u30000_minus_cv70_u30000",
+  "reference_training_run": "artifacts/phoneme-training-exposure-ablation/exposure-20261008-v1",
+  "baseline_run": "artifacts/phoneme-speaker-encoder/comparisons/phase3-full-v2-70spk-3seed-20260927-r2/runs/full-c70-s20260926__log_mel__statistics_mlp__rms-off__aam_softmax_plus_supcon_within_vowel",
+  "new_inference_conditions": 1,
+  "checkpoint_selection": "fixed_30000_selected_before_training"
+}
