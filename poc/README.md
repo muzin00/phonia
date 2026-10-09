@@ -163,6 +163,18 @@ validation目標FAR 1%で全入力FARは通常文2.629→2.657%、別テキス�
 [固定条件と再現手順](phoneme-training-exposure-ablation/README.md)、[HTML比較表](phoneme-training-exposure-ablation/evaluation-results.html)、
 [切り分けの解釈](phoneme-training-exposure-ablation/interpretation.md)を参照する。
 
+別コーパスのSRC4VCでは、歌唱・復元音声を除いた原録音を使用した。
+100話者を固定hashで70/15/15に分割し、予約30話者の音声は区間抽出・特徴統計・学習・validationに使わなかった。
+train 70話者・3,500発話のうち3,499発話を抽出でき、追加91,358区間、JVSを含む合計415,271区間となった。
+同一初期化・encoder・scheduleの1条件・1 seedを30,000 updateまで学習し、JVS validationを完了した。
+同じ採用30,000 updateのCommon Voice版とのvalidation macro EER比較は9.228→8.887%。
+データ量・話し方・収録条件・特徴統計が同時に変わる探索的な観測である。
+続く発話単位test評価では、CV版との全入力FAR比較が通常文2.657→1.714%、別テキスト2.000→1.413%となった。
+全入力FRRは通常文2.933→2.400%、別テキスト13.556→13.778%。主比較の差の95% CIはいずれも0を含む。
+現行JVSモデルよりはFARが高く、総合的な優位性を確認した結果ではない。
+[発話単位HTML比較表](phoneme-src4vc-evaluation/evaluation-results.html)、[結果の解釈](phoneme-src4vc-evaluation/interpretation.md)を参照する。
+[固定条件と再現手順](phoneme-src4vc-training/README.md)、[学習結果HTML](phoneme-src4vc-training/training-results.html)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。
