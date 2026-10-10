@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "protocol_version": "voicing-fourteen-phone-evaluation-v1",
+  "conditions": [
+    "vowels5",
+    "vowels_mn",
+    "vowels_tk",
+    "vowels_dg"
+  ],
+  "condition_phones": {
+    "vowels5": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o"
+    ],
+    "vowels_mn": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o",
+      "m",
+      "n"
+    ],
+    "vowels_tk": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o",
+      "t",
+      "k"
+    ],
+    "vowels_dg": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o",
+      "d",
+      "g"
+    ]
+  },
+  "phonemes": [
+    "a",
+    "i",
+    "u",
+    "e",
+    "o",
+    "m",
+    "n",
+    "t",
+    "d",
+    "k",
+    "g",
+    "s",
+    "z",
+    "h"
+  ],
+  "training_run": "artifacts/phoneme-voicing-comparison/training-14phones-20261010-v1",
+  "reference_inputs": "artifacts/phoneme-training-exposure-ablation/evaluation-20261008-v1",
+  "support": "common11; all primary phones available and four plans fit with post-plan RMS QC before inference",
+  "enrollment_cap_frames": 72000,
+  "query_cap_frames": 24000,
+  "minimum_consonant_rms_dbfs": -50,
+  "enrollment_candidates_per_consonant": 10,
+  "selection_seed": 20261010,
+  "mn_crop": "unchanged_raw_qc_then_plan_center250",
+  "fusion": "equal_mean_of_phone_mean_segment_cosines",
+  "calibration": "each_condition_validation_verification_only",
+  "operating_points": [
+    "far_1pct",
+    "far_0_1pct",
+    "eer_operating"
+  ],
+  "primary_metrics": [
+    "far_1pct/all_input_far",
+    "far_1pct/all_input_frr",
+    "pooled_eer"
+  ],
+  "paired_comparisons": "all_six_pairs; exploratory_unadjusted_ci",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260929,
+  "reuse_prior_baseline_scores": false,
+  "test_previously_observed": true,
+  "independent_holdout": false,
+  "run_directory": "artifacts/phoneme-voicing-comparison/evaluation-matched-20261010-v2",
+  "additional_crop": "center250_before_qc; identical_to_frozen_review_and_training_policy",
+  "stop_budget_crop": "end_anchored_within_candidate_only_if_shortened_by_time_budget",
+  "post_plan_rms_qc": "all_conditions; drop_query_if_any_selected_slice_below_minus50dbfs",
+  "diagnostics": {
+    "pairs": {
+      "td": [
+        "t",
+        "d"
+      ],
+      "kg": [
+        "k",
+        "g"
+      ],
+      "sz": [
+        "s",
+        "z"
+      ],
+      "sh": [
+        "s",
+        "h"
+      ]
+    },
+    "enrollment_candidates_per_phone_maximum": 10,
+    "minimum_enrollment_candidates_per_phone": 2,
+    "enrollment_count": "same_within_pair_and_speaker; up_to_ten_post_crop_QC_accepted_rank_pairs",
+    "enrollment_budget": "sum_of_rankwise_minimum_capacities; same_count_and_duration_at_each_rank",
+    "query_count_per_phone": 1,
+    "query_selection": "first_seeded_rank_pair_passing_matched_crop_RMS_QC; one_token_each",
+    "support": "pair_specific_common_queries_fixed_before_inference",
+    "primary_pairs": [
+      "td",
+      "kg"
+    ],
+    "primary_role": "verification",
+    "primary_metric": "pooled_eer",
+    "primary_ci_confidence": 0.975,
+    "primary_family_size": 2,
+    "run_directory": "artifacts/phoneme-voicing-comparison/diagnostics-matched-20261010-v2"
+  },
+  "enrollment_budget_step_frames": 120,
+  "enrollment_budget_selection": "largest_5ms_grid_budget_at_or_below_cap_whose_four_plans_pass_post_crop_RMS; no_embeddings"
+}

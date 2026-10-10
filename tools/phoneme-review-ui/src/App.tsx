@@ -46,6 +46,12 @@ type FileExportState =
 
 export default function App() {
   const datasetUrl = useMemo(() => getDatasetUrl(), [])
+  const listenOnly = useMemo(
+    () =>
+      import.meta.env.PHONIA_REVIEW_MODE === 'listen' ||
+      new URL(window.location.href).searchParams.get('mode') === 'listen',
+    [],
+  )
   const [reloadCount, setReloadCount] = useState(0)
   const [loadState, setLoadState] = useState<LoadState>({ status: 'loading' })
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -67,11 +73,13 @@ export default function App() {
 
     void (async () => {
       const dataset = await loadReviewDataset(datasetUrl, controller.signal)
-      const records = await loadLatestReviewRecords(
-        dataset.datasetId,
-        dataset.datasetVersion,
-        controller.signal,
-      )
+      const records = listenOnly
+        ? []
+        : await loadLatestReviewRecords(
+            dataset.datasetId,
+            dataset.datasetVersion,
+            controller.signal,
+          )
       const fileDrafts: Record<string, ReviewDraft> = {}
       const loadedFileStates: Record<string, ItemFileState> = {}
       records.forEach((record) => {
@@ -79,7 +87,7 @@ export default function App() {
         loadedFileStates[record.itemId] = 'saved'
       })
 
-      const localState = safelyLoadLocalReviewState(dataset)
+      const localState = listenOnly ? null : safelyLoadLocalReviewState(dataset)
       const loadedDrafts = { ...fileDrafts }
       if (localState !== null) {
         Object.entries(localState.drafts).forEach(([itemId, draft]) => {
@@ -114,10 +122,10 @@ export default function App() {
       })
 
     return () => controller.abort()
-  }, [datasetUrl, reloadCount])
+  }, [datasetUrl, listenOnly, reloadCount])
 
   useEffect(() => {
-    if (loadState.status !== 'loaded') {
+    if (listenOnly || loadState.status !== 'loaded') {
       return
     }
     safelySaveLocalReviewState(
@@ -125,7 +133,7 @@ export default function App() {
       currentIndex,
       drafts,
     )
-  }, [currentIndex, drafts, loadState])
+  }, [currentIndex, drafts, listenOnly, loadState])
 
   if (loadState.status === 'loading') {
     return <LoadingScreen datasetUrl={datasetUrl} />
@@ -165,6 +173,7 @@ export default function App() {
       dataset={dataset}
       item={item}
       currentIndex={currentIndex}
+      listenOnly={listenOnly}
       draft={drafts[item.id] ?? createEmptyReviewDraft()}
       onDraftChange={(draft) => {
         const previousDraft = drafts[item.id] ?? createEmptyReviewDraft()
@@ -238,6 +247,7 @@ export default function App() {
         setCurrentIndex((index) => Math.min(dataset.items.length - 1, index + 1))
       }
       onSelectAudioFile={(firstItemIndex) => setCurrentIndex(firstItemIndex)}
+      onSelectItem={setCurrentIndex}
     />
   )
 }
@@ -246,6 +256,7 @@ function ReviewScreen({
   dataset,
   item,
   currentIndex,
+  listenOnly,
   draft,
   onDraftChange,
   fileExportState,
@@ -254,10 +265,12 @@ function ReviewScreen({
   onPrevious,
   onNext,
   onSelectAudioFile,
+  onSelectItem,
 }: {
   dataset: ReviewDataset
   item: ReviewItem
   currentIndex: number
+  listenOnly: boolean
   draft: ReviewDraft
   onDraftChange: (draft: ReviewDraft) => void
   fileExportState: FileExportState
@@ -266,6 +279,7 @@ function ReviewScreen({
   onPrevious: () => void
   onNext: () => void
   onSelectAudioFile: (firstItemIndex: number) => void
+  onSelectItem: (index: number) => void
 }) {
   const availableCandidates = item.candidates.filter(
     (candidate): candidate is Extract<
@@ -289,47 +303,72 @@ function ReviewScreen({
           <h1>{dataset.title}</h1>
         </div>
         <div className="header-controls">
-          <label className="audio-file-selector">
-            <span>音声ファイル</span>
-            <select
-              value={item.utterance.audioUrl}
-              onChange={(event) => {
-                const option = audioFiles.find(
-                  (audioFile) => audioFile.audioUrl === event.target.value,
-                )
-                if (option !== undefined) {
-                  onSelectAudioFile(option.firstItemIndex)
+          {listenOnly ? (
+            <label className="audio-file-selector">
+              <span>試聴区間</span>
+              <select
+                value={currentIndex}
+                onChange={(event) => onSelectItem(Number(event.target.value))}
+              >
+                {dataset.items.map((reviewItem, index) => (
+                  <option key={reviewItem.id} value={index}>
+                    {index + 1}. /{reviewItem.target.label}/ · {reviewItem.target.tags.join(' · ')}
+                  </option>
+                ))}
+              </select>
+            </label>
+          ) : (
+            <label className="audio-file-selector">
+              <span>音声ファイル</span>
+              <select
+                value={item.utterance.audioUrl}
+                onChange={(event) => {
+                  const option = audioFiles.find(
+                    (audioFile) => audioFile.audioUrl === event.target.value,
+                  )
+                  if (option !== undefined) {
+                    onSelectAudioFile(option.firstItemIndex)
+                  }
+                }}
+              >
+                {audioFiles.map((audioFile) => (
+                  <option key={audioFile.audioUrl} value={audioFile.audioUrl}>
+                    {audioFile.label}（{audioFile.itemCount}区間）
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
+          {!listenOnly && (
+            <div className="file-export-control">
+              <button
+                type="button"
+                className="button button-secondary"
+                disabled={
+                  exportableCount === 0 || fileExportState.status === 'saving'
                 }
-              }}
-            >
-              {audioFiles.map((audioFile) => (
-                <option key={audioFile.audioUrl} value={audioFile.audioUrl}>
-                  {audioFile.label}（{audioFile.itemCount}区間）
-                </option>
-              ))}
-            </select>
-          </label>
-          <div className="file-export-control">
-            <button
-              type="button"
-              className="button button-secondary"
-              disabled={
-                exportableCount === 0 || fileExportState.status === 'saving'
-              }
-              onClick={onExport}
-            >
-              {fileExportState.status === 'saving'
-                ? 'JSONLへ保存中…'
-                : `JSONLへ保存（${exportableCount}件）`}
-            </button>
-            <FileExportStatus state={fileExportState} />
-          </div>
+                onClick={onExport}
+              >
+                {fileExportState.status === 'saving'
+                  ? 'JSONLへ保存中…'
+                  : `JSONLへ保存（${exportableCount}件）`}
+              </button>
+              <FileExportStatus state={fileExportState} />
+            </div>
+          )}
           <p className="progress" aria-label="レビュー進捗">
             <strong>{currentIndex + 1}</strong>
             <span>/ {dataset.items.length}</span>
           </p>
         </div>
       </header>
+
+      {listenOnly && (
+        <p className="listen-notice">
+          試聴のみ：回答・現在位置は保存しません。区間だけを聴き、必要に応じて前後
+          {Math.round(dataset.playback.contextPaddingSec * 1000)}msや原音声で位置を確認してください。
+        </p>
+      )}
 
       <nav className="review-navigation" aria-label="レビュー項目の移動">
         <button
@@ -397,7 +436,9 @@ function ReviewScreen({
             <p className="section-label">Candidates</p>
             <h2 id="candidates-heading">候補区間</h2>
           </div>
-          <p className="supporting-text">モデル名は匿名化されています</p>
+          <p className="supporting-text">
+            {listenOnly ? '対象音素と切り出し位置を確認' : 'モデル名は匿名化されています'}
+          </p>
         </div>
         {selectedCandidate !== undefined && (
           <WaveformPanel
@@ -418,7 +459,7 @@ function ReviewScreen({
         </div>
       </section>
 
-      {selectedCandidateId !== undefined && (
+      {!listenOnly && selectedCandidateId !== undefined && (
         <EvaluationForm
           form={dataset.form}
           candidates={availableCandidates}

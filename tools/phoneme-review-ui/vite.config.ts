@@ -27,11 +27,18 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
 
   return {
+    define: {
+      'import.meta.env.PHONIA_REVIEW_MODE': JSON.stringify(
+        env.PHONIA_REVIEW_MODE === 'listen' ? 'listen' : 'review',
+      ),
+    },
     plugins: [
       react(),
       datasetServerPlugin(env.PHONIA_REVIEW_DATASET || defaultDataset),
       mediaServerPlugin(env.PHONIA_REVIEW_MEDIA_ROOT || defaultMediaRoot),
-      reviewApiPlugin(env.PHONIA_REVIEW_OUTPUT || defaultReviewOutput),
+      ...(env.PHONIA_REVIEW_MODE === 'listen'
+        ? []
+        : [reviewApiPlugin(env.PHONIA_REVIEW_OUTPUT || defaultReviewOutput)]),
     ],
   }
 })
