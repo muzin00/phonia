@@ -95,3 +95,4 @@ Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の�
 - [子音の切り分け: 母音5種＋m/n/sの共通encoder学習](poc/phoneme-consonant-combination-training/training-results.md)
 - [子音の切り分け: m+n・m+s・n+sのHTML比較表](poc/phoneme-consonant-combination-evaluation/evaluation-results.html)
 - [子音の切り分け: 組み合わせの評価結果と解釈](poc/phoneme-consonant-combination-evaluation/interpretation.md)
+- [子音の切り分け: m+n+s（8音素）の追加比較](poc/phoneme-consonant-triple-evaluation/interpretation.md)
