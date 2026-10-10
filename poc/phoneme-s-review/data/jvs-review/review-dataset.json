@@ -1,0 +1,2862 @@
+{
+  "schemaVersion": 2,
+  "datasetId": "jvs-s-post-qc-training-review",
+  "datasetVersion": "20261010-v1-center250-seed20261010-n100",
+  "title": "JVS /s/ 学習前レビュー（自動チェック後100区間）",
+  "protocol": {
+    "id": "phoneme-audibility-training-review",
+    "version": "1"
+  },
+  "playback": {
+    "contextPaddingSec": 0.1
+  },
+  "form": {
+    "candidateQuestions": [
+      {
+        "id": "perceived_content",
+        "prompt": "「候補Aだけ再生」で、表示された音素は聞こえますか？",
+        "choices": [
+          {
+            "value": "target_phoneme",
+            "label": "表示された音素が聞こえる"
+          },
+          {
+            "value": "target_with_other",
+            "label": "表示された音素と隣接する音が聞こえる"
+          },
+          {
+            "value": "other_only",
+            "label": "別の音だけが聞こえる"
+          },
+          {
+            "value": "near_silence",
+            "label": "ほぼ音が聞こえない"
+          },
+          {
+            "value": "uncertain",
+            "label": "判断できない"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": {
+      "prompt": "切り出し位置も確認して、この区間を表示された音素の学習データとして利用できますか？",
+      "choices": [
+        {
+          "value": "accepted",
+          "label": "利用できる"
+        },
+        {
+          "value": "rejected",
+          "label": "利用できない"
+        },
+        {
+          "value": "uncertain",
+          "label": "判断できない"
+        }
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "jvs050_nonpara30_ut-paraphrase-sent304-phrase2--phone-001-s--center-10380-2640",
+      "utterance": {
+        "id": "jvs050_nonpara30_ut-paraphrase-sent304-phrase2",
+        "text": "作者は、会社と日々の生活の表情との違いを埋めるものとして詩を書いてきたと語り、人は、転勤のときにサラリーマンを離れた表情を持つと言う。",
+        "audioUrl": "/media/utterances/jvs050_nonpara30_ut-paraphrase-sent304-phrase2.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.4325,
+            "endSec": 0.5425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs084_parallel100_voiceactress100_058--phone-037-s--center-129900-2400",
+      "utterance": {
+        "id": "jvs084_parallel100_voiceactress100_058",
+        "text": "スウェーデン移民の両親の許に、マサチューセッツ州、ケンブリッジにて生まれる。",
+        "audioUrl": "/media/utterances/jvs084_parallel100_voiceactress100_058.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 37,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.4125,
+            "endSec": 5.5125
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs060_parallel100_voiceactress100_002--phone-050-s--center-128460-3600",
+      "utterance": {
+        "id": "jvs060_parallel100_voiceactress100_002",
+        "text": "ニューイングランド風は、牛乳をベースとした、白いクリームスープであり、ボストンクラムチャウダーとも呼ばれる。",
+        "audioUrl": "/media/utterances/jvs060_parallel100_voiceactress100_002.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 50,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 150ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.3525,
+            "endSec": 5.5025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs055_parallel100_voiceactress100_087--phone-018-s--center-44220-1920",
+      "utterance": {
+        "id": "jvs055_parallel100_voiceactress100_087",
+        "text": "福岡ダイエーホークスではなく、長距離砲の補強を目指していた、大阪近鉄バファローズから、オファーを受けて入団。",
+        "audioUrl": "/media/utterances/jvs055_parallel100_voiceactress100_087.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.8425,
+            "endSec": 1.9225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs051_parallel100_voiceactress100_015--phone-029-s--center-78780-1920",
+      "utterance": {
+        "id": "jvs051_parallel100_voiceactress100_015",
+        "text": "一方で、漁業と商業で、リャネス港は繁栄していた。",
+        "audioUrl": "/media/utterances/jvs051_parallel100_voiceactress100_015.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 29,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.2825,
+            "endSec": 3.3625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs019_parallel100_voiceactress100_085--phone-070-s--center-148380-2880",
+      "utterance": {
+        "id": "jvs019_parallel100_voiceactress100_085",
+        "text": "遺灰のほとんどは、スウェーデン西海岸の、ブーヒュースレーン地方の小島にある漁村、フヤルバッカ周辺の海に、散骨された。",
+        "audioUrl": "/media/utterances/jvs019_parallel100_voiceactress100_085.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 70,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.1825,
+            "endSec": 6.3025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs044_parallel100_voiceactress100_092--phone-050-s--center-118140-1680",
+      "utterance": {
+        "id": "jvs044_parallel100_voiceactress100_092",
+        "text": "紫外線は、表面エネルギーの、小さいポリマーを接着する際の、前処理に利用される。",
+        "audioUrl": "/media/utterances/jvs044_parallel100_voiceactress100_092.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 50,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.9225,
+            "endSec": 4.9925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs088_parallel100_voiceactress100_054--phone-033-s--center-76860-2400",
+      "utterance": {
+        "id": "jvs088_parallel100_voiceactress100_054",
+        "text": "裕福なニューヨーカー達は、グレーヴセンド、競馬場や、シープシェッドベイ、競馬場などに集い、海沿いの高級レストランや、ホテルを利用した。",
+        "audioUrl": "/media/utterances/jvs088_parallel100_voiceactress100_054.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 33,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.2025,
+            "endSec": 3.3025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs055_parallel100_voiceactress100_052--phone-050-s--center-124140-2400",
+      "utterance": {
+        "id": "jvs055_parallel100_voiceactress100_052",
+        "text": "学校や病院などの、給食業務で、栄養素を計算する上で、重要な資料のひとつである。",
+        "audioUrl": "/media/utterances/jvs055_parallel100_voiceactress100_052.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 50,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.1725,
+            "endSec": 5.2725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs061_parallel100_voiceactress100_080--phone-047-s--center-85020-2400",
+      "utterance": {
+        "id": "jvs061_parallel100_voiceactress100_080",
+        "text": "かすかに聞こえてくる1931年版の讃美歌が、次第に大きくなっていく。",
+        "audioUrl": "/media/utterances/jvs061_parallel100_voiceactress100_080.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 47,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.5425,
+            "endSec": 3.6425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs039_nonpara30_loanword128_024--phone-026-s--center-72540-2640",
+      "utterance": {
+        "id": "jvs039_nonpara30_loanword128_024",
+        "text": "大胆に行こうと思ったが、リスクを考えすぎてチキった。",
+        "audioUrl": "/media/utterances/jvs039_nonpara30_loanword128_024.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 26,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.0225,
+            "endSec": 3.1325
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs097_parallel100_voiceactress100_052--phone-050-s--center-134940-2880",
+      "utterance": {
+        "id": "jvs097_parallel100_voiceactress100_052",
+        "text": "学校や病院などの、給食業務で、栄養素を計算する上で、重要な資料のひとつである。",
+        "audioUrl": "/media/utterances/jvs097_parallel100_voiceactress100_052.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 50,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.6225,
+            "endSec": 5.7425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs013_parallel100_voiceactress100_019--phone-058-s--center-153420-1920",
+      "utterance": {
+        "id": "jvs013_parallel100_voiceactress100_019",
+        "text": "ベルガートーア前の、ヴェディゲンウーファーパークには、戦争と弾圧の犠牲者のための記念碑が建っている。",
+        "audioUrl": "/media/utterances/jvs013_parallel100_voiceactress100_019.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 58,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.3925,
+            "endSec": 6.4725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs098_parallel100_voiceactress100_052--phone-047-s--center-123660-2640",
+      "utterance": {
+        "id": "jvs098_parallel100_voiceactress100_052",
+        "text": "学校や病院などの、給食業務で、栄養素を計算する上で、重要な資料のひとつである。",
+        "audioUrl": "/media/utterances/jvs098_parallel100_voiceactress100_052.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 47,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.1525,
+            "endSec": 5.2625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs050_parallel100_voiceactress100_003--phone-049-s--center-104940-2400",
+      "utterance": {
+        "id": "jvs050_parallel100_voiceactress100_003",
+        "text": "コンピュータゲームのメーカーや、業界団体などに関連する人物のカテゴリ。",
+        "audioUrl": "/media/utterances/jvs050_parallel100_voiceactress100_003.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 49,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.3725,
+            "endSec": 4.4725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs012_parallel100_voiceactress100_036--phone-055-s--center-131820-2880",
+      "utterance": {
+        "id": "jvs012_parallel100_voiceactress100_036",
+        "text": "番組冒頭を、東京ムービー製作のアニメーションで、表現する点も、共通していた。",
+        "audioUrl": "/media/utterances/jvs012_parallel100_voiceactress100_036.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 55,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.4925,
+            "endSec": 5.6125
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs049_parallel100_voiceactress100_076--phone-081-s--center-263820-3120",
+      "utterance": {
+        "id": "jvs049_parallel100_voiceactress100_076",
+        "text": "ディオニューソスの、寵愛を受ける、オイネウス王と、妃、アルタイアーの間に、カリュドーンの王女として、生を受けた。",
+        "audioUrl": "/media/utterances/jvs049_parallel100_voiceactress100_076.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 81,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 10.9925,
+            "endSec": 11.1225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs054_parallel100_voiceactress100_077--phone-082-s--center-233580-2880",
+      "utterance": {
+        "id": "jvs054_parallel100_voiceactress100_077",
+        "text": "大西洋上の、巡航高度から、動力なしで、地上へ滑空飛行し、緊急着陸に成功した。",
+        "audioUrl": "/media/utterances/jvs054_parallel100_voiceactress100_077.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 82,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 9.7325,
+            "endSec": 9.8525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs018_parallel100_voiceactress100_057--phone-016-s--center-40140-3120",
+      "utterance": {
+        "id": "jvs018_parallel100_voiceactress100_057",
+        "text": "このジェシー役でステイモスは、エミー賞にノミネートされたこともある。",
+        "audioUrl": "/media/utterances/jvs018_parallel100_voiceactress100_057.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 16,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.6725,
+            "endSec": 1.8025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_parallel100_voiceactress100_072--phone-058-s--center-140940-1920",
+      "utterance": {
+        "id": "jvs001_parallel100_voiceactress100_072",
+        "text": "ブラッグは、ビューエル軍よりも、劣勢だったために、この機会を生かすことを躊躇した。",
+        "audioUrl": "/media/utterances/jvs001_parallel100_voiceactress100_072.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 58,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.8725,
+            "endSec": 5.9525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs018_parallel100_voiceactress100_084--phone-079-s--center-281580-3360",
+      "utterance": {
+        "id": "jvs018_parallel100_voiceactress100_084",
+        "text": "少年時代は、ロシア帝国、チェルニーヒウ県、プルィルークィ郡、トロスチャヌィーツャ村で過ごした。",
+        "audioUrl": "/media/utterances/jvs018_parallel100_voiceactress100_084.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 79,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 11.7325,
+            "endSec": 11.8725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs061_parallel100_voiceactress100_029--phone-053-s--center-114780-1680",
+      "utterance": {
+        "id": "jvs061_parallel100_voiceactress100_029",
+        "text": "現在の滑走を目的とした、スキーブーツは、硬いプラスチックシェルと、柔らかいインナーブーツからなる。",
+        "audioUrl": "/media/utterances/jvs061_parallel100_voiceactress100_029.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 53,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.7825,
+            "endSec": 4.8525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs098_parallel100_voiceactress100_085--phone-044-s--center-119580-3360",
+      "utterance": {
+        "id": "jvs098_parallel100_voiceactress100_085",
+        "text": "遺灰のほとんどは、スウェーデン西海岸の、ブーヒュースレーン地方の小島にある漁村、フヤルバッカ周辺の海に、散骨された。",
+        "audioUrl": "/media/utterances/jvs098_parallel100_voiceactress100_085.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 44,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.9825,
+            "endSec": 5.1225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs069_nonpara30_basic5000_0100--phone-016-s--center-38940-3600",
+      "utterance": {
+        "id": "jvs069_nonpara30_basic5000_0100",
+        "text": "棚を片付けなさい、そうすれば、本をそこへ置けます。",
+        "audioUrl": "/media/utterances/jvs069_nonpara30_basic5000_0100.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 16,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 150ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.6225,
+            "endSec": 1.7725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs093_parallel100_voiceactress100_002--phone-029-s--center-80460-1920",
+      "utterance": {
+        "id": "jvs093_parallel100_voiceactress100_002",
+        "text": "ニューイングランド風は、牛乳をベースとした、白いクリームスープであり、ボストンクラムチャウダーとも呼ばれる。",
+        "audioUrl": "/media/utterances/jvs093_parallel100_voiceactress100_002.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 29,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.3525,
+            "endSec": 3.4325
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs018_parallel100_voiceactress100_063--phone-033-s--center-92700-2640",
+      "utterance": {
+        "id": "jvs018_parallel100_voiceactress100_063",
+        "text": "大当り終了後は、グラディエーターチャンスに突入する。",
+        "audioUrl": "/media/utterances/jvs018_parallel100_voiceactress100_063.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 33,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.8625,
+            "endSec": 3.9725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs018_parallel100_voiceactress100_067--phone-060-s--center-175260-3120",
+      "utterance": {
+        "id": "jvs018_parallel100_voiceactress100_067",
+        "text": "デッドキーは、タイプライターや、コンピュータのキーボードにおける、特殊な装飾キーである。",
+        "audioUrl": "/media/utterances/jvs018_parallel100_voiceactress100_067.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 60,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.3025,
+            "endSec": 7.4325
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs091_parallel100_voiceactress100_013--phone-001-s--center-12060-2640",
+      "utterance": {
+        "id": "jvs091_parallel100_voiceactress100_013",
+        "text": "そこへ、オーナーが新しいシェフとして、腕利きのヒョヌクを招く。",
+        "audioUrl": "/media/utterances/jvs091_parallel100_voiceactress100_013.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.5025,
+            "endSec": 0.6125
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs054_parallel100_voiceactress100_087--phone-018-s--center-40140-1920",
+      "utterance": {
+        "id": "jvs054_parallel100_voiceactress100_087",
+        "text": "福岡ダイエーホークスではなく、長距離砲の補強を目指していた、大阪近鉄バファローズから、オファーを受けて入団。",
+        "audioUrl": "/media/utterances/jvs054_parallel100_voiceactress100_087.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.6725,
+            "endSec": 1.7525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs020_parallel100_voiceactress100_036--phone-028-s--center-60300-1920",
+      "utterance": {
+        "id": "jvs020_parallel100_voiceactress100_036",
+        "text": "番組冒頭を、東京ムービー製作のアニメーションで、表現する点も、共通していた。",
+        "audioUrl": "/media/utterances/jvs020_parallel100_voiceactress100_036.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 28,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.5125,
+            "endSec": 2.5925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs062_parallel100_voiceactress100_029--phone-053-s--center-131580-1920",
+      "utterance": {
+        "id": "jvs062_parallel100_voiceactress100_029",
+        "text": "現在の滑走を目的とした、スキーブーツは、硬いプラスチックシェルと、柔らかいインナーブーツからなる。",
+        "audioUrl": "/media/utterances/jvs062_parallel100_voiceactress100_029.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 53,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.4825,
+            "endSec": 5.5625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs067_nonpara30_travel1000_0212--phone-001-s--center-12780-1680",
+      "utterance": {
+        "id": "jvs067_nonpara30_travel1000_0212",
+        "text": "最終のシャトルバスは、何時ですか。",
+        "audioUrl": "/media/utterances/jvs067_nonpara30_travel1000_0212.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.5325,
+            "endSec": 0.6025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs062_parallel100_voiceactress100_042--phone-020-s--center-61740-3120",
+      "utterance": {
+        "id": "jvs062_parallel100_voiceactress100_042",
+        "text": "祭神は、ヴィシュヌ派の聖人、スワーミーナーラーヤン。",
+        "audioUrl": "/media/utterances/jvs062_parallel100_voiceactress100_042.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 20,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.5725,
+            "endSec": 2.7025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs078_parallel100_voiceactress100_090--phone-045-s--center-134460-3360",
+      "utterance": {
+        "id": "jvs078_parallel100_voiceactress100_090",
+        "text": "戦闘服は、両腕を露出し、両脚が、アンダースーツで覆われている。",
+        "audioUrl": "/media/utterances/jvs078_parallel100_voiceactress100_090.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 45,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.6025,
+            "endSec": 5.7425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs089_parallel100_voiceactress100_082--phone-041-s--center-83100-3120",
+      "utterance": {
+        "id": "jvs089_parallel100_voiceactress100_082",
+        "text": "カーミラ星と呼ばれている惑星から、宇宙船に乗って、地球に侵入した宇宙人。",
+        "audioUrl": "/media/utterances/jvs089_parallel100_voiceactress100_082.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 41,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.4625,
+            "endSec": 3.5925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs074_parallel100_voiceactress100_054--phone-100-s--center-217020-1440",
+      "utterance": {
+        "id": "jvs074_parallel100_voiceactress100_054",
+        "text": "裕福なニューヨーカー達は、グレーヴセンド、競馬場や、シープシェッドベイ、競馬場などに集い、海沿いの高級レストランや、ホテルを利用した。",
+        "audioUrl": "/media/utterances/jvs074_parallel100_voiceactress100_054.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 100,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 9.0425,
+            "endSec": 9.1025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs019_parallel100_voiceactress100_063--phone-044-s--center-91980-2640",
+      "utterance": {
+        "id": "jvs019_parallel100_voiceactress100_063",
+        "text": "大当り終了後は、グラディエーターチャンスに突入する。",
+        "audioUrl": "/media/utterances/jvs019_parallel100_voiceactress100_063.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 44,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.8325,
+            "endSec": 3.9425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs008_parallel100_voiceactress100_043--phone-007-s--center-22140-3600",
+      "utterance": {
+        "id": "jvs008_parallel100_voiceactress100_043",
+        "text": "ハーデースが、ペルセポネーに恋をしたのは、アプロディーテーの、策略であるとされている。",
+        "audioUrl": "/media/utterances/jvs008_parallel100_voiceactress100_043.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 7,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 150ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.9225,
+            "endSec": 1.0725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs035_parallel100_voiceactress100_085--phone-099-s--center-269100-3120",
+      "utterance": {
+        "id": "jvs035_parallel100_voiceactress100_085",
+        "text": "遺灰のほとんどは、スウェーデン西海岸の、ブーヒュースレーン地方の小島にある漁村、フヤルバッカ周辺の海に、散骨された。",
+        "audioUrl": "/media/utterances/jvs035_parallel100_voiceactress100_085.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 99,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 11.2125,
+            "endSec": 11.3425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs014_parallel100_voiceactress100_091--phone-012-s--center-37500-4320",
+      "utterance": {
+        "id": "jvs014_parallel100_voiceactress100_091",
+        "text": "同母姉に、スウェーデン王妃、ジョゼフィーヌがいる。",
+        "audioUrl": "/media/utterances/jvs014_parallel100_voiceactress100_091.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 12,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 180ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.5625,
+            "endSec": 1.7425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs067_nonpara30_travel1000_0607--phone-027-s--center-58620-2880",
+      "utterance": {
+        "id": "jvs067_nonpara30_travel1000_0607",
+        "text": "ショルダーバッグは持って帰ります。",
+        "audioUrl": "/media/utterances/jvs067_nonpara30_travel1000_0607.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 27,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.4425,
+            "endSec": 2.5625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs001_parallel100_voiceactress100_076--phone-031-s--center-89340-3360",
+      "utterance": {
+        "id": "jvs001_parallel100_voiceactress100_076",
+        "text": "ディオニューソスの、寵愛を受ける、オイネウス王と、妃、アルタイアーの間に、カリュドーンの王女として、生を受けた。",
+        "audioUrl": "/media/utterances/jvs001_parallel100_voiceactress100_076.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 31,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.7225,
+            "endSec": 3.8625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs033_parallel100_voiceactress100_086--phone-028-s--center-80940-1920",
+      "utterance": {
+        "id": "jvs033_parallel100_voiceactress100_086",
+        "text": "国境を越えて、列車は、改良された在来線に沿って、アーヘン中央駅に向かう。",
+        "audioUrl": "/media/utterances/jvs033_parallel100_voiceactress100_086.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 28,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.3725,
+            "endSec": 3.4525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs085_parallel100_voiceactress100_043--phone-007-s--center-21660-3600",
+      "utterance": {
+        "id": "jvs085_parallel100_voiceactress100_043",
+        "text": "ハーデースが、ペルセポネーに恋をしたのは、アプロディーテーの、策略であるとされている。",
+        "audioUrl": "/media/utterances/jvs085_parallel100_voiceactress100_043.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 7,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 150ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.9025,
+            "endSec": 1.0525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs096_parallel100_voiceactress100_002--phone-063-s--center-160140-2400",
+      "utterance": {
+        "id": "jvs096_parallel100_voiceactress100_002",
+        "text": "ニューイングランド風は、牛乳をベースとした、白いクリームスープであり、ボストンクラムチャウダーとも呼ばれる。",
+        "audioUrl": "/media/utterances/jvs096_parallel100_voiceactress100_002.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 63,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.6725,
+            "endSec": 6.7725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs031_parallel100_voiceactress100_040--phone-005-s--center-17820-2880",
+      "utterance": {
+        "id": "jvs031_parallel100_voiceactress100_040",
+        "text": "ギレスピーは、マッギーを通じて、イネスと知り合った。",
+        "audioUrl": "/media/utterances/jvs031_parallel100_voiceactress100_040.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 5,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.7425,
+            "endSec": 0.8625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs073_parallel100_voiceactress100_018--phone-035-s--center-81180-3120",
+      "utterance": {
+        "id": "jvs073_parallel100_voiceactress100_018",
+        "text": "他のメジャーなディストリビューションに比べ、セキュリティー上の問題の修正が、遅い場合もある。",
+        "audioUrl": "/media/utterances/jvs073_parallel100_voiceactress100_018.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 35,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.3825,
+            "endSec": 3.5125
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs099_parallel100_voiceactress100_023--phone-061-s--center-108780-2160",
+      "utterance": {
+        "id": "jvs099_parallel100_voiceactress100_023",
+        "text": "南西部ウォーレンは、ベイアーマンファームズと、フィッツジェラルドの地区で、構成される。",
+        "audioUrl": "/media/utterances/jvs099_parallel100_voiceactress100_023.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 61,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.5325,
+            "endSec": 4.6225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs012_parallel100_voiceactress100_085--phone-106-s--center-264780-1680",
+      "utterance": {
+        "id": "jvs012_parallel100_voiceactress100_085",
+        "text": "遺灰のほとんどは、スウェーデン西海岸の、ブーヒュースレーン地方の小島にある漁村、フヤルバッカ周辺の海に、散骨された。",
+        "audioUrl": "/media/utterances/jvs012_parallel100_voiceactress100_085.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 106,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 11.0325,
+            "endSec": 11.1025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs063_parallel100_voiceactress100_085--phone-106-s--center-268860-2400",
+      "utterance": {
+        "id": "jvs063_parallel100_voiceactress100_085",
+        "text": "遺灰のほとんどは、スウェーデン西海岸の、ブーヒュースレーン地方の小島にある漁村、フヤルバッカ周辺の海に、散骨された。",
+        "audioUrl": "/media/utterances/jvs063_parallel100_voiceactress100_085.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 106,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 11.2025,
+            "endSec": 11.3025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs041_nonpara30_basic5000_2587--phone-063-s--center-164940-2400",
+      "utterance": {
+        "id": "jvs041_nonpara30_basic5000_2587",
+        "text": "苦心惨憺の末、考え出した企画が、会議で、一瞬にして却下されちゃうんだからな。",
+        "audioUrl": "/media/utterances/jvs041_nonpara30_basic5000_2587.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 63,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.8725,
+            "endSec": 6.9725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs082_nonpara30_basic5000_2267--phone-001-s--center-10620-3600",
+      "utterance": {
+        "id": "jvs082_nonpara30_basic5000_2267",
+        "text": "聡明な子供は、失敗しても、それを我慢することができる。",
+        "audioUrl": "/media/utterances/jvs082_nonpara30_basic5000_2267.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 150ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.4425,
+            "endSec": 0.5925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs066_parallel100_voiceactress100_055--phone-014-s--center-33420-2400",
+      "utterance": {
+        "id": "jvs066_parallel100_voiceactress100_055",
+        "text": "ウォリアーズミックスマーシャルアーツアカデミー所属。",
+        "audioUrl": "/media/utterances/jvs066_parallel100_voiceactress100_055.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 14,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3925,
+            "endSec": 1.4925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs066_parallel100_voiceactress100_047--phone-016-s--center-57420-2880",
+      "utterance": {
+        "id": "jvs066_parallel100_voiceactress100_047",
+        "text": "同日朝に、大阪難波で、出発セレモニーが開催され、営業運転に、充当された。",
+        "audioUrl": "/media/utterances/jvs066_parallel100_voiceactress100_047.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 16,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.3925,
+            "endSec": 2.5125
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs043_parallel100_voiceactress100_048--phone-001-s--center-12060-1920",
+      "utterance": {
+        "id": "jvs043_parallel100_voiceactress100_048",
+        "text": "そして、インデペンデント紙の、読者投票で選ぶ、プレミアリーグ最優秀ゴールキーパーに選ばれた。",
+        "audioUrl": "/media/utterances/jvs043_parallel100_voiceactress100_048.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.5025,
+            "endSec": 0.5825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs069_parallel100_voiceactress100_019--phone-043-s--center-113820-3360",
+      "utterance": {
+        "id": "jvs069_parallel100_voiceactress100_019",
+        "text": "ベルガートーア前の、ヴェディゲンウーファーパークには、戦争と弾圧の犠牲者のための記念碑が建っている。",
+        "audioUrl": "/media/utterances/jvs069_parallel100_voiceactress100_019.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 43,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.7425,
+            "endSec": 4.8825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs012_parallel100_voiceactress100_065--phone-064-s--center-119580-2160",
+      "utterance": {
+        "id": "jvs012_parallel100_voiceactress100_065",
+        "text": "レギュラーメンバーの顔写真をクリックした後に、ムービープレイヤー風に再生されるという、特異な形式となっている。",
+        "audioUrl": "/media/utterances/jvs012_parallel100_voiceactress100_065.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 64,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.9825,
+            "endSec": 5.0725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs038_parallel100_voiceactress100_087--phone-018-s--center-41820-2400",
+      "utterance": {
+        "id": "jvs038_parallel100_voiceactress100_087",
+        "text": "福岡ダイエーホークスではなく、長距離砲の補強を目指していた、大阪近鉄バファローズから、オファーを受けて入団。",
+        "audioUrl": "/media/utterances/jvs038_parallel100_voiceactress100_087.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.7425,
+            "endSec": 1.8425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs090_nonpara30_basic5000_1780--phone-039-s--center-121500-3120",
+      "utterance": {
+        "id": "jvs090_nonpara30_basic5000_1780",
+        "text": "知能の高い人で、飲酒した後で、運転するような人はいない。",
+        "audioUrl": "/media/utterances/jvs090_nonpara30_basic5000_1780.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 39,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.0625,
+            "endSec": 5.1925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs023_parallel100_voiceactress100_065--phone-061-s--center-107820-2400",
+      "utterance": {
+        "id": "jvs023_parallel100_voiceactress100_065",
+        "text": "レギュラーメンバーの顔写真をクリックした後に、ムービープレイヤー風に再生されるという、特異な形式となっている。",
+        "audioUrl": "/media/utterances/jvs023_parallel100_voiceactress100_065.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 61,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.4925,
+            "endSec": 4.5925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs027_parallel100_voiceactress100_061--phone-017-s--center-50940-3360",
+      "utterance": {
+        "id": "jvs027_parallel100_voiceactress100_061",
+        "text": "ポイントガードから、スモールフォワードまでこなせる、総合力が高いユーティリティープレーヤーである。",
+        "audioUrl": "/media/utterances/jvs027_parallel100_voiceactress100_061.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 17,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.1225,
+            "endSec": 2.2625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs041_parallel100_voiceactress100_096--phone-046-s--center-121020-2640",
+      "utterance": {
+        "id": "jvs041_parallel100_voiceactress100_096",
+        "text": "ペンシルベニア州、ピッツバーグの、アレゲーニー高校を卒業し、カリフォルニア大学、バークレー校に入学。",
+        "audioUrl": "/media/utterances/jvs041_parallel100_voiceactress100_096.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 46,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.0425,
+            "endSec": 5.1525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs091_parallel100_voiceactress100_066--phone-010-s--center-32220-3120",
+      "utterance": {
+        "id": "jvs091_parallel100_voiceactress100_066",
+        "text": "肝臓への酸素供給は、肝動脈と、低圧系の門脈を介して、行われている。",
+        "audioUrl": "/media/utterances/jvs091_parallel100_voiceactress100_066.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 10,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3425,
+            "endSec": 1.4725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs013_nonpara30_ut-paraphrase-sent006-phrase2--phone-006-s--center-32940-2640",
+      "utterance": {
+        "id": "jvs013_nonpara30_ut-paraphrase-sent006-phrase2",
+        "text": "ただ、その後はスピードダウンするとの見方も多い。",
+        "audioUrl": "/media/utterances/jvs013_nonpara30_ut-paraphrase-sent006-phrase2.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 6,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3725,
+            "endSec": 1.4825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs018_parallel100_voiceactress100_076--phone-009-s--center-28620-3360",
+      "utterance": {
+        "id": "jvs018_parallel100_voiceactress100_076",
+        "text": "ディオニューソスの、寵愛を受ける、オイネウス王と、妃、アルタイアーの間に、カリュドーンの王女として、生を受けた。",
+        "audioUrl": "/media/utterances/jvs018_parallel100_voiceactress100_076.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 9,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.1925,
+            "endSec": 1.3325
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs011_parallel100_voiceactress100_092--phone-074-s--center-200700-2640",
+      "utterance": {
+        "id": "jvs011_parallel100_voiceactress100_092",
+        "text": "紫外線は、表面エネルギーの、小さいポリマーを接着する際の、前処理に利用される。",
+        "audioUrl": "/media/utterances/jvs011_parallel100_voiceactress100_092.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 74,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 8.3625,
+            "endSec": 8.4725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs099_parallel100_voiceactress100_026--phone-033-s--center-74220-2640",
+      "utterance": {
+        "id": "jvs099_parallel100_voiceactress100_026",
+        "text": "現在、ニュージャージー州、ムーアズタウンに住んでいる。",
+        "audioUrl": "/media/utterances/jvs099_parallel100_voiceactress100_026.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 33,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.0925,
+            "endSec": 3.2025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs087_parallel100_voiceactress100_026--phone-033-s--center-96540-3120",
+      "utterance": {
+        "id": "jvs087_parallel100_voiceactress100_026",
+        "text": "現在、ニュージャージー州、ムーアズタウンに住んでいる。",
+        "audioUrl": "/media/utterances/jvs087_parallel100_voiceactress100_026.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 33,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.0225,
+            "endSec": 4.1525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs089_parallel100_voiceactress100_059--phone-068-s--center-150780-3360",
+      "utterance": {
+        "id": "jvs089_parallel100_voiceactress100_059",
+        "text": "球宴のファン投票でも、人気が偶像化していた、長嶋茂雄に肉薄する。",
+        "audioUrl": "/media/utterances/jvs089_parallel100_voiceactress100_059.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 68,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.2825,
+            "endSec": 6.4225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs013_parallel100_voiceactress100_094--phone-132-s--center-340860-3360",
+      "utterance": {
+        "id": "jvs013_parallel100_voiceactress100_094",
+        "text": "若き日の反逆ゆえに、宇宙の中央を追放されて、惑星、地球にやってきた主人公、ベルゼバブが、宇宙船カルナークのなかで、孫に語る壮大な物語。",
+        "audioUrl": "/media/utterances/jvs013_parallel100_voiceactress100_094.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 132,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 14.2025,
+            "endSec": 14.3425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs022_parallel100_voiceactress100_085--phone-106-s--center-237420-1920",
+      "utterance": {
+        "id": "jvs022_parallel100_voiceactress100_085",
+        "text": "遺灰のほとんどは、スウェーデン西海岸の、ブーヒュースレーン地方の小島にある漁村、フヤルバッカ周辺の海に、散骨された。",
+        "audioUrl": "/media/utterances/jvs022_parallel100_voiceactress100_085.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 106,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 9.8925,
+            "endSec": 9.9725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs099_parallel100_voiceactress100_070--phone-074-s--center-150540-1440",
+      "utterance": {
+        "id": "jvs099_parallel100_voiceactress100_070",
+        "text": "ボーハンは、イーストマンら、ギャングのスピークイージーの上がりから、賄賂を取っていたとも噂された。",
+        "audioUrl": "/media/utterances/jvs099_parallel100_voiceactress100_070.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 74,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.2725,
+            "endSec": 6.3325
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs022_parallel100_voiceactress100_024--phone-074-s--center-187980-3360",
+      "utterance": {
+        "id": "jvs022_parallel100_voiceactress100_024",
+        "text": "このため、プラズマ中のイオンや、電子の持つ、平均運動エネルギーを、温度で表現することがある。",
+        "audioUrl": "/media/utterances/jvs022_parallel100_voiceactress100_024.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 74,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.8325,
+            "endSec": 7.9725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs069_parallel100_voiceactress100_048--phone-057-s--center-143820-2640",
+      "utterance": {
+        "id": "jvs069_parallel100_voiceactress100_048",
+        "text": "そして、インデペンデント紙の、読者投票で選ぶ、プレミアリーグ最優秀ゴールキーパーに選ばれた。",
+        "audioUrl": "/media/utterances/jvs069_parallel100_voiceactress100_048.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 57,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.9925,
+            "endSec": 6.1025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs020_parallel100_voiceactress100_074--phone-019-s--center-37980-2400",
+      "utterance": {
+        "id": "jvs020_parallel100_voiceactress100_074",
+        "text": "レジェンドシリーズをベースに、ヨーフリー機構を備えた、ビューカメラ。",
+        "audioUrl": "/media/utterances/jvs020_parallel100_voiceactress100_074.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 19,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.5825,
+            "endSec": 1.6825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs073_parallel100_voiceactress100_058--phone-037-s--center-86220-2160",
+      "utterance": {
+        "id": "jvs073_parallel100_voiceactress100_058",
+        "text": "スウェーデン移民の両親の許に、マサチューセッツ州、ケンブリッジにて生まれる。",
+        "audioUrl": "/media/utterances/jvs073_parallel100_voiceactress100_058.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 37,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.5925,
+            "endSec": 3.6825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs028_parallel100_voiceactress100_043--phone-007-s--center-24300-3600",
+      "utterance": {
+        "id": "jvs028_parallel100_voiceactress100_043",
+        "text": "ハーデースが、ペルセポネーに恋をしたのは、アプロディーテーの、策略であるとされている。",
+        "audioUrl": "/media/utterances/jvs028_parallel100_voiceactress100_043.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 7,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 150ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.0125,
+            "endSec": 1.1625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs054_parallel100_voiceactress100_076--phone-081-s--center-269340-4320",
+      "utterance": {
+        "id": "jvs054_parallel100_voiceactress100_076",
+        "text": "ディオニューソスの、寵愛を受ける、オイネウス王と、妃、アルタイアーの間に、カリュドーンの王女として、生を受けた。",
+        "audioUrl": "/media/utterances/jvs054_parallel100_voiceactress100_076.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 81,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 180ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 11.2225,
+            "endSec": 11.4025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs085_nonpara30_basic5000_2356--phone-004-s--center-17100-3360",
+      "utterance": {
+        "id": "jvs085_nonpara30_basic5000_2356",
+        "text": "およそ、どれくらいの価値がありますか。",
+        "audioUrl": "/media/utterances/jvs085_nonpara30_basic5000_2356.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 4,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.7125,
+            "endSec": 0.8525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs008_parallel100_voiceactress100_045--phone-081-s--center-205980-4320",
+      "utterance": {
+        "id": "jvs008_parallel100_voiceactress100_045",
+        "text": "ヴェーザー自転車道や、ミューレンルートに従った、サイクリングツアーは、ペータースハーゲンを、経由する。",
+        "audioUrl": "/media/utterances/jvs008_parallel100_voiceactress100_045.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 81,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 180ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 8.5825,
+            "endSec": 8.7625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs087_nonpara30_basic5000_3022--phone-056-s--center-142860-2640",
+      "utterance": {
+        "id": "jvs087_nonpara30_basic5000_3022",
+        "text": "朱は狡噛の真意を探るべく、単身、シャンバラフロートへ捜査に向かう。",
+        "audioUrl": "/media/utterances/jvs087_nonpara30_basic5000_3022.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 56,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.9525,
+            "endSec": 6.0625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs027_nonpara30_basic5000_1169--phone-049-s--center-104460-4080",
+      "utterance": {
+        "id": "jvs027_nonpara30_basic5000_1169",
+        "text": "少子化からの脱却には、非婚マザーの増大が必須なのに、日本の世論は、なぜかこの議論を避けている。",
+        "audioUrl": "/media/utterances/jvs027_nonpara30_basic5000_1169.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 49,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 170ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.3525,
+            "endSec": 4.5225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs028_parallel100_voiceactress100_063--phone-044-s--center-107820-3120",
+      "utterance": {
+        "id": "jvs028_parallel100_voiceactress100_063",
+        "text": "大当り終了後は、グラディエーターチャンスに突入する。",
+        "audioUrl": "/media/utterances/jvs028_parallel100_voiceactress100_063.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 44,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.4925,
+            "endSec": 4.6225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs023_parallel100_voiceactress100_036--phone-028-s--center-62220-2400",
+      "utterance": {
+        "id": "jvs023_parallel100_voiceactress100_036",
+        "text": "番組冒頭を、東京ムービー製作のアニメーションで、表現する点も、共通していた。",
+        "audioUrl": "/media/utterances/jvs023_parallel100_voiceactress100_036.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 28,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.5925,
+            "endSec": 2.6925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs041_nonpara30_basic5000_1303--phone-044-s--center-97740-2400",
+      "utterance": {
+        "id": "jvs041_nonpara30_basic5000_1303",
+        "text": "主婦が余暇を十分持てるようになったのも、電化製品の賜物である。",
+        "audioUrl": "/media/utterances/jvs041_nonpara30_basic5000_1303.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 44,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.0725,
+            "endSec": 4.1725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs051_parallel100_voiceactress100_029--phone-012-s--center-28860-3840",
+      "utterance": {
+        "id": "jvs051_parallel100_voiceactress100_029",
+        "text": "現在の滑走を目的とした、スキーブーツは、硬いプラスチックシェルと、柔らかいインナーブーツからなる。",
+        "audioUrl": "/media/utterances/jvs051_parallel100_voiceactress100_029.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 12,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 160ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.2025,
+            "endSec": 1.3625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs054_parallel100_voiceactress100_075--phone-010-s--center-25020-2640",
+      "utterance": {
+        "id": "jvs054_parallel100_voiceactress100_075",
+        "text": "楽曲のセンターポジションは、エーケービーフォーティーエイトの、高橋みなみが務めた。",
+        "audioUrl": "/media/utterances/jvs054_parallel100_voiceactress100_075.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 10,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.0425,
+            "endSec": 1.1525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs067_parallel100_voiceactress100_081--phone-078-s--center-158700-2640",
+      "utterance": {
+        "id": "jvs067_parallel100_voiceactress100_081",
+        "text": "モーイーデーン岩壁地域の上部は、プラーサートプラウィハーン寺院遺跡へ繋がる、タイ側参道に続いている。",
+        "audioUrl": "/media/utterances/jvs067_parallel100_voiceactress100_081.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 78,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.6125,
+            "endSec": 6.7225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs046_nonpara30_travel1000_0211--phone-001-s--center-10860-2160",
+      "utterance": {
+        "id": "jvs046_nonpara30_travel1000_0211",
+        "text": "そして、あなたのメイルボックスの番号は、部屋の番号と同じです。",
+        "audioUrl": "/media/utterances/jvs046_nonpara30_travel1000_0211.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.4525,
+            "endSec": 0.5425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs067_parallel100_voiceactress100_094--phone-099-s--center-213900-2640",
+      "utterance": {
+        "id": "jvs067_parallel100_voiceactress100_094",
+        "text": "若き日の反逆ゆえに、宇宙の中央を追放されて、惑星、地球にやってきた主人公、ベルゼバブが、宇宙船カルナークのなかで、孫に語る壮大な物語。",
+        "audioUrl": "/media/utterances/jvs067_parallel100_voiceactress100_094.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 99,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 8.9125,
+            "endSec": 9.0225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs035_parallel100_voiceactress100_029--phone-053-s--center-138780-2880",
+      "utterance": {
+        "id": "jvs035_parallel100_voiceactress100_029",
+        "text": "現在の滑走を目的とした、スキーブーツは、硬いプラスチックシェルと、柔らかいインナーブーツからなる。",
+        "audioUrl": "/media/utterances/jvs035_parallel100_voiceactress100_029.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 53,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.7825,
+            "endSec": 5.9025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs002_parallel100_voiceactress100_065--phone-067-s--center-129420-2400",
+      "utterance": {
+        "id": "jvs002_parallel100_voiceactress100_065",
+        "text": "レギュラーメンバーの顔写真をクリックした後に、ムービープレイヤー風に再生されるという、特異な形式となっている。",
+        "audioUrl": "/media/utterances/jvs002_parallel100_voiceactress100_065.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 67,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.3925,
+            "endSec": 5.4925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs009_nonpara30_loanword128_057--phone-077-s--center-158460-2400",
+      "utterance": {
+        "id": "jvs009_nonpara30_loanword128_057",
+        "text": "ウィリアム・ウョーンが女王の市庁舎ご訪問記念に作成したメダルを基にして，作成された。",
+        "audioUrl": "/media/utterances/jvs009_nonpara30_loanword128_057.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 77,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.6025,
+            "endSec": 6.7025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs093_parallel100_voiceactress100_058--phone-001-s--center-10620-1920",
+      "utterance": {
+        "id": "jvs093_parallel100_voiceactress100_058",
+        "text": "スウェーデン移民の両親の許に、マサチューセッツ州、ケンブリッジにて生まれる。",
+        "audioUrl": "/media/utterances/jvs093_parallel100_voiceactress100_058.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.4425,
+            "endSec": 0.5225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs027_parallel100_voiceactress100_054--phone-100-s--center-275340-960",
+      "utterance": {
+        "id": "jvs027_parallel100_voiceactress100_054",
+        "text": "裕福なニューヨーカー達は、グレーヴセンド、競馬場や、シープシェッドベイ、競馬場などに集い、海沿いの高級レストランや、ホテルを利用した。",
+        "audioUrl": "/media/utterances/jvs027_parallel100_voiceactress100_054.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 100,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 11.4725,
+            "endSec": 11.5125
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs091_parallel100_voiceactress100_047--phone-076-s--center-251100-2880",
+      "utterance": {
+        "id": "jvs091_parallel100_voiceactress100_047",
+        "text": "同日朝に、大阪難波で、出発セレモニーが開催され、営業運転に、充当された。",
+        "audioUrl": "/media/utterances/jvs091_parallel100_voiceactress100_047.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 76,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 10.4625,
+            "endSec": 10.5825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs091_parallel100_voiceactress100_065--phone-064-s--center-173580-2640",
+      "utterance": {
+        "id": "jvs091_parallel100_voiceactress100_065",
+        "text": "レギュラーメンバーの顔写真をクリックした後に、ムービープレイヤー風に再生されるという、特異な形式となっている。",
+        "audioUrl": "/media/utterances/jvs091_parallel100_voiceactress100_065.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 64,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.2325,
+            "endSec": 7.3425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs060_parallel100_voiceactress100_092--phone-074-s--center-183420-2880",
+      "utterance": {
+        "id": "jvs060_parallel100_voiceactress100_092",
+        "text": "紫外線は、表面エネルギーの、小さいポリマーを接着する際の、前処理に利用される。",
+        "audioUrl": "/media/utterances/jvs060_parallel100_voiceactress100_092.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 74,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.6425,
+            "endSec": 7.7625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs034_nonpara30_ut-paraphrase-sent072-phrase1--phone-060-s--center-126540-2160",
+      "utterance": {
+        "id": "jvs034_nonpara30_ut-paraphrase-sent072-phrase1",
+        "text": "そこで、最大限に努力して少なくした税額を、いかにして納めるかが重要となる。",
+        "audioUrl": "/media/utterances/jvs034_nonpara30_ut-paraphrase-sent072-phrase1.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 60,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.2725,
+            "endSec": 5.3625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs056_parallel100_voiceactress100_076--phone-007-s--center-23580-2880",
+      "utterance": {
+        "id": "jvs056_parallel100_voiceactress100_076",
+        "text": "ディオニューソスの、寵愛を受ける、オイネウス王と、妃、アルタイアーの間に、カリュドーンの王女として、生を受けた。",
+        "audioUrl": "/media/utterances/jvs056_parallel100_voiceactress100_076.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 7,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.9825,
+            "endSec": 1.1025
+          }
+        }
+      ]
+    }
+  ]
+}

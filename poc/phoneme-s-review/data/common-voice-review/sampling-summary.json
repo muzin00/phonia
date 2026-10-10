@@ -1,0 +1,52 @@
+{
+  "protocol": {
+    "schema_version": 1,
+    "protocol_version": "s-post-qc-training-review-v1",
+    "phoneme": "s",
+    "corpora": [
+      "JVS",
+      "Common Voice"
+    ],
+    "split": "train",
+    "seed": 20261010,
+    "samples_per_corpus": 100,
+    "sample_rate_hz": 24000,
+    "minimum_frames": 720,
+    "maximum_frames": 6000,
+    "minimum_rms_dbfs": -50,
+    "crop": "center_within_original_phone_before_qc_and_sampling; no_padding_or_normalization",
+    "sampling": "smallest_seeded_sha256_without_replacement_within_corpus; independent_seeded_presentation_order",
+    "context_padding_sec": 0.1,
+    "common_voice_run": "artifacts/phoneme-training-data-expansion/training-data-20261008-v1",
+    "run_directory": "artifacts/phoneme-s-review/s-200-20261010-v1",
+    "human_review_complete": false,
+    "adoption_status": "pending_human_review",
+    "training_started": false
+  },
+  "training_speakers": 70,
+  "alignments": 8280,
+  "raw_candidates": 10919,
+  "eligible_candidates": 10343,
+  "excluded_candidates": 576,
+  "exclusion_reasons": {
+    "low_rms": 576
+  },
+  "minimum_eligible_per_speaker": 53,
+  "center_cropped_candidates": 294,
+  "dataset_id": "common-voice17-ja-s-post-qc-training-review",
+  "dataset_version": "20261010-v1-center250-seed20261010-n100",
+  "selected_count": 100,
+  "selected_speakers": 49,
+  "selected_sources": 100,
+  "selected_duration_sec": {
+    "minimum": 0.03,
+    "median": 0.12,
+    "maximum": 0.25
+  },
+  "media_root": "artifacts/phoneme-s-review/s-200-20261010-v1/common-voice/media",
+  "review_dataset_sha256": "09564e0450b1873d9c1d9a446ff1418c4d469496119a5d4c2c6a7284b381eefc",
+  "sample_sha256": "ebe306b2c226b4e8c4908c41d1926c41c38bca7094455685cd9a28b071887445",
+  "human_review_complete": false,
+  "adoption_status": "pending_human_review",
+  "answers_file": "poc/phoneme-s-review/data/common-voice-review/review-records.jsonl"
+}
