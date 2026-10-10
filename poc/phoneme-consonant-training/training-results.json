@@ -1,0 +1,139 @@
+{
+  "status": "completed",
+  "run_directory": "artifacts/phoneme-consonant-training/jvs-cv-vowels-mn-20261010-v1",
+  "training_segments": 594630,
+  "training_labels": 140,
+  "nasal_counts": {
+    "Common Voice/m/eligible": 12216,
+    "Common Voice/m/raw": 12715,
+    "Common Voice/n/eligible": 20238,
+    "Common Voice/n/raw": 20822,
+    "JVS/m/eligible": 12826,
+    "JVS/m/raw": 12831,
+    "JVS/n/eligible": 26991,
+    "JVS/n/raw": 27007
+  },
+  "exclusions": {
+    "Common Voice/m/near_silent": 499,
+    "Common Voice/n/near_silent": 584,
+    "JVS/m/near_silent": 5,
+    "JVS/n/near_silent": 16
+  },
+  "coverage": {
+    "CV/a": 54979,
+    "CV/e": 28465,
+    "CV/i": 41284,
+    "CV/m": 12216,
+    "CV/n": 20238,
+    "CV/o": 47428,
+    "CV/u": 26290,
+    "JVS/a": 78088,
+    "JVS/e": 45322,
+    "JVS/i": 57271,
+    "JVS/m": 12826,
+    "JVS/n": 26991,
+    "JVS/o": 82545,
+    "JVS/u": 60687
+  },
+  "minimum_segments_per_speaker_phoneme": 93,
+  "adoption": {
+    "adopted": [
+      "JVS",
+      "Common Voice"
+    ],
+    "authorization": "\"/m /n\"の学習作業進めて",
+    "date": "2026-10-10",
+    "decision_by": "user",
+    "excluded_from_this_run": [
+      "SRC4VC"
+    ],
+    "procedure_deviations": [
+      "User explicitly authorized training after qualitative preliminary review; no new post-filter 100-per-corpus review or per-item answer aggregation.",
+      "No quantitative human label-accuracy or usability rate is available."
+    ],
+    "review_details": {
+      "Common Voice": {
+        "individual_answers_saved": false,
+        "prepared_sample_count": 100,
+        "qualitative_user_feedback": "Common VoiceはOK",
+        "retained_by_automatic_qc": 97
+      },
+      "JVS": {
+        "individual_answers_saved": false,
+        "prepared_sample_count": 50,
+        "qualitative_user_feedback": "品質はとても良い",
+        "retained_by_automatic_qc": 50
+      }
+    },
+    "review_scope": "prior qualitative train-only m/n listening; vowels reused from existing adopted run"
+  },
+  "completed_updates": 30000,
+  "training_examples": 3000000,
+  "encoder_parameters": 65920,
+  "selected_update": 30000,
+  "initial_encoder_sha256": "841de783fccf41cf60b338768796f4432360a90847f3c007e480a71f15fb465b",
+  "final_encoder_sha256": "6ca815abc8a1fa77aa6e286fed4f6f818dab40474c25573cfb5e772f21b27938",
+  "phoneme_microbatch_counts": {
+    "a": 21429,
+    "e": 21429,
+    "i": 21429,
+    "m": 21428,
+    "n": 21428,
+    "o": 21428,
+    "u": 21429
+  },
+  "validation_diagnostics": [
+    {
+      "update": 5000,
+      "vowel_only_macro_eer": 0.10422457719269329
+    },
+    {
+      "update": 10000,
+      "vowel_only_macro_eer": 0.1005187379577471
+    },
+    {
+      "update": 15000,
+      "vowel_only_macro_eer": 0.09833392346051843
+    },
+    {
+      "update": 20000,
+      "vowel_only_macro_eer": 0.09821792220477288
+    },
+    {
+      "update": 25000,
+      "vowel_only_macro_eer": 0.09766067463999717
+    },
+    {
+      "update": 30000,
+      "vowel_only_macro_eer": 0.09715933573104804
+    }
+  ],
+  "export_reload_bitwise_equal_phonemes": [
+    "a",
+    "i",
+    "u",
+    "e",
+    "o",
+    "m",
+    "n"
+  ],
+  "freeze_sha256": "17f6a67b7e7e2873306abf26e87181f36125084207dd25b308d85f37eb56ade7",
+  "test_used": false,
+  "comparison_completed": false,
+  "outputs_sha256": {
+    "bundle/encoder.pt": "25e09962576b1ce7cface41388d6d8aeae881da55bd5a933353c439b387e5719",
+    "bundle/feature-statistics.json": "0ae15235900c3efccfc0f14db9ffaf9970bfd3c9b42ddaa4b69f4e0ae9846b91",
+    "training/history.jsonl": "1efa43f3bc41da53621f629617594b7254f90cb59872682ed6ce0c75542d69c2",
+    "training/last.pt": "ae0bfb52932ec04a3d1ebd8557784aae89f7ed40c7fd74bb12a72bdba1738036",
+    "validation/update-005000/metrics/validation.json": "d625cf2447214487abae651be72c4f2b899d124c914966e9834d93dd47ed137e",
+    "validation/update-010000/metrics/validation.json": "848173dd047a8ab446a6653e829890ec88e2329b30782a05fb66f2d98b6d2b10",
+    "validation/update-015000/metrics/validation.json": "b09111d99ccf810205f20b1dc2de552015b9f09832fab7e9d49ffed14593c91f",
+    "validation/update-020000/metrics/validation.json": "95d4b6a0ca6911d33262c7457b9e2c7fc620d66d44b803464e80f50442f89fcc",
+    "validation/update-025000/metrics/validation.json": "b6c3c106ee6bac38dc0df32c2056742a319d4d2939a1d45034e0548d73bf1f56",
+    "validation/update-030000/metrics/validation.json": "7ef74cd3a64fbc39b1912c9da805cb4af3ff74412f835b68c92134170d27f956"
+  },
+  "speaker_selection_range": [
+    2142,
+    2143
+  ]
+}

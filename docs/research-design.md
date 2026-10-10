@@ -200,6 +200,20 @@ SRC4VCの通常文EERは1.224→1.098→0.962%と低下したが、別テキス�
 [HTML比較表](../poc/phoneme-training-budget/evaluation-results.html)、[結果の解釈](../poc/phoneme-training-budget/interpretation.md)を参照する。
 [学習予算の固定条件](../poc/phoneme-training-budget/README.md)を参照する。
 
+5母音＋ /m/・/n/ の追加では、聴取所見に基づきJVS＋Common Voiceを使用し、SRC4VCを外した。
+140話者ラベル・594,630区間、1条件・1 seed、30,000更新で共通encoderを学習した。
+JVSのtrain70／validation15／test15の話者ラベル分割を維持し、testを学習やcheckpoint選択に使っていない。
+同じ7音素学習済み重みで、5母音のみと取得できたm/nを追加する入力方式を比較した。
+登録元WAV集合・照合発話を共有し、登録最大3秒・照合最大1秒の実使用PCMサンプル数を各入力で完全一致させた。
+主比較は全7音素を使える共通入力、補助比較は追加子音不足時に5母音で照合する全入力とした。
+条件・対象集合ごとのvalidation通常文で校正した閾値をtestへ固定し、同じ10,000回話者bootstrapで差のCIを計算した。
+通常文525件の主比較はFAR 1.578→1.007%、FRR 4.571→2.095%、EER 2.395→1.333%。
+別テキスト265件でも3指標の観測値は下がったが、主比較で差の95% CIが0を含まなかったのは通常文FRRのみ。
+追加子音と時間配分・区間数・score統合重みの変更を含む探索的な結果で、5母音のみを学習したモデルとの比較ではない。
+[比較設計と再現手順](../poc/phoneme-consonant-evaluation/README.md)、
+[測定表と監査](../poc/phoneme-consonant-evaluation/evaluation-results.md)、
+[結果の解釈](../poc/phoneme-consonant-evaluation/interpretation.md)を参照する。
+
 ## 7. 話者表現モデル
 
 共通encoderは多数話者のデータで事前学習し、音素区間から固定長の連続表現を生成する。

@@ -50,6 +50,8 @@ Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の�
 
 別コーパスSRC4VCの原録音から追加70話者を選び、JVS70＋SRC4VC70の1条件・1 seedで30,000 updateの学習を完了しました。JVSを含む学習可能な母音は415,271区間です。同じ30,000 updateのCommon Voice版とのvalidation macro EER比較は9.228→8.887%でした。データ量・話し方・収録条件・特徴統計も変わる探索的な比較で、属性の偏りだけを原因とする結果ではありません。後続の発話単位評価まで完了し、CV版との全入力FAR比較は通常文2.657→1.714%、別テキスト2.000→1.413%でした。全入力FRRは通常文2.933→2.400%、別テキスト13.556→13.778%。主比較の差の95% CIはいずれも0を含み、明確な優位性は確認できませんでした。
 
+5母音＋ /m/・/n/ の学習では、聴取所見を受けてJVS＋Common Voiceを採用し、SRC4VCを外しました。140話者ラベル・594,630区間で30,000更新を完了しました。同じ7音素encoderを使い、登録・照合の実使用音声量を揃えた比較まで実施しました。全7音素が使える通常文525件では、5母音→m/n追加でFAR 1.578→1.007%、FRR 4.571→2.095%、EER 2.395→1.333%でした。別テキスト265件も3指標の観測値が下がりました。主比較では通常文FRRの差の95% CIのみが0を含まず、観測済みJVS test・1 seedでの探索的な改善の兆候です。
+
 ## ドキュメント
 
 - [PoC概要](poc/README.md)
@@ -85,3 +87,7 @@ Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の�
 - [Phase 8: 60,000回までの学習曲線HTML](poc/phoneme-training-budget/training-results.html)
 - [Phase 8: 30,000・45,000・60,000回の発話単位評価HTML](poc/phoneme-training-budget/evaluation-results.html)
 - [Phase 8: 学習回数の比較結果と解釈](poc/phoneme-training-budget/interpretation.md)
+- [Phase 8: 5母音＋ /m/・/n/ の共通encoder学習](poc/phoneme-consonant-training/README.md)
+- [Phase 8: 5母音＋ /m/・/n/ の学習結果とvalidation診断](poc/phoneme-consonant-training/training-results.md)
+- [Phase 8: /m/・/n/ 追加の使用音声量を揃えたHTML比較表](poc/phoneme-consonant-evaluation/evaluation-results.html)
+- [Phase 8: /m/・/n/ 追加の評価結果と解釈](poc/phoneme-consonant-evaluation/interpretation.md)
