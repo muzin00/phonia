@@ -1,0 +1,863 @@
+{
+  "curves": {
+    "cv": {
+      "descriptor": {
+        "configuration_sha256": "2e25df6b556fe9ab96076d59edba155c8cf60bf4812c434a2f18bd167d24ffdf",
+        "corpus": "cv",
+        "encoder_parameters": 65920,
+        "freeze_sha256": "b04299a9d023852ea3290afbcc888ac8eed8da71c91b997fdfc30c95f390c9a0",
+        "initial_encoder_sha256": "841de783fccf41cf60b338768796f4432360a90847f3c007e480a71f15fb465b",
+        "initial_head_sha256": "d447ed0b66e908f3f8acc28f8f5238912b5aa658ede45855f66046ee9c907217",
+        "settings": {
+          "cohort": 140,
+          "device": "cpu",
+          "encoder": "statistics_mlp",
+          "gradient_clip": 5.0,
+          "learning_rate": 0.0003,
+          "maximum_updates": 60000,
+          "minimum_learning_rate": 1e-05,
+          "overfit": false,
+          "rms_enabled": false,
+          "seed": 20260926,
+          "supcon_enabled": true,
+          "validation_interval": 1000,
+          "warmup_updates": 1000,
+          "weight_decay": 0.0001,
+          "workers": 0
+        },
+        "test_used": false,
+        "training_head_parameters": 17920
+      },
+      "diagnostic_best": {
+        "learning_rate": 4.8457748124855265e-05,
+        "update": 46000,
+        "validation_macro_eer_pct": 9.069674960340949
+      },
+      "segment_count": 522359,
+      "training_blocks": [
+        {
+          "last_update": 5000,
+          "mean_training_accuracy": 0.47514799999999996,
+          "mean_training_loss": 7.912803481988907
+        },
+        {
+          "last_update": 10000,
+          "mean_training_accuracy": 0.667064,
+          "mean_training_loss": 5.469645700492859
+        },
+        {
+          "last_update": 15000,
+          "mean_training_accuracy": 0.7010059999999999,
+          "mean_training_loss": 4.91555717936039
+        },
+        {
+          "last_update": 20000,
+          "mean_training_accuracy": 0.7167479999999999,
+          "mean_training_loss": 4.651637078855037
+        },
+        {
+          "last_update": 25000,
+          "mean_training_accuracy": 0.727166,
+          "mean_training_loss": 4.481429986166954
+        },
+        {
+          "last_update": 30000,
+          "mean_training_accuracy": 0.7333779999999999,
+          "mean_training_loss": 4.378712817072868
+        },
+        {
+          "last_update": 35000,
+          "mean_training_accuracy": 0.740766,
+          "mean_training_loss": 4.278277679848671
+        },
+        {
+          "last_update": 40000,
+          "mean_training_accuracy": 0.7448600000000001,
+          "mean_training_loss": 4.219088772046566
+        },
+        {
+          "last_update": 45000,
+          "mean_training_accuracy": 0.74803,
+          "mean_training_loss": 4.1688057604599
+        },
+        {
+          "last_update": 50000,
+          "mean_training_accuracy": 0.7500220000000001,
+          "mean_training_loss": 4.142866947014332
+        },
+        {
+          "last_update": 55000,
+          "mean_training_accuracy": 0.752434,
+          "mean_training_loss": 4.1150413370847705
+        },
+        {
+          "last_update": 60000,
+          "mean_training_accuracy": 0.753678,
+          "mean_training_loss": 4.106170475038291
+        }
+      ],
+      "validation": [
+        {
+          "learning_rate": 0.0003,
+          "update": 1000,
+          "validation_macro_eer_pct": 13.816883848182105
+        },
+        {
+          "learning_rate": 0.00029979449087313043,
+          "update": 2000,
+          "validation_macro_eer_pct": 11.409580994682218
+        },
+        {
+          "learning_rate": 0.00029917854603046985,
+          "update": 3000,
+          "validation_macro_eer_pct": 10.599559323983353
+        },
+        {
+          "learning_rate": 0.00029815391143459495,
+          "update": 4000,
+          "validation_macro_eer_pct": 10.119015732415575
+        },
+        {
+          "learning_rate": 0.00029672349152359064,
+          "update": 5000,
+          "validation_macro_eer_pct": 9.965141609231198
+        },
+        {
+          "learning_rate": 0.0002948913409781048,
+          "update": 6000,
+          "validation_macro_eer_pct": 9.938317930028873
+        },
+        {
+          "learning_rate": 0.00029266265322791524,
+          "update": 7000,
+          "validation_macro_eer_pct": 9.824682830956878
+        },
+        {
+          "learning_rate": 0.00029004374573058907,
+          "update": 8000,
+          "validation_macro_eer_pct": 9.497757065889587
+        },
+        {
+          "learning_rate": 0.0002870420420639624,
+          "update": 9000,
+          "validation_macro_eer_pct": 9.532550088236794
+        },
+        {
+          "learning_rate": 0.00028366605088320283,
+          "update": 10000,
+          "validation_macro_eer_pct": 9.348287245429072
+        },
+        {
+          "learning_rate": 0.00027992534180210185,
+          "update": 11000,
+          "validation_macro_eer_pct": 9.48985220337711
+        },
+        {
+          "learning_rate": 0.00027583051826696463,
+          "update": 12000,
+          "validation_macro_eer_pct": 9.53039622556379
+        },
+        {
+          "learning_rate": 0.0002713931874999897,
+          "update": 13000,
+          "validation_macro_eer_pct": 9.520344690265961
+        },
+        {
+          "learning_rate": 0.0002666259275973364,
+          "update": 14000,
+          "validation_macro_eer_pct": 9.38614799309133
+        },
+        {
+          "learning_rate": 0.00026154225187514473,
+          "update": 15000,
+          "validation_macro_eer_pct": 9.282705601604606
+        },
+        {
+          "learning_rate": 0.0002561565705645728,
+          "update": 16000,
+          "validation_macro_eer_pct": 9.358114413097988
+        },
+        {
+          "learning_rate": 0.0002504841499644306,
+          "update": 17000,
+          "validation_macro_eer_pct": 9.462855227174465
+        },
+        {
+          "learning_rate": 0.0002445410691671978,
+          "update": 18000,
+          "validation_macro_eer_pct": 9.543788028807054
+        },
+        {
+          "learning_rate": 0.00023834417448108895,
+          "update": 19000,
+          "validation_macro_eer_pct": 9.359219979501797
+        },
+        {
+          "learning_rate": 0.00023191103167736262,
+          "update": 20000,
+          "validation_macro_eer_pct": 9.256093266055544
+        },
+        {
+          "learning_rate": 0.00022525987619823425,
+          "update": 21000,
+          "validation_macro_eer_pct": 9.324535647166284
+        },
+        {
+          "learning_rate": 0.00021840956146653402,
+          "update": 22000,
+          "validation_macro_eer_pct": 9.373525686981898
+        },
+        {
+          "learning_rate": 0.00021137950544363148,
+          "update": 23000,
+          "validation_macro_eer_pct": 9.489527068548188
+        },
+        {
+          "learning_rate": 0.00020418963558711432,
+          "update": 24000,
+          "validation_macro_eer_pct": 9.330104933596871
+        },
+        {
+          "learning_rate": 0.00019686033236424502,
+          "update": 25000,
+          "validation_macro_eer_pct": 9.218930022885305
+        },
+        {
+          "learning_rate": 0.00018941237148131164,
+          "update": 26000,
+          "validation_macro_eer_pct": 9.233167858763254
+        },
+        {
+          "learning_rate": 0.00018186686499263154,
+          "update": 27000,
+          "validation_macro_eer_pct": 9.307865316960651
+        },
+        {
+          "learning_rate": 0.00017424520145613965,
+          "update": 28000,
+          "validation_macro_eer_pct": 9.26678122783618
+        },
+        {
+          "learning_rate": 0.00016656898530519702,
+          "update": 29000,
+          "validation_macro_eer_pct": 9.365412054334826
+        },
+        {
+          "learning_rate": 0.00015885997560847732,
+          "update": 30000,
+          "validation_macro_eer_pct": 9.175038208450808
+        },
+        {
+          "learning_rate": 0.00015114002439152265,
+          "update": 31000,
+          "validation_macro_eer_pct": 9.151022299570656
+        },
+        {
+          "learning_rate": 0.0001434310146948029,
+          "update": 32000,
+          "validation_macro_eer_pct": 9.213855251929463
+        },
+        {
+          "learning_rate": 0.0001357547985438603,
+          "update": 33000,
+          "validation_macro_eer_pct": 9.222048736557301
+        },
+        {
+          "learning_rate": 0.00012813313500736843,
+          "update": 34000,
+          "validation_macro_eer_pct": 9.271201768751233
+        },
+        {
+          "learning_rate": 0.00012058762851868832,
+          "update": 35000,
+          "validation_macro_eer_pct": 9.092032888647909
+        },
+        {
+          "learning_rate": 0.00011313966763575496,
+          "update": 36000,
+          "validation_macro_eer_pct": 9.136846796022164
+        },
+        {
+          "learning_rate": 0.00010581036441288559,
+          "update": 37000,
+          "validation_macro_eer_pct": 9.10924954808787
+        },
+        {
+          "learning_rate": 9.86204945563685e-05,
+          "update": 38000,
+          "validation_macro_eer_pct": 9.193044779082896
+        },
+        {
+          "learning_rate": 9.159043853346597e-05,
+          "update": 39000,
+          "validation_macro_eer_pct": 9.234172156004137
+        },
+        {
+          "learning_rate": 8.474012380176572e-05,
+          "update": 40000,
+          "validation_macro_eer_pct": 9.165474456883572
+        },
+        {
+          "learning_rate": 7.808896832263734e-05,
+          "update": 41000,
+          "validation_macro_eer_pct": 9.135706354243247
+        },
+        {
+          "learning_rate": 7.165582551891099e-05,
+          "update": 42000,
+          "validation_macro_eer_pct": 9.20839333208435
+        },
+        {
+          "learning_rate": 6.545893083280218e-05,
+          "update": 43000,
+          "validation_macro_eer_pct": 9.109473659099303
+        },
+        {
+          "learning_rate": 5.95158500355694e-05,
+          "update": 44000,
+          "validation_macro_eer_pct": 9.158246613945323
+        },
+        {
+          "learning_rate": 5.384342943542722e-05,
+          "update": 45000,
+          "validation_macro_eer_pct": 9.228005376414043
+        },
+        {
+          "learning_rate": 4.8457748124855265e-05,
+          "update": 46000,
+          "validation_macro_eer_pct": 9.069674960340949
+        },
+        {
+          "learning_rate": 4.3374072402663565e-05,
+          "update": 47000,
+          "validation_macro_eer_pct": 9.192642119980713
+        },
+        {
+          "learning_rate": 3.8606812500010295e-05,
+          "update": 48000,
+          "validation_macro_eer_pct": 9.173057334268394
+        },
+        {
+          "learning_rate": 3.416948173303531e-05,
+          "update": 49000,
+          "validation_macro_eer_pct": 9.126498762721928
+        },
+        {
+          "learning_rate": 3.0074658197898098e-05,
+          "update": 50000,
+          "validation_macro_eer_pct": 9.103284532462034
+        },
+        {
+          "learning_rate": 2.633394911679714e-05,
+          "update": 51000,
+          "validation_macro_eer_pct": 9.165568317714962
+        },
+        {
+          "learning_rate": 2.295795793603758e-05,
+          "update": 52000,
+          "validation_macro_eer_pct": 9.142828774251438
+        },
+        {
+          "learning_rate": 1.9956254269410926e-05,
+          "update": 53000,
+          "validation_macro_eer_pct": 9.182181637059555
+        },
+        {
+          "learning_rate": 1.7337346772084714e-05,
+          "update": 54000,
+          "validation_macro_eer_pct": 9.145671068995838
+        },
+        {
+          "learning_rate": 1.510865902189519e-05,
+          "update": 55000,
+          "validation_macro_eer_pct": 9.12720602892533
+        },
+        {
+          "learning_rate": 1.3276508476409333e-05,
+          "update": 56000,
+          "validation_macro_eer_pct": 9.119698950403825
+        },
+        {
+          "learning_rate": 1.184608856540504e-05,
+          "update": 57000,
+          "validation_macro_eer_pct": 9.155928931382922
+        },
+        {
+          "learning_rate": 1.0821453969530123e-05,
+          "update": 58000,
+          "validation_macro_eer_pct": 9.123070513752026
+        },
+        {
+          "learning_rate": 1.0205509126869519e-05,
+          "update": 59000,
+          "validation_macro_eer_pct": 9.149603205242471
+        },
+        {
+          "learning_rate": 1e-05,
+          "update": 60000,
+          "validation_macro_eer_pct": 9.136276407919928
+        }
+      ]
+    },
+    "src": {
+      "descriptor": {
+        "configuration_sha256": "2e25df6b556fe9ab96076d59edba155c8cf60bf4812c434a2f18bd167d24ffdf",
+        "corpus": "src",
+        "encoder_parameters": 65920,
+        "freeze_sha256": "b04299a9d023852ea3290afbcc888ac8eed8da71c91b997fdfc30c95f390c9a0",
+        "initial_encoder_sha256": "841de783fccf41cf60b338768796f4432360a90847f3c007e480a71f15fb465b",
+        "initial_head_sha256": "d447ed0b66e908f3f8acc28f8f5238912b5aa658ede45855f66046ee9c907217",
+        "settings": {
+          "cohort": 140,
+          "device": "cpu",
+          "encoder": "statistics_mlp",
+          "gradient_clip": 5.0,
+          "learning_rate": 0.0003,
+          "maximum_updates": 60000,
+          "minimum_learning_rate": 1e-05,
+          "overfit": false,
+          "rms_enabled": false,
+          "seed": 20260926,
+          "supcon_enabled": true,
+          "validation_interval": 1000,
+          "warmup_updates": 1000,
+          "weight_decay": 0.0001,
+          "workers": 0
+        },
+        "test_used": false,
+        "training_head_parameters": 17920
+      },
+      "diagnostic_best": {
+        "learning_rate": 0.00026154225187514473,
+        "update": 15000,
+        "validation_macro_eer_pct": 8.827999650196636
+      },
+      "segment_count": 415271,
+      "training_blocks": [
+        {
+          "last_update": 5000,
+          "mean_training_accuracy": 0.44248600000000005,
+          "mean_training_loss": 8.101437364416121
+        },
+        {
+          "last_update": 10000,
+          "mean_training_accuracy": 0.6331460000000001,
+          "mean_training_loss": 5.765641611185074
+        },
+        {
+          "last_update": 15000,
+          "mean_training_accuracy": 0.667776,
+          "mean_training_loss": 5.195592312841415
+        },
+        {
+          "last_update": 20000,
+          "mean_training_accuracy": 0.6849059999999999,
+          "mean_training_loss": 4.896474552664757
+        },
+        {
+          "last_update": 25000,
+          "mean_training_accuracy": 0.69327,
+          "mean_training_loss": 4.712877400069237
+        },
+        {
+          "last_update": 30000,
+          "mean_training_accuracy": 0.700544,
+          "mean_training_loss": 4.578715609259605
+        },
+        {
+          "last_update": 35000,
+          "mean_training_accuracy": 0.7064880000000001,
+          "mean_training_loss": 4.489565726280213
+        },
+        {
+          "last_update": 40000,
+          "mean_training_accuracy": 0.7094440000000001,
+          "mean_training_loss": 4.432852583403587
+        },
+        {
+          "last_update": 45000,
+          "mean_training_accuracy": 0.713844,
+          "mean_training_loss": 4.38184385561943
+        },
+        {
+          "last_update": 50000,
+          "mean_training_accuracy": 0.717232,
+          "mean_training_loss": 4.343207665576935
+        },
+        {
+          "last_update": 55000,
+          "mean_training_accuracy": 0.718816,
+          "mean_training_loss": 4.324813379700184
+        },
+        {
+          "last_update": 60000,
+          "mean_training_accuracy": 0.718658,
+          "mean_training_loss": 4.310568540027142
+        }
+      ],
+      "validation": [
+        {
+          "learning_rate": 0.0003,
+          "update": 1000,
+          "validation_macro_eer_pct": 13.923611471944803
+        },
+        {
+          "learning_rate": 0.00029979449087313043,
+          "update": 2000,
+          "validation_macro_eer_pct": 11.01171670456677
+        },
+        {
+          "learning_rate": 0.00029917854603046985,
+          "update": 3000,
+          "validation_macro_eer_pct": 10.286789611362785
+        },
+        {
+          "learning_rate": 0.00029815391143459495,
+          "update": 4000,
+          "validation_macro_eer_pct": 9.986008027946967
+        },
+        {
+          "learning_rate": 0.00029672349152359064,
+          "update": 5000,
+          "validation_macro_eer_pct": 9.701693468992652
+        },
+        {
+          "learning_rate": 0.0002948913409781048,
+          "update": 6000,
+          "validation_macro_eer_pct": 9.56254471320552
+        },
+        {
+          "learning_rate": 0.00029266265322791524,
+          "update": 7000,
+          "validation_macro_eer_pct": 9.511679049582616
+        },
+        {
+          "learning_rate": 0.00029004374573058907,
+          "update": 8000,
+          "validation_macro_eer_pct": 9.405743609527159
+        },
+        {
+          "learning_rate": 0.0002870420420639624,
+          "update": 9000,
+          "validation_macro_eer_pct": 9.251439722498613
+        },
+        {
+          "learning_rate": 0.00028366605088320283,
+          "update": 10000,
+          "validation_macro_eer_pct": 9.169755229351155
+        },
+        {
+          "learning_rate": 0.00027992534180210185,
+          "update": 11000,
+          "validation_macro_eer_pct": 9.00921076507253
+        },
+        {
+          "learning_rate": 0.00027583051826696463,
+          "update": 12000,
+          "validation_macro_eer_pct": 9.106937186780781
+        },
+        {
+          "learning_rate": 0.0002713931874999897,
+          "update": 13000,
+          "validation_macro_eer_pct": 9.266147007642402
+        },
+        {
+          "learning_rate": 0.0002666259275973364,
+          "update": 14000,
+          "validation_macro_eer_pct": 8.966040529959374
+        },
+        {
+          "learning_rate": 0.00026154225187514473,
+          "update": 15000,
+          "validation_macro_eer_pct": 8.827999650196636
+        },
+        {
+          "learning_rate": 0.0002561565705645728,
+          "update": 16000,
+          "validation_macro_eer_pct": 9.150070023746206
+        },
+        {
+          "learning_rate": 0.0002504841499644306,
+          "update": 17000,
+          "validation_macro_eer_pct": 9.03579637553207
+        },
+        {
+          "learning_rate": 0.0002445410691671978,
+          "update": 18000,
+          "validation_macro_eer_pct": 9.224092008276799
+        },
+        {
+          "learning_rate": 0.00023834417448108895,
+          "update": 19000,
+          "validation_macro_eer_pct": 9.13125626153002
+        },
+        {
+          "learning_rate": 0.00023191103167736262,
+          "update": 20000,
+          "validation_macro_eer_pct": 9.127804140791913
+        },
+        {
+          "learning_rate": 0.00022525987619823425,
+          "update": 21000,
+          "validation_macro_eer_pct": 9.182215865165503
+        },
+        {
+          "learning_rate": 0.00021840956146653402,
+          "update": 22000,
+          "validation_macro_eer_pct": 9.214675518586255
+        },
+        {
+          "learning_rate": 0.00021137950544363148,
+          "update": 23000,
+          "validation_macro_eer_pct": 9.084448811287805
+        },
+        {
+          "learning_rate": 0.00020418963558711432,
+          "update": 24000,
+          "validation_macro_eer_pct": 9.244971565487305
+        },
+        {
+          "learning_rate": 0.00019686033236424502,
+          "update": 25000,
+          "validation_macro_eer_pct": 9.236958400945124
+        },
+        {
+          "learning_rate": 0.00018941237148131164,
+          "update": 26000,
+          "validation_macro_eer_pct": 8.997983583761107
+        },
+        {
+          "learning_rate": 0.00018186686499263154,
+          "update": 27000,
+          "validation_macro_eer_pct": 9.12619349504376
+        },
+        {
+          "learning_rate": 0.00017424520145613965,
+          "update": 28000,
+          "validation_macro_eer_pct": 9.021278581477125
+        },
+        {
+          "learning_rate": 0.00016656898530519702,
+          "update": 29000,
+          "validation_macro_eer_pct": 9.094312966256787
+        },
+        {
+          "learning_rate": 0.00015885997560847732,
+          "update": 30000,
+          "validation_macro_eer_pct": 9.080285886759878
+        },
+        {
+          "learning_rate": 0.00015114002439152265,
+          "update": 31000,
+          "validation_macro_eer_pct": 9.077857748432184
+        },
+        {
+          "learning_rate": 0.0001434310146948029,
+          "update": 32000,
+          "validation_macro_eer_pct": 9.101944468087625
+        },
+        {
+          "learning_rate": 0.0001357547985438603,
+          "update": 33000,
+          "validation_macro_eer_pct": 9.074589552161411
+        },
+        {
+          "learning_rate": 0.00012813313500736843,
+          "update": 34000,
+          "validation_macro_eer_pct": 9.133412921592685
+        },
+        {
+          "learning_rate": 0.00012058762851868832,
+          "update": 35000,
+          "validation_macro_eer_pct": 9.01096605937338
+        },
+        {
+          "learning_rate": 0.00011313966763575496,
+          "update": 36000,
+          "validation_macro_eer_pct": 9.04183580538093
+        },
+        {
+          "learning_rate": 0.00010581036441288559,
+          "update": 37000,
+          "validation_macro_eer_pct": 8.961762336619346
+        },
+        {
+          "learning_rate": 9.86204945563685e-05,
+          "update": 38000,
+          "validation_macro_eer_pct": 9.051730831118157
+        },
+        {
+          "learning_rate": 9.159043853346597e-05,
+          "update": 39000,
+          "validation_macro_eer_pct": 9.07430172484324
+        },
+        {
+          "learning_rate": 8.474012380176572e-05,
+          "update": 40000,
+          "validation_macro_eer_pct": 9.053776831746548
+        },
+        {
+          "learning_rate": 7.808896832263734e-05,
+          "update": 41000,
+          "validation_macro_eer_pct": 8.990552184236247
+        },
+        {
+          "learning_rate": 7.165582551891099e-05,
+          "update": 42000,
+          "validation_macro_eer_pct": 9.042707980418813
+        },
+        {
+          "learning_rate": 6.545893083280218e-05,
+          "update": 43000,
+          "validation_macro_eer_pct": 8.997915042778228
+        },
+        {
+          "learning_rate": 5.95158500355694e-05,
+          "update": 44000,
+          "validation_macro_eer_pct": 9.125142251312827
+        },
+        {
+          "learning_rate": 5.384342943542722e-05,
+          "update": 45000,
+          "validation_macro_eer_pct": 9.026235230962628
+        },
+        {
+          "learning_rate": 4.8457748124855265e-05,
+          "update": 46000,
+          "validation_macro_eer_pct": 9.056493634823063
+        },
+        {
+          "learning_rate": 4.3374072402663565e-05,
+          "update": 47000,
+          "validation_macro_eer_pct": 9.1163182808555
+        },
+        {
+          "learning_rate": 3.8606812500010295e-05,
+          "update": 48000,
+          "validation_macro_eer_pct": 9.055191552177366
+        },
+        {
+          "learning_rate": 3.416948173303531e-05,
+          "update": 49000,
+          "validation_macro_eer_pct": 9.067887011322258
+        },
+        {
+          "learning_rate": 3.0074658197898098e-05,
+          "update": 50000,
+          "validation_macro_eer_pct": 9.12085291224352
+        },
+        {
+          "learning_rate": 2.633394911679714e-05,
+          "update": 51000,
+          "validation_macro_eer_pct": 9.136227425748936
+        },
+        {
+          "learning_rate": 2.295795793603758e-05,
+          "update": 52000,
+          "validation_macro_eer_pct": 9.10196831132233
+        },
+        {
+          "learning_rate": 1.9956254269410926e-05,
+          "update": 53000,
+          "validation_macro_eer_pct": 9.134302043027285
+        },
+        {
+          "learning_rate": 1.7337346772084714e-05,
+          "update": 54000,
+          "validation_macro_eer_pct": 9.08387157103162
+        },
+        {
+          "learning_rate": 1.510865902189519e-05,
+          "update": 55000,
+          "validation_macro_eer_pct": 9.106600717552036
+        },
+        {
+          "learning_rate": 1.3276508476409333e-05,
+          "update": 56000,
+          "validation_macro_eer_pct": 9.089816201128434
+        },
+        {
+          "learning_rate": 1.184608856540504e-05,
+          "update": 57000,
+          "validation_macro_eer_pct": 9.086872925720959
+        },
+        {
+          "learning_rate": 1.0821453969530123e-05,
+          "update": 58000,
+          "validation_macro_eer_pct": 9.11031694490064
+        },
+        {
+          "learning_rate": 1.0205509126869519e-05,
+          "update": 59000,
+          "validation_macro_eer_pct": 9.088694514022725
+        },
+        {
+          "learning_rate": 1e-05,
+          "update": 60000,
+          "validation_macro_eer_pct": 9.07664265584022
+        }
+      ]
+    }
+  },
+  "full_snapshots_checked": 6,
+  "history_updates_checked": 120000,
+  "snapshot_rows": [
+    {
+      "corpus": "cv",
+      "encoder_parameters": 65920,
+      "learning_rate": 0.00015885997560847732,
+      "schedule_maximum_updates": 60000,
+      "training_segments": 522359,
+      "update": 30000,
+      "validation_macro_eer_pct": 9.175038208450808
+    },
+    {
+      "corpus": "cv",
+      "encoder_parameters": 65920,
+      "learning_rate": 5.384342943542722e-05,
+      "schedule_maximum_updates": 60000,
+      "training_segments": 522359,
+      "update": 45000,
+      "validation_macro_eer_pct": 9.228005376414043
+    },
+    {
+      "corpus": "cv",
+      "encoder_parameters": 65920,
+      "learning_rate": 1e-05,
+      "schedule_maximum_updates": 60000,
+      "training_segments": 522359,
+      "update": 60000,
+      "validation_macro_eer_pct": 9.136276407919928
+    },
+    {
+      "corpus": "src",
+      "encoder_parameters": 65920,
+      "learning_rate": 0.00015885997560847732,
+      "schedule_maximum_updates": 60000,
+      "training_segments": 415271,
+      "update": 30000,
+      "validation_macro_eer_pct": 9.080285886759878
+    },
+    {
+      "corpus": "src",
+      "encoder_parameters": 65920,
+      "learning_rate": 5.384342943542722e-05,
+      "schedule_maximum_updates": 60000,
+      "training_segments": 415271,
+      "update": 45000,
+      "validation_macro_eer_pct": 9.026235230962628
+    },
+    {
+      "corpus": "src",
+      "encoder_parameters": 65920,
+      "learning_rate": 1e-05,
+      "schedule_maximum_updates": 60000,
+      "training_segments": 415271,
+      "update": 60000,
+      "validation_macro_eer_pct": 9.07664265584022
+    }
+  ],
+  "status": "completed",
+  "test_used": false,
+  "validation_points_checked": 120
+}

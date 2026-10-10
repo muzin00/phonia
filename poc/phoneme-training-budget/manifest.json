@@ -1,0 +1,17 @@
+{
+  "files": {
+    "all-conditions.csv": "8675358ad210e49004dd5152a06f2d4ae306f0f84dcbdd72cc82b2d6777a487c",
+    "evaluation-results.html": "d58ad8637ab14b22caa533a3d52714a807d06c86a1aedea40300dddab6f66a8e",
+    "evaluation-results.json": "d4927e73e9a365cc281089cdf6d1a353a4d653f1622743baaef8ce96d8d84498",
+    "evaluation-results.md": "38cc24f3647bc17d9a18b53d7547e9d43c610dbea8e755e8b4030f721400fd33",
+    "learning-curves.png": "e73cdb78511571d0336064b06f7296439b935195ad5855e84d1be27116c4bec3",
+    "learning-curves.svg": "b6b60bb0bc6b5651bf03d2fafa5e99673cd206347b5223a1c39396e748a9e7a4",
+    "paired-differences.csv": "19f87835f50cdd8ca7043c9fcc81296fb9f644ff108704905015831c15987752",
+    "training-results.html": "4f0f052c4d5cc12cdec33f4c3802c0997ef0ccfae62691b11bcf8761eb3d32ea",
+    "training-results.json": "d2700de37fab5bca2fbfffb8948cc8d96fb71a7aec275220f0fe24e6c867883a",
+    "training-results.md": "adf4b79376ee2a251681014102533f125d616b99889e771aff7b1749cc2658de",
+    "training-snapshots.csv": "55b7ea8f070dc69abbdcb774ab5ab840624eeabc5439f938ac1f3c200c2fde62"
+  },
+  "status": "completed",
+  "study_report_sha256": "987d62afa531c03f2093490b426b95d4c96e7e1417e828c7e1af761549cea437"
+}

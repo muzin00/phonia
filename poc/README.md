@@ -175,6 +175,17 @@ train 70話者・3,500発話のうち3,499発話を抽出でき、追加91,358�
 [発話単位HTML比較表](phoneme-src4vc-evaluation/evaluation-results.html)、[結果の解釈](phoneme-src4vc-evaluation/interpretation.md)を参照する。
 [固定条件と再現手順](phoneme-src4vc-training/README.md)、[学習結果HTML](phoneme-src4vc-training/training-results.html)を参照する。
 
+続く学習予算検証では、Common Voice版とSRC4VC版を初期化から各60,000 updateまで学習し、
+同じ60,000回用schedule内の30,000・45,000・60,000回checkpointを比較する。
+新規学習は2本・各1 seed。データと特徴統計を固定し、checkpointとvalidation閾値をtestで選び直さない。
+学習と6条件の発話単位評価まで完了した。Common Voiceのtest FARは通常文2.305→2.038%、別テキスト1.794→1.571%と低下した。
+SRC4VCの通常文EERは1.224→1.098→0.962%と低下したが、別テキストFRRは13.778→14.222%に増えた。
+30,000→60,000回の主比較12指標の差の95% CIは全て0を含み、総合的な改善は確認できていない。
+単一母音区間のvalidation EERは30,000回以降ほぼ横ばいだった。
+[HTML比較表](phoneme-training-budget/evaluation-results.html)、[結果の解釈](phoneme-training-budget/interpretation.md)、
+[学習曲線](phoneme-training-budget/training-results.html)を参照する。
+[固定条件と再現手順](phoneme-training-budget/README.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。

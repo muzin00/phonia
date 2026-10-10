@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "protocol_version": "phase8-budget-60k-utterance-v1",
+  "source_evaluation_report_sha256": "992929d97d7b2edcfe3a83408d3eaefbbbd4f68676cfdc1797fb4f848180a5bf",
+  "baseline_condition": "jvs70_u15000",
+  "new_conditions": ["cv_u30000_s60k", "cv_u45000_s60k", "cv_u60000_s60k", "src_u30000_s60k", "src_u45000_s60k", "src_u60000_s60k"],
+  "paired_comparisons": ["cv_u45000_s60k_minus_cv_u30000_s60k", "cv_u60000_s60k_minus_cv_u30000_s60k", "src_u45000_s60k_minus_src_u30000_s60k", "src_u60000_s60k_minus_src_u30000_s60k"],
+  "primary_comparisons": ["cv_u60000_s60k_minus_cv_u30000_s60k", "src_u60000_s60k_minus_src_u30000_s60k"],
+  "checkpoint_selection": "all_six_fixed_before_training_no_selection_on_validation_or_test",
+  "test_previously_observed": true,
+  "independent_holdout": false
+}
