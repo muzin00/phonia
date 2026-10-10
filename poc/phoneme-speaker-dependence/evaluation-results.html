@@ -1,0 +1,51 @@
+<!doctype html><html lang='ja'><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>固定14音素の群分け検証</title><style>body{font-family:system-ui,sans-serif;max-width:1200px;margin:32px auto;padding:0 20px;color:#183047;line-height:1.7}h1,h2{line-height:1.4}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}th,td{padding:9px 12px;border:1px solid #d6e0e7;white-space:nowrap}th{background:#eaf1f7}tr:nth-child(even){background:#f7f9fc}</style><main><h1>固定14音素の群分け検証</h1>
+<p>validationの話者間・話者内分散から群分けし、別15話者のtestで単音素EERを比較した。追加学習なし。</p>
+<p>高群の通常文macro EERが低い傾向を確認した。</p>
+<p>高群：n・a・m・e・s・z。低群：k・t・i・h・u・d・o・g。</p>
+<h2>音素ごとの結果</h2>
+<p>Rはvalidationの共変量調整済みREML分散比。高群所属割合はvalidation話者bootstrapの結果。</p>
+<div class='scroll'><table><thead><tr><th>音素</th><th>群</th><th>R</th><th>Rの95% CI</th><th>高群所属割合</th><th>test R</th><th>通常文EER</th><th>別テキストEER</th></tr></thead><tbody>
+<tr><td>z</td><td>高</td><td>0.505</td><td>[0.451, 0.556]</td><td>100.0%</td><td>0.440</td><td>18.000%</td><td>13.492%</td></tr>
+<tr><td>s</td><td>高</td><td>0.501</td><td>[0.441, 0.559]</td><td>100.0%</td><td>0.471</td><td>20.143%</td><td>20.000%</td></tr>
+<tr><td>e</td><td>高</td><td>0.472</td><td>[0.424, 0.527]</td><td>99.6%</td><td>0.487</td><td>10.667%</td><td>9.683%</td></tr>
+<tr><td>m</td><td>高</td><td>0.469</td><td>[0.412, 0.527]</td><td>99.0%</td><td>0.478</td><td>6.190%</td><td>5.397%</td></tr>
+<tr><td>a</td><td>高</td><td>0.464</td><td>[0.425, 0.520]</td><td>98.9%</td><td>0.427</td><td>10.905%</td><td>6.667%</td></tr>
+<tr><td>n</td><td>高</td><td>0.433</td><td>[0.372, 0.491]</td><td>74.1%</td><td>0.470</td><td>8.333%</td><td>10.000%</td></tr>
+<tr><td>g</td><td>低</td><td>0.409</td><td>[0.363, 0.456]</td><td>39.2%</td><td>0.342</td><td>15.333%</td><td>22.222%</td></tr>
+<tr><td>o</td><td>低</td><td>0.399</td><td>[0.350, 0.461]</td><td>30.5%</td><td>0.389</td><td>12.667%</td><td>11.111%</td></tr>
+<tr><td>d</td><td>低</td><td>0.368</td><td>[0.314, 0.416]</td><td>0.1%</td><td>0.313</td><td>19.810%</td><td>15.556%</td></tr>
+<tr><td>u</td><td>低</td><td>0.354</td><td>[0.311, 0.402]</td><td>0.0%</td><td>0.381</td><td>13.333%</td><td>16.984%</td></tr>
+<tr><td>h</td><td>低</td><td>0.351</td><td>[0.304, 0.393]</td><td>0.0%</td><td>0.315</td><td>18.714%</td><td>17.778%</td></tr>
+<tr><td>i</td><td>低</td><td>0.351</td><td>[0.297, 0.413]</td><td>1.0%</td><td>0.359</td><td>12.667%</td><td>10.952%</td></tr>
+<tr><td>t</td><td>低</td><td>0.351</td><td>[0.286, 0.405]</td><td>0.0%</td><td>0.309</td><td>25.333%</td><td>25.873%</td></tr>
+<tr><td>k</td><td>低</td><td>0.330</td><td>[0.271, 0.378]</td><td>0.0%</td><td>0.292</td><td>27.333%</td><td>22.857%</td></tr>
+</tbody></table></div>
+<h2>群単位の傾向</h2>
+<p>以下は単音素のEER/FAR/FRRを音素等重みで平均した値。群を融合した照合性能ではない。</p>
+<div class='scroll'><table><thead><tr><th>発話</th><th>指標</th><th>高群平均</th><th>低群平均</th><th>高−低</th><th>対応付き95% CI</th></tr></thead><tbody>
+<tr><td>通常文</td><td>pooled_eer</td><td>12.373%</td><td>18.149%</td><td>-5.776 pp</td><td>[-7.462, -3.698] pp</td></tr>
+<tr><td>通常文</td><td>far_1pct/all_input_far</td><td>1.373%</td><td>1.452%</td><td>-0.079 pp</td><td>[-0.648, +0.743] pp</td></tr>
+<tr><td>通常文</td><td>far_1pct/all_input_frr</td><td>52.333%</td><td>66.000%</td><td>-13.667 pp</td><td>[-18.361, -8.639] pp</td></tr>
+<tr><td>通常文</td><td>far_0_1pct/all_input_far</td><td>0.175%</td><td>0.196%</td><td>-0.022 pp</td><td>[-0.185, +0.164] pp</td></tr>
+<tr><td>通常文</td><td>far_0_1pct/all_input_frr</td><td>77.556%</td><td>85.500%</td><td>-7.944 pp</td><td>[-12.417, -3.610] pp</td></tr>
+<tr><td>別テキスト</td><td>pooled_eer</td><td>10.873%</td><td>17.917%</td><td>-7.044 pp</td><td>[-9.295, -3.679] pp</td></tr>
+<tr><td>別テキスト</td><td>far_1pct/all_input_far</td><td>1.720%</td><td>1.329%</td><td>+0.390 pp</td><td>[-0.793, +1.992] pp</td></tr>
+<tr><td>別テキスト</td><td>far_1pct/all_input_frr</td><td>45.185%</td><td>60.000%</td><td>-14.815 pp</td><td>[-23.796, -5.370] pp</td></tr>
+<tr><td>別テキスト</td><td>far_0_1pct/all_input_far</td><td>0.265%</td><td>0.179%</td><td>+0.086 pp</td><td>[-0.278, +0.570] pp</td></tr>
+<tr><td>別テキスト</td><td>far_0_1pct/all_input_frr</td><td>73.704%</td><td>84.167%</td><td>-10.463 pp</td><td>[-15.741, -5.185] pp</td></tr>
+</tbody></table></div>
+<p>validation Rとtest通常文EERのSpearman相関：-0.442。</p>
+<p>validation Rとtest RのSpearman相関：0.864。</p>
+<h2>条件と解釈</h2>
+<p>- 群分け：validation15話者、音素ごと180自然区間、区間長・前後文脈調整。testにも同数の自然区間。</p>
+<p>- 単音素評価：各15話者、登録5×50ms、通常文150本人/2100他人、別テキスト45本人/630他人試行（各音素）。</p>
+<p>- 高群−低群通常文EERが主1検証。その他の指標と相関は補助的。CIはvalidationで固定した群・閾値に条件付く。</p>
+<p>- 分散比は、この固定encoderが抽出した安定した話者依存性。身体形状と発音習慣、話者固定の録音差を分離した指標ではない。</p>
+<p>- 二群に分類できても、自然な二峰性は証明していない。境界付近の音素はbootstrap所属割合で判断する。</p>
+<p>- 全音素で話者・区間数・評価時間は同じだが、元発話は異なる。50ms cropと文脈調整の不完全さが結果に影響し得る。</p>
+<p>- 主結果は群内の単音素平均。音素の組み合わせによる追加効果は別に検証する必要がある。</p>
+<p>- 1モデル/1 seed、観測済みJVS test。未知録音条件や独立holdoutでの確証ではない。</p>
+<h2>検証</h2>
+<p>8単体テストとRuff、推論のbitwise反復一致、重み不変、入力・コード・群・閾値のchecksumを検査。</p>
+<p>独立監査：source_slices=12600, cosine_scores=81900, dense_REML_components=28, EER_cells=56, FAR_FRR_values=336, weighted_bootstrap_EERs=1792, group_difference_arrays_and_CIs=10。</p>
+<p>[再現手順](README.md)・[CSV](evaluation-cells.csv)・[JSON](evaluation-results.json)・[HTML](evaluation-results.html)</p><p><a href='evaluation-cells.csv'>CSV</a> · <a href='evaluation-results.json'>JSON</a> · <a href='README.md'>再現手順</a></p></main></html>

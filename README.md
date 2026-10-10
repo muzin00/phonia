@@ -99,3 +99,4 @@ Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の�
 - [音素単独の識別力: 母音5種とm/n/sを同じ50msで直接比較](poc/phoneme-discriminability/interpretation.md)
 - [音素単独の識別力: 比較表・話者別EER・スコア分布のHTML](poc/phoneme-discriminability/evaluation-results.html)
 - [有声・無声子音: 14音素モデルとm/n・t/k・d/gの比較](poc/phoneme-voicing-comparison/README.md)
+- [固定14音素: 話者間・話者内の分散による群分けと別話者での検証](poc/phoneme-speaker-dependence/interpretation.md)
