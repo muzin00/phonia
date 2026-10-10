@@ -1,0 +1,3 @@
+# Preserve checksum-frozen, machine-generated plot bytes; review the image.
+learning-curves.svg binary
+*.csv text eol=lf

@@ -178,6 +178,19 @@ JVSの70/15/15分割を保持し、SRC4VCの予約30話者は区間抽出・特�
 実在人物のコーパス間重複は未確認である。
 [SRC4VCの固定条件](../poc/phoneme-src4vc-training/README.md)、[学習比較表](../poc/phoneme-src4vc-training/training-results.html)を参照する。
 
+60,000回までの学習予算検証はCommon Voice版とSRC4VC版の2本・各1 seedで行う。
+各セットのデータと特徴統計を保持し、初期化から同じ60,000回用cosine scheduleで学習する。
+30,000・45,000・60,000 updateの採用を学習前に固定し、各セット内の30,000→60,000を主比較とする。
+旧30,000回用scheduleのendpointを、新しい曲線の30,000回checkpointの代わりに使わない。
+全6条件のvalidation閾値を固定してからtestへ適用し、testによるcheckpoint選択と閾値の再校正は行わない。
+データ量は増やさず、回数と学習率が一緒に推移する1本の学習曲線を観測する。1 seed・観測済みJVS testの探索的な検証である。
+両学習と6条件の発話単位評価を完了した。Common Voiceのtest FARは通常文2.305→2.038%、別テキスト1.794→1.571%と低下した。
+SRC4VCの通常文EERは1.224→1.098→0.962%と低下したが、別テキストFRRは13.778→14.222%に増えた。
+主比較12指標の差の95% CIは全て0を含み、単一母音区間のvalidation EERも30,000回以降ほぼ横ばいだった。
+一部の改善の兆候を、回数増加による総合的な向上やデータ量のスケーリング則の確認とは扱わない。
+[HTML比較表](../poc/phoneme-training-budget/evaluation-results.html)、[結果の解釈](../poc/phoneme-training-budget/interpretation.md)を参照する。
+[学習予算の固定条件](../poc/phoneme-training-budget/README.md)を参照する。
+
 ## 7. 話者表現モデル
 
 共通encoderは多数話者のデータで事前学習し、音素区間から固定長の連続表現を生成する。

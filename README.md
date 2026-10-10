@@ -80,3 +80,7 @@ Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の�
 - [Phase 8: SRC4VCの学習結果HTML比較表](poc/phoneme-src4vc-training/training-results.html)
 - [Phase 8: SRC4VCの発話単位評価HTML](poc/phoneme-src4vc-evaluation/evaluation-results.html)
 - [Phase 8: SRC4VC評価の解釈](poc/phoneme-src4vc-evaluation/interpretation.md)
+- [Phase 8: 30,000・45,000・60,000回の学習量比較の固定条件](poc/phoneme-training-budget/README.md)
+- [Phase 8: 60,000回までの学習曲線HTML](poc/phoneme-training-budget/training-results.html)
+- [Phase 8: 30,000・45,000・60,000回の発話単位評価HTML](poc/phoneme-training-budget/evaluation-results.html)
+- [Phase 8: 学習回数の比較結果と解釈](poc/phoneme-training-budget/interpretation.md)
