@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "protocol_version": "phase8-single-phone-discriminability-v1",
+  "phonemes": [
+    "a",
+    "i",
+    "u",
+    "e",
+    "o",
+    "m",
+    "n",
+    "s"
+  ],
+  "training_run": "artifacts/phoneme-consonant-combination-training/jvs-cv-vowels-mns-20261010-v1",
+  "reference_inputs": "artifacts/phoneme-training-exposure-ablation/evaluation-20261008-v1",
+  "source_support": "artifacts/phoneme-consonant-combination-evaluation/matched-20261010-v1",
+  "sample_rate": 24000,
+  "segment_frames": 1200,
+  "enrollment_segments_per_phone": 10,
+  "query_segments_per_phone": 1,
+  "minimum_rms_dbfs": -50,
+  "selection_seed": 20261010,
+  "candidate_selection": "raw_alignment_center50ms_then_RMS_QC_all_eight_phones; seeded_source_diversification_without_embeddings",
+  "fusion": "one_phone_only; normalized_mean_enrollment_embedding_dot_query_embedding",
+  "calibration": "each_phone_validation_verification_only",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260929,
+  "primary_hypothesis": "m and n each have lower EER than s on normal-text test",
+  "primary_contrasts": [
+    [
+      "m",
+      "s"
+    ],
+    [
+      "n",
+      "s"
+    ]
+  ],
+  "primary_role": "verification",
+  "primary_metric": "pooled_eer",
+  "primary_ci_confidence": 0.975,
+  "primary_family_size": 2,
+  "secondary_comparisons": "all_28_pairs_and_cross_text; exploratory_95pct_CI",
+  "test_previously_observed": true,
+  "independent_holdout": false,
+  "additional_training": false,
+  "run_directory": "artifacts/phoneme-discriminability/matched50ms-20261010-v1"
+}
