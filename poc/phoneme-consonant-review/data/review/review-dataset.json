@@ -1,0 +1,2862 @@
+{
+  "schemaVersion": 2,
+  "datasetId": "jvs-src4vc-mn-training-review",
+  "datasetVersion": "seed20261010-n100",
+  "title": "JVS・SRC4VC /m/・/n/ 学習前レビュー（100区間）",
+  "protocol": {
+    "id": "phoneme-audibility-training-review",
+    "version": "1"
+  },
+  "playback": {
+    "contextPaddingSec": 0.1
+  },
+  "form": {
+    "candidateQuestions": [
+      {
+        "id": "perceived_content",
+        "prompt": "「候補Aだけ再生」で、表示された音素は聞こえますか？",
+        "choices": [
+          {
+            "value": "target_phoneme",
+            "label": "表示された音素が聞こえる"
+          },
+          {
+            "value": "target_with_other",
+            "label": "表示された音素と隣接する音が聞こえる"
+          },
+          {
+            "value": "other_only",
+            "label": "別の音だけが聞こえる"
+          },
+          {
+            "value": "near_silence",
+            "label": "ほぼ音が聞こえない"
+          },
+          {
+            "value": "uncertain",
+            "label": "判断できない"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": {
+      "prompt": "切り出し位置も確認して、この区間を表示された音素の学習データとして利用できますか？",
+      "choices": [
+        {
+          "value": "accepted",
+          "label": "利用できる"
+        },
+        {
+          "value": "rejected",
+          "label": "利用できない"
+        },
+        {
+          "value": "uncertain",
+          "label": "判断できない"
+        }
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "jvs095_nonpara30_ut-paraphrase-sent234-phrase2--phone-107-m",
+      "utterance": {
+        "id": "jvs095_nonpara30_ut-paraphrase-sent234-phrase2",
+        "text": "日本の政局の動向をはじめ、世界の重要な出来事については、必ず評論や分析を発表しており、極めて特異な形だ。",
+        "audioUrl": "/media/utterances/jvs095_nonpara30_ut-paraphrase-sent234-phrase2.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 107,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 9.7225,
+            "endSec": 9.7825
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc071__jvnvsurprise_018--phone-055-m",
+      "utterance": {
+        "id": "src4vc071__jvnvsurprise_018",
+        "text": "おお、この店はリニューアルされたんですか？内装が全然違いますね！",
+        "audioUrl": "/media/utterances/src4vc071__jvnvsurprise_018.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 55,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.1025,
+            "endSec": 7.1325
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs018_nonpara30_basic5000_2849--phone-028-n",
+      "utterance": {
+        "id": "jvs018_nonpara30_basic5000_2849",
+        "text": "恵子が手際よく食器を重ねて、シンクへ運んでゆく。",
+        "audioUrl": "/media/utterances/jvs018_nonpara30_basic5000_2849.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 28,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.5225,
+            "endSec": 2.5825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs051_nonpara30_basic5000_1857--phone-023-n",
+      "utterance": {
+        "id": "jvs051_nonpara30_basic5000_1857",
+        "text": "大勢の人々が、この農場で働いている。",
+        "audioUrl": "/media/utterances/jvs051_nonpara30_basic5000_1857.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 23,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.7925,
+            "endSec": 2.8625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs018_parallel100_voiceactress100_005--phone-055-m",
+      "utterance": {
+        "id": "jvs018_parallel100_voiceactress100_005",
+        "text": "シルバーサーファー襲撃事件までに、リチャーズは、チーム名と共に、国際的にスーパーヒーロー、および、有名人として、認知されている。",
+        "audioUrl": "/media/utterances/jvs018_parallel100_voiceactress100_005.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 55,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.9325,
+            "endSec": 6.0525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs061_parallel100_voiceactress100_065--phone-059-n",
+      "utterance": {
+        "id": "jvs061_parallel100_voiceactress100_065",
+        "text": "レギュラーメンバーの顔写真をクリックした後に、ムービープレイヤー風に再生されるという、特異な形式となっている。",
+        "audioUrl": "/media/utterances/jvs061_parallel100_voiceactress100_065.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 59,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.8125,
+            "endSec": 4.8725
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc046__recitation_055--phone-012-m",
+      "utterance": {
+        "id": "src4vc046__recitation_055",
+        "text": "本番前はメチャメチャ不安になる。",
+        "audioUrl": "/media/utterances/src4vc046__recitation_055.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 12,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.9125,
+            "endSec": 0.9525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs012_nonpara30_onomatopee300_244--phone-051-m",
+      "utterance": {
+        "id": "jvs012_nonpara30_onomatopee300_244",
+        "text": "どうにか階段をのぼりきった彼女は、疲れた体に鞭打って、長い廊下をヨタヨタと歩き続けた。",
+        "audioUrl": "/media/utterances/jvs012_nonpara30_onomatopee300_244.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 51,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.1725,
+            "endSec": 4.2325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc094__calls_140--phone-005-m",
+      "utterance": {
+        "id": "src4vc094__calls_140",
+        "text": "この前そちらで買ったお茶がすごくおいしくてね。",
+        "audioUrl": "/media/utterances/src4vc094__calls_140.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 5,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.2125,
+            "endSec": 0.3425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs009_nonpara30_ut-paraphrase-sent273-phrase1--phone-111-m",
+      "utterance": {
+        "id": "jvs009_nonpara30_ut-paraphrase-sent273-phrase1",
+        "text": "しかし、作品の結末は智恵と洞察に満ちた回答というより、より、入り組んだ挫折と、混迷の荒野に、読者を連れ戻すものではなかったか。",
+        "audioUrl": "/media/utterances/jvs009_nonpara30_ut-paraphrase-sent273-phrase1.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 111,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 11.8725,
+            "endSec": 11.9525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs090_nonpara30_basic5000_2393--phone-023-m",
+      "utterance": {
+        "id": "jvs090_nonpara30_basic5000_2393",
+        "text": "阪神大震災では、地面が長時間に渡って揺れた。",
+        "audioUrl": "/media/utterances/jvs090_nonpara30_basic5000_2393.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 23,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.7425,
+            "endSec": 3.7925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc026__jvnvsadness_012--phone-078-m",
+      "utterance": {
+        "id": "src4vc026__jvnvsadness_012",
+        "text": "ぐすん、今回の試験の点数は絶望的に低くて、もう何もできないと思ってしまう。",
+        "audioUrl": "/media/utterances/src4vc026__jvnvsadness_012.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 78,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.1625,
+            "endSec": 7.2425
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc026__jvnvdisgust_011--phone-034-n",
+      "utterance": {
+        "id": "src4vc026__jvnvdisgust_011",
+        "text": "おえ、二日酔いって本当に最悪ですね。頭が痛くて、吐き気がして、体がだるくて、食欲もない。",
+        "audioUrl": "/media/utterances/src4vc026__jvnvdisgust_011.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 34,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.8725,
+            "endSec": 3.9125
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc013__jvnvanger_013--phone-050-n",
+      "utterance": {
+        "id": "src4vc013__jvnvanger_013",
+        "text": "なに！この鬼畜が！あなたのような人間がいるから世の中が腐るんだよ。",
+        "audioUrl": "/media/utterances/src4vc013__jvnvanger_013.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 50,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.4925,
+            "endSec": 3.5825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs062_parallel100_voiceactress100_004--phone-035-m",
+      "utterance": {
+        "id": "jvs062_parallel100_voiceactress100_004",
+        "text": "サービスマネージャー導入駅のため、大井町駅から、遠隔管理している。",
+        "audioUrl": "/media/utterances/jvs062_parallel100_voiceactress100_004.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 35,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.1025,
+            "endSec": 4.1825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs099_parallel100_voiceactress100_060--phone-039-n",
+      "utterance": {
+        "id": "jvs099_parallel100_voiceactress100_060",
+        "text": "母は、ピーターマリッツバーグの精神病院に入院しているときに、ベッシーを産む。",
+        "audioUrl": "/media/utterances/jvs099_parallel100_voiceactress100_060.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 39,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.1525,
+            "endSec": 3.2125
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs055_parallel100_voiceactress100_024--phone-034-n",
+      "utterance": {
+        "id": "jvs055_parallel100_voiceactress100_024",
+        "text": "このため、プラズマ中のイオンや、電子の持つ、平均運動エネルギーを、温度で表現することがある。",
+        "audioUrl": "/media/utterances/jvs055_parallel100_voiceactress100_024.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 34,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.0325,
+            "endSec": 4.0725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs063_parallel100_voiceactress100_033--phone-025-n",
+      "utterance": {
+        "id": "jvs063_parallel100_voiceactress100_033",
+        "text": "芸能プロダクション、アミューズのグループ企業。",
+        "audioUrl": "/media/utterances/jvs063_parallel100_voiceactress100_033.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 25,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.6925,
+            "endSec": 2.7625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc050__recitation_058--phone-009-m",
+      "utterance": {
+        "id": "src4vc050__recitation_058",
+        "text": "客人をもてなすのは当然です。",
+        "audioUrl": "/media/utterances/src4vc050__recitation_058.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 9,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3025,
+            "endSec": 1.3525
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc075__studies_128--phone-030-m",
+      "utterance": {
+        "id": "src4vc075__studies_128",
+        "text": "ごめんなさい。がんばったんだけど、だめでした。",
+        "audioUrl": "/media/utterances/src4vc075__studies_128.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 30,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.0525,
+            "endSec": 4.1325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc018__jvnvhappiness_011--phone-070-n",
+      "utterance": {
+        "id": "src4vc018__jvnvhappiness_011",
+        "text": "今、私は大学の合格通知をもらったんだ！えへへ、歓喜のあまり飛び跳ねたくなるぐらいうれしい！",
+        "audioUrl": "/media/utterances/src4vc018__jvnvhappiness_011.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 70,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.7225,
+            "endSec": 6.7925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc046__jvnvdisgust_002--phone-006-n",
+      "utterance": {
+        "id": "src4vc046__jvnvdisgust_002",
+        "text": "いや、あの家は本当にみすぼらしい。中に入る前から不快な気分になる。",
+        "audioUrl": "/media/utterances/src4vc046__jvnvdisgust_002.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 6,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.7825,
+            "endSec": 0.8225
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc049__jvnvdisgust_011--phone-090-m",
+      "utterance": {
+        "id": "src4vc049__jvnvdisgust_011",
+        "text": "おえ、二日酔いって本当に最悪ですね。頭が痛くて、吐き気がして、体がだるくて、食欲もない。",
+        "audioUrl": "/media/utterances/src4vc049__jvnvdisgust_011.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 90,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.0125,
+            "endSec": 6.0725
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc037__jvnvhappiness_025--phone-047-n",
+      "utterance": {
+        "id": "src4vc037__jvnvhappiness_025",
+        "text": "よっしゃ！私の友達が有名なアーティストと一緒に写真を撮ってくれたんだ！これで私も有名人と写真が撮れた！",
+        "audioUrl": "/media/utterances/src4vc037__jvnvhappiness_025.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 47,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6425,
+            "endSec": 3.7525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs090_parallel100_voiceactress100_071--phone-063-m",
+      "utterance": {
+        "id": "jvs090_parallel100_voiceactress100_071",
+        "text": "ペンシルベニア州、フィラデルフィアの郊外、ウィンレッドのレンキナウ病院で生まれた。",
+        "audioUrl": "/media/utterances/jvs090_parallel100_voiceactress100_071.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 63,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.8025,
+            "endSec": 6.9025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs080_parallel100_voiceactress100_009--phone-030-m",
+      "utterance": {
+        "id": "jvs080_parallel100_voiceactress100_009",
+        "text": "また禰寝氏は、中山王の治める、琉球王国との交易にも参加した。",
+        "audioUrl": "/media/utterances/jvs080_parallel100_voiceactress100_009.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 30,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.1825,
+            "endSec": 3.2425
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc001__jvnvfear_011--phone-017-m",
+      "utterance": {
+        "id": "src4vc001__jvnvfear_011",
+        "text": "ひえ、テロリズムが蔓延する世界で生きることが怖くて何もできない。",
+        "audioUrl": "/media/utterances/src4vc001__jvnvfear_011.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 17,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.3125,
+            "endSec": 3.4425
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc031__jvnvhappiness_012--phone-045-m",
+      "utterance": {
+        "id": "src4vc031__jvnvhappiness_012",
+        "text": "今日は友達にたくさん手伝ってもらって、とっても感謝してるんだ。えへへ、本当にありがたい！",
+        "audioUrl": "/media/utterances/src4vc031__jvnvhappiness_012.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 45,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.8725,
+            "endSec": 5.9725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs099_parallel100_voiceactress100_073--phone-036-n",
+      "utterance": {
+        "id": "jvs099_parallel100_voiceactress100_073",
+        "text": "上院議員として、バーンウェルは、カリフォルニア州の、連邦加入に賛成した。",
+        "audioUrl": "/media/utterances/jvs099_parallel100_voiceactress100_073.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 36,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.4525,
+            "endSec": 3.5225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs097_parallel100_voiceactress100_092--phone-019-n",
+      "utterance": {
+        "id": "jvs097_parallel100_voiceactress100_092",
+        "text": "紫外線は、表面エネルギーの、小さいポリマーを接着する際の、前処理に利用される。",
+        "audioUrl": "/media/utterances/jvs097_parallel100_voiceactress100_092.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 19,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.6925,
+            "endSec": 2.7625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs061_nonpara30_loanword128_070--phone-029-n",
+      "utterance": {
+        "id": "jvs061_nonpara30_loanword128_070",
+        "text": "グォ・ヨウは，中国北京出身の男性俳優。",
+        "audioUrl": "/media/utterances/jvs061_nonpara30_loanword128_070.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 29,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.8425,
+            "endSec": 2.9025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs069_parallel100_voiceactress100_043--phone-033-n",
+      "utterance": {
+        "id": "jvs069_parallel100_voiceactress100_043",
+        "text": "ハーデースが、ペルセポネーに恋をしたのは、アプロディーテーの、策略であるとされている。",
+        "audioUrl": "/media/utterances/jvs069_parallel100_voiceactress100_043.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 33,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.4125,
+            "endSec": 3.4925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc036__jvnvdisgust_004--phone-040-m",
+      "utterance": {
+        "id": "src4vc036__jvnvdisgust_004",
+        "text": "うあ、あの人は本当に音痴で、歌を聞くと耳が痛くなるよ。",
+        "audioUrl": "/media/utterances/src4vc036__jvnvdisgust_004.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 40,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.8425,
+            "endSec": 4.9125
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs020_parallel100_voiceactress100_001--phone-001-m",
+      "utterance": {
+        "id": "jvs020_parallel100_voiceactress100_001",
+        "text": "また、東寺のように、五大明王と呼ばれる、主要な明王の中央に配されることも多い。",
+        "audioUrl": "/media/utterances/jvs020_parallel100_voiceactress100_001.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.4825,
+            "endSec": 0.5525
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc094__studies_097--phone-018-n",
+      "utterance": {
+        "id": "src4vc094__studies_097",
+        "text": "運がわるかったのかな。",
+        "audioUrl": "/media/utterances/src4vc094__studies_097.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3225,
+            "endSec": 1.4325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc040__jvnvanger_014--phone-045-n",
+      "utterance": {
+        "id": "src4vc040__jvnvanger_014",
+        "text": "なに？濫行しているのに、まるで何も知らないかのように振る舞っているのか？",
+        "audioUrl": "/media/utterances/src4vc040__jvnvanger_014.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 45,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.3625,
+            "endSec": 4.3925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs037_parallel100_voiceactress100_082--phone-046-n",
+      "utterance": {
+        "id": "jvs037_parallel100_voiceactress100_082",
+        "text": "カーミラ星と呼ばれている惑星から、宇宙船に乗って、地球に侵入した宇宙人。",
+        "audioUrl": "/media/utterances/jvs037_parallel100_voiceactress100_082.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 46,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6725,
+            "endSec": 3.7625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs014_parallel100_voiceactress100_085--phone-091-n",
+      "utterance": {
+        "id": "jvs014_parallel100_voiceactress100_085",
+        "text": "遺灰のほとんどは、スウェーデン西海岸の、ブーヒュースレーン地方の小島にある漁村、フヤルバッカ周辺の海に、散骨された。",
+        "audioUrl": "/media/utterances/jvs014_parallel100_voiceactress100_085.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 91,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 8.8225,
+            "endSec": 8.8825
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc075__recitation_031--phone-018-n",
+      "utterance": {
+        "id": "src4vc075__recitation_031",
+        "text": "チョコの在庫あったかな？",
+        "audioUrl": "/media/utterances/src4vc075__recitation_031.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.3425,
+            "endSec": 2.4325
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs043_parallel100_voiceactress100_024--phone-016-m",
+      "utterance": {
+        "id": "jvs043_parallel100_voiceactress100_024",
+        "text": "このため、プラズマ中のイオンや、電子の持つ、平均運動エネルギーを、温度で表現することがある。",
+        "audioUrl": "/media/utterances/jvs043_parallel100_voiceactress100_024.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 16,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.5525,
+            "endSec": 1.5925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs049_nonpara30_basic5000_1932--phone-017-m",
+      "utterance": {
+        "id": "jvs049_nonpara30_basic5000_1932",
+        "text": "頭を保護するためには、ヘルメットをかぶらなくてはいけない。",
+        "audioUrl": "/media/utterances/jvs049_nonpara30_basic5000_1932.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 17,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.5325,
+            "endSec": 1.5925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs080_parallel100_voiceactress100_075--phone-059-m",
+      "utterance": {
+        "id": "jvs080_parallel100_voiceactress100_075",
+        "text": "楽曲のセンターポジションは、エーケービーフォーティーエイトの、高橋みなみが務めた。",
+        "audioUrl": "/media/utterances/jvs080_parallel100_voiceactress100_075.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 59,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.0225,
+            "endSec": 6.0825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs063_nonpara30_travel1000_0269--phone-065-m",
+      "utterance": {
+        "id": "jvs063_nonpara30_travel1000_0269",
+        "text": "部屋の電話を、受信人払いの電話でも使用すると、料金がかかります。",
+        "audioUrl": "/media/utterances/jvs063_nonpara30_travel1000_0269.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 65,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.1225,
+            "endSec": 6.2025
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc025__jvnvdisgust_014--phone-077-m",
+      "utterance": {
+        "id": "src4vc025__jvnvdisgust_014",
+        "text": "げっ、なんであそこに虫たちが群がっているかと思ったら、腐った羊の死体があります。",
+        "audioUrl": "/media/utterances/src4vc025__jvnvdisgust_014.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 77,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.3925,
+            "endSec": 6.5125
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc073__jvnvfear_010--phone-006-n",
+      "utterance": {
+        "id": "src4vc073__jvnvfear_010",
+        "text": "ひい、あの暴行事件は本当に怖かった。もう二度とあんな体験はしたくない。",
+        "audioUrl": "/media/utterances/src4vc073__jvnvfear_010.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 6,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.0025,
+            "endSec": 1.0625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc070__calls_031--phone-012-n",
+      "utterance": {
+        "id": "src4vc070__calls_031",
+        "text": "それでは、この組み合わせなどいかがでしょうか？",
+        "audioUrl": "/media/utterances/src4vc070__calls_031.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 12,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.1925,
+            "endSec": 1.2625
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs041_parallel100_voiceactress100_004--phone-029-m",
+      "utterance": {
+        "id": "jvs041_parallel100_voiceactress100_004",
+        "text": "サービスマネージャー導入駅のため、大井町駅から、遠隔管理している。",
+        "audioUrl": "/media/utterances/jvs041_parallel100_voiceactress100_004.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 29,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.5925,
+            "endSec": 2.6825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs035_nonpara30_travel1000_0361--phone-034-m",
+      "utterance": {
+        "id": "jvs035_nonpara30_travel1000_0361",
+        "text": "ホテル直通の電話が、あそこにあります。",
+        "audioUrl": "/media/utterances/jvs035_nonpara30_travel1000_0361.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 34,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6925,
+            "endSec": 3.7525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs036_parallel100_voiceactress100_018--phone-026-n",
+      "utterance": {
+        "id": "jvs036_parallel100_voiceactress100_018",
+        "text": "他のメジャーなディストリビューションに比べ、セキュリティー上の問題の修正が、遅い場合もある。",
+        "audioUrl": "/media/utterances/jvs036_parallel100_voiceactress100_018.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 26,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.5125,
+            "endSec": 3.5625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc050__studies_105--phone-008-n",
+      "utterance": {
+        "id": "src4vc050__studies_105",
+        "text": "ふざけんなよ。何様だよ！ホント。",
+        "audioUrl": "/media/utterances/src4vc050__studies_105.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 8,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.8325,
+            "endSec": 1.9125
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc083__jvnvdisgust_014--phone-065-n",
+      "utterance": {
+        "id": "src4vc083__jvnvdisgust_014",
+        "text": "げっ、なんであそこに虫たちが群がっているかと思ったら、腐った羊の死体があります。",
+        "audioUrl": "/media/utterances/src4vc083__jvnvdisgust_014.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 65,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.9225,
+            "endSec": 6.0125
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs054_parallel100_voiceactress100_075--phone-044-n",
+      "utterance": {
+        "id": "jvs054_parallel100_voiceactress100_075",
+        "text": "楽曲のセンターポジションは、エーケービーフォーティーエイトの、高橋みなみが務めた。",
+        "audioUrl": "/media/utterances/jvs054_parallel100_voiceactress100_075.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 44,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.4825,
+            "endSec": 4.5425
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc049__recitation_229--phone-008-n",
+      "utterance": {
+        "id": "src4vc049__recitation_229",
+        "text": "ほとんどの被調査者は、写真を車載した。",
+        "audioUrl": "/media/utterances/src4vc049__recitation_229.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 8,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.4525,
+            "endSec": 0.5225
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc044__jvnvdisgust_003--phone-017-n",
+      "utterance": {
+        "id": "src4vc044__jvnvdisgust_003",
+        "text": "うあ、この排水溝のにおいはまさに人間の排泄物のようです。",
+        "audioUrl": "/media/utterances/src4vc044__jvnvdisgust_003.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 17,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.7225,
+            "endSec": 2.7825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs056_parallel100_voiceactress100_097--phone-029-m",
+      "utterance": {
+        "id": "jvs056_parallel100_voiceactress100_097",
+        "text": "この概念の導入によって、様々なバリエーションの、流体のコンピューターシミュレーションが、高い精度で可能となった。",
+        "audioUrl": "/media/utterances/jvs056_parallel100_voiceactress100_097.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 29,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.4325,
+            "endSec": 2.5025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs098_parallel100_voiceactress100_019--phone-067-m",
+      "utterance": {
+        "id": "jvs098_parallel100_voiceactress100_019",
+        "text": "ベルガートーア前の、ヴェディゲンウーファーパークには、戦争と弾圧の犠牲者のための記念碑が建っている。",
+        "audioUrl": "/media/utterances/jvs098_parallel100_voiceactress100_019.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 67,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.1125,
+            "endSec": 6.1725
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc095__jvnvsadness_002--phone-005-m",
+      "utterance": {
+        "id": "src4vc095__jvnvsadness_002",
+        "text": "あーあ、毎日残業が続いて疲れるばかりで、家族と過ごす時間も減ってしまって、悲しい気持ちでいっぱいです。",
+        "audioUrl": "/media/utterances/src4vc095__jvnvsadness_002.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 5,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.4525,
+            "endSec": 2.5325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc098__recitation_230--phone-051-n",
+      "utterance": {
+        "id": "src4vc098__recitation_230",
+        "text": "補佐が、一酸化炭素中毒になるというハプニングは起きなかった。",
+        "audioUrl": "/media/utterances/src4vc098__recitation_230.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 51,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.4025,
+            "endSec": 4.4525
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc073__jvnvfear_008--phone-062-n",
+      "utterance": {
+        "id": "src4vc073__jvnvfear_008",
+        "text": "怖い話を聞いて、私の腕には鳥肌が立ち上がっている、ひっ、何かが見えるような気がして怖い。",
+        "audioUrl": "/media/utterances/src4vc073__jvnvfear_008.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 62,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.0625,
+            "endSec": 7.0925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc054__jvnvfear_010--phone-039-m",
+      "utterance": {
+        "id": "src4vc054__jvnvfear_010",
+        "text": "ひい、あの暴行事件は本当に怖かった。もう二度とあんな体験はしたくない。",
+        "audioUrl": "/media/utterances/src4vc054__jvnvfear_010.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 39,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 240ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.8625,
+            "endSec": 3.1025
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc032__calls_178--phone-053-m",
+      "utterance": {
+        "id": "src4vc032__calls_178",
+        "text": "このお店の家具、デザインがとてもオシャレで、お気に入りになりました。",
+        "audioUrl": "/media/utterances/src4vc032__calls_178.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 53,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.9725,
+            "endSec": 5.0325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc068__jvnvfear_012--phone-038-n",
+      "utterance": {
+        "id": "src4vc068__jvnvfear_012",
+        "text": "ひえ、怖くて腰抜けになりそうだ！あそこにいるのはサイコパスの殺人犯だ！",
+        "audioUrl": "/media/utterances/src4vc068__jvnvfear_012.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 38,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6025,
+            "endSec": 3.6925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc024__jvnvfear_009--phone-005-m",
+      "utterance": {
+        "id": "src4vc024__jvnvfear_009",
+        "text": "ひい、街の抗争が激化して、いつ自分が巻き込まれるか分からない。",
+        "audioUrl": "/media/utterances/src4vc024__jvnvfear_009.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 5,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.2625,
+            "endSec": 1.3325
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs028_parallel100_voiceactress100_069--phone-092-m",
+      "utterance": {
+        "id": "jvs028_parallel100_voiceactress100_069",
+        "text": "ブルーリッジ山脈の源流から、リッチモンドまで、多くの早瀬や淵が、釣りや急流くだりを楽しませてくれる。",
+        "audioUrl": "/media/utterances/jvs028_parallel100_voiceactress100_069.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 92,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 8.6125,
+            "endSec": 8.6625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc092__jvnvsurprise_038--phone-032-m",
+      "utterance": {
+        "id": "src4vc092__jvnvsurprise_038",
+        "text": "やあ！急に雷が鳴り響いて、めっちゃ驚かされた。",
+        "audioUrl": "/media/utterances/src4vc092__jvnvsurprise_038.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 32,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6125,
+            "endSec": 3.6925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs080_nonpara30_basic5000_1893--phone-022-m",
+      "utterance": {
+        "id": "jvs080_nonpara30_basic5000_1893",
+        "text": "農家のちょうど後ろに、馬小屋がある。",
+        "audioUrl": "/media/utterances/jvs080_nonpara30_basic5000_1893.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.5125,
+            "endSec": 2.6125
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc025__jvnvsurprise_020--phone-016-n",
+      "utterance": {
+        "id": "src4vc025__jvnvsurprise_020",
+        "text": "おっと、この会場のキャパシティーは500人だったのに、もう600人以上も入ってるよ！",
+        "audioUrl": "/media/utterances/src4vc025__jvnvsurprise_020.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 16,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.1025,
+            "endSec": 2.1325
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs033_parallel100_voiceactress100_023--phone-029-m",
+      "utterance": {
+        "id": "jvs033_parallel100_voiceactress100_023",
+        "text": "南西部ウォーレンは、ベイアーマンファームズと、フィッツジェラルドの地区で、構成される。",
+        "audioUrl": "/media/utterances/jvs033_parallel100_voiceactress100_023.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 29,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.9925,
+            "endSec": 3.0525
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc043__jvnvsadness_013--phone-022-m",
+      "utterance": {
+        "id": "src4vc043__jvnvsadness_013",
+        "text": "はぁー、今日も寝坊してしまって、会社に遅刻しちゃった。",
+        "audioUrl": "/media/utterances/src4vc043__jvnvsadness_013.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.0025,
+            "endSec": 2.0925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs078_parallel100_voiceactress100_098--phone-002-n",
+      "utterance": {
+        "id": "jvs078_parallel100_voiceactress100_098",
+        "text": "乾ドックに入渠して、オーバーホールすべきかどうか、パフォーマンスがチェックされた。",
+        "audioUrl": "/media/utterances/jvs078_parallel100_voiceactress100_098.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 2,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.6425,
+            "endSec": 0.7025
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc024__jvnvsadness_012--phone-052-m",
+      "utterance": {
+        "id": "src4vc024__jvnvsadness_012",
+        "text": "ぐすん、今回の試験の点数は絶望的に低くて、もう何もできないと思ってしまう。",
+        "audioUrl": "/media/utterances/src4vc024__jvnvsadness_012.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 52,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.4925,
+            "endSec": 4.5425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs041_nonpara30_basic5000_2818--phone-008-m",
+      "utterance": {
+        "id": "jvs041_nonpara30_basic5000_2818",
+        "text": "市民の皆様の御意見をちょうだいする予定です。",
+        "audioUrl": "/media/utterances/jvs041_nonpara30_basic5000_2818.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 8,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.0125,
+            "endSec": 1.1025
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc053__recitation_049--phone-001-n",
+      "utterance": {
+        "id": "src4vc053__recitation_049",
+        "text": "二分だけのオルガン演奏で終わってしまった。",
+        "audioUrl": "/media/utterances/src4vc053__recitation_049.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 200ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.7025,
+            "endSec": 0.9025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs039_parallel100_voiceactress100_100--phone-034-n",
+      "utterance": {
+        "id": "jvs039_parallel100_voiceactress100_100",
+        "text": "アーリーは、降雨の中を、南のバージニア州、ウィンチェスター近くの、フィッシャーズヒルまで、軍を退いた。",
+        "audioUrl": "/media/utterances/jvs039_parallel100_voiceactress100_100.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 34,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.2325,
+            "endSec": 4.2725
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc016__jvnvsadness_013--phone-022-m",
+      "utterance": {
+        "id": "src4vc016__jvnvsadness_013",
+        "text": "はぁー、今日も寝坊してしまって、会社に遅刻しちゃった。",
+        "audioUrl": "/media/utterances/src4vc016__jvnvsadness_013.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.0725,
+            "endSec": 2.1425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs012_parallel100_voiceactress100_037--phone-032-n",
+      "utterance": {
+        "id": "jvs012_parallel100_voiceactress100_037",
+        "text": "コミューンは、セーヌ川と、エソンヌ川の、合流地点となっている。",
+        "audioUrl": "/media/utterances/jvs012_parallel100_voiceactress100_037.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 32,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.1625,
+            "endSec": 4.2525
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs092_nonpara30_basic5000_0369--phone-069-n",
+      "utterance": {
+        "id": "jvs092_nonpara30_basic5000_0369",
+        "text": "指を使って食事をすることは、何世紀にもわたって続いてきたばかりでなく、再び広まるかもしれないと信じている学者もいる。",
+        "audioUrl": "/media/utterances/jvs092_nonpara30_basic5000_0369.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 69,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.1925,
+            "endSec": 5.2525
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc080__studies_169--phone-019-n",
+      "utterance": {
+        "id": "src4vc080__studies_169",
+        "text": "もう諦めようかな？何もかもが嫌になるよ。",
+        "audioUrl": "/media/utterances/src4vc080__studies_169.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 19,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.1125,
+            "endSec": 3.1725
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc040__jvnvfear_004--phone-058-m",
+      "utterance": {
+        "id": "src4vc040__jvnvfear_004",
+        "text": "きゃあ、あの森は暗くて怖いですね。一人で歩くのは危険かもしれません。",
+        "audioUrl": "/media/utterances/src4vc040__jvnvfear_004.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 58,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.4125,
+            "endSec": 7.4725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs038_nonpara30_basic5000_1768--phone-014-n",
+      "utterance": {
+        "id": "jvs038_nonpara30_basic5000_1768",
+        "text": "よちよち歩きの幼児でもできるのだから、家族で楽しんでいただきたい。",
+        "audioUrl": "/media/utterances/jvs038_nonpara30_basic5000_1768.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 14,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3225,
+            "endSec": 1.3925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc095__jvnvsadness_009--phone-029-n",
+      "utterance": {
+        "id": "src4vc095__jvnvsadness_009",
+        "text": "えーん、この病気が治る見込みがないと聞いて、絶望的な気持ちでいっぱいです。",
+        "audioUrl": "/media/utterances/src4vc095__jvnvsadness_009.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 29,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.4725,
+            "endSec": 3.5825
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc091__calls_237--phone-018-m",
+      "utterance": {
+        "id": "src4vc091__calls_237",
+        "text": "14時頃は空いてますか？",
+        "audioUrl": "/media/utterances/src4vc091__calls_237.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.8225,
+            "endSec": 1.9025
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc016__jvnvhappiness_027--phone-112-m",
+      "utterance": {
+        "id": "src4vc016__jvnvhappiness_027",
+        "text": "わぁ、お客様からとても感謝の言葉をもらったよ！私たちのサービスがお客様にとって役に立っていると知って、とっても嬉しい！",
+        "audioUrl": "/media/utterances/src4vc016__jvnvhappiness_027.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 112,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 8.1425,
+            "endSec": 8.1725
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs020_parallel100_voiceactress100_022--phone-030-m",
+      "utterance": {
+        "id": "jvs020_parallel100_voiceactress100_022",
+        "text": "このときに、浮遊大陸プルヴァマにある、中立国、ビュエルバが、ある情報筋から、バッシュ将軍の処刑と、前王女、アーシェの自害を発表。",
+        "audioUrl": "/media/utterances/jvs020_parallel100_voiceactress100_022.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 30,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.3925,
+            "endSec": 2.4625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc069__jvnvdisgust_014--phone-044-m",
+      "utterance": {
+        "id": "src4vc069__jvnvdisgust_014",
+        "text": "げっ、なんであそこに虫たちが群がっているかと思ったら、腐った羊の死体があります。",
+        "audioUrl": "/media/utterances/src4vc069__jvnvdisgust_014.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 44,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.0325,
+            "endSec": 5.1225
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc082__calls_045--phone-043-n",
+      "utterance": {
+        "id": "src4vc082__calls_045",
+        "text": "最近仕事をやめて、高い買いものができなくなったのですが、なにかオススメはありますか？",
+        "audioUrl": "/media/utterances/src4vc082__calls_045.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 43,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.0325,
+            "endSec": 3.0625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc076__studies_052--phone-022-n",
+      "utterance": {
+        "id": "src4vc076__studies_052",
+        "text": "一生懸命やっているのに、「気合いが足りない」とか言いやがって！",
+        "audioUrl": "/media/utterances/src4vc076__studies_052.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.2725,
+            "endSec": 1.3425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs099_parallel100_voiceactress100_054--phone-076-n",
+      "utterance": {
+        "id": "jvs099_parallel100_voiceactress100_054",
+        "text": "裕福なニューヨーカー達は、グレーヴセンド、競馬場や、シープシェッドベイ、競馬場などに集い、海沿いの高級レストランや、ホテルを利用した。",
+        "audioUrl": "/media/utterances/jvs099_parallel100_voiceactress100_054.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 76,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.5625,
+            "endSec": 6.5925
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs090_parallel100_voiceactress100_024--phone-016-m",
+      "utterance": {
+        "id": "jvs090_parallel100_voiceactress100_024",
+        "text": "このため、プラズマ中のイオンや、電子の持つ、平均運動エネルギーを、温度で表現することがある。",
+        "audioUrl": "/media/utterances/jvs090_parallel100_voiceactress100_024.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 16,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.3525,
+            "endSec": 2.4225
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs095_parallel100_voiceactress100_079--phone-062-n",
+      "utterance": {
+        "id": "jvs095_parallel100_voiceactress100_079",
+        "text": "大洋漁業オーナーの、中部謙吉の命を受けて、プロ野球球団の、大洋ホエールズに関わる。",
+        "audioUrl": "/media/utterances/jvs095_parallel100_voiceactress100_079.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 62,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.3625,
+            "endSec": 6.4025
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs095_parallel100_voiceactress100_026--phone-031-n",
+      "utterance": {
+        "id": "jvs095_parallel100_voiceactress100_026",
+        "text": "現在、ニュージャージー州、ムーアズタウンに住んでいる。",
+        "audioUrl": "/media/utterances/jvs095_parallel100_voiceactress100_026.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 31,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6825,
+            "endSec": 3.7325
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs034_parallel100_voiceactress100_025--phone-040-n",
+      "utterance": {
+        "id": "jvs034_parallel100_voiceactress100_025",
+        "text": "その飄々とした人柄が、老若男女に慕われている。",
+        "audioUrl": "/media/utterances/jvs034_parallel100_voiceactress100_025.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 40,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.2825,
+            "endSec": 3.3525
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc068__jvnvsadness_001--phone-052-m",
+      "utterance": {
+        "id": "src4vc068__jvnvsadness_001",
+        "text": "あーあ、昨日の事故で大切な車が全損になっちゃった。もうどうしようもないよ。",
+        "audioUrl": "/media/utterances/src4vc068__jvnvsadness_001.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 52,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.1325,
+            "endSec": 5.1925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc041__studies_109--phone-008-n",
+      "utterance": {
+        "id": "src4vc041__studies_109",
+        "text": "自信がなくなってきました。",
+        "audioUrl": "/media/utterances/src4vc041__studies_109.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 8,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.6825,
+            "endSec": 1.7625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc042__studies_130--phone-056-m",
+      "utterance": {
+        "id": "src4vc042__studies_130",
+        "text": "生活リズムはちょっとしたことで崩れるし、しかもなかなか戻せないからおすすめしないな。",
+        "audioUrl": "/media/utterances/src4vc042__studies_130.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 56,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.1225,
+            "endSec": 4.2125
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs008_parallel100_voiceactress100_098--phone-010-n",
+      "utterance": {
+        "id": "jvs008_parallel100_voiceactress100_098",
+        "text": "乾ドックに入渠して、オーバーホールすべきかどうか、パフォーマンスがチェックされた。",
+        "audioUrl": "/media/utterances/jvs008_parallel100_voiceactress100_098.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 10,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.0825,
+            "endSec": 1.1425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs093_parallel100_voiceactress100_005--phone-095-m",
+      "utterance": {
+        "id": "jvs093_parallel100_voiceactress100_005",
+        "text": "シルバーサーファー襲撃事件までに、リチャーズは、チーム名と共に、国際的にスーパーヒーロー、および、有名人として、認知されている。",
+        "audioUrl": "/media/utterances/jvs093_parallel100_voiceactress100_005.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 95,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 10.3025,
+            "endSec": 10.3425
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs098_nonpara30_travel1000_0448--phone-008-m",
+      "utterance": {
+        "id": "jvs098_nonpara30_travel1000_0448",
+        "text": "お客様の部屋は、107号室です。",
+        "audioUrl": "/media/utterances/jvs098_nonpara30_travel1000_0448.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 8,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.9225,
+            "endSec": 0.9825
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc083__jvnvanger_013--phone-003-n",
+      "utterance": {
+        "id": "src4vc083__jvnvanger_013",
+        "text": "なに！この鬼畜が！あなたのような人間がいるから世の中が腐るんだよ。",
+        "audioUrl": "/media/utterances/src4vc083__jvnvanger_013.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 3,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3825,
+            "endSec": 1.4825
+          }
+        }
+      ]
+    },
+    {
+      "id": "jvs033_parallel100_voiceactress100_019--phone-035-n",
+      "utterance": {
+        "id": "jvs033_parallel100_voiceactress100_019",
+        "text": "ベルガートーア前の、ヴェディゲンウーファーパークには、戦争と弾圧の犠牲者のための記念碑が建っている。",
+        "audioUrl": "/media/utterances/jvs033_parallel100_voiceactress100_019.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 35,
+        "unitCount": 1,
+        "tags": [
+          "JVS",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.3725,
+            "endSec": 3.4125
+          }
+        }
+      ]
+    }
+  ]
+}

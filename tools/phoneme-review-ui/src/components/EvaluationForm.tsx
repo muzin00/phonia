@@ -55,7 +55,7 @@ export function EvaluationForm({
         <div className="question-group-heading">
           <span className="candidate-id">{selectedCandidate.id}</span>
           <div>
-            <h3>母音区間の評価</h3>
+            <h3>音素区間の評価</h3>
             <p>波形と音声を確認して回答してください。</p>
           </div>
         </div>

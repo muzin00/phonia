@@ -54,6 +54,7 @@ Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の�
 
 - [PoC概要](poc/README.md)
 - [研究設計](docs/research-design.md)
+- [学習データの採用手順：自動チェック・人間レビュー・採用判断](docs/training-data-adoption.md)
 - [Phase 3: 音素別話者encoderの学習・評価](poc/phoneme-speaker-encoder/README.md)
 - [Phase 3: 70話者・3 seed比較結果](poc/phoneme-speaker-encoder/phase3-70spk-comparison-results.md)
 - [Phase 3: 最終test評価結果](poc/phoneme-speaker-encoder/phase3-final-test-results.md)
