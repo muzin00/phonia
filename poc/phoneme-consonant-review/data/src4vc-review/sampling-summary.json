@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "dataset_id": "src4vc-mn-repeat-training-review",
+  "dataset_version": "seed20261010-n50",
+  "selection": "SRC4VC_subset_of_original_review_no_resampling_no_boundary_changes",
+  "seed": 20261010,
+  "source_dataset_id": "jvs-src4vc-mn-training-review",
+  "source_dataset_version": "seed20261010-n100",
+  "source_review_dataset_sha256": "b11243ef396f0bdd9dd0826ed1b1e2754634ef6b281c7fa9a9c2f4aa3669fe7c",
+  "source_sample_sha256": "ead5980e094db9733e5b27292c2811675762ae9946793bc10c8b8cb359896e1f",
+  "selected_count": 50,
+  "selected_phoneme_counts": {
+    "m": 25,
+    "n": 25
+  },
+  "selected_speaker_count": 36,
+  "selected_source_file_count": 50,
+  "duration_sec": {
+    "minimum": 0.03,
+    "median": 0.07,
+    "maximum": 0.24
+  },
+  "audio_volume_filter": false,
+  "media_root": "artifacts/phoneme-consonant-review/mn-100-20261010-v1/media",
+  "reviewed": false,
+  "review_dataset_sha256": "abc14b5084ed52af9fd43200b25cf9ba93e1148c1ce3c7c6e2d84aa4d734ef1e",
+  "sample_sha256": "bf7be268e0477a6b0ab64f390fd5a40773ddb9f1de1d38640f530919af5c4c47",
+  "human_answers_used_for_training": false
+}

@@ -186,6 +186,27 @@ SRC4VCの通常文EERは1.224→1.098→0.962%と低下したが、別テキス�
 [学習曲線](phoneme-training-budget/training-results.html)を参照する。
 [固定条件と再現手順](phoneme-training-budget/README.md)を参照する。
 
+子音追加の学習前に、JVS・SRC4VCのtrain音声から /m/・/n/ を各25件、計100件抽出した。
+[音素区間レビューの起動・確認方法](phoneme-consonant-review/README.md)を参照する。
+既存レビューUIで単独区間と文脈付き音声を確認し、人手回答を専用JSONLに保存する。
+Common Voice日本語trainの /m/・/n/ 各50件を確認する追加レビューも別ポート・別回答ファイルで用意した。
+
+聴取所見を受け、次の子音追加ではJVS＋Common Voiceを使用し、SRC4VCを外す。
+1条件・1 seedで5母音＋ /m/・/n/ の共通encoderを学習する。
+[固定条件と再現手順](phoneme-consonant-training/README.md)を参照する。
+140話者ラベル・594,630区間で30,000更新を完了し、全7音素でexport前後の出力一致を確認した。
+最終更新の母音単一区間validation macro EERは9.716%。
+[学習結果と診断表](phoneme-consonant-training/training-results.md)を参照する。
+
+同じ7音素encoderで5母音のみとm/n追加の発話単位比較まで完了した。
+登録最大3秒・照合最大1秒の実使用PCMサンプル数を方式間で揃え、validation通常文の閾値をtestへ固定した。
+全7音素が使える通常文525件ではFAR 1.578→1.007%、FRR 4.571→2.095%、EER 2.395→1.333%。
+別テキスト265件でも3指標の観測値は低下した。主比較では通常文FRRの差の95% CIのみが0を含まなかった。
+全発話を含む補助比較では照合可能数は変わらず、通常文の全入力FRRは6.533→4.267%、別テキストは14.222→13.778%。
+1 seed・観測済みJVS testの探索的な比較で、従来の5母音学習モデルや独立holdoutとの比較ではない。
+[比較の固定条件](phoneme-consonant-evaluation/README.md)、[HTML比較表](phoneme-consonant-evaluation/evaluation-results.html)、
+[測定表](phoneme-consonant-evaluation/evaluation-results.md)、[結果の解釈](phoneme-consonant-evaluation/interpretation.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。
@@ -194,6 +215,7 @@ SRC4VCの通常文EERは1.224→1.098→0.962%と低下したが、別テキス�
 - 新規ユーザーの追加時に共通モデルを再学習しない。
 - 類似度と本人である確率を区別する。
 - 各フェーズの品質を確認してから次へ進む。
+- 新たな学習データは[採用手順](../docs/training-data-adoption.md)に従い、train候補の人間レビューと採用判断を完了してから使う。
 
 ## 7. PoCで扱わない範囲
 

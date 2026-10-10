@@ -1,0 +1,1462 @@
+{
+  "schemaVersion": 2,
+  "datasetId": "src4vc-mn-repeat-training-review",
+  "datasetVersion": "seed20261010-n50",
+  "title": "SRC4VC /m/・/n/ 再確認レビュー（50区間）",
+  "protocol": {
+    "id": "phoneme-audibility-training-review",
+    "version": "1"
+  },
+  "playback": {
+    "contextPaddingSec": 0.1
+  },
+  "form": {
+    "candidateQuestions": [
+      {
+        "id": "perceived_content",
+        "prompt": "「候補Aだけ再生」で、表示された音素は聞こえますか？",
+        "choices": [
+          {
+            "value": "target_phoneme",
+            "label": "表示された音素が聞こえる"
+          },
+          {
+            "value": "target_with_other",
+            "label": "表示された音素と隣接する音が聞こえる"
+          },
+          {
+            "value": "other_only",
+            "label": "別の音だけが聞こえる"
+          },
+          {
+            "value": "near_silence",
+            "label": "ほぼ音が聞こえない"
+          },
+          {
+            "value": "uncertain",
+            "label": "判断できない"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": {
+      "prompt": "切り出し位置も確認して、この区間を表示された音素の学習データとして利用できますか？",
+      "choices": [
+        {
+          "value": "accepted",
+          "label": "利用できる"
+        },
+        {
+          "value": "rejected",
+          "label": "利用できない"
+        },
+        {
+          "value": "uncertain",
+          "label": "判断できない"
+        }
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "src4vc071__jvnvsurprise_018--phone-055-m",
+      "utterance": {
+        "id": "src4vc071__jvnvsurprise_018",
+        "text": "おお、この店はリニューアルされたんですか？内装が全然違いますね！",
+        "audioUrl": "/media/utterances/src4vc071__jvnvsurprise_018.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 55,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.1025,
+            "endSec": 7.1325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc046__recitation_055--phone-012-m",
+      "utterance": {
+        "id": "src4vc046__recitation_055",
+        "text": "本番前はメチャメチャ不安になる。",
+        "audioUrl": "/media/utterances/src4vc046__recitation_055.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 12,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.9125,
+            "endSec": 0.9525
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc094__calls_140--phone-005-m",
+      "utterance": {
+        "id": "src4vc094__calls_140",
+        "text": "この前そちらで買ったお茶がすごくおいしくてね。",
+        "audioUrl": "/media/utterances/src4vc094__calls_140.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 5,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.2125,
+            "endSec": 0.3425
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc026__jvnvsadness_012--phone-078-m",
+      "utterance": {
+        "id": "src4vc026__jvnvsadness_012",
+        "text": "ぐすん、今回の試験の点数は絶望的に低くて、もう何もできないと思ってしまう。",
+        "audioUrl": "/media/utterances/src4vc026__jvnvsadness_012.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 78,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.1625,
+            "endSec": 7.2425
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc026__jvnvdisgust_011--phone-034-n",
+      "utterance": {
+        "id": "src4vc026__jvnvdisgust_011",
+        "text": "おえ、二日酔いって本当に最悪ですね。頭が痛くて、吐き気がして、体がだるくて、食欲もない。",
+        "audioUrl": "/media/utterances/src4vc026__jvnvdisgust_011.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 34,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.8725,
+            "endSec": 3.9125
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc013__jvnvanger_013--phone-050-n",
+      "utterance": {
+        "id": "src4vc013__jvnvanger_013",
+        "text": "なに！この鬼畜が！あなたのような人間がいるから世の中が腐るんだよ。",
+        "audioUrl": "/media/utterances/src4vc013__jvnvanger_013.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 50,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.4925,
+            "endSec": 3.5825
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc050__recitation_058--phone-009-m",
+      "utterance": {
+        "id": "src4vc050__recitation_058",
+        "text": "客人をもてなすのは当然です。",
+        "audioUrl": "/media/utterances/src4vc050__recitation_058.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 9,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3025,
+            "endSec": 1.3525
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc075__studies_128--phone-030-m",
+      "utterance": {
+        "id": "src4vc075__studies_128",
+        "text": "ごめんなさい。がんばったんだけど、だめでした。",
+        "audioUrl": "/media/utterances/src4vc075__studies_128.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 30,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.0525,
+            "endSec": 4.1325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc018__jvnvhappiness_011--phone-070-n",
+      "utterance": {
+        "id": "src4vc018__jvnvhappiness_011",
+        "text": "今、私は大学の合格通知をもらったんだ！えへへ、歓喜のあまり飛び跳ねたくなるぐらいうれしい！",
+        "audioUrl": "/media/utterances/src4vc018__jvnvhappiness_011.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 70,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.7225,
+            "endSec": 6.7925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc046__jvnvdisgust_002--phone-006-n",
+      "utterance": {
+        "id": "src4vc046__jvnvdisgust_002",
+        "text": "いや、あの家は本当にみすぼらしい。中に入る前から不快な気分になる。",
+        "audioUrl": "/media/utterances/src4vc046__jvnvdisgust_002.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 6,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.7825,
+            "endSec": 0.8225
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc049__jvnvdisgust_011--phone-090-m",
+      "utterance": {
+        "id": "src4vc049__jvnvdisgust_011",
+        "text": "おえ、二日酔いって本当に最悪ですね。頭が痛くて、吐き気がして、体がだるくて、食欲もない。",
+        "audioUrl": "/media/utterances/src4vc049__jvnvdisgust_011.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 90,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.0125,
+            "endSec": 6.0725
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc037__jvnvhappiness_025--phone-047-n",
+      "utterance": {
+        "id": "src4vc037__jvnvhappiness_025",
+        "text": "よっしゃ！私の友達が有名なアーティストと一緒に写真を撮ってくれたんだ！これで私も有名人と写真が撮れた！",
+        "audioUrl": "/media/utterances/src4vc037__jvnvhappiness_025.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 47,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6425,
+            "endSec": 3.7525
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc001__jvnvfear_011--phone-017-m",
+      "utterance": {
+        "id": "src4vc001__jvnvfear_011",
+        "text": "ひえ、テロリズムが蔓延する世界で生きることが怖くて何もできない。",
+        "audioUrl": "/media/utterances/src4vc001__jvnvfear_011.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 17,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.3125,
+            "endSec": 3.4425
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc031__jvnvhappiness_012--phone-045-m",
+      "utterance": {
+        "id": "src4vc031__jvnvhappiness_012",
+        "text": "今日は友達にたくさん手伝ってもらって、とっても感謝してるんだ。えへへ、本当にありがたい！",
+        "audioUrl": "/media/utterances/src4vc031__jvnvhappiness_012.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 45,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.8725,
+            "endSec": 5.9725
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc036__jvnvdisgust_004--phone-040-m",
+      "utterance": {
+        "id": "src4vc036__jvnvdisgust_004",
+        "text": "うあ、あの人は本当に音痴で、歌を聞くと耳が痛くなるよ。",
+        "audioUrl": "/media/utterances/src4vc036__jvnvdisgust_004.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 40,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.8425,
+            "endSec": 4.9125
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc094__studies_097--phone-018-n",
+      "utterance": {
+        "id": "src4vc094__studies_097",
+        "text": "運がわるかったのかな。",
+        "audioUrl": "/media/utterances/src4vc094__studies_097.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3225,
+            "endSec": 1.4325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc040__jvnvanger_014--phone-045-n",
+      "utterance": {
+        "id": "src4vc040__jvnvanger_014",
+        "text": "なに？濫行しているのに、まるで何も知らないかのように振る舞っているのか？",
+        "audioUrl": "/media/utterances/src4vc040__jvnvanger_014.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 45,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.3625,
+            "endSec": 4.3925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc075__recitation_031--phone-018-n",
+      "utterance": {
+        "id": "src4vc075__recitation_031",
+        "text": "チョコの在庫あったかな？",
+        "audioUrl": "/media/utterances/src4vc075__recitation_031.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.3425,
+            "endSec": 2.4325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc025__jvnvdisgust_014--phone-077-m",
+      "utterance": {
+        "id": "src4vc025__jvnvdisgust_014",
+        "text": "げっ、なんであそこに虫たちが群がっているかと思ったら、腐った羊の死体があります。",
+        "audioUrl": "/media/utterances/src4vc025__jvnvdisgust_014.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 77,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.3925,
+            "endSec": 6.5125
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc073__jvnvfear_010--phone-006-n",
+      "utterance": {
+        "id": "src4vc073__jvnvfear_010",
+        "text": "ひい、あの暴行事件は本当に怖かった。もう二度とあんな体験はしたくない。",
+        "audioUrl": "/media/utterances/src4vc073__jvnvfear_010.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 6,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.0025,
+            "endSec": 1.0625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc070__calls_031--phone-012-n",
+      "utterance": {
+        "id": "src4vc070__calls_031",
+        "text": "それでは、この組み合わせなどいかがでしょうか？",
+        "audioUrl": "/media/utterances/src4vc070__calls_031.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 12,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.1925,
+            "endSec": 1.2625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc050__studies_105--phone-008-n",
+      "utterance": {
+        "id": "src4vc050__studies_105",
+        "text": "ふざけんなよ。何様だよ！ホント。",
+        "audioUrl": "/media/utterances/src4vc050__studies_105.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 8,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.8325,
+            "endSec": 1.9125
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc083__jvnvdisgust_014--phone-065-n",
+      "utterance": {
+        "id": "src4vc083__jvnvdisgust_014",
+        "text": "げっ、なんであそこに虫たちが群がっているかと思ったら、腐った羊の死体があります。",
+        "audioUrl": "/media/utterances/src4vc083__jvnvdisgust_014.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 65,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.9225,
+            "endSec": 6.0125
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc049__recitation_229--phone-008-n",
+      "utterance": {
+        "id": "src4vc049__recitation_229",
+        "text": "ほとんどの被調査者は、写真を車載した。",
+        "audioUrl": "/media/utterances/src4vc049__recitation_229.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 8,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.4525,
+            "endSec": 0.5225
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc044__jvnvdisgust_003--phone-017-n",
+      "utterance": {
+        "id": "src4vc044__jvnvdisgust_003",
+        "text": "うあ、この排水溝のにおいはまさに人間の排泄物のようです。",
+        "audioUrl": "/media/utterances/src4vc044__jvnvdisgust_003.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 17,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.7225,
+            "endSec": 2.7825
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc095__jvnvsadness_002--phone-005-m",
+      "utterance": {
+        "id": "src4vc095__jvnvsadness_002",
+        "text": "あーあ、毎日残業が続いて疲れるばかりで、家族と過ごす時間も減ってしまって、悲しい気持ちでいっぱいです。",
+        "audioUrl": "/media/utterances/src4vc095__jvnvsadness_002.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 5,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.4525,
+            "endSec": 2.5325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc098__recitation_230--phone-051-n",
+      "utterance": {
+        "id": "src4vc098__recitation_230",
+        "text": "補佐が、一酸化炭素中毒になるというハプニングは起きなかった。",
+        "audioUrl": "/media/utterances/src4vc098__recitation_230.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 51,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.4025,
+            "endSec": 4.4525
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc073__jvnvfear_008--phone-062-n",
+      "utterance": {
+        "id": "src4vc073__jvnvfear_008",
+        "text": "怖い話を聞いて、私の腕には鳥肌が立ち上がっている、ひっ、何かが見えるような気がして怖い。",
+        "audioUrl": "/media/utterances/src4vc073__jvnvfear_008.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 62,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.0625,
+            "endSec": 7.0925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc054__jvnvfear_010--phone-039-m",
+      "utterance": {
+        "id": "src4vc054__jvnvfear_010",
+        "text": "ひい、あの暴行事件は本当に怖かった。もう二度とあんな体験はしたくない。",
+        "audioUrl": "/media/utterances/src4vc054__jvnvfear_010.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 39,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 240ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.8625,
+            "endSec": 3.1025
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc032__calls_178--phone-053-m",
+      "utterance": {
+        "id": "src4vc032__calls_178",
+        "text": "このお店の家具、デザインがとてもオシャレで、お気に入りになりました。",
+        "audioUrl": "/media/utterances/src4vc032__calls_178.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 53,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.9725,
+            "endSec": 5.0325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc068__jvnvfear_012--phone-038-n",
+      "utterance": {
+        "id": "src4vc068__jvnvfear_012",
+        "text": "ひえ、怖くて腰抜けになりそうだ！あそこにいるのはサイコパスの殺人犯だ！",
+        "audioUrl": "/media/utterances/src4vc068__jvnvfear_012.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 38,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6025,
+            "endSec": 3.6925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc024__jvnvfear_009--phone-005-m",
+      "utterance": {
+        "id": "src4vc024__jvnvfear_009",
+        "text": "ひい、街の抗争が激化して、いつ自分が巻き込まれるか分からない。",
+        "audioUrl": "/media/utterances/src4vc024__jvnvfear_009.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 5,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.2625,
+            "endSec": 1.3325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc092__jvnvsurprise_038--phone-032-m",
+      "utterance": {
+        "id": "src4vc092__jvnvsurprise_038",
+        "text": "やあ！急に雷が鳴り響いて、めっちゃ驚かされた。",
+        "audioUrl": "/media/utterances/src4vc092__jvnvsurprise_038.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 32,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6125,
+            "endSec": 3.6925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc025__jvnvsurprise_020--phone-016-n",
+      "utterance": {
+        "id": "src4vc025__jvnvsurprise_020",
+        "text": "おっと、この会場のキャパシティーは500人だったのに、もう600人以上も入ってるよ！",
+        "audioUrl": "/media/utterances/src4vc025__jvnvsurprise_020.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 16,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.1025,
+            "endSec": 2.1325
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc043__jvnvsadness_013--phone-022-m",
+      "utterance": {
+        "id": "src4vc043__jvnvsadness_013",
+        "text": "はぁー、今日も寝坊してしまって、会社に遅刻しちゃった。",
+        "audioUrl": "/media/utterances/src4vc043__jvnvsadness_013.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.0025,
+            "endSec": 2.0925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc024__jvnvsadness_012--phone-052-m",
+      "utterance": {
+        "id": "src4vc024__jvnvsadness_012",
+        "text": "ぐすん、今回の試験の点数は絶望的に低くて、もう何もできないと思ってしまう。",
+        "audioUrl": "/media/utterances/src4vc024__jvnvsadness_012.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 52,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.4925,
+            "endSec": 4.5425
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc053__recitation_049--phone-001-n",
+      "utterance": {
+        "id": "src4vc053__recitation_049",
+        "text": "二分だけのオルガン演奏で終わってしまった。",
+        "audioUrl": "/media/utterances/src4vc053__recitation_049.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 200ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.7025,
+            "endSec": 0.9025
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc016__jvnvsadness_013--phone-022-m",
+      "utterance": {
+        "id": "src4vc016__jvnvsadness_013",
+        "text": "はぁー、今日も寝坊してしまって、会社に遅刻しちゃった。",
+        "audioUrl": "/media/utterances/src4vc016__jvnvsadness_013.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.0725,
+            "endSec": 2.1425
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc080__studies_169--phone-019-n",
+      "utterance": {
+        "id": "src4vc080__studies_169",
+        "text": "もう諦めようかな？何もかもが嫌になるよ。",
+        "audioUrl": "/media/utterances/src4vc080__studies_169.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 19,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.1125,
+            "endSec": 3.1725
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc040__jvnvfear_004--phone-058-m",
+      "utterance": {
+        "id": "src4vc040__jvnvfear_004",
+        "text": "きゃあ、あの森は暗くて怖いですね。一人で歩くのは危険かもしれません。",
+        "audioUrl": "/media/utterances/src4vc040__jvnvfear_004.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 58,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.4125,
+            "endSec": 7.4725
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc095__jvnvsadness_009--phone-029-n",
+      "utterance": {
+        "id": "src4vc095__jvnvsadness_009",
+        "text": "えーん、この病気が治る見込みがないと聞いて、絶望的な気持ちでいっぱいです。",
+        "audioUrl": "/media/utterances/src4vc095__jvnvsadness_009.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 29,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.4725,
+            "endSec": 3.5825
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc091__calls_237--phone-018-m",
+      "utterance": {
+        "id": "src4vc091__calls_237",
+        "text": "14時頃は空いてますか？",
+        "audioUrl": "/media/utterances/src4vc091__calls_237.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.8225,
+            "endSec": 1.9025
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc016__jvnvhappiness_027--phone-112-m",
+      "utterance": {
+        "id": "src4vc016__jvnvhappiness_027",
+        "text": "わぁ、お客様からとても感謝の言葉をもらったよ！私たちのサービスがお客様にとって役に立っていると知って、とっても嬉しい！",
+        "audioUrl": "/media/utterances/src4vc016__jvnvhappiness_027.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 112,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 8.1425,
+            "endSec": 8.1725
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc069__jvnvdisgust_014--phone-044-m",
+      "utterance": {
+        "id": "src4vc069__jvnvdisgust_014",
+        "text": "げっ、なんであそこに虫たちが群がっているかと思ったら、腐った羊の死体があります。",
+        "audioUrl": "/media/utterances/src4vc069__jvnvdisgust_014.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 44,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.0325,
+            "endSec": 5.1225
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc082__calls_045--phone-043-n",
+      "utterance": {
+        "id": "src4vc082__calls_045",
+        "text": "最近仕事をやめて、高い買いものができなくなったのですが、なにかオススメはありますか？",
+        "audioUrl": "/media/utterances/src4vc082__calls_045.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 43,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.0325,
+            "endSec": 3.0625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc076__studies_052--phone-022-n",
+      "utterance": {
+        "id": "src4vc076__studies_052",
+        "text": "一生懸命やっているのに、「気合いが足りない」とか言いやがって！",
+        "audioUrl": "/media/utterances/src4vc076__studies_052.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.2725,
+            "endSec": 1.3425
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc068__jvnvsadness_001--phone-052-m",
+      "utterance": {
+        "id": "src4vc068__jvnvsadness_001",
+        "text": "あーあ、昨日の事故で大切な車が全損になっちゃった。もうどうしようもないよ。",
+        "audioUrl": "/media/utterances/src4vc068__jvnvsadness_001.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 52,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.1325,
+            "endSec": 5.1925
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc041__studies_109--phone-008-n",
+      "utterance": {
+        "id": "src4vc041__studies_109",
+        "text": "自信がなくなってきました。",
+        "audioUrl": "/media/utterances/src4vc041__studies_109.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 8,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.6825,
+            "endSec": 1.7625
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc042__studies_130--phone-056-m",
+      "utterance": {
+        "id": "src4vc042__studies_130",
+        "text": "生活リズムはちょっとしたことで崩れるし、しかもなかなか戻せないからおすすめしないな。",
+        "audioUrl": "/media/utterances/src4vc042__studies_130.wav"
+      },
+      "target": {
+        "label": "m",
+        "index": 56,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.1225,
+            "endSec": 4.2125
+          }
+        }
+      ]
+    },
+    {
+      "id": "src4vc083__jvnvanger_013--phone-003-n",
+      "utterance": {
+        "id": "src4vc083__jvnvanger_013",
+        "text": "なに！この鬼畜が！あなたのような人間がいるから世の中が腐るんだよ。",
+        "audioUrl": "/media/utterances/src4vc083__jvnvanger_013.wav"
+      },
+      "target": {
+        "label": "n",
+        "index": 3,
+        "unitCount": 1,
+        "tags": [
+          "SRC4VC",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3825,
+            "endSec": 1.4825
+          }
+        }
+      ]
+    }
+  ]
+}

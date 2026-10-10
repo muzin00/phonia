@@ -1,0 +1,40 @@
+{
+  "training_speaker_count": 70,
+  "training_utterance_count": 8283,
+  "training_alignment_count": 8280,
+  "training_alignment_inventory_sha256": "6565a93e8ec18d3604b9c59dbde090e9b4c453e18e1d707d52357ca1e9562dbe",
+  "training_selection_sha256": "3ad8e481c6219ed471a3fc1d347d39a6ffe61e7a1de70cab857e4d339886383a",
+  "training_metadata_sha256": "d1163a65386fdc960a70ab3d8bfc9be3283bf9624eeeb418ac3e88a6860d17bb",
+  "eligible_interval_counts": {
+    "m": 12715,
+    "n": 20822
+  },
+  "excluded_short_interval_counts": {},
+  "schema_version": 1,
+  "dataset_id": "common-voice17-ja-mn-training-review",
+  "dataset_version": "seed20261010-n100",
+  "seed": 20261010,
+  "sampling": "smallest_seeded_sha256_without_replacement_within_phoneme",
+  "presentation_order": "independent_seeded_sha256",
+  "minimum_interval_frames": 720,
+  "sample_rate_hz": 24000,
+  "audio_volume_filter": false,
+  "reviewed": false,
+  "selected_count": 100,
+  "selected_phoneme_counts": {
+    "m": 50,
+    "n": 50
+  },
+  "selected_speaker_count": 54,
+  "selected_source_file_count": 100,
+  "duration_sec": {
+    "minimum": 0.03,
+    "median": 0.07,
+    "maximum": 0.14
+  },
+  "near_silent_or_silent_count": 3,
+  "media_root": "artifacts/phoneme-consonant-review/cv-mn-100-20261010-v1/media",
+  "review_dataset_sha256": "9f476dbd38989bc5950b4ee4ce5ca3d08bd0cbe0e676733c59e3749ea594a77b",
+  "sample_sha256": "15808e9842323e9060d63c3ecbaae536ca6eec73b8a806a1a4e4ac2d04389247",
+  "human_answers_used_for_training": false
+}
