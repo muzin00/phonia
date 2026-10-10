@@ -1,0 +1,97 @@
+{
+  "schema_version": 1,
+  "protocol_version": "phase8-consonant-pairs-and-triple-v1",
+  "conditions": [
+    "vowels5",
+    "vowels_mn",
+    "vowels_ms",
+    "vowels_ns",
+    "vowels_mns"
+  ],
+  "condition_phones": {
+    "vowels5": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o"
+    ],
+    "vowels_mn": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o",
+      "m",
+      "n"
+    ],
+    "vowels_ms": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o",
+      "m",
+      "s"
+    ],
+    "vowels_ns": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o",
+      "n",
+      "s"
+    ],
+    "vowels_mns": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o",
+      "m",
+      "n",
+      "s"
+    ]
+  },
+  "phonemes": [
+    "a",
+    "i",
+    "u",
+    "e",
+    "o",
+    "m",
+    "n",
+    "s"
+  ],
+  "training_run": "artifacts/phoneme-consonant-combination-training/jvs-cv-vowels-mns-20261010-v1",
+  "reference_inputs": "artifacts/phoneme-training-exposure-ablation/evaluation-20261008-v1",
+  "support": "same frozen common8 utterances as prior four-condition run; all five plans fit before inference",
+  "enrollment_cap_frames": 72000,
+  "query_cap_frames": 24000,
+  "minimum_consonant_rms_dbfs": -50,
+  "enrollment_candidates_per_consonant": 10,
+  "selection_seed": 20261010,
+  "s_crop": "center250_before_qc; identical_to_frozen_training_s_policy",
+  "mn_crop": "unchanged_raw_qc_then_plan_center250",
+  "fusion": "equal_mean_of_phone_mean_segment_cosines",
+  "calibration": "each_condition_validation_verification_only",
+  "operating_points": [
+    "far_1pct",
+    "far_0_1pct",
+    "eer_operating"
+  ],
+  "primary_metrics": [
+    "far_1pct/all_input_far",
+    "far_1pct/all_input_frr",
+    "pooled_eer"
+  ],
+  "paired_comparisons": "all_ten_pairs; exploratory_unadjusted_ci",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260929,
+  "reuse_prior_baseline_scores": false,
+  "test_previously_observed": true,
+  "independent_holdout": false,
+  "run_directory": "artifacts/phoneme-consonant-triple-evaluation/matched-20261010-v2",
+  "prior_pair_run": "artifacts/phoneme-consonant-combination-evaluation/matched-20261010-v1"
+}
