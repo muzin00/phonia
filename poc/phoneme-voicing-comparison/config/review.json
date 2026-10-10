@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "protocol_version": "voicing-listening-v1",
+  "model_phonemes": ["a", "i", "u", "e", "o", "m", "n", "t", "d", "k", "g", "s", "z", "h"],
+  "main_combinations": {
+    "vowels": ["a", "i", "u", "e", "o"],
+    "vowels_mn": ["a", "i", "u", "e", "o", "m", "n"],
+    "vowels_tk": ["a", "i", "u", "e", "o", "t", "k"],
+    "vowels_dg": ["a", "i", "u", "e", "o", "d", "g"]
+  },
+  "review_phonemes": ["t", "d", "k", "g", "z", "h"],
+  "corpora": ["JVS", "Common Voice"],
+  "split": "train",
+  "seed": 20261010,
+  "samples_per_corpus_and_phoneme": 5,
+  "sample_rate_hz": 24000,
+  "minimum_frames": 720,
+  "maximum_frames": 6000,
+  "minimum_rms_dbfs": -50,
+  "crop": "center_within_original_phone; no_padding_or_normalization",
+  "sampling": "seeded_sha256_without_replacement_within_corpus_and_phone",
+  "presentation": "corpus_then_configured_phone_then_independent_seeded_sha256",
+  "context_padding_sec": 0.1,
+  "common_voice_run": "artifacts/phoneme-training-data-expansion/training-data-20261008-v1",
+  "run_directory": "artifacts/phoneme-voicing-comparison/listening-60-20261010-v1"
+}

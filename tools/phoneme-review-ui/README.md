@@ -63,6 +63,15 @@ PHONIA_REVIEW_DATASET=/absolute/path/to/review-dataset.json pnpm dev
 http://localhost:5173/?dataset=/examples/review-dataset.json
 ```
 
+回答や現在位置を保存せずに試聴する場合は、`?mode=listen`を付けます。
+回答フォームとJSONL保存ボタンは表示されず、レビューAPIや`localStorage`の読み書きも行いません。
+「試聴区間」から音素ごとの項目へ直接移動できます。
+`PHONIA_REVIEW_MODE=listen pnpm dev`で起動すると、クエリ指定なしでも試聴専用になり、サーバー側の回答APIも無効になります。
+
+```text
+http://localhost:5173/?mode=listen
+```
+
 ## 確認コマンド
 
 ```sh

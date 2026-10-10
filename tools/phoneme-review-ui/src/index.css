@@ -51,6 +51,16 @@ button:focus-visible {
   margin-bottom: 32px;
 }
 
+.listen-notice {
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  border: 1px solid #c8dfe9;
+  border-radius: 12px;
+  background: #fff;
+  color: #244653;
+  line-height: 1.7;
+}
+
 .header-controls {
   display: flex;
   align-items: end;
