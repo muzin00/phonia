@@ -207,6 +207,16 @@ Common Voice日本語trainの /m/・/n/ 各50件を確認する追加レビュ�
 [比較の固定条件](phoneme-consonant-evaluation/README.md)、[HTML比較表](phoneme-consonant-evaluation/evaluation-results.html)、
 [測定表](phoneme-consonant-evaluation/evaluation-results.md)、[結果の解釈](phoneme-consonant-evaluation/interpretation.md)を参照する。
 
+5母音を固定し、JVS・Common Voiceに存在する追加32音素をランダム順で試す探索を完了した。
+改善した音素とencoderを保持し、採用セット変更後に不採用候補を再試験した。
+3巡・87回の採否、基準を含む69モデルの30,000更新学習と最終test評価を実施した。
+追加31音素を実測し、学習区間が0件のtyはデータ不足として候補に残した。
+最終セットは5母音＋b・gy・ry・s・v。validation通常文EERは0.671→0.447%だったが、
+test通常文は1.924→2.177%、別テキストは1.859→2.278%となり、testでの改善は確認できなかった。
+全モデルで共通の評価発話を使い、採否にtestは使用していない。1,278,000スコアの再計算チェックを完了した。
+[固定条件と再現手順](phoneme-greedy-selection/README.md)、[HTML比較表](phoneme-greedy-selection/evaluation-results.html)、
+[全試行の測定表](phoneme-greedy-selection/evaluation-results.md)、[結果の解釈](phoneme-greedy-selection/interpretation.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。
