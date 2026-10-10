@@ -91,3 +91,7 @@ Phase 8の学習データ増加では、現行JVSと、Common Voice日本語の�
 - [Phase 8: 5母音＋ /m/・/n/ の学習結果とvalidation診断](poc/phoneme-consonant-training/training-results.md)
 - [Phase 8: /m/・/n/ 追加の使用音声量を揃えたHTML比較表](poc/phoneme-consonant-evaluation/evaluation-results.html)
 - [Phase 8: /m/・/n/ 追加の評価結果と解釈](poc/phoneme-consonant-evaluation/interpretation.md)
+- [子音の切り分け: /m/・/n/ の個別追加と併用](poc/phoneme-nasal-ablation/interpretation.md)
+- [子音の切り分け: 母音5種＋m/n/sの共通encoder学習](poc/phoneme-consonant-combination-training/training-results.md)
+- [子音の切り分け: m+n・m+s・n+sのHTML比較表](poc/phoneme-consonant-combination-evaluation/evaluation-results.html)
+- [子音の切り分け: 組み合わせの評価結果と解釈](poc/phoneme-consonant-combination-evaluation/interpretation.md)

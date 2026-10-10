@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "protocol_version": "phase8-nasal-ablation-v1",
+  "conditions": [
+    "vowels5",
+    "vowels_m",
+    "vowels_n",
+    "vowels_mn_available"
+  ],
+  "condition_phones": {
+    "vowels5": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o"
+    ],
+    "vowels_m": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o",
+      "m"
+    ],
+    "vowels_n": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o",
+      "n"
+    ],
+    "vowels_mn_available": [
+      "a",
+      "i",
+      "u",
+      "e",
+      "o",
+      "m",
+      "n"
+    ]
+  },
+  "prior_run": "artifacts/phoneme-consonant-evaluation/matched-20261010-v1",
+  "prior_design_sha256": "7993f05ee561b3c79b0c137da608566283c69777a3a99bf5f872afa6fb39b23f",
+  "training_run": "artifacts/phoneme-consonant-training/jvs-cv-vowels-mn-20261010-v1",
+  "reference_inputs": "artifacts/phoneme-training-exposure-ablation/evaluation-20261008-v1",
+  "support": "unchanged_prior_common7; abort_if_any_single_nasal_plan_cannot_fit",
+  "expected_queries": {
+    "validation": {
+      "verification": 525,
+      "cross_text_verification": 279
+    },
+    "test": {
+      "verification": 525,
+      "cross_text_verification": 265
+    }
+  },
+  "enrollment_cap_frames": 72000,
+  "query_cap_frames": 24000,
+  "minimum_nasal_rms_dbfs": -50,
+  "nasal_enrollment_candidates_per_phone": 10,
+  "selection_seed": 20261010,
+  "selection": "unchanged_prior_candidates_and_balanced_phone_time_center_trim",
+  "fusion": "unchanged_equal_mean_of_phone_mean_segment_cosines",
+  "calibration": "each_condition_validation_verification_only",
+  "operating_points": [
+    "far_1pct",
+    "far_0_1pct",
+    "eer_operating"
+  ],
+  "primary_metrics": [
+    "far_1pct/all_input_far",
+    "far_1pct/all_input_frr",
+    "pooled_eer"
+  ],
+  "paired_comparisons": "all_six_pairs; fixed_before_new_inference; exploratory_unadjusted_ci",
+  "reuse_prior_baseline_scores": true,
+  "baseline_reproduction_absolute_tolerance": 1e-06,
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 20260929,
+  "retrain": false,
+  "test_previously_observed": true,
+  "independent_holdout": false,
+  "run_directory": "artifacts/phoneme-nasal-ablation/matched-20261010-v2"
+}

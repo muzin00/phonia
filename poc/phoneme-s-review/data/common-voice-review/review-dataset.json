@@ -1,0 +1,2862 @@
+{
+  "schemaVersion": 2,
+  "datasetId": "common-voice17-ja-s-post-qc-training-review",
+  "datasetVersion": "20261010-v1-center250-seed20261010-n100",
+  "title": "Common Voice /s/ 学習前レビュー（自動チェック後100区間）",
+  "protocol": {
+    "id": "phoneme-audibility-training-review",
+    "version": "1"
+  },
+  "playback": {
+    "contextPaddingSec": 0.1
+  },
+  "form": {
+    "candidateQuestions": [
+      {
+        "id": "perceived_content",
+        "prompt": "「候補Aだけ再生」で、表示された音素は聞こえますか？",
+        "choices": [
+          {
+            "value": "target_phoneme",
+            "label": "表示された音素が聞こえる"
+          },
+          {
+            "value": "target_with_other",
+            "label": "表示された音素と隣接する音が聞こえる"
+          },
+          {
+            "value": "other_only",
+            "label": "別の音だけが聞こえる"
+          },
+          {
+            "value": "near_silence",
+            "label": "ほぼ音が聞こえない"
+          },
+          {
+            "value": "uncertain",
+            "label": "判断できない"
+          }
+        ]
+      }
+    ],
+    "reviewStatus": {
+      "prompt": "切り出し位置も確認して、この区間を表示された音素の学習データとして利用できますか？",
+      "choices": [
+        {
+          "value": "accepted",
+          "label": "利用できる"
+        },
+        {
+          "value": "rejected",
+          "label": "利用できない"
+        },
+        {
+          "value": "uncertain",
+          "label": "判断できない"
+        }
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "cv17_7a1fe4730780c35d6b981866--phone-062-s--center-149580-2880",
+      "utterance": {
+        "id": "cv17_7a1fe4730780c35d6b981866",
+        "text": "一定の思想をもって現象に問いかけ、現象をしてこの問いに答えさせることが実験である。",
+        "audioUrl": "/media/utterances/cv17_7a1fe4730780c35d6b981866.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 62,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.2325,
+            "endSec": 6.3525
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_72bbb1b90046cf6d69e4129f--phone-022-s--center-47580-1680",
+      "utterance": {
+        "id": "cv17_72bbb1b90046cf6d69e4129f",
+        "text": "生徒たちは廊下にまっすぐ並びます。",
+        "audioUrl": "/media/utterances/cv17_72bbb1b90046cf6d69e4129f.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.9825,
+            "endSec": 2.0525
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_12023829e8fb4dc89ba9d21b--phone-018-s--center-30780-1920",
+      "utterance": {
+        "id": "cv17_12023829e8fb4dc89ba9d21b",
+        "text": "それは主にキプロスからの脱出とパレスチナでのその後の出来事に焦点を合わせている。",
+        "audioUrl": "/media/utterances/cv17_12023829e8fb4dc89ba9d21b.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.2825,
+            "endSec": 1.3625
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_efaadd2bfc7f0820f3455fb2--phone-009-s--center-36780-2160",
+      "utterance": {
+        "id": "cv17_efaadd2bfc7f0820f3455fb2",
+        "text": "個物がそれぞれの仕方において世界を表現すると考えられる時、それが生命の世界である。",
+        "audioUrl": "/media/utterances/cv17_efaadd2bfc7f0820f3455fb2.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 9,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.5325,
+            "endSec": 1.6225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_bf45a5c2c01b2c28f7239721--phone-010-s--center-31500-1920",
+      "utterance": {
+        "id": "cv17_bf45a5c2c01b2c28f7239721",
+        "text": "粒の小さなイチゴが安く売られている",
+        "audioUrl": "/media/utterances/cv17_bf45a5c2c01b2c28f7239721.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 10,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3125,
+            "endSec": 1.3925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_c06fe90659179f6991c31336--phone-001-s--center-20220-2640",
+      "utterance": {
+        "id": "cv17_c06fe90659179f6991c31336",
+        "text": "魚の缶詰めはタレがうまい",
+        "audioUrl": "/media/utterances/cv17_c06fe90659179f6991c31336.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.8425,
+            "endSec": 0.9525
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_88e12f33fe5c0ec321d5eb58--phone-010-s--center-35580-2880",
+      "utterance": {
+        "id": "cv17_88e12f33fe5c0ec321d5eb58",
+        "text": "雨風にさらされて劣化が激しい",
+        "audioUrl": "/media/utterances/cv17_88e12f33fe5c0ec321d5eb58.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 10,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.4825,
+            "endSec": 1.6025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_8b423c2313fa14e9eca96d56--phone-013-s--center-38700-3120",
+      "utterance": {
+        "id": "cv17_8b423c2313fa14e9eca96d56",
+        "text": "ほんとノートパソコンは安くなったよなあ",
+        "audioUrl": "/media/utterances/cv17_8b423c2313fa14e9eca96d56.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 13,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.6125,
+            "endSec": 1.7425
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_ea9805a5ab7d14b018618f61--phone-001-s--center-8940-2880",
+      "utterance": {
+        "id": "cv17_ea9805a5ab7d14b018618f61",
+        "text": "その根拠がいかなるものであるかを反省することなく、",
+        "audioUrl": "/media/utterances/cv17_ea9805a5ab7d14b018618f61.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.3725,
+            "endSec": 0.4925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_f223220a82f6c2c32c641f68--phone-053-s--center-99420-2160",
+      "utterance": {
+        "id": "cv17_f223220a82f6c2c32c641f68",
+        "text": "時が単に直線的に考えられ、現在というもののない世界においては、我々が働くということはない。",
+        "audioUrl": "/media/utterances/cv17_f223220a82f6c2c32c641f68.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 53,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.1425,
+            "endSec": 4.2325
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_db3a8ecb94ac7e5f8eab0955--phone-034-s--center-84540-1200",
+      "utterance": {
+        "id": "cv17_db3a8ecb94ac7e5f8eab0955",
+        "text": "予約するためサイトに何度もアクセスすることになった",
+        "audioUrl": "/media/utterances/cv17_db3a8ecb94ac7e5f8eab0955.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 34,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.5225,
+            "endSec": 3.5725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_740a86bdfbe033c93b3ce08d--phone-042-s--center-97500-1440",
+      "utterance": {
+        "id": "cv17_740a86bdfbe033c93b3ce08d",
+        "text": "経験や常識においては知識と行為が直接的に結び付いているに反して、",
+        "audioUrl": "/media/utterances/cv17_740a86bdfbe033c93b3ce08d.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 42,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.0625,
+            "endSec": 4.1225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_c0a0d777428f1b59adb46d44--phone-008-s--center-25020-3120",
+      "utterance": {
+        "id": "cv17_c0a0d777428f1b59adb46d44",
+        "text": "マリノースキイのいう如く、原始社会にも既に個人というものが含まれていなければならない。",
+        "audioUrl": "/media/utterances/cv17_c0a0d777428f1b59adb46d44.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 8,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.0425,
+            "endSec": 1.1725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_c096eb9cbf1e623597d9d93a--phone-017-s--center-50700-3120",
+      "utterance": {
+        "id": "cv17_c096eb9cbf1e623597d9d93a",
+        "text": "沖縄県中城村",
+        "audioUrl": "/media/utterances/cv17_c096eb9cbf1e623597d9d93a.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 17,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.1125,
+            "endSec": 2.2425
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_fd206b2a70b425337899bf09--phone-036-s--center-60060-3840",
+      "utterance": {
+        "id": "cv17_fd206b2a70b425337899bf09",
+        "text": "公園にきれいな花がたくさん咲いています。",
+        "audioUrl": "/media/utterances/cv17_fd206b2a70b425337899bf09.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 36,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 160ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.5025,
+            "endSec": 2.6625
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_a018f7b90d163f6563ac3c96--phone-021-s--center-52380-2640",
+      "utterance": {
+        "id": "cv17_a018f7b90d163f6563ac3c96",
+        "text": "昼から夜まで、およそ子供の考えつく、ありとあらゆる遊びをやった。",
+        "audioUrl": "/media/utterances/cv17_a018f7b90d163f6563ac3c96.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 21,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.1825,
+            "endSec": 2.2925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_2d6339eac467cd67285654df--phone-101-s--center-178140-1200",
+      "utterance": {
+        "id": "cv17_2d6339eac467cd67285654df",
+        "text": "絶対矛盾的自己同一としての歴史的現在の世界においては、種々なる自己自身を限定する形、即ち種々なる生産様式が成立する。",
+        "audioUrl": "/media/utterances/cv17_2d6339eac467cd67285654df.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 101,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.4225,
+            "endSec": 7.4725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_53dec38f0355e3f428fb3042--phone-113-s--center-188940-2880",
+      "utterance": {
+        "id": "cv17_53dec38f0355e3f428fb3042",
+        "text": "びっくりしたことには、思いもよらぬ間近に、石碑を二つほどへだてたすぐ向こうに、黒いやつが、ヌッと立っていたではありませんか。",
+        "audioUrl": "/media/utterances/cv17_53dec38f0355e3f428fb3042.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 113,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.8725,
+            "endSec": 7.9925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_b157c946fd0fc33d199b9287--phone-001-s--center-20940-2400",
+      "utterance": {
+        "id": "cv17_b157c946fd0fc33d199b9287",
+        "text": "その当時の流行の最先端のカッコをしている若者だった。今見ると、古臭さばかりが目立つカッコだった。",
+        "audioUrl": "/media/utterances/cv17_b157c946fd0fc33d199b9287.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.8725,
+            "endSec": 0.9725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_11670a2a66b6b110dd1d20c2--phone-022-s--center-55740-2640",
+      "utterance": {
+        "id": "cv17_11670a2a66b6b110dd1d20c2",
+        "text": "そこで三人の兄弟をさがしに出かけましたが、かれらは元のところには住んでいないで、めいめいちがった国にいるのがわかりました。",
+        "audioUrl": "/media/utterances/cv17_11670a2a66b6b110dd1d20c2.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.3225,
+            "endSec": 2.4325
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_4840f59224ee87035873e616--phone-022-s--center-57900-2160",
+      "utterance": {
+        "id": "cv17_4840f59224ee87035873e616",
+        "text": "しばらくして泣いたら書生がまた迎えに来てくれるかと考え付いた",
+        "audioUrl": "/media/utterances/cv17_4840f59224ee87035873e616.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.4125,
+            "endSec": 2.5025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_a73d6897f6d5e1835f2c098d--phone-052-s--center-110460-2880",
+      "utterance": {
+        "id": "cv17_a73d6897f6d5e1835f2c098d",
+        "text": "絶対矛盾的自己同一として自己自身を形成する世界の生産様式を把握し行くことである。",
+        "audioUrl": "/media/utterances/cv17_a73d6897f6d5e1835f2c098d.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 52,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.6025,
+            "endSec": 4.7225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_21dc5e58133f6c32b2844daf--phone-037-s--center-67260-2640",
+      "utterance": {
+        "id": "cv17_21dc5e58133f6c32b2844daf",
+        "text": "非常に山に縁のあるような感じがしますが、",
+        "audioUrl": "/media/utterances/cv17_21dc5e58133f6c32b2844daf.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 37,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.8025,
+            "endSec": 2.9125
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_1d80a3b8c8db7005b477e23b--phone-004-s--center-23580-2880",
+      "utterance": {
+        "id": "cv17_1d80a3b8c8db7005b477e23b",
+        "text": "あの選手だけストライクゾーンがおかしい",
+        "audioUrl": "/media/utterances/cv17_1d80a3b8c8db7005b477e23b.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 4,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.9825,
+            "endSec": 1.1025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_b197a1e80975ddc8c50cd635--phone-014-s--center-26460-2160",
+      "utterance": {
+        "id": "cv17_b197a1e80975ddc8c50cd635",
+        "text": "どこにでもありそうなＵＦＯで、さっきのアニメに出てきたＵＦＯとは違う種類のＵＦＯだった。",
+        "audioUrl": "/media/utterances/cv17_b197a1e80975ddc8c50cd635.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 14,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.1025,
+            "endSec": 1.1925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_3c339106fba9ccf17a476533--phone-056-s--center-122700-2640",
+      "utterance": {
+        "id": "cv17_3c339106fba9ccf17a476533",
+        "text": "世界が矛盾的自己同一的現在として自己自身を形成するという時、",
+        "audioUrl": "/media/utterances/cv17_3c339106fba9ccf17a476533.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 56,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.1125,
+            "endSec": 5.2225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_4b31fb49a6221caa87c12c65--phone-010-s--center-17820-2880",
+      "utterance": {
+        "id": "cv17_4b31fb49a6221caa87c12c65",
+        "text": "いつもこれ再放送してるよね",
+        "audioUrl": "/media/utterances/cv17_4b31fb49a6221caa87c12c65.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 10,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.7425,
+            "endSec": 0.8625
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_f3e891736fc5fbc8eb7b80c2--phone-013-s--center-39660-2880",
+      "utterance": {
+        "id": "cv17_f3e891736fc5fbc8eb7b80c2",
+        "text": "夜中に目が覚めてしまいなかなか眠れない",
+        "audioUrl": "/media/utterances/cv17_f3e891736fc5fbc8eb7b80c2.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 13,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.6525,
+            "endSec": 1.7725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_23a9001167859e3051b55d70--phone-016-s--center-38700-2640",
+      "utterance": {
+        "id": "cv17_23a9001167859e3051b55d70",
+        "text": "で問題を少しそらして、",
+        "audioUrl": "/media/utterances/cv17_23a9001167859e3051b55d70.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 16,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.6125,
+            "endSec": 1.7225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_a142ddd2243e7d617abd099a--phone-089-s--center-190140-4560",
+      "utterance": {
+        "id": "cv17_a142ddd2243e7d617abd099a",
+        "text": "思惟の媒介的な本質は、概念から判断、判断から推理と進むに従って、次第に一層明瞭になってくる。",
+        "audioUrl": "/media/utterances/cv17_a142ddd2243e7d617abd099a.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 89,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 190ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 7.9225,
+            "endSec": 8.1125
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_90e73725174260131e273a71--phone-047-s--center-110940-1200",
+      "utterance": {
+        "id": "cv17_90e73725174260131e273a71",
+        "text": "表現行列の指標表を分子の対称性を表す点群の指標表を用いて既約表現へ分解する",
+        "audioUrl": "/media/utterances/cv17_90e73725174260131e273a71.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 47,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.6225,
+            "endSec": 4.6725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_037b041aa7bab0b885c81390--phone-034-s--center-71820-1920",
+      "utterance": {
+        "id": "cv17_037b041aa7bab0b885c81390",
+        "text": "弁証法においていう如くアウフヘーベンせられるのである。",
+        "audioUrl": "/media/utterances/cv17_037b041aa7bab0b885c81390.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 34,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.9925,
+            "endSec": 3.0725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_75bdfe22efba12296374e550--phone-016-s--center-42060-2880",
+      "utterance": {
+        "id": "cv17_75bdfe22efba12296374e550",
+        "text": "山の裾に休息している、憐れな漁村の屋根を見た。",
+        "audioUrl": "/media/utterances/cv17_75bdfe22efba12296374e550.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 16,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.7525,
+            "endSec": 1.8725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_90bbb948944fef9ca153d850--phone-014-s--center-32940-2400",
+      "utterance": {
+        "id": "cv17_90bbb948944fef9ca153d850",
+        "text": "成功を積み重ねていった、失敗の記憶は薄れていった、頭の中には成功の記憶だけがある",
+        "audioUrl": "/media/utterances/cv17_90bbb948944fef9ca153d850.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 14,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3725,
+            "endSec": 1.4725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_c3a72541e4c87fec94a2b9c7--phone-008-s--center-41580-1680",
+      "utterance": {
+        "id": "cv17_c3a72541e4c87fec94a2b9c7",
+        "text": "きょうはレストランで晩ごはんを食べます。",
+        "audioUrl": "/media/utterances/cv17_c3a72541e4c87fec94a2b9c7.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 8,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.7325,
+            "endSec": 1.8025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_f4d427517c548f5b31941ed3--phone-019-s--center-42780-3360",
+      "utterance": {
+        "id": "cv17_f4d427517c548f5b31941ed3",
+        "text": "ゲームの目的は、すべての敵陣勢を同化することです。",
+        "audioUrl": "/media/utterances/cv17_f4d427517c548f5b31941ed3.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 19,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.7825,
+            "endSec": 1.9225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_b08b8377e32dd34237610ce0--phone-005-s--center-21420-2400",
+      "utterance": {
+        "id": "cv17_b08b8377e32dd34237610ce0",
+        "text": "寝不足で頭がクラクラするから早めに休みます",
+        "audioUrl": "/media/utterances/cv17_b08b8377e32dd34237610ce0.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 5,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.8925,
+            "endSec": 0.9925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_c16b015bf2fda696f6729537--phone-004-s--center-15180-2160",
+      "utterance": {
+        "id": "cv17_c16b015bf2fda696f6729537",
+        "text": "小説家になるよ。",
+        "audioUrl": "/media/utterances/cv17_c16b015bf2fda696f6729537.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 4,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.6325,
+            "endSec": 0.7225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_2d8d2b20cf0506be60a21848--phone-043-s--center-91980-1680",
+      "utterance": {
+        "id": "cv17_2d8d2b20cf0506be60a21848",
+        "text": "自分は小さい時から、実にしばしば、仕合せ者だと人に言われて来ましたが、",
+        "audioUrl": "/media/utterances/cv17_2d8d2b20cf0506be60a21848.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 43,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.8325,
+            "endSec": 3.9025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_c167cc1e3a07efba67046d8d--phone-059-s--center-126060-2400",
+      "utterance": {
+        "id": "cv17_c167cc1e3a07efba67046d8d",
+        "text": "私のいわゆる制作によって行為的直観的に物の生産様式を把握するということから発展し来ったものでなければならない。",
+        "audioUrl": "/media/utterances/cv17_c167cc1e3a07efba67046d8d.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 59,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.2525,
+            "endSec": 5.3525
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_a522d957ff0a37fdee59b59a--phone-014-s--center-30780-3120",
+      "utterance": {
+        "id": "cv17_a522d957ff0a37fdee59b59a",
+        "text": "小林さんはスカートよりズボンのほうが好きです。",
+        "audioUrl": "/media/utterances/cv17_a522d957ff0a37fdee59b59a.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 14,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.2825,
+            "endSec": 1.4125
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_58eb76ded4d185b6bc10f384--phone-030-s--center-71340-3360",
+      "utterance": {
+        "id": "cv17_58eb76ded4d185b6bc10f384",
+        "text": "ベンチの一部が白くなっていて、そこだけ隠されたように木目が見えない。",
+        "audioUrl": "/media/utterances/cv17_58eb76ded4d185b6bc10f384.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 30,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.9725,
+            "endSec": 3.1125
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_f8cb231fca390d6ac0b7285d--phone-027-s--center-59700-6000",
+      "utterance": {
+        "id": "cv17_f8cb231fca390d6ac0b7285d",
+        "text": "この料理は家庭で作れます。",
+        "audioUrl": "/media/utterances/cv17_f8cb231fca390d6ac0b7285d.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 27,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 250ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.4875,
+            "endSec": 2.7375
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_08c086e6705d65465e849266--phone-027-s--center-67740-2160",
+      "utterance": {
+        "id": "cv17_08c086e6705d65465e849266",
+        "text": "一点差へと詰め寄ったが、すぐさま引き離された",
+        "audioUrl": "/media/utterances/cv17_08c086e6705d65465e849266.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 27,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.8225,
+            "endSec": 2.9125
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_41da899ce171a3b916ed44ad--phone-022-s--center-50940-5040",
+      "utterance": {
+        "id": "cv17_41da899ce171a3b916ed44ad",
+        "text": "わたしはバスを待っています。",
+        "audioUrl": "/media/utterances/cv17_41da899ce171a3b916ed44ad.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 22,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 210ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.1225,
+            "endSec": 2.3325
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_6a069195d9254a0a20026bd8--phone-070-s--center-126060-720",
+      "utterance": {
+        "id": "cv17_6a069195d9254a0a20026bd8",
+        "text": "直観とは、我々の行為を惹起するもの、我々の魂の底までも唆すものである。",
+        "audioUrl": "/media/utterances/cv17_6a069195d9254a0a20026bd8.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 70,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 30ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.2525,
+            "endSec": 5.2825
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_371e5b205a1ef2b85f1d2d9c--phone-043-s--center-79260-5520",
+      "utterance": {
+        "id": "cv17_371e5b205a1ef2b85f1d2d9c",
+        "text": "たくさん練習すれば、日本語が上手になります。",
+        "audioUrl": "/media/utterances/cv17_371e5b205a1ef2b85f1d2d9c.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 43,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 230ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.3025,
+            "endSec": 3.5325
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_cc1fd3602e1466e7878b0483--phone-032-s--center-55980-5520",
+      "utterance": {
+        "id": "cv17_cc1fd3602e1466e7878b0483",
+        "text": "みんなが教室で先生を待っています。",
+        "audioUrl": "/media/utterances/cv17_cc1fd3602e1466e7878b0483.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 32,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 230ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.3325,
+            "endSec": 2.5625
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_379adfc527ae916128932efd--phone-025-s--center-60060-3360",
+      "utterance": {
+        "id": "cv17_379adfc527ae916128932efd",
+        "text": "開幕前は期待を口にする解説者は大勢いた",
+        "audioUrl": "/media/utterances/cv17_379adfc527ae916128932efd.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 25,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.5025,
+            "endSec": 2.6425
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_3ff8b1c5fe097b194946ac04--phone-002-s--center-22140-2640",
+      "utterance": {
+        "id": "cv17_3ff8b1c5fe097b194946ac04",
+        "text": "おそらく円盤の中には誰かがいて、意志がある。そして、その意思を魔王と呼ぶことにした。",
+        "audioUrl": "/media/utterances/cv17_3ff8b1c5fe097b194946ac04.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 2,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.9225,
+            "endSec": 1.0325
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_0959aa405ae2d34eefcddbef--phone-020-s--center-48300-3360",
+      "utterance": {
+        "id": "cv17_0959aa405ae2d34eefcddbef",
+        "text": "科学は単に記述するのみで説明するものでないというのは、言い過ぎであるにしても、",
+        "audioUrl": "/media/utterances/cv17_0959aa405ae2d34eefcddbef.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 20,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.0125,
+            "endSec": 2.1525
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_f1d18c42429edf84983fdc63--phone-055-s--center-149340-4560",
+      "utterance": {
+        "id": "cv17_f1d18c42429edf84983fdc63",
+        "text": "経験は試みることとしてそこに既に自律的な知性が参加している。",
+        "audioUrl": "/media/utterances/cv17_f1d18c42429edf84983fdc63.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 55,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 190ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 6.2225,
+            "endSec": 6.4125
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_f8d1b8cc3199f918782d447e--phone-060-s--center-126060-2640",
+      "utterance": {
+        "id": "cv17_f8d1b8cc3199f918782d447e",
+        "text": "後ろの方で、なにか低い物音がするので、少年は、はっと目を覚ましました。",
+        "audioUrl": "/media/utterances/cv17_f8d1b8cc3199f918782d447e.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 60,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.2525,
+            "endSec": 5.3625
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_b0b500b588ab3351db7aaf93--phone-038-s--center-56700-3120",
+      "utterance": {
+        "id": "cv17_b0b500b588ab3351db7aaf93",
+        "text": "日本へ寄ってみようと思っていたからです。その日本では、オランダ人のほかは、一さいヨーロッパ人を上陸させない、ということを、私は知っていました。",
+        "audioUrl": "/media/utterances/cv17_b0b500b588ab3351db7aaf93.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 38,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.3625,
+            "endSec": 2.4925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_7b53e016a25d0a0c24d04fce--phone-055-s--center-91740-3120",
+      "utterance": {
+        "id": "cv17_7b53e016a25d0a0c24d04fce",
+        "text": "心と心の通い合う、豊かなコミュニケーションを回復させる道ではなかろうか。",
+        "audioUrl": "/media/utterances/cv17_7b53e016a25d0a0c24d04fce.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 55,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.8225,
+            "endSec": 3.9525
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_a0f8202c0b1971f8f5e28632--phone-037-s--center-64140-2640",
+      "utterance": {
+        "id": "cv17_a0f8202c0b1971f8f5e28632",
+        "text": "彼はいつもの自慢話をさも新しそうに繰り返したあとで、吾輩に向かって下のごとく質問した",
+        "audioUrl": "/media/utterances/cv17_a0f8202c0b1971f8f5e28632.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 37,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.6725,
+            "endSec": 2.7825
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_6a55cf8ce108ac978717d433--phone-082-s--center-133740-1920",
+      "utterance": {
+        "id": "cv17_6a55cf8ce108ac978717d433",
+        "text": "単なる意識に対してでなく、存在に対して初めて、存在は、その秘密を明らかにするのである。",
+        "audioUrl": "/media/utterances/cv17_6a55cf8ce108ac978717d433.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 82,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 80ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.5725,
+            "endSec": 5.6525
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_7729d2430a970e8ea8c1ce58--phone-005-s--center-32460-2400",
+      "utterance": {
+        "id": "cv17_7729d2430a970e8ea8c1ce58",
+        "text": "この世界を多の一として機械的と考えても、または一の多として合目的的と考えても、",
+        "audioUrl": "/media/utterances/cv17_7729d2430a970e8ea8c1ce58.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 5,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3525,
+            "endSec": 1.4525
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_2288079a2162f35c418ff41d--phone-081-s--center-139020-2400",
+      "utterance": {
+        "id": "cv17_2288079a2162f35c418ff41d",
+        "text": "世界が矛盾的自己同一として作られたものから作るものへということは、個物が製作的であるということであり、",
+        "audioUrl": "/media/utterances/cv17_2288079a2162f35c418ff41d.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 81,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.7925,
+            "endSec": 5.8925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_5bb1f1bb29247455c60b866b--phone-004-s--center-10380-2640",
+      "utterance": {
+        "id": "cv17_5bb1f1bb29247455c60b866b",
+        "text": "そうすると、彼等は用心しながら、そっと、触ってくれるようになりました。彼等は、私の靴と靴下が、いかにも不思議でならないらしく、",
+        "audioUrl": "/media/utterances/cv17_5bb1f1bb29247455c60b866b.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 4,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.4325,
+            "endSec": 0.5425
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_560a909e6ce3f7998cea1368--phone-028-s--center-76380-2880",
+      "utterance": {
+        "id": "cv17_560a909e6ce3f7998cea1368",
+        "text": "シャーロッタ・スピアーズはジョセフ・バスと結婚し、新聞を一緒に運営しました。",
+        "audioUrl": "/media/utterances/cv17_560a909e6ce3f7998cea1368.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 28,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.1825,
+            "endSec": 3.3025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_c62c6550acaba320b4fbcd33--phone-021-s--center-41820-3120",
+      "utterance": {
+        "id": "cv17_c62c6550acaba320b4fbcd33",
+        "text": "うちの中学は弁当制で、持って行けない場合は、五十円の学校販売のパンを買う。",
+        "audioUrl": "/media/utterances/cv17_c62c6550acaba320b4fbcd33.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 21,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.7425,
+            "endSec": 1.8725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_a17a93f6ce746e360ce25772--phone-016-s--center-40380-2880",
+      "utterance": {
+        "id": "cv17_a17a93f6ce746e360ce25772",
+        "text": "それに鳩が二、三羽、ゴミ置き場でゴミを漁っていたくらい",
+        "audioUrl": "/media/utterances/cv17_a17a93f6ce746e360ce25772.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 16,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.6825,
+            "endSec": 1.8025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_89a722356afcf24170a97b25--phone-028-s--center-80940-3120",
+      "utterance": {
+        "id": "cv17_89a722356afcf24170a97b25",
+        "text": "過去と未来とが現在において相互否定的に結合する、即ち現在が矛盾的自己同一として過去未来を包む、",
+        "audioUrl": "/media/utterances/cv17_89a722356afcf24170a97b25.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 28,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.3725,
+            "endSec": 3.5025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_bf65df12939659209ff446a3--phone-039-s--center-63180-960",
+      "utterance": {
+        "id": "cv17_bf65df12939659209ff446a3",
+        "text": "戦闘機に付いてくるオプションは三つまでです。",
+        "audioUrl": "/media/utterances/cv17_bf65df12939659209ff446a3.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 39,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.6325,
+            "endSec": 2.6725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_722d2f9a375c9b3c8ecf689d--phone-025-s--center-50460-2880",
+      "utterance": {
+        "id": "cv17_722d2f9a375c9b3c8ecf689d",
+        "text": "デパートへ行って、エレベーターで最上階にあがり、まず、お好み食堂へ入った。",
+        "audioUrl": "/media/utterances/cv17_722d2f9a375c9b3c8ecf689d.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 25,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.1025,
+            "endSec": 2.2225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_4c9e5490cc7d57d6ce9d595f--phone-028-s--center-67260-5040",
+      "utterance": {
+        "id": "cv17_4c9e5490cc7d57d6ce9d595f",
+        "text": "あまった生徒は先生と組みます",
+        "audioUrl": "/media/utterances/cv17_4c9e5490cc7d57d6ce9d595f.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 28,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 210ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.8025,
+            "endSec": 3.0125
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_c21b04dd658041e57fd5009e--phone-036-s--center-61980-2400",
+      "utterance": {
+        "id": "cv17_c21b04dd658041e57fd5009e",
+        "text": "運悪く子供の一人が眼を醒ますが最後大変な事になる",
+        "audioUrl": "/media/utterances/cv17_c21b04dd658041e57fd5009e.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 36,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.5825,
+            "endSec": 2.6825
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_bd438959ed2f450553147523--phone-014-s--center-30300-3120",
+      "utterance": {
+        "id": "cv17_bd438959ed2f450553147523",
+        "text": "自己自身を形成し行く世界の形から形へということは、あるいは飛躍的とか無媒介的とか考えられるであろう。",
+        "audioUrl": "/media/utterances/cv17_bd438959ed2f450553147523.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 14,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.2625,
+            "endSec": 1.3925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_01e65466c0ed0b5c41d16e5f--phone-031-s--center-72780-3600",
+      "utterance": {
+        "id": "cv17_01e65466c0ed0b5c41d16e5f",
+        "text": "林さんの家に猫が一匹います。",
+        "audioUrl": "/media/utterances/cv17_01e65466c0ed0b5c41d16e5f.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 31,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 150ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.0325,
+            "endSec": 3.1825
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_2855eecafb0a5c99de1cfb10--phone-021-s--center-75420-3120",
+      "utterance": {
+        "id": "cv17_2855eecafb0a5c99de1cfb10",
+        "text": "回線が混んでるのか、スマホがポンコツなのか原因を絞りこむ",
+        "audioUrl": "/media/utterances/cv17_2855eecafb0a5c99de1cfb10.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 21,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 130ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.1425,
+            "endSec": 3.2725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_602767e2ee3110f64001e553--phone-025-s--center-52140-2880",
+      "utterance": {
+        "id": "cv17_602767e2ee3110f64001e553",
+        "text": "一つの技術を手段に化するには他の技術が必要である。",
+        "audioUrl": "/media/utterances/cv17_602767e2ee3110f64001e553.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 25,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.1725,
+            "endSec": 2.2925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_0351ce2c26d1be83351d3f4e--phone-015-s--center-46380-1440",
+      "utterance": {
+        "id": "cv17_0351ce2c26d1be83351d3f4e",
+        "text": "わたしは毎朝散歩に行きます。",
+        "audioUrl": "/media/utterances/cv17_0351ce2c26d1be83351d3f4e.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 15,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 60ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.9325,
+            "endSec": 1.9925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_f60440aed8c2c7a754f29c09--phone-009-s--center-31260-2400",
+      "utterance": {
+        "id": "cv17_f60440aed8c2c7a754f29c09",
+        "text": "水中に棲む魚は鰭を、空中に棲む鳥は翅をもっている。",
+        "audioUrl": "/media/utterances/cv17_f60440aed8c2c7a754f29c09.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 9,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.3025,
+            "endSec": 1.4025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_bdfdfdee46af54dff133aa6f--phone-001-s--center-21180-2880",
+      "utterance": {
+        "id": "cv17_bdfdfdee46af54dff133aa6f",
+        "text": "最初のうちはサクサク進むから楽しい",
+        "audioUrl": "/media/utterances/cv17_bdfdfdee46af54dff133aa6f.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.8825,
+            "endSec": 1.0025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_15646f7e552c8d14d09856cd--phone-013-s--center-42060-3600",
+      "utterance": {
+        "id": "cv17_15646f7e552c8d14d09856cd",
+        "text": "ところどころ叫び声のような、うめき声のような効果音が挿入されていることも、不気味で気持ち悪かった。",
+        "audioUrl": "/media/utterances/cv17_15646f7e552c8d14d09856cd.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 13,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 150ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.7525,
+            "endSec": 1.9025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_23ca4487c6947203456bcbf6--phone-001-s--center-11820-4320",
+      "utterance": {
+        "id": "cv17_23ca4487c6947203456bcbf6",
+        "text": "涼しいうちに買い物をすませておく",
+        "audioUrl": "/media/utterances/cv17_23ca4487c6947203456bcbf6.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 180ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.4925,
+            "endSec": 0.6725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_74cb027c35ee6a59b331e07d--phone-035-s--center-68940-6000",
+      "utterance": {
+        "id": "cv17_74cb027c35ee6a59b331e07d",
+        "text": "今ちょうど晩ごはんを食べているところです。",
+        "audioUrl": "/media/utterances/cv17_74cb027c35ee6a59b331e07d.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 35,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 250ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.8725,
+            "endSec": 3.1225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_723e7de3b3d99b9634830671--phone-052-s--center-113820-3360",
+      "utterance": {
+        "id": "cv17_723e7de3b3d99b9634830671",
+        "text": "しかしながら他方科学は、その客観的知識に達するために、却って",
+        "audioUrl": "/media/utterances/cv17_723e7de3b3d99b9634830671.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 52,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 4.7425,
+            "endSec": 4.8825
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_5761ca252ebc0081588b7a0e--phone-034-s--center-73980-3600",
+      "utterance": {
+        "id": "cv17_5761ca252ebc0081588b7a0e",
+        "text": "病院で携帯電話を使ってはいけません。",
+        "audioUrl": "/media/utterances/cv17_5761ca252ebc0081588b7a0e.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 34,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 150ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.0825,
+            "endSec": 3.2325
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_16b1733b9b00a0570afb6af2--phone-034-s--center-86700-960",
+      "utterance": {
+        "id": "cv17_16b1733b9b00a0570afb6af2",
+        "text": "群衆行動で恐ろしいのは、どさくさまぎれの心理だ。",
+        "audioUrl": "/media/utterances/cv17_16b1733b9b00a0570afb6af2.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 34,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 40ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.6125,
+            "endSec": 3.6525
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_7a8d304fcaf63788a6098d91--phone-001-s--center-15900-4080",
+      "utterance": {
+        "id": "cv17_7a8d304fcaf63788a6098d91",
+        "text": "その情報は必要だったのだろうか",
+        "audioUrl": "/media/utterances/cv17_7a8d304fcaf63788a6098d91.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 170ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.6625,
+            "endSec": 0.8325
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_cfaf525244c7e410647b2591--phone-020-s--center-46140-2880",
+      "utterance": {
+        "id": "cv17_cfaf525244c7e410647b2591",
+        "text": "多くの人は世界の底に多を考える、原子論的に世界を因果必然の世界と考えている、物質の世界と考えている。",
+        "audioUrl": "/media/utterances/cv17_cfaf525244c7e410647b2591.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 20,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.9225,
+            "endSec": 2.0425
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_ab7a60f3f2f3aa32cfc7af80--phone-035-s--center-58140-2880",
+      "utterance": {
+        "id": "cv17_ab7a60f3f2f3aa32cfc7af80",
+        "text": "わたしは時々あそこの本屋へ行きます。",
+        "audioUrl": "/media/utterances/cv17_ab7a60f3f2f3aa32cfc7af80.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 35,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.4225,
+            "endSec": 2.5425
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_ea9f235aa98cfe65657cd98e--phone-007-s--center-24300-1200",
+      "utterance": {
+        "id": "cv17_ea9f235aa98cfe65657cd98e",
+        "text": "田中さんは学生ではありません。",
+        "audioUrl": "/media/utterances/cv17_ea9f235aa98cfe65657cd98e.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 7,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 50ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.0125,
+            "endSec": 1.0625
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_99ff9355f48133215ed96b3d--phone-056-s--center-124860-2880",
+      "utterance": {
+        "id": "cv17_99ff9355f48133215ed96b3d",
+        "text": "このように、私は、山より川に因縁があり、川を愛しますので、",
+        "audioUrl": "/media/utterances/cv17_99ff9355f48133215ed96b3d.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 56,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.2025,
+            "endSec": 5.3225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_96773d29c689d864b5bfded5--phone-001-s--center-33900-3360",
+      "utterance": {
+        "id": "cv17_96773d29c689d864b5bfded5",
+        "text": "そこらへんはマネしなくていいのに",
+        "audioUrl": "/media/utterances/cv17_96773d29c689d864b5bfded5.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.4125,
+            "endSec": 1.5525
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_406ed2e4603f5c4f744e1d29--phone-001-s--center-16380-2400",
+      "utterance": {
+        "id": "cv17_406ed2e4603f5c4f744e1d29",
+        "text": "ステマ丸出しのコメント",
+        "audioUrl": "/media/utterances/cv17_406ed2e4603f5c4f744e1d29.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 1,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.6825,
+            "endSec": 0.7825
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_b885e4b3a713ceb784457e80--phone-021-s--center-58140-4800",
+      "utterance": {
+        "id": "cv17_b885e4b3a713ceb784457e80",
+        "text": "きょうの夕飯はカレーです。",
+        "audioUrl": "/media/utterances/cv17_b885e4b3a713ceb784457e80.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 21,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 200ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.4225,
+            "endSec": 2.6225
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_4d53533ebc8f6fb64a86a345--phone-055-s--center-123180-3360",
+      "utterance": {
+        "id": "cv17_4d53533ebc8f6fb64a86a345",
+        "text": "実際、そうでもなければ、五年間も、ここの個室で、入院生活を続けられるはずはない。",
+        "audioUrl": "/media/utterances/cv17_4d53533ebc8f6fb64a86a345.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 55,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 5.1325,
+            "endSec": 5.2725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_2ea317406a7f8caa1ace7ed1--phone-043-s--center-84780-5760",
+      "utterance": {
+        "id": "cv17_2ea317406a7f8caa1ace7ed1",
+        "text": "このエレベーターは二階から九階まで止まります。",
+        "audioUrl": "/media/utterances/cv17_2ea317406a7f8caa1ace7ed1.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 43,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 240ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.5325,
+            "endSec": 3.7725
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_edcfec49857bd779faf78700--phone-018-s--center-55020-3360",
+      "utterance": {
+        "id": "cv17_edcfec49857bd779faf78700",
+        "text": "なんでも抹茶味にすればいいってもんじゃないよ",
+        "audioUrl": "/media/utterances/cv17_edcfec49857bd779faf78700.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 140ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.2925,
+            "endSec": 2.4325
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_681ceb7bc19f8f1b5cd66fda--phone-037-s--center-55020-2160",
+      "utterance": {
+        "id": "cv17_681ceb7bc19f8f1b5cd66fda",
+        "text": "我々が表現作用的に世界を形成することは逆に世界の一角として自己自身を形成することであり、",
+        "audioUrl": "/media/utterances/cv17_681ceb7bc19f8f1b5cd66fda.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 37,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.2925,
+            "endSec": 2.3825
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_121841b9f90a28d73daea362--phone-042-s--center-80220-3840",
+      "utterance": {
+        "id": "cv17_121841b9f90a28d73daea362",
+        "text": "そして、両手をベンチの背に乗せ、公園を見回す",
+        "audioUrl": "/media/utterances/cv17_121841b9f90a28d73daea362.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 42,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 160ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 3.3425,
+            "endSec": 3.5025
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_7133e9598a6c5461860e8187--phone-017-s--center-35580-2640",
+      "utterance": {
+        "id": "cv17_7133e9598a6c5461860e8187",
+        "text": "まるで近未来の世界そのものだ",
+        "audioUrl": "/media/utterances/cv17_7133e9598a6c5461860e8187.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 17,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 110ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.4825,
+            "endSec": 1.5925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_cfab8e76b6e952f6c229ff84--phone-007-s--center-16140-2880",
+      "utterance": {
+        "id": "cv17_cfab8e76b6e952f6c229ff84",
+        "text": "箱と説明書は別売りなんですか？",
+        "audioUrl": "/media/utterances/cv17_cfab8e76b6e952f6c229ff84.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 7,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 120ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 0.6725,
+            "endSec": 0.7925
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_6ded1450b649346cf034ae68--phone-035-s--center-64740-6000",
+      "utterance": {
+        "id": "cv17_6ded1450b649346cf034ae68",
+        "text": "林さんは人が多い町に住んでいます。",
+        "audioUrl": "/media/utterances/cv17_6ded1450b649346cf034ae68.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 35,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 250ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.6975,
+            "endSec": 2.9475
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_9318705e7f26c30a609ade74--phone-018-s--center-34140-2160",
+      "utterance": {
+        "id": "cv17_9318705e7f26c30a609ade74",
+        "text": "抽象的自由の世界があるのである。",
+        "audioUrl": "/media/utterances/cv17_9318705e7f26c30a609ade74.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 18,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 90ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 1.4225,
+            "endSec": 1.5125
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_58fda03234b54c8520466261--phone-029-s--center-56700-2400",
+      "utterance": {
+        "id": "cv17_58fda03234b54c8520466261",
+        "text": "私に耳打ちしたら、すぐにその場を離れた",
+        "audioUrl": "/media/utterances/cv17_58fda03234b54c8520466261.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 29,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 100ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.3625,
+            "endSec": 2.4625
+          }
+        }
+      ]
+    },
+    {
+      "id": "cv17_1c5542db5aa26f23de7d8d09--phone-046-s--center-65820-1680",
+      "utterance": {
+        "id": "cv17_1c5542db5aa26f23de7d8d09",
+        "text": "芳醇でクリーム色の飲物は、なめらかで、カスタードのような味があります。",
+        "audioUrl": "/media/utterances/cv17_1c5542db5aa26f23de7d8d09.wav"
+      },
+      "target": {
+        "label": "s",
+        "index": 46,
+        "unitCount": 1,
+        "tags": [
+          "Common Voice",
+          "train",
+          "区間 70ms"
+        ]
+      },
+      "candidates": [
+        {
+          "id": "A",
+          "status": "available",
+          "segment": {
+            "startSec": 2.7425,
+            "endSec": 2.8125
+          }
+        }
+      ]
+    }
+  ]
+}

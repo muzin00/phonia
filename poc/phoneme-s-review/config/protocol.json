@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "protocol_version": "s-post-qc-training-review-v1",
+  "phoneme": "s",
+  "corpora": ["JVS", "Common Voice"],
+  "split": "train",
+  "seed": 20261010,
+  "samples_per_corpus": 100,
+  "sample_rate_hz": 24000,
+  "minimum_frames": 720,
+  "maximum_frames": 6000,
+  "minimum_rms_dbfs": -50,
+  "crop": "center_within_original_phone_before_qc_and_sampling; no_padding_or_normalization",
+  "sampling": "smallest_seeded_sha256_without_replacement_within_corpus; independent_seeded_presentation_order",
+  "context_padding_sec": 0.1,
+  "common_voice_run": "artifacts/phoneme-training-data-expansion/training-data-20261008-v1",
+  "run_directory": "artifacts/phoneme-s-review/s-200-20261010-v1",
+  "human_review_complete": false,
+  "adoption_status": "pending_human_review",
+  "training_started": false
+}
