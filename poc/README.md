@@ -268,6 +268,23 @@ Transformerのtest平均EERは、ノイズ時に通常3.356→1.374%、別文3.4
 JVS閾値の移植時には4母音FARが7.165%となり、入力不足の救済だけで収録集団への一般化と校正の問題は解消しなかった。
 [事前固定した設計](phoneme-missing-vowel-holdout/README.md)、[測定表](phoneme-missing-vowel-holdout/evaluation-results.md)、[結論](phoneme-missing-vowel-holdout/interpretation.md)を参照する。
 
+録音品質の診断では、学習音声各700発話・照合音声JVS 1,500/CV 1,800発話と登録音声、計6,901音声を測定した。
+JVS validation/test各150発話に6条件の加工を加え、音素境界固定・固定境界でQC再適用・再alignmentを比較した。
+5母音必須・境界固定で、20dB白色雑音によりFAR 0.286→11.143%、EER 1.370→13.699%。300〜3400Hz帯域制限ではFRR 100%、EER 36.301%となった。
+条件別にvalidation校正しても本人拒否が多く残り、encoder自体の頑健性が優先課題と分かった。
+CVの4母音条件では有効音声長の短い層/長い層のFRRが35.431%/12.446%で、長さ・音素不足も分けて検証すべきである。観測済みデータでの診断で、録音環境がCVとの差の全原因とは断定しない。
+[固定設計](phoneme-recording-quality/README.md)、[全測定表](phoneme-recording-quality/evaluation-results.md)、[結論](phoneme-recording-quality/interpretation.md)を参照する。
+
+続いて、同じ登録/照合音声を−25dBFS active RMSへ揃える比較と、JVSの同一発話を1・2・3秒へ制限する比較を行った。
+正規化は−12dB入力のFRRを28.667→5.333%へ下げたが、20dB雑音では18.000→36.667%へ上がり、CV全体でも改善しなかった。
+2秒・5母音条件の本人拒否110/150件のうち108件は採点不能で、短音声では必要な母音・区間量の確保を優先すべきと分かった。
+[前処理・発話長の設計](phoneme-recording-mitigation/README.md)、[測定表](phoneme-recording-mitigation/evaluation-results.md)、[結論](phoneme-recording-mitigation/interpretation.md)を参照する。
+
+encoderの追加学習では、元の全36音素encoder/headから、cleanのみと5加工を混ぜる条件を同じ6,000更新・3 seedで比較した。既存140学習話者・31,671区間を使用した。
+5母音・境界固定で20dB雑音EERは元13.699%、clean追加13.487%、拡張追加4.795%。拡張−clean追加EER差の95%区間は[−14.334, −2.451] ppだった。
+ただし拡張後も20dB雑音FARは6.397%、帯域制限FRRは97.333%。clean・残響・CVの点推定も悪化し、この混合拡張モデルをそのまま採用しないと判断した。
+[追加学習の固定設計](phoneme-recording-augmentation/README.md)、[全seed測定表](phoneme-recording-augmentation/evaluation-results.md)、[結論](phoneme-recording-augmentation/interpretation.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。

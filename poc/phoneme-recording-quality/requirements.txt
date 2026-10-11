@@ -1,0 +1,2 @@
+# Additional dependency for the existing alignment/encoder Python environment.
+scipy==1.16.3
