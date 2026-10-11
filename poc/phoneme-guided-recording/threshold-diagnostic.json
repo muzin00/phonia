@@ -1,0 +1,309 @@
+{
+  "results": [
+    {
+      "adaptive1_same_threshold": {
+        "coverage": 0.99,
+        "eer": 0.04152637485970819,
+        "false_accepts": 6,
+        "false_rejects": 478,
+        "far": 0.00022988505747126436,
+        "far_ci95": [
+          0.0,
+          0.0012609099974230556
+        ],
+        "frr": 0.5311111111111111,
+        "frr_ci95": [
+          0.41333333333333333,
+          0.6455555555555555
+        ],
+        "genuine_score_quantiles": [
+          0.6853564269840717,
+          0.7434200985091073,
+          0.7937204043070475
+        ],
+        "impostor_score_quantiles": [
+          0.3499979636885903,
+          0.4856968305327676,
+          0.6227426818438939
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 891,
+        "speakers": 30,
+        "threshold": 0.7466531255665948
+      },
+      "corpus": "CV-A",
+      "difference_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          -0.17222222222222228,
+          -0.0888888888888889
+        ]
+      },
+      "operating_point": "far_0_1pct",
+      "single": {
+        "coverage": 0.6455555555555555,
+        "eer": 0.039586919104991396,
+        "false_accepts": 6,
+        "false_rejects": 594,
+        "far": 0.00022988505747126436,
+        "far_ci95": [
+          0.0,
+          0.0012609099974230556
+        ],
+        "frr": 0.66,
+        "frr_ci95": [
+          0.5744166666666667,
+          0.7422499999999999
+        ],
+        "genuine_score_quantiles": [
+          0.6915950391973767,
+          0.7491950765252113,
+          0.796337878704071
+        ],
+        "impostor_score_quantiles": [
+          0.3496978604432308,
+          0.48805882036685944,
+          0.6264970894698257
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 581,
+        "speakers": 30,
+        "threshold": 0.7466531255665948
+      }
+    },
+    {
+      "adaptive1_same_threshold": {
+        "coverage": 0.99,
+        "eer": 0.04152637485970819,
+        "false_accepts": 132,
+        "false_rejects": 164,
+        "far": 0.005057471264367816,
+        "far_ci95": [
+          0.0008708906050065105,
+          0.013757634224328295
+        ],
+        "frr": 0.18222222222222223,
+        "frr_ci95": [
+          0.10888888888888888,
+          0.26555555555555554
+        ],
+        "genuine_score_quantiles": [
+          0.6853564269840717,
+          0.7434200985091073,
+          0.7937204043070475
+        ],
+        "impostor_score_quantiles": [
+          0.3499979636885903,
+          0.4856968305327676,
+          0.6227426818438939
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 891,
+        "speakers": 30,
+        "threshold": 0.7023868759473166
+      },
+      "corpus": "CV-A",
+      "difference_ci95": {
+        "far": [
+          0.0,
+          0.0021378944689514753
+        ],
+        "frr": [
+          -0.30666666666666664,
+          -0.21333333333333332
+        ]
+      },
+      "operating_point": "far_1pct",
+      "single": {
+        "coverage": 0.6455555555555555,
+        "eer": 0.039586919104991396,
+        "false_accepts": 115,
+        "false_rejects": 398,
+        "far": 0.004406130268199234,
+        "far_ci95": [
+          0.0007575757575757576,
+          0.011667075163398691
+        ],
+        "frr": 0.44222222222222224,
+        "frr_ci95": [
+          0.36777777777777776,
+          0.5222222222222223
+        ],
+        "genuine_score_quantiles": [
+          0.6915950391973767,
+          0.7491950765252113,
+          0.796337878704071
+        ],
+        "impostor_score_quantiles": [
+          0.3496978604432308,
+          0.48805882036685944,
+          0.6264970894698257
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 581,
+        "speakers": 30,
+        "threshold": 0.7023868759473166
+      }
+    },
+    {
+      "adaptive1_same_threshold": {
+        "coverage": 0.9822222222222222,
+        "eer": 0.039202683726010296,
+        "false_accepts": 0,
+        "false_rejects": 543,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.6033333333333334,
+        "frr_ci95": [
+          0.49444444444444446,
+          0.713361111111111
+        ],
+        "genuine_score_quantiles": [
+          0.6909590678004658,
+          0.7506718536218008,
+          0.7972627125947903
+        ],
+        "impostor_score_quantiles": [
+          0.3511405336005347,
+          0.5013928611864562,
+          0.6377073057673194
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 884,
+        "speakers": 30,
+        "threshold": 0.7611076073213058
+      },
+      "corpus": "CV-B",
+      "difference_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          -0.15111111111111108,
+          -0.07222222222222219
+        ]
+      },
+      "operating_point": "far_0_1pct",
+      "single": {
+        "coverage": 0.6766666666666666,
+        "eer": 0.04144725666723289,
+        "false_accepts": 0,
+        "false_rejects": 643,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.7144444444444444,
+        "frr_ci95": [
+          0.6355277777777778,
+          0.7922222222222223
+        ],
+        "genuine_score_quantiles": [
+          0.6907603215703777,
+          0.7527192968588609,
+          0.7984717038961557
+        ],
+        "impostor_score_quantiles": [
+          0.3486872081245695,
+          0.49955854564905167,
+          0.638597889078988
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 609,
+        "speakers": 30,
+        "threshold": 0.7611076073213058
+      }
+    },
+    {
+      "adaptive1_same_threshold": {
+        "coverage": 0.9822222222222222,
+        "eer": 0.039202683726010296,
+        "false_accepts": 139,
+        "false_rejects": 174,
+        "far": 0.005325670498084291,
+        "far_ci95": [
+          0.0013284223851929458,
+          0.011191489665410522
+        ],
+        "frr": 0.19333333333333333,
+        "frr_ci95": [
+          0.12777777777777777,
+          0.26666666666666666
+        ],
+        "genuine_score_quantiles": [
+          0.6909590678004658,
+          0.7506718536218008,
+          0.7972627125947903
+        ],
+        "impostor_score_quantiles": [
+          0.3511405336005347,
+          0.5013928611864562,
+          0.6377073057673194
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 884,
+        "speakers": 30,
+        "threshold": 0.7067692379156749
+      },
+      "corpus": "CV-B",
+      "difference_ci95": {
+        "far": [
+          0.00011961722488038279,
+          0.0020882608447976296
+        ],
+        "frr": [
+          -0.2922222222222222,
+          -0.20330555555555568
+        ]
+      },
+      "operating_point": "far_1pct",
+      "single": {
+        "coverage": 0.6766666666666666,
+        "eer": 0.04144725666723289,
+        "false_accepts": 116,
+        "false_rejects": 397,
+        "far": 0.0044444444444444444,
+        "far_ci95": [
+          0.0010366207610586456,
+          0.009439605671518041
+        ],
+        "frr": 0.4411111111111111,
+        "frr_ci95": [
+          0.38,
+          0.5022222222222222
+        ],
+        "genuine_score_quantiles": [
+          0.6907603215703777,
+          0.7527192968588609,
+          0.7984717038961557
+        ],
+        "impostor_score_quantiles": [
+          0.3486872081245695,
+          0.49955854564905167,
+          0.638597889078988
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 609,
+        "speakers": 30,
+        "threshold": 0.7067692379156749
+      }
+    }
+  ],
+  "scope": "Post-scoring attribution diagnostic; existing single-arm thresholds transferred unchanged; no tuning, candidate selection, or replacement of primary gates"
+}

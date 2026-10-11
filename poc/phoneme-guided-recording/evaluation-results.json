@@ -1,0 +1,3314 @@
+{
+  "config": {
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261105,
+    "cv_arms": [
+      "single",
+      "fixed2",
+      "fixed3",
+      "adaptive1",
+      "adaptive2"
+    ],
+    "cv_runs": {
+      "CV-A": "artifacts/phoneme-missing-vowel-holdout/cv60-20261011-v1",
+      "CV-B": "artifacts/phoneme-recording-ablation/reverb-holdout-20261011-v1"
+    },
+    "episode_seed": 20261104,
+    "gate": {
+      "duration_p95_max_seconds": 20.0,
+      "far_increment_upper95_max": 0.001,
+      "frr_increment_upper95_strict_max": 0.0,
+      "mean_duration_ratio_max": 2.0
+    },
+    "maximum_clips": 3,
+    "operating_points": [
+      "far_0_1pct",
+      "far_1pct"
+    ],
+    "policy": {
+      "minimum_phones": 5,
+      "minimum_vowels": 5,
+      "name": "vowels5"
+    },
+    "primary": "CV adaptive1 versus single at separately validation-calibrated FAR0.1%; both previously observed CV cohorts must pass",
+    "prompt_comparison": "five shortest train-median <=6s texts with each canonical vowel >=2; disjoint control prompts optimally matched by absolute train-median duration; same full-verification calibration threshold for both",
+    "prompt_count": 5,
+    "prompt_ids": "VOICEACTRESS100_051 through 100; existing verification prompts only; select using training text and duration, not validation/test embeddings or scores",
+    "prompt_minimum_text_vowels": 2,
+    "prompt_training_median_max_seconds": 6.0,
+    "quality_run": "artifacts/phoneme-recording-quality/quality-20261011-v1",
+    "run_directory": "artifacts/phoneme-guided-recording/guided-recording-20261011-v1",
+    "scope": "offline replay on existing recordings and observed speakers; no new recording, encoder training, deployment, or fresh holdout claim; simulated extra recordings must have one true speaker, no accept-any retries"
+  },
+  "contrasts": [
+    {
+      "arm": "guided",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          -0.17333333333333334,
+          -0.08000000000000002
+        ]
+      },
+      "control": "matched",
+      "corpus": "JVS",
+      "delta": {
+        "coverage": 0.19999999999999996,
+        "eer": 0.0,
+        "far": 0.0,
+        "frr": -0.13333333333333336
+      },
+      "mean_seconds_delta": -0.3547933066666671,
+      "mean_seconds_delta_ci95": [
+        -0.40040513599999966,
+        -0.3120508386666673
+      ],
+      "mean_seconds_ratio": 0.9380726331326371,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "guided",
+      "ci95": {
+        "far": [
+          -0.014141414141414142,
+          0.004
+        ],
+        "frr": [
+          -0.2,
+          -0.2
+        ]
+      },
+      "control": "matched",
+      "corpus": "JVS",
+      "delta": {
+        "coverage": 0.19999999999999996,
+        "eer": 0.0,
+        "far": -0.002857142857142857,
+        "frr": -0.2
+      },
+      "mean_seconds_delta": -0.3547933066666671,
+      "mean_seconds_delta_ci95": [
+        -0.40040513599999966,
+        -0.3120508386666673
+      ],
+      "mean_seconds_ratio": 0.9380726331326371,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "fixed2",
+      "ci95": {
+        "far": [
+          0.0,
+          0.000238095238095238
+        ],
+        "frr": [
+          -0.2188888888888889,
+          -0.13222222222222224
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.2877777777777778,
+        "eer": -0.006253585771658063,
+        "far": 3.831417624521074e-05,
+        "frr": -0.17444444444444446
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 28,
+        "previously_unscored_now_accepted": 123
+      },
+      "mean_seconds_delta": 4.2256,
+      "mean_seconds_delta_ci95": [
+        3.996792,
+        4.4508410000000005
+      ],
+      "mean_seconds_ratio": 2.0,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "fixed2",
+      "ci95": {
+        "far": [
+          -0.00047961630695443646,
+          0.0034757198125279077
+        ],
+        "frr": [
+          -0.30444444444444446,
+          -0.22111111111111112
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.2877777777777778,
+        "eer": -0.006253585771658063,
+        "far": 0.0009195402298850571,
+        "frr": -0.26333333333333336
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 14,
+        "previously_unscored_now_accepted": 214
+      },
+      "mean_seconds_delta": 4.2256,
+      "mean_seconds_delta_ci95": [
+        3.996792,
+        4.4508410000000005
+      ],
+      "mean_seconds_ratio": 2.0,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "fixed3",
+      "ci95": {
+        "far": [
+          -0.00035885167464114827,
+          0.0
+        ],
+        "frr": [
+          -0.2566666666666667,
+          -0.14
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.34444444444444444,
+        "eer": -0.014469848010908809,
+        "far": -7.662835249042145e-05,
+        "frr": -0.1988888888888889
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 46,
+        "previously_unscored_now_accepted": 140
+      },
+      "mean_seconds_delta": 8.451199999999998,
+      "mean_seconds_delta_ci95": [
+        7.993583999999999,
+        8.901682
+      ],
+      "mean_seconds_ratio": 2.9999999999999996,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "fixed3",
+      "ci95": {
+        "far": [
+          -0.0008373205741626793,
+          0.006450545753588515
+        ],
+        "frr": [
+          -0.37777777777777777,
+          -0.27997222222222234
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.34444444444444444,
+        "eer": -0.014469848010908809,
+        "far": 0.0015325670498084285,
+        "frr": -0.3277777777777778
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 12,
+        "previously_unscored_now_accepted": 266
+      },
+      "mean_seconds_delta": 8.451199999999998,
+      "mean_seconds_delta_ci95": [
+        7.993583999999999,
+        8.901682
+      ],
+      "mean_seconds_ratio": 2.9999999999999996,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          0.0,
+          0.00044147995283018443
+        ],
+        "frr": [
+          -0.19444444444444448,
+          -0.10555555555555562
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.34444444444444444,
+        "eer": 0.0019394557547167957,
+        "far": 0.00011494252873563217,
+        "frr": -0.15000000000000002
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 0,
+        "previously_unscored_now_accepted": 126
+      },
+      "mean_seconds_delta": 1.72884,
+      "mean_seconds_delta_ci95": [
+        1.434734999999999,
+        2.063981000000001
+      ],
+      "mean_seconds_ratio": 1.4091347974252177,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          7.936507936507926e-05,
+          0.003135295625427202
+        ],
+        "frr": [
+          -0.31447222222222226,
+          -0.22555555555555554
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.34444444444444444,
+        "eer": 0.0019394557547167957,
+        "far": 0.0011494252873563218,
+        "frr": -0.27
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 0,
+        "previously_unscored_now_accepted": 240
+      },
+      "mean_seconds_delta": 1.72884,
+      "mean_seconds_delta_ci95": [
+        1.434734999999999,
+        2.063981000000001
+      ],
+      "mean_seconds_ratio": 1.4091347974252177,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "adaptive2",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0004354970214530783
+        ],
+        "frr": [
+          -0.20777777777777773,
+          -0.11333333333333329
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.34444444444444444,
+        "eer": -0.0036722165236221446,
+        "far": 0.00011494252873563217,
+        "frr": -0.16000000000000003
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 23,
+        "previously_unscored_now_accepted": 130
+      },
+      "mean_seconds_delta": 3.5388400000000013,
+      "mean_seconds_delta_ci95": [
+        3.122785000000001,
+        3.9845949999999983
+      ],
+      "mean_seconds_ratio": 1.8374763347216967,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "adaptive2",
+      "ci95": {
+        "far": [
+          -0.0005952736106375725,
+          0.004807847896440131
+        ],
+        "frr": [
+          -0.34111111111111114,
+          -0.25
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.34444444444444444,
+        "eer": -0.0036722165236221446,
+        "far": 0.0012643678160919542,
+        "frr": -0.29444444444444445
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 5,
+        "previously_unscored_now_accepted": 245
+      },
+      "mean_seconds_delta": 3.5388400000000013,
+      "mean_seconds_delta_ci95": [
+        3.122785000000001,
+        3.9845949999999983
+      ],
+      "mean_seconds_ratio": 1.8374763347216967,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0003152274993557639
+        ],
+        "frr": [
+          0.0044444444444444176,
+          0.046666666666666634
+        ]
+      },
+      "control": "fixed2",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.05666666666666664,
+        "eer": 0.008193041526374858,
+        "far": 7.662835249042143e-05,
+        "frr": 0.024444444444444435
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 72,
+        "previously_unscored_now_accepted": 17
+      },
+      "mean_seconds_delta": -2.49676,
+      "mean_seconds_delta_ci95": [
+        -2.921472999999998,
+        -2.0596779999999977
+      ],
+      "mean_seconds_ratio": 0.7045673987126089,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          -0.0006319490568232563,
+          0.001081795933734939
+        ],
+        "frr": [
+          -0.02777777777777779,
+          0.015555555555555545
+        ]
+      },
+      "control": "fixed2",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.05666666666666664,
+        "eer": 0.008193041526374858,
+        "far": 0.0002298850574712647,
+        "frr": -0.006666666666666654
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 46,
+        "previously_unscored_now_accepted": 37
+      },
+      "mean_seconds_delta": -2.49676,
+      "mean_seconds_delta_ci95": [
+        -2.921472999999998,
+        -2.0596779999999977
+      ],
+      "mean_seconds_ratio": 0.7045673987126089,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0007211538461538462
+        ],
+        "frr": [
+          0.01777777777777778,
+          0.08000000000000002
+        ]
+      },
+      "control": "fixed3",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.0,
+        "eer": 0.016409303765625605,
+        "far": 0.00019157088122605362,
+        "frr": 0.04888888888888887
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 100,
+        "previously_unscored_now_accepted": 0
+      },
+      "mean_seconds_delta": -6.722359999999998,
+      "mean_seconds_delta_ci95": [
+        -7.339807,
+        -6.106306000000002
+      ],
+      "mean_seconds_ratio": 0.4697115991417393,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          -0.003500397772474146,
+          0.0011878615508756761
+        ],
+        "frr": [
+          0.03555555555555556,
+          0.08
+        ]
+      },
+      "control": "fixed3",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.0,
+        "eer": 0.016409303765625605,
+        "far": -0.0003831417624521067,
+        "frr": 0.057777777777777775
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 69,
+        "previously_unscored_now_accepted": 0
+      },
+      "mean_seconds_delta": -6.722359999999998,
+      "mean_seconds_delta_ci95": [
+        -7.339807,
+        -6.106306000000002
+      ],
+      "mean_seconds_ratio": 0.4697115991417393,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "adaptive2",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0007211538461538462
+        ],
+        "frr": [
+          0.015555555555555545,
+          0.06336111111111098
+        ]
+      },
+      "control": "fixed3",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.0,
+        "eer": 0.010797631487286664,
+        "far": 0.00019157088122605362,
+        "frr": 0.03888888888888886
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 80,
+        "previously_unscored_now_accepted": 0
+      },
+      "mean_seconds_delta": -4.912359999999997,
+      "mean_seconds_delta_ci95": [
+        -5.608573000000002,
+        -4.2504490000000015
+      ],
+      "mean_seconds_ratio": 0.6124921115738989,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "adaptive2",
+      "ci95": {
+        "far": [
+          -0.002053712480252764,
+          0.0012019954819277102
+        ],
+        "frr": [
+          0.014444444444444447,
+          0.053333333333333316
+        ]
+      },
+      "control": "fixed3",
+      "corpus": "CV-A",
+      "delta": {
+        "coverage": 0.0,
+        "eer": 0.010797631487286664,
+        "far": -0.00026819923371647434,
+        "frr": 0.03333333333333334
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 42,
+        "previously_unscored_now_accepted": 0
+      },
+      "mean_seconds_delta": -4.912359999999997,
+      "mean_seconds_delta_ci95": [
+        -5.608573000000002,
+        -4.2504490000000015
+      ],
+      "mean_seconds_ratio": 0.6124921115738989,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "fixed2",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          -0.1866666666666666,
+          -0.09333333333333338
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.25,
+        "eer": -0.01527509095152959,
+        "far": 0.0,
+        "frr": -0.13888888888888884
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 34,
+        "previously_unscored_now_accepted": 101
+      },
+      "mean_seconds_delta": 4.33068,
+      "mean_seconds_delta_ci95": [
+        4.0482580000000015,
+        4.6239930000000005
+      ],
+      "mean_seconds_ratio": 2.0,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "fixed2",
+      "ci95": {
+        "far": [
+          -0.0032858273950910526,
+          7.898894154818306e-05
+        ],
+        "frr": [
+          -0.2877777777777778,
+          -0.21555555555555553
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.25,
+        "eer": -0.01527509095152959,
+        "far": -0.0012260536398467432,
+        "frr": -0.25333333333333335
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 18,
+        "previously_unscored_now_accepted": 187
+      },
+      "mean_seconds_delta": 4.33068,
+      "mean_seconds_delta_ci95": [
+        4.0482580000000015,
+        4.6239930000000005
+      ],
+      "mean_seconds_ratio": 2.0,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "fixed3",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          -0.2222222222222222,
+          -0.10775000000000012
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.3055555555555556,
+        "eer": -0.015429157119721575,
+        "far": 0.0,
+        "frr": -0.1644444444444444
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 40,
+        "previously_unscored_now_accepted": 116
+      },
+      "mean_seconds_delta": 8.661359999999998,
+      "mean_seconds_delta_ci95": [
+        8.096516000000001,
+        9.247986
+      ],
+      "mean_seconds_ratio": 3.0,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "fixed3",
+      "ci95": {
+        "far": [
+          -0.005623261856671793,
+          8.087882635067897e-05
+        ],
+        "frr": [
+          -0.34555555555555556,
+          -0.2655277777777779
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.3055555555555556,
+        "eer": -0.015429157119721575,
+        "far": -0.0019157088122605365,
+        "frr": -0.30666666666666664
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 25,
+        "previously_unscored_now_accepted": 239
+      },
+      "mean_seconds_delta": 8.661359999999998,
+      "mean_seconds_delta_ci95": [
+        8.096516000000001,
+        9.247986
+      ],
+      "mean_seconds_ratio": 3.0,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          -0.17222222222222222,
+          -0.0922222222222222
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.3055555555555556,
+        "eer": -0.002244572941222593,
+        "far": 0.0,
+        "frr": -0.13111111111111107
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 0,
+        "previously_unscored_now_accepted": 109
+      },
+      "mean_seconds_delta": 1.615400000000001,
+      "mean_seconds_delta_ci95": [
+        1.3507380000000002,
+        1.8698879999999993
+      ],
+      "mean_seconds_ratio": 1.3730130141224937,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          0.00011961722488038279,
+          0.0020882608447976296
+        ],
+        "frr": [
+          -0.2922222222222222,
+          -0.20330555555555568
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.3055555555555556,
+        "eer": -0.002244572941222593,
+        "far": 0.0008812260536398466,
+        "frr": -0.2477777777777778
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 0,
+        "previously_unscored_now_accepted": 223
+      },
+      "mean_seconds_delta": 1.615400000000001,
+      "mean_seconds_delta_ci95": [
+        1.3507380000000002,
+        1.8698879999999993
+      ],
+      "mean_seconds_ratio": 1.3730130141224937,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "adaptive2",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          -0.18888888888888888,
+          -0.09444444444444444
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.3055555555555556,
+        "eer": -0.007042513337540267,
+        "far": 0.0,
+        "frr": -0.14
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 27,
+        "previously_unscored_now_accepted": 115
+      },
+      "mean_seconds_delta": 3.4755599999999998,
+      "mean_seconds_delta_ci95": [
+        3.10578,
+        3.8363169999999993
+      ],
+      "mean_seconds_ratio": 1.802543711380199,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "adaptive2",
+      "ci95": {
+        "far": [
+          -0.000968877537423668,
+          0.001733751246456702
+        ],
+        "frr": [
+          -0.3011111111111111,
+          -0.2088888888888889
+        ]
+      },
+      "control": "single",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.3055555555555556,
+        "eer": -0.007042513337540267,
+        "far": 0.0002298850574712647,
+        "frr": -0.2566666666666667
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 15,
+        "previously_unscored_now_accepted": 225
+      },
+      "mean_seconds_delta": 3.4755599999999998,
+      "mean_seconds_delta_ci95": [
+        3.10578,
+        3.8363169999999993
+      ],
+      "mean_seconds_ratio": 1.802543711380199,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          -0.01777777777777778,
+          0.03444444444444439
+        ]
+      },
+      "control": "fixed2",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.05555555555555558,
+        "eer": 0.013030518010306996,
+        "far": 0.0,
+        "frr": 0.007777777777777772
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 64,
+        "previously_unscored_now_accepted": 17
+      },
+      "mean_seconds_delta": -2.715279999999999,
+      "mean_seconds_delta_ci95": [
+        -3.148481000000001,
+        -2.2797940000000003
+      ],
+      "mean_seconds_ratio": 0.6865065070612468,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          0.0005133375151008269,
+          0.004474548627131543
+        ],
+        "frr": [
+          -0.02333333333333333,
+          0.034444444444444444
+        ]
+      },
+      "control": "fixed2",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.05555555555555558,
+        "eer": 0.013030518010306996,
+        "far": 0.00210727969348659,
+        "frr": 0.005555555555555564
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 63,
+        "previously_unscored_now_accepted": 40
+      },
+      "mean_seconds_delta": -2.715279999999999,
+      "mean_seconds_delta_ci95": [
+        -3.148481000000001,
+        -2.2797940000000003
+      ],
+      "mean_seconds_ratio": 0.6865065070612468,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0011111111111110628,
+          0.06444444444444447
+        ]
+      },
+      "control": "fixed3",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.0,
+        "eer": 0.013184584178498982,
+        "far": 0.0,
+        "frr": 0.033333333333333326
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 86,
+        "previously_unscored_now_accepted": 0
+      },
+      "mean_seconds_delta": -7.045959999999998,
+      "mean_seconds_delta_ci95": [
+        -7.743397999999997,
+        -6.335975000000001
+      ],
+      "mean_seconds_ratio": 0.45767100470749794,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "adaptive1",
+      "ci95": {
+        "far": [
+          0.0005542359461599366,
+          0.006780652622508434
+        ],
+        "frr": [
+          0.031111111111111117,
+          0.0888888888888889
+        ]
+      },
+      "control": "fixed3",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.0,
+        "eer": 0.013184584178498982,
+        "far": 0.002796934865900383,
+        "frr": 0.05888888888888888
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 83,
+        "previously_unscored_now_accepted": 0
+      },
+      "mean_seconds_delta": -7.045959999999998,
+      "mean_seconds_delta_ci95": [
+        -7.743397999999997,
+        -6.335975000000001
+      ],
+      "mean_seconds_ratio": 0.45767100470749794,
+      "operating_point": "far_1pct"
+    },
+    {
+      "arm": "adaptive2",
+      "ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.048888888888888926
+        ]
+      },
+      "control": "fixed3",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.0,
+        "eer": 0.008386643782181308,
+        "far": 0.0,
+        "frr": 0.02444444444444438
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 61,
+        "previously_unscored_now_accepted": 0
+      },
+      "mean_seconds_delta": -5.1857999999999995,
+      "mean_seconds_delta_ci95": [
+        -5.975223999999999,
+        -4.418757999999998
+      ],
+      "mean_seconds_ratio": 0.6008479037933997,
+      "operating_point": "far_0_1pct"
+    },
+    {
+      "arm": "adaptive2",
+      "ci95": {
+        "far": [
+          0.0002421015782257358,
+          0.0057814992025518345
+        ],
+        "frr": [
+          0.02997222222222221,
+          0.07222222222222222
+        ]
+      },
+      "control": "fixed3",
+      "corpus": "CV-B",
+      "delta": {
+        "coverage": 0.0,
+        "eer": 0.008386643782181308,
+        "far": 0.0021455938697318012,
+        "frr": 0.04999999999999999
+      },
+      "genuine_transitions": {
+        "previously_accepted_now_rejected": 65,
+        "previously_unscored_now_accepted": 0
+      },
+      "mean_seconds_delta": -5.1857999999999995,
+      "mean_seconds_delta_ci95": [
+        -5.975223999999999,
+        -4.418757999999998
+      ],
+      "mean_seconds_ratio": 0.6008479037933997,
+      "operating_point": "far_1pct"
+    }
+  ],
+  "primary_gates": [
+    {
+      "checks": {
+        "far_increment_within_limit": true,
+        "frr_improved": true,
+        "mean_time_within_limit": true,
+        "p95_time_within_limit": true
+      },
+      "corpus": "CV-A",
+      "passed": true
+    },
+    {
+      "checks": {
+        "far_increment_within_limit": true,
+        "frr_improved": true,
+        "mean_time_within_limit": true,
+        "p95_time_within_limit": true
+      },
+      "corpus": "CV-B",
+      "passed": true
+    }
+  ],
+  "primary_passed": true,
+  "prompt_selection": {
+    "inventory": [
+      {
+        "id": "VOICEACTRESS100_051",
+        "median_seconds": 5.876208500000001,
+        "text_vowels": {
+          "a": 3,
+          "e": 6,
+          "i": 4,
+          "o": 8,
+          "u": 6
+        },
+        "train_speakers": 70,
+        "transcript": "デビュー後の数年間は、ベビーフェイスとして、本名で活動。"
+      },
+      {
+        "id": "VOICEACTRESS100_052",
+        "median_seconds": 8.9200415,
+        "text_vowels": {
+          "a": 6,
+          "e": 7,
+          "i": 3,
+          "o": 21,
+          "u": 10
+        },
+        "train_speakers": 70,
+        "transcript": "学校や病院などの、給食業務で、栄養素を計算する上で、重要な資料のひとつである。"
+      },
+      {
+        "id": "VOICEACTRESS100_053",
+        "median_seconds": 6.551333,
+        "text_vowels": {
+          "a": 8,
+          "e": 3,
+          "i": 8,
+          "o": 9,
+          "u": 6
+        },
+        "train_speakers": 70,
+        "transcript": "当時、あやしいワールドに常駐していた擬古猫が、空白にて発表。"
+      },
+      {
+        "id": "VOICEACTRESS100_054",
+        "median_seconds": 13.376042,
+        "text_vowels": {
+          "a": 12,
+          "e": 11,
+          "i": 10,
+          "o": 19,
+          "u": 15
+        },
+        "train_speakers": 70,
+        "transcript": "裕福なニューヨーカー達は、グレーヴセンド、競馬場や、シープシェッドベイ、競馬場などに集い、海沿いの高級レストランや、ホテルを利用した。"
+      },
+      {
+        "id": "VOICEACTRESS100_055",
+        "median_seconds": 3.937646,
+        "text_vowels": {
+          "a": 9,
+          "e": 1,
+          "i": 4,
+          "o": 3,
+          "u": 6
+        },
+        "train_speakers": 70,
+        "transcript": "ウォリアーズミックスマーシャルアーツアカデミー所属。"
+      },
+      {
+        "id": "VOICEACTRESS100_056",
+        "median_seconds": 8.719146,
+        "text_vowels": {
+          "a": 6,
+          "e": 11,
+          "i": 9,
+          "o": 10,
+          "u": 6
+        },
+        "train_speakers": 70,
+        "transcript": "ところが、エリュシクトーンは、ニュムペーの制止も聞かずに、デーメーテールの樫を、切り倒した。"
+      },
+      {
+        "id": "VOICEACTRESS100_057",
+        "median_seconds": 5.628,
+        "text_vowels": {
+          "a": 5,
+          "e": 7,
+          "i": 7,
+          "o": 10,
+          "u": 4
+        },
+        "train_speakers": 70,
+        "transcript": "このジェシー役でステイモスは、エミー賞にノミネートされたこともある。"
+      },
+      {
+        "id": "VOICEACTRESS100_058",
+        "median_seconds": 6.7455415,
+        "text_vowels": {
+          "a": 3,
+          "e": 7,
+          "i": 7,
+          "o": 6,
+          "u": 9
+        },
+        "train_speakers": 70,
+        "transcript": "スウェーデン移民の両親の許に、マサチューセッツ州、ケンブリッジにて生まれる。"
+      },
+      {
+        "id": "VOICEACTRESS100_059",
+        "median_seconds": 7.038812500000001,
+        "text_vowels": {
+          "a": 8,
+          "e": 4,
+          "i": 8,
+          "o": 9,
+          "u": 8
+        },
+        "train_speakers": 70,
+        "transcript": "球宴のファン投票でも、人気が偶像化していた、長嶋茂雄に肉薄する。"
+      },
+      {
+        "id": "VOICEACTRESS100_060",
+        "median_seconds": 7.086854,
+        "text_vowels": {
+          "a": 8,
+          "e": 4,
+          "i": 13,
+          "o": 5,
+          "u": 7
+        },
+        "train_speakers": 70,
+        "transcript": "母は、ピーターマリッツバーグの精神病院に入院しているときに、ベッシーを産む。"
+      },
+      {
+        "id": "VOICEACTRESS100_061",
+        "median_seconds": 7.675396,
+        "text_vowels": {
+          "a": 14,
+          "e": 5,
+          "i": 6,
+          "o": 13,
+          "u": 8
+        },
+        "train_speakers": 70,
+        "transcript": "ポイントガードから、スモールフォワードまでこなせる、総合力が高いユーティリティープレーヤーである。"
+      },
+      {
+        "id": "VOICEACTRESS100_062",
+        "median_seconds": 7.9385414999999995,
+        "text_vowels": {
+          "a": 8,
+          "e": 3,
+          "i": 11,
+          "o": 9,
+          "u": 7
+        },
+        "train_speakers": 70,
+        "transcript": "グレッグは、ミシシッピ州、アバディーンにある、オッドフェローズ墓地に埋葬されることになった。"
+      },
+      {
+        "id": "VOICEACTRESS100_063",
+        "median_seconds": 4.9163335,
+        "text_vowels": {
+          "a": 7,
+          "e": 2,
+          "i": 3,
+          "o": 6,
+          "u": 9
+        },
+        "train_speakers": 70,
+        "transcript": "大当り終了後は、グラディエーターチャンスに突入する。"
+      },
+      {
+        "id": "VOICEACTRESS100_064",
+        "median_seconds": 5.6639585,
+        "text_vowels": {
+          "a": 6,
+          "e": 3,
+          "i": 8,
+          "o": 13,
+          "u": 3
+        },
+        "train_speakers": 70,
+        "transcript": "この菌による病気は、灰色かび病と名づけられているものが多い。"
+      },
+      {
+        "id": "VOICEACTRESS100_065",
+        "median_seconds": 9.187750000000001,
+        "text_vowels": {
+          "a": 14,
+          "e": 9,
+          "i": 14,
+          "o": 7,
+          "u": 12
+        },
+        "train_speakers": 70,
+        "transcript": "レギュラーメンバーの顔写真をクリックした後に、ムービープレイヤー風に再生されるという、特異な形式となっている。"
+      },
+      {
+        "id": "VOICEACTRESS100_066",
+        "median_seconds": 8.171479,
+        "text_vowels": {
+          "a": 10,
+          "e": 8,
+          "i": 3,
+          "o": 14,
+          "u": 6
+        },
+        "train_speakers": 70,
+        "transcript": "肝臓への酸素供給は、肝動脈と、低圧系の門脈を介して、行われている。"
+      },
+      {
+        "id": "VOICEACTRESS100_067",
+        "median_seconds": 7.8306045,
+        "text_vowels": {
+          "a": 9,
+          "e": 3,
+          "i": 9,
+          "o": 11,
+          "u": 8
+        },
+        "train_speakers": 70,
+        "transcript": "デッドキーは、タイプライターや、コンピュータのキーボードにおける、特殊な装飾キーである。"
+      },
+      {
+        "id": "VOICEACTRESS100_068",
+        "median_seconds": 6.890229,
+        "text_vowels": {
+          "a": 9,
+          "e": 2,
+          "i": 4,
+          "o": 6,
+          "u": 10
+        },
+        "train_speakers": 70,
+        "transcript": "シャンシャン馬は、鵜戸神宮へ参拝する、新婚夫婦が乗っていた馬のこと。"
+      },
+      {
+        "id": "VOICEACTRESS100_069",
+        "median_seconds": 9.93675,
+        "text_vowels": {
+          "a": 13,
+          "e": 6,
+          "i": 8,
+          "o": 8,
+          "u": 16
+        },
+        "train_speakers": 70,
+        "transcript": "ブルーリッジ山脈の源流から、リッチモンドまで、多くの早瀬や淵が、釣りや急流くだりを楽しませてくれる。"
+      },
+      {
+        "id": "VOICEACTRESS100_070",
+        "median_seconds": 8.410708,
+        "text_vowels": {
+          "a": 15,
+          "e": 2,
+          "i": 11,
+          "o": 10,
+          "u": 5
+        },
+        "train_speakers": 70,
+        "transcript": "ボーハンは、イーストマンら、ギャングのスピークイージーの上がりから、賄賂を取っていたとも噂された。"
+      },
+      {
+        "id": "VOICEACTRESS100_071",
+        "median_seconds": 7.120229,
+        "text_vowels": {
+          "a": 7,
+          "e": 7,
+          "i": 8,
+          "o": 7,
+          "u": 6
+        },
+        "train_speakers": 70,
+        "transcript": "ペンシルベニア州、フィラデルフィアの郊外、ウィンレッドのレンキナウ病院で生まれた。"
+      },
+      {
+        "id": "VOICEACTRESS100_072",
+        "median_seconds": 7.758395500000001,
+        "text_vowels": {
+          "a": 8,
+          "e": 5,
+          "i": 6,
+          "o": 9,
+          "u": 9
+        },
+        "train_speakers": 70,
+        "transcript": "ブラッグは、ビューエル軍よりも、劣勢だったために、この機会を生かすことを躊躇した。"
+      },
+      {
+        "id": "VOICEACTRESS100_073",
+        "median_seconds": 7.5980625,
+        "text_vowels": {
+          "a": 8,
+          "e": 5,
+          "i": 8,
+          "o": 7,
+          "u": 6
+        },
+        "train_speakers": 70,
+        "transcript": "上院議員として、バーンウェルは、カリフォルニア州の、連邦加入に賛成した。"
+      },
+      {
+        "id": "VOICEACTRESS100_074",
+        "median_seconds": 5.9633959999999995,
+        "text_vowels": {
+          "a": 4,
+          "e": 6,
+          "i": 7,
+          "o": 8,
+          "u": 5
+        },
+        "train_speakers": 70,
+        "transcript": "レジェンドシリーズをベースに、ヨーフリー機構を備えた、ビューカメラ。"
+      },
+      {
+        "id": "VOICEACTRESS100_075",
+        "median_seconds": 7.0489999999999995,
+        "text_vowels": {
+          "a": 10,
+          "e": 6,
+          "i": 10,
+          "o": 9,
+          "u": 2
+        },
+        "train_speakers": 70,
+        "transcript": "楽曲のセンターポジションは、エーケービーフォーティーエイトの、高橋みなみが務めた。"
+      },
+      {
+        "id": "VOICEACTRESS100_076",
+        "median_seconds": 11.815541499999998,
+        "text_vowels": {
+          "a": 9,
+          "e": 6,
+          "i": 9,
+          "o": 19,
+          "u": 10
+        },
+        "train_speakers": 70,
+        "transcript": "ディオニューソスの、寵愛を受ける、オイネウス王と、妃、アルタイアーの間に、カリュドーンの王女として、生を受けた。"
+      },
+      {
+        "id": "VOICEACTRESS100_077",
+        "median_seconds": 9.941812500000001,
+        "text_vowels": {
+          "a": 6,
+          "e": 4,
+          "i": 10,
+          "o": 21,
+          "u": 8
+        },
+        "train_speakers": 70,
+        "transcript": "大西洋上の、巡航高度から、動力なしで、地上へ滑空飛行し、緊急着陸に成功した。"
+      },
+      {
+        "id": "VOICEACTRESS100_078",
+        "median_seconds": 10.354854499999998,
+        "text_vowels": {
+          "a": 6,
+          "e": 9,
+          "i": 7,
+          "o": 23,
+          "u": 9
+        },
+        "train_speakers": 70,
+        "transcript": "表現行列の指標表を、分子の対称性を表す、点群の指標表を用いて、既約表現へ分解する。"
+      },
+      {
+        "id": "VOICEACTRESS100_079",
+        "median_seconds": 9.1659375,
+        "text_vowels": {
+          "a": 11,
+          "e": 6,
+          "i": 7,
+          "o": 16,
+          "u": 9
+        },
+        "train_speakers": 70,
+        "transcript": "大洋漁業オーナーの、中部謙吉の命を受けて、プロ野球球団の、大洋ホエールズに関わる。"
+      },
+      {
+        "id": "VOICEACTRESS100_080",
+        "median_seconds": 7.185896,
+        "text_vowels": {
+          "a": 10,
+          "e": 5,
+          "i": 10,
+          "o": 4,
+          "u": 10
+        },
+        "train_speakers": 70,
+        "transcript": "かすかに聞こえてくる1931年版の讃美歌が、次第に大きくなっていく。"
+      },
+      {
+        "id": "VOICEACTRESS100_081",
+        "median_seconds": 9.2394795,
+        "text_vowels": {
+          "a": 15,
+          "e": 6,
+          "i": 15,
+          "o": 8,
+          "u": 8
+        },
+        "train_speakers": 70,
+        "transcript": "モーイーデーン岩壁地域の上部は、プラーサートプラウィハーン寺院遺跡へ繋がる、タイ側参道に続いている。"
+      },
+      {
+        "id": "VOICEACTRESS100_082",
+        "median_seconds": 7.4550625,
+        "text_vowels": {
+          "a": 8,
+          "e": 6,
+          "i": 9,
+          "o": 4,
+          "u": 12
+        },
+        "train_speakers": 70,
+        "transcript": "カーミラ星と呼ばれている惑星から、宇宙船に乗って、地球に侵入した宇宙人。"
+      },
+      {
+        "id": "VOICEACTRESS100_083",
+        "median_seconds": 7.2105625,
+        "text_vowels": {
+          "a": 11,
+          "e": 1,
+          "i": 3,
+          "o": 11,
+          "u": 6
+        },
+        "train_speakers": 70,
+        "transcript": "ドッガーバンクは、タラやニシンの漁獲量が多い、重要な、漁場である。"
+      },
+      {
+        "id": "VOICEACTRESS100_084",
+        "median_seconds": 9.2784795,
+        "text_vowels": {
+          "a": 7,
+          "e": 6,
+          "i": 11,
+          "o": 7,
+          "u": 14
+        },
+        "train_speakers": 70,
+        "transcript": "少年時代は、ロシア帝国、チェルニーヒウ県、プルィルークィ郡、トロスチャヌィーツャ村で過ごした。"
+      },
+      {
+        "id": "VOICEACTRESS100_085",
+        "median_seconds": 11.458917,
+        "text_vowels": {
+          "a": 12,
+          "e": 7,
+          "i": 10,
+          "o": 13,
+          "u": 13
+        },
+        "train_speakers": 70,
+        "transcript": "遺灰のほとんどは、スウェーデン西海岸の、ブーヒュースレーン地方の小島にある漁村、フヤルバッカ周辺の海に、散骨された。"
+      },
+      {
+        "id": "VOICEACTRESS100_086",
+        "median_seconds": 8.317604,
+        "text_vowels": {
+          "a": 10,
+          "e": 8,
+          "i": 6,
+          "o": 10,
+          "u": 4
+        },
+        "train_speakers": 70,
+        "transcript": "国境を越えて、列車は、改良された在来線に沿って、アーヘン中央駅に向かう。"
+      },
+      {
+        "id": "VOICEACTRESS100_087",
+        "median_seconds": 10.016957999999999,
+        "text_vowels": {
+          "a": 15,
+          "e": 8,
+          "i": 5,
+          "o": 19,
+          "u": 10
+        },
+        "train_speakers": 70,
+        "transcript": "福岡ダイエーホークスではなく、長距離砲の補強を目指していた、大阪近鉄バファローズから、オファーを受けて入団。"
+      },
+      {
+        "id": "VOICEACTRESS100_088",
+        "median_seconds": 7.1061250000000005,
+        "text_vowels": {
+          "a": 9,
+          "e": 5,
+          "i": 9,
+          "o": 6,
+          "u": 4
+        },
+        "train_speakers": 70,
+        "transcript": "そこには、百ドル札と、アメリカに来いという、短いメッセージだけだった。"
+      },
+      {
+        "id": "VOICEACTRESS100_089",
+        "median_seconds": 7.6399375,
+        "text_vowels": {
+          "a": 10,
+          "e": 4,
+          "i": 8,
+          "o": 10,
+          "u": 5
+        },
+        "train_speakers": 70,
+        "transcript": "現在は、バッハをモチーフとした、ハープシコードの作曲家として、記憶されている。"
+      },
+      {
+        "id": "VOICEACTRESS100_090",
+        "median_seconds": 7.346895999999999,
+        "text_vowels": {
+          "a": 7,
+          "e": 5,
+          "i": 2,
+          "o": 10,
+          "u": 10
+        },
+        "train_speakers": 70,
+        "transcript": "戦闘服は、両腕を露出し、両脚が、アンダースーツで覆われている。"
+      },
+      {
+        "id": "VOICEACTRESS100_091",
+        "median_seconds": 4.897479000000001,
+        "text_vowels": {
+          "a": 2,
+          "e": 5,
+          "i": 5,
+          "o": 6,
+          "u": 3
+        },
+        "train_speakers": 70,
+        "transcript": "同母姉に、スウェーデン王妃、ジョゼフィーヌがいる。"
+      },
+      {
+        "id": "VOICEACTRESS100_092",
+        "median_seconds": 8.3012085,
+        "text_vowels": {
+          "a": 8,
+          "e": 7,
+          "i": 12,
+          "o": 9,
+          "u": 5
+        },
+        "train_speakers": 70,
+        "transcript": "紫外線は、表面エネルギーの、小さいポリマーを接着する際の、前処理に利用される。"
+      },
+      {
+        "id": "VOICEACTRESS100_093",
+        "median_seconds": 10.918417,
+        "text_vowels": {
+          "a": 8,
+          "e": 12,
+          "i": 8,
+          "o": 22,
+          "u": 7
+        },
+        "train_speakers": 70,
+        "transcript": "自身のページで、メッセージや、公開コメントを通して、レビューを投稿したユーザーと、コミュニケーションを取ることが可能である。"
+      },
+      {
+        "id": "VOICEACTRESS100_094",
+        "median_seconds": 15.342292,
+        "text_vowels": {
+          "a": 22,
+          "e": 10,
+          "i": 11,
+          "o": 15,
+          "u": 20
+        },
+        "train_speakers": 69,
+        "transcript": "若き日の反逆ゆえに、宇宙の中央を追放されて、惑星、地球にやってきた主人公、ベルゼバブが、宇宙船カルナークのなかで、孫に語る壮大な物語。"
+      },
+      {
+        "id": "VOICEACTRESS100_095",
+        "median_seconds": 8.331229,
+        "text_vowels": {
+          "a": 14,
+          "e": 5,
+          "i": 10,
+          "o": 13,
+          "u": 6
+        },
+        "train_speakers": 70,
+        "transcript": "ジャガーとは対照的に、ボディービルダーを髣髴とさせる、マッチョな体育会系の外見が特徴。"
+      },
+      {
+        "id": "VOICEACTRESS100_096",
+        "median_seconds": 10.285833499999999,
+        "text_vowels": {
+          "a": 11,
+          "e": 7,
+          "i": 10,
+          "o": 12,
+          "u": 12
+        },
+        "train_speakers": 70,
+        "transcript": "ペンシルベニア州、ピッツバーグの、アレゲーニー高校を卒業し、カリフォルニア大学、バークレー校に入学。"
+      },
+      {
+        "id": "VOICEACTRESS100_097",
+        "median_seconds": 10.103312500000001,
+        "text_vowels": {
+          "a": 16,
+          "e": 9,
+          "i": 6,
+          "o": 15,
+          "u": 7
+        },
+        "train_speakers": 70,
+        "transcript": "この概念の導入によって、様々なバリエーションの、流体のコンピューターシミュレーションが、高い精度で可能となった。"
+      },
+      {
+        "id": "VOICEACTRESS100_098",
+        "median_seconds": 6.9665,
+        "text_vowels": {
+          "a": 9,
+          "e": 4,
+          "i": 5,
+          "o": 10,
+          "u": 8
+        },
+        "train_speakers": 70,
+        "transcript": "乾ドックに入渠して、オーバーホールすべきかどうか、パフォーマンスがチェックされた。"
+      },
+      {
+        "id": "VOICEACTRESS100_099",
+        "median_seconds": 5.8586665,
+        "text_vowels": {
+          "a": 11,
+          "e": 5,
+          "i": 0,
+          "o": 1,
+          "u": 10
+        },
+        "train_speakers": 70,
+        "transcript": "デビューウェイトは、スーパーバンタム級ではなく、フェザー級だった。"
+      },
+      {
+        "id": "VOICEACTRESS100_100",
+        "median_seconds": 10.411104,
+        "text_vowels": {
+          "a": 16,
+          "e": 2,
+          "i": 13,
+          "o": 8,
+          "u": 8
+        },
+        "train_speakers": 70,
+        "transcript": "アーリーは、降雨の中を、南のバージニア州、ウィンチェスター近くの、フィッシャーズヒルまで、軍を退いた。"
+      }
+    ],
+    "pairs": [
+      {
+        "absolute_train_seconds_gap": 0.9598330000000006,
+        "control": {
+          "id": "VOICEACTRESS100_055",
+          "median_seconds": 3.937646,
+          "text_vowels": {
+            "a": 9,
+            "e": 1,
+            "i": 4,
+            "o": 3,
+            "u": 6
+          },
+          "train_speakers": 70,
+          "transcript": "ウォリアーズミックスマーシャルアーツアカデミー所属。"
+        },
+        "guided": {
+          "id": "VOICEACTRESS100_091",
+          "median_seconds": 4.897479000000001,
+          "text_vowels": {
+            "a": 2,
+            "e": 5,
+            "i": 5,
+            "o": 6,
+            "u": 3
+          },
+          "train_speakers": 70,
+          "transcript": "同母姉に、スウェーデン王妃、ジョゼフィーヌがいる。"
+        }
+      },
+      {
+        "absolute_train_seconds_gap": 0.9423329999999996,
+        "control": {
+          "id": "VOICEACTRESS100_099",
+          "median_seconds": 5.8586665,
+          "text_vowels": {
+            "a": 11,
+            "e": 5,
+            "i": 0,
+            "o": 1,
+            "u": 10
+          },
+          "train_speakers": 70,
+          "transcript": "デビューウェイトは、スーパーバンタム級ではなく、フェザー級だった。"
+        },
+        "guided": {
+          "id": "VOICEACTRESS100_063",
+          "median_seconds": 4.9163335,
+          "text_vowels": {
+            "a": 7,
+            "e": 2,
+            "i": 3,
+            "o": 6,
+            "u": 9
+          },
+          "train_speakers": 70,
+          "transcript": "大当り終了後は、グラディエーターチャンスに突入する。"
+        }
+      },
+      {
+        "absolute_train_seconds_gap": 0.33539599999999936,
+        "control": {
+          "id": "VOICEACTRESS100_074",
+          "median_seconds": 5.9633959999999995,
+          "text_vowels": {
+            "a": 4,
+            "e": 6,
+            "i": 7,
+            "o": 8,
+            "u": 5
+          },
+          "train_speakers": 70,
+          "transcript": "レジェンドシリーズをベースに、ヨーフリー機構を備えた、ビューカメラ。"
+        },
+        "guided": {
+          "id": "VOICEACTRESS100_057",
+          "median_seconds": 5.628,
+          "text_vowels": {
+            "a": 5,
+            "e": 7,
+            "i": 7,
+            "o": 10,
+            "u": 4
+          },
+          "train_speakers": 70,
+          "transcript": "このジェシー役でステイモスは、エミー賞にノミネートされたこともある。"
+        }
+      },
+      {
+        "absolute_train_seconds_gap": 0.8873745,
+        "control": {
+          "id": "VOICEACTRESS100_053",
+          "median_seconds": 6.551333,
+          "text_vowels": {
+            "a": 8,
+            "e": 3,
+            "i": 8,
+            "o": 9,
+            "u": 6
+          },
+          "train_speakers": 70,
+          "transcript": "当時、あやしいワールドに常駐していた擬古猫が、空白にて発表。"
+        },
+        "guided": {
+          "id": "VOICEACTRESS100_064",
+          "median_seconds": 5.6639585,
+          "text_vowels": {
+            "a": 6,
+            "e": 3,
+            "i": 8,
+            "o": 13,
+            "u": 3
+          },
+          "train_speakers": 70,
+          "transcript": "この菌による病気は、灰色かび病と名づけられているものが多い。"
+        }
+      },
+      {
+        "absolute_train_seconds_gap": 0.8693329999999992,
+        "control": {
+          "id": "VOICEACTRESS100_058",
+          "median_seconds": 6.7455415,
+          "text_vowels": {
+            "a": 3,
+            "e": 7,
+            "i": 7,
+            "o": 6,
+            "u": 9
+          },
+          "train_speakers": 70,
+          "transcript": "スウェーデン移民の両親の許に、マサチューセッツ州、ケンブリッジにて生まれる。"
+        },
+        "guided": {
+          "id": "VOICEACTRESS100_051",
+          "median_seconds": 5.876208500000001,
+          "text_vowels": {
+            "a": 3,
+            "e": 6,
+            "i": 4,
+            "o": 8,
+            "u": 6
+          },
+          "train_speakers": 70,
+          "transcript": "デビュー後の数年間は、ベビーフェイスとして、本名で活動。"
+        }
+      }
+    ]
+  },
+  "reports": [
+    {
+      "arm": "all50",
+      "corpus": "JVS",
+      "metrics": {
+        "coverage": 0.98,
+        "eer": 0.014965986394557823,
+        "false_accepts": 0,
+        "false_rejects": 83,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.11066666666666666,
+        "frr_ci95": [
+          0.05466666666666667,
+          0.18133333333333335
+        ],
+        "genuine_score_quantiles": [
+          0.6749371906921221,
+          0.7291142245133718,
+          0.7816379064321518
+        ],
+        "impostor_score_quantiles": [
+          0.2600250406190753,
+          0.4202257814248661,
+          0.5708991132563714
+        ],
+        "impostor_trials": 10500,
+        "queries": 750,
+        "scored_queries": 735,
+        "speakers": 15,
+        "threshold": 0.6719664856791497,
+        "unscored_queries": 15
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 750,
+          "2": 0,
+          "3": 0
+        },
+        "mean_clips": 1.0,
+        "mean_seconds": 8.121656557333333,
+        "mean_seconds_ci95": [
+          7.7195326362,
+          8.491794005133334
+        ],
+        "median_seconds": 7.776229,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          4.0,
+          7.0
+        ],
+        "p95_seconds": 12.1590583
+      }
+    },
+    {
+      "arm": "all50",
+      "corpus": "JVS",
+      "metrics": {
+        "coverage": 0.98,
+        "eer": 0.014965986394557823,
+        "false_accepts": 43,
+        "false_rejects": 33,
+        "far": 0.004095238095238095,
+        "far_ci95": [
+          0.0006060606060606061,
+          0.011087255136168176
+        ],
+        "frr": 0.044,
+        "frr_ci95": [
+          0.02,
+          0.07733333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6749371906921221,
+          0.7291142245133718,
+          0.7816379064321518
+        ],
+        "impostor_score_quantiles": [
+          0.2600250406190753,
+          0.4202257814248661,
+          0.5708991132563714
+        ],
+        "impostor_trials": 10500,
+        "queries": 750,
+        "scored_queries": 735,
+        "speakers": 15,
+        "threshold": 0.6373790434815668,
+        "unscored_queries": 15
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 750,
+          "2": 0,
+          "3": 0
+        },
+        "mean_clips": 1.0,
+        "mean_seconds": 8.121656557333333,
+        "mean_seconds_ci95": [
+          7.7195326362,
+          8.491794005133334
+        ],
+        "median_seconds": 7.776229,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          4.0,
+          7.0
+        ],
+        "p95_seconds": 12.1590583
+      }
+    },
+    {
+      "arm": "guided",
+      "corpus": "JVS",
+      "metrics": {
+        "coverage": 1.0,
+        "eer": 0.0,
+        "false_accepts": 0,
+        "false_rejects": 5,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.06666666666666667,
+        "frr_ci95": [
+          0.02666666666666667,
+          0.12
+        ],
+        "genuine_score_quantiles": [
+          0.679178026493858,
+          0.7282607158025106,
+          0.7816379064321518
+        ],
+        "impostor_score_quantiles": [
+          0.253282430395484,
+          0.41163274798956184,
+          0.5685510896146297
+        ],
+        "impostor_trials": 1050,
+        "queries": 75,
+        "scored_queries": 75,
+        "speakers": 15,
+        "threshold": 0.6719664856791497,
+        "unscored_queries": 0
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 75,
+          "2": 0,
+          "3": 0
+        },
+        "mean_clips": 1.0,
+        "mean_seconds": 5.374391133333333,
+        "mean_seconds_ci95": [
+          5.136712355333333,
+          5.613300398666667
+        ],
+        "median_seconds": 5.390583,
+        "minimum_vowel_count_quantiles": [
+          2.0,
+          3.0,
+          3.0
+        ],
+        "p95_seconds": 6.4048376
+      }
+    },
+    {
+      "arm": "guided",
+      "corpus": "JVS",
+      "metrics": {
+        "coverage": 1.0,
+        "eer": 0.0,
+        "false_accepts": 1,
+        "false_rejects": 0,
+        "far": 0.0009523809523809524,
+        "far_ci95": [
+          0.0,
+          0.006060606060606061
+        ],
+        "frr": 0.0,
+        "frr_ci95": [
+          0.0,
+          0.0
+        ],
+        "genuine_score_quantiles": [
+          0.679178026493858,
+          0.7282607158025106,
+          0.7816379064321518
+        ],
+        "impostor_score_quantiles": [
+          0.253282430395484,
+          0.41163274798956184,
+          0.5685510896146297
+        ],
+        "impostor_trials": 1050,
+        "queries": 75,
+        "scored_queries": 75,
+        "speakers": 15,
+        "threshold": 0.6373790434815668,
+        "unscored_queries": 0
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 75,
+          "2": 0,
+          "3": 0
+        },
+        "mean_clips": 1.0,
+        "mean_seconds": 5.374391133333333,
+        "mean_seconds_ci95": [
+          5.136712355333333,
+          5.613300398666667
+        ],
+        "median_seconds": 5.390583,
+        "minimum_vowel_count_quantiles": [
+          2.0,
+          3.0,
+          3.0
+        ],
+        "p95_seconds": 6.4048376
+      }
+    },
+    {
+      "arm": "matched",
+      "corpus": "JVS",
+      "metrics": {
+        "coverage": 0.8,
+        "eer": 0.0,
+        "false_accepts": 0,
+        "false_rejects": 15,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.2,
+        "frr_ci95": [
+          0.2,
+          0.2
+        ],
+        "genuine_score_quantiles": [
+          0.7014508095052506,
+          0.7461504289082119,
+          0.785250847041607
+        ],
+        "impostor_score_quantiles": [
+          0.2483410059567541,
+          0.41784705334003014,
+          0.5678034283433643
+        ],
+        "impostor_trials": 1050,
+        "queries": 75,
+        "scored_queries": 60,
+        "speakers": 15,
+        "threshold": 0.6719664856791497,
+        "unscored_queries": 15
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 75,
+          "2": 0,
+          "3": 0
+        },
+        "mean_clips": 1.0,
+        "mean_seconds": 5.72918444,
+        "mean_seconds_ci95": [
+          5.486934572333334,
+          5.954245370999999
+        ],
+        "median_seconds": 5.778542,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          3.0,
+          4.0
+        ],
+        "p95_seconds": 7.3989001
+      }
+    },
+    {
+      "arm": "matched",
+      "corpus": "JVS",
+      "metrics": {
+        "coverage": 0.8,
+        "eer": 0.0,
+        "false_accepts": 4,
+        "false_rejects": 15,
+        "far": 0.0038095238095238095,
+        "far_ci95": [
+          0.0,
+          0.01428939617083945
+        ],
+        "frr": 0.2,
+        "frr_ci95": [
+          0.2,
+          0.2
+        ],
+        "genuine_score_quantiles": [
+          0.7014508095052506,
+          0.7461504289082119,
+          0.785250847041607
+        ],
+        "impostor_score_quantiles": [
+          0.2483410059567541,
+          0.41784705334003014,
+          0.5678034283433643
+        ],
+        "impostor_trials": 1050,
+        "queries": 75,
+        "scored_queries": 60,
+        "speakers": 15,
+        "threshold": 0.6373790434815668,
+        "unscored_queries": 15
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 75,
+          "2": 0,
+          "3": 0
+        },
+        "mean_clips": 1.0,
+        "mean_seconds": 5.72918444,
+        "mean_seconds_ci95": [
+          5.486934572333334,
+          5.954245370999999
+        ],
+        "median_seconds": 5.778542,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          3.0,
+          4.0
+        ],
+        "p95_seconds": 7.3989001
+      }
+    },
+    {
+      "arm": "single",
+      "corpus": "CV-A",
+      "metrics": {
+        "coverage": 0.6455555555555555,
+        "eer": 0.039586919104991396,
+        "false_accepts": 6,
+        "false_rejects": 594,
+        "far": 0.00022988505747126436,
+        "far_ci95": [
+          0.0,
+          0.0012609099974230556
+        ],
+        "frr": 0.66,
+        "frr_ci95": [
+          0.5744166666666667,
+          0.7422499999999999
+        ],
+        "genuine_score_quantiles": [
+          0.6915950391973767,
+          0.7491950765252113,
+          0.796337878704071
+        ],
+        "impostor_score_quantiles": [
+          0.3496978604432308,
+          0.48805882036685944,
+          0.6264970894698257
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 581,
+        "speakers": 30,
+        "threshold": 0.7466531255665948,
+        "unscored_queries": 319
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 900,
+          "2": 0,
+          "3": 0
+        },
+        "mean_clips": 1.0,
+        "mean_seconds": 4.2256,
+        "mean_seconds_ci95": [
+          3.9967920000000006,
+          4.4508410000000005
+        ],
+        "median_seconds": 3.708,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          1.0,
+          5.0
+        ],
+        "p95_seconds": 7.9937999999999985
+      }
+    },
+    {
+      "arm": "single",
+      "corpus": "CV-A",
+      "metrics": {
+        "coverage": 0.6455555555555555,
+        "eer": 0.039586919104991396,
+        "false_accepts": 115,
+        "false_rejects": 398,
+        "far": 0.004406130268199234,
+        "far_ci95": [
+          0.0007575757575757576,
+          0.011667075163398691
+        ],
+        "frr": 0.44222222222222224,
+        "frr_ci95": [
+          0.36777777777777776,
+          0.5222222222222223
+        ],
+        "genuine_score_quantiles": [
+          0.6915950391973767,
+          0.7491950765252113,
+          0.796337878704071
+        ],
+        "impostor_score_quantiles": [
+          0.3496978604432308,
+          0.48805882036685944,
+          0.6264970894698257
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 581,
+        "speakers": 30,
+        "threshold": 0.7023868759473166,
+        "unscored_queries": 319
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 900,
+          "2": 0,
+          "3": 0
+        },
+        "mean_clips": 1.0,
+        "mean_seconds": 4.2256,
+        "mean_seconds_ci95": [
+          3.9967920000000006,
+          4.4508410000000005
+        ],
+        "median_seconds": 3.708,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          1.0,
+          5.0
+        ],
+        "p95_seconds": 7.9937999999999985
+      }
+    },
+    {
+      "arm": "fixed2",
+      "corpus": "CV-A",
+      "metrics": {
+        "coverage": 0.9333333333333333,
+        "eer": 0.03333333333333333,
+        "false_accepts": 7,
+        "false_rejects": 437,
+        "far": 0.0002681992337164751,
+        "far_ci95": [
+          0.0,
+          0.0013823885618008723
+        ],
+        "frr": 0.4855555555555556,
+        "frr_ci95": [
+          0.36774999999999997,
+          0.603361111111111
+        ],
+        "genuine_score_quantiles": [
+          0.6899200010496903,
+          0.7434754988976887,
+          0.7918158418253849
+        ],
+        "impostor_score_quantiles": [
+          0.35174528397735055,
+          0.4846591405701219,
+          0.6205209403002964
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 840,
+        "speakers": 30,
+        "threshold": 0.7390854484156559,
+        "unscored_queries": 60
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 0,
+          "2": 900,
+          "3": 0
+        },
+        "mean_clips": 2.0,
+        "mean_seconds": 8.4512,
+        "mean_seconds_ci95": [
+          7.993584,
+          8.901682000000001
+        ],
+        "median_seconds": 7.92,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          3.0,
+          10.0
+        ],
+        "p95_seconds": 13.536
+      }
+    },
+    {
+      "arm": "fixed2",
+      "corpus": "CV-A",
+      "metrics": {
+        "coverage": 0.9333333333333333,
+        "eer": 0.03333333333333333,
+        "false_accepts": 139,
+        "false_rejects": 161,
+        "far": 0.005325670498084291,
+        "far_ci95": [
+          0.0007573518876710366,
+          0.014972909385003449
+        ],
+        "frr": 0.17888888888888888,
+        "frr_ci95": [
+          0.11108333333333333,
+          0.2644444444444444
+        ],
+        "genuine_score_quantiles": [
+          0.6899200010496903,
+          0.7434754988976887,
+          0.7918158418253849
+        ],
+        "impostor_score_quantiles": [
+          0.35174528397735055,
+          0.4846591405701219,
+          0.6205209403002964
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 840,
+        "speakers": 30,
+        "threshold": 0.6937623071043116,
+        "unscored_queries": 60
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 0,
+          "2": 900,
+          "3": 0
+        },
+        "mean_clips": 2.0,
+        "mean_seconds": 8.4512,
+        "mean_seconds_ci95": [
+          7.993584,
+          8.901682000000001
+        ],
+        "median_seconds": 7.92,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          3.0,
+          10.0
+        ],
+        "p95_seconds": 13.536
+      }
+    },
+    {
+      "arm": "fixed3",
+      "corpus": "CV-A",
+      "metrics": {
+        "coverage": 0.99,
+        "eer": 0.025117071094082587,
+        "false_accepts": 4,
+        "false_rejects": 415,
+        "far": 0.0001532567049808429,
+        "far_ci95": [
+          0.0,
+          0.0009478672985781991
+        ],
+        "frr": 0.46111111111111114,
+        "frr_ci95": [
+          0.3333333333333333,
+          0.5911388888888888
+        ],
+        "genuine_score_quantiles": [
+          0.6867890673525193,
+          0.7410104525716681,
+          0.7886174751652612
+        ],
+        "impostor_score_quantiles": [
+          0.3521817163158866,
+          0.4836558610200882,
+          0.618790320588761
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 891,
+        "speakers": 30,
+        "threshold": 0.7373755709691482,
+        "unscored_queries": 9
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 0,
+          "2": 0,
+          "3": 900
+        },
+        "mean_clips": 3.0,
+        "mean_seconds": 12.676799999999998,
+        "mean_seconds_ci95": [
+          11.990376,
+          13.352522999999998
+        ],
+        "median_seconds": 12.096,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          5.0,
+          14.0
+        ],
+        "p95_seconds": 18.975599999999996
+      }
+    },
+    {
+      "arm": "fixed3",
+      "corpus": "CV-A",
+      "metrics": {
+        "coverage": 0.99,
+        "eer": 0.025117071094082587,
+        "false_accepts": 155,
+        "false_rejects": 103,
+        "far": 0.0059386973180076625,
+        "far_ci95": [
+          0.0005555555555555556,
+          0.017750702469080035
+        ],
+        "frr": 0.11444444444444445,
+        "frr_ci95": [
+          0.051111111111111114,
+          0.19669444444444428
+        ],
+        "genuine_score_quantiles": [
+          0.6867890673525193,
+          0.7410104525716681,
+          0.7886174751652612
+        ],
+        "impostor_score_quantiles": [
+          0.3521817163158866,
+          0.4836558610200882,
+          0.618790320588761
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 891,
+        "speakers": 30,
+        "threshold": 0.6883061170578004,
+        "unscored_queries": 9
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 0,
+          "2": 0,
+          "3": 900
+        },
+        "mean_clips": 3.0,
+        "mean_seconds": 12.676799999999998,
+        "mean_seconds_ci95": [
+          11.990376,
+          13.352522999999998
+        ],
+        "median_seconds": 12.096,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          5.0,
+          14.0
+        ],
+        "p95_seconds": 18.975599999999996
+      }
+    },
+    {
+      "arm": "adaptive1",
+      "corpus": "CV-A",
+      "metrics": {
+        "coverage": 0.99,
+        "eer": 0.04152637485970819,
+        "false_accepts": 9,
+        "false_rejects": 459,
+        "far": 0.0003448275862068965,
+        "far_ci95": [
+          0.0,
+          0.0016193694581095935
+        ],
+        "frr": 0.51,
+        "frr_ci95": [
+          0.39441666666666664,
+          0.6233333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6853564269840717,
+          0.7434200985091073,
+          0.7937204043070475
+        ],
+        "impostor_score_quantiles": [
+          0.3499979636885903,
+          0.4856968305327676,
+          0.6227426818438939
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 891,
+        "speakers": 30,
+        "threshold": 0.7439881682395936,
+        "unscored_queries": 9
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 581,
+          "2": 259,
+          "3": 60
+        },
+        "mean_clips": 1.4211111111111112,
+        "mean_seconds": 5.95444,
+        "mean_seconds_ci95": [
+          5.625412000000001,
+          6.312805999999999
+        ],
+        "median_seconds": 5.634,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          2.0,
+          6.0
+        ],
+        "p95_seconds": 10.836
+      }
+    },
+    {
+      "arm": "adaptive1",
+      "corpus": "CV-A",
+      "metrics": {
+        "coverage": 0.99,
+        "eer": 0.04152637485970819,
+        "false_accepts": 145,
+        "false_rejects": 155,
+        "far": 0.005555555555555556,
+        "far_ci95": [
+          0.0009967507317871593,
+          0.014673401410024735
+        ],
+        "frr": 0.17222222222222222,
+        "frr_ci95": [
+          0.10111111111111111,
+          0.25333333333333335
+        ],
+        "genuine_score_quantiles": [
+          0.6853564269840717,
+          0.7434200985091073,
+          0.7937204043070475
+        ],
+        "impostor_score_quantiles": [
+          0.3499979636885903,
+          0.4856968305327676,
+          0.6227426818438939
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 891,
+        "speakers": 30,
+        "threshold": 0.6997853985854559,
+        "unscored_queries": 9
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 581,
+          "2": 259,
+          "3": 60
+        },
+        "mean_clips": 1.4211111111111112,
+        "mean_seconds": 5.95444,
+        "mean_seconds_ci95": [
+          5.625412000000001,
+          6.312805999999999
+        ],
+        "median_seconds": 5.634,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          2.0,
+          6.0
+        ],
+        "p95_seconds": 10.836
+      }
+    },
+    {
+      "arm": "adaptive2",
+      "corpus": "CV-A",
+      "metrics": {
+        "coverage": 0.99,
+        "eer": 0.03591470258136925,
+        "false_accepts": 9,
+        "false_rejects": 450,
+        "far": 0.0003448275862068965,
+        "far_ci95": [
+          0.0,
+          0.0016193694581095935
+        ],
+        "frr": 0.5,
+        "frr_ci95": [
+          0.3799722222222222,
+          0.6211388888888887
+        ],
+        "genuine_score_quantiles": [
+          0.6849048106293929,
+          0.7420169242790767,
+          0.7916138768196106
+        ],
+        "impostor_score_quantiles": [
+          0.350363093417357,
+          0.4841670077294111,
+          0.6202775241269006
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 891,
+        "speakers": 30,
+        "threshold": 0.7417464156945548,
+        "unscored_queries": 9
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 335,
+          "2": 347,
+          "3": 218
+        },
+        "mean_clips": 1.87,
+        "mean_seconds": 7.764440000000001,
+        "mean_seconds_ci95": [
+          7.345249,
+          8.202689000000001
+        ],
+        "median_seconds": 7.5600000000000005,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          3.0,
+          7.0
+        ],
+        "p95_seconds": 12.6
+      }
+    },
+    {
+      "arm": "adaptive2",
+      "corpus": "CV-A",
+      "metrics": {
+        "coverage": 0.99,
+        "eer": 0.03591470258136925,
+        "false_accepts": 148,
+        "false_rejects": 133,
+        "far": 0.005670498084291188,
+        "far_ci95": [
+          0.0005608303429027113,
+          0.016152944001181994
+        ],
+        "frr": 0.14777777777777779,
+        "frr_ci95": [
+          0.0788611111111111,
+          0.23113888888888873
+        ],
+        "genuine_score_quantiles": [
+          0.6849048106293929,
+          0.7420169242790767,
+          0.7916138768196106
+        ],
+        "impostor_score_quantiles": [
+          0.350363093417357,
+          0.4841670077294111,
+          0.6202775241269006
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 891,
+        "speakers": 30,
+        "threshold": 0.6960024277369182,
+        "unscored_queries": 9
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 335,
+          "2": 347,
+          "3": 218
+        },
+        "mean_clips": 1.87,
+        "mean_seconds": 7.764440000000001,
+        "mean_seconds_ci95": [
+          7.345249,
+          8.202689000000001
+        ],
+        "median_seconds": 7.5600000000000005,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          3.0,
+          7.0
+        ],
+        "p95_seconds": 12.6
+      }
+    },
+    {
+      "arm": "single",
+      "corpus": "CV-B",
+      "metrics": {
+        "coverage": 0.6766666666666666,
+        "eer": 0.04144725666723289,
+        "false_accepts": 0,
+        "false_rejects": 643,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.7144444444444444,
+        "frr_ci95": [
+          0.6355277777777778,
+          0.7922222222222223
+        ],
+        "genuine_score_quantiles": [
+          0.6907603215703777,
+          0.7527192968588609,
+          0.7984717038961557
+        ],
+        "impostor_score_quantiles": [
+          0.3486872081245695,
+          0.49955854564905167,
+          0.638597889078988
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 609,
+        "speakers": 30,
+        "threshold": 0.7611076073213058,
+        "unscored_queries": 291
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 900,
+          "2": 0,
+          "3": 0
+        },
+        "mean_clips": 1.0,
+        "mean_seconds": 4.33068,
+        "mean_seconds_ci95": [
+          4.048258,
+          4.6239930000000005
+        ],
+        "median_seconds": 3.87,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          1.0,
+          5.0
+        ],
+        "p95_seconds": 8.177399999999995
+      }
+    },
+    {
+      "arm": "single",
+      "corpus": "CV-B",
+      "metrics": {
+        "coverage": 0.6766666666666666,
+        "eer": 0.04144725666723289,
+        "false_accepts": 116,
+        "false_rejects": 397,
+        "far": 0.0044444444444444444,
+        "far_ci95": [
+          0.0010366207610586456,
+          0.009439605671518041
+        ],
+        "frr": 0.4411111111111111,
+        "frr_ci95": [
+          0.38,
+          0.5022222222222222
+        ],
+        "genuine_score_quantiles": [
+          0.6907603215703777,
+          0.7527192968588609,
+          0.7984717038961557
+        ],
+        "impostor_score_quantiles": [
+          0.3486872081245695,
+          0.49955854564905167,
+          0.638597889078988
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 609,
+        "speakers": 30,
+        "threshold": 0.7067692379156749,
+        "unscored_queries": 291
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 900,
+          "2": 0,
+          "3": 0
+        },
+        "mean_clips": 1.0,
+        "mean_seconds": 4.33068,
+        "mean_seconds_ci95": [
+          4.048258,
+          4.6239930000000005
+        ],
+        "median_seconds": 3.87,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          1.0,
+          5.0
+        ],
+        "p95_seconds": 8.177399999999995
+      }
+    },
+    {
+      "arm": "fixed2",
+      "corpus": "CV-B",
+      "metrics": {
+        "coverage": 0.9266666666666666,
+        "eer": 0.0261721657157033,
+        "false_accepts": 0,
+        "false_rejects": 518,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.5755555555555556,
+        "frr_ci95": [
+          0.4588611111111111,
+          0.6955555555555556
+        ],
+        "genuine_score_quantiles": [
+          0.6980005453113748,
+          0.7490118152913992,
+          0.7938533920990793
+        ],
+        "impostor_score_quantiles": [
+          0.3507584077971322,
+          0.5000171316820279,
+          0.6352196241679945
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 834,
+        "speakers": 30,
+        "threshold": 0.7544720102758969,
+        "unscored_queries": 66
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 0,
+          "2": 900,
+          "3": 0
+        },
+        "mean_clips": 2.0,
+        "mean_seconds": 8.66136,
+        "mean_seconds_ci95": [
+          8.096516000000001,
+          9.247986000000001
+        ],
+        "median_seconds": 8.190000000000001,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          3.0,
+          9.0
+        ],
+        "p95_seconds": 13.503599999999997
+      }
+    },
+    {
+      "arm": "fixed2",
+      "corpus": "CV-B",
+      "metrics": {
+        "coverage": 0.9266666666666666,
+        "eer": 0.0261721657157033,
+        "false_accepts": 84,
+        "false_rejects": 169,
+        "far": 0.003218390804597701,
+        "far_ci95": [
+          0.0005952380952380953,
+          0.007373133575464076
+        ],
+        "frr": 0.18777777777777777,
+        "frr_ci95": [
+          0.12777777777777777,
+          0.25333333333333335
+        ],
+        "genuine_score_quantiles": [
+          0.6980005453113748,
+          0.7490118152913992,
+          0.7938533920990793
+        ],
+        "impostor_score_quantiles": [
+          0.3507584077971322,
+          0.5000171316820279,
+          0.6352196241679945
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 834,
+        "speakers": 30,
+        "threshold": 0.7039235790570578,
+        "unscored_queries": 66
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 0,
+          "2": 900,
+          "3": 0
+        },
+        "mean_clips": 2.0,
+        "mean_seconds": 8.66136,
+        "mean_seconds_ci95": [
+          8.096516000000001,
+          9.247986000000001
+        ],
+        "median_seconds": 8.190000000000001,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          3.0,
+          9.0
+        ],
+        "p95_seconds": 13.503599999999997
+      }
+    },
+    {
+      "arm": "fixed3",
+      "corpus": "CV-B",
+      "metrics": {
+        "coverage": 0.9822222222222222,
+        "eer": 0.026018099547511313,
+        "false_accepts": 0,
+        "false_rejects": 495,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.55,
+        "frr_ci95": [
+          0.42,
+          0.6811111111111111
+        ],
+        "genuine_score_quantiles": [
+          0.6998730562627316,
+          0.7486581514279047,
+          0.7913512041498172
+        ],
+        "impostor_score_quantiles": [
+          0.351681008216059,
+          0.4995627887547016,
+          0.6336580416181877
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 884,
+        "speakers": 30,
+        "threshold": 0.7526721159617107,
+        "unscored_queries": 16
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 0,
+          "2": 0,
+          "3": 900
+        },
+        "mean_clips": 3.0,
+        "mean_seconds": 12.99204,
+        "mean_seconds_ci95": [
+          12.144774000000002,
+          13.871978999999998
+        ],
+        "median_seconds": 12.419999999999998,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          6.0,
+          13.0
+        ],
+        "p95_seconds": 19.2258
+      }
+    },
+    {
+      "arm": "fixed3",
+      "corpus": "CV-B",
+      "metrics": {
+        "coverage": 0.9822222222222222,
+        "eer": 0.026018099547511313,
+        "false_accepts": 66,
+        "false_rejects": 121,
+        "far": 0.002528735632183908,
+        "far_ci95": [
+          0.0003958593659120502,
+          0.006646086842584981
+        ],
+        "frr": 0.13444444444444445,
+        "frr_ci95": [
+          0.07777777777777778,
+          0.19666666666666666
+        ],
+        "genuine_score_quantiles": [
+          0.6998730562627316,
+          0.7486581514279047,
+          0.7913512041498172
+        ],
+        "impostor_score_quantiles": [
+          0.351681008216059,
+          0.4995627887547016,
+          0.6336580416181877
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 884,
+        "speakers": 30,
+        "threshold": 0.7028454475932652,
+        "unscored_queries": 16
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 0,
+          "2": 0,
+          "3": 900
+        },
+        "mean_clips": 3.0,
+        "mean_seconds": 12.99204,
+        "mean_seconds_ci95": [
+          12.144774000000002,
+          13.871978999999998
+        ],
+        "median_seconds": 12.419999999999998,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          6.0,
+          13.0
+        ],
+        "p95_seconds": 19.2258
+      }
+    },
+    {
+      "arm": "adaptive1",
+      "corpus": "CV-B",
+      "metrics": {
+        "coverage": 0.9822222222222222,
+        "eer": 0.039202683726010296,
+        "false_accepts": 0,
+        "false_rejects": 525,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.5833333333333334,
+        "frr_ci95": [
+          0.47444444444444445,
+          0.6955555555555556
+        ],
+        "genuine_score_quantiles": [
+          0.6909590678004658,
+          0.7506718536218008,
+          0.7972627125947903
+        ],
+        "impostor_score_quantiles": [
+          0.3511405336005347,
+          0.5013928611864562,
+          0.6377073057673194
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 884,
+        "speakers": 30,
+        "threshold": 0.758541778723399,
+        "unscored_queries": 16
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 609,
+          "2": 225,
+          "3": 66
+        },
+        "mean_clips": 1.3966666666666667,
+        "mean_seconds": 5.946080000000001,
+        "mean_seconds_ci95": [
+          5.642616,
+          6.284736999999999
+        ],
+        "median_seconds": 5.418,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          2.0,
+          6.0
+        ],
+        "p95_seconds": 10.585799999999997
+      }
+    },
+    {
+      "arm": "adaptive1",
+      "corpus": "CV-B",
+      "metrics": {
+        "coverage": 0.9822222222222222,
+        "eer": 0.039202683726010296,
+        "false_accepts": 139,
+        "false_rejects": 174,
+        "far": 0.005325670498084291,
+        "far_ci95": [
+          0.0013284223851929458,
+          0.011191489665410522
+        ],
+        "frr": 0.19333333333333333,
+        "frr_ci95": [
+          0.12777777777777777,
+          0.26666666666666666
+        ],
+        "genuine_score_quantiles": [
+          0.6909590678004658,
+          0.7506718536218008,
+          0.7972627125947903
+        ],
+        "impostor_score_quantiles": [
+          0.3511405336005347,
+          0.5013928611864562,
+          0.6377073057673194
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 884,
+        "speakers": 30,
+        "threshold": 0.7067692379156749,
+        "unscored_queries": 16
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 609,
+          "2": 225,
+          "3": 66
+        },
+        "mean_clips": 1.3966666666666667,
+        "mean_seconds": 5.946080000000001,
+        "mean_seconds_ci95": [
+          5.642616,
+          6.284736999999999
+        ],
+        "median_seconds": 5.418,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          2.0,
+          6.0
+        ],
+        "p95_seconds": 10.585799999999997
+      }
+    },
+    {
+      "arm": "adaptive2",
+      "corpus": "CV-B",
+      "metrics": {
+        "coverage": 0.9822222222222222,
+        "eer": 0.03440474332969262,
+        "false_accepts": 0,
+        "false_rejects": 517,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.5744444444444444,
+        "frr_ci95": [
+          0.4588611111111111,
+          0.6922222222222222
+        ],
+        "genuine_score_quantiles": [
+          0.6927768324102674,
+          0.7481142993156726,
+          0.7950807510929949
+        ],
+        "impostor_score_quantiles": [
+          0.35143344243988395,
+          0.5005977482506723,
+          0.6357483612556083
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 884,
+        "speakers": 30,
+        "threshold": 0.755956036203048,
+        "unscored_queries": 16
+      },
+      "operating_point": "far_0_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 338,
+          "2": 361,
+          "3": 201
+        },
+        "mean_clips": 1.8477777777777777,
+        "mean_seconds": 7.80624,
+        "mean_seconds_ci95": [
+          7.437437999999999,
+          8.205925
+        ],
+        "median_seconds": 7.686,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          3.0,
+          7.0
+        ],
+        "p95_seconds": 12.564
+      }
+    },
+    {
+      "arm": "adaptive2",
+      "corpus": "CV-B",
+      "metrics": {
+        "coverage": 0.9822222222222222,
+        "eer": 0.03440474332969262,
+        "false_accepts": 122,
+        "false_rejects": 166,
+        "far": 0.004674329501915709,
+        "far_ci95": [
+          0.000872861082967466,
+          0.010323325359523367
+        ],
+        "frr": 0.18444444444444444,
+        "frr_ci95": [
+          0.11777777777777777,
+          0.2633333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6927768324102674,
+          0.7481142993156726,
+          0.7950807510929949
+        ],
+        "impostor_score_quantiles": [
+          0.35143344243988395,
+          0.5005977482506723,
+          0.6357483612556083
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 884,
+        "speakers": 30,
+        "threshold": 0.7055346161127092,
+        "unscored_queries": 16
+      },
+      "operating_point": "far_1pct",
+      "recording": {
+        "clip_counts": {
+          "1": 338,
+          "2": 361,
+          "3": 201
+        },
+        "mean_clips": 1.8477777777777777,
+        "mean_seconds": 7.80624,
+        "mean_seconds_ci95": [
+          7.437437999999999,
+          8.205925
+        ],
+        "median_seconds": 7.686,
+        "minimum_vowel_count_quantiles": [
+          0.0,
+          3.0,
+          7.0
+        ],
+        "p95_seconds": 12.564
+      }
+    }
+  ],
+  "verification": {
+    "calibration_replayed": true,
+    "float64_score_rows": 567000,
+    "max_error": 4.372458106693955e-08,
+    "pcm_feature_probes": 60,
+    "status": "passed",
+    "stopping_and_source_order_verified": true,
+    "two_cv_cohorts_disjoint_labels": true
+  }
+}
