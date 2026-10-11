@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "purpose": "human_pilot",
+  "encoder_run": "artifacts/phoneme-all-training/all36-20261011-v1/trials/trial-001-all36",
+  "encoder_sha256": "8ca55d2f1eb57f4466e70fc5e37a015236ed3bfd9e142af56feaa1d1759ebd72",
+  "feature_statistics": "artifacts/phoneme-training-data-expansion/training-data-20261008-v1/feature-statistics.json",
+  "feature_statistics_sha256": "0c3324683a4ff86377b4a4fc3c4740cf51e4ea90a69de12c01f3bf0cf7a78045",
+  "minimum_frames": 720,
+  "maximum_frames": 6000,
+  "minimum_rms_dbfs": -50,
+  "maximum_clip_seconds": 8,
+  "maximum_query_seconds": 20,
+  "maximum_query_clips": 3,
+  "enrollment_clips": 20,
+  "enrollment_limit_per_phone": 30,
+  "enrollment_minimum_per_vowel": 10,
+  "selection_seed": 20261106,
+  "prompts": [
+    {"id":"p01","text":"青い海を見ながら、家までゆっくり歩きます。"},
+    {"id":"p02","text":"明るい部屋で、友達と温かいお茶を飲みます。"},
+    {"id":"p03","text":"駅の近くにあるお店で、白いノートを買います。"},
+    {"id":"p04","text":"今日は家で、青い空の絵をゆっくり描きます。"},
+    {"id":"p05","text":"雨がやんだので、広い公園へ歩いて行きます。"}
+  ],
+  "threshold": null,
+  "scope": "operational pilot only; no authentication decision before a separate calibration and evaluation protocol"
+}

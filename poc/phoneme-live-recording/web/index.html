@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Phonia 録音パイロット</title><link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body><main>
+  <header><span class="eyebrow">PHONIA / LOCAL PILOT</span><h1>声を録って、収録の流れを確かめる</h1>
+    <p>指定された文を自然な速さで読んでください。母音の収集状況を確認します。本人認証の合否は判定しません。</p></header>
+  <section id="setup"><h2>録音の準備</h2>
+    <form id="setup-form">
+      <div class="fields">
+        <label>参加者ID<input name="participant" value="p001" pattern="[a-z0-9][a-z0-9_-]{0,39}" required></label>
+        <label>端末・マイクID<input name="device" value="laptop-a" pattern="[a-z0-9][a-z0-9_-]{0,39}" required></label>
+        <label>セッションID<input name="session" value="day1-a" pattern="[a-z0-9][a-z0-9_-]{0,39}" required></label>
+        <label>録音日<input name="recorded_on" type="date" required></label>
+        <label>録音の種類<select name="role"><option value="practice">練習（まずはこちら）</option><option value="enrollment">登録用（20回）</option><option value="query">照合用（最大3回）</option></select></label>
+      </div>
+      <p class="hint">実名は使わず、同じ人は同じ参加者IDを使用します。使用するマイクはOS・ブラウザーの設定で選んでください。</p>
+      <label class="consent"><input name="consent" type="checkbox" required>音声と録音情報をこのPCに保存することに同意します。</label>
+      <p class="hint">音声はこのPCの検証サーバーで処理します。外部サーバーへ送信しません。</p>
+      <button id="begin" disabled>準備を完了</button>
+    </form>
+  </section>
+  <section id="recording" hidden>
+    <div class="row"><h2 id="episode-title">録音</h2><span id="counter"></span></div>
+    <p id="metadata" class="hint"></p>
+    <blockquote id="prompt"></blockquote>
+    <p id="guidance"></p><div id="counts" class="counts" aria-label="抽出できた母音の数"></div>
+    <div class="actions"><button id="record">録音を開始</button><button id="stop" disabled>読み終えたので停止</button><span id="timer" role="timer"></span></div>
+    <p class="hint">録音開始後に読み始め、読み終えたら停止してください。上限時間で自動停止します。小さい声や読み間違いも取り直して隠さず、そのまま記録します。</p>
+    <details><summary>既存のWAVファイルで処理を確認する</summary><p class="hint">表示文に対応したモノラル16bit PCMのWAVのみ。ファイル入力はマイク実録音とは分けて記録します。</p><input id="file" type="file" accept=".wav,audio/wav" aria-label="確認用WAV"></details>
+    <div id="history"></div>
+    <div class="actions"><button id="abort" class="secondary">この試行を終了</button><button id="next" class="secondary" hidden>新しい試行へ</button></div>
+  </section>
+  <p id="status" role="status" aria-live="polite">ローカルサーバーに接続しています…</p>
+  <footer>実録音での精度検証に向けた試作です。母音がそろっても、本人であることや読み上げ内容の正しさを保証するものではありません。</footer>
+</main></body></html>

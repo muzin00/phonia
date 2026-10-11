@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "source_run": "artifacts/phoneme-live-recording/pilot-20261011-v2",
+  "output_run": "artifacts/phoneme-live-analysis/enrollment-prefix-20261011-v1",
+  "enrollment_prefixes": [5, 10, 15, 20],
+  "minimum_per_vowel": 10,
+  "limit_per_phone": 30,
+  "selection_seed": 20261106,
+  "scope": "Exploratory diagnostics on already observed recordings from one participant on one day. No threshold, no authentication accuracy claim, no production protocol change.",
+  "device_investigation": "excluded at user request"
+}
