@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "run_directory": "artifacts/phoneme-all-missing-vowel-evaluation/all36-missing-vowels-20261011-v2",
+  "source_run": "artifacts/phoneme-transformer-fusion/fixed-all36-20261011-v1",
+  "models": ["equal", "transformer-20261015", "transformer-20261016", "transformer-20261017"],
+  "policies": [
+    {"name": "vowels5", "minimum_vowels": 5, "minimum_phones": 5},
+    {"name": "vowels4", "minimum_vowels": 4, "minimum_phones": 4},
+    {"name": "vowels3_phones5", "minimum_vowels": 3, "minimum_phones": 5}
+  ],
+  "primary_comparison": "equal/vowels4 minus equal/vowels5; validation-normal calibrated FAR1pct; full-input FAR and FRR",
+  "secondary_comparisons": "mixed-phone policy and all three frozen clean Transformer seeds; no test-based model or policy selection",
+  "calibration": "validation normal only, separately by model and policy; also report unchanged original five-vowel thresholds",
+  "enrollment_limit": 30,
+  "retrain": false,
+  "phone_support": "unchanged split-specific universally registered trained phones; use all available supported phones, identically for all claims",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261020,
+  "test_previously_observed": true
+}
