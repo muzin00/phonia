@@ -1,0 +1,18 @@
+{
+  "run_directory": "artifacts/phoneme-corpus-scaling/jtube-20261011-v1",
+  "source_directory": "artifacts/phoneme-corpus-scaling/source",
+  "source_url": "https://ss-takashi.sakura.ne.jp/corpus/jtubespeech-asv/JTubeSpeech-ASV_ver1.1.zip",
+  "source_license": "Research and development purpose only; official provisional terms checked 2026-10-11",
+  "speaker_seed": 20261110,
+  "utterance_seed": 20261111,
+  "training_speakers": 140,
+  "validation_speakers": 20,
+  "test_speakers": 20,
+  "utterances_per_speaker": 50,
+  "pilot_speakers": 3,
+  "pilot_utterances_per_speaker": 4,
+  "asr_model": "mlx-community/whisper-large-v3-turbo",
+  "planned_additional_training_speaker_counts": [0, 70, 140],
+  "human_recording_collection": "paused at user request",
+  "adoption_status": "preflight; no new corpus training or operational model adoption yet"
+}

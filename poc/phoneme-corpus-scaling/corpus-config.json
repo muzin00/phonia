@@ -1,0 +1,21 @@
+{
+  "run_directory": "artifacts/phoneme-corpus-scaling/expanded-inputs-20261011-v1",
+  "source_run": "artifacts/phoneme-corpus-scaling/jtube-20261011-v1",
+  "runtime_freeze": "artifacts/phoneme-live-recording/pilot-20261011-v2/protocol-freeze.json",
+  "review_run": "artifacts/phoneme-corpus-scaling/review-100-20261011-v1",
+  "maximum_utterance_seconds": 30,
+  "julius_timeout_seconds": 10,
+  "asr_model_metadata": "artifacts/phoneme-corpus-scaling/asr-model.json",
+  "language": "ja",
+  "temperature": 0.0,
+  "condition_on_previous_text": false,
+  "phoneme_policy": "same frozen all36 inventory; retain original labels and failures; no per-item manual selection",
+  "comparison_plan": [
+    {"id": "baseline140", "jvs_speakers": 70, "common_voice_speakers": 70, "jtube_speakers": 0},
+    {"id": "mixed140", "jvs_speakers": 70, "common_voice_speakers": 35, "jtube_speakers": 35},
+    {"id": "expanded210", "jvs_speakers": 70, "common_voice_speakers": 70, "jtube_speakers": 70},
+    {"id": "expanded280", "jvs_speakers": 70, "common_voice_speakers": 70, "jtube_speakers": 140}
+  ],
+  "execution_scope": "prepare all fixed inputs and audit support; never train from incomplete inputs; freeze exact training manifests after preparation",
+  "human_review": "user instructed continuation without saving individual answers; no quantitative human quality result is available"
+}
