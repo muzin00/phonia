@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "protocol": "fixed-all36-encoder-enrollment-10-20-30-v1",
+  "run_directory": "artifacts/phoneme-all-enrollment-scaling/all36-enrollment-20261011-v1",
+  "source_run": "artifacts/phoneme-all-training/all36-20261011-v1",
+  "source_trial": "trial-001-all36",
+  "encoder_sha256": "8ca55d2f1eb57f4466e70fc5e37a015236ed3bfd9e142af56feaa1d1759ebd72",
+  "enrollment_limits": [10, 20, 30],
+  "enrollment_seed": 20261011,
+  "selection": "same_frozen_enrollment_source_pool; source_diversified_nested_prefixes; use_minimum_of_limit_and_available_real_intervals; no_duplicates_or_padding",
+  "phonemes": "all36_trained_phones; same_original_universally_registered_set_in_each_split; no_phone_selection",
+  "query_policy": "same_original_queries_and_slices; five_vowels_required; additional_phones_used_when_present_and_registered_for_every_claim",
+  "fusion": "same_equal_mean_of_phone_scores; normalized_enrollment_mean; unchanged_query_means",
+  "calibration": "validation_normal_only_separately_for_each_limit; freeze_all_thresholds_before_new_test_scoring",
+  "retrain_encoder": false,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261014,
+  "test_previously_observed": true,
+  "formal_review_requested": false
+}

@@ -227,6 +227,15 @@ tyは適合学習区間0件で未学習として記録した。
 [固定条件と再現手順](phoneme-all-training/README.md)、[HTML比較表](phoneme-all-training/evaluation-results.html)、
 [測定表](phoneme-all-training/evaluation-results.md)、[結果の解釈](phoneme-all-training/interpretation.md)を参照する。
 
+全36音素の学習済みencoderを固定して、登録区間数の上限10・20・30も実測した。
+モデルを再学習せず、音素・照合発話を共通にし、登録10の区間を20・30にも含めた。
+希少音素は実在区間だけを使い、各音素の実登録数を記録した。
+test通常文EERは1.769→1.361→1.497%、別テキストは1.531→1.221→1.020%。
+両testで本人スコアと本人−他人の平均差が増加したが、通常文は20→30でEERが少し上がった。
+30−10の差の95% CIは両方とも0を含み、改善の確証には至っていない。
+[比較条件と再現手順](phoneme-all-enrollment-scaling/README.md)、[HTML比較表](phoneme-all-enrollment-scaling/evaluation-results.html)、
+[測定表](phoneme-all-enrollment-scaling/evaluation-results.md)、[結果の解釈](phoneme-all-enrollment-scaling/interpretation.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。
