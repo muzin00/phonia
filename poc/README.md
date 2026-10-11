@@ -292,6 +292,13 @@ encoderの追加学習では、元の全36音素encoder/headから、cleanのみ
 今回の追加学習候補の導入は見送り、必要な母音・実区間数を確保する指定文や追加録音の検証を次の優先項目とする。
 [条件分解の設計](phoneme-recording-ablation/README.md)、[全比較表](phoneme-recording-ablation/evaluation-results.md)、[候補固定後の新規評価](phoneme-recording-ablation/holdout-results.md)、[結論](phoneme-recording-ablation/interpretation.md)を参照する。
 
+
+指定文と追加録音のオフライン比較では、5母音各1区間がそろうまで最大3発話をまとめる方式を、単一発話・固定2/3発話・各母音2区間での停止と比較した。
+既観測CV-A/CV-Bで採点率は64.556→99.000%/67.667→98.222%、平均録音時間は約4.3→約6秒。主評価のFAR0.1%校正ではFRRが66.000→51.000%/71.444→58.333%となり、両集合で本人拒否・FAR増分・時間の事前基準を満たした。
+JVSのtrainだけで選んだ約5秒の母音を含む5文は、時間を近似マッチした対照に比べ採点率100%対80%だった。対照の採点不能はG2Pで /i/ を含まない1文に集中しており、任意の指定文の優越とはしない。
+録音案内は実録音プロトタイプで確認する候補とし、高い本人拒否と既観測データによる検証の制約から運用採用は行わない。
+[固定設計](phoneme-guided-recording/README.md)、[測定表](phoneme-guided-recording/evaluation-results.md)、[結論と次段階](phoneme-guided-recording/interpretation.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。

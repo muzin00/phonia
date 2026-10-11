@@ -1,0 +1,23 @@
+{
+  "run_directory": "artifacts/phoneme-guided-recording/guided-recording-20261011-v1",
+  "quality_run": "artifacts/phoneme-recording-quality/quality-20261011-v1",
+  "cv_runs": {
+    "CV-A": "artifacts/phoneme-missing-vowel-holdout/cv60-20261011-v1",
+    "CV-B": "artifacts/phoneme-recording-ablation/reverb-holdout-20261011-v1"
+  },
+  "episode_seed": 20261104,
+  "bootstrap_seed": 20261105,
+  "bootstrap_replicates": 2000,
+  "prompt_count": 5,
+  "prompt_training_median_max_seconds": 6.0,
+  "prompt_minimum_text_vowels": 2,
+  "prompt_ids": "VOICEACTRESS100_051 through 100; existing verification prompts only; select using training text and duration, not validation/test embeddings or scores",
+  "cv_arms": ["single", "fixed2", "fixed3", "adaptive1", "adaptive2"],
+  "maximum_clips": 3,
+  "policy": {"name": "vowels5", "minimum_vowels": 5, "minimum_phones": 5},
+  "operating_points": ["far_0_1pct", "far_1pct"],
+  "primary": "CV adaptive1 versus single at separately validation-calibrated FAR0.1%; both previously observed CV cohorts must pass",
+  "gate": {"far_increment_upper95_max": 0.001, "frr_increment_upper95_strict_max": 0.0, "mean_duration_ratio_max": 2.0, "duration_p95_max_seconds": 20.0},
+  "prompt_comparison": "five shortest train-median <=6s texts with each canonical vowel >=2; disjoint control prompts optimally matched by absolute train-median duration; same full-verification calibration threshold for both",
+  "scope": "offline replay on existing recordings and observed speakers; no new recording, encoder training, deployment, or fresh holdout claim; simulated extra recordings must have one true speaker, no accept-any retries"
+}
