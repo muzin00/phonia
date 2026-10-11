@@ -19,7 +19,42 @@ Common Voiceは280条件でFRRが44.22%→51.67%、差は＋7.44ポイント（9
 
 採点率は全モデル共通でJVS98.00%、CV64.56%、JTube59.83%。未採点は拒否に含めるため、JTubeには約40%のFRR下限が残る。モデルの分離性能と、必要な音素が揃って照合できる割合を分けて扱う。1 seed・JTube test20ラベルの探索結果であり、複数seedの再現性や実録音の運用性能は未確認。録音環境・ASR誤り・話者数・音声量の効果も分離できていない。
 
-次の優先検証は、同じ固定データで複数seedを実行し、JTube改善とCV悪化の再現性を調べること。その後、コーパス別の学習投入比率を揃えた条件で、CVの劣化を抑えられるかを検証する。テスト結果を見て今回の閾値やcheckpointを変更しない。
+この初回結果を受けて、以下の複数seed検証を実施した。次の優先検証はコーパス別の学習投入比率を揃えた条件で、JTubeの改善を保ちつつCVの本人拒否増加を抑えられるか調べること。テスト結果を見て今回の閾値やcheckpointを変更しない。
+
+### 5seedによる再現検証
+
+初回の20260926に固定seed 20261012・20261013・20261014・20261015を加えた検証を[独立した実行コード](../phoneme-corpus-seed-replication/replicate.py)で実施し、2026-10-11に完了した。元のコード・入力・結果は変更していない。追加seedごとに基準140も再学習し、各seed内の同じ初期encoderから混合140・拡張210・拡張280と比較した。音声の再抽出はせず、4条件の固定済みキャッシュをhash確認して再利用した。
+
+最初に初回基準モデルを再学習し、最終encoderと学習投入順のhashが元の結果と完全一致した。その後、新規16モデルすべてを216,000更新まで学習してから評価を開始した。閾値は各モデル・各コーパスの校正群だけで再計算し、最終checkpoint・5母音条件・未採点を拒否とする規則を維持した。全seedを採点し、最良seedの選択はしていない。
+
+結果は`artifacts/phoneme-corpus-seed-replication/five-seeds-20261011-v1`へ保存した。平均・標本SD・範囲、各seedの基準との差と改善方向の一致数を報告する。今回の全testは既観測であり、複数seedは学習初期化・投入順に対する感度検証である。独立の話者・録音を増やした検証や母集団の信頼区間とは扱わない。
+
+EERの5seed平均±標本SDは次のとおり。SDはseed間のばらつきで、信頼区間ではない。
+
+| 条件 | JVS EER | Common Voice EER | JTube EER |
+| --- | ---: | ---: | ---: |
+| 基準140 | 1.328±0.278% | 4.042±0.143% | 7.404±1.027% |
+| 混合140 | 1.326±0.170% | 5.171±0.309% | 4.260±0.283% |
+| 拡張210 | 1.203±0.240% | 4.196±0.256% | 3.862±0.400% |
+| 拡張280 | 1.384±0.265% | 4.147±0.242% | 1.900±0.076% |
+
+**JTubeの改善は5/5seedで再現した。** 拡張280のEERは基準より平均5.504ポイント低く、平均値の相対低下は約74%。各seedのEERは1.803〜1.965%と安定している。本人拒否率は平均60.300%→42.067%（−18.233ポイント）で、これも5/5seedで低下した。一方、他人受入率は0.381%→0.716%へ5/5seedで増加したため、全指標が同時に改善したとは言わない。
+
+**Common Voiceは「EERが常に悪化」ではなく「本人拒否増加が安定して再現」と判断を更新する。** 拡張280のEER差は平均＋0.106ポイントだが、改善2seed・悪化3seedで方向が揃わない。本人拒否率は44.089%→51.378%（＋7.289ポイント）、各seedの差も＋5.778〜＋8.222ポイントで5/5seed悪化した。他人受入率は0.394%→0.198%へ低下しており、校正後の拒否側への偏りが課題として残る。拡張210も本人拒否が平均＋3.422ポイント、5/5seed悪化した。CV学習ラベルを半減させる混合140はEER・本人拒否とも5/5seed悪化した。
+
+JVSは拡張280のEER差が平均＋0.056ポイント、改善2・同値1・悪化2seedで一貫した改善を示さない。拡張210は4/5seedでEER低下したが、平均差は−0.124ポイントにとどまる。採点率はどのseed・条件でもJVS98.00%、CV64.56%、JTube59.83%で変わらない。追加学習だけでは音素不足などの未採点を解決できていない。
+
+新規テスト3件、Ruff検査を通過した。[完了監査](../phoneme-corpus-seed-replication/audit.py)では20モデル、60校正閾値、testの1,140,000照合レコードを確認し、全入力を含むFAR/FRR・採点率と平均/SD・seed内の差を照合した。元の凍結コードと入力hash、評価入力の全seed一致も確認済み。
+
+全指標と各seedの値は[集計JSON](../../artifacts/phoneme-corpus-seed-replication/five-seeds-20261011-v1/results.json)、[結果表](../../artifacts/phoneme-corpus-seed-replication/five-seeds-20261011-v1/results.md)、[監査結果](../../artifacts/phoneme-corpus-seed-replication/five-seeds-20261011-v1/completion-audit.json)を参照。
+
+```sh
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python -m unittest discover -s poc/phoneme-corpus-seed-replication/tests
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-corpus-seed-replication/replicate.py freeze
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-corpus-seed-replication/replicate.py execute
+poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-corpus-seed-replication/replicate.py status
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-corpus-seed-replication/audit.py
+```
 
 詳細はローカルの[全指標](../../artifacts/phoneme-corpus-scaling/comparison-20261011-v1/results.json)と[結果表](../../artifacts/phoneme-corpus-scaling/comparison-20261011-v1/results.md)。入力・モデル・閾値hashは同runの各freezeに保存した。追加データのQC後区間数はtrain312,690・validation48,326・test40,234。全9,000件の監査、各split200区間の特徴量再計算（差0）、既存音声・新規音声間の同一PCM検査（除外対象0件）を通過した。人物レベルの重複がないという意味ではない。
 

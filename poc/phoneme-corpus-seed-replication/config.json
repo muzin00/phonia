@@ -1,0 +1,8 @@
+{
+  "run_directory": "artifacts/phoneme-corpus-seed-replication/five-seeds-20261011-v1",
+  "reference_run": "artifacts/phoneme-corpus-scaling/comparison-20261011-v1",
+  "reference_seed": 20260926,
+  "additional_seeds": [20261012, 20261013, 20261014, 20261015],
+  "policy": "fixed data and four arms; retrain the baseline for each new seed; train all models before new evaluation; no seed or checkpoint selection",
+  "interpretation": "five fixed seeds on already observed test sets; seed variation is descriptive, not an independent-data confidence interval"
+}
