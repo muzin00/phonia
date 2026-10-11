@@ -217,6 +217,16 @@ test通常文は1.924→2.177%、別テキストは1.859→2.278%となり、tes
 [固定条件と再現手順](phoneme-greedy-selection/README.md)、[HTML比較表](phoneme-greedy-selection/evaluation-results.html)、
 [全試行の測定表](phoneme-greedy-selection/evaluation-results.md)、[結果の解釈](phoneme-greedy-selection/interpretation.md)を参照する。
 
+続いて、EERによる音素選択をせず、学習可能な全36音素を1モデルで学習・評価した。
+新規学習は1本・1 seed、216,000更新。基準5母音モデルと各母音への延べ投入を600,000区間に揃えた。
+同じ入力と基準モデルを再利用し、最終更新の重みとvalidation閾値を固定してtestを測定した。
+test通常文EERは1.924→1.769%、別テキストは1.859→1.531%と観測値が低下した。
+対応付き差の95% CIは両方とも0を含み、改善の確証には至っていない。
+総学習更新と追加音素の利用音声量も増える構成の比較で、音素数だけの因果効果は測っていない。
+tyは適合学習区間0件で未学習として記録した。
+[固定条件と再現手順](phoneme-all-training/README.md)、[HTML比較表](phoneme-all-training/evaluation-results.html)、
+[測定表](phoneme-all-training/evaluation-results.md)、[結果の解釈](phoneme-all-training/interpretation.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。
