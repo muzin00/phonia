@@ -1,0 +1,422 @@
+{
+  "bootstrap": {
+    "differences": {
+      "mlp-mean-minus-equal/cross_text_verification": {
+        "ci95": [
+          -1.734723475976807e-18,
+          1.734723475976807e-18
+        ],
+        "difference": 0.0
+      },
+      "mlp-mean-minus-equal/verification": {
+        "ci95": [
+          -8.673617379884035e-19,
+          1.734723475976807e-18
+        ],
+        "difference": 0.0
+      },
+      "transformer-mean-minus-equal/cross_text_verification": {
+        "ci95": [
+          -0.007481417962446266,
+          0.0018781690069645887
+        ],
+        "difference": -0.0007896015549076763
+      },
+      "transformer-mean-minus-equal/verification": {
+        "ci95": [
+          -0.006565735663786522,
+          0.004032666479712448
+        ],
+        "difference": -0.0031098153547133127
+      },
+      "transformer-mean-minus-mlp-mean/cross_text_verification": {
+        "ci95": [
+          -0.007481417962446266,
+          0.0018781690069645891
+        ],
+        "difference": -0.0007896015549076771
+      },
+      "transformer-mean-minus-mlp-mean/verification": {
+        "ci95": [
+          -0.00656573566378652,
+          0.0040326664797124484
+        ],
+        "difference": -0.003109815354713313
+      }
+    },
+    "replicates": 2000,
+    "scope": "paired test-speaker uncertainty conditional on these six fixed trained models; means are mean EER, not ensemble scores; no population claim about training seeds"
+  },
+  "noise_clean_control": {
+    "all_enrollment_embeddings_unchanged": true,
+    "all_unselected_query_embeddings_unchanged": true,
+    "clean_waveform_replay_probes": 51,
+    "control_script_sha256": "54b533aff34b4cb37ffc8f698b82d478ec62c205d685c730973b058d4704c1e1",
+    "max_embedding_abs_error": 0.0,
+    "original_encoder_sha256": "8ca55d2f1eb57f4466e70fc5e37a015236ed3bfd9e142af56feaa1d1759ebd72",
+    "status": "passed"
+  },
+  "paragraphs": [
+    "固定した全36音素encoder・登録上限30区間/音素で、Transformerのtest平均EERは通常1.497%→1.186%、別文1.020%→0.941%に改善した。通常は相対20.8%、別文は相対7.7%の低下である。",
+    "通常の各seedは1.497%、0.952%、1.108%、別文は1.020%、1.057%、0.747%。通常0.952%と別文0.747%は別のseedの値であり、1モデルが両方を達成した値ではない。test最良seedを選び直していない。",
+    "3 seedともTransformerはvalidation通常EERを改善した。MLPは3 seedとも学習後のvalidation EERが等重みを上回れず、事前の採用規則により初期の等重みcheckpointを採用した。MLPのtest値は学習済み重みの性能を表す値ではない。全6回の学習自体は各4,000更新まで完了した。",
+    "平均EER差の話者bootstrap 95%区間は通常[-0.657, +0.403] pp、別文[-0.748, +0.188] pp。今回の測定では平均の改善を観測したが、15 test話者に対する区間は0を含む。",
+    "子音を確率50%で欠損させると、Transformer平均は通常1.523%、別文0.887%。同条件の等重み1.361%、1.531%に対し、通常は悪化、別文は改善した。5母音は残し、全方式で同じ欠損と採点対象を使った。",
+    "照合区間の20%に10dBの白色ノイズを加えると、Transformer平均は通常3.356%、別文3.401%へ悪化。同条件の等重み1.302%、1.093%より両方とも高い。今回のclean学習から、録音品質に応じてうまく重みを下げられるとは言えない。",
+    "ノイズは既存の音素境界で切り出した区間へ合成し、encoderを再実行した。境界の再推定や追加QCは行わない。15,239/75,831区間を変換し、登録側embeddingはすべて不変。ノイズなしの51区間を元WAVから再計算したembeddingは既存cacheと完全一致した。モデル・閾値の再学習や再調整はしない。",
+    "EERはROC全体の指標であり、固定閾値でのFRR改善と同じではない。ノイズ条件の等重みも、通常EERは少し下がったが、固定したclean validation閾値でのFRRは上がった。FAR/FRRを下の表に併記する。",
+    "入力品質へ適応する次の検証では、同じ固定encoderのまま統合モデルのtrainだけにノイズ・欠損を加え、同じ3 seedと同じ学習ペア列で再測定する。今回の結果から追加の学習やモデル選択は行っていない。"
+  ],
+  "source_run": "artifacts/phoneme-transformer-fusion/fixed-all36-20261011-v1",
+  "source_sha256": {
+    "independent-audit.json": "030964d2d1752964f0c2bf7c1d68dae82545659a87fa61e30b1029e7dab555c3",
+    "results.json": "b55d445919baf6b08ea5677cecdc8131e752f71c9a413ff796646c7417ed8fee",
+    "stress/completion-verification.json": "5cdd06b7029844c273fd5cc6e844eac9e86db76d1255e48d1e214a7b3f8402e4",
+    "stress/results.json": "4cce147fcc427d71ce2be5b7960530c5d4f4e131092aa2d2626fc70aa7562891"
+  },
+  "summary": {
+    "20%区間に10dBノイズ": {
+      "equal": {
+        "cross_text_verification": {
+          "all_input_far_mean": 0.004761904761904762,
+          "all_input_frr_mean": 0.14888888888888888,
+          "eer_maximum": 0.010932944606413994,
+          "eer_mean": 0.010932944606413994,
+          "eer_minimum": 0.010932944606413994
+        },
+        "verification": {
+          "all_input_far_mean": 0.0029523809523809524,
+          "all_input_frr_mean": 0.06133333333333333,
+          "eer_maximum": 0.013022351797862002,
+          "eer_mean": 0.013022351797862002,
+          "eer_minimum": 0.013022351797862002
+        }
+      },
+      "mlp": {
+        "cross_text_verification": {
+          "all_input_far_mean": 0.004761904761904762,
+          "all_input_frr_mean": 0.14888888888888888,
+          "eer_maximum": 0.010932944606413994,
+          "eer_mean": 0.010932944606413994,
+          "eer_minimum": 0.010932944606413994
+        },
+        "verification": {
+          "all_input_far_mean": 0.0029523809523809524,
+          "all_input_frr_mean": 0.06133333333333333,
+          "eer_maximum": 0.013022351797862002,
+          "eer_mean": 0.013022351797862002,
+          "eer_minimum": 0.013022351797862002
+        }
+      },
+      "transformer": {
+        "cross_text_verification": {
+          "all_input_far_mean": 0.008518518518518517,
+          "all_input_frr_mean": 0.16740740740740737,
+          "eer_maximum": 0.03571428571428571,
+          "eer_mean": 0.034013605442176874,
+          "eer_minimum": 0.03316326530612245
+        },
+        "verification": {
+          "all_input_far_mean": 0.004285714285714286,
+          "all_input_frr_mean": 0.07022222222222223,
+          "eer_maximum": 0.0380952380952381,
+          "eer_mean": 0.033560090702947847,
+          "eer_minimum": 0.02585034013605442
+        }
+      }
+    },
+    "子音50%欠損": {
+      "equal": {
+        "cross_text_verification": {
+          "all_input_far_mean": 0.007142857142857143,
+          "all_input_frr_mean": 0.14666666666666667,
+          "eer_maximum": 0.015306122448979591,
+          "eer_mean": 0.015306122448979591,
+          "eer_minimum": 0.015306122448979591
+        },
+        "verification": {
+          "all_input_far_mean": 0.0064761904761904765,
+          "all_input_frr_mean": 0.04666666666666667,
+          "eer_maximum": 0.013605442176870748,
+          "eer_mean": 0.013605442176870748,
+          "eer_minimum": 0.013605442176870748
+        }
+      },
+      "mlp": {
+        "cross_text_verification": {
+          "all_input_far_mean": 0.007142857142857143,
+          "all_input_frr_mean": 0.14666666666666667,
+          "eer_maximum": 0.015306122448979591,
+          "eer_mean": 0.01530612244897959,
+          "eer_minimum": 0.015306122448979591
+        },
+        "verification": {
+          "all_input_far_mean": 0.0064761904761904765,
+          "all_input_frr_mean": 0.04666666666666667,
+          "eer_maximum": 0.013605442176870748,
+          "eer_mean": 0.013605442176870748,
+          "eer_minimum": 0.013605442176870748
+        }
+      },
+      "transformer": {
+        "cross_text_verification": {
+          "all_input_far_mean": 0.020687830687830686,
+          "all_input_frr_mean": 0.1325925925925926,
+          "eer_maximum": 0.01020408163265306,
+          "eer_mean": 0.008867832847424685,
+          "eer_minimum": 0.007653061224489796
+        },
+        "verification": {
+          "all_input_far_mean": 0.012317460317460317,
+          "all_input_frr_mean": 0.035555555555555556,
+          "eer_maximum": 0.01574344023323615,
+          "eer_mean": 0.015225137674117267,
+          "eer_minimum": 0.014965986394557823
+        }
+      }
+    },
+    "通常の入力": {
+      "equal": {
+        "cross_text_verification": {
+          "all_input_far_mean": 0.007142857142857143,
+          "all_input_frr_mean": 0.14222222222222222,
+          "eer_maximum": 0.01020408163265306,
+          "eer_mean": 0.01020408163265306,
+          "eer_minimum": 0.01020408163265306
+        },
+        "verification": {
+          "all_input_far_mean": 0.004095238095238095,
+          "all_input_frr_mean": 0.044,
+          "eer_maximum": 0.014965986394557823,
+          "eer_mean": 0.014965986394557823,
+          "eer_minimum": 0.014965986394557823
+        }
+      },
+      "mlp": {
+        "cross_text_verification": {
+          "all_input_far_mean": 0.007142857142857143,
+          "all_input_frr_mean": 0.14222222222222222,
+          "eer_maximum": 0.01020408163265306,
+          "eer_mean": 0.01020408163265306,
+          "eer_minimum": 0.01020408163265306
+        },
+        "verification": {
+          "all_input_far_mean": 0.004095238095238095,
+          "all_input_frr_mean": 0.044000000000000004,
+          "eer_maximum": 0.014965986394557823,
+          "eer_mean": 0.014965986394557823,
+          "eer_minimum": 0.014965986394557823
+        }
+      },
+      "transformer": {
+        "cross_text_verification": {
+          "all_input_far_mean": 0.009470899470899472,
+          "all_input_frr_mean": 0.13703703703703704,
+          "eer_maximum": 0.010568513119533527,
+          "eer_mean": 0.009414480077745384,
+          "eer_minimum": 0.007470845481049562
+        },
+        "verification": {
+          "all_input_far_mean": 0.004317460317460317,
+          "all_input_frr_mean": 0.03777777777777778,
+          "eer_maximum": 0.014965986394557823,
+          "eer_mean": 0.01185617103984451,
+          "eer_minimum": 0.009523809523809525
+        }
+      }
+    }
+  },
+  "tables": [
+    {
+      "headers": [
+        "条件",
+        "通常: 等重み",
+        "通常: Transformer",
+        "別文: 等重み",
+        "別文: Transformer",
+        "通常差 pp",
+        "別文差 pp"
+      ],
+      "rows": [
+        [
+          "通常の入力",
+          "1.497%",
+          "1.186%",
+          "1.020%",
+          "0.941%",
+          "-0.311",
+          "-0.079"
+        ],
+        [
+          "子音50%欠損",
+          "1.361%",
+          "1.523%",
+          "1.531%",
+          "0.887%",
+          "+0.162",
+          "-0.644"
+        ],
+        [
+          "20%区間に10dBノイズ",
+          "1.302%",
+          "3.356%",
+          "1.093%",
+          "3.401%",
+          "+2.054",
+          "+2.308"
+        ]
+      ],
+      "title": "test EER（Transformerは3 seed平均）"
+    },
+    {
+      "headers": [
+        "方式 / seed",
+        "追加パラメータ数",
+        "完了更新",
+        "採用更新",
+        "更新後の最小validation通常EER"
+      ],
+      "rows": [
+        [
+          "mlp-20261015",
+          "40003",
+          "4000",
+          "0",
+          "0.972%"
+        ],
+        [
+          "mlp-20261016",
+          "40003",
+          "4000",
+          "0",
+          "1.020%"
+        ],
+        [
+          "mlp-20261017",
+          "40003",
+          "4000",
+          "0",
+          "0.807%"
+        ],
+        [
+          "transformer-20261015",
+          "102787",
+          "4000",
+          "3000",
+          "0.457%"
+        ],
+        [
+          "transformer-20261016",
+          "102787",
+          "4000",
+          "3000",
+          "0.525%"
+        ],
+        [
+          "transformer-20261017",
+          "102787",
+          "4000",
+          "2500",
+          "0.272%"
+        ]
+      ],
+      "title": "実施した学習とvalidationでの採用"
+    },
+    {
+      "headers": [
+        "条件",
+        "方式",
+        "評価",
+        "FAR",
+        "FRR"
+      ],
+      "rows": [
+        [
+          "通常の入力",
+          "equal",
+          "通常",
+          "0.410%",
+          "4.400%"
+        ],
+        [
+          "通常の入力",
+          "equal",
+          "別文",
+          "0.714%",
+          "14.222%"
+        ],
+        [
+          "通常の入力",
+          "transformer",
+          "通常",
+          "0.432%",
+          "3.778%"
+        ],
+        [
+          "通常の入力",
+          "transformer",
+          "別文",
+          "0.947%",
+          "13.704%"
+        ],
+        [
+          "子音50%欠損",
+          "equal",
+          "通常",
+          "0.648%",
+          "4.667%"
+        ],
+        [
+          "子音50%欠損",
+          "equal",
+          "別文",
+          "0.714%",
+          "14.667%"
+        ],
+        [
+          "子音50%欠損",
+          "transformer",
+          "通常",
+          "1.232%",
+          "3.556%"
+        ],
+        [
+          "子音50%欠損",
+          "transformer",
+          "別文",
+          "2.069%",
+          "13.259%"
+        ],
+        [
+          "20%区間に10dBノイズ",
+          "equal",
+          "通常",
+          "0.295%",
+          "6.133%"
+        ],
+        [
+          "20%区間に10dBノイズ",
+          "equal",
+          "別文",
+          "0.476%",
+          "14.889%"
+        ],
+        [
+          "20%区間に10dBノイズ",
+          "transformer",
+          "通常",
+          "0.429%",
+          "7.022%"
+        ],
+        [
+          "20%区間に10dBノイズ",
+          "transformer",
+          "別文",
+          "0.852%",
+          "16.741%"
+        ]
+      ],
+      "title": "clean validation FAR 1%閾値を固定（全入力率、Transformerは3 seed平均）"
+    }
+  ]
+}
