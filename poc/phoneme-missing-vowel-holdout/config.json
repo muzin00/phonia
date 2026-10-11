@@ -1,0 +1,44 @@
+{
+  "run_directory": "artifacts/phoneme-missing-vowel-holdout/cv60-20261011-v1",
+  "cv_source": "artifacts/phoneme-training-data-expansion/training-data-20261008-v1",
+  "encoder_run": "artifacts/phoneme-all-training/all36-20261011-v1",
+  "encoder_trial": "trial-001-all36",
+  "encoder_sha256": "8ca55d2f1eb57f4466e70fc5e37a015236ed3bfd9e142af56feaa1d1759ebd72",
+  "speaker_seed": 20261021,
+  "clip_seed": 20261022,
+  "calibration_speakers": 30,
+  "test_speakers": 30,
+  "minimum_clips": 50,
+  "enrollment_clips": 20,
+  "query_clips": 30,
+  "enrollment_limit": 30,
+  "policies": [
+    {
+      "name": "vowels5",
+      "minimum_vowels": 5,
+      "minimum_phones": 5
+    },
+    {
+      "name": "vowels4",
+      "minimum_vowels": 4,
+      "minimum_phones": 4
+    },
+    {
+      "name": "vowels3_phones5",
+      "minimum_vowels": 3,
+      "minimum_phones": 5
+    }
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261023,
+  "primary": "equal fusion, vowels4 minus vowels5, new calibration FAR1pct thresholds",
+  "research_gate": {
+    "test_far_upper95_max": 0.01,
+    "far_difference_upper95_max": 0.001,
+    "frr_difference_upper95_max": 0.0,
+    "frr_difference_strictly_negative": true
+  },
+  "retrain": false,
+  "test_policy": "one frozen test evaluation; no post-test recalibration or candidate selection",
+  "duplicate_policy": "exclude all compressed-audio duplicate occurrences in the selected set; exclude all same-split PCM duplicates and PCM matches to existing model data or earlier calibration; retain query slots as rejection, no replacement"
+}

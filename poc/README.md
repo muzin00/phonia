@@ -253,6 +253,21 @@ Transformerのtest平均EERは、ノイズ時に通常3.356→1.374%、別文3.4
 [追加学習の固定条件](phoneme-fusion-augmentation/README.md)、[HTML比較表](phoneme-fusion-augmentation/evaluation-results.html)、
 [全seed・固定閾値FAR/FRR・信頼区間](phoneme-fusion-augmentation/evaluation-results.md)を参照する。
 
+総括後の追加検証では、全36音素encoder・登録上限30区間を固定して、5母音必須・4母音以上・3母音以上かつ母音と子音を合わせて5種類以上を比較した。
+等重みと既存clean学習Transformerの3 seed、計12条件のvalidation閾値を固定してからtestを測定した。
+主比較の等重み・4母音以上では、通常文の全入力FRRが4.400→2.400%、別文が14.222→2.667%へ低下した。
+全入力FARは通常文0.410→0.419%、別文0.714→0.810%で、他人受入はそれぞれ1件・6件増加した。
+別文の追加他人受入6件のうち5件は /u/ 欠損入力だった。3母音以上＋合計5種類は別文FRR 1.556%だが、4母音条件から追加した入力は4話者・5発話に限られる。
+新規学習なし・観測済みJVS testの探索で、運用への採用やFAR維持の確証ではない。
+[固定条件](phoneme-all-missing-vowel-evaluation/README.md)、[HTML比較表](phoneme-all-missing-vowel-evaluation/evaluation-results.html)、[結果の解釈](phoneme-all-missing-vowel-evaluation/interpretation.md)を参照する。
+
+母音不足対応については、さらに既存学習70 client_idを除くCommon Voice 60話者ラベルを新規に固定し、校正30話者・test30話者で評価した。
+各話者20発話で登録、30発話で照合し、全36音素encoder・等重み・登録上限30区間を維持した。
+5母音必須→4母音以上でtest全入力FRRは44.222→23.444%、FARは0.441→0.640%。差の95%区間はそれぞれ[−24.889, −17.000] pp、[+0.071, +0.402] ppだった。
+4母音FARの95%区間上端1.524%とFAR増加上端0.402 ppが事前の研究用基準を超え、現構成への単純導入は見送ると結論づけた。
+JVS閾値の移植時には4母音FARが7.165%となり、入力不足の救済だけで収録集団への一般化と校正の問題は解消しなかった。
+[事前固定した設計](phoneme-missing-vowel-holdout/README.md)、[測定表](phoneme-missing-vowel-holdout/evaluation-results.md)、[結論](phoneme-missing-vowel-holdout/interpretation.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。

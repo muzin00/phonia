@@ -1,0 +1,2403 @@
+{
+  "audit": {
+    "bootstrap_checks": 960,
+    "float64_max_error": 1.4912690660118244e-07,
+    "rate_checks": 144,
+    "score_checks": 54000,
+    "status": "passed"
+  },
+  "config": {
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261023,
+    "calibration_speakers": 30,
+    "clip_seed": 20261022,
+    "cv_source": "artifacts/phoneme-training-data-expansion/training-data-20261008-v1",
+    "duplicate_policy": "exclude all compressed-audio duplicate occurrences in the selected set; exclude all same-split PCM duplicates and PCM matches to existing model data or earlier calibration; retain query slots as rejection, no replacement",
+    "encoder_run": "artifacts/phoneme-all-training/all36-20261011-v1",
+    "encoder_sha256": "8ca55d2f1eb57f4466e70fc5e37a015236ed3bfd9e142af56feaa1d1759ebd72",
+    "encoder_trial": "trial-001-all36",
+    "enrollment_clips": 20,
+    "enrollment_limit": 30,
+    "minimum_clips": 50,
+    "policies": [
+      {
+        "minimum_phones": 5,
+        "minimum_vowels": 5,
+        "name": "vowels5"
+      },
+      {
+        "minimum_phones": 4,
+        "minimum_vowels": 4,
+        "name": "vowels4"
+      },
+      {
+        "minimum_phones": 5,
+        "minimum_vowels": 3,
+        "name": "vowels3_phones5"
+      }
+    ],
+    "primary": "equal fusion, vowels4 minus vowels5, new calibration FAR1pct thresholds",
+    "query_clips": 30,
+    "research_gate": {
+      "far_difference_upper95_max": 0.001,
+      "frr_difference_strictly_negative": true,
+      "frr_difference_upper95_max": 0.0,
+      "test_far_upper95_max": 0.01
+    },
+    "retrain": false,
+    "run_directory": "artifacts/phoneme-missing-vowel-holdout/cv60-20261011-v1",
+    "speaker_seed": 20261021,
+    "test_policy": "one frozen test evaluation; no post-test recalibration or candidate selection",
+    "test_speakers": 30
+  },
+  "criteria": {
+    "far_increase_upper95_at_most_0_1pp": false,
+    "far_upper95_at_most_1pct": false,
+    "frr_improvement_upper95_below_zero": true
+  },
+  "decision": "adoption_deferred",
+  "differences": {
+    "vowels3_phones5/calibrated/coverage": {
+      "ci95": [
+        0.28663888888888883,
+        0.4
+      ],
+      "difference": 0.3422222222222222
+    },
+    "vowels3_phones5/calibrated/eer": {
+      "ci95": [
+        -0.00038241501703860066,
+        0.012503403208828773
+      ],
+      "difference": 0.00765717538319758
+    },
+    "vowels3_phones5/calibrated/eer_operating/far": {
+      "ci95": [
+        0.006877889143514144,
+        0.02290753592116152
+      ],
+      "difference": 0.013946360153256704
+    },
+    "vowels3_phones5/calibrated/eer_operating/frr": {
+      "ci95": [
+        -0.3766666666666667,
+        -0.26999999999999996
+      ],
+      "difference": -0.3211111111111111
+    },
+    "vowels3_phones5/calibrated/far_0_1pct/far": {
+      "ci95": [
+        0.0,
+        0.0005529225908372827
+      ],
+      "difference": 0.00011494252873563217
+    },
+    "vowels3_phones5/calibrated/far_0_1pct/frr": {
+      "ci95": [
+        -0.17555555555555558,
+        -0.10330555555555565
+      ],
+      "difference": -0.14
+    },
+    "vowels3_phones5/calibrated/far_1pct/far": {
+      "ci95": [
+        0.0006666275430359936,
+        0.0035772554343785757
+      ],
+      "difference": 0.0018773946360153256
+    },
+    "vowels3_phones5/calibrated/far_1pct/frr": {
+      "ci95": [
+        -0.3044444444444444,
+        -0.21333333333333335
+      ],
+      "difference": -0.2577777777777778
+    },
+    "vowels3_phones5/jvs_transfer/coverage": {
+      "ci95": [
+        0.28663888888888883,
+        0.4
+      ],
+      "difference": 0.3422222222222222
+    },
+    "vowels3_phones5/jvs_transfer/eer": {
+      "ci95": [
+        -0.00038241501703860066,
+        0.012503403208828773
+      ],
+      "difference": 0.00765717538319758
+    },
+    "vowels3_phones5/jvs_transfer/eer_operating/far": {
+      "ci95": [
+        0.011347163120567372,
+        0.033848011631414245
+      ],
+      "difference": 0.02122605363984674
+    },
+    "vowels3_phones5/jvs_transfer/eer_operating/frr": {
+      "ci95": [
+        -0.38,
+        -0.27111111111111114
+      ],
+      "difference": -0.3233333333333333
+    },
+    "vowels3_phones5/jvs_transfer/far_0_1pct/far": {
+      "ci95": [
+        0.004305736067660409,
+        0.01646834856591295
+      ],
+      "difference": 0.009578544061302683
+    },
+    "vowels3_phones5/jvs_transfer/far_0_1pct/frr": {
+      "ci95": [
+        -0.3566944444444445,
+        -0.2566388888888891
+      ],
+      "difference": -0.3055555555555556
+    },
+    "vowels3_phones5/jvs_transfer/far_1pct/far": {
+      "ci95": [
+        0.014353350231639705,
+        0.041332155541981955
+      ],
+      "difference": 0.026206896551724146
+    },
+    "vowels3_phones5/jvs_transfer/far_1pct/frr": {
+      "ci95": [
+        -0.38555555555555554,
+        -0.27444444444444444
+      ],
+      "difference": -0.3277777777777778
+    },
+    "vowels4/calibrated/coverage": {
+      "ci95": [
+        0.22333333333333327,
+        0.30666666666666675
+      ],
+      "difference": 0.2644444444444445
+    },
+    "vowels4/calibrated/eer": {
+      "ci95": [
+        -0.0030037028271783237,
+        0.011016783098486572
+      ],
+      "difference": 0.004369124851052564
+    },
+    "vowels4/calibrated/eer_operating/far": {
+      "ci95": [
+        0.0068501420454545455,
+        0.020892767955249227
+      ],
+      "difference": 0.012950191570881224
+    },
+    "vowels4/calibrated/eer_operating/frr": {
+      "ci95": [
+        -0.29002777777777783,
+        -0.21111111111111114
+      ],
+      "difference": -0.24999999999999997
+    },
+    "vowels4/calibrated/far_0_1pct/far": {
+      "ci95": [
+        0.0,
+        0.0003580166379280812
+      ],
+      "difference": 7.662835249042145e-05
+    },
+    "vowels4/calibrated/far_0_1pct/frr": {
+      "ci95": [
+        -0.1433333333333333,
+        -0.0788888888888889
+      ],
+      "difference": -0.11111111111111116
+    },
+    "vowels4/calibrated/far_1pct/far": {
+      "ci95": [
+        0.0007108584585392092,
+        0.004017742270081798
+      ],
+      "difference": 0.001992337164750958
+    },
+    "vowels4/calibrated/far_1pct/frr": {
+      "ci95": [
+        -0.24888888888888888,
+        -0.17
+      ],
+      "difference": -0.20777777777777778
+    },
+    "vowels4/jvs_transfer/coverage": {
+      "ci95": [
+        0.22333333333333327,
+        0.30666666666666675
+      ],
+      "difference": 0.2644444444444445
+    },
+    "vowels4/jvs_transfer/eer": {
+      "ci95": [
+        -0.0030037028271783237,
+        0.011016783098486572
+      ],
+      "difference": 0.004369124851052564
+    },
+    "vowels4/jvs_transfer/eer_operating/far": {
+      "ci95": [
+        0.008917278735449523,
+        0.026515719268476602
+      ],
+      "difference": 0.0167816091954023
+    },
+    "vowels4/jvs_transfer/eer_operating/frr": {
+      "ci95": [
+        -0.2922222222222222,
+        -0.21222222222222223
+      ],
+      "difference": -0.25111111111111106
+    },
+    "vowels4/jvs_transfer/far_0_1pct/far": {
+      "ci95": [
+        0.0035251674546887307,
+        0.013373211457979869
+      ],
+      "difference": 0.007854406130268197
+    },
+    "vowels4/jvs_transfer/far_0_1pct/frr": {
+      "ci95": [
+        -0.2788888888888889,
+        -0.19999999999999998
+      ],
+      "difference": -0.2388888888888889
+    },
+    "vowels4/jvs_transfer/far_1pct/far": {
+      "ci95": [
+        0.011257316468253967,
+        0.03249724522190927
+      ],
+      "difference": 0.020727969348659003
+    },
+    "vowels4/jvs_transfer/far_1pct/frr": {
+      "ci95": [
+        -0.2966666666666667,
+        -0.2144166666666668
+      ],
+      "difference": -0.2544444444444444
+    }
+  },
+  "intervals95": {
+    "vowels3_phones5/calibrated/coverage": [
+      0.9777777777777777,
+      0.9966666666666667
+    ],
+    "vowels3_phones5/calibrated/eer": [
+      0.02914694613216417,
+      0.06738053802095136
+    ],
+    "vowels3_phones5/calibrated/eer_operating/far": [
+      0.02439040716765175,
+      0.0860264888021717
+    ],
+    "vowels3_phones5/calibrated/eer_operating/frr": [
+      0.02666666666666667,
+      0.09333333333333334
+    ],
+    "vowels3_phones5/calibrated/far_0_1pct/far": [
+      0.0,
+      0.0016787579551743215
+    ],
+    "vowels3_phones5/calibrated/far_0_1pct/frr": [
+      0.41330555555555554,
+      0.6266944444444443
+    ],
+    "vowels3_phones5/calibrated/far_1pct/far": [
+      0.001615445232466509,
+      0.014732743004921611
+    ],
+    "vowels3_phones5/calibrated/far_1pct/frr": [
+      0.12111111111111111,
+      0.2611111111111111
+    ],
+    "vowels3_phones5/jvs_transfer/coverage": [
+      0.9777777777777777,
+      0.9966666666666667
+    ],
+    "vowels3_phones5/jvs_transfer/eer": [
+      0.02914694613216417,
+      0.06738053802095136
+    ],
+    "vowels3_phones5/jvs_transfer/eer_operating/far": [
+      0.030952787158200837,
+      0.10220466806688075
+    ],
+    "vowels3_phones5/jvs_transfer/eer_operating/frr": [
+      0.024444444444444446,
+      0.09113888888888874
+    ],
+    "vowels3_phones5/jvs_transfer/far_0_1pct/far": [
+      0.010282702915681638,
+      0.04693000774609555
+    ],
+    "vowels3_phones5/jvs_transfer/far_0_1pct/frr": [
+      0.04777777777777778,
+      0.12555555555555556
+    ],
+    "vowels3_phones5/jvs_transfer/far_1pct/far": [
+      0.04097036573494646,
+      0.1273173303525686
+    ],
+    "vowels3_phones5/jvs_transfer/far_1pct/frr": [
+      0.017777777777777778,
+      0.07444444444444444
+    ],
+    "vowels4/calibrated/coverage": [
+      0.88,
+      0.9388888888888889
+    ],
+    "vowels4/calibrated/eer": [
+      0.027575130906510745,
+      0.06519211728041034
+    ],
+    "vowels4/calibrated/eer_operating/far": [
+      0.024349025250967896,
+      0.0841004364136786
+    ],
+    "vowels4/calibrated/eer_operating/frr": [
+      0.08555555555555555,
+      0.17333333333333334
+    ],
+    "vowels4/calibrated/far_0_1pct/far": [
+      0.0,
+      0.0014423945783132526
+    ],
+    "vowels4/calibrated/far_0_1pct/frr": [
+      0.44663888888888886,
+      0.6533333333333333
+    ],
+    "vowels4/calibrated/far_1pct/far": [
+      0.0015986792875282083,
+      0.015243926521018764
+    ],
+    "vowels4/calibrated/far_1pct/frr": [
+      0.16886111111111113,
+      0.31116666666666637
+    ],
+    "vowels4/jvs_transfer/coverage": [
+      0.88,
+      0.9388888888888889
+    ],
+    "vowels4/jvs_transfer/eer": [
+      0.027575130906510745,
+      0.06519211728041034
+    ],
+    "vowels4/jvs_transfer/eer_operating/far": [
+      0.028431197894834892,
+      0.0960140026859877
+    ],
+    "vowels4/jvs_transfer/eer_operating/frr": [
+      0.08444444444444445,
+      0.17222222222222222
+    ],
+    "vowels4/jvs_transfer/far_0_1pct/far": [
+      0.009330143540669857,
+      0.04471845167064435
+    ],
+    "vowels4/jvs_transfer/far_0_1pct/frr": [
+      0.10555555555555556,
+      0.2011111111111111
+    ],
+    "vowels4/jvs_transfer/far_1pct/far": [
+      0.037579873601119106,
+      0.11837886458162082
+    ],
+    "vowels4/jvs_transfer/far_1pct/frr": [
+      0.07666666666666666,
+      0.1566944444444443
+    ],
+    "vowels5/calibrated/coverage": [
+      0.5855277777777779,
+      0.7055555555555556
+    ],
+    "vowels5/calibrated/eer": [
+      0.02349351734223286,
+      0.06283803620021904
+    ],
+    "vowels5/calibrated/eer_operating/far": [
+      0.01658710741379376,
+      0.0647055354117893
+    ],
+    "vowels5/calibrated/eer_operating/frr": [
+      0.31444444444444447,
+      0.44002777777777763
+    ],
+    "vowels5/calibrated/far_0_1pct/far": [
+      0.0,
+      0.0011933887930936037
+    ],
+    "vowels5/calibrated/far_0_1pct/frr": [
+      0.5744166666666667,
+      0.7444444444444445
+    ],
+    "vowels5/calibrated/far_1pct/far": [
+      0.0007776299573174574,
+      0.011616148117756056
+    ],
+    "vowels5/calibrated/far_1pct/frr": [
+      0.36666666666666664,
+      0.5211111111111111
+    ],
+    "vowels5/jvs_transfer/coverage": [
+      0.5855277777777779,
+      0.7055555555555556
+    ],
+    "vowels5/jvs_transfer/eer": [
+      0.02349351734223286,
+      0.06283803620021904
+    ],
+    "vowels5/jvs_transfer/eer_operating/far": [
+      0.01868374060150376,
+      0.06915594268955448
+    ],
+    "vowels5/jvs_transfer/eer_operating/frr": [
+      0.31444444444444447,
+      0.44002777777777763
+    ],
+    "vowels5/jvs_transfer/far_0_1pct/far": [
+      0.0055149293453065715,
+      0.03234821428571425
+    ],
+    "vowels5/jvs_transfer/far_0_1pct/frr": [
+      0.32555555555555554,
+      0.45447222222222206
+    ],
+    "vowels5/jvs_transfer/far_1pct/far": [
+      0.024759130195843325,
+      0.08647202663725821
+    ],
+    "vowels5/jvs_transfer/far_1pct/frr": [
+      0.30666666666666664,
+      0.43222222222222223
+    ]
+  },
+  "patterns": {
+    "vowels3_phones5": {
+      "calibrated/a": {
+        "all_false_rejects": 3,
+        "false_accepts": 1,
+        "impostor_trials": 174,
+        "queries": 6,
+        "scored_queries": 6,
+        "speakers": 6
+      },
+      "calibrated/ae": {
+        "all_false_rejects": 0,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 2,
+        "speakers": 2
+      },
+      "calibrated/aeo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/ai": {
+        "all_false_rejects": 0,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 2,
+        "speakers": 2
+      },
+      "calibrated/aie": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/au": {
+        "all_false_rejects": 3,
+        "false_accepts": 0,
+        "impostor_trials": 145,
+        "queries": 5,
+        "scored_queries": 5,
+        "speakers": 4
+      },
+      "calibrated/aue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/auo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/e": {
+        "all_false_rejects": 15,
+        "false_accepts": 19,
+        "impostor_trials": 2407,
+        "queries": 83,
+        "scored_queries": 83,
+        "speakers": 29
+      },
+      "calibrated/eo": {
+        "all_false_rejects": 4,
+        "false_accepts": 4,
+        "impostor_trials": 348,
+        "queries": 12,
+        "scored_queries": 12,
+        "speakers": 11
+      },
+      "calibrated/i": {
+        "all_false_rejects": 4,
+        "false_accepts": 5,
+        "impostor_trials": 377,
+        "queries": 13,
+        "scored_queries": 13,
+        "speakers": 11
+      },
+      "calibrated/ie": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 87,
+        "queries": 3,
+        "scored_queries": 3,
+        "speakers": 2
+      },
+      "calibrated/ieo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/io": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 1,
+        "speakers": 1
+      },
+      "calibrated/iu": {
+        "all_false_rejects": 0,
+        "false_accepts": 0,
+        "impostor_trials": 116,
+        "queries": 4,
+        "scored_queries": 4,
+        "speakers": 4
+      },
+      "calibrated/iue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/iueo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/none": {
+        "all_false_rejects": 80,
+        "false_accepts": 112,
+        "impostor_trials": 16849,
+        "queries": 581,
+        "scored_queries": 581,
+        "speakers": 30
+      },
+      "calibrated/o": {
+        "all_false_rejects": 8,
+        "false_accepts": 7,
+        "impostor_trials": 1160,
+        "queries": 40,
+        "scored_queries": 40,
+        "speakers": 20
+      },
+      "calibrated/u": {
+        "all_false_rejects": 24,
+        "false_accepts": 11,
+        "impostor_trials": 2784,
+        "queries": 96,
+        "scored_queries": 96,
+        "speakers": 28
+      },
+      "calibrated/ue": {
+        "all_false_rejects": 4,
+        "false_accepts": 0,
+        "impostor_trials": 319,
+        "queries": 11,
+        "scored_queries": 11,
+        "speakers": 7
+      },
+      "calibrated/ueo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/uo": {
+        "all_false_rejects": 7,
+        "false_accepts": 5,
+        "impostor_trials": 870,
+        "queries": 30,
+        "scored_queries": 30,
+        "speakers": 14
+      },
+      "jvs_transfer/a": {
+        "all_false_rejects": 1,
+        "false_accepts": 10,
+        "impostor_trials": 174,
+        "queries": 6,
+        "scored_queries": 6,
+        "speakers": 6
+      },
+      "jvs_transfer/ae": {
+        "all_false_rejects": 0,
+        "false_accepts": 6,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 2,
+        "speakers": 2
+      },
+      "jvs_transfer/aeo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/ai": {
+        "all_false_rejects": 0,
+        "false_accepts": 1,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 2,
+        "speakers": 2
+      },
+      "jvs_transfer/aie": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/au": {
+        "all_false_rejects": 0,
+        "false_accepts": 19,
+        "impostor_trials": 145,
+        "queries": 5,
+        "scored_queries": 5,
+        "speakers": 4
+      },
+      "jvs_transfer/aue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/auo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/e": {
+        "all_false_rejects": 2,
+        "false_accepts": 185,
+        "impostor_trials": 2407,
+        "queries": 83,
+        "scored_queries": 83,
+        "speakers": 29
+      },
+      "jvs_transfer/eo": {
+        "all_false_rejects": 1,
+        "false_accepts": 24,
+        "impostor_trials": 348,
+        "queries": 12,
+        "scored_queries": 12,
+        "speakers": 11
+      },
+      "jvs_transfer/i": {
+        "all_false_rejects": 1,
+        "false_accepts": 21,
+        "impostor_trials": 377,
+        "queries": 13,
+        "scored_queries": 13,
+        "speakers": 11
+      },
+      "jvs_transfer/ie": {
+        "all_false_rejects": 0,
+        "false_accepts": 2,
+        "impostor_trials": 87,
+        "queries": 3,
+        "scored_queries": 3,
+        "speakers": 2
+      },
+      "jvs_transfer/ieo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/io": {
+        "all_false_rejects": 0,
+        "false_accepts": 9,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 1,
+        "speakers": 1
+      },
+      "jvs_transfer/iu": {
+        "all_false_rejects": 0,
+        "false_accepts": 8,
+        "impostor_trials": 116,
+        "queries": 4,
+        "scored_queries": 4,
+        "speakers": 4
+      },
+      "jvs_transfer/iue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/iueo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/none": {
+        "all_false_rejects": 13,
+        "false_accepts": 1328,
+        "impostor_trials": 16849,
+        "queries": 581,
+        "scored_queries": 581,
+        "speakers": 30
+      },
+      "jvs_transfer/o": {
+        "all_false_rejects": 1,
+        "false_accepts": 101,
+        "impostor_trials": 1160,
+        "queries": 40,
+        "scored_queries": 40,
+        "speakers": 20
+      },
+      "jvs_transfer/u": {
+        "all_false_rejects": 4,
+        "false_accepts": 225,
+        "impostor_trials": 2784,
+        "queries": 96,
+        "scored_queries": 96,
+        "speakers": 28
+      },
+      "jvs_transfer/ue": {
+        "all_false_rejects": 2,
+        "false_accepts": 12,
+        "impostor_trials": 319,
+        "queries": 11,
+        "scored_queries": 11,
+        "speakers": 7
+      },
+      "jvs_transfer/ueo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/uo": {
+        "all_false_rejects": 1,
+        "false_accepts": 62,
+        "impostor_trials": 870,
+        "queries": 30,
+        "scored_queries": 30,
+        "speakers": 14
+      }
+    },
+    "vowels4": {
+      "calibrated/a": {
+        "all_false_rejects": 3,
+        "false_accepts": 1,
+        "impostor_trials": 174,
+        "queries": 6,
+        "scored_queries": 6,
+        "speakers": 6
+      },
+      "calibrated/ae": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/aeo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/ai": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/aie": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/au": {
+        "all_false_rejects": 5,
+        "false_accepts": 0,
+        "impostor_trials": 145,
+        "queries": 5,
+        "scored_queries": 0,
+        "speakers": 4
+      },
+      "calibrated/aue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/auo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/e": {
+        "all_false_rejects": 15,
+        "false_accepts": 22,
+        "impostor_trials": 2407,
+        "queries": 83,
+        "scored_queries": 83,
+        "speakers": 29
+      },
+      "calibrated/eo": {
+        "all_false_rejects": 12,
+        "false_accepts": 0,
+        "impostor_trials": 348,
+        "queries": 12,
+        "scored_queries": 0,
+        "speakers": 11
+      },
+      "calibrated/i": {
+        "all_false_rejects": 4,
+        "false_accepts": 5,
+        "impostor_trials": 377,
+        "queries": 13,
+        "scored_queries": 13,
+        "speakers": 11
+      },
+      "calibrated/ie": {
+        "all_false_rejects": 3,
+        "false_accepts": 0,
+        "impostor_trials": 87,
+        "queries": 3,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/ieo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/io": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/iu": {
+        "all_false_rejects": 4,
+        "false_accepts": 0,
+        "impostor_trials": 116,
+        "queries": 4,
+        "scored_queries": 0,
+        "speakers": 4
+      },
+      "calibrated/iue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/iueo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/none": {
+        "all_false_rejects": 78,
+        "false_accepts": 119,
+        "impostor_trials": 16849,
+        "queries": 581,
+        "scored_queries": 581,
+        "speakers": 30
+      },
+      "calibrated/o": {
+        "all_false_rejects": 8,
+        "false_accepts": 8,
+        "impostor_trials": 1160,
+        "queries": 40,
+        "scored_queries": 40,
+        "speakers": 20
+      },
+      "calibrated/u": {
+        "all_false_rejects": 22,
+        "false_accepts": 12,
+        "impostor_trials": 2784,
+        "queries": 96,
+        "scored_queries": 96,
+        "speakers": 28
+      },
+      "calibrated/ue": {
+        "all_false_rejects": 11,
+        "false_accepts": 0,
+        "impostor_trials": 319,
+        "queries": 11,
+        "scored_queries": 0,
+        "speakers": 7
+      },
+      "calibrated/ueo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/uo": {
+        "all_false_rejects": 30,
+        "false_accepts": 0,
+        "impostor_trials": 870,
+        "queries": 30,
+        "scored_queries": 0,
+        "speakers": 14
+      },
+      "jvs_transfer/a": {
+        "all_false_rejects": 1,
+        "false_accepts": 10,
+        "impostor_trials": 174,
+        "queries": 6,
+        "scored_queries": 6,
+        "speakers": 6
+      },
+      "jvs_transfer/ae": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/aeo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/ai": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/aie": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/au": {
+        "all_false_rejects": 5,
+        "false_accepts": 0,
+        "impostor_trials": 145,
+        "queries": 5,
+        "scored_queries": 0,
+        "speakers": 4
+      },
+      "jvs_transfer/aue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/auo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/e": {
+        "all_false_rejects": 2,
+        "false_accepts": 185,
+        "impostor_trials": 2407,
+        "queries": 83,
+        "scored_queries": 83,
+        "speakers": 29
+      },
+      "jvs_transfer/eo": {
+        "all_false_rejects": 12,
+        "false_accepts": 0,
+        "impostor_trials": 348,
+        "queries": 12,
+        "scored_queries": 0,
+        "speakers": 11
+      },
+      "jvs_transfer/i": {
+        "all_false_rejects": 1,
+        "false_accepts": 21,
+        "impostor_trials": 377,
+        "queries": 13,
+        "scored_queries": 13,
+        "speakers": 11
+      },
+      "jvs_transfer/ie": {
+        "all_false_rejects": 3,
+        "false_accepts": 0,
+        "impostor_trials": 87,
+        "queries": 3,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/ieo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/io": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/iu": {
+        "all_false_rejects": 4,
+        "false_accepts": 0,
+        "impostor_trials": 116,
+        "queries": 4,
+        "scored_queries": 0,
+        "speakers": 4
+      },
+      "jvs_transfer/iue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/iueo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/none": {
+        "all_false_rejects": 13,
+        "false_accepts": 1328,
+        "impostor_trials": 16849,
+        "queries": 581,
+        "scored_queries": 581,
+        "speakers": 30
+      },
+      "jvs_transfer/o": {
+        "all_false_rejects": 1,
+        "false_accepts": 101,
+        "impostor_trials": 1160,
+        "queries": 40,
+        "scored_queries": 40,
+        "speakers": 20
+      },
+      "jvs_transfer/u": {
+        "all_false_rejects": 4,
+        "false_accepts": 225,
+        "impostor_trials": 2784,
+        "queries": 96,
+        "scored_queries": 96,
+        "speakers": 28
+      },
+      "jvs_transfer/ue": {
+        "all_false_rejects": 11,
+        "false_accepts": 0,
+        "impostor_trials": 319,
+        "queries": 11,
+        "scored_queries": 0,
+        "speakers": 7
+      },
+      "jvs_transfer/ueo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/uo": {
+        "all_false_rejects": 30,
+        "false_accepts": 0,
+        "impostor_trials": 870,
+        "queries": 30,
+        "scored_queries": 0,
+        "speakers": 14
+      }
+    },
+    "vowels5": {
+      "calibrated/a": {
+        "all_false_rejects": 6,
+        "false_accepts": 0,
+        "impostor_trials": 174,
+        "queries": 6,
+        "scored_queries": 0,
+        "speakers": 6
+      },
+      "calibrated/ae": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/aeo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/ai": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/aie": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/au": {
+        "all_false_rejects": 5,
+        "false_accepts": 0,
+        "impostor_trials": 145,
+        "queries": 5,
+        "scored_queries": 0,
+        "speakers": 4
+      },
+      "calibrated/aue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/auo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/e": {
+        "all_false_rejects": 83,
+        "false_accepts": 0,
+        "impostor_trials": 2407,
+        "queries": 83,
+        "scored_queries": 0,
+        "speakers": 29
+      },
+      "calibrated/eo": {
+        "all_false_rejects": 12,
+        "false_accepts": 0,
+        "impostor_trials": 348,
+        "queries": 12,
+        "scored_queries": 0,
+        "speakers": 11
+      },
+      "calibrated/i": {
+        "all_false_rejects": 13,
+        "false_accepts": 0,
+        "impostor_trials": 377,
+        "queries": 13,
+        "scored_queries": 0,
+        "speakers": 11
+      },
+      "calibrated/ie": {
+        "all_false_rejects": 3,
+        "false_accepts": 0,
+        "impostor_trials": 87,
+        "queries": 3,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/ieo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/io": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/iu": {
+        "all_false_rejects": 4,
+        "false_accepts": 0,
+        "impostor_trials": 116,
+        "queries": 4,
+        "scored_queries": 0,
+        "speakers": 4
+      },
+      "calibrated/iue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/iueo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "calibrated/none": {
+        "all_false_rejects": 79,
+        "false_accepts": 115,
+        "impostor_trials": 16849,
+        "queries": 581,
+        "scored_queries": 581,
+        "speakers": 30
+      },
+      "calibrated/o": {
+        "all_false_rejects": 40,
+        "false_accepts": 0,
+        "impostor_trials": 1160,
+        "queries": 40,
+        "scored_queries": 0,
+        "speakers": 20
+      },
+      "calibrated/u": {
+        "all_false_rejects": 96,
+        "false_accepts": 0,
+        "impostor_trials": 2784,
+        "queries": 96,
+        "scored_queries": 0,
+        "speakers": 28
+      },
+      "calibrated/ue": {
+        "all_false_rejects": 11,
+        "false_accepts": 0,
+        "impostor_trials": 319,
+        "queries": 11,
+        "scored_queries": 0,
+        "speakers": 7
+      },
+      "calibrated/ueo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "calibrated/uo": {
+        "all_false_rejects": 30,
+        "false_accepts": 0,
+        "impostor_trials": 870,
+        "queries": 30,
+        "scored_queries": 0,
+        "speakers": 14
+      },
+      "jvs_transfer/a": {
+        "all_false_rejects": 6,
+        "false_accepts": 0,
+        "impostor_trials": 174,
+        "queries": 6,
+        "scored_queries": 0,
+        "speakers": 6
+      },
+      "jvs_transfer/ae": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/aeo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/ai": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/aie": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/au": {
+        "all_false_rejects": 5,
+        "false_accepts": 0,
+        "impostor_trials": 145,
+        "queries": 5,
+        "scored_queries": 0,
+        "speakers": 4
+      },
+      "jvs_transfer/aue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/auo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/e": {
+        "all_false_rejects": 83,
+        "false_accepts": 0,
+        "impostor_trials": 2407,
+        "queries": 83,
+        "scored_queries": 0,
+        "speakers": 29
+      },
+      "jvs_transfer/eo": {
+        "all_false_rejects": 12,
+        "false_accepts": 0,
+        "impostor_trials": 348,
+        "queries": 12,
+        "scored_queries": 0,
+        "speakers": 11
+      },
+      "jvs_transfer/i": {
+        "all_false_rejects": 13,
+        "false_accepts": 0,
+        "impostor_trials": 377,
+        "queries": 13,
+        "scored_queries": 0,
+        "speakers": 11
+      },
+      "jvs_transfer/ie": {
+        "all_false_rejects": 3,
+        "false_accepts": 0,
+        "impostor_trials": 87,
+        "queries": 3,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/ieo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/io": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/iu": {
+        "all_false_rejects": 4,
+        "false_accepts": 0,
+        "impostor_trials": 116,
+        "queries": 4,
+        "scored_queries": 0,
+        "speakers": 4
+      },
+      "jvs_transfer/iue": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/iueo": {
+        "all_false_rejects": 2,
+        "false_accepts": 0,
+        "impostor_trials": 58,
+        "queries": 2,
+        "scored_queries": 0,
+        "speakers": 2
+      },
+      "jvs_transfer/none": {
+        "all_false_rejects": 13,
+        "false_accepts": 1329,
+        "impostor_trials": 16849,
+        "queries": 581,
+        "scored_queries": 581,
+        "speakers": 30
+      },
+      "jvs_transfer/o": {
+        "all_false_rejects": 40,
+        "false_accepts": 0,
+        "impostor_trials": 1160,
+        "queries": 40,
+        "scored_queries": 0,
+        "speakers": 20
+      },
+      "jvs_transfer/u": {
+        "all_false_rejects": 96,
+        "false_accepts": 0,
+        "impostor_trials": 2784,
+        "queries": 96,
+        "scored_queries": 0,
+        "speakers": 28
+      },
+      "jvs_transfer/ue": {
+        "all_false_rejects": 11,
+        "false_accepts": 0,
+        "impostor_trials": 319,
+        "queries": 11,
+        "scored_queries": 0,
+        "speakers": 7
+      },
+      "jvs_transfer/ueo": {
+        "all_false_rejects": 1,
+        "false_accepts": 0,
+        "impostor_trials": 29,
+        "queries": 1,
+        "scored_queries": 0,
+        "speakers": 1
+      },
+      "jvs_transfer/uo": {
+        "all_false_rejects": 30,
+        "false_accepts": 0,
+        "impostor_trials": 870,
+        "queries": 30,
+        "scored_queries": 0,
+        "speakers": 14
+      }
+    }
+  },
+  "preparation": {
+    "test": {
+      "enrollment_seconds": 2492.1,
+      "excluded": [],
+      "intervals": 55493,
+      "missing_enrollment_vowels": {
+        "cv17_1e2bfc4a2dfb953d": [],
+        "cv17_1e83ad703c0e033f": [],
+        "cv17_2434605f9c66d033": [],
+        "cv17_2be3882cfa97c347": [],
+        "cv17_3215d3e55fc88a0d": [],
+        "cv17_3a85ffd78dd023ac": [],
+        "cv17_4129cdb2da544a9c": [],
+        "cv17_42c0f0470073fe37": [],
+        "cv17_494b43ac1c05cad7": [],
+        "cv17_4acfba80a1fe3ba5": [],
+        "cv17_4b9120a8d63f6157": [],
+        "cv17_537521054f5c6600": [],
+        "cv17_563ec16f0c78bd56": [],
+        "cv17_607681824dd6260f": [],
+        "cv17_74d744a88fae13ed": [],
+        "cv17_75567d09a0b576b8": [],
+        "cv17_79a7db8637ccf030": [],
+        "cv17_852966e8fa112b3d": [],
+        "cv17_93491df699b73158": [],
+        "cv17_ab3a07b08b0497b8": [],
+        "cv17_b6d0d91d3e86b677": [],
+        "cv17_baae948c75b514c4": [],
+        "cv17_d08b30caf84e1274": [],
+        "cv17_d98e7713d76efffc": [],
+        "cv17_da5895b8cf38870b": [],
+        "cv17_e92ef1e3d315fc2f": [],
+        "cv17_ea8badea264a82a5": [],
+        "cv17_f8cbdf7cbdf6e837": [],
+        "cv17_f8df92125924079e": [],
+        "cv17_f97c8f5c0730c7a2": []
+      },
+      "qc": {
+        "N/low_rms": 19,
+        "N/raw": 1559,
+        "a/low_rms": 269,
+        "a/raw": 8634,
+        "b/low_rms": 23,
+        "b/raw": 541,
+        "by/raw": 3,
+        "ch/low_rms": 47,
+        "ch/raw": 536,
+        "cl/low_rms": 294,
+        "cl/raw": 677,
+        "d/low_rms": 35,
+        "d/raw": 1144,
+        "e/low_rms": 128,
+        "e/raw": 4231,
+        "f/low_rms": 38,
+        "f/raw": 176,
+        "g/low_rms": 40,
+        "g/raw": 1177,
+        "gy/low_rms": 2,
+        "gy/raw": 16,
+        "h/low_rms": 51,
+        "h/raw": 531,
+        "hy/low_rms": 3,
+        "hy/raw": 36,
+        "i/low_rms": 310,
+        "i/raw": 6565,
+        "j/low_rms": 16,
+        "j/raw": 514,
+        "k/low_rms": 310,
+        "k/raw": 4387,
+        "ky/low_rms": 9,
+        "ky/raw": 134,
+        "m/low_rms": 76,
+        "m/raw": 2008,
+        "my/raw": 2,
+        "n/low_rms": 79,
+        "n/raw": 3115,
+        "ny/low_rms": 1,
+        "ny/raw": 11,
+        "o/low_rms": 247,
+        "o/raw": 7140,
+        "p/low_rms": 29,
+        "p/raw": 106,
+        "pause": 604,
+        "py/low_rms": 1,
+        "py/raw": 2,
+        "r/low_rms": 65,
+        "r/raw": 2613,
+        "ry/low_rms": 1,
+        "ry/raw": 36,
+        "s/low_rms": 67,
+        "s/raw": 1429,
+        "sh/low_rms": 44,
+        "sh/raw": 1524,
+        "t/low_rms": 355,
+        "t/raw": 3135,
+        "ts/low_rms": 20,
+        "ts/raw": 544,
+        "u/low_rms": 298,
+        "u/raw": 4216,
+        "w/low_rms": 40,
+        "w/raw": 838,
+        "y/low_rms": 23,
+        "y/raw": 565,
+        "z/low_rms": 6,
+        "z/raw": 294
+      },
+      "queries": 900,
+      "recording_seconds": 6295.14,
+      "universal_phones": [
+        "a",
+        "i",
+        "u",
+        "e",
+        "o",
+        "N",
+        "b",
+        "ch",
+        "d",
+        "g",
+        "h",
+        "k",
+        "m",
+        "n",
+        "r",
+        "s",
+        "sh",
+        "t",
+        "ts",
+        "w",
+        "y"
+      ],
+      "utterances": 1500
+    },
+    "validation": {
+      "enrollment_seconds": 2666.028,
+      "excluded": [
+        {
+          "reason": "alignment_failed",
+          "utterance_id": "cv17_4bcbbf512b977781eb601fb5"
+        },
+        {
+          "reason": "alignment_failed",
+          "utterance_id": "cv17_b82109fb5662c48cf14293ae"
+        }
+      ],
+      "intervals": 62389,
+      "missing_enrollment_vowels": {
+        "cv17_06e0b4251e4325e4": [],
+        "cv17_0acf0a656c3d3c53": [],
+        "cv17_0db9443691323341": [],
+        "cv17_15378db2eb268411": [],
+        "cv17_1593d6284af195e2": [],
+        "cv17_2a096245583a50be": [],
+        "cv17_2ffc90d72bea8abd": [],
+        "cv17_399a26d1d233b3b1": [],
+        "cv17_408ad30e2852fc9c": [],
+        "cv17_41ba1ccfcd3ea46f": [],
+        "cv17_45b82152b7f10091": [],
+        "cv17_4d2bd18aee132f3e": [],
+        "cv17_4efabb9d1df33b8d": [],
+        "cv17_666c5db64b343a16": [],
+        "cv17_6c5d9d6f644f2166": [],
+        "cv17_8fdd3b5caff15506": [],
+        "cv17_92e1d4252e3ee121": [],
+        "cv17_a765ec31aeee1700": [],
+        "cv17_a8f205a9de0ad691": [],
+        "cv17_af121dfcb7696f41": [],
+        "cv17_bba80b7fd1ca48fd": [],
+        "cv17_caf799e84a3950e9": [],
+        "cv17_d0fa019f5083946f": [],
+        "cv17_dd509eb245637f25": [],
+        "cv17_df73b92e9a9b2c0f": [],
+        "cv17_e0d56013635b0ada": [],
+        "cv17_e1799dfab0ec0eb6": [],
+        "cv17_e69fb43dcf507d10": [],
+        "cv17_f0775e0915a108b5": [],
+        "cv17_f2e38c12d2166541": []
+      },
+      "qc": {
+        "N/low_rms": 13,
+        "N/raw": 1767,
+        "a/low_rms": 125,
+        "a/raw": 9093,
+        "b/low_rms": 25,
+        "b/raw": 550,
+        "by/raw": 5,
+        "ch/low_rms": 23,
+        "ch/raw": 443,
+        "cl/low_rms": 318,
+        "cl/raw": 761,
+        "d/low_rms": 32,
+        "d/raw": 1463,
+        "e/low_rms": 47,
+        "e/raw": 4974,
+        "f/low_rms": 24,
+        "f/raw": 155,
+        "g/low_rms": 36,
+        "g/raw": 1268,
+        "gy/raw": 24,
+        "h/low_rms": 43,
+        "h/raw": 547,
+        "hy/low_rms": 2,
+        "hy/raw": 39,
+        "i/low_rms": 210,
+        "i/raw": 7190,
+        "j/low_rms": 13,
+        "j/raw": 593,
+        "k/low_rms": 278,
+        "k/raw": 4684,
+        "ky/low_rms": 3,
+        "ky/raw": 170,
+        "m/low_rms": 50,
+        "m/raw": 2043,
+        "my/raw": 7,
+        "n/low_rms": 43,
+        "n/raw": 3496,
+        "ny/raw": 5,
+        "o/low_rms": 69,
+        "o/raw": 8051,
+        "p/low_rms": 22,
+        "p/raw": 135,
+        "pause": 704,
+        "py/raw": 4,
+        "r/low_rms": 29,
+        "r/raw": 2848,
+        "ry/raw": 42,
+        "s/low_rms": 39,
+        "s/raw": 1686,
+        "sh/low_rms": 11,
+        "sh/raw": 1554,
+        "t/low_rms": 370,
+        "t/raw": 3629,
+        "ts/low_rms": 14,
+        "ts/raw": 570,
+        "u/low_rms": 222,
+        "u/raw": 4743,
+        "w/low_rms": 13,
+        "w/raw": 1023,
+        "y/low_rms": 9,
+        "y/raw": 590,
+        "z/low_rms": 5,
+        "z/raw": 325
+      },
+      "queries": 900,
+      "recording_seconds": 6757.584,
+      "universal_phones": [
+        "a",
+        "i",
+        "u",
+        "e",
+        "o",
+        "N",
+        "b",
+        "d",
+        "g",
+        "h",
+        "j",
+        "k",
+        "m",
+        "n",
+        "r",
+        "s",
+        "sh",
+        "t",
+        "ts",
+        "w",
+        "y",
+        "z"
+      ],
+      "utterances": 1500
+    }
+  },
+  "results": {
+    "test": {
+      "vowels3_phones5": {
+        "calibrated": {
+          "all_queries": 900,
+          "coverage": 0.9877777777777778,
+          "eer": 0.047244094488188976,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.050727969348659,
+              "all_input_frr": 0.05555555555555555,
+              "false_accepts": 1324,
+              "false_rejects": 39,
+              "far": 0.051355649509328576,
+              "frr": 0.043869516310461196,
+              "genuine": 889,
+              "impostor": 25781,
+              "threshold": 0.6520317034287887
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0003448275862068965,
+              "all_input_frr": 0.52,
+              "false_accepts": 9,
+              "false_rejects": 457,
+              "far": 0.0003490942942477018,
+              "frr": 0.5140607424071991,
+              "genuine": 889,
+              "impostor": 25781,
+              "threshold": 0.7462284515301387
+            },
+            "far_1pct": {
+              "all_input_far": 0.0062835249042145595,
+              "all_input_frr": 0.18444444444444444,
+              "false_accepts": 164,
+              "false_rejects": 155,
+              "far": 0.006361273806291455,
+              "frr": 0.17435320584926883,
+              "genuine": 889,
+              "impostor": 25781,
+              "threshold": 0.702676247147953
+            }
+          },
+          "scored_queries": 889
+        },
+        "jvs_transfer": {
+          "all_queries": 900,
+          "coverage": 0.9877777777777778,
+          "eer": 0.047244094488188976,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.06126436781609195,
+              "all_input_frr": 0.05333333333333334,
+              "false_accepts": 1599,
+              "false_rejects": 37,
+              "far": 0.06202241961134169,
+              "frr": 0.04161979752530934,
+              "genuine": 889,
+              "impostor": 25781,
+              "threshold": 0.6463991254568101
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.025517241379310347,
+              "all_input_frr": 0.08333333333333333,
+              "false_accepts": 666,
+              "false_rejects": 64,
+              "far": 0.025832977774329934,
+              "frr": 0.0719910011248594,
+              "genuine": 889,
+              "impostor": 25781,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.0771264367816092,
+              "all_input_frr": 0.04111111111111111,
+              "false_accepts": 2013,
+              "false_rejects": 26,
+              "far": 0.07808075714673597,
+              "frr": 0.02924634420697413,
+              "genuine": 889,
+              "impostor": 25781,
+              "threshold": 0.6374205784364181
+            }
+          },
+          "scored_queries": 889
+        },
+        "thresholds": {
+          "eer_operating": 0.6520317034287887,
+          "far_0_1pct": 0.7462284515301387,
+          "far_1pct": 0.702676247147953
+        }
+      },
+      "vowels4": {
+        "calibrated": {
+          "all_queries": 900,
+          "coverage": 0.91,
+          "eer": 0.04395604395604396,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.04973180076628352,
+              "all_input_frr": 0.12666666666666668,
+              "false_accepts": 1298,
+              "false_rejects": 33,
+              "far": 0.05465033051239948,
+              "frr": 0.040293040293040296,
+              "genuine": 819,
+              "impostor": 23751,
+              "threshold": 0.650641413529714
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0003065134099616858,
+              "all_input_frr": 0.5488888888888889,
+              "false_accepts": 8,
+              "false_rejects": 413,
+              "far": 0.0003368279230348196,
+              "frr": 0.5042735042735043,
+              "genuine": 819,
+              "impostor": 23751,
+              "threshold": 0.7466531255665948
+            },
+            "far_1pct": {
+              "all_input_far": 0.006398467432950192,
+              "all_input_frr": 0.23444444444444446,
+              "false_accepts": 167,
+              "false_rejects": 130,
+              "far": 0.0070312828933518584,
+              "frr": 0.15873015873015872,
+              "genuine": 819,
+              "impostor": 23751,
+              "threshold": 0.7014820906851028
+            }
+          },
+          "scored_queries": 819
+        },
+        "jvs_transfer": {
+          "all_queries": 900,
+          "coverage": 0.91,
+          "eer": 0.04395604395604396,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.05681992337164751,
+              "all_input_frr": 0.12555555555555556,
+              "false_accepts": 1483,
+              "false_rejects": 32,
+              "far": 0.06243947623257968,
+              "frr": 0.03907203907203907,
+              "genuine": 819,
+              "impostor": 23751,
+              "threshold": 0.6463991254568101
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.02379310344827586,
+              "all_input_frr": 0.15,
+              "false_accepts": 621,
+              "false_rejects": 54,
+              "far": 0.02614626752557787,
+              "frr": 0.06593406593406594,
+              "genuine": 819,
+              "impostor": 23751,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.07164750957854406,
+              "all_input_frr": 0.11444444444444445,
+              "false_accepts": 1870,
+              "false_rejects": 22,
+              "far": 0.07873352700938908,
+              "frr": 0.026862026862026864,
+              "genuine": 819,
+              "impostor": 23751,
+              "threshold": 0.6374205784364181
+            }
+          },
+          "scored_queries": 819
+        },
+        "thresholds": {
+          "eer_operating": 0.650641413529714,
+          "far_0_1pct": 0.7466531255665948,
+          "far_1pct": 0.7014820906851028
+        }
+      },
+      "vowels5": {
+        "calibrated": {
+          "all_queries": 900,
+          "coverage": 0.6455555555555555,
+          "eer": 0.039586919104991396,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.0367816091954023,
+              "all_input_frr": 0.37666666666666665,
+              "false_accepts": 960,
+              "false_rejects": 20,
+              "far": 0.056976675173600805,
+              "frr": 0.03442340791738382,
+              "genuine": 581,
+              "impostor": 16849,
+              "threshold": 0.6491808692614238
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.00022988505747126436,
+              "all_input_frr": 0.66,
+              "false_accepts": 6,
+              "false_rejects": 275,
+              "far": 0.00035610421983500506,
+              "frr": 0.47332185886402756,
+              "genuine": 581,
+              "impostor": 16849,
+              "threshold": 0.7466531255665948
+            },
+            "far_1pct": {
+              "all_input_far": 0.004406130268199234,
+              "all_input_frr": 0.44222222222222224,
+              "false_accepts": 115,
+              "false_rejects": 79,
+              "far": 0.00682533088017093,
+              "frr": 0.1359724612736661,
+              "genuine": 581,
+              "impostor": 16849,
+              "threshold": 0.7023868759473166
+            }
+          },
+          "scored_queries": 581
+        },
+        "jvs_transfer": {
+          "all_queries": 900,
+          "coverage": 0.6455555555555555,
+          "eer": 0.039586919104991396,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.04003831417624521,
+              "all_input_frr": 0.37666666666666665,
+              "false_accepts": 1045,
+              "false_rejects": 20,
+              "far": 0.06202148495459671,
+              "frr": 0.03442340791738382,
+              "genuine": 581,
+              "impostor": 16849,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.015938697318007664,
+              "all_input_frr": 0.3888888888888889,
+              "false_accepts": 416,
+              "false_rejects": 31,
+              "far": 0.024689892575227017,
+              "frr": 0.05335628227194492,
+              "genuine": 581,
+              "impostor": 16849,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.050919540229885055,
+              "all_input_frr": 0.3688888888888889,
+              "false_accepts": 1329,
+              "false_rejects": 13,
+              "far": 0.07887708469345361,
+              "frr": 0.022375215146299483,
+              "genuine": 581,
+              "impostor": 16849,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 581
+        },
+        "thresholds": {
+          "eer_operating": 0.6491808692614238,
+          "far_0_1pct": 0.7466531255665948,
+          "far_1pct": 0.7023868759473166
+        }
+      }
+    },
+    "validation": {
+      "vowels3_phones5": {
+        "calibrated": {
+          "all_queries": 900,
+          "coverage": 0.9955555555555555,
+          "eer": 0.05484144088669951,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.05459770114942529,
+              "all_input_frr": 0.058888888888888886,
+              "false_accepts": 1425,
+              "false_rejects": 49,
+              "far": 0.05484144088669951,
+              "frr": 0.0546875,
+              "genuine": 896,
+              "impostor": 25984,
+              "threshold": 0.6520317034287887
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0009578544061302681,
+              "all_input_frr": 0.4711111111111111,
+              "false_accepts": 25,
+              "false_rejects": 420,
+              "far": 0.0009621305418719212,
+              "frr": 0.46875,
+              "genuine": 896,
+              "impostor": 25984,
+              "threshold": 0.7462284515301387
+            },
+            "far_1pct": {
+              "all_input_far": 0.00992337164750958,
+              "all_input_frr": 0.2011111111111111,
+              "false_accepts": 259,
+              "false_rejects": 177,
+              "far": 0.009967672413793104,
+              "frr": 0.19754464285714285,
+              "genuine": 896,
+              "impostor": 25984,
+              "threshold": 0.702676247147953
+            }
+          },
+          "scored_queries": 896
+        },
+        "jvs_transfer": {
+          "all_queries": 900,
+          "coverage": 0.9955555555555555,
+          "eer": 0.05484144088669951,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.06340996168582376,
+              "all_input_frr": 0.044444444444444446,
+              "false_accepts": 1655,
+              "false_rejects": 36,
+              "far": 0.06369304187192118,
+              "frr": 0.04017857142857143,
+              "genuine": 896,
+              "impostor": 25984,
+              "threshold": 0.6463991254568101
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.030153256704980844,
+              "all_input_frr": 0.09888888888888889,
+              "false_accepts": 787,
+              "false_rejects": 85,
+              "far": 0.03028786945812808,
+              "frr": 0.09486607142857142,
+              "genuine": 896,
+              "impostor": 25984,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.07773946360153257,
+              "all_input_frr": 0.034444444444444444,
+              "false_accepts": 2029,
+              "false_rejects": 27,
+              "far": 0.07808651477832512,
+              "frr": 0.030133928571428572,
+              "genuine": 896,
+              "impostor": 25984,
+              "threshold": 0.6374205784364181
+            }
+          },
+          "scored_queries": 896
+        },
+        "thresholds": {
+          "eer_operating": 0.6520317034287887,
+          "far_0_1pct": 0.7462284515301387,
+          "far_1pct": 0.702676247147953
+        }
+      },
+      "vowels4": {
+        "calibrated": {
+          "all_queries": 900,
+          "coverage": 0.9411111111111111,
+          "eer": 0.05430932703659976,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.051111111111111114,
+              "all_input_frr": 0.11,
+              "false_accepts": 1334,
+              "false_rejects": 46,
+              "far": 0.05430932703659976,
+              "frr": 0.05430932703659976,
+              "genuine": 847,
+              "impostor": 24563,
+              "threshold": 0.650641413529714
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0009195402298850574,
+              "all_input_frr": 0.5055555555555555,
+              "false_accepts": 24,
+              "false_rejects": 402,
+              "far": 0.0009770793469853032,
+              "frr": 0.47461629279811096,
+              "genuine": 847,
+              "impostor": 24563,
+              "threshold": 0.7466531255665948
+            },
+            "far_1pct": {
+              "all_input_far": 0.009386973180076629,
+              "all_input_frr": 0.24555555555555555,
+              "false_accepts": 245,
+              "false_rejects": 168,
+              "far": 0.009974351667141636,
+              "frr": 0.19834710743801653,
+              "genuine": 847,
+              "impostor": 24563,
+              "threshold": 0.7014820906851028
+            }
+          },
+          "scored_queries": 847
+        },
+        "jvs_transfer": {
+          "all_queries": 900,
+          "coverage": 0.9411111111111111,
+          "eer": 0.05430932703659976,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.0575095785440613,
+              "all_input_frr": 0.09888888888888889,
+              "false_accepts": 1501,
+              "false_rejects": 36,
+              "far": 0.061108170826039164,
+              "frr": 0.04250295159386069,
+              "genuine": 847,
+              "impostor": 24563,
+              "threshold": 0.6463991254568101
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.027011494252873563,
+              "all_input_frr": 0.1511111111111111,
+              "false_accepts": 705,
+              "false_rejects": 83,
+              "far": 0.02870170581769328,
+              "frr": 0.09799291617473435,
+              "genuine": 847,
+              "impostor": 24563,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.07080459770114943,
+              "all_input_frr": 0.08888888888888889,
+              "false_accepts": 1848,
+              "false_rejects": 27,
+              "far": 0.07523510971786834,
+              "frr": 0.031877213695395513,
+              "genuine": 847,
+              "impostor": 24563,
+              "threshold": 0.6374205784364181
+            }
+          },
+          "scored_queries": 847
+        },
+        "thresholds": {
+          "eer_operating": 0.650641413529714,
+          "far_0_1pct": 0.7466531255665948,
+          "far_1pct": 0.7014820906851028
+        }
+      },
+      "vowels5": {
+        "calibrated": {
+          "all_queries": 900,
+          "coverage": 0.7544444444444445,
+          "eer": 0.055964653902798235,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.042222222222222223,
+              "all_input_frr": 0.2877777777777778,
+              "false_accepts": 1102,
+              "false_rejects": 38,
+              "far": 0.055964653902798235,
+              "frr": 0.055964653902798235,
+              "genuine": 679,
+              "impostor": 19691,
+              "threshold": 0.6491808692614238
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0007279693486590039,
+              "all_input_frr": 0.59,
+              "false_accepts": 19,
+              "false_rejects": 310,
+              "far": 0.0009649078259103144,
+              "frr": 0.4565537555228277,
+              "genuine": 679,
+              "impostor": 19691,
+              "threshold": 0.7466531255665948
+            },
+            "far_1pct": {
+              "all_input_far": 0.007509578544061302,
+              "all_input_frr": 0.39,
+              "false_accepts": 196,
+              "false_rejects": 130,
+              "far": 0.009953785993601137,
+              "frr": 0.19145802650957292,
+              "genuine": 679,
+              "impostor": 19691,
+              "threshold": 0.7023868759473166
+            }
+          },
+          "scored_queries": 679
+        },
+        "jvs_transfer": {
+          "all_queries": 900,
+          "coverage": 0.7544444444444445,
+          "eer": 0.055964653902798235,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.046245210727969346,
+              "all_input_frr": 0.2811111111111111,
+              "false_accepts": 1207,
+              "false_rejects": 32,
+              "far": 0.06129703925651313,
+              "frr": 0.047128129602356406,
+              "genuine": 679,
+              "impostor": 19691,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.021992337164750957,
+              "all_input_frr": 0.32222222222222224,
+              "false_accepts": 574,
+              "false_rejects": 69,
+              "far": 0.02915037326697476,
+              "frr": 0.101620029455081,
+              "genuine": 679,
+              "impostor": 19691,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.056743295019157085,
+              "all_input_frr": 0.27111111111111114,
+              "false_accepts": 1481,
+              "false_rejects": 23,
+              "far": 0.07521202579858818,
+              "frr": 0.033873343151693665,
+              "genuine": 679,
+              "impostor": 19691,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 679
+        },
+        "thresholds": {
+          "eer_operating": 0.6491808692614238,
+          "far_0_1pct": 0.7466531255665948,
+          "far_1pct": 0.7023868759473166
+        }
+      }
+    }
+  }
+}
