@@ -1,0 +1,11 @@
+{
+  "run_directory": "artifacts/phoneme-corpus-scaling/review-100-20261011-v1",
+  "source_run": "artifacts/phoneme-corpus-scaling/jtube-20261011-v1",
+  "runtime_freeze": "artifacts/phoneme-live-recording/pilot-20261011-v2/protocol-freeze.json",
+  "utterance_seed": 20261112,
+  "segment_seed": 20261113,
+  "display_seed": 20261114,
+  "sample_size": 100,
+  "sampling_frame": "one random utterance per training speaker from the frozen 50 selected clips, then approximately equal allocation across available model phonemes after QC",
+  "adoption_status": "awaiting human review; no additional training authorized"
+}
