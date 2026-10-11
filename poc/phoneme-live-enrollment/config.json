@@ -1,0 +1,12 @@
+{
+  "run_directory": "artifacts/phoneme-live-enrollment/prefix-screen-20261011-v1",
+  "screen_run": "artifacts/phoneme-live-impostor/corpus-screen-20261011-v1",
+  "prefix_run": "artifacts/phoneme-live-analysis/enrollment-prefix-20261011-v1",
+  "prefixes": [5, 10, 15, 20],
+  "modes": ["native", "common"],
+  "arm": "adaptive1",
+  "threshold_policy": "Reuse both frozen 20-recording validation thresholds without recalibration for any prefix or mode",
+  "scope": "Exploratory paired comparison on observed one-person live recordings and observed Common Voice test candidates; not independent authentication validation",
+  "recording_collection": "Ended for now at user request; reuse saved data only",
+  "adoption": "No live enrollment, model, threshold or device changes"
+}
