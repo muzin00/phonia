@@ -285,6 +285,13 @@ encoderの追加学習では、元の全36音素encoder/headから、cleanのみ
 ただし拡張後も20dB雑音FARは6.397%、帯域制限FRRは97.333%。clean・残響・CVの点推定も悪化し、この混合拡張モデルをそのまま採用しないと判断した。
 [追加学習の固定設計](phoneme-recording-augmentation/README.md)、[全seed測定表](phoneme-recording-augmentation/evaluation-results.md)、[結論](phoneme-recording-augmentation/interpretation.md)を参照する。
 
+
+録音条件拡張を12 arm（clean/混合/単独5条件/1条件除去5条件）×3 seedへ分解し、対照を含む37モデルを評価した。
+混合から10dB雑音だけを除くと10dB評価EERが13.699→22.619%となり、強雑音への寄与を確認した。一方、雑音単独拡張では残響FRRがclean対照8.667%から23.556%/21.556%へ悪化した。
+事前の開発スクリーニングを唯一通過した残響単独候補を固定して、新規Common Voice 60話者ラベル（校正30/test30）で確認した。主評価5母音FRRは44.074→43.852%、差の95%区間[−1.408, +0.778] ppで、改善基準を満たさなかった。
+今回の追加学習候補の導入は見送り、必要な母音・実区間数を確保する指定文や追加録音の検証を次の優先項目とする。
+[条件分解の設計](phoneme-recording-ablation/README.md)、[全比較表](phoneme-recording-ablation/evaluation-results.md)、[候補固定後の新規評価](phoneme-recording-ablation/holdout-results.md)、[結論](phoneme-recording-ablation/interpretation.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。

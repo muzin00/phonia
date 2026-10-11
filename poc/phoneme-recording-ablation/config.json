@@ -1,0 +1,51 @@
+{
+  "run_directory": "artifacts/phoneme-recording-ablation/condition-ablation-20261011-v1",
+  "quality_run": "artifacts/phoneme-recording-quality/quality-20261011-v1",
+  "training_clips": "reuse the frozen 10 clips per original training speaker from recording-quality selection",
+  "maximum_intervals_per_speaker_phone": 12,
+  "selection_seed": 20261028,
+  "augmentation_seed": 20261031,
+  "seeds": [
+    20261028,
+    20261029,
+    20261030
+  ],
+  "updates": 6000,
+  "learning_rate": 1e-05,
+  "weight_decay": 0.0001,
+  "warmup_updates": 100,
+  "conditions": [
+    "clean",
+    "gain-minus12",
+    "white-snr20",
+    "white-snr10",
+    "band-300-3400",
+    "reverb-rt60-0.3"
+  ],
+  "arms": [
+    "clean",
+    "augmented",
+    "single1",
+    "single2",
+    "single3",
+    "single4",
+    "single5",
+    "drop1",
+    "drop2",
+    "drop3",
+    "drop4",
+    "drop5"
+  ],
+  "augmentation": "singleN: same clean anchor, all second members condition N (50% total); dropN: original mixed schedule with condition N slots replaced by clean, other slots exactly unchanged (about 40% total); clean and mixed controls replayed",
+  "initialization": "same original final all36 encoder and classifier head; reset optimizer identically; fixed final update, no checkpoint selection",
+  "calibration": "each model clean JVS validation FAR1% reused for all JVS stress conditions; CV validation FAR1% separately; freeze all models and thresholds before test inference",
+  "bootstrap_seed": 20261032,
+  "bootstrap_replicates": 2000,
+  "evaluation": "same frozen JVS validation/test 150 queries each, all six conditions with fixed original boundaries; same CV validation/test 900 queries each; clean enrollment; no RMS normalization",
+  "scope": "predeclared all-five single-condition and all-five leave-one-out comparisons on previously observed development cohorts; no untouched-test claim; no candidate-dependent omission",
+  "source_run": "artifacts/phoneme-recording-augmentation/encoder-augmentation-20261011-v1",
+  "candidate_gate": {
+    "description": "Exploratory point-estimate screening against clean fine-tuning, both policies: JVS clean FAR increase <=0.001 and FRR increase <=0.01; reverb FRR increase <=0.01; CV FAR increase <=0.001 and FRR increase <=0.01; JVS white-snr20 and white-snr10 EER must both improve. A passing candidate requires fresh evaluation; not an adoption guarantee.",
+    "further_evaluation": "Only after this gate: freeze candidate, preprocessing and threshold calibration protocol before any unused cohort processing. No passing arm means no fresh data consumed."
+  }
+}

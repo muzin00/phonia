@@ -38,6 +38,8 @@ Phoniaは、音素単位の話者特徴を利用した音声本人認証の可�
 
 その後、音量前処理・同一発話の長さ制限・encoder追加学習まで比較しました。音量正規化は小音量を救済しましたが、雑音下とCommon Voice全体を改善しませんでした。録音条件を広げた追加学習は20dB雑音のEERを13.699→4.795%へ改善した一方、clean・残響・Common Voiceでは悪化する項目があり、今回の構成の採用は見送ります。短音声では必要な母音の不足が拒否の主因でした。[前処理・発話長の結論](poc/phoneme-recording-mitigation/interpretation.md)、[追加学習の結論](poc/phoneme-recording-augmentation/interpretation.md)にまとめました。
 
+拡張条件をさらに単独・1条件除去で比較したところ、強雑音への改善には10dB雑音拡張が大きく寄与する一方、雑音拡張に残響下の副作用も認められました。候補として残った残響単独モデルも、未使用Common Voice 60話者による確認で改善基準を満たさず、採用を見送りました。[条件分解と新規話者評価の結論](poc/phoneme-recording-ablation/interpretation.md)を参照してください。
+
 ## 初期PoCの実施履歴
 
 最初の検証対象は日本語の5母音 `/a/ /i/ /u/ /e/ /o/` です。Phase 1ではJuliusを母音区間の抽出方式に採用し、Phase 2ではJVS 100話者からPhase 3用の母音区間462,242件を構築しました。

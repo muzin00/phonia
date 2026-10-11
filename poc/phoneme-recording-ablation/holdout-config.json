@@ -1,0 +1,49 @@
+{
+  "run_directory": "artifacts/phoneme-recording-ablation/reverb-holdout-20261011-v1",
+  "cv_source": "artifacts/phoneme-training-data-expansion/training-data-20261008-v1",
+  "encoder_run": "artifacts/phoneme-all-training/all36-20261011-v1",
+  "encoder_trial": "trial-001-all36",
+  "encoder_sha256": "8ca55d2f1eb57f4466e70fc5e37a015236ed3bfd9e142af56feaa1d1759ebd72",
+  "speaker_seed": 20261101,
+  "clip_seed": 20261102,
+  "calibration_speakers": 30,
+  "test_speakers": 30,
+  "minimum_clips": 50,
+  "enrollment_clips": 20,
+  "query_clips": 30,
+  "enrollment_limit": 30,
+  "policies": [
+    {
+      "name": "vowels5",
+      "minimum_vowels": 5,
+      "minimum_phones": 5
+    },
+    {
+      "name": "vowels4",
+      "minimum_vowels": 4,
+      "minimum_phones": 4
+    }
+  ],
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261103,
+  "primary": "vowels5, mean of three seed metrics: reverb-only versus matched clean fine-tuning; separately calibrated at validation FAR1%",
+  "research_gate": {
+    "frr_difference_upper95_max": 0.0,
+    "far_difference_upper95_max": 0.001,
+    "description": "Primary vowels5 requires strictly negative upper 95% FRR difference and FAR increment upper <=0.1pp. Secondary vowels4 reported separately, not used to rescue a failing primary. This establishes at most CV benefit, not noise robustness or deployment."
+  },
+  "retrain": false,
+  "test_policy": "One frozen two-arm three-seed evaluation; no model/seed selection, no recalibration on test",
+  "duplicate_policy": "exclude all compressed-audio duplicate occurrences in the selected set; exclude all same-split PCM duplicates and PCM matches to existing model data or earlier calibration; retain query slots as rejection, no replacement",
+  "prior_holdout": "artifacts/phoneme-missing-vowel-holdout/cv60-20261011-v1",
+  "development_run": "artifacts/phoneme-recording-ablation/condition-ablation-20261011-v1",
+  "seeds": [
+    20261028,
+    20261029,
+    20261030
+  ],
+  "arms": [
+    "clean",
+    "single5"
+  ]
+}
