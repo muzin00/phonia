@@ -1,0 +1,14 @@
+{
+  "run_directory": "artifacts/phoneme-corpus-balance/five-seeds-20261011-v1",
+  "reference_run": "artifacts/phoneme-corpus-scaling/comparison-20261011-v1",
+  "replication_run": "artifacts/phoneme-corpus-seed-replication/five-seeds-20261011-v1",
+  "seeds": [20260926, 20261012, 20261013, 20261014, 20261015],
+  "conditions": {
+    "balanced280": ["jvs", "common_voice", "jtube"],
+    "cvweighted280": ["jvs", "common_voice", "jtube", "common_voice"]
+  },
+  "sampling_policy": "cyclic corpus quotas within each phone; unique eligible speakers; capacity-constrained redistribution; same positive pairs, phone sequence and total valid slots as original",
+  "comparison_policy": "primary paired control is original expanded280 of the same seed; report original baseline140 and expanded210 as context",
+  "outcome_policy": "report all conditions and seeds; assess CV FRR reduction and JTube EER tradeoff together; no best-seed selection or test-based threshold adjustment",
+  "interpretation": "exploratory sampling intervention on previously observed test sets; no claim of new-domain generalization"
+}

@@ -19,7 +19,7 @@ Common Voiceは280条件でFRRが44.22%→51.67%、差は＋7.44ポイント（9
 
 採点率は全モデル共通でJVS98.00%、CV64.56%、JTube59.83%。未採点は拒否に含めるため、JTubeには約40%のFRR下限が残る。モデルの分離性能と、必要な音素が揃って照合できる割合を分けて扱う。1 seed・JTube test20ラベルの探索結果であり、複数seedの再現性や実録音の運用性能は未確認。録音環境・ASR誤り・話者数・音声量の効果も分離できていない。
 
-この初回結果を受けて、以下の複数seed検証を実施した。次の優先検証はコーパス別の学習投入比率を揃えた条件で、JTubeの改善を保ちつつCVの本人拒否増加を抑えられるか調べること。テスト結果を見て今回の閾値やcheckpointを変更しない。
+この初回結果を受けて、以下の複数seed検証と学習投入比率の介入を実施した。テスト結果を見て今回の閾値やcheckpointを変更しない。
 
 ### 5seedによる再現検証
 
@@ -55,6 +55,46 @@ OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phone
 poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-corpus-seed-replication/replicate.py status
 OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-corpus-seed-replication/audit.py
 ```
+
+### 学習投入比率の介入
+
+5seed検証をPR #74としてマージ後、利用者の継続指示により[投入比率の検証](../phoneme-corpus-balance/run.py)を実施し、2026-10-11に学習・評価・監査まで完了した。280ラベル・音声・特徴量・5seed・初期encoder・損失・216,000更新・音素ごとの投入枠を固定し、話者の抽出方法だけを変更した。元の学習コードを編集せず、今回の実行中だけ固定した[sampler](../phoneme-corpus-balance/sampler.py)を注入した。元の280条件は各seedの完了済みモデルを再利用し、140・210条件も参考として併記する。
+
+比較条件はJVS:CV:JTubeを1:1:1とする`balanced280`、1:2:1とする`cvweighted280`の2種類。音素ごとに最大10話者×2区間を取り、同一グループ内の話者重複・同一区間の正例ペアを作らない。利用可能な話者の少ないコーパスの割当は他へ回し、全体の有効区間数と各音素の有効区間数が元の280条件と一致することを検査する。比率は希少音素では達成できないため、元の方式も含めたコーパス別・音素別の実投入数を保存する。
+
+2条件×5seedの全10モデルを学習した後、校正群のFAR1%から全閾値を固定してtestを採点した。主比較は同seedの元の280条件に対するCV本人拒否率の低下と、JTube EERの変化。全条件・全seed・FARも報告し、最良seedやtestを見た閾値を選んでいない。今回も全testは既観測であり、独立データへの汎化や録音環境だけの因果効果は示さない。
+
+5seedの平均値は次のとおり。本人拒否率には未採点を含む。
+
+| 評価・指標 | 元の280 | 均等280 | CV重点280 |
+| --- | ---: | ---: | ---: |
+| CV EER | 4.147% | 4.348% | 3.955% |
+| CV 本人拒否率 | 51.378% | 47.267% | 43.267% |
+| CV 他人受入率 | 0.198% | 0.350% | 0.614% |
+| JTube EER | 1.900% | 1.759% | 1.956% |
+| JTube 本人拒否率 | 42.067% | 41.433% | 41.833% |
+| JTube 他人受入率 | 0.716% | 0.923% | 0.989% |
+| JVS EER | 1.384% | 1.876% | 2.091% |
+| JVS 本人拒否率 | 4.133% | 5.227% | 4.667% |
+| JVS 他人受入率 | 0.691% | 0.920% | 1.735% |
+
+**CVへの投入を増やすと本人拒否は減ったが、全体改善には至っていない。** 均等条件のCV本人拒否は5/5seedで低下（平均−4.111ポイント）した一方、CV EERは4/5seedで悪化した。CV重点条件は本人拒否が5/5seedで低下（平均−8.111ポイント、各seed −10.222〜−6.333ポイント）、EERも4/5seedで低下した。ただしCVの他人受入は両条件とも5/5seedで増加している。
+
+均等条件のJTube EERは4/5seedで低下し、CV重点条件は平均＋0.056ポイントと元の280に近い。一方、CV重点条件のJVS EERと他人受入率は5/5seedで悪化した。JVS testの他人受入率は平均1.735%となり、校正群で狙った1%を超えている。追加コーパスで得た分離性能を保てる候補ではあるが、全コーパス・他人受入まで含めた置換モデルとして採用する根拠はない。
+
+最初のseedの実投入割合はJVS/CV/JTubeの順に、元の方式34.25/23.69/42.06%、均等条件34.85/32.86/32.29%、CV重点26.78/49.00/24.22%。希少音素の制約により目標比率と差がある。全seed・全条件の有効投入は21,060,000区間で、音素別の総投入も一致した。採点率は変化せず、音素不足などによる未採点の課題も残る。
+
+次は、保存済みスコアを使い、校正群とtestのずれ、および他人受入を揃えたときの本人拒否を診断する。あらかじめ固定した校正FAR目標の比較として実施し、testから運用閾値を選ばない。今回の本人拒否低下のうち、分離性能の改善と判定が通りやすくなった影響を切り分ける。
+
+```sh
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python -m unittest discover -s poc/phoneme-corpus-balance/tests
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-corpus-balance/run.py freeze
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-corpus-balance/run.py execute
+poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-corpus-balance/run.py status
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-corpus-balance/audit.py
+```
+
+出力先は`artifacts/phoneme-corpus-balance/five-seeds-20261011-v1`。サンプラーの新規テスト3件とRuff検査を通過した。[完了監査](../phoneme-corpus-balance/audit.py)は比較対象を含む25モデル、75校正閾値、test 1,425,000照合を検証し、2条件の学習投入順も全216,000更新分を再構成してhashの一致を確認した。全指標・SD・seed内差は[集計JSON](../../artifacts/phoneme-corpus-balance/five-seeds-20261011-v1/results.json)、[結果表](../../artifacts/phoneme-corpus-balance/five-seeds-20261011-v1/results.md)、[監査結果](../../artifacts/phoneme-corpus-balance/five-seeds-20261011-v1/completion-audit.json)を参照。
 
 詳細はローカルの[全指標](../../artifacts/phoneme-corpus-scaling/comparison-20261011-v1/results.json)と[結果表](../../artifacts/phoneme-corpus-scaling/comparison-20261011-v1/results.md)。入力・モデル・閾値hashは同runの各freezeに保存した。追加データのQC後区間数はtrain312,690・validation48,326・test40,234。全9,000件の監査、各split200区間の特徴量再計算（差0）、既存音声・新規音声間の同一PCM検査（除外対象0件）を通過した。人物レベルの重複がないという意味ではない。
 
