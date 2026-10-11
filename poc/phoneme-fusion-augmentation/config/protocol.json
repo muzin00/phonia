@@ -1,0 +1,25 @@
+{
+  "source_fusion_run": "artifacts/phoneme-transformer-fusion/fixed-all36-20261011-v1",
+  "run_directory": "artifacts/phoneme-fusion-augmentation/noise-missing-20261011-v1",
+  "training_protocol": "inherit source design: same encoder, architecture, seed, pairs, updates, optimizer, validation selection and threshold calibration",
+  "augmentation": {
+    "training_noise_seed": 20261019,
+    "schedule_seed_offset": 100000,
+    "mode_probabilities": [0.25, 0.25, 0.25, 0.25],
+    "mode_names": ["clean", "noise", "missing", "noise_and_missing"],
+    "noisy_query_interval_probability": 0.2,
+    "white_noise_snr_db": 10,
+    "missing_consonant_probability": 0.5,
+    "fixed_vowels_retained": true,
+    "enrollment_augmented": false,
+    "genuine_impostor_share_query_augmentation": true,
+    "noise_bank": "one reproducible waveform variant per training query; re-encode with frozen encoder",
+    "boundary_policy": "original clean slices and QC eligibility retained"
+  },
+  "test_scenarios": ["clean", "missing-half-consonants", "noise-20pct-intervals-snr10"],
+  "test_transforms": "reuse exact previous test waveforms, missing masks and scores; training noise seed differs from test 20261018",
+  "selection": "source rule: minimum clean validation normal EER; earliest update breaks ties; update zero eligible",
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20261014,
+  "original_test_previously_observed": true
+}

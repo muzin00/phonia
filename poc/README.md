@@ -243,6 +243,14 @@ Transformerのtest平均EERは通常1.497→1.186%、別文1.020→0.941%。3 se
 [設計と再現手順](phoneme-transformer-fusion/README.md)、[HTML比較表](phoneme-transformer-fusion/summary.html)、
 [全seedの測定結果](phoneme-transformer-fusion/evaluation-results.md)、[結果の解釈](phoneme-transformer-fusion/interpretation.md)を参照する。
 
+同じencoder・3 seed・学習ペア列・4,000更新・clean validation採用規則を固定し、trainにノイズと子音欠損を追加して再測定した。
+Transformerのtest平均EERは、ノイズ時に通常3.356→1.374%、別文3.401→1.166%へ低下した。
+一方、cleanは通常1.186→1.429%、別文0.941→1.136%、子音欠損は通常1.523→1.769%、別文0.887→1.166%へ上昇した。
+3 seedともノイズ時は改善したが、等重みのノイズEER（通常1.302%、別文1.093%）には平均で届いていない。
+ノイズへの弱さを学習で緩和できた一方、clean性能を保つという目的は達成できず、全条件での上位互換としては採用しない。
+[追加学習の固定条件](phoneme-fusion-augmentation/README.md)、[HTML比較表](phoneme-fusion-augmentation/evaluation-results.html)、
+[全seed・固定閾値FAR/FRR・信頼区間](phoneme-fusion-augmentation/evaluation-results.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。
