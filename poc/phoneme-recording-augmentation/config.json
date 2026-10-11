@@ -1,0 +1,22 @@
+{
+  "run_directory": "artifacts/phoneme-recording-augmentation/encoder-augmentation-20261011-v1",
+  "quality_run": "artifacts/phoneme-recording-quality/quality-20261011-v1",
+  "training_clips": "reuse the frozen 10 clips per original training speaker from recording-quality selection",
+  "maximum_intervals_per_speaker_phone": 12,
+  "selection_seed": 20261028,
+  "augmentation_seed": 20261031,
+  "seeds": [20261028, 20261029, 20261030],
+  "updates": 6000,
+  "learning_rate": 0.00001,
+  "weight_decay": 0.0001,
+  "warmup_updates": 100,
+  "conditions": ["clean", "gain-minus12", "white-snr20", "white-snr10", "band-300-3400", "reverb-rt60-0.3"],
+  "arms": ["clean", "augmented"],
+  "augmentation": "each phone-local positive pair: first member clean, second uses one of five synthetic conditions uniformly; clean arm uses identical source pairs without corruption",
+  "initialization": "same original final all36 encoder and classifier head; reset optimizer identically; fixed final update, no checkpoint selection",
+  "calibration": "each model clean JVS validation FAR1% reused for all JVS stress conditions; CV validation FAR1% separately; freeze all models and thresholds before test inference",
+  "bootstrap_seed": 20261032,
+  "bootstrap_replicates": 2000,
+  "evaluation": "same frozen JVS validation/test 150 queries each, all six conditions with fixed original boundaries; same CV validation/test 900 queries each; clean enrollment; no RMS normalization",
+  "scope": "exploratory matched-budget fine-tuning diagnosis; previously observed test; not full retraining, untouched-test proof, or production adoption"
+}

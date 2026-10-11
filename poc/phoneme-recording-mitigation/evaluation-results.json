@@ -1,0 +1,2212 @@
+{
+  "config": {
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261027,
+    "calibration": "separate original and normalized clean JVS validation FAR1%; no per-corruption recalibration; separate CV validation FAR1%; freeze before test",
+    "duration": "unprocessed JVS; nested windows from first retained phone start; only complete original raw phone boundaries inside window; common >=3sec eligible cohort; retained original embeddings",
+    "duration_seconds": [
+      1.0,
+      2.0,
+      3.0
+    ],
+    "maximum_gain_db": 24.0,
+    "normalization": "one whole-utterance gain before original fixed-boundary feature extraction; both enrollment and query; original support retained",
+    "peak_limit": 0.98,
+    "quality_run": "artifacts/phoneme-recording-quality/quality-20261011-v1",
+    "run_directory": "artifacts/phoneme-recording-mitigation/normalization-duration-20261011-v2",
+    "scope": "exploratory previously observed speakers; frozen encoder; no production adoption or untouched-test claim",
+    "target_active_rms_dbfs": -25.0
+  },
+  "duration": [
+    {
+      "changed": {
+        "coverage": 0.02666666666666667,
+        "eer": 0.03571428571428571,
+        "false_accepts": 2,
+        "false_rejects": 147,
+        "far": 0.0009523809523809524,
+        "far_ci95": [
+          0.0,
+          0.004545454545454545
+        ],
+        "frr": 0.98,
+        "frr_ci95": [
+          0.9466666666666667,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          0.6489865270527926,
+          0.6957161736608756,
+          0.7115511948863665
+        ],
+        "impostor_score_quantiles": [
+          0.3046692400239408,
+          0.42770501073788514,
+          0.5884194455363534
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 4,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 146
+      },
+      "difference_ci95": {
+        "far": [
+          -0.008585858585858586,
+          0.0015
+        ],
+        "frr": [
+          0.88,
+          0.98
+        ]
+      },
+      "original": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 7,
+        "false_rejects": 7,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.01020408163265306
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.09333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6842261609766218,
+          0.7298835843017226,
+          0.7798238379034129
+        ],
+        "impostor_score_quantiles": [
+          0.25903296799144965,
+          0.4224362672845784,
+          0.5695691999922629
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 4
+      },
+      "policy": "vowels5",
+      "same_scored_queries": {
+        "changed": {
+          "coverage": 1.0,
+          "eer": 0.03571428571428571,
+          "false_accepts": 2,
+          "false_rejects": 1,
+          "far": 0.03571428571428571,
+          "far_ci95": [
+            0.0,
+            0.15
+          ],
+          "frr": 0.25,
+          "frr_ci95": [
+            0.0,
+            1.0
+          ],
+          "genuine_score_quantiles": [
+            0.6489865270527926,
+            0.6957161736608756,
+            0.7115511948863665
+          ],
+          "impostor_score_quantiles": [
+            0.3046692400239408,
+            0.42770501073788514,
+            0.5884194455363534
+          ],
+          "impostor_trials": 56,
+          "queries": 4,
+          "scored_queries": 4,
+          "speakers": 3,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        },
+        "difference_ci95": {
+          "far": [
+            0.0,
+            0.15
+          ],
+          "frr": [
+            0.0,
+            0.0
+          ]
+        },
+        "original": {
+          "coverage": 1.0,
+          "eer": 0.017857142857142856,
+          "false_accepts": 0,
+          "false_rejects": 1,
+          "far": 0.0,
+          "far_ci95": [
+            0.0,
+            0.0
+          ],
+          "frr": 0.25,
+          "frr_ci95": [
+            0.0,
+            1.0
+          ],
+          "genuine_score_quantiles": [
+            0.6377842276060881,
+            0.6919661692686772,
+            0.7354064611799044
+          ],
+          "impostor_score_quantiles": [
+            0.30590128831222263,
+            0.42645227358393045,
+            0.5760839011422114
+          ],
+          "impostor_trials": 56,
+          "queries": 4,
+          "scored_queries": 4,
+          "speakers": 3,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        }
+      },
+      "seconds": 1.0
+    },
+    {
+      "changed": {
+        "coverage": 0.36666666666666664,
+        "eer": 0.02857142857142857,
+        "false_accepts": 13,
+        "false_rejects": 98,
+        "far": 0.006190476190476191,
+        "far_ci95": [
+          0.0,
+          0.01894868421052631
+        ],
+        "frr": 0.6533333333333333,
+        "frr_ci95": [
+          0.6,
+          0.7066666666666667
+        ],
+        "genuine_score_quantiles": [
+          0.6611883524060249,
+          0.7164511531591415,
+          0.7900624096393585
+        ],
+        "impostor_score_quantiles": [
+          0.25327067191047326,
+          0.40864306901182446,
+          0.5616581540448325
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 55,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 95
+      },
+      "difference_ci95": {
+        "far": [
+          -0.0026595744680851063,
+          0.013919587628865969
+        ],
+        "frr": [
+          0.5733333333333334,
+          0.6933333333333334
+        ]
+      },
+      "original": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 7,
+        "false_rejects": 3,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.01020408163265306
+        ],
+        "frr": 0.02,
+        "frr_ci95": [
+          0.0,
+          0.05333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6846273710197873,
+          0.7298835843017226,
+          0.7796526953036135
+        ],
+        "impostor_score_quantiles": [
+          0.25596958561114186,
+          0.42202237270968523,
+          0.5692642801844555
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 0
+      },
+      "policy": "vowels4",
+      "same_scored_queries": {
+        "changed": {
+          "coverage": 1.0,
+          "eer": 0.02857142857142857,
+          "false_accepts": 13,
+          "false_rejects": 3,
+          "far": 0.016883116883116882,
+          "far_ci95": [
+            0.0,
+            0.052471221221221206
+          ],
+          "frr": 0.05454545454545454,
+          "frr_ci95": [
+            0.0,
+            0.13114754098360656
+          ],
+          "genuine_score_quantiles": [
+            0.6611883524060249,
+            0.7164511531591415,
+            0.7900624096393585
+          ],
+          "impostor_score_quantiles": [
+            0.25327067191047326,
+            0.40864306901182446,
+            0.5616581540448325
+          ],
+          "impostor_trials": 770,
+          "queries": 55,
+          "scored_queries": 55,
+          "speakers": 15,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        },
+        "difference_ci95": {
+          "far": [
+            0.0,
+            0.05084807351202207
+          ],
+          "frr": [
+            0.0,
+            0.0847457627118644
+          ]
+        },
+        "original": {
+          "coverage": 1.0,
+          "eer": 0.01818181818181818,
+          "false_accepts": 3,
+          "false_rejects": 1,
+          "far": 0.003896103896103896,
+          "far_ci95": [
+            0.0,
+            0.016666666666666666
+          ],
+          "frr": 0.01818181818181818,
+          "frr_ci95": [
+            0.0,
+            0.055581761006289164
+          ],
+          "genuine_score_quantiles": [
+            0.687952225772958,
+            0.7241048961877823,
+            0.7785507549442374
+          ],
+          "impostor_score_quantiles": [
+            0.2680120973545429,
+            0.4275885945694013,
+            0.575645088134777
+          ],
+          "impostor_trials": 770,
+          "queries": 55,
+          "scored_queries": 55,
+          "speakers": 15,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        }
+      },
+      "seconds": 1.0
+    },
+    {
+      "changed": {
+        "coverage": 0.28,
+        "eer": 0.023809523809523808,
+        "false_accepts": 8,
+        "false_rejects": 110,
+        "far": 0.0038095238095238095,
+        "far_ci95": [
+          0.0,
+          0.010204355935922754
+        ],
+        "frr": 0.7333333333333333,
+        "frr_ci95": [
+          0.66,
+          0.8
+        ],
+        "genuine_score_quantiles": [
+          0.6685754768053691,
+          0.7147963042060534,
+          0.7766470359517382
+        ],
+        "impostor_score_quantiles": [
+          0.25482385635662536,
+          0.4123811572790146,
+          0.5610860890025027
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 42,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 108
+      },
+      "difference_ci95": {
+        "far": [
+          -0.00368421052631579,
+          0.0046403833762886535
+        ],
+        "frr": [
+          0.62,
+          0.7533333333333334
+        ]
+      },
+      "original": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 7,
+        "false_rejects": 7,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.01020408163265306
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.09333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6842261609766218,
+          0.7298835843017226,
+          0.7798238379034129
+        ],
+        "impostor_score_quantiles": [
+          0.25903296799144965,
+          0.4224362672845784,
+          0.5695691999922629
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 4
+      },
+      "policy": "vowels5",
+      "same_scored_queries": {
+        "changed": {
+          "coverage": 1.0,
+          "eer": 0.023809523809523808,
+          "false_accepts": 8,
+          "false_rejects": 2,
+          "far": 0.013605442176870748,
+          "far_ci95": [
+            0.0,
+            0.036679979455208817
+          ],
+          "frr": 0.047619047619047616,
+          "frr_ci95": [
+            0.0,
+            0.1111111111111111
+          ],
+          "genuine_score_quantiles": [
+            0.6685754768053691,
+            0.7147963042060534,
+            0.7766470359517382
+          ],
+          "impostor_score_quantiles": [
+            0.25482385635662536,
+            0.4123811572790146,
+            0.5610860890025027
+          ],
+          "impostor_trials": 588,
+          "queries": 42,
+          "scored_queries": 42,
+          "speakers": 14,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        },
+        "difference_ci95": {
+          "far": [
+            0.0,
+            0.031671979865771784
+          ],
+          "frr": [
+            0.0,
+            0.06822145877378413
+          ]
+        },
+        "original": {
+          "coverage": 1.0,
+          "eer": 0.01870748299319728,
+          "false_accepts": 1,
+          "false_rejects": 1,
+          "far": 0.0017006802721088435,
+          "far_ci95": [
+            0.0,
+            0.0091324200913242
+          ],
+          "frr": 0.023809523809523808,
+          "frr_ci95": [
+            0.0,
+            0.08108108108108109
+          ],
+          "genuine_score_quantiles": [
+            0.6748970312178135,
+            0.7266950905323029,
+            0.7769625100724978
+          ],
+          "impostor_score_quantiles": [
+            0.26930156958035445,
+            0.4211294557089391,
+            0.5688735805059734
+          ],
+          "impostor_trials": 588,
+          "queries": 42,
+          "scored_queries": 42,
+          "speakers": 14,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        }
+      },
+      "seconds": 2.0
+    },
+    {
+      "changed": {
+        "coverage": 0.82,
+        "eer": 0.01684088269454123,
+        "false_accepts": 23,
+        "false_rejects": 30,
+        "far": 0.010952380952380953,
+        "far_ci95": [
+          0.0015151515151515152,
+          0.029800452983442662
+        ],
+        "frr": 0.2,
+        "frr_ci95": [
+          0.13333333333333333,
+          0.26666666666666666
+        ],
+        "genuine_score_quantiles": [
+          0.668655751546224,
+          0.7282929420471191,
+          0.7822798163240605
+        ],
+        "impostor_score_quantiles": [
+          0.24208419473889548,
+          0.41066074190717755,
+          0.5634600845475992
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 123,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 27
+      },
+      "difference_ci95": {
+        "far": [
+          0.0,
+          0.02268041237113402
+        ],
+        "frr": [
+          0.12666666666666668,
+          0.23333333333333334
+        ]
+      },
+      "original": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 7,
+        "false_rejects": 3,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.01020408163265306
+        ],
+        "frr": 0.02,
+        "frr_ci95": [
+          0.0,
+          0.05333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6846273710197873,
+          0.7298835843017226,
+          0.7796526953036135
+        ],
+        "impostor_score_quantiles": [
+          0.25596958561114186,
+          0.42202237270968523,
+          0.5692642801844555
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 0
+      },
+      "policy": "vowels4",
+      "same_scored_queries": {
+        "changed": {
+          "coverage": 1.0,
+          "eer": 0.01684088269454123,
+          "false_accepts": 23,
+          "false_rejects": 3,
+          "far": 0.013356562137049941,
+          "far_ci95": [
+            0.0018425265674654428,
+            0.03576275407691941
+          ],
+          "frr": 0.024390243902439025,
+          "frr_ci95": [
+            0.0,
+            0.05172413793103448
+          ],
+          "genuine_score_quantiles": [
+            0.668655751546224,
+            0.7282929420471191,
+            0.7822798163240605
+          ],
+          "impostor_score_quantiles": [
+            0.24208419473889548,
+            0.41066074190717755,
+            0.5634600845475992
+          ],
+          "impostor_trials": 1722,
+          "queries": 123,
+          "scored_queries": 123,
+          "speakers": 15,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        },
+        "difference_ci95": {
+          "far": [
+            0.0,
+            0.026821796925498118
+          ],
+          "frr": [
+            0.0,
+            0.025
+          ]
+        },
+        "original": {
+          "coverage": 1.0,
+          "eer": 0.008130081300813009,
+          "false_accepts": 7,
+          "false_rejects": 2,
+          "far": 0.0040650406504065045,
+          "far_ci95": [
+            0.0,
+            0.011948998364213885
+          ],
+          "frr": 0.016260162601626018,
+          "frr_ci95": [
+            0.0,
+            0.04201680672268908
+          ],
+          "genuine_score_quantiles": [
+            0.6870493556323805,
+            0.7320629393353182,
+            0.7799521948532625
+          ],
+          "impostor_score_quantiles": [
+            0.2553232489831068,
+            0.4228840685770874,
+            0.5722168024629355
+          ],
+          "impostor_trials": 1722,
+          "queries": 123,
+          "scored_queries": 123,
+          "speakers": 15,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        }
+      },
+      "seconds": 2.0
+    },
+    {
+      "changed": {
+        "coverage": 0.6933333333333334,
+        "eer": 0.01098901098901099,
+        "false_accepts": 19,
+        "false_rejects": 47,
+        "far": 0.009047619047619047,
+        "far_ci95": [
+          0.0010416666666666667,
+          0.026020939625850337
+        ],
+        "frr": 0.31333333333333335,
+        "frr_ci95": [
+          0.22666666666666666,
+          0.4
+        ],
+        "genuine_score_quantiles": [
+          0.6723340617900803,
+          0.7227074199666579,
+          0.783524751663208
+        ],
+        "impostor_score_quantiles": [
+          0.2527139753458046,
+          0.4170288721409937,
+          0.5653217289596796
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 104,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 46
+      },
+      "difference_ci95": {
+        "far": [
+          -0.0005050505050505053,
+          0.01724401829697395
+        ],
+        "frr": [
+          0.19333333333333333,
+          0.3466666666666667
+        ]
+      },
+      "original": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 7,
+        "false_rejects": 7,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.01020408163265306
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.09333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6842261609766218,
+          0.7298835843017226,
+          0.7798238379034129
+        ],
+        "impostor_score_quantiles": [
+          0.25903296799144965,
+          0.4224362672845784,
+          0.5695691999922629
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 4
+      },
+      "policy": "vowels5",
+      "same_scored_queries": {
+        "changed": {
+          "coverage": 1.0,
+          "eer": 0.01098901098901099,
+          "false_accepts": 19,
+          "false_rejects": 1,
+          "far": 0.01304945054945055,
+          "far_ci95": [
+            0.0014903129657228018,
+            0.03663876696172364
+          ],
+          "frr": 0.009615384615384616,
+          "frr_ci95": [
+            0.0,
+            0.03192347288949892
+          ],
+          "genuine_score_quantiles": [
+            0.6723340617900803,
+            0.7227074199666579,
+            0.783524751663208
+          ],
+          "impostor_score_quantiles": [
+            0.2527139753458046,
+            0.4170288721409937,
+            0.5653217289596796
+          ],
+          "impostor_trials": 1456,
+          "queries": 104,
+          "scored_queries": 104,
+          "speakers": 15,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        },
+        "difference_ci95": {
+          "far": [
+            -0.0007084182244697516,
+            0.026395232005845818
+          ],
+          "frr": [
+            -0.03125,
+            0.0
+          ]
+        },
+        "original": {
+          "coverage": 1.0,
+          "eer": 0.009615384615384616,
+          "false_accepts": 6,
+          "false_rejects": 2,
+          "far": 0.004120879120879121,
+          "far_ci95": [
+            0.0,
+            0.010822845884765387
+          ],
+          "frr": 0.019230769230769232,
+          "frr_ci95": [
+            0.0,
+            0.05
+          ],
+          "genuine_score_quantiles": [
+            0.6871101133917508,
+            0.7286529121073809,
+            0.7768467232323529
+          ],
+          "impostor_score_quantiles": [
+            0.26185315836572265,
+            0.422619851249637,
+            0.5688898532014144
+          ],
+          "impostor_trials": 1456,
+          "queries": 104,
+          "scored_queries": 104,
+          "speakers": 15,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        }
+      },
+      "seconds": 3.0
+    },
+    {
+      "changed": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 23,
+        "false_rejects": 7,
+        "far": 0.010952380952380953,
+        "far_ci95": [
+          0.0015625,
+          0.03010204081632653
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.013333333333333334,
+          0.09333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6698428989698489,
+          0.723874334866802,
+          0.7820681345768463
+        ],
+        "impostor_score_quantiles": [
+          0.24764833745679685,
+          0.4142259119603878,
+          0.5644949471205473
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 4
+      },
+      "difference_ci95": {
+        "far": [
+          0.0,
+          0.021875
+        ],
+        "frr": [
+          0.006666666666666666,
+          0.04666666666666667
+        ]
+      },
+      "original": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 7,
+        "false_rejects": 3,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.01020408163265306
+        ],
+        "frr": 0.02,
+        "frr_ci95": [
+          0.0,
+          0.05333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6846273710197873,
+          0.7298835843017226,
+          0.7796526953036135
+        ],
+        "impostor_score_quantiles": [
+          0.25596958561114186,
+          0.42202237270968523,
+          0.5692642801844555
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 0
+      },
+      "policy": "vowels4",
+      "same_scored_queries": {
+        "changed": {
+          "coverage": 1.0,
+          "eer": 0.0136986301369863,
+          "false_accepts": 23,
+          "false_rejects": 3,
+          "far": 0.011252446183953033,
+          "far_ci95": [
+            0.0016024786780383794,
+            0.03102438241261141
+          ],
+          "frr": 0.02054794520547945,
+          "frr_ci95": [
+            0.0,
+            0.05517241379310345
+          ],
+          "genuine_score_quantiles": [
+            0.6698428989698489,
+            0.723874334866802,
+            0.7820681345768463
+          ],
+          "impostor_score_quantiles": [
+            0.24764833745679685,
+            0.4142259119603878,
+            0.5644949471205473
+          ],
+          "impostor_trials": 2044,
+          "queries": 146,
+          "scored_queries": 146,
+          "speakers": 15,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        },
+        "difference_ci95": {
+          "far": [
+            0.0,
+            0.022444092614278276
+          ],
+          "frr": [
+            0.0,
+            0.02097902097902098
+          ]
+        },
+        "original": {
+          "coverage": 1.0,
+          "eer": 0.00684931506849315,
+          "false_accepts": 7,
+          "false_rejects": 2,
+          "far": 0.003424657534246575,
+          "far_ci95": [
+            0.0,
+            0.010416666666666666
+          ],
+          "frr": 0.0136986301369863,
+          "frr_ci95": [
+            0.0,
+            0.034482758620689655
+          ],
+          "genuine_score_quantiles": [
+            0.6849816237939031,
+            0.7291543799367818,
+            0.7795816036708214
+          ],
+          "impostor_score_quantiles": [
+            0.25607505765743555,
+            0.42202237270968523,
+            0.5689061258968554
+          ],
+          "impostor_trials": 2044,
+          "queries": 146,
+          "scored_queries": 146,
+          "speakers": 15,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 0
+        }
+      },
+      "seconds": 3.0
+    }
+  ],
+  "normalization": [
+    {
+      "changed": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.007338551859099804,
+        "false_accepts": 4,
+        "false_rejects": 6,
+        "far": 0.0019047619047619048,
+        "far_ci95": [
+          0.0,
+          0.007144698085419725
+        ],
+        "frr": 0.04,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.08666666666666667
+        ],
+        "genuine_score_quantiles": [
+          0.6836253845377973,
+          0.7306233597429175,
+          0.7786008516416193
+        ],
+        "impostor_score_quantiles": [
+          0.23955389905128288,
+          0.41772249066049144,
+          0.5674629781669692
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 4
+      },
+      "condition": "clean",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          -0.005319148936170213,
+          0.002061855670103093
+        ],
+        "frr": [
+          -0.020000000000000004,
+          0.0
+        ]
+      },
+      "original": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 7,
+        "false_rejects": 7,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.01020408163265306
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.09333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6842261609766218,
+          0.7298835843017226,
+          0.7798238379034129
+        ],
+        "impostor_score_quantiles": [
+          0.25903296799144965,
+          0.4224362672845784,
+          0.5695691999922629
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 4
+      },
+      "policy": "vowels5"
+    },
+    {
+      "changed": {
+        "coverage": 1.0,
+        "eer": 0.007142857142857143,
+        "false_accepts": 4,
+        "false_rejects": 2,
+        "far": 0.0019047619047619048,
+        "far_ci95": [
+          0.0,
+          0.007144698085419725
+        ],
+        "frr": 0.013333333333333334,
+        "frr_ci95": [
+          0.0,
+          0.04
+        ],
+        "genuine_score_quantiles": [
+          0.684100926581182,
+          0.7306233597429175,
+          0.7785351622232142
+        ],
+        "impostor_score_quantiles": [
+          0.2381579148450068,
+          0.4170128342119001,
+          0.5674228205268544
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 0
+      },
+      "condition": "clean",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          -0.005319148936170213,
+          0.002061855670103093
+        ],
+        "frr": [
+          -0.02,
+          0.0
+        ]
+      },
+      "original": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 7,
+        "false_rejects": 3,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.01020408163265306
+        ],
+        "frr": 0.02,
+        "frr_ci95": [
+          0.0,
+          0.05333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6846273710197873,
+          0.7298835843017226,
+          0.7796526953036135
+        ],
+        "impostor_score_quantiles": [
+          0.25596958561114186,
+          0.42202237270968523,
+          0.5692642801844555
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 0
+      },
+      "policy": "vowels4"
+    },
+    {
+      "changed": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 5,
+        "false_rejects": 8,
+        "far": 0.002380952380952381,
+        "far_ci95": [
+          0.0,
+          0.009375
+        ],
+        "frr": 0.05333333333333334,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.11333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6847200273683196,
+          0.7310628569439838,
+          0.7793153740027372
+        ],
+        "impostor_score_quantiles": [
+          0.23909613457165269,
+          0.4220490030847587,
+          0.5710707702961835
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 4
+      },
+      "condition": "gain-minus12",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          0.0,
+          0.009375
+        ],
+        "frr": [
+          -0.39350000000000007,
+          -0.08666666666666667
+        ]
+      },
+      "original": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.04794520547945205,
+        "false_accepts": 0,
+        "false_rejects": 43,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.2866666666666667,
+        "frr_ci95": [
+          0.12650000000000003,
+          0.46683333333333243
+        ],
+        "genuine_score_quantiles": [
+          0.5839635998184918,
+          0.6678510548775656,
+          0.7279139014454228
+        ],
+        "impostor_score_quantiles": [
+          0.24506494122508327,
+          0.400571928604653,
+          0.5307483110726803
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 4
+      },
+      "policy": "vowels5"
+    },
+    {
+      "changed": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 5,
+        "false_rejects": 4,
+        "far": 0.002380952380952381,
+        "far_ci95": [
+          0.0,
+          0.009375
+        ],
+        "frr": 0.02666666666666667,
+        "frr_ci95": [
+          0.0,
+          0.06666666666666667
+        ],
+        "genuine_score_quantiles": [
+          0.6847917365870978,
+          0.7310628569439838,
+          0.7789382214756573
+        ],
+        "impostor_score_quantiles": [
+          0.23861196241208485,
+          0.42170554103427815,
+          0.5709497334063054
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 0
+      },
+      "condition": "gain-minus12",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          0.0,
+          0.009375
+        ],
+        "frr": [
+          -0.42,
+          -0.09983333333333423
+        ]
+      },
+      "original": {
+        "coverage": 1.0,
+        "eer": 0.04666666666666667,
+        "false_accepts": 0,
+        "false_rejects": 41,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.2733333333333333,
+        "frr_ci95": [
+          0.11333333333333333,
+          0.46
+        ],
+        "genuine_score_quantiles": [
+          0.5841915918372528,
+          0.6674709568421047,
+          0.7276898322251474
+        ],
+        "impostor_score_quantiles": [
+          0.2445976590400028,
+          0.40028845959980236,
+          0.530504703106526
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 0
+      },
+      "policy": "vowels4"
+    },
+    {
+      "changed": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.17857142857142858,
+        "false_accepts": 135,
+        "false_rejects": 55,
+        "far": 0.06428571428571428,
+        "far_ci95": [
+          0.017549754960554626,
+          0.13000549450549448
+        ],
+        "frr": 0.36666666666666664,
+        "frr_ci95": [
+          0.17333333333333334,
+          0.5668333333333324
+        ],
+        "genuine_score_quantiles": [
+          0.5427854510122223,
+          0.6664722848521627,
+          0.7076183045594886
+        ],
+        "impostor_score_quantiles": [
+          0.33948652428713,
+          0.5033682782422093,
+          0.625066058738665
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 4
+      },
+      "condition": "white-snr20",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          -0.09739716198979591,
+          -0.006449897048730276
+        ],
+        "frr": [
+          0.05316666666666663,
+          0.34
+        ]
+      },
+      "original": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.136986301369863,
+        "false_accepts": 245,
+        "false_rejects": 27,
+        "far": 0.11666666666666667,
+        "far_ci95": [
+          0.054629578855012066,
+          0.19649621212121193
+        ],
+        "frr": 0.18,
+        "frr_ci95": [
+          0.05333333333333334,
+          0.3333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6201948162616062,
+          0.6892679689550085,
+          0.7262036987713405
+        ],
+        "impostor_score_quantiles": [
+          0.3889480277279714,
+          0.5200004087537147,
+          0.6428967764241653
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 4
+      },
+      "policy": "vowels5"
+    },
+    {
+      "changed": {
+        "coverage": 1.0,
+        "eer": 0.17857142857142858,
+        "false_accepts": 137,
+        "false_rejects": 51,
+        "far": 0.06523809523809523,
+        "far_ci95": [
+          0.017891812865497073,
+          0.1302374815905743
+        ],
+        "frr": 0.34,
+        "frr_ci95": [
+          0.14,
+          0.5533333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.5437558442746339,
+          0.6664722848521627,
+          0.7079252714460545
+        ],
+        "impostor_score_quantiles": [
+          0.3353025753916729,
+          0.5029647182746838,
+          0.624851422960108
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 0
+      },
+      "condition": "white-snr20",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          -0.10052674485125856,
+          -0.0085858585858586
+        ],
+        "frr": [
+          0.05316666666666663,
+          0.34
+        ]
+      },
+      "original": {
+        "coverage": 1.0,
+        "eer": 0.13333333333333333,
+        "false_accepts": 254,
+        "false_rejects": 23,
+        "far": 0.12095238095238095,
+        "far_ci95": [
+          0.056842105263157895,
+          0.19953568798653457
+        ],
+        "frr": 0.15333333333333332,
+        "frr_ci95": [
+          0.02666666666666667,
+          0.31333333333333335
+        ],
+        "genuine_score_quantiles": [
+          0.6216940854287819,
+          0.6892679689550085,
+          0.7259009494100298
+        ],
+        "impostor_score_quantiles": [
+          0.3889669171009297,
+          0.5190340872657926,
+          0.6438899325174199
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 0
+      },
+      "policy": "vowels4"
+    },
+    {
+      "changed": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.3493150684931507,
+        "false_accepts": 4,
+        "false_rejects": 146,
+        "far": 0.0019047619047619048,
+        "far_ci95": [
+          0.0,
+          0.009183673469387756
+        ],
+        "frr": 0.9733333333333334,
+        "frr_ci95": [
+          0.92,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          0.3881883948091783,
+          0.5519936041799105,
+          0.6227973023527547
+        ],
+        "impostor_score_quantiles": [
+          0.3058696250617504,
+          0.46490559733726766,
+          0.5730949373814193
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 4
+      },
+      "condition": "white-snr10",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          -0.07368488876831254,
+          -0.0005100752422181005
+        ],
+        "frr": [
+          0.06000000000000005,
+          0.30666666666666675
+        ]
+      },
+      "original": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.3013698630136986,
+        "false_accepts": 70,
+        "false_rejects": 121,
+        "far": 0.03333333333333333,
+        "far_ci95": [
+          0.003997222222222222,
+          0.07474871134020615
+        ],
+        "frr": 0.8066666666666666,
+        "frr_ci95": [
+          0.6466666666666666,
+          0.94
+        ],
+        "genuine_score_quantiles": [
+          0.45572247850624,
+          0.5758249593593019,
+          0.6461797368369604
+        ],
+        "impostor_score_quantiles": [
+          0.3583557018258355,
+          0.48288945890963075,
+          0.6065274073183536
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 4
+      },
+      "policy": "vowels5"
+    },
+    {
+      "changed": {
+        "coverage": 1.0,
+        "eer": 0.3466666666666667,
+        "false_accepts": 4,
+        "false_rejects": 146,
+        "far": 0.0019047619047619048,
+        "far_ci95": [
+          0.0,
+          0.009183673469387756
+        ],
+        "frr": 0.9733333333333334,
+        "frr_ci95": [
+          0.92,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          0.3911928351530258,
+          0.5553375559430274,
+          0.623151881231202
+        ],
+        "impostor_score_quantiles": [
+          0.3047003954804192,
+          0.4647453816976139,
+          0.5729812508144162
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 0
+      },
+      "condition": "white-snr10",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          -0.07938866545825309,
+          -0.0010101010101010105
+        ],
+        "frr": [
+          0.06000000000000005,
+          0.31333333333333335
+        ]
+      },
+      "original": {
+        "coverage": 1.0,
+        "eer": 0.30095238095238097,
+        "false_accepts": 75,
+        "false_rejects": 120,
+        "far": 0.03571428571428571,
+        "far_ci95": [
+          0.00425531914893617,
+          0.07990217270812545
+        ],
+        "frr": 0.8,
+        "frr_ci95": [
+          0.6333333333333333,
+          0.94
+        ],
+        "genuine_score_quantiles": [
+          0.45670696208422834,
+          0.5773141417542802,
+          0.6459076664165446
+        ],
+        "impostor_score_quantiles": [
+          0.35829704939677387,
+          0.4821353184266223,
+          0.6075806592042584
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 0
+      },
+      "policy": "vowels4"
+    },
+    {
+      "changed": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.3356164383561644,
+        "false_accepts": 0,
+        "false_rejects": 150,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          0.0006872318799602475,
+          0.097433949352449,
+          0.1639493170623947
+        ],
+        "impostor_score_quantiles": [
+          -0.03131160542957092,
+          0.05114950370083833,
+          0.12139360674492056
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 4
+      },
+      "condition": "band-300-3400",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "original": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.363013698630137,
+        "false_accepts": 0,
+        "false_rejects": 150,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.0081983953677608,
+          0.07738041473402185,
+          0.16160386202864963
+        ],
+        "impostor_score_quantiles": [
+          -0.041995454035503296,
+          0.038633707889609716,
+          0.11617648543180467
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 4
+      },
+      "policy": "vowels5"
+    },
+    {
+      "changed": {
+        "coverage": 1.0,
+        "eer": 0.34,
+        "false_accepts": 0,
+        "false_rejects": 150,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.00012053840116343653,
+          0.09609804609125214,
+          0.1624023384325229
+        ],
+        "impostor_score_quantiles": [
+          -0.03148875587918399,
+          0.05065689043311233,
+          0.12163004604168236
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 0
+      },
+      "condition": "band-300-3400",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "original": {
+        "coverage": 1.0,
+        "eer": 0.36666666666666664,
+        "false_accepts": 0,
+        "false_rejects": 150,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.00874551517088293,
+          0.07620461950616916,
+          0.16254287468402512
+        ],
+        "impostor_score_quantiles": [
+          -0.042187943655465326,
+          0.0385917840779505,
+          0.11620402685232889
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 0
+      },
+      "policy": "vowels4"
+    },
+    {
+      "changed": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.018101761252446183,
+        "false_accepts": 4,
+        "false_rejects": 13,
+        "far": 0.0019047619047619048,
+        "far_ci95": [
+          0.0,
+          0.0067101355894217335
+        ],
+        "frr": 0.08666666666666667,
+        "frr_ci95": [
+          0.02666666666666667,
+          0.16
+        ],
+        "genuine_score_quantiles": [
+          0.6565091209976297,
+          0.7068454503620926,
+          0.7455464051050298
+        ],
+        "impostor_score_quantiles": [
+          0.25212354668411624,
+          0.42369864824025527,
+          0.5652529719330016
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 4
+      },
+      "condition": "reverb-rt60-0.3",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          -0.012503156565656566,
+          0.002083333333333333
+        ],
+        "frr": [
+          0.0,
+          0.04000000000000001
+        ]
+      },
+      "original": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.026418786692759294,
+        "false_accepts": 10,
+        "false_rejects": 11,
+        "far": 0.004761904761904762,
+        "far_ci95": [
+          0.0,
+          0.013636363636363636
+        ],
+        "frr": 0.07333333333333333,
+        "frr_ci95": [
+          0.02,
+          0.13333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6520027260175733,
+          0.7057605591259505,
+          0.7546426497791943
+        ],
+        "impostor_score_quantiles": [
+          0.27160908071832224,
+          0.4266551034688427,
+          0.5695767921209336
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 4
+      },
+      "policy": "vowels5"
+    },
+    {
+      "changed": {
+        "coverage": 1.0,
+        "eer": 0.017619047619047618,
+        "false_accepts": 4,
+        "false_rejects": 10,
+        "far": 0.0019047619047619048,
+        "far_ci95": [
+          0.0,
+          0.0067101355894217335
+        ],
+        "frr": 0.06666666666666667,
+        "frr_ci95": [
+          0.013333333333333334,
+          0.13333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6558692017668172,
+          0.7064074776674572,
+          0.7453296217497658
+        ],
+        "impostor_score_quantiles": [
+          0.25015441549300144,
+          0.42355856522917745,
+          0.5649939250236466
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6403374700319201,
+        "unscored_queries": 0
+      },
+      "condition": "reverb-rt60-0.3",
+      "corpus": "JVS",
+      "difference_ci95": {
+        "far": [
+          -0.012503156565656566,
+          0.002083333333333333
+        ],
+        "frr": [
+          0.0,
+          0.04000000000000001
+        ]
+      },
+      "original": {
+        "coverage": 1.0,
+        "eer": 0.025714285714285714,
+        "false_accepts": 10,
+        "false_rejects": 8,
+        "far": 0.004761904761904762,
+        "far_ci95": [
+          0.0,
+          0.013636363636363636
+        ],
+        "frr": 0.05333333333333334,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.11333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6514125585556031,
+          0.7048217804808365,
+          0.7544115369100319
+        ],
+        "impostor_score_quantiles": [
+          0.27047978473319245,
+          0.42547626249100035,
+          0.5691216222863448
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682520762735,
+        "unscored_queries": 0
+      },
+      "policy": "vowels4"
+    },
+    {
+      "changed": {
+        "coverage": 0.6455555555555555,
+        "eer": 0.042969909193423944,
+        "false_accepts": 111,
+        "false_rejects": 418,
+        "far": 0.004252873563218391,
+        "far_ci95": [
+          0.0005995203836930455,
+          0.0107004347084896
+        ],
+        "frr": 0.46444444444444444,
+        "frr_ci95": [
+          0.38552777777777775,
+          0.5455833333333332
+        ],
+        "genuine_score_quantiles": [
+          0.6900532146294912,
+          0.749862790107727,
+          0.7996730767190456
+        ],
+        "impostor_score_quantiles": [
+          0.32836597204208373,
+          0.47721797227859497,
+          0.6281342627166153
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 581,
+        "speakers": 30,
+        "threshold": 0.7058767921784346,
+        "unscored_queries": 319
+      },
+      "condition": "clean",
+      "corpus": "CV",
+      "difference_ci95": {
+        "far": [
+          -0.0012699931647300068,
+          0.000866875623228351
+        ],
+        "frr": [
+          -0.0011111111111111183,
+          0.04555555555555557
+        ]
+      },
+      "jvs_transfer": {
+        "changed": {
+          "coverage": 0.6455555555555555,
+          "eer": 0.042969909193423944,
+          "false_accepts": 1289,
+          "false_rejects": 335,
+          "far": 0.04938697318007663,
+          "far_ci95": [
+            0.02253584889159713,
+            0.08906039626252385
+          ],
+          "frr": 0.37222222222222223,
+          "frr_ci95": [
+            0.31333333333333335,
+            0.43777777777777777
+          ],
+          "genuine_score_quantiles": [
+            0.6900532146294912,
+            0.749862790107727,
+            0.7996730767190456
+          ],
+          "impostor_score_quantiles": [
+            0.32836597204208373,
+            0.47721797227859497,
+            0.6281342627166153
+          ],
+          "impostor_trials": 26100,
+          "queries": 900,
+          "scored_queries": 581,
+          "speakers": 30,
+          "threshold": 0.6403374700319201,
+          "unscored_queries": 319
+        },
+        "difference_ci95": {
+          "far": [
+            -0.009274140783527021,
+            0.0028521855063795474
+          ],
+          "frr": [
+            -0.0011111111111111183,
+            0.007777777777777828
+          ]
+        },
+        "original": {
+          "coverage": 0.6455555555555555,
+          "eer": 0.039586919104991396,
+          "false_accepts": 1376,
+          "false_rejects": 332,
+          "far": 0.05272030651340996,
+          "far_ci95": [
+            0.02658433734939759,
+            0.09011112795718851
+          ],
+          "frr": 0.3688888888888889,
+          "frr_ci95": [
+            0.31,
+            0.43224999999999986
+          ],
+          "genuine_score_quantiles": [
+            0.6915950391973767,
+            0.7491950765252113,
+            0.796337878704071
+          ],
+          "impostor_score_quantiles": [
+            0.3496978604432308,
+            0.48805882036685944,
+            0.6264970894698257
+          ],
+          "impostor_trials": 26100,
+          "queries": 900,
+          "scored_queries": 581,
+          "speakers": 30,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 319
+        }
+      },
+      "original": {
+        "coverage": 0.6455555555555555,
+        "eer": 0.039586919104991396,
+        "false_accepts": 115,
+        "false_rejects": 398,
+        "far": 0.004406130268199234,
+        "far_ci95": [
+          0.0007228915662650603,
+          0.011099921011058441
+        ],
+        "frr": 0.44222222222222224,
+        "frr_ci95": [
+          0.3710833333333333,
+          0.5200277777777776
+        ],
+        "genuine_score_quantiles": [
+          0.6915950391973767,
+          0.7491950765252113,
+          0.796337878704071
+        ],
+        "impostor_score_quantiles": [
+          0.3496978604432308,
+          0.48805882036685944,
+          0.6264970894698257
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 581,
+        "speakers": 30,
+        "threshold": 0.7023868759473166,
+        "unscored_queries": 319
+      },
+      "policy": "vowels5"
+    },
+    {
+      "changed": {
+        "coverage": 0.91,
+        "eer": 0.047619047619047616,
+        "false_accepts": 169,
+        "false_rejects": 232,
+        "far": 0.006475095785440613,
+        "far_ci95": [
+          0.0015698596014492754,
+          0.014622660407595548
+        ],
+        "frr": 0.2577777777777778,
+        "frr_ci95": [
+          0.18,
+          0.34002777777777765
+        ],
+        "genuine_score_quantiles": [
+          0.6861665974963795,
+          0.7469270860447603,
+          0.7974648118019104
+        ],
+        "impostor_score_quantiles": [
+          0.3291321804126104,
+          0.4778031517158855,
+          0.627842233369225
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 819,
+        "speakers": 30,
+        "threshold": 0.7037126211559073,
+        "unscored_queries": 81
+      },
+      "condition": "clean",
+      "corpus": "CV",
+      "difference_ci95": {
+        "far": [
+          -0.0015081168831168829,
+          0.0018073594614866075
+        ],
+        "frr": [
+          0.0,
+          0.046694444444444316
+        ]
+      },
+      "jvs_transfer": {
+        "changed": {
+          "coverage": 0.91,
+          "eer": 0.047619047619047616,
+          "false_accepts": 1810,
+          "false_rejects": 106,
+          "far": 0.06934865900383141,
+          "far_ci95": [
+            0.033291581395964075,
+            0.12177178183477175
+          ],
+          "frr": 0.11777777777777777,
+          "frr_ci95": [
+            0.07888888888888888,
+            0.16002777777777763
+          ],
+          "genuine_score_quantiles": [
+            0.6861665974963795,
+            0.7469270860447603,
+            0.7974648118019104
+          ],
+          "impostor_score_quantiles": [
+            0.3291321804126104,
+            0.4778031517158855,
+            0.627842233369225
+          ],
+          "impostor_trials": 26100,
+          "queries": 900,
+          "scored_queries": 819,
+          "speakers": 30,
+          "threshold": 0.6403374700319201,
+          "unscored_queries": 81
+        },
+        "difference_ci95": {
+          "far": [
+            -0.012411243448173482,
+            0.0028834827254619225
+          ],
+          "frr": [
+            -0.003333333333333341,
+            0.016666666666666663
+          ]
+        },
+        "original": {
+          "coverage": 0.91,
+          "eer": 0.04395604395604396,
+          "false_accepts": 1940,
+          "false_rejects": 101,
+          "far": 0.0743295019157088,
+          "far_ci95": [
+            0.03953986534372785,
+            0.12308788598574817
+          ],
+          "frr": 0.11222222222222222,
+          "frr_ci95": [
+            0.07555555555555556,
+            0.15333333333333332
+          ],
+          "genuine_score_quantiles": [
+            0.6864884241842306,
+            0.7452735389981952,
+            0.7966124574343364
+          ],
+          "impostor_score_quantiles": [
+            0.3498494806034224,
+            0.4882142586367471,
+            0.6263477842013041
+          ],
+          "impostor_trials": 26100,
+          "queries": 900,
+          "scored_queries": 819,
+          "speakers": 30,
+          "threshold": 0.6355682520762735,
+          "unscored_queries": 81
+        }
+      },
+      "original": {
+        "coverage": 0.91,
+        "eer": 0.04395604395604396,
+        "false_accepts": 167,
+        "false_rejects": 211,
+        "far": 0.006398467432950192,
+        "far_ci95": [
+          0.001634768740031898,
+          0.014868630617431926
+        ],
+        "frr": 0.23444444444444446,
+        "frr_ci95": [
+          0.16555555555555557,
+          0.31
+        ],
+        "genuine_score_quantiles": [
+          0.6864884241842306,
+          0.7452735389981952,
+          0.7966124574343364
+        ],
+        "impostor_score_quantiles": [
+          0.3498494806034224,
+          0.4882142586367471,
+          0.6263477842013041
+        ],
+        "impostor_trials": 26100,
+        "queries": 900,
+        "scored_queries": 819,
+        "speakers": 30,
+        "threshold": 0.7014820906851028,
+        "unscored_queries": 81
+      },
+      "policy": "vowels4"
+    }
+  ],
+  "verification": {
+    "maximum_float64_error": 6.337346947216105e-08,
+    "pcm_feature_probes": 24,
+    "score_reconstructions": 103500,
+    "status": "passed"
+  }
+}

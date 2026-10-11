@@ -1,0 +1,6839 @@
+{
+  "config": {
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261026,
+    "calibration": "original JVS validation thresholds primary; condition/mode-specific validation FAR1% thresholds diagnostic; freeze before stress-test processing",
+    "conditions": [
+      "clean",
+      "gain-minus12",
+      "white-snr20",
+      "white-snr10",
+      "band-300-3400",
+      "reverb-rt60-0.3"
+    ],
+    "cv_run": "artifacts/phoneme-missing-vowel-holdout/cv60-20261011-v1",
+    "cv_training": "artifacts/phoneme-training-data-expansion/training-data-20261008-v1",
+    "encoder_run": "artifacts/phoneme-all-training/all36-20261011-v1",
+    "encoder_trial": "trial-001-all36",
+    "jvs_run": "artifacts/phoneme-all-enrollment-scaling/all36-enrollment-20261011-v1/enrollment-30",
+    "maximum_frames": 6000,
+    "minimum_frames": 720,
+    "minimum_rms_dbfs": -50,
+    "missing_run": "artifacts/phoneme-all-missing-vowel-evaluation/all36-missing-vowels-20261011-v2",
+    "modes": [
+      "fixed",
+      "fixed_qc",
+      "realigned"
+    ],
+    "noise_seed": 20261025,
+    "policies": [
+      {
+        "minimum_phones": 5,
+        "minimum_vowels": 5,
+        "name": "vowels5"
+      },
+      {
+        "minimum_phones": 4,
+        "minimum_vowels": 4,
+        "name": "vowels4"
+      }
+    ],
+    "quality_strata": "Common Voice validation-query tertiles of energy contrast, active RMS, high-frequency power fraction and active duration; fixed application to test",
+    "run_directory": "artifacts/phoneme-recording-quality/quality-20261011-v1",
+    "scope": "exploratory diagnosis on previously observed evaluation speakers; no new model training or production adoption",
+    "selection_seed": 20261024,
+    "stress_queries_per_speaker": 10,
+    "training_clips_per_speaker": 10
+  },
+  "cv_crossed": [
+    {
+      "contrast": "low",
+      "contrast_boundary": 50.236758592679024,
+      "duration": "short",
+      "duration_boundary": 2.38,
+      "metrics": {
+        "coverage": 0.4758364312267658,
+        "eer": 0.032327586206896554,
+        "false_accepts": 33,
+        "false_rejects": 153,
+        "far": 0.004230226893987951,
+        "far_ci95": [
+          0.00041985842424802316,
+          0.01244748568348119
+        ],
+        "frr": 0.5687732342007435,
+        "frr_ci95": [
+          0.5038030733922068,
+          0.6451643335362142
+        ],
+        "genuine_score_quantiles": [
+          0.7027388037168063,
+          0.7468364094457929,
+          0.8004272161931781
+        ],
+        "impostor_score_quantiles": [
+          0.3615792914078786,
+          0.49580843143519904,
+          0.6222109651648915
+        ],
+        "impostor_trials": 7801,
+        "queries": 269,
+        "scored_queries": 128,
+        "speakers": 24,
+        "threshold": 0.7023868759473166
+      },
+      "policy": "vowels5"
+    },
+    {
+      "contrast": "low",
+      "contrast_boundary": 50.236758592679024,
+      "duration": "short",
+      "duration_boundary": 2.38,
+      "metrics": {
+        "coverage": 0.8698884758364313,
+        "eer": 0.03875626289419393,
+        "false_accepts": 62,
+        "false_rejects": 71,
+        "far": 0.007947699012947057,
+        "far_ci95": [
+          0.0012615078087844622,
+          0.021366923461521185
+        ],
+        "frr": 0.26394052044609667,
+        "frr_ci95": [
+          0.18885200243699254,
+          0.3440440677966099
+        ],
+        "genuine_score_quantiles": [
+          0.6901645966619253,
+          0.7443604315772201,
+          0.8009095973693408
+        ],
+        "impostor_score_quantiles": [
+          0.3615514693351892,
+          0.4958315814534823,
+          0.6249542705014222
+        ],
+        "impostor_trials": 7801,
+        "queries": 269,
+        "scored_queries": 234,
+        "speakers": 24,
+        "threshold": 0.7014820906851028
+      },
+      "policy": "vowels4"
+    },
+    {
+      "contrast": "low",
+      "contrast_boundary": 50.236758592679024,
+      "duration": "long",
+      "duration_boundary": 2.38,
+      "metrics": {
+        "coverage": 0.9395604395604396,
+        "eer": 0.023391812865497075,
+        "false_accepts": 39,
+        "false_rejects": 30,
+        "far": 0.007389162561576354,
+        "far_ci95": [
+          0.0007260293778374897,
+          0.02190159096616472
+        ],
+        "frr": 0.16483516483516483,
+        "frr_ci95": [
+          0.09325822388239546,
+          0.26220590046809555
+        ],
+        "genuine_score_quantiles": [
+          0.6991641640663147,
+          0.7557791436419767,
+          0.796328047911326
+        ],
+        "impostor_score_quantiles": [
+          0.35523966796257916,
+          0.4985419196241042,
+          0.6349353800217311
+        ],
+        "impostor_trials": 5278,
+        "queries": 182,
+        "scored_queries": 171,
+        "speakers": 23,
+        "threshold": 0.7023868759473166
+      },
+      "policy": "vowels5"
+    },
+    {
+      "contrast": "low",
+      "contrast_boundary": 50.236758592679024,
+      "duration": "long",
+      "duration_boundary": 2.38,
+      "metrics": {
+        "coverage": 1.0,
+        "eer": 0.02197802197802198,
+        "false_accepts": 43,
+        "false_rejects": 20,
+        "far": 0.0081470253884047,
+        "far_ci95": [
+          0.0010546565040556576,
+          0.023787905616479265
+        ],
+        "frr": 0.10989010989010989,
+        "frr_ci95": [
+          0.048777191825972316,
+          0.20301045582706764
+        ],
+        "genuine_score_quantiles": [
+          0.6992764457729127,
+          0.756781484160507,
+          0.7954465905041026
+        ],
+        "impostor_score_quantiles": [
+          0.35453958706930283,
+          0.49917989029061227,
+          0.6349516933783889
+        ],
+        "impostor_trials": 5278,
+        "queries": 182,
+        "scored_queries": 182,
+        "speakers": 23,
+        "threshold": 0.7014820906851028
+      },
+      "policy": "vowels4"
+    },
+    {
+      "contrast": "high",
+      "contrast_boundary": 50.236758592679024,
+      "duration": "short",
+      "duration_boundary": 2.38,
+      "metrics": {
+        "coverage": 0.47619047619047616,
+        "eer": 0.0374384236453202,
+        "false_accepts": 21,
+        "false_rejects": 179,
+        "far": 0.0024630541871921183,
+        "far_ci95": [
+          0.0,
+          0.0068189048241661665
+        ],
+        "frr": 0.608843537414966,
+        "frr_ci95": [
+          0.5048844224263436,
+          0.7152828626220362
+        ],
+        "genuine_score_quantiles": [
+          0.6889992162334819,
+          0.7428816278775533,
+          0.7913929928790082
+        ],
+        "impostor_score_quantiles": [
+          0.34960265100127513,
+          0.48683240293682395,
+          0.6278162500300964
+        ],
+        "impostor_trials": 8526,
+        "queries": 294,
+        "scored_queries": 140,
+        "speakers": 24,
+        "threshold": 0.7023868759473166
+      },
+      "policy": "vowels5"
+    },
+    {
+      "contrast": "high",
+      "contrast_boundary": 50.236758592679024,
+      "duration": "short",
+      "duration_boundary": 2.38,
+      "metrics": {
+        "coverage": 0.8435374149659864,
+        "eer": 0.04671857619577308,
+        "false_accepts": 39,
+        "false_rejects": 94,
+        "far": 0.004574243490499648,
+        "far_ci95": [
+          0.0009067851847429124,
+          0.01159042527638595
+        ],
+        "frr": 0.3197278911564626,
+        "frr_ci95": [
+          0.21455817832408716,
+          0.4368608966499884
+        ],
+        "genuine_score_quantiles": [
+          0.6789630232865994,
+          0.7393934205174446,
+          0.7892370122671127
+        ],
+        "impostor_score_quantiles": [
+          0.34653801954501157,
+          0.484594392505559,
+          0.6253556174697815
+        ],
+        "impostor_trials": 8526,
+        "queries": 294,
+        "scored_queries": 248,
+        "speakers": 24,
+        "threshold": 0.7014820906851028
+      },
+      "policy": "vowels4"
+    },
+    {
+      "contrast": "high",
+      "contrast_boundary": 50.236758592679024,
+      "duration": "long",
+      "duration_boundary": 2.38,
+      "metrics": {
+        "coverage": 0.9161290322580645,
+        "eer": 0.06338028169014084,
+        "false_accepts": 22,
+        "false_rejects": 36,
+        "far": 0.00489432703003337,
+        "far_ci95": [
+          0.00020549653500493806,
+          0.017346510026439322
+        ],
+        "frr": 0.23225806451612904,
+        "frr_ci95": [
+          0.13332512315270936,
+          0.3761178861788615
+        ],
+        "genuine_score_quantiles": [
+          0.6716306275555066,
+          0.7446468393592274,
+          0.8132351159799
+        ],
+        "impostor_score_quantiles": [
+          0.33191666901111605,
+          0.46676308311083736,
+          0.6230932242103985
+        ],
+        "impostor_trials": 4495,
+        "queries": 155,
+        "scored_queries": 142,
+        "speakers": 24,
+        "threshold": 0.7023868759473166
+      },
+      "policy": "vowels5"
+    },
+    {
+      "contrast": "high",
+      "contrast_boundary": 50.236758592679024,
+      "duration": "long",
+      "duration_boundary": 2.38,
+      "metrics": {
+        "coverage": 1.0,
+        "eer": 0.06451612903225806,
+        "false_accepts": 23,
+        "false_rejects": 26,
+        "far": 0.005116796440489433,
+        "far_ci95": [
+          0.00036493955074628684,
+          0.017346510026439322
+        ],
+        "frr": 0.16774193548387098,
+        "frr_ci95": [
+          0.07368421052631578,
+          0.3119409403669724
+        ],
+        "genuine_score_quantiles": [
+          0.6720757727112089,
+          0.744348794221878,
+          0.8103124905033272
+        ],
+        "impostor_score_quantiles": [
+          0.3324836781964852,
+          0.4671284444630146,
+          0.6228042483329773
+        ],
+        "impostor_trials": 4495,
+        "queries": 155,
+        "scored_queries": 155,
+        "speakers": 24,
+        "threshold": 0.7014820906851028
+      },
+      "policy": "vowels4"
+    }
+  ],
+  "cv_strata": [
+    {
+      "active_seconds_median": 1.94,
+      "boundaries": [
+        -23.746093431383468,
+        -20.48122714491756
+      ],
+      "cv_calibrated": {
+        "coverage": 0.6529411764705882,
+        "eer": 0.03572538055296676,
+        "false_accepts": 56,
+        "false_rejects": 140,
+        "far": 0.005679513184584178,
+        "far_ci95": [
+          0.0003817357607662499,
+          0.01995393092074932
+        ],
+        "frr": 0.4117647058823529,
+        "frr_ci95": [
+          0.3324700634417129,
+          0.4918470418470418
+        ],
+        "genuine_score_quantiles": [
+          0.7045985003880092,
+          0.7481566573641881,
+          0.789769514969417
+        ],
+        "impostor_score_quantiles": [
+          0.3436315316706896,
+          0.482824463583529,
+          0.6218063998854522
+        ],
+        "impostor_trials": 9860,
+        "queries": 340,
+        "scored_queries": 222,
+        "speakers": 28,
+        "threshold": 0.7023868759473166
+      },
+      "field": "active_rms_dbfs",
+      "jvs_transferred": {
+        "coverage": 0.6529411764705882,
+        "eer": 0.03572538055296676,
+        "false_accepts": 462,
+        "false_rejects": 121,
+        "far": 0.04685598377281947,
+        "far_ci95": [
+          0.022039499163797802,
+          0.08314537532734886
+        ],
+        "frr": 0.3558823529411765,
+        "frr_ci95": [
+          0.2914871833763082,
+          0.4225487540628385
+        ],
+        "genuine_score_quantiles": [
+          0.7045985003880092,
+          0.7481566573641881,
+          0.789769514969417
+        ],
+        "impostor_score_quantiles": [
+          0.3436315316706896,
+          0.482824463583529,
+          0.6218063998854522
+        ],
+        "impostor_trials": 9860,
+        "queries": 340,
+        "scored_queries": 222,
+        "speakers": 28,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": -25.367689342725797,
+      "stratum": "low"
+    },
+    {
+      "active_seconds_median": 1.94,
+      "boundaries": [
+        -23.746093431383468,
+        -20.48122714491756
+      ],
+      "cv_calibrated": {
+        "coverage": 0.9058823529411765,
+        "eer": 0.03571428571428571,
+        "false_accepts": 76,
+        "false_rejects": 68,
+        "far": 0.007707910750507099,
+        "far_ci95": [
+          0.001053839747929173,
+          0.025480109580432554
+        ],
+        "frr": 0.2,
+        "frr_ci95": [
+          0.1315066398558921,
+          0.27138021544710617
+        ],
+        "genuine_score_quantiles": [
+          0.6963706406950951,
+          0.7462870629711283,
+          0.7908415536670124
+        ],
+        "impostor_score_quantiles": [
+          0.3423369794167005,
+          0.48117647369702654,
+          0.620122818861689
+        ],
+        "impostor_trials": 9860,
+        "queries": 340,
+        "scored_queries": 308,
+        "speakers": 28,
+        "threshold": 0.7014820906851028
+      },
+      "field": "active_rms_dbfs",
+      "jvs_transferred": {
+        "coverage": 0.9058823529411765,
+        "eer": 0.03571428571428571,
+        "false_accepts": 616,
+        "false_rejects": 38,
+        "far": 0.06247464503042596,
+        "far_ci95": [
+          0.03178722376971681,
+          0.1073840775392983
+        ],
+        "frr": 0.11176470588235295,
+        "frr_ci95": [
+          0.07578929038494342,
+          0.15686609114635613
+        ],
+        "genuine_score_quantiles": [
+          0.6963706406950951,
+          0.7462870629711283,
+          0.7908415536670124
+        ],
+        "impostor_score_quantiles": [
+          0.3423369794167005,
+          0.48117647369702654,
+          0.620122818861689
+        ],
+        "impostor_trials": 9860,
+        "queries": 340,
+        "scored_queries": 308,
+        "speakers": 28,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": -25.367689342725797,
+      "stratum": "low"
+    },
+    {
+      "active_seconds_median": 2.02,
+      "boundaries": [
+        -23.746093431383468,
+        -20.48122714491756
+      ],
+      "cv_calibrated": {
+        "coverage": 0.6740947075208914,
+        "eer": 0.03305785123966942,
+        "false_accepts": 43,
+        "false_rejects": 146,
+        "far": 0.004130246854288733,
+        "far_ci95": [
+          0.0005186604185669129,
+          0.010803564318590836
+        ],
+        "frr": 0.40668523676880225,
+        "frr_ci95": [
+          0.3104187849517031,
+          0.5216441441441441
+        ],
+        "genuine_score_quantiles": [
+          0.6963935538700649,
+          0.7553666426854975,
+          0.8051321568659373
+        ],
+        "impostor_score_quantiles": [
+          0.35621282989159225,
+          0.49526227670995626,
+          0.6348669365048408
+        ],
+        "impostor_trials": 10411,
+        "queries": 359,
+        "scored_queries": 242,
+        "speakers": 29,
+        "threshold": 0.7023868759473166
+      },
+      "field": "active_rms_dbfs",
+      "jvs_transferred": {
+        "coverage": 0.6740947075208914,
+        "eer": 0.03305785123966942,
+        "false_accepts": 662,
+        "false_rejects": 123,
+        "far": 0.06358659110556142,
+        "far_ci95": [
+          0.02669835405021174,
+          0.11172185401951722
+        ],
+        "frr": 0.3426183844011142,
+        "frr_ci95": [
+          0.2619047619047619,
+          0.4373401534526854
+        ],
+        "genuine_score_quantiles": [
+          0.6963935538700649,
+          0.7553666426854975,
+          0.8051321568659373
+        ],
+        "impostor_score_quantiles": [
+          0.35621282989159225,
+          0.49526227670995626,
+          0.6348669365048408
+        ],
+        "impostor_trials": 10411,
+        "queries": 359,
+        "scored_queries": 242,
+        "speakers": 29,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": -22.283031237459348,
+      "stratum": "middle"
+    },
+    {
+      "active_seconds_median": 2.02,
+      "boundaries": [
+        -23.746093431383468,
+        -20.48122714491756
+      ],
+      "cv_calibrated": {
+        "coverage": 0.9220055710306406,
+        "eer": 0.03927492447129909,
+        "false_accepts": 67,
+        "false_rejects": 74,
+        "far": 0.006435500912496398,
+        "far_ci95": [
+          0.0013125381369501544,
+          0.015335806475103825
+        ],
+        "frr": 0.20612813370473537,
+        "frr_ci95": [
+          0.13041311570128555,
+          0.30311969726014754
+        ],
+        "genuine_score_quantiles": [
+          0.6887124143540859,
+          0.7518684983253479,
+          0.8027019873261452
+        ],
+        "impostor_score_quantiles": [
+          0.3570033705896801,
+          0.49723568787941563,
+          0.6366685807704926
+        ],
+        "impostor_trials": 10411,
+        "queries": 359,
+        "scored_queries": 331,
+        "speakers": 29,
+        "threshold": 0.7014820906851028
+      },
+      "field": "active_rms_dbfs",
+      "jvs_transferred": {
+        "coverage": 0.9220055710306406,
+        "eer": 0.03927492447129909,
+        "false_accepts": 943,
+        "false_rejects": 35,
+        "far": 0.09057727403707617,
+        "far_ci95": [
+          0.04201064308469934,
+          0.15259777765617064
+        ],
+        "frr": 0.09749303621169916,
+        "frr_ci95": [
+          0.05475335464697407,
+          0.14670365984107578
+        ],
+        "genuine_score_quantiles": [
+          0.6887124143540859,
+          0.7518684983253479,
+          0.8027019873261452
+        ],
+        "impostor_score_quantiles": [
+          0.3570033705896801,
+          0.49723568787941563,
+          0.6366685807704926
+        ],
+        "impostor_trials": 10411,
+        "queries": 359,
+        "scored_queries": 331,
+        "speakers": 29,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": -22.283031237459348,
+      "stratum": "middle"
+    },
+    {
+      "active_seconds_median": 1.96,
+      "boundaries": [
+        -23.746093431383468,
+        -20.48122714491756
+      ],
+      "cv_calibrated": {
+        "coverage": 0.582089552238806,
+        "eer": 0.05128205128205128,
+        "false_accepts": 16,
+        "false_rejects": 112,
+        "far": 0.0027448962086121117,
+        "far_ci95": [
+          0.0,
+          0.009198927026347371
+        ],
+        "frr": 0.5572139303482587,
+        "frr_ci95": [
+          0.44384776069518717,
+          0.6934502624117753
+        ],
+        "genuine_score_quantiles": [
+          0.6704841966484929,
+          0.7305479537356984,
+          0.7997875976065795
+        ],
+        "impostor_score_quantiles": [
+          0.3506791194534709,
+          0.4842875724037488,
+          0.6174292373598791
+        ],
+        "impostor_trials": 5829,
+        "queries": 201,
+        "scored_queries": 117,
+        "speakers": 22,
+        "threshold": 0.7023868759473166
+      },
+      "field": "active_rms_dbfs",
+      "jvs_transferred": {
+        "coverage": 0.582089552238806,
+        "eer": 0.05128205128205128,
+        "false_accepts": 205,
+        "false_rejects": 88,
+        "far": 0.035168982672842686,
+        "far_ci95": [
+          0.012013505410144181,
+          0.07827584976598316
+        ],
+        "frr": 0.43781094527363185,
+        "frr_ci95": [
+          0.33330078125,
+          0.5597990324892498
+        ],
+        "genuine_score_quantiles": [
+          0.6704841966484929,
+          0.7305479537356984,
+          0.7997875976065795
+        ],
+        "impostor_score_quantiles": [
+          0.3506791194534709,
+          0.4842875724037488,
+          0.6174292373598791
+        ],
+        "impostor_trials": 5829,
+        "queries": 201,
+        "scored_queries": 117,
+        "speakers": 22,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": -19.088832076575684,
+      "stratum": "high"
+    },
+    {
+      "active_seconds_median": 1.96,
+      "boundaries": [
+        -23.746093431383468,
+        -20.48122714491756
+      ],
+      "cv_calibrated": {
+        "coverage": 0.8955223880597015,
+        "eer": 0.054022988505747126,
+        "false_accepts": 24,
+        "false_rejects": 69,
+        "far": 0.004117344312918168,
+        "far_ci95": [
+          0.00022177503464963314,
+          0.011889889083930943
+        ],
+        "frr": 0.34328358208955223,
+        "frr_ci95": [
+          0.1985140931372549,
+          0.5078642503832692
+        ],
+        "genuine_score_quantiles": [
+          0.6623349526524545,
+          0.7297471579793211,
+          0.7935899632424116
+        ],
+        "impostor_score_quantiles": [
+          0.3525254839039468,
+          0.4837531241086813,
+          0.6166820798020859
+        ],
+        "impostor_trials": 5829,
+        "queries": 201,
+        "scored_queries": 180,
+        "speakers": 22,
+        "threshold": 0.7014820906851028
+      },
+      "field": "active_rms_dbfs",
+      "jvs_transferred": {
+        "coverage": 0.8955223880597015,
+        "eer": 0.054022988505747126,
+        "false_accepts": 311,
+        "false_rejects": 30,
+        "far": 0.053353920054897926,
+        "far_ci95": [
+          0.02042019386407189,
+          0.10996335403196861
+        ],
+        "frr": 0.14925373134328357,
+        "frr_ci95": [
+          0.0684888964519697,
+          0.2731965804743394
+        ],
+        "genuine_score_quantiles": [
+          0.6623349526524545,
+          0.7297471579793211,
+          0.7935899632424116
+        ],
+        "impostor_score_quantiles": [
+          0.3525254839039468,
+          0.4837531241086813,
+          0.6166820798020859
+        ],
+        "impostor_trials": 5829,
+        "queries": 201,
+        "scored_queries": 180,
+        "speakers": 22,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": -19.088832076575684,
+      "stratum": "high"
+    },
+    {
+      "active_seconds_median": 1.36,
+      "boundaries": [
+        1.8933333333333324,
+        3.0
+      ],
+      "cv_calibrated": {
+        "coverage": 0.372960372960373,
+        "eer": 0.0375,
+        "false_accepts": 38,
+        "false_rejects": 297,
+        "far": 0.0030544168475202956,
+        "far_ci95": [
+          0.0004486170368042088,
+          0.008770717631104078
+        ],
+        "frr": 0.6923076923076923,
+        "frr_ci95": [
+          0.6224877392344498,
+          0.757728334993487
+        ],
+        "genuine_score_quantiles": [
+          0.6837007674378354,
+          0.7390946447849274,
+          0.8027616697091323
+        ],
+        "impostor_score_quantiles": [
+          0.35547960102558135,
+          0.49143416136503215,
+          0.6245009611923615
+        ],
+        "impostor_trials": 12441,
+        "queries": 429,
+        "scored_queries": 160,
+        "speakers": 30,
+        "threshold": 0.7023868759473166
+      },
+      "field": "active_seconds",
+      "jvs_transferred": {
+        "coverage": 0.372960372960373,
+        "eer": 0.0375,
+        "false_accepts": 331,
+        "false_rejects": 270,
+        "far": 0.02660557832971626,
+        "far_ci95": [
+          0.012196641615708749,
+          0.04653544839470951
+        ],
+        "frr": 0.6293706293706294,
+        "frr_ci95": [
+          0.565000448873328,
+          0.6898898666876194
+        ],
+        "genuine_score_quantiles": [
+          0.6837007674378354,
+          0.7390946447849274,
+          0.8027616697091323
+        ],
+        "impostor_score_quantiles": [
+          0.35547960102558135,
+          0.49143416136503215,
+          0.6245009611923615
+        ],
+        "impostor_trials": 12441,
+        "queries": 429,
+        "scored_queries": 160,
+        "speakers": 30,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": 1.36,
+      "stratum": "low"
+    },
+    {
+      "active_seconds_median": 1.36,
+      "boundaries": [
+        1.8933333333333324,
+        3.0
+      ],
+      "cv_calibrated": {
+        "coverage": 0.8111888111888111,
+        "eer": 0.04597701149425287,
+        "false_accepts": 78,
+        "false_rejects": 152,
+        "far": 0.006269592476489028,
+        "far_ci95": [
+          0.0016913330707430585,
+          0.014604181201470078
+        ],
+        "frr": 0.3543123543123543,
+        "frr_ci95": [
+          0.275485194077631,
+          0.43244000727184584
+        ],
+        "genuine_score_quantiles": [
+          0.6798993572166988,
+          0.7382492770751318,
+          0.8007536830549891
+        ],
+        "impostor_score_quantiles": [
+          0.353421665651676,
+          0.4907098540237972,
+          0.624972133406184
+        ],
+        "impostor_trials": 12441,
+        "queries": 429,
+        "scored_queries": 348,
+        "speakers": 30,
+        "threshold": 0.7014820906851028
+      },
+      "field": "active_seconds",
+      "jvs_transferred": {
+        "coverage": 0.8111888111888111,
+        "eer": 0.04597701149425287,
+        "false_accepts": 766,
+        "false_rejects": 89,
+        "far": 0.06157061329475123,
+        "far_ci95": [
+          0.03257775670193799,
+          0.1018253941364917
+        ],
+        "frr": 0.20745920745920746,
+        "frr_ci95": [
+          0.1581769436997319,
+          0.26134496740260776
+        ],
+        "genuine_score_quantiles": [
+          0.6798993572166988,
+          0.7382492770751318,
+          0.8007536830549891
+        ],
+        "impostor_score_quantiles": [
+          0.353421665651676,
+          0.4907098540237972,
+          0.624972133406184
+        ],
+        "impostor_trials": 12441,
+        "queries": 429,
+        "scored_queries": 348,
+        "speakers": 30,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": 1.36,
+      "stratum": "low"
+    },
+    {
+      "active_seconds_median": 2.3099999999999996,
+      "boundaries": [
+        1.8933333333333324,
+        3.0
+      ],
+      "cv_calibrated": {
+        "coverage": 0.8445378151260504,
+        "eer": 0.03980099502487562,
+        "false_accepts": 37,
+        "false_rejects": 60,
+        "far": 0.0053607649956534335,
+        "far_ci95": [
+          0.0002974331621495425,
+          0.014531464832201984
+        ],
+        "frr": 0.25210084033613445,
+        "frr_ci95": [
+          0.19246459607338268,
+          0.3168724279835391
+        ],
+        "genuine_score_quantiles": [
+          0.6978651881217957,
+          0.7514413961997399,
+          0.7897089799245198
+        ],
+        "impostor_score_quantiles": [
+          0.35053823049251853,
+          0.4882142586367471,
+          0.6264970894698257
+        ],
+        "impostor_trials": 6902,
+        "queries": 238,
+        "scored_queries": 201,
+        "speakers": 30,
+        "threshold": 0.7023868759473166
+      },
+      "field": "active_seconds",
+      "jvs_transferred": {
+        "coverage": 0.8445378151260504,
+        "eer": 0.03980099502487562,
+        "false_accepts": 474,
+        "false_rejects": 43,
+        "far": 0.06867574616053318,
+        "far_ci95": [
+          0.03229836577123439,
+          0.11860933501303718
+        ],
+        "frr": 0.18067226890756302,
+        "frr_ci95": [
+          0.12970517588718425,
+          0.23605150214592274
+        ],
+        "genuine_score_quantiles": [
+          0.6978651881217957,
+          0.7514413961997399,
+          0.7897089799245198
+        ],
+        "impostor_score_quantiles": [
+          0.35053823049251853,
+          0.4882142586367471,
+          0.6264970894698257
+        ],
+        "impostor_trials": 6902,
+        "queries": 238,
+        "scored_queries": 201,
+        "speakers": 30,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": 2.3099999999999996,
+      "stratum": "middle"
+    },
+    {
+      "active_seconds_median": 2.3099999999999996,
+      "boundaries": [
+        1.8933333333333324,
+        3.0
+      ],
+      "cv_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.04201680672268908,
+        "false_accepts": 45,
+        "false_rejects": 30,
+        "far": 0.00651984931903796,
+        "far_ci95": [
+          0.0006377406803120934,
+          0.018077822082550783
+        ],
+        "frr": 0.12605042016806722,
+        "frr_ci95": [
+          0.06371771879483501,
+          0.19915584415584403
+        ],
+        "genuine_score_quantiles": [
+          0.6940213679557754,
+          0.7505406569689512,
+          0.7889155078679323
+        ],
+        "impostor_score_quantiles": [
+          0.34822379419846194,
+          0.48704139859630513,
+          0.6261107156674067
+        ],
+        "impostor_trials": 6902,
+        "queries": 238,
+        "scored_queries": 238,
+        "speakers": 30,
+        "threshold": 0.7014820906851028
+      },
+      "field": "active_seconds",
+      "jvs_transferred": {
+        "coverage": 1.0,
+        "eer": 0.04201680672268908,
+        "false_accepts": 541,
+        "false_rejects": 7,
+        "far": 0.07838307736887859,
+        "far_ci95": [
+          0.03716451770795618,
+          0.13766144563627497
+        ],
+        "frr": 0.029411764705882353,
+        "frr_ci95": [
+          0.004273049645390071,
+          0.06274597731469268
+        ],
+        "genuine_score_quantiles": [
+          0.6940213679557754,
+          0.7505406569689512,
+          0.7889155078679323
+        ],
+        "impostor_score_quantiles": [
+          0.34822379419846194,
+          0.48704139859630513,
+          0.6261107156674067
+        ],
+        "impostor_trials": 6902,
+        "queries": 238,
+        "scored_queries": 238,
+        "speakers": 30,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": 2.3099999999999996,
+      "stratum": "middle"
+    },
+    {
+      "active_seconds_median": 4.04,
+      "boundaries": [
+        1.8933333333333324,
+        3.0
+      ],
+      "cv_calibrated": {
+        "coverage": 0.944206008583691,
+        "eer": 0.04090909090909091,
+        "false_accepts": 40,
+        "false_rejects": 41,
+        "far": 0.005919786887672044,
+        "far_ci95": [
+          0.00035770874940168685,
+          0.016202611523107768
+        ],
+        "frr": 0.1759656652360515,
+        "frr_ci95": [
+          0.11214579439252337,
+          0.27014218009478674
+        ],
+        "genuine_score_quantiles": [
+          0.6917120590806007,
+          0.7514995287907751,
+          0.8014607822778178
+        ],
+        "impostor_score_quantiles": [
+          0.34455432775430384,
+          0.4855845004320145,
+          0.6285245456921509
+        ],
+        "impostor_trials": 6757,
+        "queries": 233,
+        "scored_queries": 220,
+        "speakers": 30,
+        "threshold": 0.7023868759473166
+      },
+      "field": "active_seconds",
+      "jvs_transferred": {
+        "coverage": 0.944206008583691,
+        "eer": 0.04090909090909091,
+        "false_accepts": 524,
+        "false_rejects": 19,
+        "far": 0.07754920822850378,
+        "far_ci95": [
+          0.03395111817302967,
+          0.1402187463699205
+        ],
+        "frr": 0.0815450643776824,
+        "frr_ci95": [
+          0.04090262379896526,
+          0.13433337795328287
+        ],
+        "genuine_score_quantiles": [
+          0.6917120590806007,
+          0.7514995287907751,
+          0.8014607822778178
+        ],
+        "impostor_score_quantiles": [
+          0.34455432775430384,
+          0.4855845004320145,
+          0.6285245456921509
+        ],
+        "impostor_trials": 6757,
+        "queries": 233,
+        "scored_queries": 220,
+        "speakers": 30,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": 4.04,
+      "stratum": "high"
+    },
+    {
+      "active_seconds_median": 4.04,
+      "boundaries": [
+        1.8933333333333324,
+        3.0
+      ],
+      "cv_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.04291845493562232,
+        "false_accepts": 44,
+        "false_rejects": 29,
+        "far": 0.006511765576439248,
+        "far_ci95": [
+          0.0005188180446391987,
+          0.017646519830786776
+        ],
+        "frr": 0.12446351931330472,
+        "frr_ci95": [
+          0.0598273572377158,
+          0.22018348623853212
+        ],
+        "genuine_score_quantiles": [
+          0.6928458273410797,
+          0.7517511447270712,
+          0.801317396684855
+        ],
+        "impostor_score_quantiles": [
+          0.3462455954457469,
+          0.48621541261672974,
+          0.6290408076947196
+        ],
+        "impostor_trials": 6757,
+        "queries": 233,
+        "scored_queries": 233,
+        "speakers": 30,
+        "threshold": 0.7014820906851028
+      },
+      "field": "active_seconds",
+      "jvs_transferred": {
+        "coverage": 1.0,
+        "eer": 0.04291845493562232,
+        "false_accepts": 563,
+        "false_rejects": 7,
+        "far": 0.08332100044398402,
+        "far_ci95": [
+          0.03742751755685845,
+          0.14935004004391325
+        ],
+        "frr": 0.030042918454935622,
+        "frr_ci95": [
+          0.0,
+          0.08333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6928458273410797,
+          0.7517511447270712,
+          0.801317396684855
+        ],
+        "impostor_score_quantiles": [
+          0.3462455954457469,
+          0.48621541261672974,
+          0.6290408076947196
+        ],
+        "impostor_trials": 6757,
+        "queries": 233,
+        "scored_queries": 233,
+        "speakers": 30,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": 4.04,
+      "stratum": "high"
+    },
+    {
+      "active_seconds_median": 2.18,
+      "boundaries": [
+        45.64769635327684,
+        53.340290454762076
+      ],
+      "cv_calibrated": {
+        "coverage": 0.6986899563318777,
+        "eer": 0.03125,
+        "false_accepts": 38,
+        "false_rejects": 86,
+        "far": 0.00572202981478693,
+        "far_ci95": [
+          0.0003097296107919852,
+          0.016037827673010017
+        ],
+        "frr": 0.37554585152838427,
+        "frr_ci95": [
+          0.3061177895815861,
+          0.4912390350877192
+        ],
+        "genuine_score_quantiles": [
+          0.7002219329277675,
+          0.759049493925912,
+          0.8032859573761623
+        ],
+        "impostor_score_quantiles": [
+          0.3711348738272985,
+          0.5094480986014391,
+          0.6341096630692482
+        ],
+        "impostor_trials": 6641,
+        "queries": 229,
+        "scored_queries": 160,
+        "speakers": 20,
+        "threshold": 0.7023868759473166
+      },
+      "field": "energy_contrast_db",
+      "jvs_transferred": {
+        "coverage": 0.6986899563318777,
+        "eer": 0.03125,
+        "false_accepts": 431,
+        "false_rejects": 70,
+        "far": 0.06489986447824123,
+        "far_ci95": [
+          0.02423064150803738,
+          0.11606049793642856
+        ],
+        "frr": 0.3056768558951965,
+        "frr_ci95": [
+          0.25416385135135133,
+          0.384642857142857
+        ],
+        "genuine_score_quantiles": [
+          0.7002219329277675,
+          0.759049493925912,
+          0.8032859573761623
+        ],
+        "impostor_score_quantiles": [
+          0.3711348738272985,
+          0.5094480986014391,
+          0.6341096630692482
+        ],
+        "impostor_trials": 6641,
+        "queries": 229,
+        "scored_queries": 160,
+        "speakers": 20,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": 42.609065676262446,
+      "stratum": "low"
+    },
+    {
+      "active_seconds_median": 2.18,
+      "boundaries": [
+        45.64769635327684,
+        53.340290454762076
+      ],
+      "cv_calibrated": {
+        "coverage": 0.9126637554585153,
+        "eer": 0.03827751196172249,
+        "false_accepts": 57,
+        "false_rejects": 47,
+        "far": 0.008583044722180395,
+        "far_ci95": [
+          0.0008510905826531866,
+          0.023124608293315942
+        ],
+        "frr": 0.2052401746724891,
+        "frr_ci95": [
+          0.1269674185463659,
+          0.3255400756793943
+        ],
+        "genuine_score_quantiles": [
+          0.6964976312054528,
+          0.7575299143791199,
+          0.8048566611607869
+        ],
+        "impostor_score_quantiles": [
+          0.3712133980459637,
+          0.5098963313632541,
+          0.6353955931133695
+        ],
+        "impostor_trials": 6641,
+        "queries": 229,
+        "scored_queries": 209,
+        "speakers": 20,
+        "threshold": 0.7014820906851028
+      },
+      "field": "energy_contrast_db",
+      "jvs_transferred": {
+        "coverage": 0.9126637554585153,
+        "eer": 0.03827751196172249,
+        "false_accepts": 585,
+        "false_rejects": 23,
+        "far": 0.0880891432013251,
+        "far_ci95": [
+          0.037124397484897716,
+          0.1513476935567244
+        ],
+        "frr": 0.10043668122270742,
+        "frr_ci95": [
+          0.0546875,
+          0.16426078119476842
+        ],
+        "genuine_score_quantiles": [
+          0.6964976312054528,
+          0.7575299143791199,
+          0.8048566611607869
+        ],
+        "impostor_score_quantiles": [
+          0.3712133980459637,
+          0.5098963313632541,
+          0.6353955931133695
+        ],
+        "impostor_trials": 6641,
+        "queries": 229,
+        "scored_queries": 209,
+        "speakers": 20,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": 42.609065676262446,
+      "stratum": "low"
+    },
+    {
+      "active_seconds_median": 1.84,
+      "boundaries": [
+        45.64769635327684,
+        53.340290454762076
+      ],
+      "cv_calibrated": {
+        "coverage": 0.6417112299465241,
+        "eer": 0.03333333333333333,
+        "false_accepts": 57,
+        "false_rejects": 161,
+        "far": 0.0052553936935275675,
+        "far_ci95": [
+          0.00047280674945510023,
+          0.015191880536098417
+        ],
+        "frr": 0.4304812834224599,
+        "frr_ci95": [
+          0.3351496848739496,
+          0.5240429131054131
+        ],
+        "genuine_score_quantiles": [
+          0.6966349706053734,
+          0.7452375718525478,
+          0.783391048287352
+        ],
+        "impostor_score_quantiles": [
+          0.34892486767843367,
+          0.4850416868145949,
+          0.6263263616710901
+        ],
+        "impostor_trials": 10846,
+        "queries": 374,
+        "scored_queries": 240,
+        "speakers": 26,
+        "threshold": 0.7023868759473166
+      },
+      "field": "energy_contrast_db",
+      "jvs_transferred": {
+        "coverage": 0.6417112299465241,
+        "eer": 0.03333333333333333,
+        "false_accepts": 547,
+        "false_rejects": 136,
+        "far": 0.05043333947999262,
+        "far_ci95": [
+          0.021447357362686992,
+          0.09477801565094505
+        ],
+        "frr": 0.36363636363636365,
+        "frr_ci95": [
+          0.28715222575516697,
+          0.43722501571338773
+        ],
+        "genuine_score_quantiles": [
+          0.6966349706053734,
+          0.7452375718525478,
+          0.783391048287352
+        ],
+        "impostor_score_quantiles": [
+          0.34892486767843367,
+          0.4850416868145949,
+          0.6263263616710901
+        ],
+        "impostor_trials": 10846,
+        "queries": 374,
+        "scored_queries": 240,
+        "speakers": 26,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": 49.57746459463867,
+      "stratum": "middle"
+    },
+    {
+      "active_seconds_median": 1.84,
+      "boundaries": [
+        45.64769635327684,
+        53.340290454762076
+      ],
+      "cv_calibrated": {
+        "coverage": 0.9224598930481284,
+        "eer": 0.03768115942028986,
+        "false_accepts": 76,
+        "false_rejects": 77,
+        "far": 0.00700719159137009,
+        "far_ci95": [
+          0.0010227297281724024,
+          0.01884587573138475
+        ],
+        "frr": 0.20588235294117646,
+        "frr_ci95": [
+          0.13746630727762804,
+          0.2842160416010085
+        ],
+        "genuine_score_quantiles": [
+          0.690434703143204,
+          0.7446295370658239,
+          0.7863363834222158
+        ],
+        "impostor_score_quantiles": [
+          0.3490647790953517,
+          0.48482785820961,
+          0.6248937114079793
+        ],
+        "impostor_trials": 10846,
+        "queries": 374,
+        "scored_queries": 345,
+        "speakers": 26,
+        "threshold": 0.7014820906851028
+      },
+      "field": "energy_contrast_db",
+      "jvs_transferred": {
+        "coverage": 0.9224598930481284,
+        "eer": 0.03768115942028986,
+        "false_accepts": 754,
+        "false_rejects": 34,
+        "far": 0.06951871657754011,
+        "far_ci95": [
+          0.031891135043340305,
+          0.12455408434624328
+        ],
+        "frr": 0.09090909090909091,
+        "frr_ci95": [
+          0.0631860902255639,
+          0.12092032587682958
+        ],
+        "genuine_score_quantiles": [
+          0.690434703143204,
+          0.7446295370658239,
+          0.7863363834222158
+        ],
+        "impostor_score_quantiles": [
+          0.3490647790953517,
+          0.48482785820961,
+          0.6248937114079793
+        ],
+        "impostor_trials": 10846,
+        "queries": 374,
+        "scored_queries": 345,
+        "speakers": 26,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": 49.57746459463867,
+      "stratum": "middle"
+    },
+    {
+      "active_seconds_median": 1.94,
+      "boundaries": [
+        45.64769635327684,
+        53.340290454762076
+      ],
+      "cv_calibrated": {
+        "coverage": 0.6094276094276094,
+        "eer": 0.06210706801295485,
+        "false_accepts": 20,
+        "false_rejects": 151,
+        "far": 0.002322071287588529,
+        "far_ci95": [
+          0.0,
+          0.009146492875199544
+        ],
+        "frr": 0.5084175084175084,
+        "frr_ci95": [
+          0.38794132069303694,
+          0.6678223286680783
+        ],
+        "genuine_score_quantiles": [
+          0.6771261285651814,
+          0.744348794221878,
+          0.8240508867634667
+        ],
+        "impostor_score_quantiles": [
+          0.3341382884979248,
+          0.4722959582622235,
+          0.6212195566681584
+        ],
+        "impostor_trials": 8613,
+        "queries": 297,
+        "scored_queries": 181,
+        "speakers": 22,
+        "threshold": 0.7023868759473166
+      },
+      "field": "energy_contrast_db",
+      "jvs_transferred": {
+        "coverage": 0.6094276094276094,
+        "eer": 0.06210706801295485,
+        "false_accepts": 351,
+        "false_rejects": 126,
+        "far": 0.04075235109717868,
+        "far_ci95": [
+          0.01285789874711411,
+          0.08011142581403145
+        ],
+        "frr": 0.42424242424242425,
+        "frr_ci95": [
+          0.3073980706224973,
+          0.5710925551057128
+        ],
+        "genuine_score_quantiles": [
+          0.6771261285651814,
+          0.744348794221878,
+          0.8240508867634667
+        ],
+        "impostor_score_quantiles": [
+          0.3341382884979248,
+          0.4722959582622235,
+          0.6212195566681584
+        ],
+        "impostor_trials": 8613,
+        "queries": 297,
+        "scored_queries": 181,
+        "speakers": 22,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": 58.65818449221351,
+      "stratum": "high"
+    },
+    {
+      "active_seconds_median": 1.94,
+      "boundaries": [
+        45.64769635327684,
+        53.340290454762076
+      ],
+      "cv_calibrated": {
+        "coverage": 0.8922558922558923,
+        "eer": 0.06102797657774886,
+        "false_accepts": 34,
+        "false_rejects": 87,
+        "far": 0.003947521188900499,
+        "far_ci95": [
+          0.0005043468401029725,
+          0.01218684665625913
+        ],
+        "frr": 0.29292929292929293,
+        "frr_ci95": [
+          0.18314889336016096,
+          0.44700674176480626
+        ],
+        "genuine_score_quantiles": [
+          0.6741608742150393,
+          0.7397458702325821,
+          0.8013071220462062
+        ],
+        "impostor_score_quantiles": [
+          0.33617835202903457,
+          0.4753220741237913,
+          0.6222102911273638
+        ],
+        "impostor_trials": 8613,
+        "queries": 297,
+        "scored_queries": 265,
+        "speakers": 22,
+        "threshold": 0.7014820906851028
+      },
+      "field": "energy_contrast_db",
+      "jvs_transferred": {
+        "coverage": 0.8922558922558923,
+        "eer": 0.06102797657774886,
+        "false_accepts": 531,
+        "false_rejects": 46,
+        "far": 0.06165099268547544,
+        "far_ci95": [
+          0.02364186862272386,
+          0.11586245095966367
+        ],
+        "frr": 0.15488215488215487,
+        "frr_ci95": [
+          0.0754090122744872,
+          0.2654320987654321
+        ],
+        "genuine_score_quantiles": [
+          0.6741608742150393,
+          0.7397458702325821,
+          0.8013071220462062
+        ],
+        "impostor_score_quantiles": [
+          0.33617835202903457,
+          0.4753220741237913,
+          0.6222102911273638
+        ],
+        "impostor_trials": 8613,
+        "queries": 297,
+        "scored_queries": 265,
+        "speakers": 22,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": 58.65818449221351,
+      "stratum": "high"
+    },
+    {
+      "active_seconds_median": 2.0300000000000002,
+      "boundaries": [
+        0.004806029550641815,
+        0.017036560113747375
+      ],
+      "cv_calibrated": {
+        "coverage": 0.7183908045977011,
+        "eer": 0.032,
+        "false_accepts": 20,
+        "false_rejects": 61,
+        "far": 0.003963535473642489,
+        "far_ci95": [
+          0.0,
+          0.01375392234562544
+        ],
+        "frr": 0.3505747126436782,
+        "frr_ci95": [
+          0.27535326086956524,
+          0.4392624073477279
+        ],
+        "genuine_score_quantiles": [
+          0.702857877264966,
+          0.7489146915349093,
+          0.78846402659521
+        ],
+        "impostor_score_quantiles": [
+          0.3546953184530139,
+          0.4880072593688965,
+          0.626475056990599
+        ],
+        "impostor_trials": 5046,
+        "queries": 174,
+        "scored_queries": 125,
+        "speakers": 25,
+        "threshold": 0.7023868759473166
+      },
+      "field": "high_frequency_fraction",
+      "jvs_transferred": {
+        "coverage": 0.7183908045977011,
+        "eer": 0.032,
+        "false_accepts": 271,
+        "false_rejects": 53,
+        "far": 0.05370590566785573,
+        "far_ci95": [
+          0.01623515715203668,
+          0.1092034242794068
+        ],
+        "frr": 0.3045977011494253,
+        "frr_ci95": [
+          0.23562373225152128,
+          0.3897457627118644
+        ],
+        "genuine_score_quantiles": [
+          0.702857877264966,
+          0.7489146915349093,
+          0.78846402659521
+        ],
+        "impostor_score_quantiles": [
+          0.3546953184530139,
+          0.4880072593688965,
+          0.626475056990599
+        ],
+        "impostor_trials": 5046,
+        "queries": 174,
+        "scored_queries": 125,
+        "speakers": 25,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": 0.002963020051257104,
+      "stratum": "low"
+    },
+    {
+      "active_seconds_median": 2.0300000000000002,
+      "boundaries": [
+        0.004806029550641815,
+        0.017036560113747375
+      ],
+      "cv_calibrated": {
+        "coverage": 0.9310344827586207,
+        "eer": 0.024691358024691357,
+        "false_accepts": 28,
+        "false_rejects": 31,
+        "far": 0.005548949663099485,
+        "far_ci95": [
+          0.0,
+          0.018472755852124666
+        ],
+        "frr": 0.1781609195402299,
+        "frr_ci95": [
+          0.11627531882970743,
+          0.2720181818181817
+        ],
+        "genuine_score_quantiles": [
+          0.6992974542578061,
+          0.743043425318959,
+          0.7887294163088222
+        ],
+        "impostor_score_quantiles": [
+          0.34774793398876985,
+          0.4828473668832045,
+          0.6258106793056835
+        ],
+        "impostor_trials": 5046,
+        "queries": 174,
+        "scored_queries": 162,
+        "speakers": 25,
+        "threshold": 0.7014820906851028
+      },
+      "field": "high_frequency_fraction",
+      "jvs_transferred": {
+        "coverage": 0.9310344827586207,
+        "eer": 0.024691358024691357,
+        "false_accepts": 347,
+        "false_rejects": 16,
+        "far": 0.06876734046769718,
+        "far_ci95": [
+          0.022083537565506677,
+          0.13928202128083592
+        ],
+        "frr": 0.09195402298850575,
+        "frr_ci95": [
+          0.04519682886823401,
+          0.15873249299719885
+        ],
+        "genuine_score_quantiles": [
+          0.6992974542578061,
+          0.743043425318959,
+          0.7887294163088222
+        ],
+        "impostor_score_quantiles": [
+          0.34774793398876985,
+          0.4828473668832045,
+          0.6258106793056835
+        ],
+        "impostor_trials": 5046,
+        "queries": 174,
+        "scored_queries": 162,
+        "speakers": 25,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": 0.002963020051257104,
+      "stratum": "low"
+    },
+    {
+      "active_seconds_median": 2.1,
+      "boundaries": [
+        0.004806029550641815,
+        0.017036560113747375
+      ],
+      "cv_calibrated": {
+        "coverage": 0.6560283687943262,
+        "eer": 0.040260950605778195,
+        "false_accepts": 31,
+        "false_rejects": 131,
+        "far": 0.0037906578625580825,
+        "far_ci95": [
+          0.00029047544774213433,
+          0.01036568305306713
+        ],
+        "frr": 0.4645390070921986,
+        "frr_ci95": [
+          0.3694729899992125,
+          0.5865007973686834
+        ],
+        "genuine_score_quantiles": [
+          0.6865501019504521,
+          0.7468011694795945,
+          0.7855494623675067
+        ],
+        "impostor_score_quantiles": [
+          0.3481676113705675,
+          0.4853671405996595,
+          0.625531187424293
+        ],
+        "impostor_trials": 8178,
+        "queries": 282,
+        "scored_queries": 185,
+        "speakers": 30,
+        "threshold": 0.7023868759473166
+      },
+      "field": "high_frequency_fraction",
+      "jvs_transferred": {
+        "coverage": 0.6560283687943262,
+        "eer": 0.040260950605778195,
+        "false_accepts": 415,
+        "false_rejects": 100,
+        "far": 0.05074590364392272,
+        "far_ci95": [
+          0.024139019230671174,
+          0.09106023762848549
+        ],
+        "frr": 0.3546099290780142,
+        "frr_ci95": [
+          0.2777777777777778,
+          0.461263087186139
+        ],
+        "genuine_score_quantiles": [
+          0.6865501019504521,
+          0.7468011694795945,
+          0.7855494623675067
+        ],
+        "impostor_score_quantiles": [
+          0.3481676113705675,
+          0.4853671405996595,
+          0.625531187424293
+        ],
+        "impostor_trials": 8178,
+        "queries": 282,
+        "scored_queries": 185,
+        "speakers": 30,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": 0.009098236536754536,
+      "stratum": "middle"
+    },
+    {
+      "active_seconds_median": 2.1,
+      "boundaries": [
+        0.004806029550641815,
+        0.017036560113747375
+      ],
+      "cv_calibrated": {
+        "coverage": 0.925531914893617,
+        "eer": 0.04597701149425287,
+        "false_accepts": 40,
+        "false_rejects": 67,
+        "far": 0.004891171435558816,
+        "far_ci95": [
+          0.001088278031078133,
+          0.012024183297821626
+        ],
+        "frr": 0.2375886524822695,
+        "frr_ci95": [
+          0.1450305029109377,
+          0.3591057312252963
+        ],
+        "genuine_score_quantiles": [
+          0.6865047262265132,
+          0.744348794221878,
+          0.7888212680816651
+        ],
+        "impostor_score_quantiles": [
+          0.3494662480945347,
+          0.4870920479297638,
+          0.6266370892524719
+        ],
+        "impostor_trials": 8178,
+        "queries": 282,
+        "scored_queries": 261,
+        "speakers": 30,
+        "threshold": 0.7014820906851028
+      },
+      "field": "high_frequency_fraction",
+      "jvs_transferred": {
+        "coverage": 0.925531914893617,
+        "eer": 0.04597701149425287,
+        "false_accepts": 614,
+        "false_rejects": 27,
+        "far": 0.07507948153582783,
+        "far_ci95": [
+          0.0392858488120213,
+          0.1285661545250833
+        ],
+        "frr": 0.09574468085106383,
+        "frr_ci95": [
+          0.04778974089635854,
+          0.1666850220264316
+        ],
+        "genuine_score_quantiles": [
+          0.6865047262265132,
+          0.744348794221878,
+          0.7888212680816651
+        ],
+        "impostor_score_quantiles": [
+          0.3494662480945347,
+          0.4870920479297638,
+          0.6266370892524719
+        ],
+        "impostor_trials": 8178,
+        "queries": 282,
+        "scored_queries": 261,
+        "speakers": 30,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": 0.009098236536754536,
+      "stratum": "middle"
+    },
+    {
+      "active_seconds_median": 1.86,
+      "boundaries": [
+        0.004806029550641815,
+        0.017036560113747375
+      ],
+      "cv_calibrated": {
+        "coverage": 0.6103603603603603,
+        "eer": 0.04059040590405904,
+        "false_accepts": 64,
+        "false_rejects": 206,
+        "far": 0.004970487729108419,
+        "far_ci95": [
+          0.00029375974158503783,
+          0.016594651576438902
+        ],
+        "frr": 0.46396396396396394,
+        "frr_ci95": [
+          0.3711298636514799,
+          0.5819521899778536
+        ],
+        "genuine_score_quantiles": [
+          0.6935034642616907,
+          0.7505788334778377,
+          0.8183039352297783
+        ],
+        "impostor_score_quantiles": [
+          0.348455932395008,
+          0.48982617946771473,
+          0.6273939127707998
+        ],
+        "impostor_trials": 12876,
+        "queries": 444,
+        "scored_queries": 271,
+        "speakers": 27,
+        "threshold": 0.7023868759473166
+      },
+      "field": "high_frequency_fraction",
+      "jvs_transferred": {
+        "coverage": 0.6103603603603603,
+        "eer": 0.04059040590405904,
+        "false_accepts": 643,
+        "false_rejects": 179,
+        "far": 0.04993786890338615,
+        "far_ci95": [
+          0.01989975830837482,
+          0.08989123205126807
+        ],
+        "frr": 0.40315315315315314,
+        "frr_ci95": [
+          0.3231093073195801,
+          0.5039448149717829
+        ],
+        "genuine_score_quantiles": [
+          0.6935034642616907,
+          0.7505788334778377,
+          0.8183039352297783
+        ],
+        "impostor_score_quantiles": [
+          0.348455932395008,
+          0.48982617946771473,
+          0.6273939127707998
+        ],
+        "impostor_trials": 12876,
+        "queries": 444,
+        "scored_queries": 271,
+        "speakers": 27,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_median": 0.05650956315223839,
+      "stratum": "high"
+    },
+    {
+      "active_seconds_median": 1.86,
+      "boundaries": [
+        0.004806029550641815,
+        0.017036560113747375
+      ],
+      "cv_calibrated": {
+        "coverage": 0.8918918918918919,
+        "eer": 0.04980842911877394,
+        "false_accepts": 99,
+        "false_rejects": 113,
+        "far": 0.007688723205964585,
+        "far_ci95": [
+          0.001262898875105484,
+          0.022832787281097913
+        ],
+        "frr": 0.2545045045045045,
+        "frr_ci95": [
+          0.16619118969133953,
+          0.3607374977227181
+        ],
+        "genuine_score_quantiles": [
+          0.6807279288768768,
+          0.7481313113655363,
+          0.8103706327577431
+        ],
+        "impostor_score_quantiles": [
+          0.3515082432329655,
+          0.4911858946794555,
+          0.6262949767437849
+        ],
+        "impostor_trials": 12876,
+        "queries": 444,
+        "scored_queries": 396,
+        "speakers": 27,
+        "threshold": 0.7014820906851028
+      },
+      "field": "high_frequency_fraction",
+      "jvs_transferred": {
+        "coverage": 0.8918918918918919,
+        "eer": 0.04980842911877394,
+        "false_accepts": 909,
+        "false_rejects": 60,
+        "far": 0.07059645852749301,
+        "far_ci95": [
+          0.03216878306878307,
+          0.12217673038775051
+        ],
+        "frr": 0.13513513513513514,
+        "frr_ci95": [
+          0.0853529194382853,
+          0.20001022494887521
+        ],
+        "genuine_score_quantiles": [
+          0.6807279288768768,
+          0.7481313113655363,
+          0.8103706327577431
+        ],
+        "impostor_score_quantiles": [
+          0.3515082432329655,
+          0.4911858946794555,
+          0.6262949767437849
+        ],
+        "impostor_trials": 12876,
+        "queries": 444,
+        "scored_queries": 396,
+        "speakers": 27,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_median": 0.05650956315223839,
+      "stratum": "high"
+    }
+  ],
+  "cv_strata_differences": [
+    {
+      "contrast": "high minus low",
+      "far_difference_ci95": [
+        -0.017867186185753652,
+        0.005173933103494038
+      ],
+      "field": "active_rms_dbfs",
+      "frr_difference_ci95": [
+        0.010513752629388777,
+        0.2896586234151303
+      ],
+      "policy": "vowels5"
+    },
+    {
+      "contrast": "high minus low",
+      "far_difference_ci95": [
+        -0.02134326189359171,
+        0.006207455467758412
+      ],
+      "field": "active_rms_dbfs",
+      "frr_difference_ci95": [
+        -0.020129820515741453,
+        0.31759074709033286
+      ],
+      "policy": "vowels4"
+    },
+    {
+      "contrast": "high minus low",
+      "far_difference_ci95": [
+        -0.0006691362037562797,
+        0.009963256868221632
+      ],
+      "field": "active_seconds",
+      "frr_difference_ci95": [
+        -0.5897693565550093,
+        -0.43040779742225377
+      ],
+      "policy": "vowels5"
+    },
+    {
+      "contrast": "high minus low",
+      "far_difference_ci95": [
+        -0.004159010251095248,
+        0.006467294378006034
+      ],
+      "field": "active_seconds",
+      "frr_difference_ci95": [
+        -0.2926131727589957,
+        -0.15908988969335947
+      ],
+      "policy": "vowels4"
+    },
+    {
+      "contrast": "high minus low",
+      "far_difference_ci95": [
+        -0.01317878372946836,
+        0.003960706041527696
+      ],
+      "field": "energy_contrast_db",
+      "frr_difference_ci95": [
+        -0.010558937112935077,
+        0.2955860548988179
+      ],
+      "policy": "vowels5"
+    },
+    {
+      "contrast": "high minus low",
+      "far_difference_ci95": [
+        -0.018698954827096784,
+        0.005375191137925523
+      ],
+      "field": "energy_contrast_db",
+      "frr_difference_ci95": [
+        -0.046514180018666904,
+        0.24356579789692928
+      ],
+      "policy": "vowels4"
+    },
+    {
+      "contrast": "high minus low",
+      "far_difference_ci95": [
+        -0.010126367274610078,
+        0.014135147991811585
+      ],
+      "field": "high_frequency_fraction",
+      "frr_difference_ci95": [
+        -0.007710074742887999,
+        0.24030075983160612
+      ],
+      "policy": "vowels5"
+    },
+    {
+      "contrast": "high minus low",
+      "far_difference_ci95": [
+        -0.012227980254373197,
+        0.018550857867178805
+      ],
+      "field": "high_frequency_fraction",
+      "frr_difference_ci95": [
+        -0.03810302129224946,
+        0.1893250528930489
+      ],
+      "policy": "vowels4"
+    }
+  ],
+  "quality_speaker_comparisons": [
+    {
+      "estimand": "CV minus JVS mean of within-speaker medians",
+      "metrics": {
+        "active_fraction": {
+          "ci95": [
+            -0.05206766133373384,
+            -0.00722215897189337
+          ],
+          "difference": -0.03013291697660292
+        },
+        "active_rms_dbfs": {
+          "ci95": [
+            2.6908582368356018,
+            4.655929632439576
+          ],
+          "difference": 3.727725452889146
+        },
+        "active_seconds": {
+          "ci95": [
+            -1.8978678571428569,
+            -1.3371392857142845
+          ],
+          "difference": -1.6277142857142866
+        },
+        "duration_seconds": {
+          "ci95": [
+            -2.904118348214287,
+            -2.0944016071428555
+          ],
+          "difference": -2.5169267857142854
+        },
+        "energy_contrast_db": {
+          "ci95": [
+            -0.5763240758003327,
+            4.597345712285722
+          ],
+          "difference": 1.9811668961351145
+        },
+        "high_frequency_fraction": {
+          "ci95": [
+            0.0038410603443116303,
+            0.01748889103231971
+          ],
+          "difference": 0.010219527661163904
+        },
+        "near_clip_fraction": {
+          "ci95": [
+            0.0,
+            1.7104542966611936e-07
+          ],
+          "difference": 5.701514322203978e-08
+        },
+        "quiet_rms_dbfs": {
+          "ci95": [
+            -1.7712733003455992,
+            3.390133353693822
+          ],
+          "difference": 0.9048287966408424
+        },
+        "rms_dbfs": {
+          "ci95": [
+            2.4545369558900023,
+            4.409639648700032
+          ],
+          "difference": 3.4633258552423243
+        },
+        "rolloff95_hz": {
+          "ci95": [
+            113.50027901785708,
+            866.1662946428563
+          ],
+          "difference": 464.5647321428571
+        }
+      },
+      "role": "training",
+      "split": "train"
+    },
+    {
+      "estimand": "CV minus JVS mean of within-speaker medians",
+      "metrics": {
+        "active_fraction": {
+          "ci95": [
+            -0.046837025951491286,
+            0.005972121857771875
+          ],
+          "difference": -0.01996272313774372
+        },
+        "active_rms_dbfs": {
+          "ci95": [
+            2.349382371693009,
+            5.426663602071509
+          ],
+          "difference": 3.794683642176654
+        },
+        "active_seconds": {
+          "ci95": [
+            -2.524683333333332,
+            -2.0713250000000007
+          ],
+          "difference": -2.2996666666666665
+        },
+        "duration_seconds": {
+          "ci95": [
+            -4.12336375,
+            -3.318521041666666
+          ],
+          "difference": -3.7226847222222217
+        },
+        "energy_contrast_db": {
+          "ci95": [
+            -4.98786885548394,
+            1.5245694688760825
+          ],
+          "difference": -1.8319685900973468
+        },
+        "high_frequency_fraction": {
+          "ci95": [
+            -0.002115441628904503,
+            0.022647113253415993
+          ],
+          "difference": 0.009516417805054035
+        },
+        "near_clip_fraction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "ci95": [
+            1.6455688823961723,
+            8.39994137956438
+          ],
+          "difference": 5.098271725167109
+        },
+        "rms_dbfs": {
+          "ci95": [
+            2.2235428435038407,
+            5.368310230096089
+          ],
+          "difference": 3.7005279336672388
+        },
+        "rolloff95_hz": {
+          "ci95": [
+            -323.0859375,
+            1364.5410156249995
+          ],
+          "difference": 485.15625
+        }
+      },
+      "role": "verification",
+      "split": "validation"
+    },
+    {
+      "estimand": "CV minus JVS mean of within-speaker medians",
+      "metrics": {
+        "active_fraction": {
+          "ci95": [
+            -0.10936594811528494,
+            -0.045687586389412574
+          ],
+          "difference": -0.07698880571871591
+        },
+        "active_rms_dbfs": {
+          "ci95": [
+            2.2278926506426466,
+            4.850199863230018
+          ],
+          "difference": 3.584894171624036
+        },
+        "active_seconds": {
+          "ci95": [
+            -2.9850333333333343,
+            -2.499658333333334
+          ],
+          "difference": -2.735666666666666
+        },
+        "duration_seconds": {
+          "ci95": [
+            -4.385176666666667,
+            -3.565102916666668
+          ],
+          "difference": -3.955506944444446
+        },
+        "energy_contrast_db": {
+          "ci95": [
+            -2.6992794524361807,
+            6.478600508603041
+          ],
+          "difference": 1.5708391616355044
+        },
+        "high_frequency_fraction": {
+          "ci95": [
+            0.010741935806113235,
+            0.04283328640260093
+          ],
+          "difference": 0.025961086751903707
+        },
+        "near_clip_fraction": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "difference": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "ci95": [
+            -3.0075892628473038,
+            5.702962695553004
+          ],
+          "difference": 1.4224660714842798
+        },
+        "rms_dbfs": {
+          "ci95": [
+            1.765809342412824,
+            4.306117732025677
+          ],
+          "difference": 3.0801220392805604
+        },
+        "rolloff95_hz": {
+          "ci95": [
+            414.814453125,
+            2169.6093749999995
+          ],
+          "difference": 1265.625
+        }
+      },
+      "role": "verification",
+      "split": "test"
+    }
+  ],
+  "quality_summary": [
+    {
+      "corpus": "CV",
+      "metrics": {
+        "active_fraction": {
+          "median": 0.534484398782344,
+          "p10": 0.3818181818181818,
+          "p90": 0.6984783983140148
+        },
+        "active_rms_dbfs": {
+          "median": -22.80897395980626,
+          "p10": -26.724596500163834,
+          "p90": -18.41898735344372
+        },
+        "active_seconds": {
+          "median": 1.88,
+          "p10": 1.1,
+          "p90": 4.202000000000001
+        },
+        "duration_seconds": {
+          "median": 3.708,
+          "p10": 2.52,
+          "p90": 6.48
+        },
+        "energy_contrast_db": {
+          "median": 50.38571933830246,
+          "p10": 41.9328085803228,
+          "p90": 64.61675721568157
+        },
+        "high_frequency_fraction": {
+          "median": 0.01509224325004653,
+          "p10": 0.0029241655107414936,
+          "p90": 0.13493164006884978
+        },
+        "near_clip_fraction": {
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "median": -74.39572044960767,
+          "p10": -86.93827780398624,
+          "p90": -63.733380662600005
+        },
+        "rms_dbfs": {
+          "median": -25.61458807863655,
+          "p10": -29.687105720126006,
+          "p90": -21.360967777223223
+        },
+        "rolloff95_hz": {
+          "median": 1593.75,
+          "p10": 703.125,
+          "p90": 6372.656250000005
+        }
+      },
+      "recordings": 600,
+      "recordings_with_near_clipping": 3,
+      "role": "enrollment",
+      "speakers": 30,
+      "split": "test"
+    },
+    {
+      "corpus": "CV",
+      "metrics": {
+        "active_fraction": {
+          "median": 0.5522153453187936,
+          "p10": 0.3822063987893134,
+          "p90": 0.697708944281525
+        },
+        "active_rms_dbfs": {
+          "median": -22.913264908684233,
+          "p10": -26.611878141581787,
+          "p90": -18.946559989671822
+        },
+        "active_seconds": {
+          "median": 1.96,
+          "p10": 1.12,
+          "p90": 4.582000000000001
+        },
+        "duration_seconds": {
+          "median": 3.708,
+          "p10": 2.556,
+          "p90": 6.84
+        },
+        "energy_contrast_db": {
+          "median": 50.22056085355089,
+          "p10": 41.8626396178551,
+          "p90": 63.25968992312364
+        },
+        "high_frequency_fraction": {
+          "median": 0.016123891612089214,
+          "p10": 0.0030063055300314258,
+          "p90": 0.12353873974694166
+        },
+        "near_clip_fraction": {
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "median": -73.8390049644353,
+          "p10": -87.07698466778055,
+          "p90": -63.34705564707302
+        },
+        "rms_dbfs": {
+          "median": -25.46377682166021,
+          "p10": -29.485926080812227,
+          "p90": -21.721973277326878
+        },
+        "rolloff95_hz": {
+          "median": 1593.75,
+          "p10": 703.125,
+          "p90": 6330.468750000001
+        }
+      },
+      "recordings": 900,
+      "recordings_with_near_clipping": 7,
+      "role": "verification",
+      "speakers": 30,
+      "split": "test"
+    },
+    {
+      "corpus": "CV",
+      "metrics": {
+        "active_fraction": {
+          "median": 0.5644802867383513,
+          "p10": 0.4098007348784624,
+          "p90": 0.721723423838012
+        },
+        "active_rms_dbfs": {
+          "median": -21.611071310626574,
+          "p10": -27.461757957055323,
+          "p90": -16.530931560769073
+        },
+        "active_seconds": {
+          "median": 2.42,
+          "p10": 1.3180000000000003,
+          "p90": 5.544000000000001
+        },
+        "duration_seconds": {
+          "median": 4.428,
+          "p10": 2.916,
+          "p90": 8.2836
+        },
+        "energy_contrast_db": {
+          "median": 52.52745665658418,
+          "p10": 38.82511604111257,
+          "p90": 68.70098155503521
+        },
+        "high_frequency_fraction": {
+          "median": 0.011842959015741839,
+          "p10": 0.0016161268909776602,
+          "p90": 0.07749012387752571
+        },
+        "near_clip_fraction": {
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "median": -74.76990342590464,
+          "p10": -90.1984918409537,
+          "p90": -61.41076413722963
+        },
+        "rms_dbfs": {
+          "median": -24.095539281918995,
+          "p10": -30.15937849119917,
+          "p90": -19.258651782655082
+        },
+        "rolloff95_hz": {
+          "median": 1406.25,
+          "p10": 700.7812500000001,
+          "p90": 4968.75
+        }
+      },
+      "recordings": 700,
+      "recordings_with_near_clipping": 11,
+      "role": "training",
+      "speakers": 70,
+      "split": "train"
+    },
+    {
+      "corpus": "CV",
+      "metrics": {
+        "active_fraction": {
+          "median": 0.5857864357864357,
+          "p10": 0.42184543851210515,
+          "p90": 0.7120321466659896
+        },
+        "active_rms_dbfs": {
+          "median": -22.541066378627796,
+          "p10": -26.22010788263965,
+          "p90": -16.779855960551686
+        },
+        "active_seconds": {
+          "median": 2.22,
+          "p10": 1.22,
+          "p90": 4.78
+        },
+        "duration_seconds": {
+          "median": 3.888,
+          "p10": 2.556,
+          "p90": 7.0956
+        },
+        "energy_contrast_db": {
+          "median": 50.23702868466991,
+          "p10": 39.74659492459849,
+          "p90": 62.11348676201727
+        },
+        "high_frequency_fraction": {
+          "median": 0.010281488126031529,
+          "p10": 0.0013248257918935837,
+          "p90": 0.07306653152747832
+        },
+        "near_clip_fraction": {
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "median": -72.68399843376383,
+          "p10": -85.67661871049327,
+          "p90": -60.108931896737644
+        },
+        "rms_dbfs": {
+          "median": -25.07746117863072,
+          "p10": -28.548692599599892,
+          "p90": -18.934388055044696
+        },
+        "rolloff95_hz": {
+          "median": 1253.90625,
+          "p10": 679.6875,
+          "p90": 5132.8125
+        }
+      },
+      "recordings": 600,
+      "recordings_with_near_clipping": 12,
+      "role": "enrollment",
+      "speakers": 30,
+      "split": "validation"
+    },
+    {
+      "corpus": "CV",
+      "metrics": {
+        "active_fraction": {
+          "median": 0.5964294103828987,
+          "p10": 0.4388144329896907,
+          "p90": 0.7218327416330927
+        },
+        "active_rms_dbfs": {
+          "median": -22.34071124450248,
+          "p10": -26.086400661946744,
+          "p90": -16.73809460456429
+        },
+        "active_seconds": {
+          "median": 2.38,
+          "p10": 1.3180000000000003,
+          "p90": 4.94
+        },
+        "duration_seconds": {
+          "median": 3.96,
+          "p10": 2.7,
+          "p90": 7.56
+        },
+        "energy_contrast_db": {
+          "median": 50.236758592679024,
+          "p10": 38.98655218949351,
+          "p90": 62.0503305431344
+        },
+        "high_frequency_fraction": {
+          "median": 0.009588786913606298,
+          "p10": 0.0013431464777344877,
+          "p90": 0.07412168245802787
+        },
+        "near_clip_fraction": {
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "median": -72.44559410218886,
+          "p10": -84.05563171518851,
+          "p90": -59.02182586962715
+        },
+        "rms_dbfs": {
+          "median": -24.787431633944255,
+          "p10": -28.502979316923522,
+          "p90": -18.77288390904461
+        },
+        "rolloff95_hz": {
+          "median": 1195.3125,
+          "p10": 656.25,
+          "p90": 5062.5
+        }
+      },
+      "recordings": 900,
+      "recordings_with_near_clipping": 10,
+      "role": "verification",
+      "speakers": 30,
+      "split": "validation"
+    },
+    {
+      "corpus": "JVS",
+      "metrics": {
+        "active_fraction": {
+          "median": 0.625,
+          "p10": 0.5574138489155704,
+          "p90": 0.6863367697594501
+        },
+        "active_rms_dbfs": {
+          "median": -25.800573189633496,
+          "p10": -28.838380911866437,
+          "p90": -23.706474324725335
+        },
+        "active_seconds": {
+          "median": 4.46,
+          "p10": 2.826,
+          "p90": 6.2
+        },
+        "duration_seconds": {
+          "median": 7.173729166666667,
+          "p10": 4.728941666666667,
+          "p90": 10.0421
+        },
+        "energy_contrast_db": {
+          "median": 52.01132711567358,
+          "p10": 47.588290195118205,
+          "p90": 56.86633894513603
+        },
+        "high_frequency_fraction": {
+          "median": 0.009903812773192428,
+          "p10": 0.003180768111675016,
+          "p90": 0.023295676044654115
+        },
+        "near_clip_fraction": {
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "median": -75.94162811039325,
+          "p10": -82.8801336624327,
+          "p90": -73.781379560834
+        },
+        "rms_dbfs": {
+          "median": -27.841478448224606,
+          "p10": -31.023833202675636,
+          "p90": -25.75765550576547
+        },
+        "rolloff95_hz": {
+          "median": 1429.6875,
+          "p10": 592.9687500000001,
+          "p90": 2313.2812499999995
+        }
+      },
+      "recordings": 504,
+      "recordings_with_near_clipping": 0,
+      "role": "enrollment",
+      "speakers": 15,
+      "split": "test"
+    },
+    {
+      "corpus": "JVS",
+      "metrics": {
+        "active_fraction": {
+          "median": 0.6242909655543936,
+          "p10": 0.552259271671135,
+          "p90": 0.6855476260305666
+        },
+        "active_rms_dbfs": {
+          "median": -26.595429812166103,
+          "p10": -29.315839980080447,
+          "p90": -23.75212608043419
+        },
+        "active_seconds": {
+          "median": 4.77,
+          "p10": 3.398,
+          "p90": 6.8420000000000005
+        },
+        "duration_seconds": {
+          "median": 7.776229166666667,
+          "p10": 5.569179166666666,
+          "p90": 11.014587500000001
+        },
+        "energy_contrast_db": {
+          "median": 51.62864775832816,
+          "p10": 46.86546735089022,
+          "p90": 56.240768470183625
+        },
+        "high_frequency_fraction": {
+          "median": 0.011799370962593807,
+          "p10": 0.003692566148469996,
+          "p90": 0.02361566711935325
+        },
+        "near_clip_fraction": {
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "median": -75.78322778775768,
+          "p10": -82.60090007123695,
+          "p90": -73.71897876870152
+        },
+        "rms_dbfs": {
+          "median": -28.690298400630454,
+          "p10": -31.55964009170541,
+          "p90": -25.750784062207448
+        },
+        "rolloff95_hz": {
+          "median": 1429.6875,
+          "p10": 609.375,
+          "p90": 2578.125
+        }
+      },
+      "recordings": 750,
+      "recordings_with_near_clipping": 0,
+      "role": "verification",
+      "speakers": 15,
+      "split": "test"
+    },
+    {
+      "corpus": "JVS",
+      "metrics": {
+        "active_fraction": {
+          "median": 0.6110532544378698,
+          "p10": 0.5098912832459717,
+          "p90": 0.6818845388188454
+        },
+        "active_rms_dbfs": {
+          "median": -25.58771311232262,
+          "p10": -28.679433066153134,
+          "p90": -22.7477116813247
+        },
+        "active_seconds": {
+          "median": 4.36,
+          "p10": 2.5,
+          "p90": 6.36
+        },
+        "duration_seconds": {
+          "median": 7.244645833333333,
+          "p10": 4.2590208333333335,
+          "p90": 10.6749125
+        },
+        "energy_contrast_db": {
+          "median": 51.48753909256413,
+          "p10": 47.55248537491928,
+          "p90": 57.29981027412825
+        },
+        "high_frequency_fraction": {
+          "median": 0.009443841222462716,
+          "p10": 0.0031797804175547444,
+          "p90": 0.02236266321978378
+        },
+        "near_clip_fraction": {
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "median": -75.53116801717093,
+          "p10": -82.11473855357296,
+          "p90": -73.56620488557607
+        },
+        "rms_dbfs": {
+          "median": -27.793101141408144,
+          "p10": -31.028671428450693,
+          "p90": -24.805375106748045
+        },
+        "rolloff95_hz": {
+          "median": 1335.9375,
+          "p10": 703.125,
+          "p90": 2439.8437500000005
+        }
+      },
+      "recordings": 700,
+      "recordings_with_near_clipping": 0,
+      "role": "training",
+      "speakers": 70,
+      "split": "train"
+    },
+    {
+      "corpus": "JVS",
+      "metrics": {
+        "active_fraction": {
+          "median": 0.6112311015118791,
+          "p10": 0.541578763959798,
+          "p90": 0.6713993337217468
+        },
+        "active_rms_dbfs": {
+          "median": -25.23609113495438,
+          "p10": -27.597548631191245,
+          "p90": -22.655966800885302
+        },
+        "active_seconds": {
+          "median": 4.3,
+          "p10": 2.784,
+          "p90": 6.0680000000000005
+        },
+        "duration_seconds": {
+          "median": 7.01725,
+          "p10": 4.739633333333334,
+          "p90": 9.86444166666667
+        },
+        "energy_contrast_db": {
+          "median": 53.084790816947816,
+          "p10": 49.67997611535085,
+          "p90": 55.722005023606066
+        },
+        "high_frequency_fraction": {
+          "median": 0.008773946125747787,
+          "p10": 0.00322592659580992,
+          "p90": 0.026450261121933306
+        },
+        "near_clip_fraction": {
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "median": -77.29888594248644,
+          "p10": -80.28526672143708,
+          "p90": -73.85185384057199
+        },
+        "rms_dbfs": {
+          "median": -27.359083752930545,
+          "p10": -29.721207141473112,
+          "p90": -24.831161027325255
+        },
+        "rolloff95_hz": {
+          "median": 1406.25,
+          "p10": 787.5,
+          "p90": 2765.625
+        }
+      },
+      "recordings": 497,
+      "recordings_with_near_clipping": 0,
+      "role": "enrollment",
+      "speakers": 15,
+      "split": "validation"
+    },
+    {
+      "corpus": "JVS",
+      "metrics": {
+        "active_fraction": {
+          "median": 0.6155354449472097,
+          "p10": 0.5480987905349398,
+          "p90": 0.6767576313234819
+        },
+        "active_rms_dbfs": {
+          "median": -25.31472736068339,
+          "p10": -28.571352849274014,
+          "p90": -22.8422331711993
+        },
+        "active_seconds": {
+          "median": 4.72,
+          "p10": 3.4,
+          "p90": 6.74
+        },
+        "duration_seconds": {
+          "median": 7.7825,
+          "p10": 5.5893041666666665,
+          "p90": 11.0354
+        },
+        "energy_contrast_db": {
+          "median": 52.491665953291886,
+          "p10": 49.38604662086468,
+          "p90": 55.69970507923548
+        },
+        "high_frequency_fraction": {
+          "median": 0.009061147996419805,
+          "p10": 0.00360427059149812,
+          "p90": 0.02799401122865927
+        },
+        "near_clip_fraction": {
+          "median": 0.0,
+          "p10": 0.0,
+          "p90": 0.0
+        },
+        "quiet_rms_dbfs": {
+          "median": -77.22692446477615,
+          "p10": -80.12208746397772,
+          "p90": -73.8658181153884
+        },
+        "rms_dbfs": {
+          "median": -27.46540332479195,
+          "p10": -30.842863787283996,
+          "p90": -24.982202798970672
+        },
+        "rolloff95_hz": {
+          "median": 1382.8125,
+          "p10": 726.5625,
+          "p90": 2765.625
+        }
+      },
+      "recordings": 750,
+      "recordings_with_near_clipping": 0,
+      "role": "verification",
+      "speakers": 15,
+      "split": "validation"
+    }
+  ],
+  "stress": [
+    {
+      "alignment_failures": 0,
+      "condition": "clean",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 7,
+        "false_rejects": 7,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.010606060606060607
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.1
+        ],
+        "genuine_score_quantiles": [
+          0.6842261609766218,
+          0.7298835843017226,
+          0.7798238379034129
+        ],
+        "impostor_score_quantiles": [
+          0.25903296799144965,
+          0.4224362672845784,
+          0.5695691999922629
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682378229889
+      },
+      "crop_shift_median_seconds": 0.0,
+      "crop_shift_p90_seconds": 0.0,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 6,
+        "false_rejects": 7,
+        "far": 0.002857142857142857,
+        "far_ci95": [
+          0.0,
+          0.01031196305841923
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.1
+        ],
+        "genuine_score_quantiles": [
+          0.6842261609766218,
+          0.7298835843017226,
+          0.7798238379034129
+        ],
+        "impostor_score_quantiles": [
+          0.25903296799144965,
+          0.4224362672845784,
+          0.5695691999922629
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.6282536392557602,
+        "active_rms_dbfs": -26.529556039814988,
+        "active_seconds": 4.9,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.81265887572977,
+        "high_frequency_fraction": 0.011854196550789946,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -75.77232111815866,
+        "rms_dbfs": -28.659542972449145,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 11090
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "clean",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 7,
+        "false_rejects": 3,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.010606060606060607
+        ],
+        "frr": 0.02,
+        "frr_ci95": [
+          0.0,
+          0.05333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6846273710197873,
+          0.7298835843017226,
+          0.7796526953036135
+        ],
+        "impostor_score_quantiles": [
+          0.25596958561114186,
+          0.42202237270968523,
+          0.5692642801844555
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682378229889
+      },
+      "crop_shift_median_seconds": 0.0,
+      "crop_shift_p90_seconds": 0.0,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 6,
+        "false_rejects": 3,
+        "far": 0.002857142857142857,
+        "far_ci95": [
+          0.0,
+          0.01031196305841923
+        ],
+        "frr": 0.02,
+        "frr_ci95": [
+          0.0,
+          0.05333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6846273710197873,
+          0.7298835843017226,
+          0.7796526953036135
+        ],
+        "impostor_score_quantiles": [
+          0.25596958561114186,
+          0.42202237270968523,
+          0.5692642801844555
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.6282536392557602,
+        "active_rms_dbfs": -26.529556039814988,
+        "active_seconds": 4.9,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.81265887572977,
+        "high_frequency_fraction": 0.011854196550789946,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -75.77232111815866,
+        "rms_dbfs": -28.659542972449145,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 11090
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "clean",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 7,
+        "false_rejects": 7,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.010606060606060607
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.1
+        ],
+        "genuine_score_quantiles": [
+          0.6842261609766218,
+          0.7298835843017226,
+          0.7798238379034129
+        ],
+        "impostor_score_quantiles": [
+          0.25903296799144965,
+          0.4224362672845784,
+          0.5695691999922629
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682378229889
+      },
+      "crop_shift_median_seconds": 0.0,
+      "crop_shift_p90_seconds": 0.0,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 6,
+        "false_rejects": 7,
+        "far": 0.002857142857142857,
+        "far_ci95": [
+          0.0,
+          0.01031196305841923
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.1
+        ],
+        "genuine_score_quantiles": [
+          0.6842261609766218,
+          0.7298835843017226,
+          0.7798238379034129
+        ],
+        "impostor_score_quantiles": [
+          0.25903296799144965,
+          0.4224362672845784,
+          0.5695691999922629
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.6282536392557602,
+        "active_rms_dbfs": -26.529556039814988,
+        "active_seconds": 4.9,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.81265887572977,
+        "high_frequency_fraction": 0.011854196550789946,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -75.77232111815866,
+        "rms_dbfs": -28.659542972449145,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 11090
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "clean",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 7,
+        "false_rejects": 3,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.010606060606060607
+        ],
+        "frr": 0.02,
+        "frr_ci95": [
+          0.0,
+          0.05333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6846273710197873,
+          0.7298835843017226,
+          0.7796526953036135
+        ],
+        "impostor_score_quantiles": [
+          0.25596958561114186,
+          0.42202237270968523,
+          0.5692642801844555
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682378229889
+      },
+      "crop_shift_median_seconds": 0.0,
+      "crop_shift_p90_seconds": 0.0,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 6,
+        "false_rejects": 3,
+        "far": 0.002857142857142857,
+        "far_ci95": [
+          0.0,
+          0.01031196305841923
+        ],
+        "frr": 0.02,
+        "frr_ci95": [
+          0.0,
+          0.05333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6846273710197873,
+          0.7298835843017226,
+          0.7796526953036135
+        ],
+        "impostor_score_quantiles": [
+          0.25596958561114186,
+          0.42202237270968523,
+          0.5692642801844555
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.6282536392557602,
+        "active_rms_dbfs": -26.529556039814988,
+        "active_seconds": 4.9,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.81265887572977,
+        "high_frequency_fraction": 0.011854196550789946,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -75.77232111815866,
+        "rms_dbfs": -28.659542972449145,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 11090
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "clean",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 7,
+        "false_rejects": 7,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.010606060606060607
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.1
+        ],
+        "genuine_score_quantiles": [
+          0.6842261609766218,
+          0.7298835843017226,
+          0.7798238379034129
+        ],
+        "impostor_score_quantiles": [
+          0.25903296799144965,
+          0.4224362672845784,
+          0.5695691999922629
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6355682378229889
+      },
+      "crop_shift_median_seconds": 0.0,
+      "crop_shift_p90_seconds": 0.0,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 6,
+        "false_rejects": 7,
+        "far": 0.002857142857142857,
+        "far_ci95": [
+          0.0,
+          0.01031196305841923
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.1
+        ],
+        "genuine_score_quantiles": [
+          0.6842261609766218,
+          0.7298835843017226,
+          0.7798238379034129
+        ],
+        "impostor_score_quantiles": [
+          0.25903296799144965,
+          0.4224362672845784,
+          0.5695691999922629
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.6282536392557602,
+        "active_rms_dbfs": -26.529556039814988,
+        "active_seconds": 4.9,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.81265887572977,
+        "high_frequency_fraction": 0.011854196550789946,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -75.77232111815866,
+        "rms_dbfs": -28.659542972449145,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 11090
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "clean",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 7,
+        "false_rejects": 3,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.010606060606060607
+        ],
+        "frr": 0.02,
+        "frr_ci95": [
+          0.0,
+          0.05333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6846273710197873,
+          0.7298835843017226,
+          0.7796526953036135
+        ],
+        "impostor_score_quantiles": [
+          0.25596958561114186,
+          0.42202237270968523,
+          0.5692642801844555
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6355682378229889
+      },
+      "crop_shift_median_seconds": 0.0,
+      "crop_shift_p90_seconds": 0.0,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 6,
+        "false_rejects": 3,
+        "far": 0.002857142857142857,
+        "far_ci95": [
+          0.0,
+          0.01031196305841923
+        ],
+        "frr": 0.02,
+        "frr_ci95": [
+          0.0,
+          0.05333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6846273710197873,
+          0.7298835843017226,
+          0.7796526953036135
+        ],
+        "impostor_score_quantiles": [
+          0.25596958561114186,
+          0.42202237270968523,
+          0.5692642801844555
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.6282536392557602,
+        "active_rms_dbfs": -26.529556039814988,
+        "active_seconds": 4.9,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.81265887572977,
+        "high_frequency_fraction": 0.011854196550789946,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -75.77232111815866,
+        "rms_dbfs": -28.659542972449145,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 11090
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "gain-minus12",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.04794520547945205,
+        "false_accepts": 1,
+        "false_rejects": 34,
+        "far": 0.0004761904761904762,
+        "far_ci95": [
+          0.0,
+          0.002174510272336356
+        ],
+        "frr": 0.22666666666666666,
+        "frr_ci95": [
+          0.08,
+          0.4066666666666667
+        ],
+        "genuine_score_quantiles": [
+          0.5839635998184918,
+          0.6678510548775656,
+          0.7279139014454228
+        ],
+        "impostor_score_quantiles": [
+          0.24506494122508327,
+          0.400571928604653,
+          0.5307483110726803
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6193226456642152
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.1,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.09333333333333332,
+          0.42000000000000004
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.04794520547945205,
+        "false_accepts": 0,
+        "false_rejects": 44,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.29333333333333333,
+        "frr_ci95": [
+          0.12666666666666668,
+          0.48
+        ],
+        "genuine_score_quantiles": [
+          0.5839635998184918,
+          0.6678510548775656,
+          0.7279139014454228
+        ],
+        "impostor_score_quantiles": [
+          0.24506494122508327,
+          0.400571928604653,
+          0.5307483110726803
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.5348316009613884,
+        "active_rms_dbfs": -37.88173004273818,
+        "active_seconds": 4.17,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 50.981644513750716,
+        "high_frequency_fraction": 0.011854868921205158,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -87.02894168576665,
+        "rms_dbfs": -40.65954157346572,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 9639
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "gain-minus12",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.04666666666666667,
+        "false_accepts": 1,
+        "false_rejects": 32,
+        "far": 0.0004761904761904762,
+        "far_ci95": [
+          0.0,
+          0.002174510272336356
+        ],
+        "frr": 0.21333333333333335,
+        "frr_ci95": [
+          0.06666666666666667,
+          0.3934999999999991
+        ],
+        "genuine_score_quantiles": [
+          0.5841915918372528,
+          0.6674709568421047,
+          0.7276898322251474
+        ],
+        "impostor_score_quantiles": [
+          0.2445976590400028,
+          0.40028845959980236,
+          0.530504703106526
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6193226456642152
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.1,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.1,
+          0.44
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.04666666666666667,
+        "false_accepts": 0,
+        "false_rejects": 42,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.28,
+        "frr_ci95": [
+          0.11333333333333333,
+          0.4666666666666667
+        ],
+        "genuine_score_quantiles": [
+          0.5841915918372528,
+          0.6674709568421047,
+          0.7276898322251474
+        ],
+        "impostor_score_quantiles": [
+          0.2445976590400028,
+          0.40028845959980236,
+          0.530504703106526
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.5348316009613884,
+        "active_rms_dbfs": -37.88173004273818,
+        "active_seconds": 4.17,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 50.981644513750716,
+        "high_frequency_fraction": 0.011854868921205158,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -87.02894168576665,
+        "rms_dbfs": -40.65954157346572,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 9639
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "gain-minus12",
+      "condition_calibrated": {
+        "coverage": 0.96,
+        "eer": 0.051587301587301584,
+        "false_accepts": 1,
+        "false_rejects": 33,
+        "far": 0.0004761904761904762,
+        "far_ci95": [
+          0.0,
+          0.002174510272336356
+        ],
+        "frr": 0.22,
+        "frr_ci95": [
+          0.08,
+          0.38
+        ],
+        "genuine_score_quantiles": [
+          0.5814169733011477,
+          0.6679793022572994,
+          0.7237026640816011
+        ],
+        "impostor_score_quantiles": [
+          0.2285897810752803,
+          0.3926300888111734,
+          0.5286018194859488
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 144,
+        "speakers": 15,
+        "threshold": 0.6161484494805337
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.1,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.13333333333333333,
+          0.4666666666666666
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.08000000000000002
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 0.96,
+        "eer": 0.051587301587301584,
+        "false_accepts": 0,
+        "false_rejects": 50,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.3333333333333333,
+        "frr_ci95": [
+          0.16,
+          0.5266666666666666
+        ],
+        "genuine_score_quantiles": [
+          0.5814169733011477,
+          0.6679793022572994,
+          0.7237026640816011
+        ],
+        "impostor_score_quantiles": [
+          0.2285897810752803,
+          0.3926300888111734,
+          0.5286018194859488
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 144,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.5348316009613884,
+        "active_rms_dbfs": -37.88173004273818,
+        "active_seconds": 4.17,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 50.981644513750716,
+        "high_frequency_fraction": 0.011854868921205158,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -87.02894168576665,
+        "rms_dbfs": -40.65954157346572,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 9639
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "gain-minus12",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.05142857142857143,
+        "false_accepts": 1,
+        "false_rejects": 29,
+        "far": 0.0004761904761904762,
+        "far_ci95": [
+          0.0,
+          0.002174510272336356
+        ],
+        "frr": 0.19333333333333333,
+        "frr_ci95": [
+          0.06,
+          0.35333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.5822240596914182,
+          0.6679793022572994,
+          0.7238723221421242
+        ],
+        "impostor_score_quantiles": [
+          0.22927470423978324,
+          0.39283160150842966,
+          0.5283957956652893
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6161484494805337
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.1,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.12666666666666668,
+          0.48666666666666664
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          -0.006666666666666654,
+          0.07333333333333336
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.05142857142857143,
+        "false_accepts": 0,
+        "false_rejects": 47,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.31333333333333335,
+        "frr_ci95": [
+          0.13333333333333333,
+          0.5133333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.5822240596914182,
+          0.6679793022572994,
+          0.7238723221421242
+        ],
+        "impostor_score_quantiles": [
+          0.22927470423978324,
+          0.39283160150842966,
+          0.5283957956652893
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.5348316009613884,
+        "active_rms_dbfs": -37.88173004273818,
+        "active_seconds": 4.17,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 50.981644513750716,
+        "high_frequency_fraction": 0.011854868921205158,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -87.02894168576665,
+        "rms_dbfs": -40.65954157346572,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 9639
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "gain-minus12",
+      "condition_calibrated": {
+        "coverage": 0.9533333333333334,
+        "eer": 0.09090909090909091,
+        "false_accepts": 7,
+        "false_rejects": 60,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.010714285714285714
+        ],
+        "frr": 0.4,
+        "frr_ci95": [
+          0.19333333333333333,
+          0.62
+        ],
+        "genuine_score_quantiles": [
+          0.5331054559802124,
+          0.6539079967667075,
+          0.7226813051375476
+        ],
+        "impostor_score_quantiles": [
+          0.2259464690790457,
+          0.3819629904985624,
+          0.5216545244580821
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 143,
+        "speakers": 15,
+        "threshold": 0.6097356151966823
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.1,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.23333333333333334,
+          0.6733333333333333
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.07333333333333333,
+          0.36
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 0.9533333333333334,
+        "eer": 0.09090909090909091,
+        "false_accepts": 0,
+        "false_rejects": 74,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.49333333333333335,
+        "frr_ci95": [
+          0.26,
+          0.7266666666666667
+        ],
+        "genuine_score_quantiles": [
+          0.5331054559802124,
+          0.6539079967667075,
+          0.7226813051375476
+        ],
+        "impostor_score_quantiles": [
+          0.2259464690790457,
+          0.3819629904985624,
+          0.5216545244580821
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 143,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.5348316009613884,
+        "active_rms_dbfs": -37.88173004273818,
+        "active_seconds": 4.17,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 50.981644513750716,
+        "high_frequency_fraction": 0.011854868921205158,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -87.02894168576665,
+        "rms_dbfs": -40.65954157346572,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 9639
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "gain-minus12",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.08857142857142856,
+        "false_accepts": 7,
+        "false_rejects": 57,
+        "far": 0.0033333333333333335,
+        "far_ci95": [
+          0.0,
+          0.010714285714285714
+        ],
+        "frr": 0.38,
+        "frr_ci95": [
+          0.16666666666666666,
+          0.6066666666666667
+        ],
+        "genuine_score_quantiles": [
+          0.532248633819468,
+          0.65276790427811,
+          0.7229808975688435
+        ],
+        "impostor_score_quantiles": [
+          0.2263930485125572,
+          0.38228953727521003,
+          0.5209588085611662
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6097356151966823
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.1,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.23333333333333334,
+          0.6933333333333334
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.06666666666666665,
+          0.35333333333333333
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.08857142857142856,
+        "false_accepts": 0,
+        "false_rejects": 71,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 0.47333333333333333,
+        "frr_ci95": [
+          0.24,
+          0.72
+        ],
+        "genuine_score_quantiles": [
+          0.532248633819468,
+          0.65276790427811,
+          0.7229808975688435
+        ],
+        "impostor_score_quantiles": [
+          0.2263930485125572,
+          0.38228953727521003,
+          0.5209588085611662
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.5348316009613884,
+        "active_rms_dbfs": -37.88173004273818,
+        "active_seconds": 4.17,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 50.981644513750716,
+        "high_frequency_fraction": 0.011854868921205158,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -87.02894168576665,
+        "rms_dbfs": -40.65954157346572,
+        "rolloff95_hz": 1453.125
+      },
+      "realigned_intervals": 9639
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "white-snr20",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.136986301369863,
+        "false_accepts": 17,
+        "false_rejects": 82,
+        "far": 0.008095238095238095,
+        "far_ci95": [
+          0.0,
+          0.023979591836734693
+        ],
+        "frr": 0.5466666666666666,
+        "frr_ci95": [
+          0.3333333333333333,
+          0.76
+        ],
+        "genuine_score_quantiles": [
+          0.6201948162616062,
+          0.6892679689550085,
+          0.7262036987713405
+        ],
+        "impostor_score_quantiles": [
+          0.3889480277279714,
+          0.5200004087537147,
+          0.6428967764241653
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6932234140959654
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.052081755050505045,
+          0.17717638339920946
+        ],
+        "frr": [
+          0.006499999999999997,
+          0.32
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.136986301369863,
+        "false_accepts": 234,
+        "false_rejects": 28,
+        "far": 0.11142857142857143,
+        "far_ci95": [
+          0.053787364130434785,
+          0.17990469286941577
+        ],
+        "frr": 0.18666666666666668,
+        "frr_ci95": [
+          0.06,
+          0.35333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6201948162616062,
+          0.6892679689550085,
+          0.7262036987713405
+        ],
+        "impostor_score_quantiles": [
+          0.3889480277279714,
+          0.5200004087537147,
+          0.6428967764241653
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.588980202813538,
+        "active_seconds": 7.66,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 22.803067150213863,
+        "high_frequency_fraction": 0.021950169084896817,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -46.85148955157071,
+        "rms_dbfs": -28.59662281872166,
+        "rolloff95_hz": 1792.96875
+      },
+      "realigned_intervals": 11507
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "white-snr20",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.13333333333333333,
+        "false_accepts": 18,
+        "false_rejects": 80,
+        "far": 0.008571428571428572,
+        "far_ci95": [
+          0.0,
+          0.0255
+        ],
+        "frr": 0.5333333333333333,
+        "frr_ci95": [
+          0.31333333333333335,
+          0.7533333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6216940854287819,
+          0.6892679689550085,
+          0.7259009494100298
+        ],
+        "impostor_score_quantiles": [
+          0.3889669171009297,
+          0.5190340872657926,
+          0.6438899325174199
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6929190917448566
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.054995967741935485,
+          0.1802213541666666
+        ],
+        "frr": [
+          0.0065000000000000075,
+          0.32
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.13333333333333333,
+        "false_accepts": 243,
+        "false_rejects": 24,
+        "far": 0.11571428571428571,
+        "far_ci95": [
+          0.05742430953621678,
+          0.1843450635386119
+        ],
+        "frr": 0.16,
+        "frr_ci95": [
+          0.02666666666666667,
+          0.3333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6216940854287819,
+          0.6892679689550085,
+          0.7259009494100298
+        ],
+        "impostor_score_quantiles": [
+          0.3889669171009297,
+          0.5190340872657926,
+          0.6438899325174199
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.588980202813538,
+        "active_seconds": 7.66,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 22.803067150213863,
+        "high_frequency_fraction": 0.021950169084896817,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -46.85148955157071,
+        "rms_dbfs": -28.59662281872166,
+        "rolloff95_hz": 1792.96875
+      },
+      "realigned_intervals": 11507
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "white-snr20",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.136986301369863,
+        "false_accepts": 17,
+        "false_rejects": 82,
+        "far": 0.008095238095238095,
+        "far_ci95": [
+          0.0,
+          0.023979591836734693
+        ],
+        "frr": 0.5466666666666666,
+        "frr_ci95": [
+          0.3333333333333333,
+          0.76
+        ],
+        "genuine_score_quantiles": [
+          0.6201948162616062,
+          0.6892679689550085,
+          0.7262036987713405
+        ],
+        "impostor_score_quantiles": [
+          0.3889480277279714,
+          0.5200004087537147,
+          0.6428967764241653
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6932234140959654
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.052081755050505045,
+          0.17717638339920946
+        ],
+        "frr": [
+          0.006499999999999997,
+          0.32
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.136986301369863,
+        "false_accepts": 234,
+        "false_rejects": 28,
+        "far": 0.11142857142857143,
+        "far_ci95": [
+          0.053787364130434785,
+          0.17990469286941577
+        ],
+        "frr": 0.18666666666666668,
+        "frr_ci95": [
+          0.06,
+          0.35333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6201948162616062,
+          0.6892679689550085,
+          0.7262036987713405
+        ],
+        "impostor_score_quantiles": [
+          0.3889480277279714,
+          0.5200004087537147,
+          0.6428967764241653
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.588980202813538,
+        "active_seconds": 7.66,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 22.803067150213863,
+        "high_frequency_fraction": 0.021950169084896817,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -46.85148955157071,
+        "rms_dbfs": -28.59662281872166,
+        "rolloff95_hz": 1792.96875
+      },
+      "realigned_intervals": 11507
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "white-snr20",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.13333333333333333,
+        "false_accepts": 18,
+        "false_rejects": 80,
+        "far": 0.008571428571428572,
+        "far_ci95": [
+          0.0,
+          0.0255
+        ],
+        "frr": 0.5333333333333333,
+        "frr_ci95": [
+          0.31333333333333335,
+          0.7533333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6216940854287819,
+          0.6892679689550085,
+          0.7259009494100298
+        ],
+        "impostor_score_quantiles": [
+          0.3889669171009297,
+          0.5190340872657926,
+          0.6438899325174199
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6929190917448566
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.054995967741935485,
+          0.1802213541666666
+        ],
+        "frr": [
+          0.0065000000000000075,
+          0.32
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.13333333333333333,
+        "false_accepts": 243,
+        "false_rejects": 24,
+        "far": 0.11571428571428571,
+        "far_ci95": [
+          0.05742430953621678,
+          0.1843450635386119
+        ],
+        "frr": 0.16,
+        "frr_ci95": [
+          0.02666666666666667,
+          0.3333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6216940854287819,
+          0.6892679689550085,
+          0.7259009494100298
+        ],
+        "impostor_score_quantiles": [
+          0.3889669171009297,
+          0.5190340872657926,
+          0.6438899325174199
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.588980202813538,
+        "active_seconds": 7.66,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 22.803067150213863,
+        "high_frequency_fraction": 0.021950169084896817,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -46.85148955157071,
+        "rms_dbfs": -28.59662281872166,
+        "rolloff95_hz": 1792.96875
+      },
+      "realigned_intervals": 11507
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "white-snr20",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.14334637964774952,
+        "false_accepts": 18,
+        "false_rejects": 84,
+        "far": 0.008571428571428572,
+        "far_ci95": [
+          0.0,
+          0.027551020408163266
+        ],
+        "frr": 0.56,
+        "frr_ci95": [
+          0.34,
+          0.78
+        ],
+        "genuine_score_quantiles": [
+          0.615411902383971,
+          0.683067951690067,
+          0.7250147784265621
+        ],
+        "impostor_score_quantiles": [
+          0.39644544743001464,
+          0.5244127000032952,
+          0.6432632668316365
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6905862122774126
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.05154561074664167,
+          0.18163610756802717
+        ],
+        "frr": [
+          0.0,
+          0.33333333333333337
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          -0.008510638297872325,
+          0.013919587628865974
+        ],
+        "frr": [
+          -0.013333333333333336,
+          0.026666666666666672
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.14334637964774952,
+        "false_accepts": 238,
+        "false_rejects": 29,
+        "far": 0.11333333333333333,
+        "far_ci95": [
+          0.05415364583333333,
+          0.18501785714285704
+        ],
+        "frr": 0.19333333333333333,
+        "frr_ci95": [
+          0.05333333333333334,
+          0.36666666666666664
+        ],
+        "genuine_score_quantiles": [
+          0.615411902383971,
+          0.683067951690067,
+          0.7250147784265621
+        ],
+        "impostor_score_quantiles": [
+          0.39644544743001464,
+          0.5244127000032952,
+          0.6432632668316365
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.588980202813538,
+        "active_seconds": 7.66,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 22.803067150213863,
+        "high_frequency_fraction": 0.021950169084896817,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -46.85148955157071,
+        "rms_dbfs": -28.59662281872166,
+        "rolloff95_hz": 1792.96875
+      },
+      "realigned_intervals": 11507
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "white-snr20",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.1438095238095238,
+        "false_accepts": 22,
+        "false_rejects": 78,
+        "far": 0.010476190476190476,
+        "far_ci95": [
+          0.0,
+          0.03232700718525459
+        ],
+        "frr": 0.52,
+        "frr_ci95": [
+          0.2866666666666667,
+          0.7533333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6168888071102823,
+          0.6839889533924715,
+          0.7253089827658801
+        ],
+        "impostor_score_quantiles": [
+          0.39718259505927567,
+          0.5239180816802063,
+          0.6436400931296141
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6887350951631865
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.05453708133971292,
+          0.1841986468500443
+        ],
+        "frr": [
+          0.0,
+          0.33333333333333337
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          -0.008510638297872325,
+          0.013919587628865974
+        ],
+        "frr": [
+          -0.013333333333333336,
+          0.026666666666666672
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.1438095238095238,
+        "false_accepts": 247,
+        "false_rejects": 25,
+        "far": 0.11761904761904762,
+        "far_ci95": [
+          0.05749867021276596,
+          0.18846596109839792
+        ],
+        "frr": 0.16666666666666666,
+        "frr_ci95": [
+          0.02666666666666667,
+          0.3466666666666667
+        ],
+        "genuine_score_quantiles": [
+          0.6168888071102823,
+          0.6839889533924715,
+          0.7253089827658801
+        ],
+        "impostor_score_quantiles": [
+          0.39718259505927567,
+          0.5239180816802063,
+          0.6436400931296141
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.588980202813538,
+        "active_seconds": 7.66,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 22.803067150213863,
+        "high_frequency_fraction": 0.021950169084896817,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -46.85148955157071,
+        "rms_dbfs": -28.59662281872166,
+        "rolloff95_hz": 1792.96875
+      },
+      "realigned_intervals": 11507
+    },
+    {
+      "alignment_failures": 16,
+      "condition": "white-snr10",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.3013698630136986,
+        "false_accepts": 20,
+        "false_rejects": 149,
+        "far": 0.009523809523809525,
+        "far_ci95": [
+          0.0,
+          0.032816929768041216
+        ],
+        "frr": 0.9933333333333333,
+        "frr_ci95": [
+          0.98,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          0.45572247850624,
+          0.5758249593593019,
+          0.6461797368369604
+        ],
+        "impostor_score_quantiles": [
+          0.3583557018258355,
+          0.48288945890963075,
+          0.6065274073183536
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6605447053909302
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.08,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0005153324216284451,
+          0.06842595184770434
+        ],
+        "frr": [
+          0.6,
+          0.9266666666666667
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.3013698630136986,
+        "false_accepts": 65,
+        "false_rejects": 124,
+        "far": 0.030952380952380953,
+        "far_ci95": [
+          0.004081632653061225,
+          0.0718765943877551
+        ],
+        "frr": 0.8266666666666667,
+        "frr_ci95": [
+          0.66,
+          0.9533333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.45572247850624,
+          0.5758249593593019,
+          0.6461797368369604
+        ],
+        "impostor_score_quantiles": [
+          0.3583557018258355,
+          0.48288945890963075,
+          0.6065274073183536
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.04372444629714,
+        "active_seconds": 7.85,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 13.035544719606703,
+        "high_frequency_fraction": 0.10252096703892714,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -36.879776332409435,
+        "rms_dbfs": -28.050272136161922,
+        "rolloff95_hz": 7910.15625
+      },
+      "realigned_intervals": 10274
+    },
+    {
+      "alignment_failures": 16,
+      "condition": "white-snr10",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.30095238095238097,
+        "false_accepts": 22,
+        "false_rejects": 148,
+        "far": 0.010476190476190476,
+        "far_ci95": [
+          0.0,
+          0.03711668945928885
+        ],
+        "frr": 0.9866666666666667,
+        "frr_ci95": [
+          0.9666666666666667,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          0.45670696208422834,
+          0.5773141417542802,
+          0.6459076664165446
+        ],
+        "impostor_score_quantiles": [
+          0.35829704939677387,
+          0.4821353184266223,
+          0.6075806592042584
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6600154638290406
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.08,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0010411352040816323,
+          0.07393617021276595
+        ],
+        "frr": [
+          0.6333333333333334,
+          0.9400000000000001
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.30095238095238097,
+        "false_accepts": 70,
+        "false_rejects": 124,
+        "far": 0.03333333333333333,
+        "far_ci95": [
+          0.005045210166177909,
+          0.07784940253045916
+        ],
+        "frr": 0.8266666666666667,
+        "frr_ci95": [
+          0.66,
+          0.9533333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.45670696208422834,
+          0.5773141417542802,
+          0.6459076664165446
+        ],
+        "impostor_score_quantiles": [
+          0.35829704939677387,
+          0.4821353184266223,
+          0.6075806592042584
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.04372444629714,
+        "active_seconds": 7.85,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 13.035544719606703,
+        "high_frequency_fraction": 0.10252096703892714,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -36.879776332409435,
+        "rms_dbfs": -28.050272136161922,
+        "rolloff95_hz": 7910.15625
+      },
+      "realigned_intervals": 10274
+    },
+    {
+      "alignment_failures": 16,
+      "condition": "white-snr10",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.3013698630136986,
+        "false_accepts": 20,
+        "false_rejects": 149,
+        "far": 0.009523809523809525,
+        "far_ci95": [
+          0.0,
+          0.032816929768041216
+        ],
+        "frr": 0.9933333333333333,
+        "frr_ci95": [
+          0.98,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          0.45572247850624,
+          0.5758249593593019,
+          0.6461797368369604
+        ],
+        "impostor_score_quantiles": [
+          0.3583557018258355,
+          0.48288945890963075,
+          0.6065274073183536
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6605447053909302
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.08,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0005153324216284451,
+          0.06842595184770434
+        ],
+        "frr": [
+          0.6,
+          0.9266666666666667
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.3013698630136986,
+        "false_accepts": 65,
+        "false_rejects": 124,
+        "far": 0.030952380952380953,
+        "far_ci95": [
+          0.004081632653061225,
+          0.0718765943877551
+        ],
+        "frr": 0.8266666666666667,
+        "frr_ci95": [
+          0.66,
+          0.9533333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.45572247850624,
+          0.5758249593593019,
+          0.6461797368369604
+        ],
+        "impostor_score_quantiles": [
+          0.3583557018258355,
+          0.48288945890963075,
+          0.6065274073183536
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.04372444629714,
+        "active_seconds": 7.85,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 13.035544719606703,
+        "high_frequency_fraction": 0.10252096703892714,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -36.879776332409435,
+        "rms_dbfs": -28.050272136161922,
+        "rolloff95_hz": 7910.15625
+      },
+      "realigned_intervals": 10274
+    },
+    {
+      "alignment_failures": 16,
+      "condition": "white-snr10",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.30095238095238097,
+        "false_accepts": 22,
+        "false_rejects": 148,
+        "far": 0.010476190476190476,
+        "far_ci95": [
+          0.0,
+          0.03711668945928885
+        ],
+        "frr": 0.9866666666666667,
+        "frr_ci95": [
+          0.9666666666666667,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          0.45670696208422834,
+          0.5773141417542802,
+          0.6459076664165446
+        ],
+        "impostor_score_quantiles": [
+          0.35829704939677387,
+          0.4821353184266223,
+          0.6075806592042584
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6600154638290406
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.08,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0010411352040816323,
+          0.07393617021276595
+        ],
+        "frr": [
+          0.6333333333333334,
+          0.9400000000000001
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.30095238095238097,
+        "false_accepts": 70,
+        "false_rejects": 124,
+        "far": 0.03333333333333333,
+        "far_ci95": [
+          0.005045210166177909,
+          0.07784940253045916
+        ],
+        "frr": 0.8266666666666667,
+        "frr_ci95": [
+          0.66,
+          0.9533333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.45670696208422834,
+          0.5773141417542802,
+          0.6459076664165446
+        ],
+        "impostor_score_quantiles": [
+          0.35829704939677387,
+          0.4821353184266223,
+          0.6075806592042584
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.04372444629714,
+        "active_seconds": 7.85,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 13.035544719606703,
+        "high_frequency_fraction": 0.10252096703892714,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -36.879776332409435,
+        "rms_dbfs": -28.050272136161922,
+        "rolloff95_hz": 7910.15625
+      },
+      "realigned_intervals": 10274
+    },
+    {
+      "alignment_failures": 16,
+      "condition": "white-snr10",
+      "condition_calibrated": {
+        "coverage": 0.8666666666666667,
+        "eer": 0.3153846153846154,
+        "false_accepts": 3,
+        "false_rejects": 150,
+        "far": 0.0014285714285714286,
+        "far_ci95": [
+          0.0,
+          0.004788520933424838
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          0.4576138580282187,
+          0.5748029984533787,
+          0.6404209926995363
+        ],
+        "impostor_score_quantiles": [
+          0.3639742014432947,
+          0.4874893255531788,
+          0.596469926048409
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 130,
+        "speakers": 15,
+        "threshold": 0.6613302131493888
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.08,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.002475866336633663,
+          0.04793814432989691
+        ],
+        "frr": [
+          0.7333333333333333,
+          0.9468333333333325
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          -0.04388738307823129,
+          0.009582502216312013
+        ],
+        "frr": [
+          0.0,
+          0.18000000000000005
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 0.8666666666666667,
+        "eer": 0.3153846153846154,
+        "false_accepts": 43,
+        "false_rejects": 135,
+        "far": 0.020476190476190478,
+        "far_ci95": [
+          0.0005373514431239388,
+          0.05
+        ],
+        "frr": 0.9,
+        "frr_ci95": [
+          0.7866666666666666,
+          0.98
+        ],
+        "genuine_score_quantiles": [
+          0.4576138580282187,
+          0.5748029984533787,
+          0.6404209926995363
+        ],
+        "impostor_score_quantiles": [
+          0.3639742014432947,
+          0.4874893255531788,
+          0.596469926048409
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 130,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.04372444629714,
+        "active_seconds": 7.85,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 13.035544719606703,
+        "high_frequency_fraction": 0.10252096703892714,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -36.879776332409435,
+        "rms_dbfs": -28.050272136161922,
+        "rolloff95_hz": 7910.15625
+      },
+      "realigned_intervals": 10274
+    },
+    {
+      "alignment_failures": 16,
+      "condition": "white-snr10",
+      "condition_calibrated": {
+        "coverage": 0.8933333333333333,
+        "eer": 0.30597014925373134,
+        "false_accepts": 3,
+        "false_rejects": 150,
+        "far": 0.0014285714285714286,
+        "far_ci95": [
+          0.0,
+          0.004788520933424838
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          0.4582479945217554,
+          0.5757657397824985,
+          0.6402009435703879
+        ],
+        "impostor_score_quantiles": [
+          0.36405778191983695,
+          0.4869433356637972,
+          0.5969864984804933
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 134,
+        "speakers": 15,
+        "threshold": 0.6613302131493888
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.08,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.0015625,
+          0.04947930090206186
+        ],
+        "frr": [
+          0.7466666666666667,
+          0.9733333333333334
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          -0.04490832270408163,
+          0.009574468085106383
+        ],
+        "frr": [
+          -0.006666666666666601,
+          0.17999999999999994
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 0.8933333333333333,
+        "eer": 0.30597014925373134,
+        "false_accepts": 47,
+        "false_rejects": 134,
+        "far": 0.02238095238095238,
+        "far_ci95": [
+          0.0010416666666666667,
+          0.05155823700926787
+        ],
+        "frr": 0.8933333333333333,
+        "frr_ci95": [
+          0.78,
+          0.9733333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.4582479945217554,
+          0.5757657397824985,
+          0.6402009435703879
+        ],
+        "impostor_score_quantiles": [
+          0.36405778191983695,
+          0.4869433356637972,
+          0.5969864984804933
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 134,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 1.0,
+        "active_rms_dbfs": -28.04372444629714,
+        "active_seconds": 7.85,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 13.035544719606703,
+        "high_frequency_fraction": 0.10252096703892714,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -36.879776332409435,
+        "rms_dbfs": -28.050272136161922,
+        "rolloff95_hz": 7910.15625
+      },
+      "realigned_intervals": 10274
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "band-300-3400",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.363013698630137,
+        "false_accepts": 31,
+        "false_rejects": 145,
+        "far": 0.014761904761904763,
+        "far_ci95": [
+          0.0,
+          0.048484848484848485
+        ],
+        "frr": 0.9666666666666667,
+        "frr_ci95": [
+          0.9133333333333333,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.0081983953677608,
+          0.07738041473402185,
+          0.16160386202864963
+        ],
+        "impostor_score_quantiles": [
+          -0.041995454035503296,
+          0.038633707889609716,
+          0.11617648543180467
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.18416568222973084
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.9,
+          0.9933333333333333
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.363013698630137,
+        "false_accepts": 0,
+        "false_rejects": 150,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.0081983953677608,
+          0.07738041473402185,
+          0.16160386202864963
+        ],
+        "impostor_score_quantiles": [
+          -0.041995454035503296,
+          0.038633707889609716,
+          0.11617648543180467
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.5625621272365805,
+        "active_rms_dbfs": -26.097154511338474,
+        "active_seconds": 4.44,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 60.390678101270694,
+        "high_frequency_fraction": 2.909914869359082e-06,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -84.18821637208524,
+        "rms_dbfs": -28.6595439075125,
+        "rolloff95_hz": 1640.625
+      },
+      "realigned_intervals": 10490
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "band-300-3400",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.36666666666666664,
+        "false_accepts": 28,
+        "false_rejects": 145,
+        "far": 0.013333333333333334,
+        "far_ci95": [
+          0.0,
+          0.04479166666666667
+        ],
+        "frr": 0.9666666666666667,
+        "frr_ci95": [
+          0.9133333333333333,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.00874551517088293,
+          0.07620461950616916,
+          0.16254287468402512
+        ],
+        "impostor_score_quantiles": [
+          -0.042187943655465326,
+          0.0385917840779505,
+          0.11620402685232889
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.1860812581567602
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.9466666666666667,
+          1.0
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.36666666666666664,
+        "false_accepts": 0,
+        "false_rejects": 150,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.00874551517088293,
+          0.07620461950616916,
+          0.16254287468402512
+        ],
+        "impostor_score_quantiles": [
+          -0.042187943655465326,
+          0.0385917840779505,
+          0.11620402685232889
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.5625621272365805,
+        "active_rms_dbfs": -26.097154511338474,
+        "active_seconds": 4.44,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 60.390678101270694,
+        "high_frequency_fraction": 2.909914869359082e-06,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -84.18821637208524,
+        "rms_dbfs": -28.6595439075125,
+        "rolloff95_hz": 1640.625
+      },
+      "realigned_intervals": 10490
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "band-300-3400",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.36350293542074363,
+        "false_accepts": 28,
+        "false_rejects": 145,
+        "far": 0.013333333333333334,
+        "far_ci95": [
+          0.0,
+          0.04479166666666667
+        ],
+        "frr": 0.9666666666666667,
+        "frr_ci95": [
+          0.9133333333333333,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.008122729653443551,
+          0.07857418393005469,
+          0.16580859231762587
+        ],
+        "impostor_score_quantiles": [
+          -0.04280172326764011,
+          0.03836543873264666,
+          0.11692917099638507
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.18672541313265503
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.9,
+          0.9933333333333333
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.36350293542074363,
+        "false_accepts": 0,
+        "false_rejects": 150,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.008122729653443551,
+          0.07857418393005469,
+          0.16580859231762587
+        ],
+        "impostor_score_quantiles": [
+          -0.04280172326764011,
+          0.03836543873264666,
+          0.11692917099638507
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.5625621272365805,
+        "active_rms_dbfs": -26.097154511338474,
+        "active_seconds": 4.44,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 60.390678101270694,
+        "high_frequency_fraction": 2.909914869359082e-06,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -84.18821637208524,
+        "rms_dbfs": -28.6595439075125,
+        "rolloff95_hz": 1640.625
+      },
+      "realigned_intervals": 10490
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "band-300-3400",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.36666666666666664,
+        "false_accepts": 27,
+        "false_rejects": 145,
+        "far": 0.012857142857142857,
+        "far_ci95": [
+          0.0,
+          0.0438790970933828
+        ],
+        "frr": 0.9666666666666667,
+        "frr_ci95": [
+          0.9133333333333333,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.00874551517088293,
+          0.07793289890400786,
+          0.1661619295552373
+        ],
+        "impostor_score_quantiles": [
+          -0.043201916046071535,
+          0.03821753986723582,
+          0.11699013211881616
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.1871043804444765
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.9466666666666667,
+          1.0
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.36666666666666664,
+        "false_accepts": 0,
+        "false_rejects": 150,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.00874551517088293,
+          0.07793289890400786,
+          0.1661619295552373
+        ],
+        "impostor_score_quantiles": [
+          -0.043201916046071535,
+          0.03821753986723582,
+          0.11699013211881616
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.5625621272365805,
+        "active_rms_dbfs": -26.097154511338474,
+        "active_seconds": 4.44,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 60.390678101270694,
+        "high_frequency_fraction": 2.909914869359082e-06,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -84.18821637208524,
+        "rms_dbfs": -28.6595439075125,
+        "rolloff95_hz": 1640.625
+      },
+      "realigned_intervals": 10490
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "band-300-3400",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.363013698630137,
+        "false_accepts": 31,
+        "false_rejects": 145,
+        "far": 0.014761904761904763,
+        "far_ci95": [
+          0.0,
+          0.051030927835051546
+        ],
+        "frr": 0.9666666666666667,
+        "frr_ci95": [
+          0.9133333333333333,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.006903179665541713,
+          0.07993181031442395,
+          0.1687301538737589
+        ],
+        "impostor_score_quantiles": [
+          -0.043021694747240914,
+          0.04050372572539494,
+          0.1184055906553299
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.19126890501117008
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.9,
+          0.9933333333333333
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.363013698630137,
+        "false_accepts": 0,
+        "false_rejects": 150,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.006903179665541713,
+          0.07993181031442395,
+          0.1687301538737589
+        ],
+        "impostor_score_quantiles": [
+          -0.043021694747240914,
+          0.04050372572539494,
+          0.1184055906553299
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.5625621272365805,
+        "active_rms_dbfs": -26.097154511338474,
+        "active_seconds": 4.44,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 60.390678101270694,
+        "high_frequency_fraction": 2.909914869359082e-06,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -84.18821637208524,
+        "rms_dbfs": -28.6595439075125,
+        "rolloff95_hz": 1640.625
+      },
+      "realigned_intervals": 10490
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "band-300-3400",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.36666666666666664,
+        "false_accepts": 31,
+        "false_rejects": 145,
+        "far": 0.014761904761904763,
+        "far_ci95": [
+          0.0,
+          0.051030927835051546
+        ],
+        "frr": 0.9666666666666667,
+        "frr_ci95": [
+          0.9133333333333333,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.008018611007293805,
+          0.07909859352591062,
+          0.16924036440439522
+        ],
+        "impostor_score_quantiles": [
+          -0.044039641606754484,
+          0.040361991334755556,
+          0.1183494658328784
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.19193713118632638
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.03,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.010311963058419244,
+          0.0
+        ],
+        "frr": [
+          0.9466666666666667,
+          1.0
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.36666666666666664,
+        "false_accepts": 0,
+        "false_rejects": 150,
+        "far": 0.0,
+        "far_ci95": [
+          0.0,
+          0.0
+        ],
+        "frr": 1.0,
+        "frr_ci95": [
+          1.0,
+          1.0
+        ],
+        "genuine_score_quantiles": [
+          -0.008018611007293805,
+          0.07909859352591062,
+          0.16924036440439522
+        ],
+        "impostor_score_quantiles": [
+          -0.044039641606754484,
+          0.040361991334755556,
+          0.1183494658328784
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.5625621272365805,
+        "active_rms_dbfs": -26.097154511338474,
+        "active_seconds": 4.44,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 60.390678101270694,
+        "high_frequency_fraction": 2.909914869359082e-06,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -84.18821637208524,
+        "rms_dbfs": -28.6595439075125,
+        "rolloff95_hz": 1640.625
+      },
+      "realigned_intervals": 10490
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "reverb-rt60-0.3",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.026418786692759294,
+        "false_accepts": 10,
+        "false_rejects": 11,
+        "far": 0.004761904761904762,
+        "far_ci95": [
+          0.0005,
+          0.013980155853570125
+        ],
+        "frr": 0.07333333333333333,
+        "frr_ci95": [
+          0.02,
+          0.13333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6520027260175733,
+          0.7057605591259505,
+          0.7546426497791943
+        ],
+        "impostor_score_quantiles": [
+          0.27160908071832224,
+          0.4266551034688427,
+          0.5695767921209336
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6362034440040589
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.05,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.0044469696969696975,
+          0.008586265884652979
+        ],
+        "frr": [
+          0.006666666666666667,
+          0.06666666666666668
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.026418786692759294,
+        "false_accepts": 9,
+        "false_rejects": 12,
+        "far": 0.004285714285714286,
+        "far_ci95": [
+          0.0005,
+          0.011579877724614562
+        ],
+        "frr": 0.08,
+        "frr_ci95": [
+          0.02666666666666667,
+          0.14666666666666667
+        ],
+        "genuine_score_quantiles": [
+          0.6520027260175733,
+          0.7057605591259505,
+          0.7546426497791943
+        ],
+        "impostor_score_quantiles": [
+          0.27160908071832224,
+          0.4266551034688427,
+          0.5695767921209336
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.6997700481185991,
+        "active_rms_dbfs": -27.0989349232537,
+        "active_seconds": 5.45,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.32011315207925,
+        "high_frequency_fraction": 0.011599660820488083,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -76.11437422498645,
+        "rms_dbfs": -28.659540319273496,
+        "rolloff95_hz": 1394.53125
+      },
+      "realigned_intervals": 11301
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "reverb-rt60-0.3",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.025714285714285714,
+        "false_accepts": 10,
+        "false_rejects": 8,
+        "far": 0.004761904761904762,
+        "far_ci95": [
+          0.0005,
+          0.013980155853570125
+        ],
+        "frr": 0.05333333333333334,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.11333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6514125585556031,
+          0.7048217804808365,
+          0.7544115369100319
+        ],
+        "impostor_score_quantiles": [
+          0.27047978473319245,
+          0.42547626249100035,
+          0.5691216222863448
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6362034440040589
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.05,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.0044469696969696975,
+          0.008586265884652979
+        ],
+        "frr": [
+          0.006666666666666667,
+          0.07999999999999999
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.025714285714285714,
+        "false_accepts": 9,
+        "false_rejects": 9,
+        "far": 0.004285714285714286,
+        "far_ci95": [
+          0.0005,
+          0.011579877724614562
+        ],
+        "frr": 0.06,
+        "frr_ci95": [
+          0.013333333333333334,
+          0.12
+        ],
+        "genuine_score_quantiles": [
+          0.6514125585556031,
+          0.7048217804808365,
+          0.7544115369100319
+        ],
+        "impostor_score_quantiles": [
+          0.27047978473319245,
+          0.42547626249100035,
+          0.5691216222863448
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.6997700481185991,
+        "active_rms_dbfs": -27.0989349232537,
+        "active_seconds": 5.45,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.32011315207925,
+        "high_frequency_fraction": 0.011599660820488083,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -76.11437422498645,
+        "rms_dbfs": -28.659540319273496,
+        "rolloff95_hz": 1394.53125
+      },
+      "realigned_intervals": 11301
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "reverb-rt60-0.3",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.024951076320939333,
+        "false_accepts": 10,
+        "false_rejects": 11,
+        "far": 0.004761904761904762,
+        "far_ci95": [
+          0.0005,
+          0.013980155853570125
+        ],
+        "frr": 0.07333333333333333,
+        "frr_ci95": [
+          0.02,
+          0.13333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6520027260175733,
+          0.7063483627931924,
+          0.7546426497791943
+        ],
+        "impostor_score_quantiles": [
+          0.2718183016294942,
+          0.4269040164848169,
+          0.5695767921209336
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6362034440040589
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.05,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.0044469696969696975,
+          0.008586265884652979
+        ],
+        "frr": [
+          0.006666666666666667,
+          0.06666666666666668
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.024951076320939333,
+        "false_accepts": 9,
+        "false_rejects": 12,
+        "far": 0.004285714285714286,
+        "far_ci95": [
+          0.0005,
+          0.011579877724614562
+        ],
+        "frr": 0.08,
+        "frr_ci95": [
+          0.02666666666666667,
+          0.14666666666666667
+        ],
+        "genuine_score_quantiles": [
+          0.6520027260175733,
+          0.7063483627931924,
+          0.7546426497791943
+        ],
+        "impostor_score_quantiles": [
+          0.2718183016294942,
+          0.4269040164848169,
+          0.5695767921209336
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.6997700481185991,
+        "active_rms_dbfs": -27.0989349232537,
+        "active_seconds": 5.45,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.32011315207925,
+        "high_frequency_fraction": 0.011599660820488083,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -76.11437422498645,
+        "rms_dbfs": -28.659540319273496,
+        "rolloff95_hz": 1394.53125
+      },
+      "realigned_intervals": 11301
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "reverb-rt60-0.3",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.024285714285714285,
+        "false_accepts": 10,
+        "false_rejects": 8,
+        "far": 0.004761904761904762,
+        "far_ci95": [
+          0.0005,
+          0.013980155853570125
+        ],
+        "frr": 0.05333333333333334,
+        "frr_ci95": [
+          0.006666666666666667,
+          0.11333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6514125585556031,
+          0.7057605591259505,
+          0.7544115369100319
+        ],
+        "impostor_score_quantiles": [
+          0.27047978473319245,
+          0.42577689232533433,
+          0.5691216222863448
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6362034440040589
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.05,
+      "difference_from_clean_ci95": {
+        "far": [
+          -0.0044469696969696975,
+          0.008586265884652979
+        ],
+        "frr": [
+          0.006666666666666667,
+          0.07999999999999999
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          0.0,
+          0.0
+        ],
+        "frr": [
+          0.0,
+          0.0
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "fixed_qc",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.024285714285714285,
+        "false_accepts": 9,
+        "false_rejects": 9,
+        "far": 0.004285714285714286,
+        "far_ci95": [
+          0.0005,
+          0.011579877724614562
+        ],
+        "frr": 0.06,
+        "frr_ci95": [
+          0.013333333333333334,
+          0.12
+        ],
+        "genuine_score_quantiles": [
+          0.6514125585556031,
+          0.7057605591259505,
+          0.7544115369100319
+        ],
+        "impostor_score_quantiles": [
+          0.27047978473319245,
+          0.42577689232533433,
+          0.5691216222863448
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.6997700481185991,
+        "active_rms_dbfs": -27.0989349232537,
+        "active_seconds": 5.45,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.32011315207925,
+        "high_frequency_fraction": 0.011599660820488083,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -76.11437422498645,
+        "rms_dbfs": -28.659540319273496,
+        "rolloff95_hz": 1394.53125
+      },
+      "realigned_intervals": 11301
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "reverb-rt60-0.3",
+      "condition_calibrated": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 12,
+        "false_rejects": 11,
+        "far": 0.005714285714285714,
+        "far_ci95": [
+          0.0,
+          0.016840816326530592
+        ],
+        "frr": 0.07333333333333333,
+        "frr_ci95": [
+          0.02666666666666667,
+          0.13333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6534766031636132,
+          0.7040760431777346,
+          0.7507291249731645
+        ],
+        "impostor_score_quantiles": [
+          0.27717826287262143,
+          0.4325056342800525,
+          0.5742600589584221
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6349345550817603
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.05,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0,
+          0.009577453321754217
+        ],
+        "frr": [
+          0.0,
+          0.060000000000000005
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          -0.0020202020202020193,
+          0.00606060606060606
+        ],
+        "frr": [
+          -0.026666666666666686,
+          0.01333333333333335
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 0.9733333333333334,
+        "eer": 0.0136986301369863,
+        "false_accepts": 11,
+        "false_rejects": 11,
+        "far": 0.005238095238095238,
+        "far_ci95": [
+          0.0,
+          0.014583333333333334
+        ],
+        "frr": 0.07333333333333333,
+        "frr_ci95": [
+          0.02666666666666667,
+          0.13333333333333333
+        ],
+        "genuine_score_quantiles": [
+          0.6534766031636132,
+          0.7040760431777346,
+          0.7507291249731645
+        ],
+        "impostor_score_quantiles": [
+          0.27717826287262143,
+          0.4325056342800525,
+          0.5742600589584221
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 146,
+        "speakers": 15,
+        "threshold": 0.6373790434815668
+      },
+      "policy": "vowels5",
+      "quality_medians": {
+        "active_fraction": 0.6997700481185991,
+        "active_rms_dbfs": -27.0989349232537,
+        "active_seconds": 5.45,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.32011315207925,
+        "high_frequency_fraction": 0.011599660820488083,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -76.11437422498645,
+        "rms_dbfs": -28.659540319273496,
+        "rolloff95_hz": 1394.53125
+      },
+      "realigned_intervals": 11301
+    },
+    {
+      "alignment_failures": 0,
+      "condition": "reverb-rt60-0.3",
+      "condition_calibrated": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 13,
+        "false_rejects": 7,
+        "far": 0.006190476190476191,
+        "far_ci95": [
+          0.0,
+          0.017529548057898553
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.013333333333333334,
+          0.09333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6539798724651337,
+          0.7036376915622555,
+          0.7505636643917165
+        ],
+        "impostor_score_quantiles": [
+          0.2764569773631437,
+          0.432332378412996,
+          0.573976611969146
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6349345550817603
+      },
+      "crop_shift_median_seconds": 0.01,
+      "crop_shift_p90_seconds": 0.05,
+      "difference_from_clean_ci95": {
+        "far": [
+          0.0,
+          0.010101144422952934
+        ],
+        "frr": [
+          0.0,
+          0.06
+        ]
+      },
+      "difference_from_fixed_ci95": {
+        "far": [
+          -0.001980693069306931,
+          0.00707070707070707
+        ],
+        "frr": [
+          -0.046666666666666676,
+          0.013333333333333336
+        ]
+      },
+      "fixed_intervals": 11090,
+      "maximum_clip_fraction": 0.0,
+      "mode": "realigned",
+      "original_threshold": {
+        "coverage": 1.0,
+        "eer": 0.013333333333333334,
+        "false_accepts": 12,
+        "false_rejects": 7,
+        "far": 0.005714285714285714,
+        "far_ci95": [
+          0.0,
+          0.01562578914141414
+        ],
+        "frr": 0.04666666666666667,
+        "frr_ci95": [
+          0.013333333333333334,
+          0.09333333333333334
+        ],
+        "genuine_score_quantiles": [
+          0.6539798724651337,
+          0.7036376915622555,
+          0.7505636643917165
+        ],
+        "impostor_score_quantiles": [
+          0.2764569773631437,
+          0.432332378412996,
+          0.573976611969146
+        ],
+        "impostor_trials": 2100,
+        "queries": 150,
+        "scored_queries": 150,
+        "speakers": 15,
+        "threshold": 0.6374205784364181
+      },
+      "policy": "vowels4",
+      "quality_medians": {
+        "active_fraction": 0.6997700481185991,
+        "active_rms_dbfs": -27.0989349232537,
+        "active_seconds": 5.45,
+        "duration_seconds": 7.855604166666667,
+        "energy_contrast_db": 51.32011315207925,
+        "high_frequency_fraction": 0.011599660820488083,
+        "near_clip_fraction": 0.0,
+        "quiet_rms_dbfs": -76.11437422498645,
+        "rms_dbfs": -28.659540319273496,
+        "rolloff95_hz": 1394.53125
+      },
+      "realigned_intervals": 11301
+    }
+  ],
+  "verification": {
+    "bootstrap_check": "20 direct weighted-count checks per rate estimate",
+    "independent_float64_score_rows": 81000,
+    "max_score_error": 3.985098384617913e-08,
+    "model_and_pcm_replay_cases": 12,
+    "scipy_version": "1.16.3",
+    "status": "passed"
+  }
+}

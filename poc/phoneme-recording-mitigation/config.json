@@ -1,0 +1,18 @@
+{
+  "run_directory": "artifacts/phoneme-recording-mitigation/normalization-duration-20261011-v2",
+  "quality_run": "artifacts/phoneme-recording-quality/quality-20261011-v1",
+  "target_active_rms_dbfs": -25.0,
+  "maximum_gain_db": 24.0,
+  "peak_limit": 0.98,
+  "duration_seconds": [
+    1.0,
+    2.0,
+    3.0
+  ],
+  "bootstrap_seed": 20261027,
+  "bootstrap_replicates": 2000,
+  "calibration": "separate original and normalized clean JVS validation FAR1%; no per-corruption recalibration; separate CV validation FAR1%; freeze before test",
+  "normalization": "one whole-utterance gain before original fixed-boundary feature extraction; both enrollment and query; original support retained",
+  "duration": "unprocessed JVS; nested windows from first retained phone start; only complete original raw phone boundaries inside window; common >=3sec eligible cohort; retained original embeddings",
+  "scope": "exploratory previously observed speakers; frozen encoder; no production adoption or untouched-test claim"
+}
