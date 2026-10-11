@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "run_directory": "artifacts/phoneme-live-impostor/corpus-screen-20261011-v1",
+  "live_run": "artifacts/phoneme-live-recording/pilot-20261011-v2",
+  "corpus_freeze": "artifacts/phoneme-guided-recording/guided-recording-20261011-v1/design-freeze.json",
+  "corpora": {
+    "CV-A": "artifacts/phoneme-missing-vowel-holdout/cv60-20261011-v1",
+    "CV-B": "artifacts/phoneme-recording-ablation/reverb-holdout-20261011-v1"
+  },
+  "arms": ["single", "adaptive1"],
+  "primary_arm": "adaptive1",
+  "sequence_seed": 20261104,
+  "maximum_clips": 3,
+  "reference_far_targets": [0.01, 0.001],
+  "calibration": "Pool CV-A/B validation impostor-candidate scores; choose minimum strict cut giving empirical scored acceptance <= target. Freeze before test scoring. Never fit to the known genuine scores.",
+  "scope": "One target registration; already observed Common Voice clients are impostor candidates, not newly recorded people. Target identity overlap with corpus is unverified. Existing genuine recordings are retrospective diagnostics, not independent tests.",
+  "duration_policy": "Whole source recordings with original boundaries; no crop or re-alignment. Report whether selected sequences fit live 8-second clip and 20-second total limits. Reference screening is not a simulation of the live microphone protocol.",
+  "device_investigation": "excluded at user request",
+  "adoption": "No live authentication threshold or model/profile changes"
+}
