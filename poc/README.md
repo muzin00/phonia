@@ -236,6 +236,13 @@ test通常文EERは1.769→1.361→1.497%、別テキストは1.531→1.221→1.
 [比較条件と再現手順](phoneme-all-enrollment-scaling/README.md)、[HTML比較表](phoneme-all-enrollment-scaling/evaluation-results.html)、
 [測定表](phoneme-all-enrollment-scaling/evaluation-results.md)、[結果の解釈](phoneme-all-enrollment-scaling/interpretation.md)を参照する。
 
+Issue #22の追加検証では、全36音素encoder・登録上限30区間/音素を固定して、等重み・音素別MLP・音素間Transformerを比較する。
+JVS＋Common Voiceの学習140話者だけで各方式3 seedを学習し、validationで選んだモデル・閾値をtestへ固定適用する。
+Transformerのtest平均EERは通常1.497→1.186%、別文1.020→0.941%。3 seedの最良値は通常0.952%、別文0.747%で、それぞれ別のseedである。
+一方、部分ノイズでは3.356%・3.401%へ悪化した。MLPはvalidationで初期の等重みが最良だった。
+[設計と再現手順](phoneme-transformer-fusion/README.md)、[HTML比較表](phoneme-transformer-fusion/summary.html)、
+[全seedの測定結果](phoneme-transformer-fusion/evaluation-results.md)、[結果の解釈](phoneme-transformer-fusion/interpretation.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。

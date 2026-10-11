@@ -1,0 +1,2682 @@
+{
+  "audit": {
+    "all_models_thresholds_frozen_before_new_test": true,
+    "checks": {
+      "equal/test": {
+        "eer_checks": 2,
+        "max_score_error": 1.6902135813179342e-07,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "equal/validation": {
+        "eer_checks": 2,
+        "max_score_error": 1.462326292278604e-07,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "mlp-20261015/test": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "mlp-20261015/validation": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "mlp-20261016/test": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "mlp-20261016/validation": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "mlp-20261017/test": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "mlp-20261017/validation": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "transformer-20261015/test": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "transformer-20261015/validation": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "transformer-20261016/test": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "transformer-20261016/validation": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "transformer-20261017/test": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      },
+      "transformer-20261017/validation": {
+        "eer_checks": 2,
+        "max_score_error": 0.0,
+        "rate_checks": 24,
+        "scores": 18000
+      }
+    },
+    "eer_checks": 28,
+    "equal_enrollment30_exactly_reproduced": true,
+    "full_source_hashes_verified_after_training": true,
+    "independent_bootstrap_checks": 560,
+    "rate_checks": 336,
+    "score_rows": 252000,
+    "status": "passed"
+  },
+  "bootstrap": {
+    "differences": {
+      "mlp-mean-minus-equal/cross_text_verification": {
+        "ci95": [
+          -1.734723475976807e-18,
+          1.734723475976807e-18
+        ],
+        "difference": 0.0
+      },
+      "mlp-mean-minus-equal/verification": {
+        "ci95": [
+          -8.673617379884035e-19,
+          1.734723475976807e-18
+        ],
+        "difference": 0.0
+      },
+      "transformer-mean-minus-equal/cross_text_verification": {
+        "ci95": [
+          -0.007481417962446266,
+          0.0018781690069645887
+        ],
+        "difference": -0.0007896015549076763
+      },
+      "transformer-mean-minus-equal/verification": {
+        "ci95": [
+          -0.006565735663786522,
+          0.004032666479712448
+        ],
+        "difference": -0.0031098153547133127
+      },
+      "transformer-mean-minus-mlp-mean/cross_text_verification": {
+        "ci95": [
+          -0.007481417962446266,
+          0.0018781690069645891
+        ],
+        "difference": -0.0007896015549076771
+      },
+      "transformer-mean-minus-mlp-mean/verification": {
+        "ci95": [
+          -0.00656573566378652,
+          0.0040326664797124484
+        ],
+        "difference": -0.003109815354713313
+      }
+    },
+    "replicates": 2000,
+    "scope": "paired test-speaker uncertainty conditional on these six fixed trained models; means are mean EER, not ensemble scores; no population claim about training seeds"
+  },
+  "config": {
+    "architectures": [
+      "mlp",
+      "transformer"
+    ],
+    "attention_heads": 4,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 20261014,
+    "data_seed": 20261015,
+    "dimension": 64,
+    "encoder_sha256": "8ca55d2f1eb57f4466e70fc5e37a015236ed3bfd9e142af56feaa1d1759ebd72",
+    "encoder_trainable": false,
+    "enrollment_limit": 30,
+    "evaluation_run": "artifacts/phoneme-all-enrollment-scaling/all36-enrollment-20261011-v1",
+    "learning_rate": 0.0003,
+    "negative_sampling": "uniform different speaker in the query corpus; genuine/impostor use the same shared-phone mask",
+    "original_test_previously_observed": true,
+    "queries_per_update": 32,
+    "seeds": [
+      20261015,
+      20261016,
+      20261017
+    ],
+    "selection": "lowest validation normal EER; earliest update breaks ties; update zero eligible",
+    "source_run": "artifacts/phoneme-all-training/all36-20261011-v1",
+    "source_trial": "trial-001-all36",
+    "training_enrollment_wavs": 35,
+    "transformer_layers": 2,
+    "uniform_kl_coefficient": 0.001,
+    "updates": 4000,
+    "validation_every": 500,
+    "weight_decay": 0.01
+  },
+  "seed_summary": {
+    "mlp": {
+      "cross_text_verification": {
+        "maximum": 0.01020408163265306,
+        "mean": 0.01020408163265306,
+        "minimum": 0.01020408163265306
+      },
+      "verification": {
+        "maximum": 0.014965986394557823,
+        "mean": 0.014965986394557823,
+        "minimum": 0.014965986394557823
+      }
+    },
+    "transformer": {
+      "cross_text_verification": {
+        "maximum": 0.010568513119533527,
+        "mean": 0.009414480077745384,
+        "minimum": 0.007470845481049562
+      },
+      "verification": {
+        "maximum": 0.014965986394557823,
+        "mean": 0.01185617103984451,
+        "minimum": 0.009523809523809525
+      }
+    }
+  },
+  "source_run": "artifacts/phoneme-transformer-fusion/fixed-all36-20261011-v1",
+  "tables": [
+    {
+      "headers": [
+        "統合方式 / seed",
+        "採用更新",
+        "validation 通常 EER",
+        "validation 別文 EER",
+        "test 通常 EER",
+        "test 別文 EER"
+      ],
+      "rows": [
+        [
+          "equal",
+          "—",
+          "0.680%",
+          "0.510%",
+          "1.497%",
+          "1.020%"
+        ],
+        [
+          "mlp-20261015",
+          "0",
+          "0.680%",
+          "0.510%",
+          "1.497%",
+          "1.020%"
+        ],
+        [
+          "mlp-20261016",
+          "0",
+          "0.680%",
+          "0.510%",
+          "1.497%",
+          "1.020%"
+        ],
+        [
+          "mlp-20261017",
+          "0",
+          "0.680%",
+          "0.510%",
+          "1.497%",
+          "1.020%"
+        ],
+        [
+          "transformer-20261015",
+          "3000",
+          "0.457%",
+          "0.765%",
+          "1.497%",
+          "1.020%"
+        ],
+        [
+          "transformer-20261016",
+          "3000",
+          "0.525%",
+          "0.765%",
+          "0.952%",
+          "1.057%"
+        ],
+        [
+          "transformer-20261017",
+          "2500",
+          "0.272%",
+          "0.510%",
+          "1.108%",
+          "0.747%"
+        ]
+      ],
+      "title": "全seedの測定値"
+    },
+    {
+      "headers": [
+        "統合方式",
+        "通常",
+        "別文"
+      ],
+      "rows": [
+        [
+          "mlp",
+          "1.497%（1.497–1.497%）",
+          "1.020%（1.020–1.020%）"
+        ],
+        [
+          "transformer",
+          "1.186%（0.952–1.497%）",
+          "0.941%（0.747–1.057%）"
+        ]
+      ],
+      "title": "test EERの3 seed平均（最小–最大）"
+    },
+    {
+      "headers": [
+        "比較 / 評価",
+        "EER差",
+        "95%区間"
+      ],
+      "rows": [
+        [
+          "mlp-mean-minus-equal/cross_text_verification",
+          "+0.000",
+          "[-0.000, +0.000]"
+        ],
+        [
+          "mlp-mean-minus-equal/verification",
+          "+0.000",
+          "[-0.000, +0.000]"
+        ],
+        [
+          "transformer-mean-minus-equal/cross_text_verification",
+          "-0.079",
+          "[-0.748, +0.188]"
+        ],
+        [
+          "transformer-mean-minus-equal/verification",
+          "-0.311",
+          "[-0.657, +0.403]"
+        ],
+        [
+          "transformer-mean-minus-mlp-mean/cross_text_verification",
+          "-0.079",
+          "[-0.748, +0.188]"
+        ],
+        [
+          "transformer-mean-minus-mlp-mean/verification",
+          "-0.311",
+          "[-0.657, +0.403]"
+        ]
+      ],
+      "title": "EER差と話者bootstrap 95%区間（pp、負が改善）"
+    },
+    {
+      "headers": [
+        "方式 / seed",
+        "評価",
+        "全入力 FAR",
+        "全入力 FRR",
+        "採点発話"
+      ],
+      "rows": [
+        [
+          "equal",
+          "通常",
+          "0.410%",
+          "4.400%",
+          "735/750"
+        ],
+        [
+          "equal",
+          "別文",
+          "0.714%",
+          "14.222%",
+          "392/450"
+        ],
+        [
+          "mlp-20261015",
+          "通常",
+          "0.410%",
+          "4.400%",
+          "735/750"
+        ],
+        [
+          "mlp-20261015",
+          "別文",
+          "0.714%",
+          "14.222%",
+          "392/450"
+        ],
+        [
+          "mlp-20261016",
+          "通常",
+          "0.410%",
+          "4.400%",
+          "735/750"
+        ],
+        [
+          "mlp-20261016",
+          "別文",
+          "0.714%",
+          "14.222%",
+          "392/450"
+        ],
+        [
+          "mlp-20261017",
+          "通常",
+          "0.410%",
+          "4.400%",
+          "735/750"
+        ],
+        [
+          "mlp-20261017",
+          "別文",
+          "0.714%",
+          "14.222%",
+          "392/450"
+        ],
+        [
+          "transformer-20261015",
+          "通常",
+          "0.486%",
+          "4.000%",
+          "735/750"
+        ],
+        [
+          "transformer-20261015",
+          "別文",
+          "0.905%",
+          "13.778%",
+          "392/450"
+        ],
+        [
+          "transformer-20261016",
+          "通常",
+          "0.286%",
+          "3.600%",
+          "735/750"
+        ],
+        [
+          "transformer-20261016",
+          "別文",
+          "0.825%",
+          "14.000%",
+          "392/450"
+        ],
+        [
+          "transformer-20261017",
+          "通常",
+          "0.524%",
+          "3.733%",
+          "735/750"
+        ],
+        [
+          "transformer-20261017",
+          "別文",
+          "1.111%",
+          "13.333%",
+          "392/450"
+        ]
+      ],
+      "title": "validation FAR 1%閾値を固定したtest結果（無採点は拒否）"
+    }
+  ],
+  "variants": {
+    "equal": {
+      "test": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.01020408163265306,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.004603174603174603,
+              "all_input_frr": 0.1511111111111111,
+              "false_accepts": 29,
+              "false_rejects": 10,
+              "far": 0.0052842565597667635,
+              "frr": 0.025510204081632654,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.00031746031746031746,
+              "all_input_frr": 0.20666666666666667,
+              "false_accepts": 2,
+              "false_rejects": 35,
+              "far": 0.00036443148688046647,
+              "frr": 0.08928571428571429,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.007142857142857143,
+              "all_input_frr": 0.14222222222222222,
+              "false_accepts": 45,
+              "false_rejects": 6,
+              "far": 0.008199708454810495,
+              "frr": 0.015306122448979591,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 280,
+            "a": 392,
+            "b": 157,
+            "by": 5,
+            "ch": 98,
+            "cl": 25,
+            "d": 275,
+            "e": 392,
+            "f": 36,
+            "g": 253,
+            "gy": 12,
+            "h": 150,
+            "hy": 8,
+            "i": 392,
+            "j": 135,
+            "k": 376,
+            "ky": 43,
+            "m": 289,
+            "n": 360,
+            "ny": 4,
+            "o": 392,
+            "p": 52,
+            "py": 1,
+            "r": 346,
+            "ry": 28,
+            "s": 311,
+            "sh": 259,
+            "t": 340,
+            "ts": 133,
+            "u": 392,
+            "w": 234,
+            "y": 187,
+            "z": 93
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.014965986394557823,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.002285714285714286,
+              "all_input_frr": 0.052,
+              "false_accepts": 24,
+              "false_rejects": 24,
+              "far": 0.0023323615160349854,
+              "frr": 0.0326530612244898,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0,
+              "all_input_frr": 0.11066666666666666,
+              "false_accepts": 0,
+              "false_rejects": 68,
+              "far": 0.0,
+              "frr": 0.09251700680272108,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.004095238095238095,
+              "all_input_frr": 0.044,
+              "false_accepts": 43,
+              "false_rejects": 18,
+              "far": 0.0041788143828960156,
+              "frr": 0.024489795918367346,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 674,
+            "a": 735,
+            "b": 463,
+            "by": 120,
+            "ch": 360,
+            "cl": 137,
+            "d": 598,
+            "e": 735,
+            "f": 300,
+            "g": 518,
+            "gy": 135,
+            "h": 337,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 695,
+            "ky": 238,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 285,
+            "py": 45,
+            "r": 702,
+            "ry": 150,
+            "s": 658,
+            "sh": 630,
+            "t": 666,
+            "ts": 297,
+            "u": 735,
+            "v": 15,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      },
+      "validation": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.00510204081632653,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.005396825396825397,
+              "all_input_frr": 0.13111111111111112,
+              "false_accepts": 34,
+              "false_rejects": 1,
+              "far": 0.00619533527696793,
+              "frr": 0.002551020408163265,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0004761904761904762,
+              "all_input_frr": 0.16444444444444445,
+              "false_accepts": 3,
+              "false_rejects": 16,
+              "far": 0.0005466472303206997,
+              "frr": 0.04081632653061224,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.010317460317460317,
+              "all_input_frr": 0.1288888888888889,
+              "false_accepts": 65,
+              "false_rejects": 0,
+              "far": 0.011844023323615161,
+              "frr": 0.0,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 277,
+            "a": 392,
+            "b": 151,
+            "by": 5,
+            "ch": 110,
+            "cl": 39,
+            "d": 280,
+            "e": 392,
+            "f": 33,
+            "g": 247,
+            "gy": 10,
+            "h": 159,
+            "hy": 7,
+            "i": 392,
+            "j": 133,
+            "k": 371,
+            "ky": 38,
+            "m": 303,
+            "n": 363,
+            "ny": 12,
+            "o": 392,
+            "p": 50,
+            "r": 343,
+            "ry": 24,
+            "s": 303,
+            "sh": 265,
+            "t": 351,
+            "ts": 138,
+            "u": 392,
+            "w": 250,
+            "y": 170,
+            "z": 75
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.006802721088435374,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.006666666666666667,
+              "all_input_frr": 0.02666666666666667,
+              "false_accepts": 70,
+              "false_rejects": 5,
+              "far": 0.006802721088435374,
+              "frr": 0.006802721088435374,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0009523809523809524,
+              "all_input_frr": 0.058666666666666666,
+              "false_accepts": 10,
+              "false_rejects": 29,
+              "far": 0.0009718172983479105,
+              "frr": 0.03945578231292517,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.009714285714285713,
+              "all_input_frr": 0.02666666666666667,
+              "false_accepts": 102,
+              "false_rejects": 5,
+              "far": 0.009912536443148687,
+              "frr": 0.006802721088435374,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 675,
+            "a": 735,
+            "b": 465,
+            "by": 120,
+            "ch": 360,
+            "cl": 123,
+            "d": 597,
+            "e": 735,
+            "f": 296,
+            "g": 516,
+            "gy": 135,
+            "h": 341,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 699,
+            "ky": 239,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 294,
+            "r": 705,
+            "ry": 150,
+            "s": 660,
+            "sh": 630,
+            "t": 674,
+            "ts": 299,
+            "u": 735,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      }
+    },
+    "mlp-20261015": {
+      "test": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.01020408163265306,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.004603174603174603,
+              "all_input_frr": 0.1511111111111111,
+              "false_accepts": 29,
+              "false_rejects": 10,
+              "far": 0.0052842565597667635,
+              "frr": 0.025510204081632654,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.00031746031746031746,
+              "all_input_frr": 0.20666666666666667,
+              "false_accepts": 2,
+              "false_rejects": 35,
+              "far": 0.00036443148688046647,
+              "frr": 0.08928571428571429,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.007142857142857143,
+              "all_input_frr": 0.14222222222222222,
+              "false_accepts": 45,
+              "false_rejects": 6,
+              "far": 0.008199708454810495,
+              "frr": 0.015306122448979591,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 280,
+            "a": 392,
+            "b": 157,
+            "by": 5,
+            "ch": 98,
+            "cl": 25,
+            "d": 275,
+            "e": 392,
+            "f": 36,
+            "g": 253,
+            "gy": 12,
+            "h": 150,
+            "hy": 8,
+            "i": 392,
+            "j": 135,
+            "k": 376,
+            "ky": 43,
+            "m": 289,
+            "n": 360,
+            "ny": 4,
+            "o": 392,
+            "p": 52,
+            "py": 1,
+            "r": 346,
+            "ry": 28,
+            "s": 311,
+            "sh": 259,
+            "t": 340,
+            "ts": 133,
+            "u": 392,
+            "w": 234,
+            "y": 187,
+            "z": 93
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.014965986394557823,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.002285714285714286,
+              "all_input_frr": 0.052,
+              "false_accepts": 24,
+              "false_rejects": 24,
+              "far": 0.0023323615160349854,
+              "frr": 0.0326530612244898,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0,
+              "all_input_frr": 0.11066666666666666,
+              "false_accepts": 0,
+              "false_rejects": 68,
+              "far": 0.0,
+              "frr": 0.09251700680272108,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.004095238095238095,
+              "all_input_frr": 0.044,
+              "false_accepts": 43,
+              "false_rejects": 18,
+              "far": 0.0041788143828960156,
+              "frr": 0.024489795918367346,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 674,
+            "a": 735,
+            "b": 463,
+            "by": 120,
+            "ch": 360,
+            "cl": 137,
+            "d": 598,
+            "e": 735,
+            "f": 300,
+            "g": 518,
+            "gy": 135,
+            "h": 337,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 695,
+            "ky": 238,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 285,
+            "py": 45,
+            "r": 702,
+            "ry": 150,
+            "s": 658,
+            "sh": 630,
+            "t": 666,
+            "ts": 297,
+            "u": 735,
+            "v": 15,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      },
+      "validation": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.00510204081632653,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.005396825396825397,
+              "all_input_frr": 0.13111111111111112,
+              "false_accepts": 34,
+              "false_rejects": 1,
+              "far": 0.00619533527696793,
+              "frr": 0.002551020408163265,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0004761904761904762,
+              "all_input_frr": 0.16444444444444445,
+              "false_accepts": 3,
+              "false_rejects": 16,
+              "far": 0.0005466472303206997,
+              "frr": 0.04081632653061224,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.010317460317460317,
+              "all_input_frr": 0.1288888888888889,
+              "false_accepts": 65,
+              "false_rejects": 0,
+              "far": 0.011844023323615161,
+              "frr": 0.0,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 277,
+            "a": 392,
+            "b": 151,
+            "by": 5,
+            "ch": 110,
+            "cl": 39,
+            "d": 280,
+            "e": 392,
+            "f": 33,
+            "g": 247,
+            "gy": 10,
+            "h": 159,
+            "hy": 7,
+            "i": 392,
+            "j": 133,
+            "k": 371,
+            "ky": 38,
+            "m": 303,
+            "n": 363,
+            "ny": 12,
+            "o": 392,
+            "p": 50,
+            "r": 343,
+            "ry": 24,
+            "s": 303,
+            "sh": 265,
+            "t": 351,
+            "ts": 138,
+            "u": 392,
+            "w": 250,
+            "y": 170,
+            "z": 75
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.006802721088435374,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.006666666666666667,
+              "all_input_frr": 0.02666666666666667,
+              "false_accepts": 70,
+              "false_rejects": 5,
+              "far": 0.006802721088435374,
+              "frr": 0.006802721088435374,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0009523809523809524,
+              "all_input_frr": 0.058666666666666666,
+              "false_accepts": 10,
+              "false_rejects": 29,
+              "far": 0.0009718172983479105,
+              "frr": 0.03945578231292517,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.009714285714285713,
+              "all_input_frr": 0.02666666666666667,
+              "false_accepts": 102,
+              "false_rejects": 5,
+              "far": 0.009912536443148687,
+              "frr": 0.006802721088435374,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 675,
+            "a": 735,
+            "b": 465,
+            "by": 120,
+            "ch": 360,
+            "cl": 123,
+            "d": 597,
+            "e": 735,
+            "f": 296,
+            "g": 516,
+            "gy": 135,
+            "h": 341,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 699,
+            "ky": 239,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 294,
+            "r": 705,
+            "ry": 150,
+            "s": 660,
+            "sh": 630,
+            "t": 674,
+            "ts": 299,
+            "u": 735,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      }
+    },
+    "mlp-20261016": {
+      "test": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.01020408163265306,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.004603174603174603,
+              "all_input_frr": 0.1511111111111111,
+              "false_accepts": 29,
+              "false_rejects": 10,
+              "far": 0.0052842565597667635,
+              "frr": 0.025510204081632654,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.00031746031746031746,
+              "all_input_frr": 0.20666666666666667,
+              "false_accepts": 2,
+              "false_rejects": 35,
+              "far": 0.00036443148688046647,
+              "frr": 0.08928571428571429,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.007142857142857143,
+              "all_input_frr": 0.14222222222222222,
+              "false_accepts": 45,
+              "false_rejects": 6,
+              "far": 0.008199708454810495,
+              "frr": 0.015306122448979591,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 280,
+            "a": 392,
+            "b": 157,
+            "by": 5,
+            "ch": 98,
+            "cl": 25,
+            "d": 275,
+            "e": 392,
+            "f": 36,
+            "g": 253,
+            "gy": 12,
+            "h": 150,
+            "hy": 8,
+            "i": 392,
+            "j": 135,
+            "k": 376,
+            "ky": 43,
+            "m": 289,
+            "n": 360,
+            "ny": 4,
+            "o": 392,
+            "p": 52,
+            "py": 1,
+            "r": 346,
+            "ry": 28,
+            "s": 311,
+            "sh": 259,
+            "t": 340,
+            "ts": 133,
+            "u": 392,
+            "w": 234,
+            "y": 187,
+            "z": 93
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.014965986394557823,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.002285714285714286,
+              "all_input_frr": 0.052,
+              "false_accepts": 24,
+              "false_rejects": 24,
+              "far": 0.0023323615160349854,
+              "frr": 0.0326530612244898,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0,
+              "all_input_frr": 0.11066666666666666,
+              "false_accepts": 0,
+              "false_rejects": 68,
+              "far": 0.0,
+              "frr": 0.09251700680272108,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.004095238095238095,
+              "all_input_frr": 0.044,
+              "false_accepts": 43,
+              "false_rejects": 18,
+              "far": 0.0041788143828960156,
+              "frr": 0.024489795918367346,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 674,
+            "a": 735,
+            "b": 463,
+            "by": 120,
+            "ch": 360,
+            "cl": 137,
+            "d": 598,
+            "e": 735,
+            "f": 300,
+            "g": 518,
+            "gy": 135,
+            "h": 337,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 695,
+            "ky": 238,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 285,
+            "py": 45,
+            "r": 702,
+            "ry": 150,
+            "s": 658,
+            "sh": 630,
+            "t": 666,
+            "ts": 297,
+            "u": 735,
+            "v": 15,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      },
+      "validation": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.00510204081632653,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.005396825396825397,
+              "all_input_frr": 0.13111111111111112,
+              "false_accepts": 34,
+              "false_rejects": 1,
+              "far": 0.00619533527696793,
+              "frr": 0.002551020408163265,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0004761904761904762,
+              "all_input_frr": 0.16444444444444445,
+              "false_accepts": 3,
+              "false_rejects": 16,
+              "far": 0.0005466472303206997,
+              "frr": 0.04081632653061224,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.010317460317460317,
+              "all_input_frr": 0.1288888888888889,
+              "false_accepts": 65,
+              "false_rejects": 0,
+              "far": 0.011844023323615161,
+              "frr": 0.0,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 277,
+            "a": 392,
+            "b": 151,
+            "by": 5,
+            "ch": 110,
+            "cl": 39,
+            "d": 280,
+            "e": 392,
+            "f": 33,
+            "g": 247,
+            "gy": 10,
+            "h": 159,
+            "hy": 7,
+            "i": 392,
+            "j": 133,
+            "k": 371,
+            "ky": 38,
+            "m": 303,
+            "n": 363,
+            "ny": 12,
+            "o": 392,
+            "p": 50,
+            "r": 343,
+            "ry": 24,
+            "s": 303,
+            "sh": 265,
+            "t": 351,
+            "ts": 138,
+            "u": 392,
+            "w": 250,
+            "y": 170,
+            "z": 75
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.006802721088435374,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.006666666666666667,
+              "all_input_frr": 0.02666666666666667,
+              "false_accepts": 70,
+              "false_rejects": 5,
+              "far": 0.006802721088435374,
+              "frr": 0.006802721088435374,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0009523809523809524,
+              "all_input_frr": 0.058666666666666666,
+              "false_accepts": 10,
+              "false_rejects": 29,
+              "far": 0.0009718172983479105,
+              "frr": 0.03945578231292517,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.009714285714285713,
+              "all_input_frr": 0.02666666666666667,
+              "false_accepts": 102,
+              "false_rejects": 5,
+              "far": 0.009912536443148687,
+              "frr": 0.006802721088435374,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 675,
+            "a": 735,
+            "b": 465,
+            "by": 120,
+            "ch": 360,
+            "cl": 123,
+            "d": 597,
+            "e": 735,
+            "f": 296,
+            "g": 516,
+            "gy": 135,
+            "h": 341,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 699,
+            "ky": 239,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 294,
+            "r": 705,
+            "ry": 150,
+            "s": 660,
+            "sh": 630,
+            "t": 674,
+            "ts": 299,
+            "u": 735,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      }
+    },
+    "mlp-20261017": {
+      "test": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.01020408163265306,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.004603174603174603,
+              "all_input_frr": 0.1511111111111111,
+              "false_accepts": 29,
+              "false_rejects": 10,
+              "far": 0.0052842565597667635,
+              "frr": 0.025510204081632654,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.00031746031746031746,
+              "all_input_frr": 0.20666666666666667,
+              "false_accepts": 2,
+              "false_rejects": 35,
+              "far": 0.00036443148688046647,
+              "frr": 0.08928571428571429,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.007142857142857143,
+              "all_input_frr": 0.14222222222222222,
+              "false_accepts": 45,
+              "false_rejects": 6,
+              "far": 0.008199708454810495,
+              "frr": 0.015306122448979591,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 280,
+            "a": 392,
+            "b": 157,
+            "by": 5,
+            "ch": 98,
+            "cl": 25,
+            "d": 275,
+            "e": 392,
+            "f": 36,
+            "g": 253,
+            "gy": 12,
+            "h": 150,
+            "hy": 8,
+            "i": 392,
+            "j": 135,
+            "k": 376,
+            "ky": 43,
+            "m": 289,
+            "n": 360,
+            "ny": 4,
+            "o": 392,
+            "p": 52,
+            "py": 1,
+            "r": 346,
+            "ry": 28,
+            "s": 311,
+            "sh": 259,
+            "t": 340,
+            "ts": 133,
+            "u": 392,
+            "w": 234,
+            "y": 187,
+            "z": 93
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.014965986394557823,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.002285714285714286,
+              "all_input_frr": 0.052,
+              "false_accepts": 24,
+              "false_rejects": 24,
+              "far": 0.0023323615160349854,
+              "frr": 0.0326530612244898,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0,
+              "all_input_frr": 0.11066666666666666,
+              "false_accepts": 0,
+              "false_rejects": 68,
+              "far": 0.0,
+              "frr": 0.09251700680272108,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.004095238095238095,
+              "all_input_frr": 0.044,
+              "false_accepts": 43,
+              "false_rejects": 18,
+              "far": 0.0041788143828960156,
+              "frr": 0.024489795918367346,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 674,
+            "a": 735,
+            "b": 463,
+            "by": 120,
+            "ch": 360,
+            "cl": 137,
+            "d": 598,
+            "e": 735,
+            "f": 300,
+            "g": 518,
+            "gy": 135,
+            "h": 337,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 695,
+            "ky": 238,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 285,
+            "py": 45,
+            "r": 702,
+            "ry": 150,
+            "s": 658,
+            "sh": 630,
+            "t": 666,
+            "ts": 297,
+            "u": 735,
+            "v": 15,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      },
+      "validation": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.00510204081632653,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.005396825396825397,
+              "all_input_frr": 0.13111111111111112,
+              "false_accepts": 34,
+              "false_rejects": 1,
+              "far": 0.00619533527696793,
+              "frr": 0.002551020408163265,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0004761904761904762,
+              "all_input_frr": 0.16444444444444445,
+              "false_accepts": 3,
+              "false_rejects": 16,
+              "far": 0.0005466472303206997,
+              "frr": 0.04081632653061224,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.010317460317460317,
+              "all_input_frr": 0.1288888888888889,
+              "false_accepts": 65,
+              "false_rejects": 0,
+              "far": 0.011844023323615161,
+              "frr": 0.0,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 277,
+            "a": 392,
+            "b": 151,
+            "by": 5,
+            "ch": 110,
+            "cl": 39,
+            "d": 280,
+            "e": 392,
+            "f": 33,
+            "g": 247,
+            "gy": 10,
+            "h": 159,
+            "hy": 7,
+            "i": 392,
+            "j": 133,
+            "k": 371,
+            "ky": 38,
+            "m": 303,
+            "n": 363,
+            "ny": 12,
+            "o": 392,
+            "p": 50,
+            "r": 343,
+            "ry": 24,
+            "s": 303,
+            "sh": 265,
+            "t": 351,
+            "ts": 138,
+            "u": 392,
+            "w": 250,
+            "y": 170,
+            "z": 75
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.006802721088435374,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.006666666666666667,
+              "all_input_frr": 0.02666666666666667,
+              "false_accepts": 70,
+              "false_rejects": 5,
+              "far": 0.006802721088435374,
+              "frr": 0.006802721088435374,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6460591256618501
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0009523809523809524,
+              "all_input_frr": 0.058666666666666666,
+              "false_accepts": 10,
+              "false_rejects": 29,
+              "far": 0.0009718172983479105,
+              "frr": 0.03945578231292517,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6719664856791497
+            },
+            "far_1pct": {
+              "all_input_far": 0.009714285714285713,
+              "all_input_frr": 0.02666666666666667,
+              "false_accepts": 102,
+              "false_rejects": 5,
+              "far": 0.009912536443148687,
+              "frr": 0.006802721088435374,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6373790434815668
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 675,
+            "a": 735,
+            "b": 465,
+            "by": 120,
+            "ch": 360,
+            "cl": 123,
+            "d": 597,
+            "e": 735,
+            "f": 296,
+            "g": 516,
+            "gy": 135,
+            "h": 341,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 699,
+            "ky": 239,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 294,
+            "r": 705,
+            "ry": 150,
+            "s": 660,
+            "sh": 630,
+            "t": 674,
+            "ts": 299,
+            "u": 735,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      }
+    },
+    "transformer-20261015": {
+      "test": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.01020408163265306,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.003015873015873016,
+              "all_input_frr": 0.14222222222222222,
+              "false_accepts": 19,
+              "false_rejects": 6,
+              "far": 0.0034620991253644317,
+              "frr": 0.015306122448979591,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6327167770710831
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.00031746031746031746,
+              "all_input_frr": 0.31777777777777777,
+              "false_accepts": 2,
+              "false_rejects": 85,
+              "far": 0.00036443148688046647,
+              "frr": 0.21683673469387754,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.7793397048382729
+            },
+            "far_1pct": {
+              "all_input_far": 0.009047619047619047,
+              "all_input_frr": 0.13777777777777778,
+              "false_accepts": 57,
+              "false_rejects": 4,
+              "far": 0.010386297376093295,
+              "frr": 0.01020408163265306,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.5482936320743881
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 280,
+            "a": 392,
+            "b": 157,
+            "by": 5,
+            "ch": 98,
+            "cl": 25,
+            "d": 275,
+            "e": 392,
+            "f": 36,
+            "g": 253,
+            "gy": 12,
+            "h": 150,
+            "hy": 8,
+            "i": 392,
+            "j": 135,
+            "k": 376,
+            "ky": 43,
+            "m": 289,
+            "n": 360,
+            "ny": 4,
+            "o": 392,
+            "p": 52,
+            "py": 1,
+            "r": 346,
+            "ry": 28,
+            "s": 311,
+            "sh": 259,
+            "t": 340,
+            "ts": 133,
+            "u": 392,
+            "w": 234,
+            "y": 187,
+            "z": 93
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.014965986394557823,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.0005714285714285715,
+              "all_input_frr": 0.042666666666666665,
+              "false_accepts": 6,
+              "false_rejects": 17,
+              "far": 0.0005830903790087463,
+              "frr": 0.02312925170068027,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6327167770710831
+            },
+            "far_0_1pct": {
+              "all_input_far": 9.523809523809524e-05,
+              "all_input_frr": 0.20266666666666666,
+              "false_accepts": 1,
+              "false_rejects": 137,
+              "far": 9.718172983479106e-05,
+              "frr": 0.18639455782312925,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.7793397048382729
+            },
+            "far_1pct": {
+              "all_input_far": 0.004857142857142857,
+              "all_input_frr": 0.04,
+              "false_accepts": 51,
+              "false_rejects": 15,
+              "far": 0.004956268221574344,
+              "frr": 0.02040816326530612,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.5482936320743881
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 674,
+            "a": 735,
+            "b": 463,
+            "by": 120,
+            "ch": 360,
+            "cl": 137,
+            "d": 598,
+            "e": 735,
+            "f": 300,
+            "g": 518,
+            "gy": 135,
+            "h": 337,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 695,
+            "ky": 238,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 285,
+            "py": 45,
+            "r": 702,
+            "ry": 150,
+            "s": 658,
+            "sh": 630,
+            "t": 666,
+            "ts": 297,
+            "u": 735,
+            "v": 15,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      },
+      "validation": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.007653061224489796,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.006666666666666667,
+              "all_input_frr": 0.13333333333333333,
+              "false_accepts": 42,
+              "false_rejects": 2,
+              "far": 0.007653061224489796,
+              "frr": 0.00510204081632653,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6327167770710831
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0022222222222222222,
+              "all_input_frr": 0.2733333333333333,
+              "false_accepts": 14,
+              "false_rejects": 65,
+              "far": 0.002551020408163265,
+              "frr": 0.16581632653061223,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.7793397048382729
+            },
+            "far_1pct": {
+              "all_input_far": 0.012698412698412698,
+              "all_input_frr": 0.13333333333333333,
+              "false_accepts": 80,
+              "false_rejects": 2,
+              "far": 0.014577259475218658,
+              "frr": 0.00510204081632653,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.5482936320743881
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 277,
+            "a": 392,
+            "b": 151,
+            "by": 5,
+            "ch": 110,
+            "cl": 39,
+            "d": 280,
+            "e": 392,
+            "f": 33,
+            "g": 247,
+            "gy": 10,
+            "h": 159,
+            "hy": 7,
+            "i": 392,
+            "j": 133,
+            "k": 371,
+            "ky": 38,
+            "m": 303,
+            "n": 363,
+            "ny": 12,
+            "o": 392,
+            "p": 50,
+            "r": 343,
+            "ry": 24,
+            "s": 303,
+            "sh": 265,
+            "t": 351,
+            "ts": 138,
+            "u": 392,
+            "w": 250,
+            "y": 170,
+            "z": 75
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.00456754130223518,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.0044761904761904765,
+              "all_input_frr": 0.024,
+              "false_accepts": 47,
+              "false_rejects": 3,
+              "far": 0.00456754130223518,
+              "frr": 0.004081632653061225,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6327167770710831
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0009523809523809524,
+              "all_input_frr": 0.156,
+              "false_accepts": 10,
+              "false_rejects": 102,
+              "far": 0.0009718172983479105,
+              "frr": 0.13877551020408163,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.7793397048382729
+            },
+            "far_1pct": {
+              "all_input_far": 0.009714285714285713,
+              "all_input_frr": 0.021333333333333333,
+              "false_accepts": 102,
+              "false_rejects": 1,
+              "far": 0.009912536443148687,
+              "frr": 0.0013605442176870747,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.5482936320743881
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 675,
+            "a": 735,
+            "b": 465,
+            "by": 120,
+            "ch": 360,
+            "cl": 123,
+            "d": 597,
+            "e": 735,
+            "f": 296,
+            "g": 516,
+            "gy": 135,
+            "h": 341,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 699,
+            "ky": 239,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 294,
+            "r": 705,
+            "ry": 150,
+            "s": 660,
+            "sh": 630,
+            "t": 674,
+            "ts": 299,
+            "u": 735,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      }
+    },
+    "transformer-20261016": {
+      "test": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.010568513119533527,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.002380952380952381,
+              "all_input_frr": 0.16,
+              "false_accepts": 15,
+              "false_rejects": 14,
+              "far": 0.0027332361516034984,
+              "frr": 0.03571428571428571,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6708634131314949
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.00031746031746031746,
+              "all_input_frr": 0.5066666666666667,
+              "false_accepts": 2,
+              "false_rejects": 170,
+              "far": 0.00036443148688046647,
+              "frr": 0.4336734693877551,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.8107979084101847
+            },
+            "far_1pct": {
+              "all_input_far": 0.008253968253968255,
+              "all_input_frr": 0.14,
+              "false_accepts": 52,
+              "false_rejects": 5,
+              "far": 0.009475218658892129,
+              "frr": 0.012755102040816327,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.573379487955106
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 280,
+            "a": 392,
+            "b": 157,
+            "by": 5,
+            "ch": 98,
+            "cl": 25,
+            "d": 275,
+            "e": 392,
+            "f": 36,
+            "g": 253,
+            "gy": 12,
+            "h": 150,
+            "hy": 8,
+            "i": 392,
+            "j": 135,
+            "k": 376,
+            "ky": 43,
+            "m": 289,
+            "n": 360,
+            "ny": 4,
+            "o": 392,
+            "p": 52,
+            "py": 1,
+            "r": 346,
+            "ry": 28,
+            "s": 311,
+            "sh": 259,
+            "t": 340,
+            "ts": 133,
+            "u": 392,
+            "w": 234,
+            "y": 187,
+            "z": 93
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.009523809523809525,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.0007619047619047619,
+              "all_input_frr": 0.05333333333333334,
+              "false_accepts": 8,
+              "false_rejects": 25,
+              "far": 0.0007774538386783285,
+              "frr": 0.034013605442176874,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6708634131314949
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0,
+              "all_input_frr": 0.4026666666666667,
+              "false_accepts": 0,
+              "false_rejects": 287,
+              "far": 0.0,
+              "frr": 0.3904761904761905,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.8107979084101847
+            },
+            "far_1pct": {
+              "all_input_far": 0.002857142857142857,
+              "all_input_frr": 0.036,
+              "false_accepts": 30,
+              "false_rejects": 12,
+              "far": 0.0029154518950437317,
+              "frr": 0.0163265306122449,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.573379487955106
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 674,
+            "a": 735,
+            "b": 463,
+            "by": 120,
+            "ch": 360,
+            "cl": 137,
+            "d": 598,
+            "e": 735,
+            "f": 300,
+            "g": 518,
+            "gy": 135,
+            "h": 337,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 695,
+            "ky": 238,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 285,
+            "py": 45,
+            "r": 702,
+            "ry": 150,
+            "s": 658,
+            "sh": 630,
+            "t": 666,
+            "ts": 297,
+            "u": 735,
+            "v": 15,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      },
+      "validation": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.007653061224489796,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.007142857142857143,
+              "all_input_frr": 0.13333333333333333,
+              "false_accepts": 45,
+              "false_rejects": 2,
+              "far": 0.008199708454810495,
+              "frr": 0.00510204081632653,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6708634131314949
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0020634920634920637,
+              "all_input_frr": 0.4577777777777778,
+              "false_accepts": 13,
+              "false_rejects": 148,
+              "far": 0.0023688046647230322,
+              "frr": 0.37755102040816324,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.8107979084101847
+            },
+            "far_1pct": {
+              "all_input_far": 0.01380952380952381,
+              "all_input_frr": 0.13111111111111112,
+              "false_accepts": 87,
+              "false_rejects": 1,
+              "far": 0.015852769679300292,
+              "frr": 0.002551020408163265,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.573379487955106
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 277,
+            "a": 392,
+            "b": 151,
+            "by": 5,
+            "ch": 110,
+            "cl": 39,
+            "d": 280,
+            "e": 392,
+            "f": 33,
+            "g": 247,
+            "gy": 10,
+            "h": 159,
+            "hy": 7,
+            "i": 392,
+            "j": 133,
+            "k": 371,
+            "ky": 38,
+            "m": 303,
+            "n": 363,
+            "ny": 12,
+            "o": 392,
+            "p": 50,
+            "r": 343,
+            "ry": 24,
+            "s": 303,
+            "sh": 265,
+            "t": 351,
+            "ts": 138,
+            "u": 392,
+            "w": 250,
+            "y": 170,
+            "z": 75
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.0052478134110787176,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.005142857142857143,
+              "all_input_frr": 0.025333333333333333,
+              "false_accepts": 54,
+              "false_rejects": 4,
+              "far": 0.0052478134110787176,
+              "frr": 0.005442176870748299,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6708634131314949
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0009523809523809524,
+              "all_input_frr": 0.292,
+              "false_accepts": 10,
+              "false_rejects": 204,
+              "far": 0.0009718172983479105,
+              "frr": 0.27755102040816326,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.8107979084101847
+            },
+            "far_1pct": {
+              "all_input_far": 0.009714285714285713,
+              "all_input_frr": 0.024,
+              "false_accepts": 102,
+              "false_rejects": 3,
+              "far": 0.009912536443148687,
+              "frr": 0.004081632653061225,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.573379487955106
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 675,
+            "a": 735,
+            "b": 465,
+            "by": 120,
+            "ch": 360,
+            "cl": 123,
+            "d": 597,
+            "e": 735,
+            "f": 296,
+            "g": 516,
+            "gy": 135,
+            "h": 341,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 699,
+            "ky": 239,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 294,
+            "r": 705,
+            "ry": 150,
+            "s": 660,
+            "sh": 630,
+            "t": 674,
+            "ts": 299,
+            "u": 735,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      }
+    },
+    "transformer-20261017": {
+      "test": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.007470845481049562,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.0025396825396825397,
+              "all_input_frr": 0.13777777777777778,
+              "false_accepts": 16,
+              "false_rejects": 4,
+              "far": 0.0029154518950437317,
+              "frr": 0.01020408163265306,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6135643099565969
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.00031746031746031746,
+              "all_input_frr": 0.18666666666666668,
+              "false_accepts": 2,
+              "false_rejects": 26,
+              "far": 0.00036443148688046647,
+              "frr": 0.0663265306122449,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.7188648900355332
+            },
+            "far_1pct": {
+              "all_input_far": 0.011111111111111112,
+              "all_input_frr": 0.13333333333333333,
+              "false_accepts": 70,
+              "false_rejects": 2,
+              "far": 0.012755102040816327,
+              "frr": 0.00510204081632653,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.5371539884837786
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 280,
+            "a": 392,
+            "b": 157,
+            "by": 5,
+            "ch": 98,
+            "cl": 25,
+            "d": 275,
+            "e": 392,
+            "f": 36,
+            "g": 253,
+            "gy": 12,
+            "h": 150,
+            "hy": 8,
+            "i": 392,
+            "j": 135,
+            "k": 376,
+            "ky": 43,
+            "m": 289,
+            "n": 360,
+            "ny": 4,
+            "o": 392,
+            "p": 52,
+            "py": 1,
+            "r": 346,
+            "ry": 28,
+            "s": 311,
+            "sh": 259,
+            "t": 340,
+            "ts": 133,
+            "u": 392,
+            "w": 234,
+            "y": 187,
+            "z": 93
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.011078717201166181,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.0006666666666666666,
+              "all_input_frr": 0.04533333333333334,
+              "false_accepts": 7,
+              "false_rejects": 19,
+              "far": 0.0006802721088435374,
+              "frr": 0.02585034013605442,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6135643099565969
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0,
+              "all_input_frr": 0.08266666666666667,
+              "false_accepts": 0,
+              "false_rejects": 47,
+              "far": 0.0,
+              "frr": 0.06394557823129252,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.7188648900355332
+            },
+            "far_1pct": {
+              "all_input_far": 0.005238095238095238,
+              "all_input_frr": 0.037333333333333336,
+              "false_accepts": 55,
+              "false_rejects": 13,
+              "far": 0.005344995140913508,
+              "frr": 0.017687074829931974,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.5371539884837786
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 674,
+            "a": 735,
+            "b": 463,
+            "by": 120,
+            "ch": 360,
+            "cl": 137,
+            "d": 598,
+            "e": 735,
+            "f": 300,
+            "g": 518,
+            "gy": 135,
+            "h": 337,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 695,
+            "ky": 238,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 285,
+            "py": 45,
+            "r": 702,
+            "ry": 150,
+            "s": 658,
+            "sh": 630,
+            "t": 666,
+            "ts": 297,
+            "u": 735,
+            "v": 15,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      },
+      "validation": {
+        "cross_text_verification": {
+          "all_queries": 450,
+          "coverage": 0.8711111111111111,
+          "eer": 0.00510204081632653,
+          "genuine_trials": 392,
+          "impostor_trials": 5488,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.005396825396825397,
+              "all_input_frr": 0.13333333333333333,
+              "false_accepts": 34,
+              "false_rejects": 2,
+              "far": 0.00619533527696793,
+              "frr": 0.00510204081632653,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.6135643099565969
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0022222222222222222,
+              "all_input_frr": 0.15555555555555556,
+              "false_accepts": 14,
+              "false_rejects": 12,
+              "far": 0.002551020408163265,
+              "frr": 0.030612244897959183,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.7188648900355332
+            },
+            "far_1pct": {
+              "all_input_far": 0.01650793650793651,
+              "all_input_frr": 0.13111111111111112,
+              "false_accepts": 104,
+              "false_rejects": 1,
+              "far": 0.018950437317784258,
+              "frr": 0.002551020408163265,
+              "genuine": 392,
+              "impostor": 5488,
+              "threshold": 0.5371539884837786
+            }
+          },
+          "scored_queries": 392,
+          "used_phone_counts": {
+            "N": 277,
+            "a": 392,
+            "b": 151,
+            "by": 5,
+            "ch": 110,
+            "cl": 39,
+            "d": 280,
+            "e": 392,
+            "f": 33,
+            "g": 247,
+            "gy": 10,
+            "h": 159,
+            "hy": 7,
+            "i": 392,
+            "j": 133,
+            "k": 371,
+            "ky": 38,
+            "m": 303,
+            "n": 363,
+            "ny": 12,
+            "o": 392,
+            "p": 50,
+            "r": 343,
+            "ry": 24,
+            "s": 303,
+            "sh": 265,
+            "t": 351,
+            "ts": 138,
+            "u": 392,
+            "w": 250,
+            "y": 170,
+            "z": 75
+          }
+        },
+        "verification": {
+          "all_queries": 750,
+          "coverage": 0.98,
+          "eer": 0.0027210884353741495,
+          "genuine_trials": 735,
+          "impostor_trials": 10290,
+          "operating_points": {
+            "eer_operating": {
+              "all_input_far": 0.0026666666666666666,
+              "all_input_frr": 0.02266666666666667,
+              "false_accepts": 28,
+              "false_rejects": 2,
+              "far": 0.0027210884353741495,
+              "frr": 0.0027210884353741495,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.6135643099565969
+            },
+            "far_0_1pct": {
+              "all_input_far": 0.0009523809523809524,
+              "all_input_frr": 0.052,
+              "false_accepts": 10,
+              "false_rejects": 24,
+              "far": 0.0009718172983479105,
+              "frr": 0.0326530612244898,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.7188648900355332
+            },
+            "far_1pct": {
+              "all_input_far": 0.009714285714285713,
+              "all_input_frr": 0.021333333333333333,
+              "false_accepts": 102,
+              "false_rejects": 1,
+              "far": 0.009912536443148687,
+              "frr": 0.0013605442176870747,
+              "genuine": 735,
+              "impostor": 10290,
+              "threshold": 0.5371539884837786
+            }
+          },
+          "scored_queries": 735,
+          "used_phone_counts": {
+            "N": 675,
+            "a": 735,
+            "b": 465,
+            "by": 120,
+            "ch": 360,
+            "cl": 123,
+            "d": 597,
+            "e": 735,
+            "f": 296,
+            "g": 516,
+            "gy": 135,
+            "h": 341,
+            "hy": 90,
+            "i": 735,
+            "j": 389,
+            "k": 699,
+            "ky": 239,
+            "m": 540,
+            "my": 75,
+            "n": 705,
+            "ny": 165,
+            "o": 735,
+            "p": 294,
+            "r": 705,
+            "ry": 150,
+            "s": 660,
+            "sh": 630,
+            "t": 674,
+            "ts": 299,
+            "u": 735,
+            "w": 555,
+            "y": 360,
+            "z": 285
+          }
+        }
+      }
+    }
+  }
+}
