@@ -1,0 +1,12 @@
+{
+  "run_directory": "artifacts/phoneme-calibration-transfer/fixed-grid-20261011-v1",
+  "source_run": "artifacts/phoneme-corpus-balance/five-seeds-20261011-v1",
+  "seeds": [20260926, 20261012, 20261013, 20261014, 20261015],
+  "arms": ["baseline140", "expanded210", "expanded280", "balanced280", "cvweighted280"],
+  "validation_scored_far_targets": [0.001, 0.002, 0.005, 0.01],
+  "diagnostic_test_all_input_far_caps": [0.001, 0.002, 0.005, 0.01],
+  "quantiles": [0.01, 0.05, 0.5, 0.95, 0.99, 0.995, 0.999],
+  "threshold_policy": "freeze every validation-derived threshold before reading test scores for operating-point analysis",
+  "roc_policy": "retrospective test-only empirical FAR-cap diagnostic; tied scores remain together; no interpolation or deployment threshold selection",
+  "interpretation": "same previously observed scores and five seeds; descriptive calibration transfer and low-FAR separation, not independent validation"
+}

@@ -84,7 +84,7 @@ OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phone
 
 最初のseedの実投入割合はJVS/CV/JTubeの順に、元の方式34.25/23.69/42.06%、均等条件34.85/32.86/32.29%、CV重点26.78/49.00/24.22%。希少音素の制約により目標比率と差がある。全seed・全条件の有効投入は21,060,000区間で、音素別の総投入も一致した。採点率は変化せず、音素不足などによる未採点の課題も残る。
 
-次は、保存済みスコアを使い、校正群とtestのずれ、および他人受入を揃えたときの本人拒否を診断する。あらかじめ固定した校正FAR目標の比較として実施し、testから運用閾値を選ばない。今回の本人拒否低下のうち、分離性能の改善と判定が通りやすくなった影響を切り分ける。
+この結果を受けて、以下の保存済みスコアによる校正移行・同FAR上限の診断を実施した。分離性能の改善と判定が通りやすくなった影響を調べ、testから運用閾値は選ばない。
 
 ```sh
 OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python -m unittest discover -s poc/phoneme-corpus-balance/tests
@@ -95,6 +95,40 @@ OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phone
 ```
 
 出力先は`artifacts/phoneme-corpus-balance/five-seeds-20261011-v1`。サンプラーの新規テスト3件とRuff検査を通過した。[完了監査](../phoneme-corpus-balance/audit.py)は比較対象を含む25モデル、75校正閾値、test 1,425,000照合を検証し、2条件の学習投入順も全216,000更新分を再構成してhashの一致を確認した。全指標・SD・seed内差は[集計JSON](../../artifacts/phoneme-corpus-balance/five-seeds-20261011-v1/results.json)、[結果表](../../artifacts/phoneme-corpus-balance/five-seeds-20261011-v1/results.md)、[監査結果](../../artifacts/phoneme-corpus-balance/five-seeds-20261011-v1/completion-audit.json)を参照。
+
+### 校正移行と同じ他人受入率上限での比較
+
+投入比率検証をPR #75としてマージ後、[保存済みスコアの診断](../phoneme-calibration-transfer/diagnose.py)を2026-10-11に完了した。新しい学習・録音は行わず、同じ5seed・5条件・3コーパスを使った。
+
+事前にFAR目標0.1/0.2/0.5/1.0%を固定した。校正群の採点可能な他人試行だけから全300閾値を決めて保存した後、testのFAR・本人拒否率を評価した。これとは別に、testの全他人入力を分母とするFAR上限0.1/0.2/0.5/1.0%で、同じ上限における本人拒否率を比較した。後者はtestラベルを使う事後ROC診断であり、実運用で選べる閾値や未知データの性能ではない。同点スコアは分割せず、上限を超えない離散的な点を使う。
+
+**CV重点条件の改善は、他人受入を揃えても一部残った。** FAR上限0.2%での本人拒否率の5seed平均は次のとおり。実際のFARは全条件・全seedで、JVS0.200%、CV0.199%、JTube0.193%と各コーパス内で一致した。
+
+| 評価コーパス | 元の280 | 均等280 | CV重点280 |
+| --- | ---: | ---: | ---: |
+| JVS 本人拒否率 | 6.320% | 8.507% | 11.333% |
+| CV 本人拒否率 | 51.422% | 50.911% | 48.556% |
+| JTube 本人拒否率 | 46.067% | 44.533% | 45.467% |
+
+CV重点条件はCV本人拒否が5/5seedで低下し、差は平均−2.867ポイント（各seed −3.333〜−2.222ポイント）。FAR上限0.1%でも5/5seedで低下し、平均−4.267ポイントだった。一方、上限0.5%では改善幅が平均−0.711ポイント・4/5seed、上限1.0%では平均＋0.267ポイント・4/5seed悪化となる。低FAR域の改善であり、ROC全体で一律に優れているわけではない。
+
+従来の校正FAR1%条件で見えたCVの本人拒否低下は−8.111ポイントだったが、同じ実測FAR約0.2%での差は−2.867ポイントに縮まった。比較の閾値が異なるため厳密な因果分解ではないが、前の大きな改善幅をそのまま分離性能の向上と解釈できない。均等条件のCV改善は同上限で平均−0.511ポイント・3/5seedにとどまる。
+
+**JVSの悪化は閾値の移行だけでは説明できない。** CV重点条件は同FAR上限0.2%でも本人拒否が平均＋5.013ポイント、5/5seedで悪化した。0.1/0.5/1.0%の全上限でも5/5seed悪化し、均等条件も同様に全上限・全seedで悪化した。JTubeでは均等条件が全4上限・5/5seedで本人拒否を低下させた。CV重点条件のJTubeは上限0.2%で平均−0.600ポイント・4/5seed低下と小幅で、上限1.0%ではほぼ同等となった。
+
+校正からtestへのずれも確認した。校正で採点可能な他人のFAR約1%を狙ったとき、testの採点可能分のFAR平均はCVで元の280の0.307%に対しCV重点0.951%、JVSでは0.706%に対し1.771%だった。全入力のFARと分母が異なることに注意する。このずれと同FAR診断の両方から、CV重点は低FAR域の候補ではあるが、全体の置換モデルとしては採用しない。現在のモデル・運用閾値は更新していない。
+
+次の優先は、学習比率の追加探索より、CV/JTubeで35〜40%残っている未採点の原因内訳を調べること。今回も採点率は変わらず、本人拒否率の大きな下限となっている。既存入力から音素不足・前処理失敗・登録側不足を分け、追加録音なしで改善余地を確認する。
+
+新規テスト4件（同点、未採点分母、端点、校正のtest非参照）とRuff検査を通過した。[監査](../phoneme-calibration-transfer/audit.py)では900判定点（校正300・固定閾値test300・事後ROC300）を再集計し、ROC上限と閾値直下の違反、平均/SD・seed内差を確認した。元の校正FAR1%の75結果も完全再現した。
+
+```sh
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python -m unittest discover -s poc/phoneme-calibration-transfer/tests
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-calibration-transfer/diagnose.py execute
+OMP_NUM_THREADS=1 poc/phoneme-verification-evaluation/.venv/bin/python poc/phoneme-calibration-transfer/audit.py
+```
+
+全4目標/上限の結果は[集計JSON](../../artifacts/phoneme-calibration-transfer/fixed-grid-20261011-v1/results.json)、[結果表](../../artifacts/phoneme-calibration-transfer/fixed-grid-20261011-v1/results.md)、[監査結果](../../artifacts/phoneme-calibration-transfer/fixed-grid-20261011-v1/completion-audit.json)に保存した。全testは既観測で、5seedのSDは独立の人物母集団の信頼区間ではない。
 
 詳細はローカルの[全指標](../../artifacts/phoneme-corpus-scaling/comparison-20261011-v1/results.json)と[結果表](../../artifacts/phoneme-corpus-scaling/comparison-20261011-v1/results.md)。入力・モデル・閾値hashは同runの各freezeに保存した。追加データのQC後区間数はtrain312,690・validation48,326・test40,234。全9,000件の監査、各split200区間の特徴量再計算（差0）、既存音声・新規音声間の同一PCM検査（除外対象0件）を通過した。人物レベルの重複がないという意味ではない。
 
