@@ -1,0 +1,18 @@
+{
+  "run_directory": "artifacts/phoneme-data-scaling/expanded-inputs-20261012-v1",
+  "candidate_run": "artifacts/phoneme-data-scaling/candidates420-20261012-v1",
+  "review_run": "artifacts/phoneme-data-scaling/review100-20261012-v1",
+  "runtime_freeze": "artifacts/phoneme-live-recording/pilot-20261011-v2/protocol-freeze.json",
+  "asr_model_metadata": "artifacts/phoneme-corpus-scaling/asr-model.json",
+  "groups": ["existing_cv", "existing_jtube", "new_cv", "new_jtube"],
+  "maximum_utterance_seconds": 30,
+  "julius_timeout_seconds": 10,
+  "download_workers": 4,
+  "extraction_workers": 3,
+  "language": "ja",
+  "temperature": 0.0,
+  "condition_on_previous_text": false,
+  "human_review": "2026-10-12 user: OK 確認した進めて; continuation authorized; no quantitative human quality result or synthetic answers",
+  "duplicate_policy": "exclude all added sources with identical decoded PCM to any original train/evaluation source or another added source; no replacement",
+  "preparation_policy": "same reviewed phoneme extraction and QC; preserve every fixed source and failure; freeze training conditions after complete support and duplicate audit"
+}

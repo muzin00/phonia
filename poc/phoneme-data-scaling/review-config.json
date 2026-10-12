@@ -1,0 +1,21 @@
+{
+  "run_directory": "artifacts/phoneme-data-scaling/review100-20261012-v1",
+  "candidate_run": "artifacts/phoneme-data-scaling/candidates420-20261012-v1",
+  "runtime_freeze": "artifacts/phoneme-live-recording/pilot-20261011-v2/protocol-freeze.json",
+  "utterance_seed": 2026101203,
+  "segment_seed": 2026101204,
+  "display_seed": 2026101205,
+  "utterances_per_group": 40,
+  "segments_per_group": 25,
+  "sample_size": 100,
+  "groups": [
+    "existing_cv",
+    "existing_jtube",
+    "new_cv",
+    "new_jtube"
+  ],
+  "sampling_frame": "40 fixed speaker-balanced utterances per addition group, then 25 phoneme-balanced QC-passing segments per group; no replacement of failed utterances",
+  "maximum_utterance_seconds": 30,
+  "julius_timeout_seconds": 10,
+  "adoption_status": "awaiting user quality review; no new model training"
+}

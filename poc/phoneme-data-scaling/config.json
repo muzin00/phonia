@@ -1,0 +1,21 @@
+{
+  "run_directory": "artifacts/phoneme-data-scaling/candidates420-20261012-v1",
+  "baseline_run": "artifacts/phoneme-corpus-scaling/comparison-20261011-v1",
+  "cv_run": "artifacts/phoneme-training-data-expansion/training-data-20261008-v1",
+  "cv_holdout": "artifacts/phoneme-missing-vowel-holdout/cv60-20261011-v1",
+  "jtube_run": "artifacts/phoneme-corpus-scaling/jtube-20261011-v1",
+  "jtube_source": "artifacts/phoneme-corpus-scaling/source",
+  "speaker_seed": 2026101201,
+  "clip_seed": 2026101202,
+  "new_cv_labels": 70,
+  "new_jtube_labels": 70,
+  "new_cv_clips_per_label": 50,
+  "new_jtube_clips_per_label": 30,
+  "existing_jtube_clip_cap": 100,
+  "existing_cv_extra_clips": 3500,
+  "existing_jtube_extra_clips": 2100,
+  "selection_policy": "retain all original train inputs; fixed hash order for new labels and clips; speaker-round-robin for existing-label additions; fixed raw quotas with no replacement after extraction failures",
+  "review_policy": "notify user once the set is selected; no new audio processing or model training in this selection command; prepare review UI in the next stage",
+  "future_training": "after review, retrain the acoustic encoder as well as the Transformer; freeze training budgets and sampling only after post-QC support is known",
+  "scope": "2x2 comparison of existing-label extra utterances and new-label additions; same added clip counts by corpus for the two single-addition arms; duration and post-QC counts not yet matched"
+}
