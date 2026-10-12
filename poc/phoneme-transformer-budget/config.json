@@ -1,0 +1,15 @@
+{
+  "run_directory": "artifacts/phoneme-transformer-budget/continued280-20261012-v1",
+  "reference_run": "artifacts/phoneme-corpus-transformer/frozen280-20261012-v1",
+  "seeds": [20261015, 20261016, 20261017],
+  "budgets": [4000, 16000, 64000],
+  "continuation_learning_rate": 0.00003,
+  "validation_every": 500,
+  "schedule_block_updates": 4000,
+  "schedule_seed_stride": 1000003,
+  "parallel_workers": 3,
+  "policy": "Continue the original final 4000-update model, AdamW state and torch RNG; retain original best validation checkpoint; constant terminal learning rate thereafter; one shared trajectory per seed",
+  "selection": "lowest equally weighted three-corpus normal validation EER within each budget; earliest tie; also evaluate the fixed final checkpoint for each budget",
+  "test_policy": "freeze all 18 checkpoints and validation FAR1pct thresholds before new test scoring; all tests previously observed",
+  "scope": "fixed encoder, input data, model size, loss and batch size; tests additional optimization, not data scaling or a retuned learning-rate schedule"
+}
