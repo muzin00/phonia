@@ -1,0 +1,18 @@
+{
+  "run_directory": "artifacts/phoneme-data-budget/replicated280420-20261012-v1",
+  "data_run": "artifacts/phoneme-data-scaling/comparison420-20261012-v1",
+  "reference_run": "artifacts/phoneme-corpus-scaling/comparison-20261011-v1",
+  "reference_fusion": "artifacts/phoneme-corpus-transformer/frozen280-20261012-v1",
+  "reference_budget": "artifacts/phoneme-transformer-budget/continued280-20261012-v1",
+  "arms": ["baseline280", "combined420"],
+  "encoder_seeds": [20260926, 20260927, 20260928],
+  "encoder_budgets": [216000, 432000],
+  "encoder_continuation_learning_rate": 0.00001,
+  "encoder_schedule_seed_stride": 1000003,
+  "fusion_seed": 20261015,
+  "fusion_budgets": [16000, 64000],
+  "parallel_workers": 3,
+  "selection": "fixed final encoder per budget; lowest equal-corpus validation EER for Transformer within each budget, earliest ties; final Transformer secondary",
+  "scope": "paired acoustic training seeds (initialization and sampling), one fixed fusion seed; all tests previously observed; fixed reviewed data; continue optimizer and RNG with terminal learning rates, do not stretch original cosine schedule",
+  "test_policy": "freeze every encoder and Transformer before calibration; freeze all validation thresholds before any new test scoring"
+}
