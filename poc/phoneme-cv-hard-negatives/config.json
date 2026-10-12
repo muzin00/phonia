@@ -1,0 +1,27 @@
+{
+  "run_directory": "artifacts/phoneme-cv-hard-negatives/cvonly420-20261012-v1",
+  "reference_run": "artifacts/phoneme-data-budget/replicated280420-20261012-v1",
+  "encoder_seeds": [
+    20260926,
+    20260927,
+    20260928
+  ],
+  "encoder_updates": 216000,
+  "fusion_seed": 20261015,
+  "budgets": [
+    4000,
+    16000,
+    64000
+  ],
+  "validation_every": 500,
+  "continuation_learning_rate": 3e-05,
+  "mining_seed": 20261012,
+  "candidates": 8,
+  "hard_queries_per_update": 16,
+  "parallel_workers": 3,
+  "scope": "Paired random / all-corpus hard / CV-only hard; three acoustic seeds, fixed frozen 216k encoder and Transformer seed. Previously observed tests.",
+  "mining": "Retain exactly the previously audited all-hard negative choices only for CV query slots; restore original random negatives for JVS and JTube. Preserve all queries, candidates, prefix and other settings.",
+  "selection": "lowest equal-corpus validation EER including common prefix; earliest ties; final checkpoint secondary",
+  "evaluation": "Freeze all models then all validation FAR1pct thresholds before scoring any new test. Previously observed tests; exploratory. Do not choose seeds, budget or sampling parameters from test results.",
+  "all_hard_run": "artifacts/phoneme-hard-negatives/mixed420-20261012-v1"
+}
