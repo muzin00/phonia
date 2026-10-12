@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "selection_date": "2026-10-13",
+  "status": "src4vc_only_training_authorized_cpjd_deferred",
+  "decision_update": {
+    "date": "2026-10-13",
+    "user_instruction": "今回はひとまずSRC4VCだけで学習すすめよう すでに聞いたのでレビューUIは省略",
+    "execution_config": "poc/phoneme-corpus-expansion/config.json",
+    "note": "以下の候補調査は選定時点の記録。実行対象はSRC4VCのみとなり、再レビューの省略と学習・評価が明示的に許可された。過去の品質所見は保持する。"
+  },
+  "purpose": "現行420ラベルの日本語音素encoderに新しいデータ源を追加し、改善傾向を調べるためのコーパス選定。学習への正式採用ではない。",
+  "constraints": {
+    "paid_datasets_allowed": false,
+    "application_required_datasets_allowed": false,
+    "src4vc_reconsideration_authorized": true,
+    "notify_user_before_review_preparation": true,
+    "training_requires_user_review": false,
+    "new_recordings_requested": false,
+    "preserve_existing_train_validation_test_splits": true,
+    "language_scope": "現行の日本語G2P・音素体系を維持する。英語等の音声を日本語音素として扱わない。"
+  },
+  "baseline": {
+    "speaker_labels": 420,
+    "corpus_labels": {"JVS": 70, "CommonVoice": 140, "JTubeSpeechASV": 210},
+    "reference": "poc/phoneme-data-scaling/README.md"
+  },
+  "candidates": [
+    {
+      "id": "src4vc",
+      "version": "1",
+      "status": "training_authorized_review_waived_by_user",
+      "official_url": "https://y-saito.sakura.ne.jp/sython/Corpus/SRC4VC/index.html",
+      "published_speaker_count": 100,
+      "recording": "日本語母語話者のスマートフォン原録音。話者ID・発話テキストあり。",
+      "published_terms": "研究目的で無償。再配布不可。詳細は公式配布条件に従う。",
+      "local_source": "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/source/SRC4VC_ver1.zip",
+      "existing_split": "artifacts/phoneme-src4vc-training/src4vc-20261009-v1/speaker-splits.json",
+      "planned_train_labels": 70,
+      "reserved_validation_labels": 15,
+      "reserved_test_labels": 15,
+      "proposed_audio_scope": "原録音の読み上げ・対話調・言語を含む感情発話。歌唱・復元音声を除外。発話集合の最終固定は次段階。",
+      "reason": "現行モデルに含まれない実デバイス録音を追加でき、既存の取得済み音声と話者分割を再利用できる。",
+      "quality_caveat": "2026-10-10の/m/・/n/予備レビューで無音・別音の所見がある。今回のユーザー指示は候補への復帰であり、品質問題が解決した証拠ではない。原音声と切り出しを次のレビューで確認する。",
+      "previous_review_reference": "docs/training-data-adoption.md",
+      "novelty": "現行420ラベルモデルには未使用だが、過去の別モデルでは学習済み。完全に未観測のコーパスとは扱わない。"
+    },
+    {
+      "id": "cpjd",
+      "version": "1",
+      "status": "deferred_by_user_src4vc_only",
+      "official_url": "https://sites.google.com/site/shinnosuketakamichi/research-topics/cpjd_corpus",
+      "official_audio_link": "https://drive.google.com/file/d/1sYV9JGqrsyCpxkV8rGs6vHodDUF8cX-f/view?usp=sharing",
+      "published_speaker_count": 21,
+      "published_sentences_per_speaker": 250,
+      "published_dialect_count": 20,
+      "recording": "クラウドソーシングによる日本語方言発話。話者別書き起こしと話者情報あり。",
+      "published_terms": "CC BY-SA 4.0。公式ページに音声・テキストの直接配布リンクあり。",
+      "reason": "少人数ながら、新しい話者と方言による発音・収録条件の幅を追加できる。",
+      "quality_caveat": "標準語の対訳を発話原文と取り違えない。現行G2Pが方言表記を処理できるか、音素境界が対応するかをレビューする。",
+      "download_status": "公式配布リンクまで確認。音声本体・README・checksum・実ファイルの話者数は未検証。",
+      "split_status": "未固定。元ファイルの話者IDを確認後、品質抽出前に話者単位で固定する。",
+      "proposed_audio_scope": "配布内の原録音を確認して選ぶ。処理済み音声と原録音を重複した発話・別話者として数えない。",
+      "scale_caveat": "21話者全員が追加trainになるわけではない。分割と音素支持数を確認後に実採用数を確定する。"
+    }
+  ],
+  "other_candidates": [
+    {
+      "id": "jnas",
+      "status": "excluded_paid_and_application",
+      "source": "https://www.nii.ac.jp/dsc/idr/speech/submit/JNAS.html",
+      "reason": "306話者で規模は適するが、有償・申込みが必要。今回のユーザー条件から除外。"
+    },
+    {
+      "id": "jis",
+      "status": "excluded_application",
+      "source": "https://www.kecl.ntt.co.jp/people/yuto.kondo/corpus.html",
+      "reason": "公式ページは2026年度内の提供開始準備中と記載。研究機関からの問合せ、審査、同意書が必要なため今回は除外。"
+    },
+    {
+      "id": "ita_rion",
+      "status": "excluded_distribution_suspended",
+      "source": "https://github.com/Rion-Dev/ita-corpus-Rion",
+      "reason": "50話者だが、2026-09-28から利用条件確認のため新規配布停止。検索結果の古いCC BY表記を採用根拠にしない。"
+    },
+    {
+      "id": "fleurs",
+      "status": "not_selected_speaker_labels",
+      "source": "https://huggingface.co/datasets/google/fleurs",
+      "reason": "公開データの標準スキーマに一貫した話者IDがない。発話・文IDを話者ラベルとして代用しない。"
+    },
+    {
+      "id": "jmd",
+      "status": "not_selected_scale",
+      "source": "https://sites.google.com/site/shinnosuketakamichi/research-topics/jmd_corpus",
+      "reason": "公式ページの配布は熊本弁・大阪弁の音声合成用データ。今回の話者数拡張に十分な人数を確認できず、CPJDに加える第3候補として優先しない。"
+    },
+    {
+      "id": "covost",
+      "status": "not_selected_existing_source",
+      "source": "https://github.com/facebookresearch/covost",
+      "reason": "Common Voice由来のため、新しい独立した録音コーパスとして数えない。"
+    }
+  ],
+  "original_next_stage_superseded_by_execution_config": [
+    "ユーザーに2候補と第3候補未選定を報告する。",
+    "レビュー準備の指示後、取得済みSRC4VCのhash・元音声・既存分割を確認し、CPJDの配布実体・README・話者IDを確認する。",
+    "品質確認前に話者分割と使用候補発話を固定し、trainだけから現行学習処理で音素区間を抽出する。",
+    "原音声と切り出しを比較できるレビューUIを準備し、件数・seed・除外理由を保存する。個別回答保存の有無を品質率として捏造しない。",
+    "ユーザーの確認までは新しいencoder・Transformer学習を開始しない。"
+  ],
+  "interpretation_limits": [
+    "候補2つの公開話者数は計121であり、学習への実追加数ではない。SRC4VC trainは既存70を維持する。",
+    "今回の候補は録音条件と方言の多様化に向くが、千話者規模のデータスケーリングを検証する選定ではない。",
+    "コーパス間の実在人物重複は未確認。ラベルの名前空間分離のみでは人物重複を保証しない。",
+    "改善しなくても、十分な話者数を増やした場合の限界やモデル容量不足を確定しない。"
+  ],
+  "actions_at_initial_selection": {
+    "new_audio_download": false,
+    "new_audio_processing": false,
+    "review_ui_prepared": false,
+    "training_started": false
+  }
+}
