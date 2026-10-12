@@ -1,0 +1,16 @@
+{
+  "run_directory": "artifacts/phoneme-cv-seed-replication/init420-20261012-v1",
+  "reference_run": "artifacts/phoneme-cv-hard-negatives/cvonly420-20261012-v1",
+  "encoder_seeds": [20260926, 20260927, 20260928],
+  "reference_fusion_seed": 20261015,
+  "new_fusion_seeds": [20261016, 20261017],
+  "arms": ["random", "cv_only"],
+  "budgets": [4000, 16000, 64000],
+  "validation_every": 500,
+  "continuation_learning_rate": 0.00003,
+  "parallel_workers": 6,
+  "intervention": "Vary Transformer initialization and dropout RNG only. Keep acoustic encoders, data, queries, negative choices, schedule, LR, budget and selection unchanged. Refit the shared random 4k prefix for each new Transformer seed, then fork both arms from identical model, optimizer and RNG.",
+  "selection": "Lowest equal-corpus validation EER within each budget including update zero; earliest tie. Final checkpoint secondary. No test-driven change of rule or budget.",
+  "evaluation": "Freeze 72 models and all validation FAR1pct thresholds before new test inference. Reuse previously audited 24 reference-seed models/scores; independently infer and audit all 48 new models. Report the six new paired runs separately from the previous three. All tests previously observed; same speakers reused, no independent-population CI.",
+  "hypothesis": "Check replication of CV-only 16k benefit and selected/final stability. User's hypothesis of low-quality CV vowel segments remains untested; success here would not rule it out. No new data or recording."
+}
