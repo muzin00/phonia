@@ -1,0 +1,20 @@
+{
+  "run_directory": "artifacts/phoneme-data-scaling/comparison420-20261012-v1",
+  "preparation_run": "artifacts/phoneme-data-scaling/expanded-inputs-20261012-v1",
+  "reference_run": "artifacts/phoneme-corpus-scaling/comparison-20261011-v1",
+  "reference_fusion": "artifacts/phoneme-corpus-transformer/frozen280-20261012-v1",
+  "reference_budget": "artifacts/phoneme-transformer-budget/continued280-20261012-v1",
+  "arms": {
+    "baseline280": [],
+    "utterances280": ["existing_cv", "existing_jtube"],
+    "speakers420": ["new_cv", "new_jtube"],
+    "combined420": ["existing_cv", "existing_jtube", "new_cv", "new_jtube"]
+  },
+  "encoder_seed": 20260926,
+  "encoder_updates": 216000,
+  "fusion_seeds": [20261015, 20261016, 20261017],
+  "fusion_updates": 16000,
+  "parallel_arms": 3,
+  "selection": "same equal-corpus validation EER rule and learning-rate trajectory as prior 16k budget; selected primary and final secondary",
+  "interpretation": "one acoustic encoder seed per condition, three fusion seeds; all test sets previously observed; matched update budgets and added raw clip counts, not matched retained durations or proof of pure speaker-count causality"
+}
