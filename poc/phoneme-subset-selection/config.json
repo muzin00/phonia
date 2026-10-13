@@ -1,0 +1,21 @@
+{
+  "run_directory": "artifacts/phoneme-subset-selection/src490-20261013-v2",
+  "source_run": "artifacts/phoneme-corpus-expansion/src490-20261013-v1",
+  "encoder_seeds": [20260926, 20260927, 20260928],
+  "fusion_seed": 20261015,
+  "fusion_budget": 64000,
+  "corpora": ["jvs", "common_voice", "jtube"],
+  "partition_seed": 20261013,
+  "single_move_limit": 8,
+  "swap_move_limit": 2,
+  "minimum_improvement": 1e-12,
+  "batch_size": 128,
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 20261013,
+  "selection": "One common subset minimizes equal-corpus, equal-encoder-seed mean discovery EER. Start at all 36 phones; evaluate every one-phone addition/deletion, accept the strict best improvement. At a single-move plateau (or single-move budget exhausted), evaluate every one-for-one swap. Resume single moves after an accepted swap. At most 8 single moves and 2 swaps. Ties between improving candidates use inventory order; no equal-score moves. This bounded local search is not exhaustive.",
+  "partition": "Hash-sort validation speaker IDs separately within each corpus; first ceil(n/2) are discovery, remainder confirmation. Both query and claimed speaker must belong to the same partition. All enrollment audio, original masks and per-phone intervals are fixed. Only normal verification is used in search.",
+  "support": "Keep at least one of a/i/u/e/o to guarantee identical score availability under the existing five-vowel eligibility gate. Every vowel can be removed individually. Original universally-registered-phone masks remain fixed across candidates and claims. No newly scorable queries are added.",
+  "confirmation": "Freeze the single discovery winner before opening confirmation scores. Report confirmation once, without revising the subset or search. These speakers were already used for the original Transformer checkpoint selection; this is held out only from the new subset search, not independent model development.",
+  "evaluation": "Freeze winner and all full-validation FAR1% thresholds before reading test arrays. Evaluate only all36 and the one winner on the same original test trials, including JVS cross-text secondary. Recompute Transformer attention and softmax for every mask. No encoder or fusion retraining, checkpoint changes or test-driven changes.",
+  "limits": "Previously observed test cohorts. Three acoustic seeds, one Transformer seed. No new speakers or recordings. Original intervals are fixed but used audio duration decreases with selection, so this is not a fixed-duration comparison. Paired speaker bootstrap conditions on the selected subset and fixed models and excludes search/training uncertainty. Confirmation does not gate or change which candidate is tested."
+}
