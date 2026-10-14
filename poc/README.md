@@ -323,6 +323,8 @@ JVSのtrainだけで選んだ約5秒の母音を含む5文は、時間を近似�
 
 [EER近似によるTransformer追加学習](phoneme-eer-finetuning/README.md)では、最新SRC490・36音素の同じ出発モデルから、BCE対照とBCE＋soft-EERを3音響seed・各2,000更新で比較した。固定終点のtest平均EERはBCE1.531%、soft-EER1.489%で3/3seed改善したが、差の95%区間[−0.157, ＋0.055]ポイントは0を含む。validationでは両条件とも全seedで追加0が選ばれ、主結果は元モデルの1.495%と同じだった。EER近似を学習へ組み込めることと小さな改善候補は確認したが、標準モデルは置き換えない。[結果の解釈](phoneme-eer-finetuning/interpretation.md)・[全比較表](phoneme-eer-finetuning/evaluation-results.md)を参照する。
 
+[実測EERを報酬にする強化学習](phoneme-eer-reinforcement/README.md)では、音素重み付け・音素選択の2案をBCE対照とともに3音響seed・各500更新で試した。validation選定モデルのtest平均EERは追加前1.495%、重み付けRL1.474%、音素選択RL1.495%だった。重み付けの差は−0.021ポイント、95%区間[−0.049, ＋0.056]ポイントで改善は未確立。音素選択は全seedで追加0が選ばれ、固定終点は1.684%へ悪化した。両案で実測EERによる方策更新は動作したが、標準モデルは維持する。[結果と解釈](phoneme-eer-reinforcement/interpretation.md)・[全比較表](phoneme-eer-reinforcement/evaluation-results.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。
