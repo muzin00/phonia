@@ -321,6 +321,8 @@ JVSのtrainだけで選んだ約5秒の母音を含む5文は、時間を近似�
 
 [Transformerの学習更新数比較](phoneme-transformer-budget/README.md)では同じ3seedを64,000更新まで継続した。validationで選んだ16,000更新予算のモデルは、4,000更新予算に対してJVS EERが平均1.348%→1.108%、CVが4.362%→3.905%、JTubeが1.256%→1.129%へ改善した。64,000更新予算ではCVが3.543%まで低下したが、JVSは1.425%、JTubeは1.266%となり単調な全体改善ではなかった。固定最終checkpointも別に比較し、追加更新とモデル選択による改善を、データ量を増やす効果とは区別する。
 
+[EER近似によるTransformer追加学習](phoneme-eer-finetuning/README.md)では、最新SRC490・36音素の同じ出発モデルから、BCE対照とBCE＋soft-EERを3音響seed・各2,000更新で比較した。固定終点のtest平均EERはBCE1.531%、soft-EER1.489%で3/3seed改善したが、差の95%区間[−0.157, ＋0.055]ポイントは0を含む。validationでは両条件とも全seedで追加0が選ばれ、主結果は元モデルの1.495%と同じだった。EER近似を学習へ組み込めることと小さな改善候補は確認したが、標準モデルは置き換えない。[結果の解釈](phoneme-eer-finetuning/interpretation.md)・[全比較表](phoneme-eer-finetuning/evaluation-results.md)を参照する。
+
 ## 6. 基本方針
 
 - 音素方式が既存方式より優れているとは仮定しない。
