@@ -1,0 +1,131 @@
+{
+  "audit_date": "2026-10-16",
+  "base_commit": "da7ec95cbda3df9ce4bfa2c4dd2709b724a8566b",
+  "artifact_directory": "artifacts/phoneme-training-quality-audit/src490-20261016-v1",
+  "screening_not_quality_labels": true,
+  "segments": 1930593,
+  "sources": 37874,
+  "speaker_labels": 490,
+  "structural_issues": {
+    "cache_index_mismatch": 0,
+    "nontraining_rows": 0,
+    "flagged_accepted_rows": 0,
+    "source_identity_mismatch": 0,
+    "duration_gate_violation": 0,
+    "rms_gate_violation": 0,
+    "center_crop_mismatch": 0,
+    "duplicate_accepted_interval_rows": 0,
+    "source_hash_shared_across_speaker_labels": 0,
+    "nonfinite_feature_rows": 0,
+    "feature_byte_count_mismatch": false,
+    "source_hash_mismatch": 0,
+    "rms_recalculation_mismatch": 0,
+    "alignment_boundary_mismatch": 0,
+    "alignment_source_identity_mismatch": 0,
+    "raw_phoneme_label_mismatch": 0
+  },
+  "duplicate_pcm_count": 0,
+  "by_corpus": {
+    "common_voice": {
+      "segments": 666180,
+      "sources": 15263,
+      "speaker_labels": 140,
+      "screens": {
+        "near_clip_ge_1pct": 2,
+        "near_clip_any": 109,
+        "rail_ge_1pct": 0,
+        "rms_below_gate_after_dc": 90,
+        "absolute_dc_ge_0_01": 2761,
+        "more_than_half_below_minus50": 58172,
+        "more_than_half_exact_zero": 127,
+        "raw_interval_gt_1_second": 10,
+        "raw_interval_gt_250_ms": 3347,
+        "accepted_30_ms": 126939
+      }
+    },
+    "jtube": {
+      "segments": 508771,
+      "sources": 10027,
+      "speaker_labels": 210,
+      "screens": {
+        "near_clip_ge_1pct": 0,
+        "near_clip_any": 0,
+        "rail_ge_1pct": 0,
+        "rms_below_gate_after_dc": 321,
+        "absolute_dc_ge_0_01": 3448,
+        "more_than_half_below_minus50": 56170,
+        "more_than_half_exact_zero": 26,
+        "raw_interval_gt_1_second": 237,
+        "raw_interval_gt_250_ms": 9978,
+        "accepted_30_ms": 116368
+      }
+    },
+    "jvs": {
+      "segments": 585772,
+      "sources": 9094,
+      "speaker_labels": 70,
+      "screens": {
+        "near_clip_ge_1pct": 0,
+        "near_clip_any": 0,
+        "rail_ge_1pct": 0,
+        "rms_below_gate_after_dc": 22,
+        "absolute_dc_ge_0_01": 7,
+        "more_than_half_below_minus50": 70936,
+        "more_than_half_exact_zero": 1,
+        "raw_interval_gt_1_second": 7,
+        "raw_interval_gt_250_ms": 434,
+        "accepted_30_ms": 67795
+      }
+    },
+    "src4vc": {
+      "segments": 169870,
+      "sources": 3490,
+      "speaker_labels": 70,
+      "screens": {
+        "near_clip_ge_1pct": 41,
+        "near_clip_any": 1496,
+        "rail_ge_1pct": 29,
+        "rms_below_gate_after_dc": 0,
+        "absolute_dc_ge_0_01": 368,
+        "more_than_half_below_minus50": 16486,
+        "more_than_half_exact_zero": 449,
+        "raw_interval_gt_1_second": 8,
+        "raw_interval_gt_250_ms": 2689,
+        "accepted_30_ms": 32197
+      }
+    }
+  },
+  "total_screens": {
+    "near_clip_ge_1pct": 43,
+    "near_clip_any": 1605,
+    "rail_ge_1pct": 29,
+    "rms_below_gate_after_dc": 433,
+    "absolute_dc_ge_0_01": 6584,
+    "more_than_half_below_minus50": 201764,
+    "more_than_half_exact_zero": 603,
+    "raw_interval_gt_1_second": 262,
+    "raw_interval_gt_250_ms": 16448,
+    "accepted_30_ms": 343299
+  },
+  "asr_counts": {
+    "accepted_sources": 10027,
+    "accepted_segments": 508771,
+    "any_avg_logprob_below_minus1_sources": 144,
+    "any_avg_logprob_below_minus1_accepted_segments": 2484,
+    "any_compression_ratio_above_2_4_sources": 6,
+    "any_compression_ratio_above_2_4_accepted_segments": 324,
+    "any_no_speech_above_0_6_sources": 0,
+    "any_no_speech_above_0_6_accepted_segments": 0,
+    "joint_no_speech_and_low_logprob_sources": 0,
+    "joint_no_speech_and_low_logprob_accepted_segments": 0
+  },
+  "limitations": [
+    "Screen thresholds identify inspection candidates, not established bad-data prevalence. Low amplitude/long phones/low forced-alignment scores can be valid speech. No human listening, speaker identity validation, ASR correctness verification, calibrated SNR or near-duplicate search was performed.",
+    "These are decoder diagnostics, not verified transcription error labels. Segment counts refer to all accepted phone intervals from flagged recordings, not proven erroneous intervals. Whisper performs an internal silence skip; this is distinct from a dataset acceptance gate."
+  ],
+  "source_result_hashes": {
+    "results.json": "fae51bc603c3751f37453a831f4e6644ff043ac9d0e6e096c96c8e374847563f",
+    "asr-results.json": "f736f78970523f6a7112127a104464cd7d1818908d4b6d75e7ef482b6d75f2bf",
+    "focused-examples.json": "ddbff0bb51b3d4169bdf23b8ba86a42ef065efe189f7820c8abd558e34aaceb0"
+  }
+}

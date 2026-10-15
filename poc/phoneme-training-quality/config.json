@@ -1,0 +1,22 @@
+{
+  "run_directory": "artifacts/phoneme-training-quality/src490-quality-20261016-v1",
+  "source_run": "artifacts/phoneme-corpus-expansion/src490-20261013-v1",
+  "audit_run": "artifacts/phoneme-training-quality-audit/src490-20261016-v1",
+  "reference_prepared": "artifacts/phoneme-segment-selection-rl/src490-segments-20261015-v1/prepared",
+  "expected_segments": 1930593,
+  "sample_rate": 24000,
+  "policy": {
+    "version": "quality-v1",
+    "minimum_dc_removed_rms_dbfs": -50.0,
+    "hold_near_clip_fraction_ge": 0.01,
+    "hold_zero_fraction_gt": 0.5,
+    "hold_raw_duration_seconds_gt": 1.0,
+    "hold_asr_avg_logprob_lt": -1.0,
+    "hold_asr_compression_ratio_gt": 2.4,
+    "hold_asr_same_character_run_ge": 20,
+    "asr_required_corpora": ["jtube"]
+  },
+  "review_seed": 20261016,
+  "review_per_corpus_phone_status": 1,
+  "protocol": "Training-only quality preprocessing. Reject below the existing RMS threshold after DC removal. Hold heuristic waveform, ASR and raw-boundary candidates for inspection; hold is not a verified bad-data label. Preserve all reasons and source indices. Record alignment scores without an uncalibrated cutoff. Build a separate screened candidate pool, never overwrite prior data. No model training or automatic promotion."
+}
