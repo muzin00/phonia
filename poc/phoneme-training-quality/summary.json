@@ -1,0 +1,96 @@
+{
+  "total_segments": 1930593,
+  "decisions": {
+    "accepted": 1926467,
+    "held": 3693,
+    "rejected": 433
+  },
+  "reason_counts_overlapping": {
+    "low_rms_after_dc": 433,
+    "near_clipping": 43,
+    "majority_exact_zero": 603,
+    "long_raw_interval": 262,
+    "asr_low_logprob": 2484,
+    "asr_high_compression": 324,
+    "asr_character_repetition": 3,
+    "asr_diagnostics_missing": 0
+  },
+  "by_corpus": {
+    "common_voice": {
+      "accepted": 665951,
+      "held": 139,
+      "rejected": 90,
+      "total": 666180
+    },
+    "jtube": {
+      "accepted": 505402,
+      "held": 3048,
+      "rejected": 321,
+      "total": 508771
+    },
+    "jvs": {
+      "accepted": 585742,
+      "held": 8,
+      "rejected": 22,
+      "total": 585772
+    },
+    "src4vc": {
+      "accepted": 169372,
+      "held": 498,
+      "rejected": 0,
+      "total": 169870
+    }
+  },
+  "screened_bank": {
+    "speakers": 485,
+    "queries": 22981,
+    "segment_ownership_and_recording_separation_verified": true
+  },
+  "bank_items_removed": {
+    "profiles_missing_vowels": 0,
+    "queries_missing_vowels": 36,
+    "profiles_without_queries": 0
+  },
+  "float32_dc_check": {
+    "checked_intervals": 541,
+    "maximum_rms_difference_db": 5.722492446125216e-06,
+    "threshold_disagreements": 0
+  },
+  "review_samples": 279,
+  "feature_rows_verified": 1926467,
+  "training_started": false,
+  "limitations": "Heuristic held rows are not proven bad. ASR flags apply to their entire recording. Original feature normalization and model metadata are retained to isolate filtering. Existing rejected data were not reintroduced. Evaluation is unchanged and has not been used to select thresholds.",
+  "run_directory": "artifacts/phoneme-training-quality/src490-quality-20261016-v1",
+  "pool": {
+    "segments": 1926467,
+    "pair_eligible_segments": 1925782,
+    "singleton_segments": 685,
+    "speaker_phone_groups": 15047,
+    "phones_without_positive_pair": []
+  },
+  "acoustic_speakers": 490,
+  "acoustic_phones": 36,
+  "coverage": {
+    "groups_emptied": 6,
+    "pair_groups_becoming_singletons": 8,
+    "speakers_emptied": []
+  },
+  "result_sha256": "b9f8c13e8f6676528486993e8d918344d7145519537d3435c3c1c30dd5b549f9",
+  "compatibility_check": {
+    "status": "passed",
+    "acoustic_segments": 1926467,
+    "acoustic_speakers": 490,
+    "acoustic_phones": 36,
+    "fusion_speakers_checked": 485,
+    "fusion_queries": 22981,
+    "held_or_rejected_training_indices": 0,
+    "optimizer_updates": 0,
+    "evaluation_metrics_computed": false,
+    "inputs": {
+      "artifacts/phoneme-training-quality/src490-quality-20261016-v1/complete.json": "850158840adfc6d832ba3a8309fb9b1d466d6584cf93d0fb1cefdc660be11ce6",
+      "poc/phoneme-training-quality/verify.py": "743df1ff67117d940cf2849dc7e47150996c6bc87f99056d68f19bcbd28463cc",
+      "poc/phoneme-segment-selection-rl/pool.py": "4cc5aa9cb4e332bda52b5153e11763d10c4bfde05d6f80513844429eb865867f",
+      "poc/phoneme-segment-selection-rl/verification.py": "50c412cde797dcaae14fed8c84f56d875d0866acf691adb5cafcdacc97e39e46"
+    }
+  }
+}
