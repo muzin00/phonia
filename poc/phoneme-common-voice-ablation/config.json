@@ -1,0 +1,11 @@
+{
+  "run_directory": "artifacts/phoneme-common-voice-ablation/src490-without-cv-20261015-v1",
+  "reference_run": "artifacts/phoneme-segment-selection-rl/src490-segments-20261015-v1",
+  "evaluation_seeds": [20261101, 20261102, 20261103],
+  "updates": 216000,
+  "final_fusion_updates": 64000,
+  "workers": 3,
+  "negative_sampling": "uniform_other_speaker_within_query_corpus",
+  "protocol": "Paired with_cv/without_cv runs, no RL. Fresh acoustic encoder and Transformer for each arm and seed. Same phone/speaker-balanced acoustic sampling rule and update budgets. Fresh speaker-uniform fusion query schedules with uniform same-corpus impostors in BOTH arms; no legacy CV-only hard-negative schedule or learned weights. Selection and test retain JVS/Common Voice/JTube. Select earliest minimum selection macro EER checkpoint every 2000 updates, including zero. Freeze all six models and selection FAR1% thresholds before test. No automatic promotion.",
+  "limitations": "Removing CV also changes training size, speaker diversity, corpus proportions, classification head size and exposure frequency. This tests the practical effect of exclusion, not the isolated causal effect of recording quality. All-data controls are retrained under the same corpus-neutral negative sampling rule; historical CV-hard-negative results are not the primary control. Existing selection/test sets have been observed previously."
+}
