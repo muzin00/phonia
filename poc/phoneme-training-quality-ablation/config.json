@@ -1,0 +1,13 @@
+{
+  "run_directory": "artifacts/phoneme-training-quality-ablation/src490-quality-20261016-v1",
+  "reference_run": "artifacts/phoneme-segment-selection-rl/src490-segments-20261015-v1",
+  "quality_run": "artifacts/phoneme-training-quality/src490-quality-20261016-v1",
+  "evaluation_seeds": [20261101, 20261102, 20261103],
+  "random_filter_seeds": [20261111, 20261112, 20261113],
+  "updates": 216000,
+  "final_fusion_updates": 64000,
+  "workers": 3,
+  "negative_sampling": "uniform_other_speaker_within_query_corpus",
+  "protocol": "Three arms: original acoustic training pool, screened quality-v1 pool, and three random-filter draws exactly matching the screened count within each speaker/phone stratum. Fresh encoder and Transformer for all nine models, paired model seeds and update budgets. Restrict fusion to the same eligible speakers and query IDs across all five data variants before training; identical query/negative schedules across arms per seed. Same immutable evaluation and earliest minimum selection macro EER checkpoint rule. Freeze all models and selection FAR1% thresholds before test. No automatic promotion.",
+  "limitations": "Heuristic screening is not verified bad-data removal. Matching speaker/phone counts does not match recording identities, enrollment/query counts within each phone, or sampled exposure. Shared fusion eligibility intentionally excludes the same unavailable queries from original and all filtered arms; original is a fresh all-data acoustic control under this common fusion protocol, not a reuse of historical results. Three random draws are paired with three model seeds, so their uncertainty is combined. Existing selection/test sets were observed previously."
+}
